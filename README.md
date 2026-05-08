@@ -1,43 +1,38 @@
-# Brain — Obsidian vault
+---
+tags: [moc, hub]
+type: moc
+created: 2026-05-08
+---
 
-Knowledge graph + thinking layer. Companion to GitHub repos (which remain source of truth for code/docs).
+# Brain — Home
 
-## Layout
+Personal second brain for operator Nithu. Knowledge graph + thinking layer companion to GitHub repos (which remain the source of truth for code and ops docs).
 
-| Folder | Purpose | Claude write? |
-|---|---|---|
-| `00-claude-inbox/` | Daily captures by Claude, per project | YES |
-| `01-nexus/` | Operator-curated Nexus notes (mirrors repo via `_repo-docs`) | NO (read-only) |
-| `02-thesis/` | Operator-curated thesis notes (mirrors repo via `_chapters` + `_docs`) | NO (read-only) |
-| `03-business/` | Personal business notes | NO |
-| `04-career/` | Personal career notes | NO |
-| `05-learning/` | Personal learning notes | NO |
-| `90-archive/` | Read-only history (auto-archived inbox after 30d) | NO |
-| `_maps/` | Operator-curated Maps of Content (MOCs) | NO |
-| `_promote-candidates/` | Items proposed for promotion to repo docs | YES |
+This note is the **central hub**. Everything else hangs off here. In Graph View, this is the densest cluster — every domain MOC links back.
 
-## Claude write boundaries
+## Domain MOCs
 
-ONLY two write paths:
-- `00-claude-inbox/<project>/<YYYY-MM-DD>-<slug>.md`
-- `_promote-candidates/<YYYY-MM-DD>-<slug>.md`
+- [[Nexus-MOC]] — XAUUSD trading firm: strategies, agents, ops, deploy state.
+- [[Thesis-MOC]] — Master's thesis on battery electrolyte ML (NTNU).
+- [[Business-MOC]] — Side projects, ventures, financial planning.
+- [[Career-MOC]] — Roles, applications, skills, network.
+- [[Learning-MOC]] — Courses, papers, deep-dives, reading notes.
 
-Everything else: read-only by convention. Enforced via CLAUDE.md hard rule + operator audit.
+## Meta MOCs (cognitive OS layer)
 
-## Promote workflow
+- [[Tools-MOC]] — what Claude can do here (MCPs, endpoints, capabilities).
+- [[Memory-MOC]] — how Claude's memory is layered across global / workspace / project / per-session.
+- [[People-MOC]] — humans + AI roles in the network (Karri, advisor, Claude, Gemini).
+- [[Decisions-MOC]] — binding architectural and operational decisions log.
+- [[Workflows-MOC]] — recurring workflows (firm-up, parallel-batch, OK kjør gate).
 
-`00-claude-inbox/` → operator review → `_promote-candidates/` → operator promotes polished version to `docs/memory/promoted/<slug>.md` in the relevant repo.
+## Conventions
 
-## Git
+- All cross-references use `[[wiki-links]]` so Graph View renders them as edges.
+- Stub-links to notes that don't exist yet are intentional — they appear orange in Graph View as "to-write" prompts.
+- Frontmatter `tags:` always present. `type: moc` for index notes, `type: atomic` for leaf notes.
+- Inbox-first writing pattern: see [[Workflows-MOC]] → "Promote workflow".
 
-This vault is a private local git repo (30s rollback). Not pushed to any remote. See `.gitignore` for excluded Obsidian state.
+## Layout reference
 
-## Symlinks (read-only mirrors)
-
-- `01-nexus/_repo-docs` → `/home/nithu/code/ai-assistent/docs`
-- `02-thesis/_chapters` → `/home/nithu/code/Master-oppgave/chapters`
-- `02-thesis/_docs` → `/home/nithu/code/Master-oppgave/docs`
-
-## Spec
-
-See `/home/nithu/code/ai-assistent/docs/architecture/obsidian-bridge.md` for full design + rationale.
+See `_maps/_README` for MOC conventions and `00-claude-inbox/_README` for the Claude write zone.

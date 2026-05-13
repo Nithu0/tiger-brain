@@ -63,6 +63,11 @@ Source of truth: `~/Obsidian/Brain/00-firm-bus/roster.md`.
 ## 7. Common errors + fixes
 
 - **WT error `0x80070002 ERROR_FILE_NOT_FOUND`** — usually means the wt.exe-side command included a literal newline/heredoc. Fix: all firm scripts now factor per-pane init through `firm-tab-init.sh` to keep the wt.exe arg single-line.
+- **Error 2 — `bash: <path> <args>: No such file or directory`** (where the WHOLE command line appears as one path-with-spaces).
+  - **Symptom**: pane opens, prints the Nexus shell ready banner, then errors with `bash: /home/nithu/code/_bin/firm-tab-init.sh ai-4 nexus: No such file or directory` and exits 127.
+  - **Root cause**: the inner command for `bash -lic <CMD>` was wrapped in single quotes (`'firm-tab-init.sh ai-4 nexus'`). `bash -c` strips the quotes but treats the contents as ONE WORD (with spaces). bash then tries to exec the whole string as a single program name with embedded spaces, which doesn't exist.
+  - **Fix**: pass the inner command UNQUOTED to `bash -lic`. The values (role, project) have no spaces so word-splitting works. See WARNING comment in `firm-tab-init.sh`.
+  - **Prevention**: use `--dry-run` mode on the firm launchers (added recently) to inspect the exact `wt.exe` argv before launching for real: `firm --dry-run` / `firmt --dry-run`.
 - **`firm!`-as-command** — bash history-expansion blocks it. Use `firm` (or `nx`).
 - **Zellij copy/paste friction** — enter scroll mode with `Ctrl+S`, select with `v`, yank with `y`. Or set `mouse_mode: false` in zellij config to fall back to terminal-native mouse select.
 - **`claude: command not found` in a pane** — NVM PATH didn't load; ensure `bash -lic` is used (login + interactive shells source `.bashrc`).

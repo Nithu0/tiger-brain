@@ -1,0 +1,40 @@
+# path-guard
+# Blocks PRs that touch protected vault folders without operator approval.
+# Override: add a line `OPERATOR-APPROVED: <reason>` to the PR body.
+# Protected folders are defined in scripts/path_guard.py.
+---
+name: path-guard
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  path-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run path guard
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          set -euo pipefail
+          if ! python scripts/path_guard.py --base "$BASE_SHA" --head "$HEAD_SHA"; then
+            echo "::error::path-guard blocked this PR. Add 'OPERATOR-APPROVED: <reason>' to the PR body to override."
+            exit 1
+          fi

@@ -42,9 +42,14 @@ Hvis du _må_ endre en av disse, åpne PR med `OPERATOR-APPROVED: <reason>` i be
 ## Day-1 commands
 
 ```bash
-git clone git@github.com:Nithu0/tiger-brain.git Brain && cd Brain && bash scripts/setup-from-scratch.sh --repo git@github.com:Nithu0/tiger-brain.git --mode easy
-# Åpne i Obsidian: File -> Open folder as vault -> velg Brain-mappen
+git clone git@github.com:Nithu0/tiger-brain.git ~/Obsidian/Brain
+cd ~/Obsidian/Brain
+bash firm-launcher/install.sh    # installs firm + hooks + clones ai-assistent
+source ~/.bashrc
+firm                              # launches 8-tab Claude session
 ```
+
+If you only want the brain (no firm launcher), use `bash scripts/setup-from-scratch.sh --mode easy` instead.
 
 Setup-skriptet kloner (hvis ikke allerede klonet), installerer pre-push hook, og kjører `brain_audit.py` for å verifisere lokal state. Hvis auditen faller — ping operator før du begynner å redigere.
 
@@ -52,6 +57,7 @@ Setup-skriptet kloner (hvis ikke allerede klonet), installerer pre-push hook, og
 
 | Automation | What it does | Where it runs |
 |---|---|---|
+| firm command | one-command 8-tab Claude session across operator's projects | Lokalt (installeres av firm-launcher) |
 | Firm-tab brain check | Kjører `brain_audit.py` ved oppstart av firm-tabs | Lokalt (Claude Code session start) |
 | Pre-push hook | Kjører `sanity.sh` før push — fanger feil før de når CI | Lokalt (installeres av setup-skriptet) |
 | CI on PRs | `brain-checks` + `path-guard` på alle PR-er | GitHub Actions |
@@ -157,4 +163,4 @@ Velkommen ombord. Spør hvis noe er uklart — bedre å spørre én gang for mye
 
 ---
 
-Sist oppdatert: 2026-05-13
+Sist oppdatert: 2026-05-13 (firm-launcher install path)

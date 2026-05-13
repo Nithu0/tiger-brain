@@ -12,9 +12,14 @@ This is operator's second brain — a shared vault for Nexus (XAUUSD trading fir
 ## First 60 seconds
 
 ```bash
-git clone git@github.com:Nithu0/tiger-brain.git Brain && cd Brain && bash scripts/setup-from-scratch.sh --repo git@github.com:Nithu0/tiger-brain.git --mode easy
-# Open Brain/ as a vault in Obsidian (File → Open folder as vault)
+git clone git@github.com:Nithu0/tiger-brain.git ~/Obsidian/Brain
+cd ~/Obsidian/Brain
+bash firm-launcher/install.sh    # installs firm + hooks + clones ai-assistent
+source ~/.bashrc
+firm                              # launches 8-tab Claude session
 ```
+
+Karri: see [[KARRI-DAY-1]] for the 3-minute version.
 
 Pre-push hook installs automatically. Brain checks run in firm tabs. No manual ritual — see `_runbooks/Runbook-Brain-Weekly-Maintenance.md` for details.
 

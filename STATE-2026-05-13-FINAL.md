@@ -9,7 +9,7 @@ final: true
 
 ## 1. Summary
 
-Vault on `feat/post-share` (round-6 extension), **~20 commits**, **351 markdown notes**, **2.3 MB on disk** (excl. `.git`/`.obsidian`). Sanity: **7/8 green** (one expected fail: `__pycache__` cache dir present locally — not tracked). Audit: **1 error, 0 warnings** (the same `__pycache__` — gitignored, harmless). Secret purged from history (filter-repo done). Push-ready + auto-pilot in place. **Health: 9.5/10** — only manual remaining: branch-protection UI toggle + Obsidian key rotation.
+Vault on `feat/post-share` (round-6 extension), **~20 commits**, **351 markdown notes**, **2.3 MB on disk** (excl. `.git`/`.obsidian`). Sanity: **7/8 green** (one expected fail: `__pycache__` cache dir present locally — not tracked). Audit: **1 error, 0 warnings** (the same `__pycache__` — gitignored, harmless). Secret purged from history (filter-repo done). Push-ready + auto-pilot in place. **Health: 9.7/10** — only manual remaining: operator does collaborator invite for Karri in GH UI + key rotation eventually.
 
 ## 2. Commit timeline
 
@@ -88,6 +88,14 @@ New this round (auto-pilot for the brain):
 - `_runbooks/Runbook-Brain-Weekly-Maintenance.md` — reframed as "what's automated, no manual ritual"
 
 Net effect: weekly maintenance ritual is now a no-op; operator only owns branch protection + key rotation.
+
+## 7b. Round 7 — Karri onboarding packaging
+
+- `firm-launcher/` folder added with 5 firm bin scripts + 1 nexus-bashrc + `install.sh` + `README` + `INSTALL`
+- `KARRI-DAY-1.md` cheat sheet at vault root
+- `WELCOME` + `TEAMMATE-ONBOARDING` + `README` updated to point at firm-launcher install
+
+Net effect: teammate (Karri) day-1 collapses to clone + `bash firm-launcher/install.sh` + read `KARRI-DAY-1.md`.
 
 ## 8. Tooling installed
 

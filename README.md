@@ -13,6 +13,10 @@ updated: 2026-05-13
 
 **Are you a teammate?** Start with [`WELCOME.md`](./WELCOME.md) → [`TEAMMATE-ONBOARDING.md`](./TEAMMATE-ONBOARDING.md) → [`BRAIN-RULES.md`](./BRAIN-RULES.md).
 
+**Want the same 8-tab firm command + brain hooks as operator?** Run `bash firm-launcher/install.sh` after cloning. See [`firm-launcher/README.md`](./firm-launcher/README.md).
+
+**Are you Karri?** See [`KARRI-DAY-1.md`](./KARRI-DAY-1.md) for the 3-minute setup.
+
 **Are you Claude?** Read [`claude-context/START-HERE.md`](./claude-context/START-HERE.md) before doing anything.
 
 **Are you the operator?** See [`READY-TO-SHARE.md`](./READY-TO-SHARE.md) and [`OPERATOR-NEXT-STEPS.md`](./OPERATOR-NEXT-STEPS.md).

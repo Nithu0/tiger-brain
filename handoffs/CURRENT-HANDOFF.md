@@ -4,28 +4,29 @@ tags: [handoff, current]
 created: 2026-05-11
 updated: 2026-05-13
 owner: "Claude (Opus 4.7 1M)"
-status: zero-ritual automation in place; awaits operator branch-protection UI submit + key rotation
-next: Operator finishes branch ruleset (5 boxes per _runbooks/Runbook-Branch-Protection.md) + rotates REST API key
+status: Karri-onboarding packaged; awaits operator collaborator invite (GH UI)
+next: Operator invites Karri as Write collaborator to Nithu0/tiger-brain; adds Karri to main-protection ruleset bypass list
 ---
 
 # CURRENT-HANDOFF — Brain hardening session
 
 ## Status
 
-**zero-ritual automation in place; awaits operator branch-protection UI submit + key rotation**
+**Karri-onboarding packaged; awaits operator collaborator invite (GH UI)**
 
 ## Next action
 
-Operator: finish branch ruleset (5 boxes per `_runbooks/Runbook-Branch-Protection.md`); rotate REST API key
+Operator invites Karri as Write collaborator to Nithu0/tiger-brain; adds Karri to main-protection ruleset bypass list
 
 ## What was done
 
 - 17 commits pushed to GitHub; v0.1.0-share-ready tag set.
 - Automation packaging (round 6): brain-session-start.sh hooks into firm-tab-init.sh; setup-from-scratch auto-installs pre-push hook; monthly-inbox-archive.yml scheduled; branch-protection recipe written; weekly-maintenance runbook reframed as "what's automated".
+- Round 7: firm-launcher packaged into vault, KARRI-DAY-1 cheat sheet, install.sh idempotent
 
 ## What was NOT done
 
-- Branch protection (operator UI step), key rotation (one-click in Obsidian), teammate invite (when handle available).
+- Karri invite (operator UI step); key rotation still deferred
 
 ## Open questions for operator
 

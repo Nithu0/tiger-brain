@@ -65,7 +65,7 @@ The Obsidian Local REST API plugin's `data.json` — containing a 40-char hex AP
 
 ## 5. History purge options (operator decides)
 
-### Option A — purge before first push (recommended if any chance of public exposure)
+### Option A — purge before first push — **COMPLETED 2026-05-13**
 
 Strip the file from all of git history before any push happens.
 
@@ -74,6 +74,11 @@ pip install --user git-filter-repo
 git filter-repo --invert-paths --path .obsidian/plugins/obsidian-local-rest-api/
 git log --all -- .obsidian/plugins/obsidian-local-rest-api/data.json   # should print nothing
 ```
+
+**Executed 2026-05-13**: `git filter-repo --invert-paths --path .obsidian/plugins/obsidian-local-rest-api/ --force` rewrote 16 commits; the file no longer exists in any commit. Verified: `git log --all -- .obsidian/plugins/obsidian-local-rest-api/data.json` returns nothing.
+
+> [!warning] SHAs are stale after filter-repo
+> All commit SHAs referenced earlier in this document (e.g. `f824aa8`, `36c424c`, `37e7794`) are **pre-filter-repo** identifiers. The rewrite changed every commit ID in the repo. The semantics are preserved (same logical commits, same messages, same trees minus the purged blob); the old SHAs are kept here only for historical context. Do not try `git show <old-sha>` — it will fail.
 
 Caveats:
 - `git filter-repo` rewrites **all** commit SHAs. If anyone already cloned this repo, they must re-clone.
@@ -97,15 +102,32 @@ Option B is only acceptable if the remote will be (a) a private GitHub repo, (b)
 
 ## 7. Resolution checklist
 
-- [ ] Key rotated in Obsidian (Settings → Community plugins → Local REST API → re-generate)
-- [ ] `git rm --cached .obsidian/plugins/obsidian-local-rest-api/data.json` run
-- [ ] New `data.json` confirmed ignored: `git check-ignore -v ...` exits 0
-- [ ] Decision made: **A / B / C** → _____
-- [ ] If A: `git filter-repo --invert-paths --path .obsidian/plugins/obsidian-local-rest-api/` run + verified with `git log --all -- <path>` empty
-- [ ] If A: `git gc --prune=now --aggressive` run
-- [ ] Closing this incident: change `status: open` → `status: resolved` in frontmatter; add `resolved: <date>`
+- [ ] Key rotated in Obsidian (Settings → Community plugins → Local REST API → re-generate) — **OPERATOR STILL TO DO** (rotate via Settings → Local REST API → "Re-generate API key")
+- [x] `git rm --cached .obsidian/plugins/obsidian-local-rest-api/data.json` run
+- [x] New `data.json` confirmed ignored: `git check-ignore -v ...` exits 0
+- [x] Decision made: **A**
+- [x] If A: `git filter-repo --invert-paths --path .obsidian/plugins/obsidian-local-rest-api/` run + verified with `git log --all -- <path>` empty
+- [x] If A: `git gc --prune=now --aggressive` run
+- [x] Closing this incident — already done in frontmatter (`status: resolved`, `resolved: 2026-05-13`)
 
 ## 8. Lessons / followups
+
+### Key lesson — gitignore vs tracked files
+
+**`.gitignore` does NOT apply to files that are already tracked.** This is the gotcha that caused this entire incident: the operator (and assistant) added `.obsidian/plugins/obsidian-local-rest-api/` to `.gitignore` and assumed the file was safe. It was not — `data.json` had already been committed in an earlier commit, and `.gitignore` only filters *untracked* paths. The file therefore continued to be tracked through every subsequent commit until explicitly removed.
+
+The required incantation to untrack an already-committed path while keeping the working-tree copy:
+
+```bash
+git rm --cached <path>
+git commit -m "chore: untrack <path>"
+```
+
+After that, `.gitignore` finally "wins" for future changes. To remove the file from **history** as well (not just the current index), a history rewrite via `git filter-repo` is mandatory — which is what was done in this incident.
+
+**Rule of thumb for the brain's git-hygiene notes:** any time a secret-bearing path is added to `.gitignore`, immediately verify the file is not already in `git ls-files`. If it is, `git rm --cached` + `filter-repo` (if history matters), not just gitignore.
+
+### Other followups
 
 - **Add secret-scanning to CI + pre-commit.** Wire `detect-secrets` or `trufflehog` into `.github/workflows/brain-checks.yml` and a `pre-commit` hook so a future plugin-data commit triggers an alarm before it lands.
 - **Audit other plugin folders before push.** Done as part of this incident — see results below. Re-run whenever a new plugin is installed:
@@ -115,7 +137,7 @@ Option B is only acceptable if the remote will be (a) a private GitHub repo, (b)
 - **Audit result (2026-05-13):** only one plugin installed (`obsidian-local-rest-api`). Plugin folder contents: `data.json` (the leaked credential file), `main.js`, `manifest.json`, `styles.css`. No additional `data.json` / `config.json` / `.pem` / `token` files found elsewhere under `.obsidian/plugins/`. Scope of this incident is limited to the single file already identified — no expansion needed.
 - **Onboarding doc.** When the teammate joins, the onboarding note must explicitly call out: `.obsidian/plugins/*/data.json` is per-installation state and may contain credentials — never commit, never share.
 - **Generalize the gitignore rule.** Current rule `.obsidian/plugins/obsidian-local-rest-api/` is plugin-specific. Consider broadening to `.obsidian/plugins/*/data.json` (or full `.obsidian/plugins/` if plugin code shouldn't be tracked at all) so newly-installed plugins don't repeat this pattern.
-- **Gitignore semantics gotcha.** This incident exposed that the operator (and assistant) assumed `.gitignore` blocked future commits of `data.json`. It does not — `.gitignore` is only checked for *untracked* paths. The file remained in the index. Document this in the brain's git-hygiene notes.
+- **Gitignore semantics gotcha.** See dedicated subsection above ("Key lesson — gitignore vs tracked files").
 
 ---
 

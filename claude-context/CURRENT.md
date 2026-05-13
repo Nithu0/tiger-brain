@@ -16,12 +16,12 @@ Separate from operator's [[01-CURRENT-FOCUS]]. This is the explicit, machine-rea
 - **Phase**: Calibration
 - **Foundation gate**: 5/5 green
 - **Active branch**: `feat/brain-hardening` (Brain vault) · `ai-assistent/main` (Nexus)
-- **Note**: Brain hardening complete on `feat/brain-hardening` branch (5+ commits). Awaiting operator's gh setup + secret-purge decision before merge to main + first push.
+- **Note**: Brain hardening complete — 16 commits on feat/brain-hardening, filter-repo purge done, awaits GH repo creation by operator.
+- Read [[STATE-2026-05-13-FINAL]] for full snapshot.
 
 ## Pending decisions
 
-- **Secret-in-history**: Option A (filter-repo purge) vs Option B (accept + rotate) — see [[SECURITY-INCIDENT-API-KEY]].
-- Otherwise none per `/home/nithu/code/ai-assistent/docs/ops/phase-status.md`.
+- Operator-handled: gh installed + authed yet? teammate handle known?
 
 ## Key live-truth pointers
 

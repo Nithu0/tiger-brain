@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Brain rules + conventions
+    url: https://github.com/Nithu0/tiger-brain/blob/main/BRAIN-RULES.md
+    about: Read the brain rules before opening an issue
+  - name: Onboarding for teammates
+    url: https://github.com/Nithu0/tiger-brain/blob/main/TEAMMATE-ONBOARDING.md
+    about: New here? Start with onboarding.

@@ -6,192 +6,91 @@ created: 2026-05-13
 
 # OPERATOR-NEXT-STEPS
 
-Copy-pasteable runbook for å fullføre brain-hardening: GitHub repo, push, branch protection, teammate-invite.
+Tight remaining-only runbook for å fullføre brain-hardening.
 
-Placeholders som MÅ byttes ut før kjøring:
-- `<YOU>` — operatørens GitHub-handle (ukjent per 2026-05-13)
-- `<TEAMMATE>` — teammates GitHub-handle
-- `<repo>` — repo-navn (forslag: `nithu-brain`)
+Placeholders som fortsatt må byttes ut:
+- `<TEAMMATE>` — teammates GitHub-handle (operatørens handle = `Nithu0`, allerede inn i CODEOWNERS)
 
 ---
 
-## 1. TL;DR
-
-- Rotér Local REST API-nøkkelen FØR push (lekket i commit `f824aa8`).
-- Bytt CODEOWNERS-placeholders, så `gh repo create --private`, så push.
-- Sett branch protection via `gh api` (eller UI), inviter teammate med `push`-rolle.
-- Smoke-test path-guard på en throwaway-branch.
-
----
-
-## 2. Prereq sanity
+## STEP 1: Create the GitHub repo (one of these, your choice)
 
 ```bash
-cd ~/Obsidian/Brain
-gh auth status                           # must be logged in
-python3 scripts/brain_audit.py           # must pass
-git status --short | wc -l               # what's uncommitted
-git log --oneline -5                     # confirm hardening commits present
+# OPTION A — gh CLI:
+bash scripts/install-gh-cli.sh             # ~30s, asks for sudo
+gh auth login                              # opens browser
+gh repo create tiger-brain --private --description "Personal second-brain (Obsidian + GitHub)"
+
+# OPTION B — UI (fastest if you don't want to install gh):
+# Open https://github.com/new
+# Name: tiger-brain
+# Visibility: Private
+# Do NOT initialize with README/gitignore (repo already has them)
 ```
 
-Hvis `gh auth status` feiler: `gh auth login` først.
+---
+
+## STEP 2: Push + branch protection
+
+```bash
+bash scripts/push-and-protect.sh --mode easy     # or --mode full if gh installed
+```
 
 ---
 
-## 3. KRITISK: API-key leak i git-historikken
+## STEP 3: Rotate the Obsidian REST API key
 
-`.obsidian/plugins/obsidian-local-rest-api/data.json` ble committet i `f824aa8`. Nøkkelen ligger fortsatt i historikken selv om `.gitignore` nå dekker den.
-
-### Option A (anbefalt): rotér + purge historikk
-
-```bash
-# 1. Rotér nøkkelen i Obsidian:
-#    Settings → Community plugins → Local REST API → "Re-generate API key"
-
-# 2. Installer git-filter-repo:
-pip install git-filter-repo
-
-# 3. Purge fil fra HELE historikken (rewriter repoet — irreversibelt):
-git filter-repo --invert-paths --path .obsidian/plugins/obsidian-local-rest-api/
-
-# 4. Verifiser at filen er borte:
-git log --all -- .obsidian/plugins/obsidian-local-rest-api/data.json
-# (should print nothing)
+```text
+Open Obsidian → Settings → Community plugins → Local REST API → "Re-generate API key"
 ```
 
-OBS: `git filter-repo` skriver om SHA-er. Kjør FØR du legger til remote og pusher første gang. Hvis du allerede har pushet: må force-pushe og varsle alle som har klonet.
-
-### Option B (raskere, mindre rent)
-
-Aksepter at hvem som helst som kloner repoet ser den gamle nøkkelen. Rotér i Obsidian (samme steg 1 over). Den lekkede nøkkelen funker kun mot operatørens localhost REST API — ubrukelig uten LAN-tilgang til maskinen din. Lav reell risiko hvis repoet forblir privat.
-
-Merk: `.gitignore` hindrer fremtidige commits uansett valg.
+(Old key was purged from history but existed on disk for some time.)
 
 ---
 
-## 4. Bytt CODEOWNERS-placeholders
+## STEP 4: Invite teammate (when you have their handle)
 
 ```bash
-cd ~/Obsidian/Brain
-
-# Bytt <YOU> til faktisk handle (uten @-tegn i variabelnavnet, men med @ i fila):
-sed -i 's/@OWNER/@<YOU>/g' .github/CODEOWNERS
-sed -i 's/@TEAMMATE/@<TEAMMATE>/g' .github/CODEOWNERS
-
-# Sanity-sjekk:
-grep -E '@OWNER|@TEAMMATE' .github/CODEOWNERS && echo "STILL HAS PLACEHOLDERS" || echo "all placeholders replaced"
+gh api -X PUT "repos/Nithu0/tiger-brain/collaborators/<TEAMMATE>" -f permission=push
+# Or via UI: Settings → Collaborators → Add people
 ```
 
-Commit:
+---
+
+## STEP 5: Update CODEOWNERS with teammate handle
+
 ```bash
+sed -i 's/@TEAMMATE/@<teammate-handle>/g' .github/CODEOWNERS
 git add .github/CODEOWNERS
-git commit -m "chore: fill CODEOWNERS handles"
+git commit -m "chore(codeowners): add teammate @<teammate-handle>"
+git push
 ```
 
 ---
 
-## 5. Commit & first push
+## STEP 6: Smoke test the gates
 
 ```bash
-# Lag privat repo:
-gh repo create <repo> --private --description "Personal second-brain (Obsidian + GitHub)"
-
-# Legg til remote:
-git remote add origin git@github.com:<YOU>/<repo>.git
-
-# (Hvis du jobbet på feat/brain-hardening: merge til main først)
-# git checkout main && git merge feat/brain-hardening
-
-# Push main:
-git push -u origin main
-```
-
-Verifiser:
-```bash
-gh repo view <YOU>/<repo> --web   # åpner i nettleser
+bash scripts/smoke-test-pr.sh                # creates+closes test PRs
 ```
 
 ---
 
-## 6. Branch protection (via gh API)
+## Sjekkliste før du sier deg ferdig
 
-Krever at minst én commit er pushet til `main` først.
-
-```bash
-gh api -X PUT "repos/<YOU>/<repo>/branches/main/protection" \
-  -F required_pull_request_reviews.required_approving_review_count=1 \
-  -F required_pull_request_reviews.require_code_owner_reviews=true \
-  -F required_status_checks.strict=true \
-  -F 'required_status_checks.contexts[]=brain-checks / audit' \
-  -F 'required_status_checks.contexts[]=path-guard / path-guard' \
-  -F enforce_admins=false \
-  -F restrictions= \
-  -F allow_force_pushes=false \
-  -F allow_deletions=false
-```
-
-Verifiser:
-```bash
-gh api "repos/<YOU>/<repo>/branches/main/protection" | jq .
-```
-
-UI-fallback hvis API tryner: GitHub → Settings → Branches → Add rule → branch pattern `main` → huk av tilsvarende bokser.
-
-OBS: status-check-navnene (`brain-checks / audit`, `path-guard / path-guard`) må matche eksakt det workflow-filene rapporterer. Hvis de ikke har kjørt enda, må du først pushe en PR som trigger dem — ellers godtar ikke GitHub konteksten.
+- [x] API-key purge fra git-historikk (filter-repo kjørt + verifisert)
+- [x] CODEOWNERS `@OWNER` → `@Nithu0`
+- [ ] Repo opprettet privat (STEP 1)
+- [ ] `main` pushet + branch protection aktiv (STEP 2)
+- [ ] API-nøkkel rotert i Obsidian (STEP 3)
+- [ ] Teammate invitert med `push`-rolle (STEP 4)
+- [ ] CODEOWNERS `@TEAMMATE` byttet til ekte handle (STEP 5)
+- [ ] Path-guard smoke test feilet som forventet (STEP 6)
+- [ ] `TEAMMATE-ONBOARDING.md` sendt til teammate
 
 ---
 
-## 7. Inviter teammate
-
-```bash
-gh api -X PUT "repos/<YOU>/<repo>/collaborators/<TEAMMATE>" -f permission=push
-# permission=push = "Write" role (kan pushe branches + lage PR, kan ikke endre settings)
-```
-
-Verifiser:
-```bash
-gh api "repos/<YOU>/<repo>/collaborators" | jq '.[].login'
-```
-
-Teammate får invitasjon på e-post. Send dem også link til `TEAMMATE-ONBOARDING.md` i repoet.
-
----
-
-## 8. Smoke test path-guard
-
-Bekreft at path-guard faktisk blokkerer endringer på beskyttede paths.
-
-```bash
-git checkout -b test/path-guard
-echo "test" >> _decisions/When-Trade-Bleeds-Multi-Day.md
-git commit -am "test: should be blocked by path-guard"
-git push -u origin test/path-guard
-gh pr create --title "test path-guard" --body "no override — should fail"
-
-# Vent på CI:
-gh pr checks
-# path-guard skal feile
-
-# Cleanup:
-gh pr close --delete-branch
-git checkout main
-git branch -D test/path-guard
-```
-
-Hvis path-guard IKKE feilet: workflow-fila er feil konfigurert. Sjekk `.github/workflows/path-guard.yml`.
-
----
-
-## 9. Teammate-flow
-
-Når teammate aksepterer invitasjon:
-1. Pek dem til `TEAMMATE-ONBOARDING.md` i repoet (åpnes direkte på GitHub).
-2. De kjører `scripts/setup-from-scratch.sh` for å sette opp lokal kopi + Obsidian-pekere.
-3. Første test-PR fra dem skal trigge CODEOWNERS-review-request på deg.
-
----
-
-## 10. Vedlikehold (recurring)
+## Vedlikehold (recurring)
 
 | Hvor ofte | Hva | Kommando |
 |---|---|---|
@@ -201,37 +100,26 @@ Når teammate aksepterer invitasjon:
 | Kvartalsvis | Refresh system-audit | `python3 scripts/brain_audit.py > SYSTEM-AUDIT.md` + manuell oppdatering |
 | Etter big restructure | Re-kjør hele audit | `python3 scripts/brain_audit.py` |
 
-Sett gjerne cron-reminder for månedlig inbox-arkivering.
-
 ---
 
-## 11. Rollback per step
+## Rollback per step
 
 | Step | Rollback |
 |---|---|
-| 3A (filter-repo) | Ingen rollback hvis pushet. Lokalt: `git reflog` + reset til pre-filter SHA |
-| 3B (rotér nøkkel) | Re-generer på nytt i Obsidian |
-| 4 (CODEOWNERS) | `git checkout HEAD~1 -- .github/CODEOWNERS` |
-| 5 (repo create) | `gh repo delete <YOU>/<repo> --yes` (irreversibelt; sletter alt) |
-| 5 (push) | `git push origin --delete main` (men da blir repo tomt) |
-| 6 (protection) | `gh api -X DELETE "repos/<YOU>/<repo>/branches/main/protection"` |
-| 7 (collaborator) | `gh api -X DELETE "repos/<YOU>/<repo>/collaborators/<TEAMMATE>"` |
-| 8 (smoke test) | Branch slettes som del av test-flow |
+| 1 (repo create) | `gh repo delete Nithu0/tiger-brain --yes` (irreversibelt; sletter alt) |
+| 2 (push) | `git push origin --delete main` (men da blir repo tomt) |
+| 2 (protection) | `gh api -X DELETE "repos/Nithu0/tiger-brain/branches/main/protection"` |
+| 3 (rotér nøkkel) | Re-generer på nytt i Obsidian |
+| 4 (collaborator) | `gh api -X DELETE "repos/Nithu0/tiger-brain/collaborators/<TEAMMATE>"` |
+| 5 (CODEOWNERS) | `git checkout HEAD~1 -- .github/CODEOWNERS` |
+| 6 (smoke test) | Branch slettes som del av test-flow |
 
 ---
 
-## Sjekkliste før du sier deg ferdig
+## DONE 2026-05-13
 
-- [ ] `gh auth status` OK
-- [ ] `brain_audit.py` passerer
-- [ ] API-nøkkel rotert i Obsidian (Option A eller B valgt)
-- [ ] CODEOWNERS har ekte handles, ingen `@OWNER`/`@TEAMMATE` igjen
-- [ ] Repo opprettet privat
-- [ ] `main` pushet
-- [ ] Branch protection aktiv (verifisert med `gh api`)
-- [ ] Teammate invitert med `push`-rolle
-- [ ] Path-guard smoke test feilet som forventet
-- [ ] `TEAMMATE-ONBOARDING.md` sendt til teammate
+- **API-key leak purge**: `git filter-repo --invert-paths --path .obsidian/plugins/obsidian-local-rest-api/` kjørt; `git log --all -- .obsidian/plugins/obsidian-local-rest-api/data.json` returnerer tomt. (Var step 3 i forrige versjon, Option A.)
+- **CODEOWNERS owner-handle**: `@OWNER` → `@Nithu0` byttet i `.github/CODEOWNERS`. `@TEAMMATE` venter fortsatt på teammates handle (se STEP 5).
 
 ---
 

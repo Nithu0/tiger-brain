@@ -31,11 +31,13 @@ Single-screen overview. If you opened the vault and don't know where to go — s
 - [[SECURITY-INCIDENT-API-KEY]] — open security incident, awaiting operator decision
 - [[OPERATOR-NEXT-STEPS]] — checklist for operator (gh setup, branch protection, secret-purge decision)
 - [[FINAL-SHARING-CHECKLIST]] — pre-share verification before first push
+- Latest snapshot: [[STATE-2026-05-13-FINAL]]
 
 ## Today's gates
 
 - **Foundation gate state**: live truth in `/home/nithu/code/ai-assistent/docs/ops/phase-status.md`. As of 2026-05-11 the Foundation gate is **5/5 🟢** per phase-status. Vault mirror: [[01-nexus/runtime/Phase-Status-Pointer]]. Do not duplicate state here.
 - Calibration must pass before any live-capital flip — see [[01-CURRENT-FOCUS]].
+- Brain repo: target `Nithu0/tiger-brain` (private) — awaits GH UI create + push (see [[READY-TO-SHARE]] section 6)
 
 ## Where am I writing right now?
 

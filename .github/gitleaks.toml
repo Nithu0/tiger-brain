@@ -1,0 +1,14 @@
+title = "tiger-brain gitleaks config"
+
+[allowlist]
+description = "Allowed false-positives in docs/examples"
+paths = [
+  '''90-archive/.*''',
+  '''SECURITY-INCIDENT-API-KEY\.md''',  # documents the pattern, not the value
+  '''scripts/brain_audit\.py''',         # contains regexes for the scan
+  '''scripts/sanity\.sh''',
+  '''_runbooks/Runbook-Obsidian-Workspace-Drift\.md''',
+  '''security/.*''',
+]
+
+# Use default gitleaks rules (no custom rules) — default rules catch OpenAI, Anthropic, GitHub, AWS, RSA, etc.

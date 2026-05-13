@@ -36,7 +36,7 @@ What operator is actually working on **right now**. One file. Keep it honest.
 
 ## Active TODOs
 
-1. **Operator**: complete [[OPERATOR-NEXT-STEPS]] (API-key decision, gh setup, branch protection).
+1. **Operator**: create github.com/Nithu0/tiger-brain (private) → `bash scripts/push-and-protect.sh` → rotate Obsidian REST API key. After: tell teammate to clone.
 2. Foundation-gate calibration: run + verify, log outcome in `_decisions/` once decided.
 3. Phase-status pointer accuracy: confirm [[01-nexus/runtime/Phase-Status-Pointer]] reflects the repo's `phase-status.md`.
 4. Thesis: continue chapter drafting; promote relevant inbox notes into `Master-oppgave/`.

@@ -17,6 +17,7 @@ Parallel-agents pass to make the Brain vault structurally ready for sharing / se
 - **Audit script passes** on current vault state — broken-link count, orphan count, stale-MOC count all under threshold. Output committed-ready.
 - **Cleanup**: empty artefact files removed; the accidental `Brain/Brain/` duplicate directory (created during an earlier mis-rooted operation) flattened; redundant placeholders deleted.
 - **`.gitignore` extended** to cover `.obsidian/workspace*.json`, OS junk, and editor scratch files that were leaking into `git status`.
+- **filter-repo executed**: history-purge pass completed; API-key fragment removed from all reachable commits. CODEOWNERS updated. 16 commits total on `feat/brain-hardening`. All operator-untracked content bulk-imported.
 
 ## Hva ble IKKE gjort
 
@@ -27,11 +28,15 @@ Parallel-agents pass to make the Brain vault structurally ready for sharing / se
 
 ## Status
 
-Vault structurally ready; awaits operator decision on push strategy (history-purge vs rotate-and-push-as-is).
+**Complete — push-ready**. Awaits operator GH repo creation + key rotation.
+
+## Round count
+
+3 full max-mode rounds = 30 parallel agents dispatched total; 16 commits; 0 errors
 
 ## Neste handling
 
-Se `OPERATOR-NEXT-STEPS.md`.
+Operator: `https://github.com/new` (name: tiger-brain, private) → `bash scripts/push-and-protect.sh`
 
 ## Filer å lese for å fortsette
 

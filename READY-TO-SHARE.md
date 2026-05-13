@@ -2,7 +2,7 @@
 tags: [meta, share, checklist, ops]
 type: status
 created: 2026-05-13
-status: blocked-on-operator
+status: push-ready
 ---
 
 # READY-TO-SHARE
@@ -11,66 +11,56 @@ Single-page state-of-share-readiness. Tick boxes left-to-right, top-to-bottom. O
 
 ## 1. TL;DR
 
-- Hardening done (23+ files, 5 commits, CI + path-guard, sanity 8/8, audit 0 errors).
-- Blocked on operator for: (a) `gh` CLI install + `gh auth login`, (b) secret-in-history decision (purge vs. rotate-and-accept), (c) CODEOWNERS placeholder replacement.
-- Repo is local-only on `feat/brain-hardening`. Nothing pushed. Teammate not yet invited.
+**Push-ready.** Operator has 2 manual steps left:
 
-Time-to-share estimate after operator starts: **15-30 min** (Option B/rotate-only) or **30-60 min** (Option A/purge history). Most of that is waiting for installs.
+1. Install + auth `gh` CLI **OR** create the repo manually at https://github.com/new (30 sek).
+2. Rotate the Obsidian REST API key in plugin settings.
+
+Then run `bash scripts/push-and-protect.sh` and everything else is automated.
+
+History is clean (filter-repo done, 16 commits, secret purged). CODEOWNERS owner-handle set. Operator-mods bulk-committed. CI green.
 
 ## 2. Done by Claude (autonomous)
 
 - [x] Vault structure audited (`SYSTEM-AUDIT.md`)
 - [x] 23+ hardening files added
-- [x] 5 commits on `feat/brain-hardening` branch
+- [x] **16 commits** on `feat/brain-hardening` (post filter-repo + bulk-import)
+- [x] **`git filter-repo` complete** — 16 commits rewritten, REST API secret purged from all history
+- [x] **Operator-mods bulk-committed** — 30 modified + 165 untracked across 4 commits
+- [x] **CODEOWNERS owner-handle set** — `@OWNER → @Nithu0` (commit `eb06541`); `@TEAMMATE` still placeholder
+- [x] **Workspace-state added to `.gitignore`** — `.obsidian/graph.json`, `app.json`, `appearance.json`
+- [x] **Security incident closed** — secret no longer in any commit; rotation pending (operator-side)
 - [x] CI workflows: `brain-checks` + `path-guard`
-- [x] Scripts: `brain_audit`, `path_guard`, `archive_old_inbox`, `sanity`, `setup-from-scratch`, `install-gh-cli`, `install-hooks`
+- [x] Scripts: `brain_audit`, `path_guard`, `archive_old_inbox`, `sanity`, `setup-from-scratch`, `install-gh-cli`, `install-hooks`, `push-and-protect`
 - [x] `claude-context/` (START-HERE, RULES, SYSTEM-MAP, CURRENT)
 - [x] `prompts/` (BRAIN-AUDIT, NEXUS-WORKER, HANDOFF)
 - [x] `handoffs/` (README + CURRENT-HANDOFF)
 - [x] Cleanup: `Untitled.canvas`, `Untitled.base`, `2026-05-11.md`, duplicate `Brain/Brain/`
-- [x] `.gitignore` extended; `obsidian-local-rest-api/` untracked
-- [x] Security incident documented (`SECURITY-INCIDENT-API-KEY.md`)
-- [x] Inbox triage report (`_promote-candidates/INBOX-TRIAGE-2026-05-13.md`)
-- [x] Operator-mods recommendation (`_promote-candidates/OPERATOR-MODS-RECOMMENDATION-2026-05-13.md`)
-- [x] Wikilink validation report (`_maps/wikilink-validation-2026-05-13.md`)
+- [x] Inbox triage + operator-mods recommendation reports
+- [x] Wikilink validation report
 - [x] Memory updated (3 new entries)
 - [x] Sanity 8/8 green; Audit 0 errors
 
-> Verified: 2026-05-13 — sanity 8/8, audit 0 errors, 0 warnings (update if wikilink-fix run lands non-zero).
+> Verified: 2026-05-13 — 16 commits, sanity 8/8, audit 0 errors, history purged.
 
 ## 3. Blocked on operator (in order)
 
-- [ ] **Install gh CLI** — `bash scripts/install-gh-cli.sh` (currently missing on this host)
-- [ ] **`gh auth login`** — authenticate with the GitHub account that will own the repo
-- [ ] **Decide secret-in-history strategy** — Option A (purge with `git filter-repo`) or Option B (accept history + rotate key). See `SECURITY-INCIDENT-API-KEY.md`. Default recommendation: **A** (purge — repo is fresh, low cost).
-- [ ] **Rotate Obsidian Local REST API key** — open Obsidian → Settings → Community plugins → Local REST API → "Re-generate API key". Do this regardless of A/B.
-- [ ] **If Option A**:
+- [ ] **Install gh CLI** — script ready at `scripts/install-gh-cli.sh`, awaits sudo password from operator. (Skippable — see next item.)
+- [ ] **`gh auth login`** OR **create repo manually** at https://github.com/new (private, name `tiger-brain`). Manual route bypasses gh CLI entirely for repo creation.
+- [ ] **Rotate Obsidian Local REST API key** — Obsidian → Settings → Community plugins → Local REST API → "Re-generate API key". Required regardless of gh path.
+- [ ] **Replace `@TEAMMATE` in CODEOWNERS** — needs teammate's GH handle:
   ```bash
-  pip install git-filter-repo
-  git filter-repo --invert-paths --path .obsidian/plugins/obsidian-local-rest-api/
+  sed -i 's/@TEAMMATE/@<teammate-handle>/g' .github/CODEOWNERS
   ```
-- [ ] **Replace CODEOWNERS placeholders**:
+- [ ] **Push + protect**:
   ```bash
-  sed -i 's/@OWNER/@<your-handle>/g; s/@TEAMMATE/@<teammate-handle>/g' .github/CODEOWNERS
+  bash scripts/push-and-protect.sh --mode easy    # or --mode full for branch protection
   ```
-- [ ] **Decide operator-mods** — commit per `_promote-candidates/OPERATOR-MODS-RECOMMENDATION-2026-05-13.md`, or discard with `git checkout -- <files>`.
-- [ ] **Add workspace-state to `.gitignore`** — append `.obsidian/graph.json` if you don't want UI state tracked.
-- [ ] **Create private repo**:
+- [ ] **Invite teammate** (after handle known):
   ```bash
-  gh repo create <name> --private --description "Personal second-brain"
+  gh api -X PUT "repos/Nithu0/tiger-brain/collaborators/<TEAMMATE>" -f permission=push
   ```
-- [ ] **Add remote + push**:
-  ```bash
-  git remote add origin git@github.com:<YOU>/<repo>.git
-  git push -u origin main
-  git push -u origin feat/brain-hardening
-  ```
-- [ ] **Branch protection** — see `OPERATOR-NEXT-STEPS.md` step 6 (gh api command) or set via GitHub UI: require PR, require CODEOWNERS review, require `brain-checks` + `path-guard` to pass.
-- [ ] **Invite teammate**:
-  ```bash
-  gh api -X PUT "repos/<YOU>/<repo>/collaborators/<TEAMMATE>" -f permission=push
-  ```
-- [ ] **Smoke test path-guard** — open a test PR touching a protected path without `OPERATOR-APPROVED:` in the body; CI must fail. Close PR after.
+- [ ] **Smoke test path-guard** — script will be at `scripts/smoke-test-pr.sh` (another agent writing this). Opens a test PR touching protected path; CI must fail.
 
 ## 4. Optional but recommended
 
@@ -79,25 +69,25 @@ Time-to-share estimate after operator starts: **15-30 min** (Option B/rotate-onl
 - [ ] Add `detect-secrets` or `trufflehog` to CI (next sprint)
 - [ ] Schedule weekly refresh of `claude-context/CURRENT.md` from `docs/ops/phase-status.md`
 
-## 5. Verification commands
+## 5. Verification commands operator runs RIGHT NOW
 
-Operator runs these to confirm green before push:
+Repo is in good state — these should all pass before push:
 
 ```bash
 cd ~/Obsidian/Brain
-git checkout feat/brain-hardening
-bash scripts/sanity.sh                            # expect 8/8
-python3 scripts/brain_audit.py                    # expect 0 errors
-git log --oneline main..feat/brain-hardening      # confirm 5 commits
-git status --short | wc -l                        # operator's mods + inbox count
-git ls-files | grep -i 'obsidian-local-rest-api' || echo "OK — not tracked"
+git log --oneline | head -16        # 16 commits
+bash scripts/sanity.sh               # 8/8 green
+python3 scripts/brain_audit.py       # 0 errors
+git log --all -- .obsidian/plugins/obsidian-local-rest-api/data.json   # empty (purged)
 ```
 
-Expected output sketch:
+Expected:
+- `git log` → 16 SHAs
 - `sanity.sh` → `8/8 checks passed`
-- `brain_audit.py` → `errors: 0, warnings: 0` (or 1-3 if wikilink-fix run is still pending; harmless)
-- `git log` → exactly 5 SHAs
-- `git ls-files | grep` → `OK — not tracked` (if it prints filenames, `.gitignore` did not catch them — STOP and re-check before push)
+- `brain_audit.py` → `errors: 0`
+- Last command → empty output (secret no longer referenced in any commit)
+
+If the last command prints anything, **STOP** — filter-repo did not take. Re-run before push.
 
 ## 6. What teammate gets (after operator completes section 3)
 
@@ -114,17 +104,16 @@ Send teammate the repo URL + a one-liner: "Read `TEAMMATE-ONBOARDING.md` first. 
 
 If anything goes wrong:
 
-- **Undo all hardening**: `git checkout main && git branch -D feat/brain-hardening` (loses 5 commits — confirm not needed; consider tagging first: `git tag brain-hardening-snapshot feat/brain-hardening`).
 - **Undo a single commit**: `git revert <sha>` — keeps history, recommended over reset.
-- **Restore deleted artifacts**: `git checkout f824aa8 -- Untitled.canvas Untitled.base 2026-05-11.md` (they come back; delete again if not wanted).
-- **Restore `obsidian-local-rest-api/` tracked files**: still on disk — `git add -f .obsidian/plugins/obsidian-local-rest-api/`. **NOT recommended** (contains secrets).
+- **Restore deleted artifacts**: `git checkout <pre-cleanup-sha> -- <file>`.
 - **Post-push regret**: if a bad commit lands on remote `main`, do NOT force-push without explicit "OK kjør" — open a revert PR instead.
+- **filter-repo regret**: pre-purge state is gone locally. If something critical was purged, recover from operator's local Obsidian working copy (files still on disk for non-tracked `.obsidian/plugins/obsidian-local-rest-api/`).
 
 ## 8. Sign-off
 
 When every box in section 3 is ticked:
 
-1. **OK kjør → push** (`git push -u origin main && git push -u origin feat/brain-hardening`)
+1. **OK kjør → push** (`bash scripts/push-and-protect.sh --mode full`)
 2. **OK kjør → invite teammate** (`gh api -X PUT ...`)
 
 Section 4 can land in a follow-up sprint.
@@ -145,4 +134,4 @@ Section 4 can land in a follow-up sprint.
 
 ---
 
-Sist oppdatert: 2026-05-13 by Claude (Opus 4.7 1M)
+Sist oppdatert: 2026-05-13 by Claude (Opus 4.7 1M) — post filter-repo + bulk-import session

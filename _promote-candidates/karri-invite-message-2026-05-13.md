@@ -2,6 +2,7 @@
 tags: [meta, karri, message]
 type: draft
 created: 2026-05-13
+updated: 2026-05-13
 status: ready-to-send
 ---
 
@@ -20,10 +21,13 @@ Du er nå collaborator på `Nithu0/tiger-brain`. Det inneholder:
 
 3-minutters setup:
 
+Når installer'n spør om FIRM_ROSTER, velg `2` (nexus-only — 8 nexus-paner). Den setter også git config så dine commits viser deg som author, ikke meg.
+
 ```bash
 git clone git@github.com:Nithu0/tiger-brain.git ~/Obsidian/Brain
 cd ~/Obsidian/Brain
 bash firm-launcher/install.sh
+# answer the prompts (name, email, roster=2 for nexus-only)
 source ~/.bashrc
 firm
 ```
@@ -45,17 +49,15 @@ Si fra hvis noe ikke fungerer eller dokumentasjonen er rar.
 
 ## 2. Pre-send checklist
 
-- [ ] Karri er lagt til som Write collaborator på `Nithu0/tiger-brain` (https://github.com/Nithu0/tiger-brain/settings/access)
-- [ ] Karri sitt GH-handle er lagt til på bypass list på `main-protection` ruleset
-- [ ] CODEOWNERS oppdatert: `sed -i 's/@TEAMMATE/@<karri-handle>/g' .github/CODEOWNERS` + commit + push
-- [ ] Karri har SSH-key uploaded til GitHub
-- [ ] Send meldingen via Discord/Slack/email
+- [ ] Karri har SSH-key på maskinen sin som funker mot Nithu0 GitHub-konto
+- [ ] Tigger-brain pushed to origin (already done)
+- [ ] Send meldingen
 
 ## 3. If Karri reports issues
 
 - "firm: command not found" → he didn't reload shell. Tell him `source ~/.bashrc`
 - "wt.exe not found" → he's on Linux/macOS without WT. Use `firmz` (zellij fallback)
 - "pre-push hook fails" → run `bash scripts/sanity.sh` to see why
-- "Path-guard blocks my PR" → he edited a protected path. Either move edits to allowed zone, or operator adds `OPERATOR-APPROVED: <reason>` to PR body
+- "Path-guard blocks my PR → siden du er på Nithu0-kontoen kan du i prinsippet pushe direkte til main, men bedre å lage PR + svar `OPERATOR-APPROVED: <reason>` hvis du må røre protected paths."
 
 Sist oppdatert: 2026-05-13

@@ -13,6 +13,11 @@ git clone git@github.com:Nithu0/tiger-brain.git ~/Obsidian/Brain
 cd ~/Obsidian/Brain
 bash firm-launcher/install.sh
 source ~/.bashrc
+
+# install.sh will prompt for:
+#   - name + email (for git config in cloned repos)
+#   - FIRM_ROSTER preset (1=default, 2=nexus, 3=thesis, 4=workspace)
+# All can be passed via flags: --name NAME --email EMAIL --roster nexus --yes
 ```
 
 ## Verify

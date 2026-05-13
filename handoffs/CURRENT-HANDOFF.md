@@ -4,46 +4,53 @@ tags: [handoff, current]
 created: 2026-05-11
 updated: 2026-05-13
 owner: "Claude (Opus 4.7 1M)"
-status: Karri-onboarding packaged; awaits operator collaborator invite (GH UI)
-next: Operator invites Karri as Write collaborator to Nithu0/tiger-brain; adds Karri to main-protection ruleset bypass list
+status: Karri-onboarding finalized — interactive install + nexus-only roster + shared-account model
+next: Operator sends Karri the install message; Karri runs install.sh, answers prompts, types `firm`
 ---
 
-# CURRENT-HANDOFF — Brain hardening session
+# CURRENT-HANDOFF — Nexus EOD 13.5
 
 ## Status
 
-**Karri-onboarding packaged; awaits operator collaborator invite (GH UI)**
+**Max-mode 4-round sweep landed**. 3 commits + 4 Karri-proposals pushed to main; A2 observability flowing since 07:54Z. Two operator-gated actions pending: B1 Railway flip + A5 backfill.
 
 ## Next action
 
-Operator invites Karri as Write collaborator to Nithu0/tiger-brain; adds Karri to main-protection ruleset bypass list
+Run morning checklist in `[[2026-05-13_eod_nexus]]` top-to-bottom. Top-3:
 
-## What was done
+1. Check Karri's Discord for C1–C4 replies
+2. Verify A2 reason-histogram via T+1h SQL (Q2 from verification_playbook)
+3. Investigate `gate_decisions` 14h gap (round-4 anomaly, pre-existing)
 
-- 17 commits pushed to GitHub; v0.1.0-share-ready tag set.
-- Automation packaging (round 6): brain-session-start.sh hooks into firm-tab-init.sh; setup-from-scratch auto-installs pre-push hook; monthly-inbox-archive.yml scheduled; branch-protection recipe written; weekly-maintenance runbook reframed as "what's automated".
-- Round 7: firm-launcher packaged into vault, KARRI-DAY-1 cheat sheet, install.sh idempotent
+## What was done (13.5)
+
+- Pushed `deb7075` (observability A1–A4) + `46a2534` (4 Karri-proposals C1–C4) + `5c07156` (phase-status + 7d watch-list).
+- Confirmed LIVE on Worker via `/health` (`5c07156d`).
+- Delivered C1–C4 to Karri Discord in 2 POSTs (both HTTP 204).
+- Library bootstrapped: 16 entries under `~/Obsidian/Brain/_library/trading/` + SKILL.md v0.1.0 → v0.2.0.
+- Foundation gate: still 5/5 green.
+- Round 8: FIRM_ROSTER configurable (default/nexus/thesis/workspace); install.sh interactive (asks name+email+roster); KARRI-DAY-1 + invite message updated to reflect shared-account model + roster=nexus.
 
 ## What was NOT done
 
-- Karri invite (operator UI step); key rotation still deferred
-
-## Open questions for operator
-
-1. Teammate handle for CODEOWNERS @TEAMMATE?
+- B1 Railway flip (`ENTRY_STACK_COOLDOWN_ENABLED=true`) — Karri-pre-approved, operator-gated
+- A5 backfill (138 NULL → ~96 fillable rows) — SQL drafted, awaits nexus-pg-rw approval
+- 4 Karri-proposals C1–C4 implementation — blocked on Karri review
 
 ## Files to read first
 
-1. [[STATE-2026-05-13-FINAL]]
-2. [[READY-TO-SHARE]]
-3. [[OPERATOR-NEXT-STEPS]]
+1. [[2026-05-13_eod_nexus]] ← active handoff
+2. `/home/nithu/code/ai-assistent/docs/ops/phase-status.md`
+3. `~/Obsidian/Brain/00-claude-inbox/nexus/2026-05-13/round3/verification_playbook.md`
 
 ## State pointers
 
-- Brain branch: `feat/brain-hardening @ HEAD (post-filter-repo)`
-- No remote yet
 - Nexus phase status: `/home/nithu/code/ai-assistent/docs/ops/phase-status.md` (Foundation 5/5 🟢)
+- Watch-list: `/home/nithu/code/ai-assistent/docs/ops/2026-05-13_watch-list_7d.md` (Day 1 = 14.5)
+- Karri-proposals: `/home/nithu/code/ai-assistent/docs/strategy/proposals/2026-05-13_*.md`
+- Library: `~/Obsidian/Brain/_library/trading/INDEX.md`
+- Brain (vault hardening) still on `feat/brain-hardening` — separate track from Nexus EOD
 
 ---
 
-Sist oppdatert: 2026-05-13
+Sist oppdatert: 2026-05-13 (EOD).

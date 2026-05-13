@@ -9,6 +9,8 @@
 #   bash install.sh [--yes] [--with-thesis|--no-thesis]
 #                   [--brain-vault PATH] [--nexus-repo PATH]
 #                   [--firm-bin-dir PATH] [--no-shellrc]
+#                   [--name NAME] [--email EMAIL]
+#                   [--roster default|nexus|thesis|workspace]
 
 set -uo pipefail
 
@@ -20,6 +22,9 @@ FIRM_BIN_DIR="${FIRM_BIN_DIR:-$HOME/code/_bin}"
 ASSUME_YES=0
 WITH_THESIS=0
 NO_SHELLRC=0
+GIT_USER_NAME="${GIT_USER_NAME:-}"
+GIT_USER_EMAIL="${GIT_USER_EMAIL:-}"
+FIRM_ROSTER_DEFAULT="${FIRM_ROSTER_DEFAULT:-}"
 
 # ---------- pretty printing ----------
 c_reset=$'\033[0m'; c_red=$'\033[31m'; c_yel=$'\033[33m'
@@ -49,6 +54,9 @@ while [[ $# -gt 0 ]]; do
     --nexus-repo)      NEXUS_REPO="$2"; shift ;;
     --firm-bin-dir)    FIRM_BIN_DIR="$2"; shift ;;
     --no-shellrc)      NO_SHELLRC=1 ;;
+    --name)            GIT_USER_NAME="$2"; shift ;;
+    --email)           GIT_USER_EMAIL="$2"; shift ;;
+    --roster)          FIRM_ROSTER_DEFAULT="$2"; shift ;;
     -h|--help)
       sed -n '2,12p' "$0"; exit 0 ;;
     *)
@@ -107,6 +115,38 @@ else
   exit 1
 fi
 
+# ---------- 1b. interactive prompts (name/email/roster) ----------
+hdr "1b. collaborator setup"
+
+if [[ -z "${GIT_USER_NAME:-}" && "$ASSUME_YES" -eq 0 ]]; then
+  read -rp "Your name (for git commit attribution; leave blank to use existing config): " GIT_USER_NAME
+fi
+if [[ -z "${GIT_USER_EMAIL:-}" && "$ASSUME_YES" -eq 0 ]]; then
+  read -rp "Your email: " GIT_USER_EMAIL
+fi
+
+if [[ -z "${FIRM_ROSTER_DEFAULT:-}" && "$ASSUME_YES" -eq 0 ]]; then
+  echo
+  echo "Firm pane layout — which projects do you work on?"
+  echo "  1) default       (2 workspace + 4 nexus + 2 thesis) — operator's split"
+  echo "  2) nexus         (8 nexus panes) — Nexus-only collaborator like Karri"
+  echo "  3) thesis        (8 thesis panes)"
+  echo "  4) workspace     (8 workspace panes)"
+  read -rp "Choose [1-4, default 1]: " roster_choice
+  case "${roster_choice:-1}" in
+    1) FIRM_ROSTER_DEFAULT=default   ;;
+    2) FIRM_ROSTER_DEFAULT=nexus     ;;
+    3) FIRM_ROSTER_DEFAULT=thesis    ;;
+    4) FIRM_ROSTER_DEFAULT=workspace ;;
+    *) FIRM_ROSTER_DEFAULT=default   ;;
+  esac
+fi
+FIRM_ROSTER_DEFAULT="${FIRM_ROSTER_DEFAULT:-default}"
+
+info "git name   = ${GIT_USER_NAME:-<keep existing>}"
+info "git email  = ${GIT_USER_EMAIL:-<keep existing>}"
+info "roster     = $FIRM_ROSTER_DEFAULT"
+
 # ---------- 2. detect / clone repos ----------
 hdr "2. repo checkout"
 
@@ -135,6 +175,20 @@ if [[ "$WITH_THESIS" -eq 1 ]]; then
   clone_if_missing "git@github.com:Nithu0/Master-oppgave.git" "$THESIS_REPO" "Master-oppgave"
 else
   info "skipping Master-oppgave (pass --with-thesis to include)"
+fi
+
+# apply per-repo git config (only if a name was provided)
+if [[ -n "${GIT_USER_NAME:-}" ]]; then
+  ( cd "$BRAIN_VAULT" && git config user.name "$GIT_USER_NAME" && git config user.email "$GIT_USER_EMAIL" )
+  echo "  ✓ git config set for $BRAIN_VAULT: $GIT_USER_NAME <$GIT_USER_EMAIL>"
+  if [[ -d "$NEXUS_REPO" ]]; then
+    ( cd "$NEXUS_REPO" && git config user.name "$GIT_USER_NAME" && git config user.email "$GIT_USER_EMAIL" )
+    echo "  ✓ git config set for $NEXUS_REPO"
+  fi
+  if [[ -d "$THESIS_REPO" ]]; then
+    ( cd "$THESIS_REPO" && git config user.name "$GIT_USER_NAME" && git config user.email "$GIT_USER_EMAIL" )
+    echo "  ✓ git config set for $THESIS_REPO"
+  fi
 fi
 
 # ---------- 3. install firm scripts ----------
@@ -208,7 +262,8 @@ if [[ "$NO_SHELLRC" -ne 1 ]]; then
     ok "firm block already present in ~/.bashrc"
   else
     cp -p "$HOME/.bashrc" "$HOME/.bashrc.bak-$TS" 2>/dev/null || true
-    cat >> "$HOME/.bashrc" <<'EOF'
+    {
+      cat <<'EOF'
 
 # === firm launcher (installed by tiger-brain/firm-launcher/install.sh) ===
 # 8-Claude launcher across projects (workspace, nexus, master-oppgave).
@@ -221,8 +276,12 @@ alias firm='${FIRM_BIN_DIR:-$HOME/code/_bin}/firm-wt-split.sh'
 alias firmt='${FIRM_BIN_DIR:-$HOME/code/_bin}/firm-wt-tabs.sh'
 alias firmz='${FIRM_BIN_DIR:-$HOME/code/_bin}/firm-zellij.sh'
 alias nx='${FIRM_BIN_DIR:-$HOME/code/_bin}/firm-wt-split.sh'
-# === end firm launcher ===
 EOF
+      if [[ "$FIRM_ROSTER_DEFAULT" != "default" ]]; then
+        echo "export FIRM_ROSTER=\"$FIRM_ROSTER_DEFAULT\""
+      fi
+      echo "# === end firm launcher ==="
+    } >> "$HOME/.bashrc"
     ok "appended firm block to ~/.bashrc (backup: ~/.bashrc.bak-$TS)"
   fi
 fi

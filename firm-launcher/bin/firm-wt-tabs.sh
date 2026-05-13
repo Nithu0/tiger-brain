@@ -18,10 +18,18 @@
 
 set -euo pipefail
 
+FIRM_ROSTER="${FIRM_ROSTER:-default}"
+
 # --- arg parsing ------------------------------------------------------------
 DRY_RUN=0
 if [[ "${1:-}" == "--dry-run" || "${1:-}" == "-n" ]]; then
   DRY_RUN=1
+  shift
+fi
+
+# Positional arg overrides FIRM_ROSTER env var (e.g. `firm-wt-tabs.sh nexus`).
+if [[ $# -ge 1 ]]; then
+  FIRM_ROSTER="$1"
   shift
 fi
 
@@ -45,22 +53,70 @@ fi
 
 # --- tab distribution -------------------------------------------------------
 # Each row: <role> <abs-wsl-path> <project>
-# code-1, code-2     -> $CODE_DIR              (workspace)
-# ai-1..ai-4         -> $NEXUS_REPO            (nexus)
-# thesis-1, thesis-2 -> $THESIS_REPO           (master-oppgave)
+# Selectable via FIRM_ROSTER env var or positional arg (default | nexus | thesis | workspace).
 CODE_DIR="${CODE_DIR:-$HOME/code}"
 NEXUS_REPO="${NEXUS_REPO:-$HOME/code/ai-assistent}"
 THESIS_REPO="${THESIS_REPO:-$HOME/code/Master-oppgave}"
-tabs=(
-  "code-1   $CODE_DIR     workspace"
-  "code-2   $CODE_DIR     workspace"
-  "ai-1     $NEXUS_REPO   nexus"
-  "ai-2     $NEXUS_REPO   nexus"
-  "ai-3     $NEXUS_REPO   nexus"
-  "ai-4     $NEXUS_REPO   nexus"
-  "thesis-1 $THESIS_REPO  master-oppgave"
-  "thesis-2 $THESIS_REPO  master-oppgave"
-)
+
+case "$FIRM_ROSTER" in
+  default)
+    # 2 workspace + 4 nexus + 2 thesis (original behaviour)
+    tabs=(
+      "code-1   $CODE_DIR     workspace"
+      "code-2   $CODE_DIR     workspace"
+      "ai-1     $NEXUS_REPO   nexus"
+      "ai-2     $NEXUS_REPO   nexus"
+      "ai-3     $NEXUS_REPO   nexus"
+      "ai-4     $NEXUS_REPO   nexus"
+      "thesis-1 $THESIS_REPO  master-oppgave"
+      "thesis-2 $THESIS_REPO  master-oppgave"
+    )
+    ;;
+  nexus|nexus-only)
+    # 8 nexus panes (e.g. Karri's workstation)
+    tabs=(
+      "ai-1 $NEXUS_REPO nexus"
+      "ai-2 $NEXUS_REPO nexus"
+      "ai-3 $NEXUS_REPO nexus"
+      "ai-4 $NEXUS_REPO nexus"
+      "ai-5 $NEXUS_REPO nexus"
+      "ai-6 $NEXUS_REPO nexus"
+      "ai-7 $NEXUS_REPO nexus"
+      "ai-8 $NEXUS_REPO nexus"
+    )
+    ;;
+  thesis|thesis-only)
+    # 8 thesis panes
+    tabs=(
+      "thesis-1 $THESIS_REPO master-oppgave"
+      "thesis-2 $THESIS_REPO master-oppgave"
+      "thesis-3 $THESIS_REPO master-oppgave"
+      "thesis-4 $THESIS_REPO master-oppgave"
+      "thesis-5 $THESIS_REPO master-oppgave"
+      "thesis-6 $THESIS_REPO master-oppgave"
+      "thesis-7 $THESIS_REPO master-oppgave"
+      "thesis-8 $THESIS_REPO master-oppgave"
+    )
+    ;;
+  workspace|workspace-only)
+    # 8 workspace panes
+    tabs=(
+      "code-1 $CODE_DIR workspace"
+      "code-2 $CODE_DIR workspace"
+      "code-3 $CODE_DIR workspace"
+      "code-4 $CODE_DIR workspace"
+      "code-5 $CODE_DIR workspace"
+      "code-6 $CODE_DIR workspace"
+      "code-7 $CODE_DIR workspace"
+      "code-8 $CODE_DIR workspace"
+    )
+    ;;
+  *)
+    echo "firm-wt-tabs.sh: unknown FIRM_ROSTER=$FIRM_ROSTER" >&2
+    echo "  valid: default | nexus | thesis | workspace" >&2
+    exit 1
+    ;;
+esac
 
 # --- build wt.exe argv ------------------------------------------------------
 # We pass each action as a separate argv group, with literal `;` separators

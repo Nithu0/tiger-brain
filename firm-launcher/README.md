@@ -56,6 +56,25 @@ firm
 
 Each tab writes status lines to `~/Obsidian/Brain/00-firm-bus/feed.md` and reads its own inbox at `~/Obsidian/Brain/00-firm-bus/inbox/<role>.md`. This gives the 8 sessions a lightweight, append-only coordination channel without inter-process plumbing — anyone (including the operator) can drop a message into a role's inbox. See `_runbooks/firm-launcher.md` for the full protocol.
 
+## FIRM_ROSTER — choose your pane layout
+
+| Preset | Layout |
+|---|---|
+| `default` | 2 workspace + 4 nexus + 2 thesis (operator's full setup) |
+| `nexus` | 8 nexus panes (for Nexus-only collaborators like Karri) |
+| `thesis` | 8 thesis panes |
+| `workspace` | 8 workspace panes |
+
+Set via env var (persistent — installer writes to .bashrc):
+```
+export FIRM_ROSTER=nexus
+```
+
+Or override per-launch:
+```
+firm nexus    # one-off override
+```
+
 ## Customization
 
 Set these env vars before running `install.sh` to override defaults:

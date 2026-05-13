@@ -23,11 +23,19 @@
 
 set -euo pipefail
 
+FIRM_ROSTER="${FIRM_ROSTER:-default}"
+
 # --dry-run / -n: print the wt.exe argv array (one arg per line, with indices)
 # and exit 0 without launching. Useful for debugging the build of `args`.
 DRY_RUN=0
 if [[ "${1:-}" == "--dry-run" || "${1:-}" == "-n" ]]; then
   DRY_RUN=1
+  shift
+fi
+
+# Positional arg overrides FIRM_ROSTER env var (e.g. `firm-wt-split.sh nexus`).
+if [[ $# -ge 1 ]]; then
+  FIRM_ROSTER="$1"
   shift
 fi
 
@@ -50,6 +58,76 @@ CODE_DIR="${CODE_DIR:-$HOME/code}"
 AI_DIR="${NEXUS_REPO:-$HOME/code/ai-assistent}"
 THESIS_DIR="${THESIS_REPO:-$HOME/code/Master-oppgave}"
 
+# Roster selection: which 8 (role,project) pairs fill the 2x4 grid.
+# Layout/geometry (split actions, --size, mf focus moves) is preserved across
+# all presets — only the per-pane (role, project, dir) values change.
+# Pane order = creation order shown in the header diagram (top L-to-R, then bottom L-to-R).
+case "$FIRM_ROSTER" in
+  default)
+    # 2 workspace + 4 nexus + 2 thesis (original behaviour)
+    roster=(
+      "code-1:workspace"        "code-2:workspace"
+      "ai-1:nexus"              "ai-2:nexus"
+      "ai-3:nexus"              "ai-4:nexus"
+      "thesis-1:master-oppgave" "thesis-2:master-oppgave"
+    )
+    ;;
+  nexus|nexus-only)
+    # 8 nexus panes (e.g. Karri's workstation)
+    roster=(
+      "ai-1:nexus" "ai-2:nexus"
+      "ai-3:nexus" "ai-4:nexus"
+      "ai-5:nexus" "ai-6:nexus"
+      "ai-7:nexus" "ai-8:nexus"
+    )
+    ;;
+  thesis|thesis-only)
+    # 8 thesis panes
+    roster=(
+      "thesis-1:master-oppgave" "thesis-2:master-oppgave"
+      "thesis-3:master-oppgave" "thesis-4:master-oppgave"
+      "thesis-5:master-oppgave" "thesis-6:master-oppgave"
+      "thesis-7:master-oppgave" "thesis-8:master-oppgave"
+    )
+    ;;
+  workspace|workspace-only)
+    # 8 workspace panes
+    roster=(
+      "code-1:workspace" "code-2:workspace"
+      "code-3:workspace" "code-4:workspace"
+      "code-5:workspace" "code-6:workspace"
+      "code-7:workspace" "code-8:workspace"
+    )
+    ;;
+  *)
+    echo "firm-wt-split: unknown FIRM_ROSTER=$FIRM_ROSTER" >&2
+    echo "  valid: default | nexus | thesis | workspace" >&2
+    exit 1
+    ;;
+esac
+
+if [[ "${#roster[@]}" -ne 8 ]]; then
+  echo "firm-wt-split: roster must have exactly 8 entries, got ${#roster[@]}" >&2
+  exit 1
+fi
+
+# Helper: split "role:project" → role, project, dir
+# Sets globals R_ROLE, R_PROJECT, R_DIR for the given index.
+_pane_lookup() {
+  local entry="${roster[$1]}"
+  R_ROLE="${entry%%:*}"
+  R_PROJECT="${entry#*:}"
+  case "$R_PROJECT" in
+    workspace)      R_DIR="$CODE_DIR" ;;
+    nexus)          R_DIR="$AI_DIR" ;;
+    master-oppgave) R_DIR="$THESIS_DIR" ;;
+    *)
+      echo "firm-wt-split: unknown project '$R_PROJECT' in roster entry '$entry'" >&2
+      exit 1
+      ;;
+  esac
+}
+
 # Per-pane invocation:
 #   wt.exe action ... -- wsl.exe --cd <path> -- bash -lic '<INIT> <role> <project>'
 #
@@ -68,39 +146,47 @@ args=( -w new )
 # UNQUOTED so bash word-splits cmd + args correctly. Our role/project
 # values have no spaces so no further quoting is needed.
 
-# 1. new-tab (creates pane 1 = code-1)
-args+=( new-tab --title "code-1" wsl.exe --cd "$CODE_DIR" -- bash -lic "$INIT code-1 workspace" )
+# 1. new-tab (creates pane 1)
+_pane_lookup 0
+args+=( new-tab --title "$R_ROLE" wsl.exe --cd "$R_DIR" -- bash -lic "$INIT $R_ROLE $R_PROJECT" )
 
-# 2. split-pane -V (pane 2 = code-2, right of pane 1)
+# 2. split-pane -V (pane 2, right of pane 1)
 #    --size 0.75 → new pane takes 75% of pane1; pane1 keeps 25%
-args+=( ";" split-pane -V --size 0.75 wsl.exe --cd "$CODE_DIR" -- bash -lic "$INIT code-2 workspace" )
+_pane_lookup 1
+args+=( ";" split-pane -V --size 0.75 wsl.exe --cd "$R_DIR" -- bash -lic "$INIT $R_ROLE $R_PROJECT" )
 
-# 3. split-pane -V (pane 3 = ai-1, right of pane 2)
+# 3. split-pane -V (pane 3, right of pane 2)
 #    --size 0.667 → new pane takes 2/3 of pane2 (which is 75%); pane2 shrinks to 25%, pane3 = 50%
-args+=( ";" split-pane -V --size 0.667 wsl.exe --cd "$AI_DIR" -- bash -lic "$INIT ai-1 nexus" )
+_pane_lookup 2
+args+=( ";" split-pane -V --size 0.667 wsl.exe --cd "$R_DIR" -- bash -lic "$INIT $R_ROLE $R_PROJECT" )
 
-# 4. split-pane -V (pane 4 = ai-2, right of pane 3)
+# 4. split-pane -V (pane 4, right of pane 3)
 #    --size 0.5 → new pane takes 50% of pane3 (which is 50%); pane3 = 25%, pane4 = 25%
-args+=( ";" split-pane -V --size 0.5 wsl.exe --cd "$AI_DIR" -- bash -lic "$INIT ai-2 nexus" )
+_pane_lookup 3
+args+=( ";" split-pane -V --size 0.5 wsl.exe --cd "$R_DIR" -- bash -lic "$INIT $R_ROLE $R_PROJECT" )
 
 # 5. focus back to pane 1 (top-left)
 args+=( ";" mf left ";" mf left ";" mf left )
 
-# 6. split-pane -H (pane 5 = ai-3, below pane 1)
+# 6. split-pane -H (pane 5, below pane 1)
 #    --size 0.5 → equal top/bottom rows
-args+=( ";" split-pane -H --size 0.5 wsl.exe --cd "$AI_DIR" -- bash -lic "$INIT ai-3 nexus" )
+_pane_lookup 4
+args+=( ";" split-pane -H --size 0.5 wsl.exe --cd "$R_DIR" -- bash -lic "$INIT $R_ROLE $R_PROJECT" )
 
-# 7. focus pane 2, split-pane -H (pane 6 = ai-4, below pane 2)
+# 7. focus pane 2, split-pane -H (pane 6, below pane 2)
+_pane_lookup 5
 args+=( ";" mf up ";" mf right )
-args+=( ";" split-pane -H --size 0.5 wsl.exe --cd "$AI_DIR" -- bash -lic "$INIT ai-4 nexus" )
+args+=( ";" split-pane -H --size 0.5 wsl.exe --cd "$R_DIR" -- bash -lic "$INIT $R_ROLE $R_PROJECT" )
 
-# 8. focus pane 3, split-pane -H (pane 7 = thesis-1, below pane 3)
+# 8. focus pane 3, split-pane -H (pane 7, below pane 3)
+_pane_lookup 6
 args+=( ";" mf up ";" mf right )
-args+=( ";" split-pane -H --size 0.5 wsl.exe --cd "$THESIS_DIR" -- bash -lic "$INIT thesis-1 master-oppgave" )
+args+=( ";" split-pane -H --size 0.5 wsl.exe --cd "$R_DIR" -- bash -lic "$INIT $R_ROLE $R_PROJECT" )
 
-# 9. focus pane 4, split-pane -H (pane 8 = thesis-2, below pane 4)
+# 9. focus pane 4, split-pane -H (pane 8, below pane 4)
+_pane_lookup 7
 args+=( ";" mf up ";" mf right )
-args+=( ";" split-pane -H --size 0.5 wsl.exe --cd "$THESIS_DIR" -- bash -lic "$INIT thesis-2 master-oppgave" )
+args+=( ";" split-pane -H --size 0.5 wsl.exe --cd "$R_DIR" -- bash -lic "$INIT $R_ROLE $R_PROJECT" )
 
 if [[ "${DRY_RUN:-0}" == "1" ]]; then
   echo "[firm-wt-split] DRY-RUN — would launch wt.exe with these args:"

@@ -9,18 +9,26 @@ created: 2026-05-13
 Hei Karri. Paste this block, du er i gang.
 
 ```bash
+# 1. Clone the brain (assumes you have SSH access)
 git clone git@github.com:Nithu0/tiger-brain.git ~/Obsidian/Brain
 cd ~/Obsidian/Brain
+
+# 2. Run installer — it'll ask for your name, email, and roster preference
 bash firm-launcher/install.sh
+# (when prompted for roster, pick "2" for nexus-only — 8 nexus panes)
+
+# 3. Reload shell
 source ~/.bashrc
-which firm   # should print a path
+
+# 4. Launch
+firm   # opens 8 Claude-paner in WT split, all Nexus
 ```
 
-## First run
+## Hva install.sh spør om
 
-```bash
-firm   # 8-pane WT split: 2 workspace, 4 nexus, 2 thesis
-```
+- **Name**: Ditt navn (settes som git author på commits — viktig siden du er logget inn som Nithu0)
+- **Email**: Din mail (samme grunn)
+- **Roster**: Velg `2) nexus` for 8 nexus-paner. Hopp ikke over.
 
 Hver pane booter Claude med rolle-context. Banner: `Nexus shell ready | commands: firm-status | firm-talk | wake ...`.
 

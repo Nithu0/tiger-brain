@@ -25,9 +25,16 @@ Single-screen overview. If you opened the vault and don't know where to go — s
 - [[claude-context/START-HERE|Claude START-HERE]] — entry point for Claude Code sessions
 - [[Nexus-MOC]] · [[Thesis-MOC]] · [[Decisions-MOC]] · [[Workflows-MOC]]
 
+## Health & ops
+
+- [[SYSTEM-AUDIT]] — most recent system audit
+- [[SECURITY-INCIDENT-API-KEY]] — open security incident, awaiting operator decision
+- [[OPERATOR-NEXT-STEPS]] — checklist for operator (gh setup, branch protection, secret-purge decision)
+- [[FINAL-SHARING-CHECKLIST]] — pre-share verification before first push
+
 ## Today's gates
 
-- **Foundation gate state**: live truth in `ai-assistent/docs/ops/phase-status.md`. Vault mirror: [[01-nexus/runtime/Phase-Status-Pointer]]. Do not duplicate state here.
+- **Foundation gate state**: live truth in `/home/nithu/code/ai-assistent/docs/ops/phase-status.md`. As of 2026-05-11 the Foundation gate is **5/5 🟢** per phase-status. Vault mirror: [[01-nexus/runtime/Phase-Status-Pointer]]. Do not duplicate state here.
 - Calibration must pass before any live-capital flip — see [[01-CURRENT-FOCUS]].
 
 ## Where am I writing right now?
@@ -44,7 +51,8 @@ Single-screen overview. If you opened the vault and don't know where to go — s
 - **`_decisions/`** = immutable decision log. **`_runbooks/`** = how-to. **`_promote-candidates/`** = staging before repo docs.
 - **`90-archive/`** = cold storage; nothing is deleted, just moved.
 - **Claude reads** `claude-context/` + project CLAUDE.md files. Don't put secrets anywhere.
+- Run `bash scripts/sanity.sh` before every push — local equivalent of CI.
 
 ---
 
-Sist oppdatert: 2026-05-11
+Sist oppdatert: 2026-05-13

@@ -2,7 +2,7 @@
 tags: [meta, claude-context]
 type: meta
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-13
 ---
 
 # CURRENT — Claude-readable current state
@@ -11,15 +11,17 @@ Separate from operator's [[01-CURRENT-FOCUS]]. This is the explicit, machine-rea
 
 ## Active session
 
-- **Date**: 2026-05-11
-- **Active project**: Nexus (XAUUSD trading firm)
+- **Date**: 2026-05-13
+- **Active project**: Nexus (XAUUSD trading firm) + Brain hardening
 - **Phase**: Calibration
 - **Foundation gate**: 5/5 green
-- **Active branch**: `ai-assistent/main`
+- **Active branch**: `feat/brain-hardening` (Brain vault) · `ai-assistent/main` (Nexus)
+- **Note**: Brain hardening complete on `feat/brain-hardening` branch (5+ commits). Awaiting operator's gh setup + secret-purge decision before merge to main + first push.
 
 ## Pending decisions
 
-None currently per `/home/nithu/code/ai-assistent/docs/ops/phase-status.md`.
+- **Secret-in-history**: Option A (filter-repo purge) vs Option B (accept + rotate) — see [[SECURITY-INCIDENT-API-KEY]].
+- Otherwise none per `/home/nithu/code/ai-assistent/docs/ops/phase-status.md`.
 
 ## Key live-truth pointers
 
@@ -47,4 +49,4 @@ None currently per `/home/nithu/code/ai-assistent/docs/ops/phase-status.md`.
 
 Compute staleness: today's date minus `updated:` frontmatter > 7 days → stale.
 
-Sist oppdatert: 2026-05-11
+Sist oppdatert: 2026-05-13

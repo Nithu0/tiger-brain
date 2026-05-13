@@ -28,7 +28,7 @@
 - [ ] Only edited Nexus-allowed folders (`01-nexus/**`, `00-claude-inbox/nexus/**`, `_promote-candidates/**`) — OR attached an `OPERATOR-APPROVED:` marker below
 - [ ] Ran `python scripts/brain_audit.py` locally and it passed
 - [ ] No secrets in the diff (no API keys, tokens, `.env` values, broker creds)
-- [ ] Used `` `[[wikilinks]]` `` for cross-note references, not absolute paths
+- [ ] Used `[[wikilinks]]` for cross-note references, not absolute paths
 - [ ] Frontmatter present on new/edited notes (`tags`, `type`, `created`)
 - [ ] Did not modify protected folders (`_decisions/`, `_maps/`, `_runbooks/`, `claude-context/`, `.github/`, `scripts/`, `90-archive/`, root rule files) without an `OPERATOR-APPROVED:` line below
 

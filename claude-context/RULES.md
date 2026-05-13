@@ -32,7 +32,7 @@ Never paste env values, tokens, API keys, passwords, broker credentials, or wall
 
 ## Wikilinks
 
-Use `` `[[name]]` ``, not file paths. Broken stub-links are intentional — they mark notes the operator plans to write later. Do not "fix" them by creating empty stubs unless asked.
+Use `[[name]]`, not file paths. Broken stub-links are intentional — they mark notes the operator plans to write later. Do not "fix" them by creating empty stubs unless asked.
 
 ## Frontmatter
 
@@ -50,7 +50,7 @@ Add `updated:` when editing an existing note. Add `status: archived` when archiv
 
 ## Foreign-project pollution
 
-Do not write Nexus content into Thesis notes or vice versa. If a note touches both, file it in the more specific project's inbox and cross-link with `` `[[...]]` ``. When in doubt, check `pwd` and the active project in [[CURRENT]].
+Do not write Nexus content into Thesis notes or vice versa. If a note touches both, file it in the more specific project's inbox and cross-link with `[[...]]`. When in doubt, check `pwd` and the active project in [[CURRENT]].
 
 ## Promotion gate
 

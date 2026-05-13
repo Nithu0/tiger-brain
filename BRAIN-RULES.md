@@ -32,7 +32,7 @@ These are operator-owned and must not be edited without an explicit go-ahead:
 
 ## Link convention
 
-- **Wikilinks only**: `` `[[Note-Name]]` `` or `` `[[Note-Name|Alias]]` ``. No markdown links inside the vault.
+- **Wikilinks only**: `[[Note-Name]]` or `[[Note-Name|Alias]]`. No markdown links inside the vault.
 - **Frontmatter required** on every note: `tags`, `type` (`moc` | `atomic` | `meta`), `created: YYYY-MM-DD`.
 - One H1 per note matching the filename concept.
 

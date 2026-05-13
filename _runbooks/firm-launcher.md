@@ -60,6 +60,23 @@ Source of truth: `~/Obsidian/Brain/00-firm-bus/roster.md`.
 2. **Handoff via inbox** — leave a markdown block in `inbox/<peer-role>.md`, date-stamped (`## 2026-05-13 14:32 — from ai-1`).
 3. **Announce completion** — append `done: <one-liner>` to `feed.md` when a chunk finishes so others can pick up.
 
+## 6a. Pane sizing (WT split-pane math)
+
+- Default `split-pane -V` halves the FOCUSED pane, so successive splits shrink the rightmost geometrically: 50/25/12.5/12.5.
+- Fix uses explicit `--size` flags per split:
+  - `split-pane -V --size 0.75` on pane 1 → 25%/75%
+  - `split-pane -V --size 0.667` on pane 2 → 25%/50%
+  - `split-pane -V --size 0.5` on pane 3 → 25%/25%
+  - Result: 4 columns × 25% each.
+- Horizontal splits for the bottom row: `split-pane -H --size 0.5` → 50/50 top/bottom per column.
+- See `firm-wt-split.sh` for the implementation.
+
+## 6b. Visual role identification
+
+- Each pane sets `FIRM_ROLE`, `FIRM_PROJECT`, `FIRM_TAB_OPENED_AT` env vars before launching Claude.
+- `nexus-bashrc.sh` has a prompt addition (added in this session) that prepends `[role]` (bold cyan) to PS1 when `FIRM_ROLE` is set. At a glance: `[ai-1] ❯ `, `[code-2] ❯ `, etc.
+- To check from inside Claude: type `! echo $FIRM_ROLE` or glance at the bash prompt visible at the bottom of the pane.
+
 ## 7. Common errors + fixes
 
 - **WT error `0x80070002 ERROR_FILE_NOT_FOUND`** — usually means the wt.exe-side command included a literal newline/heredoc. Fix: all firm scripts now factor per-pane init through `firm-tab-init.sh` to keep the wt.exe arg single-line.

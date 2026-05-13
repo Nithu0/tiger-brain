@@ -49,3 +49,12 @@ Operator: `https://github.com/new` (name: tiger-brain, private) → `bash script
 ## Refs
 
 Worked example of pre-cleanup state (link target now lives in its proper `01-nexus/strategies/` location after this session's restructure): [[scalp-overlap-losses-2026-05-11]].
+
+## Push complete 2026-05-13 09:30
+
+- `git push -u origin main feat/brain-hardening` ✅
+- 17 commits pushed
+- Repo: https://github.com/Nithu0/tiger-brain (private)
+- Tag v0.1.0-share-ready set
+- 5 rounds, 50 parallel agents total dispatched
+- Final state: push-ready ✓

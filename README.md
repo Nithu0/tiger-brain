@@ -2,6 +2,23 @@
 tags: [moc, hub]
 type: moc
 created: 2026-05-08
+updated: 2026-05-13
+---
+
+# 🐯 tiger-brain
+
+> Personal second-brain for operator [@Nithu0](https://github.com/Nithu0). Obsidian vault + GitHub-tracked knowledge graph. Companion to project repos: [`ai-assistent`](https://github.com/Nithu0/ai-assistent) (Nexus XAUUSD trading firm), [`Master-oppgave`](https://github.com/Nithu0/Master-oppgave) (NTNU thesis).
+
+**Status:** v0.1.0 share-ready · [`SYSTEM-AUDIT`](./SYSTEM-AUDIT.md) 9/10 · sanity 8/8 green · 17 commits · 351 notes
+
+**Are you a teammate?** Start with [`WELCOME.md`](./WELCOME.md) → [`TEAMMATE-ONBOARDING.md`](./TEAMMATE-ONBOARDING.md) → [`BRAIN-RULES.md`](./BRAIN-RULES.md).
+
+**Are you Claude?** Read [`claude-context/START-HERE.md`](./claude-context/START-HERE.md) before doing anything.
+
+**Are you the operator?** See [`READY-TO-SHARE.md`](./READY-TO-SHARE.md) and [`OPERATOR-NEXT-STEPS.md`](./OPERATOR-NEXT-STEPS.md).
+
+**What is this, really?** [`WHAT-IS-THE-BRAIN.md`](./WHAT-IS-THE-BRAIN.md) — the architecture of the brain ecosystem.
+
 ---
 
 # Brain — Home
@@ -36,3 +53,11 @@ This note is the **central hub**. Everything else hangs off here. In Graph View,
 ## Layout reference
 
 See `_maps/_README` for MOC conventions and `00-claude-inbox/_README` for the Claude write zone.
+
+## CI
+
+| Check | Status |
+|---|---|
+| brain-checks | ![brain-checks](https://github.com/Nithu0/tiger-brain/actions/workflows/brain-checks.yml/badge.svg) |
+| path-guard | ![path-guard](https://github.com/Nithu0/tiger-brain/actions/workflows/path-guard.yml/badge.svg) |
+| secrets-scan | ![secrets-scan](https://github.com/Nithu0/tiger-brain/actions/workflows/secrets-scan.yml/badge.svg) |

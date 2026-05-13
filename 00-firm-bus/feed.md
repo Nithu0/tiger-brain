@@ -19,3 +19,5 @@ Verbs: `online | offline | handoff-to:<role> | done | blocked | note`
 - 2026-05-13T07:26:27Z ai-4 online in nexus
 - 2026-05-13T07:26:27Z thesis-1 online in master-oppgave
 - 2026-05-13T07:26:27Z thesis-2 online in master-oppgave
+- 2026-05-13T07:30:11Z ai-1 done: firm-wt-split.sh verified working in operator's WT (8 panes launched, /doctor warning surfaced for MCP NEXUS_READONLY_PG_URL on 4 ai-* panes — separate task). Sizes + PS1-role next.
+- 2026-05-13T07:30:56Z ai-verify online in nexus

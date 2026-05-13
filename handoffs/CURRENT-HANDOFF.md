@@ -4,40 +4,31 @@ tags: [handoff, current]
 created: 2026-05-11
 updated: 2026-05-13
 owner: "Claude (Opus 4.7 1M)"
-status: push-ready, blocked on operator GH repo create + key rotation
-next: Operator creates github.com/Nithu0/tiger-brain (private), then runs scripts/push-and-protect.sh
+status: Pushed to github.com/Nithu0/tiger-brain — share-ready
+next: Operator enables branch protection (UI) + rotates Obsidian REST API key + invites teammate when ready
 ---
 
 # CURRENT-HANDOFF — Brain hardening session
 
 ## Status
 
-**push-ready, blocked on operator GH repo create + key rotation**
+**Pushed to github.com/Nithu0/tiger-brain — share-ready**
 
 ## Next action
 
-Operator creates github.com/Nithu0/tiger-brain (private), then runs `bash scripts/push-and-protect.sh`; separately rotates Obsidian REST API key in plugin settings.
+Operator enables branch protection (UI) + rotates Obsidian REST API key + invites teammate when ready
 
 ## What was done
 
-- 23 hardening files added across the vault.
-- 16 commits total on `feat/brain-hardening` branch (bump pass added filter-repo execution, bulk-import, CODEOWNERS update to `@Nithu0`).
-- `git filter-repo` executed — `obsidian-local-rest-api` plugin purged from all history; secret no longer in repo.
-- Cleanup pass on stale notes + structural fixes.
-- Security incident documented in [[SECURITY-INCIDENT-API-KEY]] (API key found in history, now purged).
-- `scripts/sanity.sh` written; final run = 8/8 green.
-- SSH push path confirmed working to `git@github.com:Nithu0/...`.
+- 17 commits pushed to GitHub; v0.1.0-share-ready tag set.
 
 ## What was NOT done
 
-- Repo not created yet (no gh CLI; operator does this manually).
-- Teammate handle unknown so `@TEAMMATE` placeholder remains.
-- Obsidian REST API key not yet rotated (operator UI action).
+- Branch protection (operator UI step), key rotation (one-click in Obsidian), teammate invite (when handle available).
 
 ## Open questions for operator
 
-1. Teammate's GH handle?
-2. gh CLI install authorized?
+1. Teammate handle for CODEOWNERS @TEAMMATE?
 
 ## Files to read first
 

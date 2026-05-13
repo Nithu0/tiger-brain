@@ -2,15 +2,16 @@
 tags: [security, incident, secret-leak]
 type: security
 created: 2026-05-13
+resolved: 2026-05-13
 severity: medium
-status: open
+status: resolved
 ---
 
 # Security Incident — Obsidian Local REST API credentials in git history
 
 ## 1. Summary
 
-The Obsidian Local REST API plugin's `data.json` — containing a 40-char hex API key AND an RSA private key (PEM) used for the plugin's HTTPS server — was committed to this vault repo in the second commit (`f824aa8`). The vault repo has no remote configured, so the secrets have never been pushed anywhere. Blast radius is currently zero externally, but the credential is preserved in local git history and would leak to any future remote (public or private) unless purged. The credential only authorizes calls to the plugin's localhost-bound REST endpoint, so even on disclosure an attacker also needs LAN/host access to the operator's machine.
+The Obsidian Local REST API plugin's `data.json` — containing a 40-char hex API key AND an RSA private key (PEM) used for the plugin's HTTPS server — was committed to this vault repo in an early commit. The vault repo had no remote configured, so the secrets were never pushed anywhere. **RESOLVED 2026-05-13**: `git rm --cached` removed the file from the index (commit `36c424c` originally), and `git filter-repo` then purged the file from all git history before first push. Operator must still rotate the in-Obsidian key (Settings → Local REST API → "Re-generate API key") since the old key existed on disk for some time. Blast radius after rotation: zero.
 
 ## 2. Facts
 

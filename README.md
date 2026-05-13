@@ -23,6 +23,8 @@ updated: 2026-05-13
 
 **What is this, really?** [`WHAT-IS-THE-BRAIN.md`](./WHAT-IS-THE-BRAIN.md) — the architecture of the brain ecosystem.
 
+**Curious about the architecture?** [`WHAT-IS-THE-BRAIN.md`](./WHAT-IS-THE-BRAIN.md) + [`SHARED-INSTANCE-MODEL.md`](./SHARED-INSTANCE-MODEL.md) — how the brain works across multiple machines.
+
 ---
 
 # Brain — Home
@@ -65,3 +67,14 @@ See `_maps/_README` for MOC conventions and `00-claude-inbox/_README` for the Cl
 | brain-checks | ![brain-checks](https://github.com/Nithu0/tiger-brain/actions/workflows/brain-checks.yml/badge.svg) |
 | path-guard | ![path-guard](https://github.com/Nithu0/tiger-brain/actions/workflows/path-guard.yml/badge.svg) |
 | secrets-scan | ![secrets-scan](https://github.com/Nithu0/tiger-brain/actions/workflows/secrets-scan.yml/badge.svg) |
+
+## Auto-sync
+
+This vault uses Obsidian Git plugin for live multi-machine sync:
+- Auto-pull every 2 min
+- Auto-commit every 2 min
+- Auto-push every 5 min
+
+Config at `.obsidian/plugins/obsidian-git/data.json`. Both operator + collaborators get the same defaults.
+
+See [`_runbooks/Runbook-Obsidian-Git-Sync.md`](./_runbooks/Runbook-Obsidian-Git-Sync.md).

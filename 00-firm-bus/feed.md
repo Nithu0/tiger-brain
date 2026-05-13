@@ -1,10 +1,20 @@
 # firm-bus feed
 
-Append-only. Newest at bottom. One line per event. Use ISO-8601 UTC.
+Append-only. Newest at bottom. One line per event. Use ISO-8601 UTC (the `Z`
+suffix is required so machines in different timezones agree on ordering).
 
-Format: `- <ISO-time> <role> <verb>: <summary>`
+Format: `- <ISO-time> [<git-user>] <role> <verb>: <summary>`
 
-Verbs: `online | offline | handoff-to:<role> | done | blocked | note`
+- `<git-user>` identifies WHICH MACHINE wrote the entry — from `$FIRM_USER`
+  or `git config user.name` in the brain repo. This is how operator and
+  Karri tell each other apart in the same feed.
+- `<role>` is the firm-tab role (e.g. `ai-2`, `code-1`, `thesis-1`).
+- Verbs: `online | offline | handoff-to:<role> | done | blocked | note`
+
+NEVER edit old entries — append a new line with a correction note instead.
+
+Older entries (pre-2026-05-13) are missing the `[<git-user>]` tag; that's
+expected and they stay as-is.
 
 ---
 

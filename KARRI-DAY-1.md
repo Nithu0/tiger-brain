@@ -38,6 +38,31 @@ Hver pane booter Claude med rolle-context. Banner: `Nexus shell ready | commands
 - Pre-push hook blocks bad pushes
 - CI on every PR
 
+## Set opp Linux Obsidian + auto-sync
+
+Obsidian må kjøre INNI WSL (ikke Windows-versjonen) for å snakke direkte med vault-mappa i Linux-filsystemet.
+
+```bash
+# Hvis du ikke alt har gjort dette via bootstrap:
+bash ~/Obsidian/Brain/scripts/check-wslg.sh         # verifiserer GUI-støtte
+bash ~/Obsidian/Brain/scripts/install-obsidian-linux.sh
+```
+
+Når Obsidian er installert:
+
+```bash
+bash ~/Obsidian/Brain/scripts/launch-obsidian.sh
+```
+
+Første gang:
+1. "Open folder as vault" → velg `~/Obsidian/Brain`
+2. Trust author + Enable plugins når den spør
+3. Settings → Community plugins → Browse → installer "Obsidian Git" by Vinzent03 → Enable
+4. Restart Obsidian én gang
+5. Plugin config ligger i `.obsidian/plugins/obsidian-git/data.json`: auto-pull/commit 2 min, auto-push 5 min, pull før push.
+
+Når plugin'en kjører ser du grønn status i Obsidian status bar.
+
 ## Read first (i rekkefølge)
 
 1. `WELCOME.md` — repo intro
@@ -62,6 +87,12 @@ Hver pane booter Claude med rolle-context. Banner: `Nexus shell ready | commands
 ## Stuck?
 
 Ping Nithu, eller åpne issue med `operator-decision` template.
+
+## Det vi prøver å oppnå
+
+Operator + jeg = to fysiske maskiner som føles som én via samme GitHub (skeleton), samme Obsidian-vault (brain, synca via Obsidian Git), og samme Claude-konto (engine). Når operator endrer en note i 01-nexus/, ser jeg det innen 2-5 min. Og omvendt.
+
+Detaljer: [[SHARED-INSTANCE-MODEL]] + [[Runbook-Obsidian-Git-Sync]]. Med 8 nexus-paner + auto-sync får jeg det same operasjonsbildet som operator — full Nexus-kontekst, brain-en min er fersk hele tiden.
 
 ---
 

@@ -15,6 +15,9 @@
 # Usage:
 #   bash karri-bootstrap.sh                        # interactive
 #   bash karri-bootstrap.sh --name Karri --email karri@x.com   # non-interactive
+#   bash karri-bootstrap.sh --with-obsidian        # also install Linux Obsidian
+#   bash karri-bootstrap.sh --no-obsidian          # skip Obsidian install prompt
+#   bash karri-bootstrap.sh --yes                  # yes to everything (incl. Obsidian)
 #
 # Idempotent. Safe to re-run.
 
@@ -36,16 +39,25 @@ err() { echo "  ${RED}✗${NC} $*" >&2; }
 GIT_USER_NAME="${GIT_USER_NAME:-}"
 GIT_USER_EMAIL="${GIT_USER_EMAIL:-}"
 ASSUME_YES=0
+# OBSIDIAN_CHOICE: "" = ask interactively, "yes" = install, "no" = skip
+OBSIDIAN_CHOICE=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --name)  GIT_USER_NAME="$2"; shift 2 ;;
     --email) GIT_USER_EMAIL="$2"; shift 2 ;;
     --yes|-y) ASSUME_YES=1; shift ;;
-    -h|--help) sed -n '2,22p' "$0"; exit 0 ;;
+    --with-obsidian) OBSIDIAN_CHOICE="yes"; shift ;;
+    --no-obsidian)   OBSIDIAN_CHOICE="no";  shift ;;
+    -h|--help) sed -n '2,25p' "$0"; exit 0 ;;
     *) err "unknown arg: $1"; exit 2 ;;
   esac
 done
+
+# --yes implies install Obsidian (unless explicit --no-obsidian / --with-obsidian set it)
+if [[ -z "$OBSIDIAN_CHOICE" && "$ASSUME_YES" -eq 1 ]]; then
+  OBSIDIAN_CHOICE="yes"
+fi
 
 # ─────────────────────────────────────────────────────────────────────────
 # 1. Apt prerequisites
@@ -137,11 +149,57 @@ if [[ -x "$BRAIN/.git/hooks/pre-push" ]]; then
   ok "pre-push hook installed in brain"
 fi
 
+# ─────────────────────────────────────────────────────────────────────────
+# 6. Optional: install Linux Obsidian for the brain vault
+# ─────────────────────────────────────────────────────────────────────────
+OBSIDIAN_INSTALLED=0
+
+if [[ -z "$OBSIDIAN_CHOICE" ]]; then
+  echo
+  log "Install Linux Obsidian for the brain vault?"
+  echo "   (Required only if you don't already have Obsidian set up to point at this vault.)"
+  read -r -p "[y/N] " _reply
+  case "${_reply,,}" in
+    y|yes) OBSIDIAN_CHOICE="yes" ;;
+    *)     OBSIDIAN_CHOICE="no"  ;;
+  esac
+fi
+
+if [[ "$OBSIDIAN_CHOICE" == "yes" ]]; then
+  log "Installing Linux Obsidian..."
+  if bash "$BRAIN/scripts/check-wslg.sh"; then
+    if bash "$BRAIN/scripts/install-obsidian-linux.sh" --yes; then
+      ok "Obsidian installed"
+      OBSIDIAN_INSTALLED=1
+    else
+      warn "Obsidian install failed — see output above. Bootstrap continues."
+      warn "You can retry later with: bash $BRAIN/scripts/install-obsidian-linux.sh"
+    fi
+  else
+    warn "WSLg check failed — Obsidian needs a GUI surface to run."
+    warn "Likely fix: update WSL on Windows (PowerShell as admin):"
+    warn "    wsl --update"
+    warn "    wsl --shutdown    # then reopen your Ubuntu tab"
+    warn "Bootstrap continues — Obsidian can be installed later with:"
+    warn "    bash $BRAIN/scripts/install-obsidian-linux.sh"
+  fi
+else
+  ok "Skipping Obsidian install (use --with-obsidian or run install-obsidian-linux.sh later)"
+fi
+
 echo
 echo "${GREEN}${BOLD}Done.${NC} Last steps (manual):"
 echo "  1. ${BOLD}Reload your shell${NC}:   source ~/.bashrc"
 echo "  2. ${BOLD}Launch firm${NC}:         firm"
 echo "  3. ${BOLD}Read the cheat sheet${NC}: cat $BRAIN/KARRI-DAY-1.md"
+if [[ "$OBSIDIAN_INSTALLED" -eq 1 ]]; then
+  echo "  4. ${BOLD}Launch Obsidian${NC}:     bash $BRAIN/scripts/launch-obsidian.sh"
+else
+  echo "  4. ${BOLD}Install Obsidian later${NC}: bash $BRAIN/scripts/install-obsidian-linux.sh"
+fi
+echo "  5. ${BOLD}First-time vault open${NC}: enable the Obsidian Git plugin in"
+echo "     Settings → Community plugins (already configured in"
+echo "     .obsidian/plugins/obsidian-git/data.json for auto-sync every 2-5 min)"
 echo
 echo "If firm doesn't launch, check:"
 echo "  - Are you in WSL bash (not PowerShell)?  echo \$WSL_DISTRO_NAME"

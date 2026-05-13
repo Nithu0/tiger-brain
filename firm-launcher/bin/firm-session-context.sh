@@ -26,22 +26,49 @@ FEED_FILE="$BUS_DIR/feed.md"
 INBOX_FILE="$BUS_DIR/inbox/${FIRM_ROLE}.md"
 MAX_CHARS=4000
 
+# Identify the human operator. Prefer FIRM_USER, then git user.name from the
+# brain repo, then $USER as last resort. Sanitized to a single token so the
+# grep -v filter below works reliably.
+GIT_USER="${FIRM_USER:-}"
+if [ -z "$GIT_USER" ]; then
+  GIT_USER=$(cd "$BUS_DIR/.." 2>/dev/null && git config user.name 2>/dev/null || true)
+fi
+if [ -z "$GIT_USER" ]; then
+  GIT_USER="${USER:-unknown}"
+fi
+# Collapse whitespace to underscore for the bracket-tag form `[name]`.
+GIT_USER_TAG=$(printf '%s' "$GIT_USER" | tr -s '[:space:]' '_')
+
 main_dump() {
   echo "### firm-launched session"
-  echo "Role: ${FIRM_ROLE} | Project: ${FIRM_PROJECT:-unknown} | Opened: ${FIRM_TAB_OPENED_AT:-unknown}"
+  echo "User: ${GIT_USER_TAG} | Role: ${FIRM_ROLE} | Project: ${FIRM_PROJECT:-unknown} | Opened: ${FIRM_TAB_OPENED_AT:-unknown}"
   echo
 
-  echo "### recent firm-bus feed (last 30 lines)"
+  echo "### recent peer activity (last 20 lines of feed.md, own entries filtered)"
   if [ -r "$FEED_FILE" ]; then
-    tail -n 30 "$FEED_FILE"
+    # Filter own entries (matched by `[GIT_USER_TAG]`) so we see peer work.
+    # If filtering leaves nothing, fall back to plain tail so the operator at
+    # least sees the most recent feed state.
+    PEERS=$(tail -n 200 "$FEED_FILE" | grep -v "\[${GIT_USER_TAG}\]" | tail -n 20)
+    if [ -n "$PEERS" ]; then
+      printf '%s\n' "$PEERS"
+    else
+      echo "(no peer entries yet — showing last 20 lines)"
+      tail -n 20 "$FEED_FILE"
+    fi
   else
     echo "(no feed.md at $FEED_FILE)"
   fi
   echo
 
   if [ -r "$INBOX_FILE" ] && [ -s "$INBOX_FILE" ]; then
-    echo "### your inbox"
+    # Count message headers (lines starting with `## `) as a rough message count.
+    MSG_COUNT=$(grep -c '^## ' "$INBOX_FILE" 2>/dev/null || echo 0)
+    echo "### your inbox (${MSG_COUNT} pending message$( [ "$MSG_COUNT" = "1" ] || echo s ))"
     cat "$INBOX_FILE"
+    echo
+  else
+    echo "### your inbox (0 pending messages)"
     echo
   fi
 }

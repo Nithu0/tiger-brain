@@ -4,8 +4,8 @@ tags: [handoff, current]
 created: 2026-05-11
 updated: 2026-05-13
 owner: "Claude (Opus 4.7 1M)"
-status: Karri-onboarding finalized — interactive install + nexus-only roster + shared-account model
-next: Operator sends Karri the install message; Karri runs install.sh, answers prompts, types `firm`
+status: Shared-instance model implemented — auto-sync configured, Linux Obsidian installer ready
+next: Karri runs Obsidian installer + opens vault; operator does same on their machine if they want Linux Obsidian (Windows Obsidian works too but no auto-sync feel)
 ---
 
 # CURRENT-HANDOFF — Nexus EOD 13.5
@@ -30,12 +30,14 @@ Run morning checklist in `[[2026-05-13_eod_nexus]]` top-to-bottom. Top-3:
 - Library bootstrapped: 16 entries under `~/Obsidian/Brain/_library/trading/` + SKILL.md v0.1.0 → v0.2.0.
 - Foundation gate: still 5/5 green.
 - Round 8: FIRM_ROSTER configurable (default/nexus/thesis/workspace); install.sh interactive (asks name+email+roster); KARRI-DAY-1 + invite message updated to reflect shared-account model + roster=nexus.
+- Round 9: Linux Obsidian installer (WSLg), Obsidian Git plugin config (2/2/5 min), SHARED-INSTANCE-MODEL.md, firm-bus presence layer strengthened
 
 ## What was NOT done
 
 - B1 Railway flip (`ENTRY_STACK_COOLDOWN_ENABLED=true`) — Karri-pre-approved, operator-gated
 - A5 backfill (138 NULL → ~96 fillable rows) — SQL drafted, awaits nexus-pg-rw approval
 - 4 Karri-proposals C1–C4 implementation — blocked on Karri review
+- Operator hasn't installed Linux Obsidian on their machine yet (currently using Windows Obsidian); first auto-sync verification needs both sides up
 
 ## Files to read first
 

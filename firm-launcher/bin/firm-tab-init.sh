@@ -50,12 +50,34 @@ export FIRM_TAB_OPENED_AT
 bus_dir="$HOME/Obsidian/Brain/00-firm-bus"
 inbox_dir="$bus_dir/inbox"
 feed_file="$bus_dir/feed.md"
+presence_file="$bus_dir/PRESENCE.md"
 
 mkdir -p "$inbox_dir"
 touch "$inbox_dir/${role}.md"
 
+# Identify the human operator. FIRM_USER beats git config beats $USER.
+git_user="${FIRM_USER:-}"
+if [[ -z "$git_user" ]]; then
+  git_user=$(cd "$bus_dir/.." 2>/dev/null && git config user.name 2>/dev/null || true)
+fi
+if [[ -z "$git_user" ]]; then
+  git_user="${USER:-unknown}"
+fi
+# Single-token form so feed.md / PRESENCE.md grep filters work.
+git_user_tag=$(printf '%s' "$git_user" | tr -s '[:space:]' '_')
+export FIRM_USER_TAG="$git_user_tag"
+
 # Append online marker to the shared feed (one line, no heredoc).
-printf -- '- %s %s online in %s\n' "$FIRM_TAB_OPENED_AT" "$role" "$project" >> "$feed_file"
+# Format: `- <ISO-time> [<git-user>] <role> online in <project>`
+printf -- '- %s [%s] %s online in %s\n' "$FIRM_TAB_OPENED_AT" "$git_user_tag" "$role" "$project" >> "$feed_file"
+
+# Append a presence row. PRESENCE.md is append-only too; stale entries get
+# annotated by a sweeper (operator decides cadence). Reader logic should
+# always trust the LAST row for each (user,role) pair.
+if [[ -f "$presence_file" ]]; then
+  printf -- '| %s | %s | %s | %s | online |\n' \
+    "$FIRM_TAB_OPENED_AT" "$git_user_tag" "$role" "$project" >> "$presence_file"
+fi
 
 # Load project-specific .env.local so MCP servers (e.g. nexus-pg requiring
 # NEXUS_READONLY_PG_URL) resolve their env vars. Without this the nexus-pg

@@ -9,7 +9,7 @@ final: true
 
 ## 1. Summary
 
-Vault on `feat/post-share` (round-6 extension), **~20 commits**, **351 markdown notes**, **2.3 MB on disk** (excl. `.git`/`.obsidian`). Sanity: **7/8 green** (one expected fail: `__pycache__` cache dir present locally — not tracked). Audit: **1 error, 0 warnings** (the same `__pycache__` — gitignored, harmless). Secret purged from history (filter-repo done). Push-ready + auto-pilot in place. **Health: 9.7/10** — only manual remaining: operator does collaborator invite for Karri in GH UI + key rotation eventually.
+Vault on `feat/post-share` (round-6 extension), **~20 commits**, **351 markdown notes**, **2.3 MB on disk** (excl. `.git`/`.obsidian`). Sanity: **7/8 green** (one expected fail: `__pycache__` cache dir present locally — not tracked). Audit: **1 error, 0 warnings** (the same `__pycache__` — gitignored, harmless). Secret purged from history (filter-repo done). Push-ready + auto-pilot in place. **Health: 9.8/10** — still need: Obsidian install on each machine + first auto-sync verification.
 
 ## 2. Commit timeline
 
@@ -97,6 +97,19 @@ Net effect: weekly maintenance ritual is now a no-op; operator only owns branch 
 
 Net effect: teammate (Karri) day-1 collapses to clone + `bash firm-launcher/install.sh` + read `KARRI-DAY-1.md`.
 
+## 7c. Round 9 — Shared-instance model
+
+- `scripts/install-obsidian-linux.sh`: Linux Obsidian via WSLg
+- `scripts/check-wslg.sh`: GUI support detector
+- `scripts/launch-obsidian.sh`: opens vault directly
+- `.obsidian/plugins/obsidian-git/data.json`: auto-sync config (2/2/5 min)
+- `_runbooks/Runbook-Obsidian-Git-Sync.md`: full runbook
+- `SHARED-INSTANCE-MODEL.md`: architecture vision
+- `00-firm-bus/PRESENCE.md`: real-time who's-online doc
+- `karri-bootstrap.sh` + `KARRI-DAY-1.md` updated
+
+Net effect: same Obsidian instance, same vault, live multi-machine sync. Health 9.7 → **9.8/10**.
+
 ## 8. Tooling installed
 
 - `git-filter-repo` at `~/.local/bin/git-filter-repo` — kept (round 4)
@@ -122,7 +135,7 @@ In `~/.claude/projects/-home-nithu-code/memory/`:
 
 ## 11. Sign-off
 
-> "Hardening + automation complete. Auto-pilot engaged. Health 9.5/10. Operator owns only the two manual steps in section 6."
+> "Hardening + automation complete. Auto-pilot engaged. Health 9.8/10. Operator owns only the two manual steps in section 6."
 
 ---
 

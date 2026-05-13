@@ -50,3 +50,5 @@ Prinsipp codified after the demo-mode auto-degrade incident. Even in demo, every
 - [[Strategy-Proposal-Workflow]] — Karri review precedes OK kjør for money-impact changes
 - [[Strategy-Promotion-Workflow]] — final activation step
 - [[Module-Notifications]] — morning briefing surfaces a ready-to-paste prompt; operator acts then says OK kjør
+- [[When-Operator-Says-Kjor-Pa]] — decision-tree for the autonomous-execute trigger
+- [[Runbook-Push-Cycle]] — OK-kjør-gate fires inside this runbook before `git push`

@@ -44,3 +44,6 @@ Operations view: see [[Position-Management-Operations]] for the live state and v
 - [[Position-Management-Operations]] — operator-facing view
 - [[Strategy-ORB]] — primary client of position-management features
 - [[Foundation-Gate]] — rule 2 binding
+- [[Operator-Principles]] — prinsipp 1: position-management defaults change only via [[Karri]]
+- [[metadata-stamping-state]] — living-state for metadata fields read by regime-aware sub-logic
+- [[When-Trade-Bleeds-Multi-Day]] — if drawdown crosses thresholds, use this decision-tree

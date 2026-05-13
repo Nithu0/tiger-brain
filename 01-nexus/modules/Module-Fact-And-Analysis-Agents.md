@@ -39,3 +39,5 @@ Data must never be stopped. Even during memory-layer cleanups (TTL, dedupe), fac
 - [[Strategy-ORB]] — consumes range / momentum / pre-move analyses
 - [[Module-Postmortem]] — reads regime-at-entry from analysis snapshots
 - [[Operator-Principles]] — prinsipp 2 binding
+- [[Truth-Hierarchy]] — fact-agents pull from external sources; memory snapshots can stale, fact pulls cannot
+- [[Foundation-Gate]] — analysis_snapshots writing is a precondition for several gates

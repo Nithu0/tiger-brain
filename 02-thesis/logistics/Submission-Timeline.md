@@ -6,7 +6,7 @@ type: atomic
 
 # Submission Timeline
 
-[[stub]] — operator to fill specific dates after supervisor confirmation.
+[[stub:submission-dates]] — operator to fill specific dates after supervisor confirmation.
 
 ## Key milestones (template)
 

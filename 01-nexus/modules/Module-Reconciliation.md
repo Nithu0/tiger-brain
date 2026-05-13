@@ -38,3 +38,6 @@ OANDA two-way sync + drift monitor. Lives in `apps/worker/src/firm/oanda-sync.ts
 - [[Module-Position-Management]] — interlocks via `POSITION_MANAGEMENT_ENABLED`
 - [[Live-Endpoints]] — `/health` returns reconciliation status
 - [[Foundation-Gate]] — open MEDIUM issues here block rule 1
+- [[Operator-Principles]] — prinsipp 1: drift-monitor REPORTS only, never auto-acts
+- [[Truth-Hierarchy]] — OANDA `realizedPL` is truth; DB is reconciliation target, not source
+- [[Reconciliation]] — operator-facing audit view (this note is the module-level view)

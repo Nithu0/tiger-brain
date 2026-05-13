@@ -31,7 +31,7 @@ For a published electrolyte that exists in MP, this is essentially free DFT-deri
 - **One polymorph per formula.** MP returns the lowest-energy convex-hull entry. If the experimental sample is a different polymorph, the scalar is misleading.
 - **Coverage gap.** Not every formula in V4 has an MP entry. Missing → mean-impute (see NaN strategy in [[Feature-Engineering]]).
 
-[[stub]] — operator may want to flag this in Discussion as a feature-space limitation alongside the composition-only ceiling.
+[[stub:mp-discussion-flag]] — operator may want to flag this in Discussion as a feature-space limitation alongside the composition-only ceiling.
 
 ## NaN handling
 

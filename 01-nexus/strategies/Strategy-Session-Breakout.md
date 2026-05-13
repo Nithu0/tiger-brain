@@ -53,4 +53,5 @@ OFF on Railway. Part of the TIER 3 deploy 2026-04-26 alongside [[Strategy-Scalp-
 - [[Strategy-Vol-Expansion]] — TIER 3 sibling
 - [[Module-Exposure-And-Shield]] — gate interlocks
 - [[Foundation-Gate]] — required-green before activation
-- [[Strategy-Proposal-Workflow]] — Karri reviews threshold changes
+- [[Strategy-Proposal-Workflow]] — [[Karri]] reviews threshold changes
+- [[Operator-Principles]] — prinsipp 1 (no auto-disable) + prinsipp 4 (foundation-først)

@@ -46,3 +46,5 @@ The marquee event is `DAILY_MORNING_BRIEFING` — fires once per UTC day on the 
 - [[Live-Endpoints]] — `/operator/status-report` exposes the same `RecommendedAction`
 - [[OK-Kjor-Gate]] — operator copies the briefing's prompt block, then approves with "OK kjør"
 - [[Foundation-Gate]] — followups feed rule 5
+- [[Operator-Principles]] — prinsipp 1: health-check REPORTS via this module; operator decides handling
+- [[discord-delivery-state]] — living-state for the double-gated delivery path

@@ -38,6 +38,6 @@ What Claude can actually do inside this brain. Pattern-match every task against 
 - **Read `.env.local`** — deny rule in `.claude/settings.json`. Operator pastes the needed value once per session.
 - **`git push origin main`** — harness blocks direct push. Operator runs `! git push origin main` themselves.
 - **Modify Railway env / restart services** — no Railway MCP installed; operator does it manually.
-- **Send Telegram** — no creds; mobile control flows via [[WF-1-telegram-orchestrator]].
+- **Send Telegram** — no creds; mobile control flows via [[MCP-n8n]] workflow WF#1 (telegram-orchestrator listener).
 
 See also: [[Workflows-MOC]] for how these tools chain into operator workflows, [[Decisions-MOC]] for the binding "use the roster" rule, [[Memory-MOC]] for where the roster lives across sessions.

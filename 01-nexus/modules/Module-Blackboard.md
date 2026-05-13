@@ -41,3 +41,5 @@ Without a blackboard, every agent would import every other agent and the depende
 - [[Module-ORB]] — publishes three topics
 - [[Module-Postmortem]] — reads close events
 - [[Module-Notifications]] — subscribes to typed events for Discord delivery
+- [[Operator-Principles]] — prinsipp 2 (data never stops) binds blackboard writes during cleanups
+- [[Retention-Policy]] — audit allowlist on blackboard topics enforced via retention

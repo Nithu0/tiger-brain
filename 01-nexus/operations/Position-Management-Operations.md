@@ -44,3 +44,7 @@ The sync landed 2026-04-21 evening (one day ahead of plan). Position-management 
 - [[Strategy-ORB]] — primary client; positions managed by this module
 - [[OK-Kjor-Gate]] — flip required explicit approval
 - [[Phase-Status-Pointer]] — full state lives there
+- [[Operator-Principles]] — prinsipp 4 + 5 (foundation-først + OK-kjør) bound the original flip
+- [[Truth-Hierarchy]] — OANDA `realizedPL` is canonical PnL; DB `(close-entry)×size` is derived
+- [[metadata-stamping-state]] — attribution columns this module relies on
+- [[Strategy-Proposal-Workflow]] — default changes to PM logic route through [[Karri]]

@@ -6,6 +6,8 @@ created: 2026-05-08
 
 # Memory-MOC
 
+> **Last big session:** [[2026-05-11_full_session|2026-05-11 — 5-round max-mode push]] (cognitive-OS scaffolding: 7 decision-trees, 5 runbooks, 10 living-state docs, multi-Claude launch-script + clone-bootstrap landed).
+
 How Claude remembers things across sessions, machines, and projects. The cognitive OS treats memory as a layered hierarchy: each layer additive on the one above, scoped tighter as it descends.
 
 ## The hierarchy (read order)
@@ -35,6 +37,15 @@ Memory entries flow through stages — see [[Memory-Lifecycle]]:
 `RAW` (daily distilled) → `DISTILLED` (curated) → `PROMOTED` (durable, in repo) → `DEPRECATED` (kept for history) → `ARCHIVED` (read-only).
 
 The Stop-hook distillation pipeline writes new RAW entries automatically; promotion remains operator-gated.
+
+## Decision-trees + Runbooks (autonomous-decision brain, 2026-05-11)
+
+The Brain vault now hosts a layer of recurring-situation playbooks designed so Claude can act on "kjør" alone with minimal further questions. Two folders:
+
+- `_decisions/` — what to do WHEN a situation fires (triggers + diagnose order + classification table). Index in [[Decisions-MOC]] under "Decision-trees".
+- `_runbooks/` — HOW to execute the concrete procedures referenced by decision-trees. Index in [[Decisions-MOC]] under "Runbooks".
+
+These cross-link to per-project memory (`feedback_*.md`, `reference_*.md`) so decisions stay grounded in operator-corrections-as-rules, not Claude's general training.
 
 ## Cross-project firewall
 

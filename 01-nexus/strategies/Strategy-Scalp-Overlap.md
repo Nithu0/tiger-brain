@@ -47,4 +47,5 @@ The `scalp_overlap_asia` gate is observation-only at present and is flagged as a
 - [[Strategy-ORB]] — flagship, currently LIVE
 - [[Module-Exposure-And-Shield]] — gate logging
 - [[Foundation-Gate]] — required-green before activation
-- [[Strategy-Proposal-Workflow]] — Karri reviews any threshold change
+- [[Strategy-Proposal-Workflow]] — [[Karri]] reviews any threshold change
+- [[Operator-Principles]] — prinsipp 1 (no auto-disable) + prinsipp 4 (foundation-først)

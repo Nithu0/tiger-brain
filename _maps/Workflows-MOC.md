@@ -6,6 +6,8 @@ created: 2026-05-08
 
 # Workflows-MOC
 
+> **Last big session:** [[2026-05-11_full_session|2026-05-11 — 5-round max-mode push]] (max-autonomous workflow stress-tested: 45 agents dispatched, Karri auto-send authorised during work hours, paid-upgrade authorisation established).
+
 Operator's recurring workflows. Each entry: when triggered, what happens, where to look.
 
 ## [[Firm-Up-Max-Mode]]
@@ -34,6 +36,11 @@ Operator's recurring workflows. Each entry: when triggered, what happens, where 
 - **What:** `scripts/hooks/distill.sh` runs Haiku over the transcript with `distill-prompt.md`, appends durable lessons to `docs/memory/daily/YYYY-MM-DD.md`, and queues promotion candidates in `docs/memory/PROMOTE_QUEUE.md`. Idempotent via SHA-12 marker. Budget-capped at $0.10/run. Never auto-commits, never auto-promotes.
 - **Status:** DRY-RUN — `.dryrun` extension blocks accidental activation.
 - **Where to look:** `docs/architecture/distillation-hook.md`.
+
+## [[Runbook-Quota-Upgrade]]
+- **Trigger:** [[When-Quota-Blocks-Pipeline]] decision-tree resolves to "propose paid upgrade" (free-tier cap hit, >10% failure rate from 429s).
+- **What:** Claude files the upgrade-guide + cost estimate; operator clicks the billing button in provider dashboard; 24h post-upgrade verification SQL confirms failure-rate drop.
+- **Where to look:** `_runbooks/Runbook-Quota-Upgrade.md`; per `feedback_operator_pays_premium.md` operator authorizes the spend when justified.
 
 ## [[Promote-Inbox-To-Repo]]
 - **Trigger:** operator reviews `00-claude-inbox/` in Obsidian and finds something durable.

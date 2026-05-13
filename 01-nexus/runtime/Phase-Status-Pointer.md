@@ -13,3 +13,5 @@ Live truth lives in `/home/nithu/code/ai-assistent/docs/ops/phase-status.md` —
 - [[Nexus-MOC]]
 - [[Foundation-Gate]] — current rule statuses live in phase-status
 - [[Live-Endpoints]] — runtime confirmation matches phase-status
+- [[Truth-Hierarchy]] — phase-status ranks #2; codebase + live system ranks #1
+- [[Operator-Principles]] — "Midlertidige unntak" section in phase-status is the override registry

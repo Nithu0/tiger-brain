@@ -49,3 +49,5 @@ Step 1b in `runCycle()`. Range detector runs every cycle; state machine ticks wh
 - [[Module-Blackboard]] — three topics
 - [[Module-Exposure-And-Shield]] — news-blackout gate for ORB
 - [[Foundation-Gate]] — gate for ORB tuning
+- [[Operator-Principles]] — prinsipp 4 (foundation-først) binds any ORB threshold change
+- [[Strategy-Proposal-Workflow]] — ORB tuning routes through [[Karri]]

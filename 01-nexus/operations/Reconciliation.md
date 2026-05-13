@@ -50,3 +50,5 @@ Read-only audit. **No code changes. No data writes.** Cleanups await operator-ap
 - [[Live-Endpoints]] — `/health` returns reconciliation status
 - [[OK-Kjor-Gate]] — cleanup SQL needs explicit approval
 - [[Phase-Status-Pointer]] — full open-issues table lives there
+- [[Operator-Principles]] — prinsipp 1: drift surfaces in morning briefing, no auto-act
+- [[Truth-Hierarchy]] — OANDA `realizedPL` ranks above DB `sum(pnl)` when they disagree

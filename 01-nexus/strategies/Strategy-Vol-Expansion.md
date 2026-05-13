@@ -48,4 +48,5 @@ Listed in `phase-status.md` "Utsatt" (deferred): observer-only, has 0 closed tra
 - [[Strategy-Session-Breakout]] — TIER 3 sibling
 - [[Module-Fact-And-Analysis-Agents]] — provides ATR / regime classification
 - [[Foundation-Gate]] — required-green before activation
-- [[Strategy-Proposal-Workflow]] — Karri reviews threshold changes
+- [[Strategy-Proposal-Workflow]] — [[Karri]] reviews threshold changes
+- [[Operator-Principles]] — prinsipp 1 (no auto-disable) + prinsipp 4 (foundation-først)

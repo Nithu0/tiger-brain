@@ -51,4 +51,6 @@ LIVE since 2026-04-25. Cold-start delta active: `FIRM_COLD_START_MODE=true`, `FI
 - [[Module-Exposure-And-Shield]] — Shield news-blackout interlocks
 - [[Foundation-Gate]] — gate for ORB tuning
 - [[Strategy-Promotion-Workflow]] — how ORB graduated
-- [[Strategy-Proposal-Workflow]] — Karri reviews tuning proposals
+- [[Strategy-Proposal-Workflow]] — [[Karri]] reviews tuning proposals
+- [[Operator-Principles]] — prinsipp 1 + 4 bind ORB tuning/activation
+- [[Truth-Hierarchy]] — when this doc drifts from `apps/worker/src/firm/orb/`, code wins

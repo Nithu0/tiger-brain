@@ -40,3 +40,5 @@ Demo is where calibration happens. Blocking trading because losses crossed an ar
 - [[Foundation-Gate]] — separate gate, unaffected by this change
 - [[Module-Orchestrator]] — reads demo-mode but no longer auto-blocks
 - [[OK-Kjor-Gate]] — the operator override pattern this incident codified
+- [[Truth-Hierarchy]] — demo-mode reports; live state (`phase-status.md`) is the auth
+- [[When-Foundation-Rule-Goes-Yellow]] — anomaly handling now follows this decision-tree

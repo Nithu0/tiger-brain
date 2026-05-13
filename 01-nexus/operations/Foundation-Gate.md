@@ -58,3 +58,7 @@ Green when `days_observed >= 7 AND evals >= 50` for at least one gate.
 - [[OK-Kjor-Gate]] — both must be green for activation
 - [[Phase-Status-Pointer]] — live truth
 - [[Module-Exposure-And-Shield]] — produces `gate_decisions` rows that feed rule 4
+- [[Truth-Hierarchy]] — this doc is a snapshot; live state in `phase-status.md` + `gate_decisions` rules
+- [[When-Foundation-Rule-Goes-Yellow]] — decision-tree when any rule flips
+- [[Karri]] — threshold loosening on any rule routes through [[Strategy-Proposal-Workflow]]
+- [[foundation-gate-state]] — living-state mirror

@@ -38,6 +38,8 @@ Step 1b is [[Module-ORB]] (range detector every cycle, state ticks when valid, m
 - [[Strategy-ORB]] — primary strategy hook into the cycle
 - [[Foundation-Gate]] — prerequisites for changing cycle behaviour
 - [[OK-Kjor-Gate]] — every push that touches `runCycle()` requires explicit approval
+- [[Operator-Principles]] — prinsipp 1 (no auto-disable) + 5 (OK-kjør-gate) bind orchestrator changes
+- [[Truth-Hierarchy]] — `runCycle()` itself is the canonical truth; this note merely points
 
 ## Operator-principle binding
 

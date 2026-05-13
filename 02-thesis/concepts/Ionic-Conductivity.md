@@ -40,7 +40,7 @@ EIS lets you separate **bulk** σ (intra-grain Li⁺ transport) from **grain-bou
 
 > TODO: operator decide whether VFT (Vogel-Fulcher-Tammann) is in scope for any sulfide-glass entries in V4. Currently we use only Arrhenius.
 
-[[stub]]
+[[stub:vft-extension]]
 
 ## Related
 

@@ -49,4 +49,7 @@ If operator says "bare fix det" / "kjør på" inline on a specific item, impleme
 - [[Foundation-Gate]] — proposals can be drafted while red, but not implemented
 - [[OK-Kjor-Gate]] — final activation gate
 - [[Operator-Principles]] — prinsipp 4 + 5 binding
+- [[Truth-Hierarchy]] — proposal docs in repo `docs/strategy/proposals/` are canonical; vault mirrors
+- [[Runbook-Karri-Proposal-Send]] — the send-to-[[Karri]] procedure
+- [[When-Strategy-Change-Tempting]] — decision-tree gating entry to this workflow
 - [[Nexus-MOC]]

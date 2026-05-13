@@ -37,4 +37,8 @@ How a strategy graduates from idea → shadow → live. Stub-grade, the canonica
 - [[Strategy-Proposal-Workflow]] — Karri-review path
 - [[OK-Kjor-Gate]] — final activation gate
 - [[Operator-Principles]] — prinsipp 4 (foundation-først) binds this workflow
+- [[Karri]] — every step from proposal to live activation involves the reviewer
+- [[Truth-Hierarchy]] — promotion gate evaluation reads live tables, not snapshot docs
+- [[When-Strategy-Change-Tempting]] — entry decision-tree
+- [[Module-Postmortem]] — produces the shadow-mode acceptance data
 - [[Nexus-MOC]]

@@ -44,5 +44,8 @@ Activation on Railway requires:
 - [[Module-Orchestrator]] — Phase 5 trigger fires after CIO step (when enabled)
 - [[Foundation-Gate]] — rule 4 binding
 - [[OK-Kjor-Gate]] — activation gate
-- [[Operator-Principles]] — prinsipp 3 (small janitor jobs OK, behavioural changes need OK kjør)
-- [[Strategy-Proposal-Workflow]] — code-worker tasks that touch strategy go through proposals
+- [[Operator-Principles]] — prinsipp 3 (small janitor jobs OK, behavioural changes need OK kjør) + prinsipp 6 (autotune deferred 30+ days)
+- [[Strategy-Proposal-Workflow]] — code-worker tasks that touch strategy go through [[Karri]] proposals
+- [[codex-pipeline-state]] — living-state for the Phase 2a code-drainer
+- [[gemini-pipeline-state]] — living-state for the research-drainer
+- [[local-mirror-safety-state]] — prod-DB guard for codex-runner + ralph loops

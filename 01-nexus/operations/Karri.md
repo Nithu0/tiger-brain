@@ -24,4 +24,8 @@ Karri owns strategy and risk. Operator owns ops and infra. Any money-impact chan
 - [[Strategy-Proposal-Workflow]] — the canonical flow
 - [[Strategy-Promotion-Workflow]] — Karri approval is a prerequisite
 - [[Operator-Principles]] — prinsipp 4 + 5
+- [[Foundation-Gate]] — rule 5 mitigations + threshold loosening route via Karri
+- [[Runbook-Karri-Proposal-Send]] — the canonical send procedure
+- [[When-Strategy-Change-Tempting]] — entry decision-tree
+- [[Truth-Hierarchy]] — proposal docs in `docs/strategy/proposals/` are canonical; vault mirrors
 - [[Nexus-MOC]]

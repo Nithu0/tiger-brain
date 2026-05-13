@@ -10,6 +10,21 @@ Central map for the Nexus domain. Nexus is an autonomous XAUUSD (spot gold) trad
 
 Repo lives at `/home/nithu/code/ai-assistent`. Live truth always lives in `apps/worker/src/firm/orchestrator.ts:runCycle()` and `docs/ops/phase-status.md`. This MOC just points.
 
+## Brain (decision trees + runbooks)
+
+Autonomous-decision scaffolding added 2026-05-11. Read these before asking the operator — they cover the recurring patterns.
+
+**Decision-trees** (`_decisions/` — when X happens, do Y):
+- [[When-Trade-Bleeds-Multi-Day]] · [[When-Gate-Goes-Silent]] · [[When-Agent-Stalls]] · [[When-Doc-Drifts-From-Code]] · [[When-Foundation-Rule-Goes-Yellow]] · [[When-Operator-Says-Kjor-Pa]] · [[When-Strategy-Change-Tempting]] · [[When-Quota-Blocks-Pipeline]] · [[When-Day-Hits-Overtrading-Pattern]]
+
+**Runbooks** (`_runbooks/` — how to execute):
+- [[Runbook-Push-Cycle]] · [[Runbook-Karri-Proposal-Send]] · [[Runbook-Backfill-Script-Pattern]] · [[Runbook-Multi-Agent-Dispatch]] · [[Runbook-Post-Deploy-Verification]] · [[Runbook-Quota-Upgrade]]
+
+**Living runtime-state** (`01-nexus/runtime-state/` — one doc per subsystem, refreshed per session):
+- [[discord-delivery-state]] · [[gemini-pipeline-state]] · [[codex-pipeline-state]] · [[gate-decisions-state]] · [[metadata-stamping-state]] · [[firm-agents-state]] · [[foundation-gate-state]] · [[production-loop-state]] · [[retention-state]] · [[local-mirror-safety-state]] · [[SNAPSHOT]] (one-page truth)
+
+**Session summaries**: [[2026-05-11_full_session]] — 12-round max-mode push: foundation-gate 5/5 first time, metadata-strip fix, Gemini Tier-1, Codex Phase 2a live, ~50 commits, 478/478 tests. Linked also via [[scalp-overlap-losses-2026-05-11]] (worked example feeding [[When-Trade-Bleeds-Multi-Day]]).
+
 ## Modules
 
 The 10 firm modules — orchestrator coordinates, opinion comes from specialists.

@@ -35,3 +35,7 @@ Codified after demo-mode auto-degrade put the system into `LEARNING_ONLY_DEMO` f
 - [[Module-Fact-And-Analysis-Agents]] — prinsipp 2 binding
 - [[Strategy-Promotion-Workflow]] — prinsipp 4 + 5 binding
 - [[Module-Agent-Bus]] — prinsipp 6 binding (autotune deferred 30+ days)
+- [[Karri]] — prinsipp 4 + 5: money-impact changes go to reviewer
+- [[Truth-Hierarchy]] — "Midlertidige unntak" + decisions logged to repo (`phase-status.md`), not vault
+- [[Strategy-Proposal-Workflow]] — the implementation of prinsipp 4
+- [[When-Operator-Says-Kjor-Pa]] — prinsipp 5 in autonomous-execute mode

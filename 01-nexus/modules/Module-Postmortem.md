@@ -42,3 +42,6 @@ Pre-2026-04-21, `runEnhancedPostmortem` was only called from legacy `bot-cycle.t
 - [[Module-Reconciliation]] — postmortem accuracy depends on accurate close PnL from OANDA, see [[Reconciliation]]
 - [[Strategy-Promotion-Workflow]] — postmortem stats decide promotion to live
 - [[Module-Notifications]] — postmortem summaries surface in morning briefing
+- [[Operator-Principles]] — prinsipp 1 (postmortem reports, never auto-disables a strategy)
+- [[Foundation-Gate]] — postmortem write-rate feeds gate observability
+- [[When-Agent-Stalls]] — if Atlas (postmortem worker) stalls, use this decision-tree

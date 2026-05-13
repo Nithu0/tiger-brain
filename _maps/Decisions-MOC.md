@@ -6,6 +6,8 @@ created: 2026-05-08
 
 # Decisions-MOC
 
+> **Last big session:** [[2026-05-11_full_session|2026-05-11 — 5-round max-mode push]] (45 agents, 25 commits, 4/5 foundation green, 7 Karri proposals filed, decision-trees + runbooks scaffolded).
+
 Index of binding architectural and operational decisions for the cognitive OS rollout. Source-of-truth lives in the Nexus repo at `docs/ops/operator-decisions.md` (append-only) and `docs/architecture/`. This MOC mirrors the index for graph traversal — never edit decisions here, always at the source.
 
 ## Bedrock — operator-prinsipper (2026-04-21)
@@ -26,6 +28,30 @@ Source: `docs/ops/operator-decisions.md` → "2026-04-21: Six binding operator-p
 - [[Decision-Tools-Roster-Habit]] — Claude must consult `reference_available_tools.md` and `docs/ref/claude-code-capabilities.md` before proposing manual workarounds. Update roster same-session when new MCP added.
 - [[Decision-No-Auto-Activation]] — never flip Railway flags / send Discord / push without explicit "OK kjør". Status-report-without-acting is the correct shape.
 - [[Decision-Stack-Deliveries]] — "one change per session" cap removed 2026-05-03. Stack deliveries when sensible.
+
+## Decision-trees (recurring-situation playbooks, 2026-05-11)
+
+Each note describes a recurring trigger + Claude's default action + autonomy level. Lives at `_decisions/`. Read these before asking the operator.
+
+- [[When-Trade-Bleeds-Multi-Day]] — diagnose order for multi-day red days; metadata fixes vs strategy proposals
+- [[When-Gate-Goes-Silent]] — 5-layer silent-blocker debug; env-var-visibility is the most common root cause
+- [[When-Agent-Stalls]] — firm-agent stalls vs intentional dormancy; review-worker pattern (atlas-2474)
+- [[When-Doc-Drifts-From-Code]] — truth-hierarchy resolution; code wins
+- [[When-Foundation-Rule-Goes-Yellow]] — what's Claude-fixable vs Karri-required
+- [[When-Operator-Says-Kjor-Pa]] — autonomous-execute scope; what's still gated
+- [[When-Strategy-Change-Tempting]] — Karri-spor; proposal template; auto-send rules
+- [[When-Quota-Blocks-Pipeline]] — >10% failure rate from 429/quota errors; propose paid-tier upgrade + defensive code
+
+## Runbooks (step-by-step procedures, 2026-05-11)
+
+Lives at `_runbooks/`. Used by the decision-trees as concrete how-tos.
+
+- [[Runbook-Push-Cycle]] — edit → typecheck → commit → operator-push → verify
+- [[Runbook-Karri-Proposal-Send]] — webhook send + HTTP 204 verify + audit trail
+- [[Runbook-Backfill-Script-Pattern]] — explicit env-var + dry-run + CONFIRM=YES
+- [[Runbook-Multi-Agent-Dispatch]] — 5/10/15 agent sizing + spec-doc coordination
+- [[Runbook-Post-Deploy-Verification]] — what to SQL after a push lands
+- [[Runbook-Quota-Upgrade]] — operator steps to enable billing + upgrade API tier (Gemini/Anthropic/OpenAI)
 
 ## Architecture decisions (design docs)
 

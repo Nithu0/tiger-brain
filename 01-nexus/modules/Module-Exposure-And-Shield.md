@@ -46,3 +46,5 @@ Operator-principle 1 (no auto-disable) means Shield reports + vetoes per cycle, 
 - [[Strategy-ORB]] — has its own news-blackout in addition
 - [[Foundation-Gate]] — rule 4 (gate maturity) feeds from `gate_decisions`
 - [[Module-Position-Management]] — exposure tracking interlocks
+- [[gate-decisions-state]] — living-state for the table Shield/Forge feeds
+- [[When-Gate-Goes-Silent]] — decision-tree when `gate_decisions` stops growing

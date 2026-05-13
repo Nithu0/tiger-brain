@@ -13,10 +13,20 @@
 #   - Refuses to run if the vault is not a git repo.
 #   - If a pre-push hook already exists, prompts for:
 #       overwrite | skip | backup-and-replace (default)
+#   - Pass --yes (or -y) to skip the prompt and backup-and-replace silently.
 #   - Writes a new pre-push hook, makes it executable, and verifies install.
 # ---------------------------------------------------------------------------
 
 set -euo pipefail
+
+# Parse args
+ASSUME_YES=0
+for arg in "$@"; do
+  case "$arg" in
+    --yes|-y) ASSUME_YES=1 ;;
+    *) echo "ERROR: unknown argument: $arg" >&2; exit 1 ;;
+  esac
+done
 
 # Always operate from the vault root (parent of scripts/)
 cd "$(dirname "$0")/.."
@@ -45,28 +55,35 @@ fi
 HOOK_PATH="$HOOKS_DIR/pre-push"
 
 if [[ -e "$HOOK_PATH" ]]; then
-  echo
-  echo "Existing pre-push hook found at: $HOOK_PATH"
-  echo "--- begin existing hook ---"
-  cat "$HOOK_PATH"
-  echo "--- end existing hook ---"
-  echo
-  echo "Choose action:"
-  echo "  [o] overwrite (replace without backup)"
-  echo "  [s] skip (leave existing hook in place; exit)"
-  echo "  [b] backup-and-replace  [default]"
-  read -r -p "Action [o/s/B]: " action
-  case "${action:-b}" in
-    o|O) echo "Overwriting existing hook." ;;
-    s|S) echo "Skipping. Existing hook left untouched."; exit 0 ;;
-    b|B|"")
-      ts="$(date +%Y%m%d-%H%M%S)"
-      backup="$HOOK_PATH.bak-$ts"
-      mv "$HOOK_PATH" "$backup"
-      echo "Backed up existing hook to: $backup"
-      ;;
-    *) echo "Unknown choice '$action'. Aborting." >&2; exit 1 ;;
-  esac
+  if [[ "$ASSUME_YES" -eq 1 ]]; then
+    ts="$(date +%Y%m%d-%H%M%S)"
+    backup="$HOOK_PATH.bak-$ts"
+    mv "$HOOK_PATH" "$backup"
+    echo "Backed up existing hook to: $backup"
+  else
+    echo
+    echo "Existing pre-push hook found at: $HOOK_PATH"
+    echo "--- begin existing hook ---"
+    cat "$HOOK_PATH"
+    echo "--- end existing hook ---"
+    echo
+    echo "Choose action:"
+    echo "  [o] overwrite (replace without backup)"
+    echo "  [s] skip (leave existing hook in place; exit)"
+    echo "  [b] backup-and-replace  [default]"
+    read -r -p "Action [o/s/B]: " action
+    case "${action:-b}" in
+      o|O) echo "Overwriting existing hook." ;;
+      s|S) echo "Skipping. Existing hook left untouched."; exit 0 ;;
+      b|B|"")
+        ts="$(date +%Y%m%d-%H%M%S)"
+        backup="$HOOK_PATH.bak-$ts"
+        mv "$HOOK_PATH" "$backup"
+        echo "Backed up existing hook to: $backup"
+        ;;
+      *) echo "Unknown choice '$action'. Aborting." >&2; exit 1 ;;
+    esac
+  fi
 fi
 
 cat > "$HOOK_PATH" <<'HOOK'

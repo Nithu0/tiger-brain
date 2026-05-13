@@ -26,6 +26,7 @@ set -euo pipefail
 MODE="easy"
 DEST="${HOME}/Obsidian/Brain"
 REPO=""
+NO_HOOK="${NO_HOOK:-0}"
 
 # ---------- helpers ----------
 info()  { printf "\033[1;34m[info]\033[0m  %s\n" "$*"; }
@@ -43,6 +44,7 @@ Required:
 Optional:
   --mode easy|advanced (default: easy)
   --dest <path>        (default: ${HOME}/Obsidian/Brain)
+  --no-hook            Skip auto-install of the pre-push hook
   -h, --help           Show this help
 
 Examples:
@@ -73,6 +75,9 @@ while [[ $# -gt 0 ]]; do
       ;;
     --repo)
       REPO="${2:-}"; shift 2
+      ;;
+    --no-hook)
+      NO_HOOK=1; shift
       ;;
     -h|--help)
       usage; exit 0
@@ -161,6 +166,31 @@ else
     err "brain_audit.py reported findings. Address them before sharing."
     # Do not exit 1 here — a fresh clone with findings is still a valid setup.
     # Operator can review the output and decide.
+  fi
+fi
+
+# ---------- sanity ----------
+# Run sanity.sh too — the pre-push hook will need it anyway, so surface
+# any failures during setup rather than at first push.
+if [[ -f "scripts/sanity.sh" ]]; then
+  info "Running scripts/sanity.sh..."
+  if bash scripts/sanity.sh; then
+    ok "sanity.sh is green."
+  else
+    warn "sanity.sh reported findings. Address before pushing."
+  fi
+else
+  warn "scripts/sanity.sh is missing — pre-push hook will not work until added."
+fi
+
+# ---------- auto-install pre-push hook ----------
+# Auto-install pre-push hook (idempotent — overwrites any existing hook).
+# Skip if --no-hook passed.
+if [[ "${NO_HOOK:-0}" -eq 0 ]]; then
+  if [[ -f "${DEST}/scripts/install-hooks.sh" ]]; then
+    bash "${DEST}/scripts/install-hooks.sh" --yes >/dev/null 2>&1 || \
+      echo "  warn: hook install failed (you can run 'bash scripts/install-hooks.sh' manually later)"
+    echo "  ✓ pre-push hook installed (runs sanity.sh before every push)"
   fi
 fi
 

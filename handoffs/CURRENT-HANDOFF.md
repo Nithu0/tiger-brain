@@ -4,23 +4,24 @@ tags: [handoff, current]
 created: 2026-05-11
 updated: 2026-05-13
 owner: "Claude (Opus 4.7 1M)"
-status: Pushed to github.com/Nithu0/tiger-brain — share-ready
-next: Operator enables branch protection (UI) + rotates Obsidian REST API key + invites teammate when ready
+status: zero-ritual automation in place; awaits operator branch-protection UI submit + key rotation
+next: Operator finishes branch ruleset (5 boxes per _runbooks/Runbook-Branch-Protection.md) + rotates REST API key
 ---
 
 # CURRENT-HANDOFF — Brain hardening session
 
 ## Status
 
-**Pushed to github.com/Nithu0/tiger-brain — share-ready**
+**zero-ritual automation in place; awaits operator branch-protection UI submit + key rotation**
 
 ## Next action
 
-Operator enables branch protection (UI) + rotates Obsidian REST API key + invites teammate when ready
+Operator: finish branch ruleset (5 boxes per `_runbooks/Runbook-Branch-Protection.md`); rotate REST API key
 
 ## What was done
 
 - 17 commits pushed to GitHub; v0.1.0-share-ready tag set.
+- Automation packaging (round 6): brain-session-start.sh hooks into firm-tab-init.sh; setup-from-scratch auto-installs pre-push hook; monthly-inbox-archive.yml scheduled; branch-protection recipe written; weekly-maintenance runbook reframed as "what's automated".
 
 ## What was NOT done
 

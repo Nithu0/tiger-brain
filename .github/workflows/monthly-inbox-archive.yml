@@ -1,0 +1,76 @@
+# monthly-inbox-archive
+# Scheduled monthly run of archive_old_inbox.py. Opens a PR (does NOT push to main)
+# so that branch protection + CODEOWNERS still gate the move. Operator reviews & merges.
+---
+name: monthly-inbox-archive
+
+on:
+  schedule:
+    # 1st of every month at 07:00 UTC (08:00 Oslo winter / 09:00 Oslo summer)
+    - cron: '0 7 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        if: hashFiles('scripts/requirements.txt') != ''
+        run: pip install -r scripts/requirements.txt
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run archive script
+        run: python3 scripts/archive_old_inbox.py --apply --yes
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create archive PR if changes
+        if: steps.diff.outputs.changed == 'true'
+        # peter-evans/create-pull-request v6.1.0
+        # Tag pin (acceptable for monthly internal automation; swap to SHA pin if tightening supply chain).
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(inbox): monthly archive (auto-run by GitHub Actions)"
+          title: "chore(inbox): monthly archive (auto)"
+          body: |
+            Automated monthly inbox archive.
+            Files older than 30 days moved from `00-inbox/` to `90-archive/inbox/`.
+
+            OPERATOR-APPROVED: monthly automation
+
+            Triggered by: `${{ github.event_name }}`
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          branch: auto/monthly-archive-${{ github.run_number }}
+          delete-branch: true
+          labels: |
+            automation
+            housekeeping
+
+      - name: No changes
+        if: steps.diff.outputs.changed == 'false'
+        run: echo "No inbox files old enough to archive this month."

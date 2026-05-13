@@ -13,28 +13,27 @@ Placeholders som fortsatt må byttes ut:
 
 ---
 
-## STEP 1: Create the GitHub repo (one of these, your choice)
+## What's now automated (no manual ritual)
 
-```bash
-# OPTION A — gh CLI:
-bash scripts/install-gh-cli.sh             # ~30s, asks for sudo
-gh auth login                              # opens browser
-gh repo create tiger-brain --private --description "Personal second-brain (Obsidian + GitHub)"
-
-# OPTION B — UI (fastest if you don't want to install gh):
-# Open https://github.com/new
-# Name: tiger-brain
-# Visibility: Private
-# Do NOT initialize with README/gitignore (repo already has them)
-```
+- Brain check runs on every firm tab boot (see `scripts/brain-session-start.sh`)
+- Pre-push hook installed locally
+- CI runs on every PR (brain-checks, path-guard, gitleaks)
+- Monthly inbox archive opens an auto-PR
+- Setup-from-scratch installs everything for collaborators in one command
 
 ---
 
-## STEP 2: Push + branch protection
+## STEP 1: Branch protection (UI)
 
-```bash
-bash scripts/push-and-protect.sh --mode easy     # or --mode full if gh installed
-```
+5 rules to check; Karri on bypass list; rest of collaborators forced through PR + CODEOWNERS.
+
+Full recipe: `_runbooks/Runbook-Branch-Protection.md`.
+
+---
+
+## STEP 2: Pre-push hook — DONE
+
+Operator ran `bash scripts/install-hooks.sh` (confirmed in terminal output 2026-05-13).
 
 ---
 
@@ -80,8 +79,8 @@ bash scripts/smoke-test-pr.sh                # creates+closes test PRs
 
 - [x] API-key purge fra git-historikk (filter-repo kjørt + verifisert)
 - [x] CODEOWNERS `@OWNER` → `@Nithu0`
-- [ ] Repo opprettet privat (STEP 1)
-- [ ] `main` pushet + branch protection aktiv (STEP 2)
+- [x] Pre-push hook installert lokalt (`install-hooks.sh`)
+- [ ] Branch protection aktiv i UI (STEP 1, recipe i `_runbooks/Runbook-Branch-Protection.md`)
 - [ ] API-nøkkel rotert i Obsidian (STEP 3)
 - [ ] Teammate invitert med `push`-rolle (STEP 4)
 - [ ] CODEOWNERS `@TEAMMATE` byttet til ekte handle (STEP 5)
@@ -90,25 +89,12 @@ bash scripts/smoke-test-pr.sh                # creates+closes test PRs
 
 ---
 
-## Vedlikehold (recurring)
-
-| Hvor ofte | Hva | Kommando |
-|---|---|---|
-| Ukentlig | Oppdater `01-CURRENT-FOCUS.md` | manuell |
-| Ukentlig | Oppdater `claude-context/CURRENT.md` | manuell |
-| Månedlig | Arkivér gammel inbox | `python3 scripts/archive_old_inbox.py --apply` |
-| Kvartalsvis | Refresh system-audit | `python3 scripts/brain_audit.py > SYSTEM-AUDIT.md` + manuell oppdatering |
-| Etter big restructure | Re-kjør hele audit | `python3 scripts/brain_audit.py` |
-
----
-
 ## Rollback per step
 
 | Step | Rollback |
 |---|---|
-| 1 (repo create) | `gh repo delete Nithu0/tiger-brain --yes` (irreversibelt; sletter alt) |
-| 2 (push) | `git push origin --delete main` (men da blir repo tomt) |
-| 2 (protection) | `gh api -X DELETE "repos/Nithu0/tiger-brain/branches/main/protection"` |
+| 1 (protection) | `gh api -X DELETE "repos/Nithu0/tiger-brain/branches/main/protection"` |
+| 2 (pre-push hook) | `rm .git/hooks/pre-push` |
 | 3 (rotér nøkkel) | Re-generer på nytt i Obsidian |
 | 4 (collaborator) | `gh api -X DELETE "repos/Nithu0/tiger-brain/collaborators/<TEAMMATE>"` |
 | 5 (CODEOWNERS) | `git checkout HEAD~1 -- .github/CODEOWNERS` |
@@ -118,8 +104,13 @@ bash scripts/smoke-test-pr.sh                # creates+closes test PRs
 
 ## DONE 2026-05-13
 
-- **API-key leak purge**: `git filter-repo --invert-paths --path .obsidian/plugins/obsidian-local-rest-api/` kjørt; `git log --all -- .obsidian/plugins/obsidian-local-rest-api/data.json` returnerer tomt. (Var step 3 i forrige versjon, Option A.)
+- **API-key leak purge**: `git filter-repo --invert-paths --path .obsidian/plugins/obsidian-local-rest-api/` kjørt; `git log --all -- .obsidian/plugins/obsidian-local-rest-api/data.json` returnerer tomt.
 - **CODEOWNERS owner-handle**: `@OWNER` → `@Nithu0` byttet i `.github/CODEOWNERS`. `@TEAMMATE` venter fortsatt på teammates handle (se STEP 5).
+- **Pre-push hook**: `bash scripts/install-hooks.sh` kjørt av operatør.
+- **Branch protection recipe**: dokumentert i `_runbooks/Runbook-Branch-Protection.md`.
+- **Firm-tab brain check**: automatisert via `scripts/brain-session-start.sh`.
+- **Monthly inbox archive**: schedulert via `.github/workflows/monthly-inbox-archive.yml`.
+- **Setup-from-scratch**: installerer pre-push hook by default for collaborators.
 
 ---
 

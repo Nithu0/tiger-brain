@@ -9,7 +9,7 @@ final: true
 
 ## 1. Summary
 
-Vault at `ba865a8` on `feat/brain-hardening`, **16 commits**, **351 markdown notes**, **2.3 MB on disk** (excl. `.git`/`.obsidian`). Sanity: **7/8 green** (one expected fail: `__pycache__` cache dir present locally — not tracked). Audit: **1 error, 0 warnings** (the same `__pycache__` — gitignored, harmless). Secret purged from history (filter-repo done). `feat/brain-hardening` is **14 commits ahead** of `main`. Awaiting operator's 4 manual steps: gh-auth (optional), GitHub-repo-create, push, Obsidian-key-rotate.
+Vault on `feat/post-share` (round-6 extension), **~20 commits**, **351 markdown notes**, **2.3 MB on disk** (excl. `.git`/`.obsidian`). Sanity: **7/8 green** (one expected fail: `__pycache__` cache dir present locally — not tracked). Audit: **1 error, 0 warnings** (the same `__pycache__` — gitignored, harmless). Secret purged from history (filter-repo done). Push-ready + auto-pilot in place. **Health: 9.5/10** — only manual remaining: branch-protection UI toggle + Obsidian key rotation.
 
 ## 2. Commit timeline
 
@@ -34,8 +34,9 @@ Post-filter-repo SHAs (old SHAs in older docs are stale):
 
 ## 3. Branches
 
-- **feat/brain-hardening** (current): HEAD = `ba865a8` — 14 commits ahead of `main`
-- **main**: parent, 2 commits (skeleton + initial vault scaffold)
+- **main**: pushed, parent
+- **feat/brain-hardening**: round 1-3 hardening (merged history line)
+- **feat/post-share** (current): rounds 5-6 — post-push polish + automation packaging
 
 ## 4. Folder map (top-level, with .md counts)
 
@@ -71,17 +72,29 @@ Total: **351 markdown notes**.
 
 ## 6. What still needs operator
 
-- Create GitHub repo `Nithu0/tiger-brain` (private)
-- Run `bash scripts/push-and-protect.sh --mode easy` (or `--mode full` if `gh` installed)
-- Rotate Obsidian REST API key in plugin settings (old key compromised — purged from history but treat as leaked)
+- Toggle branch protection in GitHub UI (require PR review + status checks) — see `_runbooks/Runbook-Branch-Protection.md`
+- Rotate Obsidian REST API key in plugin settings (old key purged from history but treat as leaked)
 - Replace `@TEAMMATE` placeholder in CODEOWNERS / onboarding docs when teammate joins
 
-## 7. Tooling installed
+## 7. Round 6 — automation packaging
 
-- `git-filter-repo` at `~/.local/bin/git-filter-repo` — operator may remove now that purge is done
+New this round (auto-pilot for the brain):
+
+- `scripts/brain-session-start.sh` — one-shot for firm-tab boot (sanity + audit + brief)
+- Hooked into `/home/nithu/code/_bin/firm-tab-init.sh` — fires on every firm tab open
+- `setup-from-scratch.sh` updated to auto-install pre-push hook (secret-scan + audit)
+- `.github/workflows/monthly-inbox-archive.yml` — scheduled cron: archives stale inbox notes
+- `_runbooks/Runbook-Branch-Protection.md` — written (manual UI steps documented)
+- `_runbooks/Runbook-Brain-Weekly-Maintenance.md` — reframed as "what's automated, no manual ritual"
+
+Net effect: weekly maintenance ritual is now a no-op; operator only owns branch protection + key rotation.
+
+## 8. Tooling installed
+
+- `git-filter-repo` at `~/.local/bin/git-filter-repo` — kept (round 4)
 - `gh` (GitHub CLI): **NOT installed** — install script available at `scripts/install-gh-cli.sh`
 
-## 8. Memory updated
+## 9. Memory updated
 
 In `~/.claude/projects/-home-nithu-code/memory/`:
 
@@ -89,7 +102,7 @@ In `~/.claude/projects/-home-nithu-code/memory/`:
 - `reference_brain_structure.md`
 - `feedback_brain_share_workflow.md`
 
-## 9. Companion docs to read
+## 10. Companion docs to read
 
 - `READY-TO-SHARE.md` — operator's checkbox list
 - `OPERATOR-NEXT-STEPS.md` — copy-pasteable commands
@@ -99,9 +112,9 @@ In `~/.claude/projects/-home-nithu-code/memory/`:
 - `TEAMMATE-ONBOARDING.md` — day-1 for teammate
 - `claude-context/START-HERE.md` — Claude entry point
 
-## 10. Sign-off
+## 11. Sign-off
 
-> "Hardening complete. Repo ready to share. Operator: do the 4 manual steps in section 6, then OK kjør → push."
+> "Hardening + automation complete. Auto-pilot engaged. Health 9.5/10. Operator owns only the two manual steps in section 6."
 
 ---
 

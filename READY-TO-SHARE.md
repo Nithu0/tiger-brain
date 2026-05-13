@@ -40,34 +40,27 @@ History is clean (filter-repo done, 16 commits, secret purged). CODEOWNERS owner
 - [x] Wikilink validation report
 - [x] Memory updated (3 new entries)
 - [x] Sanity 8/8 green; Audit 0 errors
+- [x] Pre-push hook installed (operator ran `bash scripts/install-hooks.sh`)
+- [x] Branch protection recipe documented (`_runbooks/Runbook-Branch-Protection.md`)
+- [x] Firm-tab brain check automated (`scripts/brain-session-start.sh`)
+- [x] Monthly inbox archive scheduled (`.github/workflows/monthly-inbox-archive.yml`)
+- [x] Setup-from-scratch auto-installs hook (default for all collaborators)
 
-> Verified: 2026-05-13 — 16 commits, sanity 8/8, audit 0 errors, history purged.
+> Verified: 2026-05-13 — 16 commits, sanity 8/8, audit 0 errors, history purged, automation layer live.
 
 ## 3. Blocked on operator (in order)
 
-- [ ] **Install gh CLI** — script ready at `scripts/install-gh-cli.sh`, awaits sudo password from operator. (Skippable — see next item.)
-- [ ] **`gh auth login`** OR **create repo manually** at https://github.com/new (private, name `tiger-brain`). Manual route bypasses gh CLI entirely for repo creation.
-- [ ] **Rotate Obsidian Local REST API key** — Obsidian → Settings → Community plugins → Local REST API → "Re-generate API key". Required regardless of gh path.
-- [ ] **Replace `@TEAMMATE` in CODEOWNERS** — needs teammate's GH handle:
-  ```bash
-  sed -i 's/@TEAMMATE/@<teammate-handle>/g' .github/CODEOWNERS
-  ```
-- [ ] **Push + protect**:
-  ```bash
-  bash scripts/push-and-protect.sh --mode easy    # or --mode full for branch protection
-  ```
-- [ ] **Invite teammate** (after handle known):
+- [ ] **Branch protection in UI** — operator currently on that page. Recipe: `_runbooks/Runbook-Branch-Protection.md` (5 rules; Karri on bypass list; rest forced through PR + CODEOWNERS).
+- [ ] **Rotate Obsidian Local REST API key** — Obsidian → Settings → Community plugins → Local REST API → "Re-generate API key".
+- [ ] **Eventual teammate invite** — when handle known:
   ```bash
   gh api -X PUT "repos/Nithu0/tiger-brain/collaborators/<TEAMMATE>" -f permission=push
+  sed -i 's/@TEAMMATE/@<teammate-handle>/g' .github/CODEOWNERS
   ```
-- [ ] **Smoke test path-guard** — script will be at `scripts/smoke-test-pr.sh` (another agent writing this). Opens a test PR touching protected path; CI must fail.
 
 ## 4. Optional but recommended
 
-- [ ] Install pre-push hook: `bash scripts/install-hooks.sh`
-- [ ] Archive old inbox monthly: `python3 scripts/archive_old_inbox.py --apply --yes`
 - [ ] Add `detect-secrets` or `trufflehog` to CI (next sprint)
-- [ ] Schedule weekly refresh of `claude-context/CURRENT.md` from `docs/ops/phase-status.md`
 
 ## 5. Verification commands operator runs RIGHT NOW
 
@@ -134,4 +127,4 @@ Section 4 can land in a follow-up sprint.
 
 ---
 
-Sist oppdatert: 2026-05-13 by Claude (Opus 4.7 1M) — post filter-repo + bulk-import session
+Sist oppdatert: 2026-05-13 by Claude (Opus 4.7 1M) — post automation-layer landing (pre-push hook, branch-protection recipe, firm-tab brain check, monthly archive workflow)

@@ -42,33 +42,28 @@ Hvis du _må_ endre en av disse, åpne PR med `OPERATOR-APPROVED: <reason>` i be
 ## Day-1 commands
 
 ```bash
-# Clone repoet (operator gir deg URL etter GitHub-tilgang er satt opp)
-git clone <repo-url>
-cd Brain
-
-# gh CLI clone (auto-handles auth):
-gh repo clone <OWNER>/<REPO> Brain
-cd Brain
-
-# Verifiser at lokal state er sunn
-python scripts/brain_audit.py
-
-# Åpne i Obsidian
-# File -> Open folder as vault -> velg Brain-mappen
+git clone git@github.com:Nithu0/tiger-brain.git Brain && cd Brain && bash scripts/setup-from-scratch.sh --repo git@github.com:Nithu0/tiger-brain.git --mode easy
+# Åpne i Obsidian: File -> Open folder as vault -> velg Brain-mappen
 ```
 
-`brain_audit.py` sjekker frontmatter, broken wikilinks, orphan notes, og noen path-regler. Hvis den faller på din maskin — ping operator før du begynner å redigere.
+Setup-skriptet kloner (hvis ikke allerede klonet), installerer pre-push hook, og kjører `brain_audit.py` for å verifisere lokal state. Hvis auditen faller — ping operator før du begynner å redigere.
+
+## What's automated for you
+
+| Automation | What it does | Where it runs |
+|---|---|---|
+| Firm-tab brain check | Kjører `brain_audit.py` ved oppstart av firm-tabs | Lokalt (Claude Code session start) |
+| Pre-push hook | Kjører `sanity.sh` før push — fanger feil før de når CI | Lokalt (installeres av setup-skriptet) |
+| CI on PRs | `brain-checks` + `path-guard` på alle PR-er | GitHub Actions |
+| Monthly archive | Flytter aldrende notes til `90-archive/` | Scheduled workflow |
 
 ## Hvis du vil ha samme oppsett som operator
 
-Operator bruker en kuratert Obsidian-config (plugins, hotkeys, themes). Hvis du vil ha det samme:
-
 ```bash
-bash scripts/setup-from-scratch.sh           # easy mode
-bash scripts/setup-from-scratch.sh --advanced  # full parity (hooks, MCP, etc.)
+bash scripts/setup-from-scratch.sh --repo git@github.com:Nithu0/tiger-brain.git --mode easy
 ```
 
-Du trenger ikke gjøre dette for å bidra — vanilla Obsidian fungerer fint.
+Note: `--mode advanced` adds optional extras like Claude Code install pointer. Du trenger ikke kjøre advanced for å bidra — easy mode dekker hooks + audit + clone.
 
 ## Branch + PR flow
 
@@ -142,6 +137,7 @@ Kort versjon (full versjon i [[CONTRIBUTING]]):
 - **Ikke auto-disable gates eller hooks.** Hvis noe ser broken ut, rapporter til operator — operator decides handling. (Dette er en hard regel hos Nithu: health-checks REPORT, operator DECIDES.)
 - **Ikke commit `.env` eller secrets.** Se [[CONTRIBUTING]] for hva du gjør hvis det skjer.
 - **Ikke push direkte til `main`.** Alt går gjennom PR.
+- **DON'T disable the pre-push hook unless you really know why** (`git push --no-verify` is the bypass). Hooken fanger feil før de når CI — det er din venn, ikke en hindring.
 
 ## Hvem pinger du?
 
@@ -158,19 +154,6 @@ Operator (Nithu) — Discord eller email. For akutte issues (secrets-lekkasje, �
 - **Promote-candidate** — note som er kandidat til å flyttes fra inbox/scratch til kuratert område.
 
 Velkommen ombord. Spør hvis noe er uklart — bedre å spørre én gang for mye enn å redigere feil mappe.
-
-## Setup from scratch (advanced)
-
-If you want the same setup as the operator (Claude Code + global rules + Obsidian + pre-commit hook):
-
-```bash
-bash scripts/setup-from-scratch.sh --repo <repo-url> --mode advanced
-```
-
-Easy mode (just clone + verify):
-```bash
-bash scripts/setup-from-scratch.sh --repo <repo-url> --mode easy
-```
 
 ---
 

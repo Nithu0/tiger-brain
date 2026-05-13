@@ -1,5 +1,5 @@
 {
-  "commitMessage": "auto-sync: {{hostname}} at {{date}}",
+  "commitMessage": "auto-sync: {{hostname}} at {{date}} [skip ci]",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 2,
   "autoPushInterval": 5,

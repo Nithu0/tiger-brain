@@ -1,3 +1,14 @@
 .obsidian/workspace*
 .obsidian/cache
 .trash/
+
+# obsidian local rest api: contains API key + private RSA — never commit
+.obsidian/plugins/obsidian-local-rest-api/
+
+# python bytecode
+__pycache__/
+*.pyc
+
+# common os/editor noise
+.DS_Store
+Thumbs.db

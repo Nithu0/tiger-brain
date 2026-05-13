@@ -1,6 +1,6 @@
 # CODEOWNERS — Brain vault
 #
-# NOTE: Replace `@OWNER` below with the operator's real GitHub handle
+# NOTE: Replace `@Nithu0` below with the operator's real GitHub handle
 #       (e.g. `@nithu00` — actual handle TBD).
 # NOTE: Replace `@TEAMMATE` placeholder with the teammate's real GitHub
 #       handle once access is granted.
@@ -18,34 +18,34 @@
 # ---------------------------------------------------------------------------
 # Default: everything is owner-reviewed unless overridden below.
 # ---------------------------------------------------------------------------
-*                              @OWNER
+*                              @Nithu0
 
 # ---------------------------------------------------------------------------
 # Operator no-touch zones (teammate must never edit without OPERATOR-APPROVED)
 # ---------------------------------------------------------------------------
-/_decisions/                   @OWNER
-/_maps/                        @OWNER
-/_runbooks/                    @OWNER
-/_promote-candidates/          @OWNER
-/claude-context/               @OWNER
-/.github/                      @OWNER
-/scripts/                      @OWNER
-/90-archive/                   @OWNER
+/_decisions/                   @Nithu0
+/_maps/                        @Nithu0
+/_runbooks/                    @Nithu0
+/_promote-candidates/          @Nithu0
+/claude-context/               @Nithu0
+/.github/                      @Nithu0
+/scripts/                      @Nithu0
+/90-archive/                   @Nithu0
 
 # Root rule / system files
-/README.md                     @OWNER
-/00-DASHBOARD.md               @OWNER
-/01-CURRENT-FOCUS.md           @OWNER
-/BRAIN-RULES.md                @OWNER
-/SYSTEM-AUDIT.md               @OWNER
+/README.md                     @Nithu0
+/00-DASHBOARD.md               @Nithu0
+/01-CURRENT-FOCUS.md           @Nithu0
+/BRAIN-RULES.md                @Nithu0
+/SYSTEM-AUDIT.md               @Nithu0
 
 # ---------------------------------------------------------------------------
 # Nexus area — teammate can EDIT, but PRs still require owner review.
 # ---------------------------------------------------------------------------
-/01-nexus/                     @OWNER
+/01-nexus/                     @Nithu0
 
 # ---------------------------------------------------------------------------
 # Claude inbox — teammate may write into nexus/ subfolder, but PRs still
 # go through owner review (the inbox itself is shared scratch space).
 # ---------------------------------------------------------------------------
-/00-claude-inbox/nexus/        @OWNER
+/00-claude-inbox/nexus/        @Nithu0

@@ -19,3 +19,9 @@ __pycache__/
 # common os/editor noise
 .DS_Store
 Thumbs.db
+
+# firm-bus control-plane local state (per-machine, do NOT push)
+# See _decisions/2026-05-14-control-plane-proposal.md (risiko 2 + 3)
+00-firm-bus/pane-status/*
+!00-firm-bus/pane-status/.gitkeep
+00-firm-bus/git-snapshot.json

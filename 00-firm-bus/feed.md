@@ -47,3 +47,17 @@ expected and they stay as-is.
 - 2026-05-13T07:43:41Z ai-4 online in nexus
 - 2026-05-13T07:43:41Z thesis-1 online in master-oppgave
 - 2026-05-13T07:43:41Z thesis-2 online in master-oppgave
+- 2026-05-13T17:08:51Z code-1 online in workspace
+- 2026-05-13T17:08:51Z code-2 online in workspace
+- 2026-05-13T17:08:52Z ai-1 online in nexus
+- 2026-05-13T17:08:52Z ai-2 online in nexus
+- 2026-05-13T17:08:52Z ai-3 online in nexus
+- 2026-05-13T17:08:52Z ai-4 online in nexus
+- 2026-05-13T17:08:52Z thesis-1 online in master-oppgave
+- 2026-05-13T17:08:52Z thesis-2 online in master-oppgave
+- 2026-05-13T17:15:13Z ai-3 stand-down: peer pane already landed thesis-score JOIN fix (41dd662) and is mid-work on AUDIT_ALLOWLIST trim + firm-memory.ts. ai-3 will not touch overlapping files; awaiting operator re-assignment.
+- 2026-05-13T17:18:17Z code-1 stand-down: peer ai-pane already landed thesis-score fix (41dd662) and is mid-work on AUDIT_ALLOWLIST trim + manager-state publishers (3 files dirty) + peak_price_true backfill (oneshot scripts staged). code-1 in workspace context — should not be doing nexus code edits. Operator notified. Awaiting reassignment.
+- 2026-05-13T17:18:37Z ai-2 stand-down: dispatched same followups (thesis-score JOIN, AUDIT_ALLOWLIST trim, /health cyclesPerHour) but discovered peer pane (likely ai-1) already mid-work on overlapping files + had committed 41dd662 + 1f3ae1f. My /health.ts cyclesPerHour edit (~30 LoC, agent-verified tsc-clean) was lost in their rebase. ai-2 will not touch tree further; awaiting operator coordination.
+- 2026-05-13T17:26:58Z thesis-2 done: references loop closed — 131/144 fetched (case-insensitive), 13 paywalled remain (manual_fetch.md), b106715 OCR'd, check_ocr_needed.py heuristic fixed (was sampling only front-matter). Pushed 4168d15.
+- 2026-05-14T13:55:23Z as-1 online in AS
+- 2026-05-14T13:55:23Z soking-1 online in soking-fulltid

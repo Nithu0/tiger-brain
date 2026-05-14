@@ -6,10 +6,40 @@ created: 2026-05-13
 
 # OPERATOR-NEXT-STEPS
 
-Tight remaining-only runbook for å fullføre brain-hardening.
+Tight remaining-only runbook for operatør. Toppen viser dagens leveranser; historikken under er bevart.
 
-Placeholders som fortsatt må byttes ut:
-- `<TEAMMATE>` — teammates GitHub-handle (operatørens handle = `Nithu0`, allerede inn i CODEOWNERS)
+---
+
+## 2026-05-14 — 6-prosjekt + firm-launcher v2
+
+### Hva ble gjort i dag
+
+- **Utvidet fra 3 til 6 prosjekter**: `nexus`, `master-oppgave`, `AS`, `soking-fulltid`, `personlig`, `workspace`.
+- **Nye brain-mapper**: `06-AS/`, `07-personlig/` (egne agenter eier sub-filer).
+- **Career utvidet**: aktiv jobb-søking flyttet til egen prosjekt-tråd. MOC `04-career/Active-Job-Search-MOC` + `Job-Scrape-Strategy` + `Interview-Prep-Workflow` (career-agent eier).
+- **firm-launcher v2**: 8 paner med ny distribusjon — `code-1`, `code-2` (workspace), `ai-1`, `ai-2` (nexus), `thesis-1` (master), `as-1` (AS), `soking-1` (søking), `personal-1` (personlig). Erstatter v1's battery-1/scratch-paner.
+- **Runbook for ny layout**: [[_runbooks/firm-8-pane-2026-05-14]].
+- **Dashboard + Current-focus oppdatert** til 6-prosjekt-modellen.
+- **Vurdering 16-pane / Conductor** logget i `_decisions/2026-05-14-16-pane-codex-parallell.md` (egen agent eier).
+
+### 3 neste-skritt for operatør
+
+1. **Test ny `firm` med dry-run + verifiser**:
+   ```bash
+   firm --dry-run                           # inspiser wt.exe argv
+   firm                                     # launch på ekte
+   tail -20 ~/Obsidian/Brain/00-firm-bus/feed.md   # bekreft 8 online-linjer
+   ls ~/Obsidian/Brain/00-firm-bus/inbox/   # bekreft 8 inbox-filer
+   ```
+   Forventet: 8 paner åpner, hver med riktig cwd og rolle-prompt. Hvis en pane lander i feil cwd, sjekk `roster.md` og `firm-wt-split.sh`.
+
+2. **Les gjennom de nye prosjekt-CLAUDE.md-ene** før du dispatcher tunge oppgaver:
+   - `~/code/AS/CLAUDE.md`
+   - `~/code/personlig/CLAUDE.md`
+   - `~/code/soking-fulltid/CLAUDE.md`
+   Hver setter sine egne safety- og scope-regler. Klargjør at de ikke kolliderer med globale regler i `~/.claude/CLAUDE.md`.
+
+3. **Vurder Conductor + 16-pane**: les `_decisions/2026-05-14-16-pane-codex-parallell.md` og bestem om vi går videre. Krever "OK kjør" — ikke aktiv enda.
 
 ---
 
@@ -86,6 +116,7 @@ bash scripts/smoke-test-pr.sh                # creates+closes test PRs
 - [ ] CODEOWNERS `@TEAMMATE` byttet til ekte handle (STEP 5)
 - [ ] Path-guard smoke test feilet som forventet (STEP 6)
 - [ ] `TEAMMATE-ONBOARDING.md` sendt til teammate
+- [ ] `firm` dry-run + launch verifisert med ny 6-prosjekt-layout (2026-05-14)
 
 ---
 
@@ -114,4 +145,4 @@ bash scripts/smoke-test-pr.sh                # creates+closes test PRs
 
 ---
 
-Sist oppdatert: 2026-05-13
+Sist oppdatert: 2026-05-14

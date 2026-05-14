@@ -8,22 +8,26 @@ created: 2026-05-11
 
 Single-screen overview. If you opened the vault and don't know where to go — start here.
 
-## Active projects
+## Prosjekter (6 aktive)
 
-| Project | What | Status pointer |
+| Prosjekt | Hva | MOC / pointer |
 |---|---|---|
-| **Nexus** | XAUUSD prop-firm trading system, currently demo-mode | [[01-nexus/runtime/Phase-Status-Pointer]] -> `ai-assistent/docs/ops/phase-status.md` |
-| **Thesis** | NTNU master's, ML for solid-state battery electrolytes | [[Thesis-MOC]] -> `Master-oppgave/` + `battery-electrolyte-predictor/` |
-| Business | Lighter ops/admin notes | [[Business-MOC]] |
-| Career | Career-track notes | [[Career-MOC]] |
-| Learning | Notes from courses, papers, deep dives | [[Learning-MOC]] |
+| **Nexus** | XAUUSD prop-firm trading system, demo-mode | [[01-nexus/01-nexus-MOC\|Nexus-MOC]] · runtime: [[01-nexus/runtime/Phase-Status-Pointer]] → `ai-assistent/docs/ops/phase-status.md` |
+| **Master-oppgave** | NTNU master, ML for solid-state battery electrolytes | [[02-thesis/Thesis-MOC\|Thesis-MOC]] → `Master-oppgave/` + `battery-electrolyte-predictor/` |
+| **Søking fulltid** | Aktiv jobb-søking (post-master) | [[04-career/Active-Job-Search-MOC\|Active-Job-Search-MOC]] *(eies av career-agent)* |
+| **Business / strategi** | Lett ops/strategi-notater | [[03-business/Business-MOC\|Business-MOC]] |
+| **AS** | Regnskap, inntekt, drift av AS | [[06-AS/AS-MOC\|AS-MOC]] *(eies av AS-agent)* |
+| **Personlig** | Effektivitet, mat, trening, vaner | [[07-personlig/Personlig-MOC\|Personlig-MOC]] *(eies av personlig-agent)* |
+
+Hver pane i `firm`-launcheren peker på én av disse — se [[_runbooks/firm-8-pane-2026-05-14]].
 
 ## Quick links
 
 - [[01-CURRENT-FOCUS]] — what operator is actually working on this week
 - [[BRAIN-RULES]] — operating rules for vault (humans + Claude)
 - [[claude-context/START-HERE|Claude START-HERE]] — entry point for Claude Code sessions
-- [[Nexus-MOC]] · [[Thesis-MOC]] · [[Decisions-MOC]] · [[Workflows-MOC]]
+- [[_runbooks/firm-8-pane-2026-05-14|firm 8-pane runbook]] — current multi-Claude operating model
+- [[_runbooks/firm-launcher|firm-launcher v1 runbook]] — historical reference
 
 ## Health & ops
 
@@ -57,4 +61,4 @@ Single-screen overview. If you opened the vault and don't know where to go — s
 
 ---
 
-Sist oppdatert: 2026-05-13
+Sist oppdatert: 2026-05-14

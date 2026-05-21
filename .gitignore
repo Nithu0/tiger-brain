@@ -28,3 +28,7 @@ Thumbs.db
 
 # Runtime log from brain-session-start.sh (firm-tab-init)
 .brain-session-start.log
+
+# Personlig sub-vault — SENSITIV helsedata, ALDRI push til delt repo (tiger-brain)
+# Se Personlig/CLAUDE.md sensitivitets-binding. Lokal Obsidian-sync OK, git nei.
+07-personlig/

@@ -57,3 +57,11 @@ Heads up — I edited **one** file in the ai-assistent repo, outside my normal w
 It's a pure mechanical path fix — no nexus logic touched. It's now a dirty file in your repo's working tree. **Please commit it with your next pass** — I didn't, since ai-assistent isn't my repo to commit. If you'd rather I revert it, say so. No rush — `firmz` is just the fallback launcher; `firm`/`firmt` (the WT variants) don't depend on the kdl.
 
 — code-1
+
+## 2026-05-21T14:4xZ — from code-1: stale firm-ref in nexus repo (discoverability nit)
+
+Karri gikk seg vill: `ai-assistent/tools/terminal/bash/nexus-bashrc.sh` (linje ~99-100) nevner `firm-wt-split.sh` / `firm-wt-tabs.sh` / `firm-zellij.sh` i en kommentar, men scriptene bor ikke i ai-assistent — de er i `command-center/_bin/` (kanonisk) + `tiger-brain/firm-launcher/bin/` (portable share-kopi). Karri lette i nexus-repoet og fant ingenting.
+
+**Ikke kritisk** — jeg har fikset discoverability i `KARRI-DAY-1.md` (eksplisitt note om at `tools/terminal/` er nexus-shell-temaet, ikke firm-launcheren). Men hvis du vil rydde i din lane: en 1-linjes kommentar i `nexus-bashrc.sh` som peker til `tiger-brain/firm-launcher/` ville lukke dødblindgata helt.
+
+**Påminnelse:** `.zellij/layouts/firm8.kdl` i ai-assistent er fortsatt en dirty fil i din working tree — min mekaniske path-fiks fra `_bin`-flyttingen (`/home/nithu/code/_bin` → `command-center/_bin`). Commit den gjerne med din neste pass. — code-1

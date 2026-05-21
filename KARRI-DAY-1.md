@@ -35,6 +35,8 @@ firm   # opens 8 Claude-paner i WT split-view
 
 Du trenger **ikke** command-center-repoet for å kjøre firm-launcheren. Launcheren er selvstendig.
 
+> **Lette du i `ai-assistent/tools/terminal/`?** Den mappa er nexus-shell-temaet (oh-my-posh-prompt, PowerShell-profil) — IKKE firm-launcheren. `nexus-bashrc.sh` der nevner `firm-wt-split.sh` i en kommentar, men scriptene bor ikke i ai-assistent. De **firm-launcher-scriptene du trenger** (`firm-wt-split.sh`, `firm-wt-tabs.sh`, `firm-zellij.sh` + 9 til) ligger her: `firm-launcher/bin/` i denne vaulten. Kanonisk hjem er `command-center/_bin/`; `firm-launcher/` er den portable kopien `install.sh` shipper. `firm`/`firmt`/`firmz`-aliasene defineres av `install.sh` (skrives til `~/.bashrc`) — ikke av den pushede `nexus-bashrc.sh`.
+
 ## Hva firm-en er
 
 "Firm-en" er 8 parallelle Claude Code-paner, én per rolle, spredt over operatorens prosjekter. Hver pane får en `FIRM_ROLE` og booter Claude med rolle-context. De koordinerer gjennom firm-bus-en i denne vaulten — slik jobber flere agenter i parallell uten å kollidere.
@@ -79,7 +81,7 @@ Alt ligger i `~/Obsidian/Brain/00-firm-bus/`. Brain-en synces mellom din og oper
 Operator kjører nå **command-center**, en workspace-wide control plane: en Next.js + Fastify + SQLite-dashboard som observerer OG driver firm-panene. Den lever i et **privat** repo, `github.com/Nithu0/command-center`.
 
 - Slice 11 (Terminal Orchestrator) lar command-center dispatche kommandoer til paner gjennom en approval-gate. Hver pane kjører en `firm-inbox-watch.sh` background-watcher som viser en banner når arbeid blir dispatchet til inbox-en dens.
-- **Du har ikke tilgang til command-center-repoet ennå.** Hvis du vil kjøre det selv, må operator gi deg GitHub-tilgang. Firm-launcheren krever det ikke — du kan kjøre hele firm-en uten command-center.
+- **Du har tilgang til command-center-repoet** — du er logget inn som `Nithu0`, samme konto som eier repoet, så `git clone git@github.com:Nithu0/command-center.git` virker. Firm-launcheren krever det uansett ikke — du kan kjøre hele firm-en uten command-center.
 
 ## Automated for you (ikke tenk på det)
 

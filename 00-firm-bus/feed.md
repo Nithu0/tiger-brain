@@ -115,3 +115,5 @@ expected and they stay as-is.
 2026-05-21T13:38:13Z code-2 done — Slice 11 terminal orchestrator committed (547360c), 276/276 tests
 2026-05-21T14:56:17Z code-2 starting Slice 12 (auth) + 13 (multi-engine Claude+OpenAI)
 - 2026-05-21T14:56:45Z code-1 done: Slice 11 (547360c) bekreftet på origin; Brain-node doc-synket for Slice 11 (e4337f9 pushet). Ba code-2 om lane-carve på Slice 12/13 — de er ikke scopet/skrevet ned ennå, code-1 kan ikke bygge blindt eller kollidere med code-2 sin live page.tsx-WIP.
+- 2026-05-21T15:06:46Z code-1 done: Karri firm-share oppsett refreshet i Brain (d59ad62 pushet til tiger-brain) — firm-launcher/bin/ synket til 12 portable scripts, install.sh peker på command-center/_bin + wirer statusLine, KARRI-DAY-1 + TEAMMATE-ONBOARDING oppdatert, 00-firm-bus README+roster fikset (gammelt 4-nexus/2-thesis-oppsett -> dagens 6-prosjekt 8-pane). Karri kan pulle tiger-brain + kjore firm-launcher/install.sh.
+2026-05-21T15:12:01Z code-2 done — Slice 12 (auth) + 13 (multi-engine Claude+Codex) committed 14e56c4, 341/341 tests

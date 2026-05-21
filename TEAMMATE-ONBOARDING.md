@@ -3,11 +3,25 @@ title: TEAMMATE-ONBOARDING
 type: meta
 tags: [meta, onboarding, teammate]
 created: 2026-05-11
+updated: 2026-05-21
 ---
 
 # TEAMMATE-ONBOARDING
 
-Welcome! Dette er Nithus delte brain — en Obsidian-vault som dobler som git-repo. Du er invitert inn for å samarbeide, primært på Nexus (XAUUSD-trading firm). Denne fila er din day-1 guide.
+Welcome! Dette er Nithus delte brain — en Obsidian-vault som dobler som git-repo. Du er invitert inn for å samarbeide, primært på Nexus (XAUUSD-trading firm). Denne fila er din day-1 guide. Karri: for 3-minutters-versjonen, se [[KARRI-DAY-1]].
+
+## Prosjektene
+
+Operator kjører flere langsiktige prosjekter samtidig. Brain-en holder kontekst og beslutninger på tvers; selve koden lever i `~/code/`-repoene.
+
+| Prosjekt | Hva | Vault-område |
+|---|---|---|
+| Nexus | XAUUSD trading firm (`ai-assistent/`) — der du primært bor | `01-nexus/` |
+| Master-oppgave | Master-tese (battery electrolyte ML) | `02-thesis/` |
+| AS | Regnskap + inntekt-strategier | `03-business/` |
+| Søking fulltid | Jobbsøking ML/AI/data science | `04-career/` |
+| Personlig | Personlig optimalisering | (egne notes) |
+| command-center | Workspace-wide control plane (privat repo) | se firm-seksjonen under |
 
 ## Lesetilgang
 
@@ -44,14 +58,56 @@ Hvis du _må_ endre en av disse, åpne PR med `OPERATOR-APPROVED: <reason>` i be
 ```bash
 git clone git@github.com:Nithu0/tiger-brain.git ~/Obsidian/Brain
 cd ~/Obsidian/Brain
-bash firm-launcher/install.sh    # installs firm + hooks + clones ai-assistent
+bash firm-launcher/install.sh    # installs firm scripts + aliases + hooks + statusline
 source ~/.bashrc
-firm                              # launches 8-tab Claude session
+firm                              # launches the 8-pane Claude firm
 ```
+
+`firm-launcher/install.sh` er den portable installeren — den ligger version-controlled her i brain-en. Den installerer firm-launcher-scriptene, `~/.bashrc`-aliasene, statusline-en, og pre-push hook. Den spør om navn + email (git author) og roster.
 
 If you only want the brain (no firm launcher), use `bash scripts/setup-from-scratch.sh --mode easy` instead.
 
 Setup-skriptet kloner (hvis ikke allerede klonet), installerer pre-push hook, og kjører `brain_audit.py` for å verifisere lokal state. Hvis auditen faller — ping operator før du begynner å redigere.
+
+## Firm-en — 8 parallelle Claude-paner
+
+Operator jobber via "firm-en": 8 parallelle Claude Code-paner, én per rolle, spredt over prosjektene. Hver pane får en `FIRM_ROLE` og booter Claude med rolle-context. Slik kjører flere agenter i parallell uten å kollidere.
+
+**8-pane-modellen:**
+
+| Pane | Prosjekt | Working dir |
+|---|---|---|
+| `code-1`, `code-2` | workspace | `~/code` (cross-project meta-work) |
+| `ai-1`, `ai-2` | nexus | `~/code/ai-assistent` (XAUUSD trading firm) |
+| `thesis-1` | master-oppgave | `~/code/Master-oppgave` |
+| `as-1` | AS | `~/code/AS` |
+| `soking-1` | søking fulltid | `~/code/Søking fulltid` |
+| `personal-1` | personlig | `~/code/Personlig` |
+
+**Launch-varianter:** `firm` (8 paner i én WT-tab, split-view — default), `firmt` (8 separate tabs), `firmz` (zellij-fallback). `nx` er alias for `firm`.
+
+### Firm-bus — koordineringsprotokoll
+
+Panene koordinerer gjennom `~/Obsidian/Brain/00-firm-bus/`. Siden brain-en synces mellom operator og deg via Obsidian Git (2-5 min), dobler firm-bus som cross-machine presence-lag.
+
+- `feed.md` — **append-only aktivitetslogg**. Alle skriver, alle leser. Én linje per event. **Read-only observasjon** — aldri rediger gamle linjer.
+- `inbox/<role>.md` — **per-pane append-only dispatch-kanal**. Slik handes arbeid av mellom paner.
+- `PRESENCE.md` — "hvem er online"-snapshot.
+
+Disiplinen:
+
+1. **Les din egen `inbox/<role>.md` FØRST** når en pane starter — peers koordinerer scope der.
+2. **Hold deg i din lane** — ikke rør filer en annen pane jobber med; sjekk `git status` + `git log` før edits.
+3. **Hand off via inbox** — skriv en markdown-blokk i peer-ens `inbox/<role>.md` for konkrete handoffs.
+4. **One-liner til `feed.md`** når en chunk er ferdig. Lange rapporter → `00-claude-inbox/<project>/`.
+
+Full protokoll: `00-firm-bus/README.md`.
+
+### command-center — control plane
+
+Operator kjører **command-center**, en workspace-wide control plane: Next.js + Fastify + SQLite-dashboard som observerer OG driver firm-panene. Slice 11 (Terminal Orchestrator) dispatcher kommandoer til paner gjennom en approval-gate; hver pane kjører en `firm-inbox-watch.sh` background-watcher som viser en banner når arbeid dispatches til inbox-en dens.
+
+command-center lever i et **privat** repo (`github.com/Nithu0/command-center`). **Du har ikke tilgang ennå** — vil du kjøre det selv, må operator gi deg GitHub-tilgang. Firm-launcheren krever det IKKE; du kan kjøre hele firm-en uten command-center.
 
 ## What's automated for you
 
@@ -64,6 +120,14 @@ Setup-skriptet kloner (hvis ikke allerede klonet), installerer pre-push hook, og
 | Monthly archive | Flytter aldrende notes til `90-archive/` | Scheduled workflow |
 
 ## Hvis du vil ha samme oppsett som operator
+
+Vil du ha **hele firm-oppsettet** (8-pane-firm + hooks + statusline), kjør firm-launcher-installeren — se "Day-1 commands" og "Firm-en" over:
+
+```bash
+bash firm-launcher/install.sh
+```
+
+Vil du bare ha brain-en + hooks (uten firm-launcher):
 
 ```bash
 bash scripts/setup-from-scratch.sh --repo git@github.com:Nithu0/tiger-brain.git --mode easy
@@ -163,4 +227,4 @@ Velkommen ombord. Spør hvis noe er uklart — bedre å spørre én gang for mye
 
 ---
 
-Sist oppdatert: 2026-05-13 (firm-launcher install path)
+Sist oppdatert: 2026-05-21 — la til prosjekt-oversikt, firm-en (8-pane-modell + firm-bus-protokoll), command-center control plane; firm-launcher er nå portable installer (`firm-launcher/install.sh`), scriptene version-controlled i `command-center/_bin/`. Previous: 2026-05-13 (firm-launcher install path).

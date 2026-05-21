@@ -47,37 +47,28 @@ export FIRM_PROJECT="$project"
 FIRM_TAB_OPENED_AT="$(date -u +%FT%TZ)"
 export FIRM_TAB_OPENED_AT
 
+# Farge-koding pr. prosjekt (ANSI escape-sekvens). Brukes av firm-statusline.sh
+# og kan også brukes i shell-prompts. Default = ingen farge (tom string).
+case "$project" in
+  workspace)      FIRM_COLOR=$'\033[90m' ;;  # grå
+  nexus)          FIRM_COLOR=$'\033[33m' ;;  # gul (XAUUSD gull)
+  master-oppgave) FIRM_COLOR=$'\033[34m' ;;  # blå
+  AS)             FIRM_COLOR=$'\033[32m' ;;  # grønn
+  soking-fulltid) FIRM_COLOR=$'\033[36m' ;;  # cyan
+  personlig)      FIRM_COLOR=$'\033[35m' ;;  # magenta
+  *)              FIRM_COLOR="" ;;
+esac
+export FIRM_COLOR
+
 bus_dir="$HOME/Obsidian/Brain/00-firm-bus"
 inbox_dir="$bus_dir/inbox"
 feed_file="$bus_dir/feed.md"
-presence_file="$bus_dir/PRESENCE.md"
 
 mkdir -p "$inbox_dir"
 touch "$inbox_dir/${role}.md"
 
-# Identify the human operator. FIRM_USER beats git config beats $USER.
-git_user="${FIRM_USER:-}"
-if [[ -z "$git_user" ]]; then
-  git_user=$(cd "$bus_dir/.." 2>/dev/null && git config user.name 2>/dev/null || true)
-fi
-if [[ -z "$git_user" ]]; then
-  git_user="${USER:-unknown}"
-fi
-# Single-token form so feed.md / PRESENCE.md grep filters work.
-git_user_tag=$(printf '%s' "$git_user" | tr -s '[:space:]' '_')
-export FIRM_USER_TAG="$git_user_tag"
-
 # Append online marker to the shared feed (one line, no heredoc).
-# Format: `- <ISO-time> [<git-user>] <role> online in <project>`
-printf -- '- %s [%s] %s online in %s\n' "$FIRM_TAB_OPENED_AT" "$git_user_tag" "$role" "$project" >> "$feed_file"
-
-# Append a presence row. PRESENCE.md is append-only too; stale entries get
-# annotated by a sweeper (operator decides cadence). Reader logic should
-# always trust the LAST row for each (user,role) pair.
-if [[ -f "$presence_file" ]]; then
-  printf -- '| %s | %s | %s | %s | online |\n' \
-    "$FIRM_TAB_OPENED_AT" "$git_user_tag" "$role" "$project" >> "$presence_file"
-fi
+printf -- '- %s %s online in %s\n' "$FIRM_TAB_OPENED_AT" "$role" "$project" >> "$feed_file"
 
 # Load project-specific .env.local so MCP servers (e.g. nexus-pg requiring
 # NEXUS_READONLY_PG_URL) resolve their env vars. Without this the nexus-pg
@@ -98,11 +89,37 @@ esac
 if [[ "$DRY_RUN" == "1" ]]; then
   echo "[firm-tab-init] DRY-RUN — would now exec: claude --dangerously-skip-permissions"
   echo "[firm-tab-init] FIRM_ROLE=$FIRM_ROLE FIRM_PROJECT=$FIRM_PROJECT"
+  # Skriv ut FIRM_COLOR som lesbar streng (escape \033 → \\033) så det vises i logger
+  echo "[firm-tab-init] FIRM_COLOR=$(printf '%s' "$FIRM_COLOR" | sed 's/\x1b/\\033/g')"
   echo "[firm-tab-init] env_file_loaded=$([[ "$project" == nexus && -f "$HOME/code/ai-assistent/.env.local" ]] && echo yes || echo no)"
   exit 0
 fi
 
-# Background brain hygiene check (sanity + audit + pull) — see ~/Obsidian/Brain/scripts/brain-session-start.sh
-bash "${HOME}/Obsidian/Brain/scripts/brain-session-start.sh" --quiet 2>&1 &
+# Sett Windows Terminal pane-tittel via OSC 2 escape-sekvens.
+# Format: "<role> · <project>" — kort, identifiserer panen i den 8-pane gridden.
+printf '\033]2;%s · %s\007' "$role" "$project"
+
+# Slice 11 — pane auto-pickup. Show any dispatches already sitting in this
+# pane's inbox, then launch the background watcher (standalone script — no
+# heredoc, keeping the discipline this file's header warns about) that polls
+# the inbox and prints a loud banner whenever command-center dispatches work.
+inbox_file="$inbox_dir/${role}.md"
+if [[ -s "$inbox_file" ]]; then
+  echo "── pending inbox ($role) ───────────────────────────────────────"
+  cat "$inbox_file"
+  echo "────────────────────────────────────────────────────────────────"
+fi
+watch_script="$(dirname "${BASH_SOURCE[0]}")/firm-inbox-watch.sh"
+if [[ -x "$watch_script" ]]; then
+  "$watch_script" "$role" &
+fi
+
+# Background brain hygiene check (sanity + audit + pull) — se ~/Obsidian/Brain/scripts/brain-session-start.sh
+# Output goes to a log file, not the terminal — otherwise it lands on top of
+# Claude's TUI (race: brain check ≈2s, claude render is faster in some panes,
+# slower in others, leading to inconsistent "brain: ✗ audit FAIL" splatter
+# across some panes but not others).
+brain_log="${HOME}/Obsidian/Brain/.brain-session-start.log"
+bash "${HOME}/Obsidian/Brain/scripts/brain-session-start.sh" --quiet >>"$brain_log" 2>&1 &
 
 exec claude --dangerously-skip-permissions

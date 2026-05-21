@@ -3,7 +3,14 @@
 #
 # Installs the operator's `firm` 8-Claude launcher setup on a fresh WSL/Linux
 # machine. Handles pre-flight checks, repo cloning, script install, .bashrc
-# wiring, brain pre-push hook, and a final sanity check.
+# wiring, ~/.claude/settings.json statusLine, brain pre-push hook, and a final
+# sanity check.
+#
+# NOTE: the firm `_bin` scripts canonically live in the command-center repo
+# (github.com/Nithu0/command-center, private) at command-center/_bin/. The copy
+# bundled here under firm-launcher/bin/ is the portable installer payload for
+# collaborators who may not have command-center cloned — this installer copies
+# those into $FIRM_BIN_DIR (default: ~/code/command-center/_bin).
 #
 # Usage:
 #   bash install.sh [--yes] [--with-thesis|--no-thesis]
@@ -18,7 +25,9 @@ set -uo pipefail
 BRAIN_VAULT="${BRAIN_VAULT:-$HOME/Obsidian/Brain}"
 NEXUS_REPO="${NEXUS_REPO:-$HOME/code/ai-assistent}"
 THESIS_REPO="${THESIS_REPO:-$HOME/code/Master-oppgave}"
-FIRM_BIN_DIR="${FIRM_BIN_DIR:-$HOME/code/_bin}"
+# _bin canonically lives inside the command-center repo (moved from ~/code/_bin).
+FIRM_BIN_DIR="${FIRM_BIN_DIR:-$HOME/code/command-center/_bin}"
+CLAUDE_SETTINGS="${CLAUDE_SETTINGS:-$HOME/.claude/settings.json}"
 ASSUME_YES=0
 WITH_THESIS=0
 NO_SHELLRC=0
@@ -70,7 +79,8 @@ TS="$(date +%Y%m%d-%H%M%S)"
 hdr "firm-launcher installer"
 info "BRAIN_VAULT  = $BRAIN_VAULT"
 info "NEXUS_REPO   = $NEXUS_REPO"
-info "FIRM_BIN_DIR = $FIRM_BIN_DIR"
+info "FIRM_BIN_DIR = $FIRM_BIN_DIR  (canonical: command-center repo)"
+info "SETTINGS     = $CLAUDE_SETTINGS"
 info "with-thesis  = $WITH_THESIS   no-shellrc = $NO_SHELLRC   yes = $ASSUME_YES"
 
 # ---------- 1. pre-flight ----------
@@ -263,19 +273,21 @@ if [[ "$NO_SHELLRC" -ne 1 ]]; then
   else
     cp -p "$HOME/.bashrc" "$HOME/.bashrc.bak-$TS" 2>/dev/null || true
     {
-      cat <<'EOF'
+      cat <<EOF
 
 # === firm launcher (installed by tiger-brain/firm-launcher/install.sh) ===
 # 8-Claude launcher across projects (workspace, nexus, master-oppgave).
 # Bus: ~/Obsidian/Brain/00-firm-bus/  |  Runbook: ~/Obsidian/Brain/_runbooks/firm-launcher.md
-export NEXUS_REPO="${NEXUS_REPO:-$HOME/code/ai-assistent}"
-if [[ -f "$NEXUS_REPO/tools/terminal/bash/nexus-bashrc.sh" ]]; then
-  source "$NEXUS_REPO/tools/terminal/bash/nexus-bashrc.sh"
+# firm _bin lives in the command-center repo (~/code/command-center/_bin).
+export NEXUS_REPO="\${NEXUS_REPO:-\$HOME/code/ai-assistent}"
+export FIRM_BIN_DIR="\${FIRM_BIN_DIR:-$FIRM_BIN_DIR}"
+if [[ -f "\$NEXUS_REPO/tools/terminal/bash/nexus-bashrc.sh" ]]; then
+  source "\$NEXUS_REPO/tools/terminal/bash/nexus-bashrc.sh"
 fi
-alias firm='${FIRM_BIN_DIR:-$HOME/code/_bin}/firm-wt-split.sh'
-alias firmt='${FIRM_BIN_DIR:-$HOME/code/_bin}/firm-wt-tabs.sh'
-alias firmz='${FIRM_BIN_DIR:-$HOME/code/_bin}/firm-zellij.sh'
-alias nx='${FIRM_BIN_DIR:-$HOME/code/_bin}/firm-wt-split.sh'
+alias firm="\$FIRM_BIN_DIR/firm-wt-split.sh"
+alias firmt="\$FIRM_BIN_DIR/firm-wt-tabs.sh"
+alias firmz="\$FIRM_BIN_DIR/firm-zellij.sh"
+alias nx="\$FIRM_BIN_DIR/firm-wt-split.sh"
 EOF
       if [[ "$FIRM_ROSTER_DEFAULT" != "default" ]]; then
         echo "export FIRM_ROSTER=\"$FIRM_ROSTER_DEFAULT\""
@@ -283,6 +295,103 @@ EOF
       echo "# === end firm launcher ==="
     } >> "$HOME/.bashrc"
     ok "appended firm block to ~/.bashrc (backup: ~/.bashrc.bak-$TS)"
+  fi
+fi
+
+# ---------- 5b. ~/.claude/settings.json statusLine ----------
+hdr "5b. ~/.claude/settings.json statusLine"
+
+# Wire statusLine.command -> $FIRM_BIN_DIR/firm-statusline.sh so every firm
+# pane shows the role banner. Edited JSON-safely (python3 or jq), never sed.
+STATUSLINE_CMD="$FIRM_BIN_DIR/firm-statusline.sh"
+
+if [[ ! -f "$FIRM_BIN_DIR/firm-statusline.sh" ]]; then
+  warn "firm-statusline.sh not found in $FIRM_BIN_DIR — statusLine will point at a missing script"
+fi
+
+mkdir -p "$(dirname "$CLAUDE_SETTINGS")"
+
+if [[ -f "$CLAUDE_SETTINGS" ]]; then
+  cp -p "$CLAUDE_SETTINGS" "$CLAUDE_SETTINGS.bak-$TS"
+  info "backed up settings.json -> $CLAUDE_SETTINGS.bak-$TS"
+fi
+
+settings_done=0
+
+if command -v python3 >/dev/null 2>&1; then
+  if python3 - "$CLAUDE_SETTINGS" "$STATUSLINE_CMD" <<'PYEOF'
+import json, sys, os
+path, cmd = sys.argv[1], sys.argv[2]
+data = {}
+if os.path.isfile(path):
+    try:
+        with open(path) as f:
+            data = json.load(f)
+    except (json.JSONDecodeError, ValueError) as e:
+        sys.stderr.write("settings.json is not valid JSON (%s) — refusing to edit\n" % e)
+        sys.exit(3)
+    if not isinstance(data, dict):
+        sys.stderr.write("settings.json top-level is not an object — refusing to edit\n")
+        sys.exit(3)
+sl = data.get("statusLine")
+if not isinstance(sl, dict):
+    sl = {}
+sl["type"] = "command"
+sl["command"] = cmd
+data["statusLine"] = sl
+with open(path, "w") as f:
+    json.dump(data, f, indent=2)
+    f.write("\n")
+print("statusLine.command = %s" % cmd)
+PYEOF
+  then
+    ok "settings.json statusLine wired (python3)"
+    settings_done=1
+  else
+    rc=$?
+    if [[ "$rc" -eq 3 ]]; then
+      err "settings.json exists but is invalid JSON — fix it manually, then re-run"
+    else
+      warn "python3 edit of settings.json failed (rc=$rc)"
+    fi
+  fi
+elif command -v jq >/dev/null 2>&1; then
+  TMP_SETTINGS="$CLAUDE_SETTINGS.tmp-$TS"
+  if [[ -f "$CLAUDE_SETTINGS" ]]; then
+    if jq --arg cmd "$STATUSLINE_CMD" \
+         '.statusLine = ((.statusLine // {}) + {type: "command", command: $cmd})' \
+         "$CLAUDE_SETTINGS" > "$TMP_SETTINGS" 2>/dev/null; then
+      mv "$TMP_SETTINGS" "$CLAUDE_SETTINGS"
+      ok "settings.json statusLine wired (jq)"
+      settings_done=1
+    else
+      rm -f "$TMP_SETTINGS"
+      err "jq could not parse settings.json — fix it manually, then re-run"
+    fi
+  else
+    if jq -n --arg cmd "$STATUSLINE_CMD" \
+         '{statusLine: {type: "command", command: $cmd}}' > "$CLAUDE_SETTINGS"; then
+      ok "created settings.json with statusLine (jq)"
+      settings_done=1
+    fi
+  fi
+fi
+
+if [[ "$settings_done" -ne 1 ]]; then
+  if [[ ! -f "$CLAUDE_SETTINGS" ]]; then
+    # No JSON tool but no existing file either — safe to write a minimal one.
+    cat > "$CLAUDE_SETTINGS" <<EOF
+{
+  "statusLine": {
+    "type": "command",
+    "command": "$STATUSLINE_CMD"
+  }
+}
+EOF
+    ok "created minimal settings.json with statusLine (no python3/jq found)"
+  else
+    warn "neither python3 nor jq available — NOT editing existing settings.json"
+    warn "manually set statusLine.command to: $STATUSLINE_CMD"
   fi
 fi
 
@@ -330,6 +439,12 @@ cat <<EOF
        $BRAIN_VAULT/_runbooks/firm-launcher.md
 
   Bus / coordination:  $BRAIN_VAULT/00-firm-bus/
+  firm scripts:        $FIRM_BIN_DIR  (canonical copy: command-center repo)
+  statusLine:          $CLAUDE_SETTINGS -> $STATUSLINE_CMD
+
+  Each firm pane runs firm-inbox-watch.sh (Slice 11) — it auto-picks-up
+  dispatches queued from command-center, so queued work lands without
+  manual polling.
 
   Re-run this installer any time — it is idempotent.
 

@@ -6,9 +6,12 @@ When `firm` launches 8 Windows Terminal tabs, each tab runs Claude in a project 
 
 | Tab | Project | Working dir |
 |---|---|---|
-| code-1, code-2 | workspace | `/home/nithu/code` (cross-project meta-work) |
-| ai-1, ai-2, ai-3, ai-4 | nexus | `/home/nithu/code/ai-assistent` (XAUUSD trading firm) |
-| thesis-1, thesis-2 | master-oppgave | `/home/nithu/code/Master-oppgave` (battery ML) |
+| code-1, code-2 | workspace | `/home/nithu/code` (cross-project meta-work + command-center) |
+| ai-1, ai-2 | nexus | `/home/nithu/code/ai-assistent` (XAUUSD trading firm) |
+| thesis-1 | master-oppgave | `/home/nithu/code/Master-oppgave` (battery ML thesis) |
+| as-1 | AS | `/home/nithu/code/AS` (regnskap + inntekt) |
+| soking-1 | soking-fulltid | `/home/nithu/code/Søking fulltid` (jobbsøking) |
+| personal-1 | personlig | `/home/nithu/code/Personlig` (personlig optimalisering) |
 
 Each tab exports `FIRM_ROLE` (e.g. `ai-2`), `FIRM_PROJECT` (e.g. `nexus`), and `FIRM_USER_TAG` (sanitized git user name) so Claude inside the tab can identify both itself AND which human operator's machine it's running on.
 
@@ -57,3 +60,9 @@ Each session is allowed to extend this README via direct edit. Don't delete sect
 - Added `[<git-user>]` tag to feed.md entries so operator and Karri can tell each other apart.
 - Added `PRESENCE.md` as a live "who's here" snapshot.
 - `firm-session-context.sh` now filters out own entries when showing recent feed activity, and surfaces inbox message count.
+
+## Update 2026-05-21
+
+- **Layout v2** — 8 panes now span 6 projects (was 2 workspace + 4 nexus + 2 thesis). Current: `code-1`/`code-2` workspace, `ai-1`/`ai-2` nexus, `thesis-1` master-oppgave, `as-1` AS, `soking-1` soking-fulltid, `personal-1` personlig. The Layout table above + `roster.md` reflect this.
+- **Slice 11 dispatch channel** — `inbox/<role>.md` is now also command-center's sanctioned dispatch channel: it appends handoff/dispatch blocks (never mutates existing entries). Each firm pane runs `firm-inbox-watch.sh`, which surfaces a banner when command-center dispatches work and appends one one-line pickup receipt to `feed.md` — the sole sanctioned automated `feed.md` write.
+- firm-launcher scripts now live version-controlled in `command-center/_bin/` (was loose `~/code/_bin/`).

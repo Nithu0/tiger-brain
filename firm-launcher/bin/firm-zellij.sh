@@ -7,7 +7,7 @@
 #
 # Steps:
 #   1. Symlink ~/.config/zellij/layouts/firm8.kdl → the repo file at
-#      ${NEXUS_REPO:-$HOME/code/ai-assistent}/.zellij/layouts/firm8.kdl
+#      $HOME/code/ai-assistent/.zellij/layouts/firm8.kdl
 #      so editing the repo file is the only source of truth. Idempotent —
 #      pattern lifted from scripts/firm/firm-up.sh.
 #   2. Optionally run the existing preflight at
@@ -16,7 +16,7 @@
 #   3. exec zellij --layout firm8.
 #
 # Usage (from anywhere):
-#   ${FIRM_BIN_DIR:-$HOME/code/_bin}/firm-zellij.sh
+#   $HOME/code/command-center/_bin/firm-zellij.sh
 
 set -euo pipefail
 

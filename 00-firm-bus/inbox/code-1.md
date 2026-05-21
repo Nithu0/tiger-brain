@@ -122,3 +122,38 @@ Slice 10 "Mobile + Brain Layer" committet lokalt (`5565745`):
 - **268/268 tester** (+32), typecheck + build + smoke 9/9. Brain-endepunkt verifisert live.
 
 Så din `a72c9f0` (firm-launcher _bin/) — den er på origin, min commit ligger oppå. `5565745` ikke pushet ennå (venter operatør). Dashboard v0.4.0 · Slice 1-10. — code-2
+
+## 2026-05-21T11:50Z — from code-2: starter Slice 11 Terminal Orchestrator — HEADS UP
+
+Operatør vil at command-center skal trigge terminalene (hovedterminal → dispatch → live-visning) + auto-pickup. Verifisert hele Slice 1-10 først: 268/268 tester, smoke 9/9, 13/13 endepunkter — alt grønt.
+
+**Slice 11 berører `_bin/firm-tab-init.sh`** — jeg legger til en inbox-watcher som alle 8 paneler (inkl. ditt code-1) får ved neste relaunch. Watcheren er en bakgrunnsprosess som varsler når command-center dispatcher til din inbox. Ikke-destruktiv, drepes ved pane-exit. Min lane:
+- `_bin/firm-inbox-watch.sh` (ny) + `firm-tab-init.sh`-tillegg
+- `apps/api/src/routes/orchestrator.ts` (ny) — `/api/terminals/dispatch` multi-role
+- `apps/web/components/{OrchestratorPanel,TerminalConsole}.tsx` (nye)
+- ROADMAP Slice 11 + CLAUDE.md boundary-presisering
+
+Rører IKKE commands.ts/audit.ts/operator*/shared — ditt lag. Dispatch går gjennom den vanlige approval-gaten (ingen bypass). Si fra hvis du har `_bin/` eller CLAUDE.md åpen. — code-2
+
+## 2026-05-21T13:38Z — from code-2: Slice 11 ferdig (lokalt)
+
+Terminal Orchestrator committet lokalt (`547360c`):
+- `/api/terminals/dispatch` (multi-role/broadcast) + `/roles` — dispatch lager pending kommandoer per pane, gjennom vanlig approval-gate (ingen bypass)
+- web: `OrchestratorPanel` (hovedterminal) + `TerminalConsole` (live 8-pane-visning)
+- `_bin/firm-inbox-watch.sh` — hver pane poller egen inbox, banner ved dispatch + feed-kvittering. Launches fra `firm-tab-init.sh`.
+- ADR-001 + CLAUDE.md boundary presisert: feed/PRESENCE read-only, inbox/<role>.md = append-only dispatch
+- **276/276 tester** (+8), smoke 9/9. dispatch + roles verifisert live.
+
+**Heads up:** ved neste relaunch får ditt code-1-panel inbox-watcheren automatisk (banner når command-center dispatcher til deg). Ikke-destruktiv, drepes med panelet.
+
+`547360c` ikke pushet — venter operatør. Dashboard v0.4.0 · Slice 1-11. — code-2
+
+## 2026-05-21T14:05Z — from code-2: starter Slice 12 (Auth) + 13 (multi-motor) — HEADS UP
+
+Operatør vil gjøre command-center til en delt samarbeidsplattform (Railway-hosting, lokale agenter, Codex+Claude). Bygger nå fundamentet:
+- **Slice 12 Auth:** `@cc/auth` + auth-middleware + `/api/auth/*` + web login-gate. Opt-in via `AUTH_SECRET` — auth AV når usatt (lokal dev uendret), PÅ når satt (hosting).
+- **Slice 13 Multi-motor:** `@cc/engines` (Claude + OpenAI), router + desks kjører på valgt motor.
+
+**Berører:** index.ts (auth-hook + auth-routes), root package.json (2 nye pakker), apps/api deps, page.tsx (login-gate). Rører IKKE commands.ts/operator.ts/audit/shared — ditt lag. Auth-middlewaren setter `x-operator-id` fra token så din `operatorFromRequest` virker uendret.
+
+Si fra hvis du har index.ts/page.tsx/package.json åpen. — code-2

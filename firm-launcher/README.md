@@ -18,13 +18,27 @@ created: 2026-05-13
 
 ## What's in this folder
 
-- `install.sh` — one-command setup (writes aliases, ensures bus dir, links scripts).
-- `bin/firm-wt-tabs.sh` — Windows Terminal: 8 separate tabs.
-- `bin/firm-wt-split.sh` — Windows Terminal: 8 split panes in 1 tab (default `firm`).
-- `bin/firm-tab-init.sh` — per-tab bootstrap (env vars, bus init, claude exec).
-- `bin/firm-session-context.sh` — context dump on Claude SessionStart hook.
-- `bin/firm-zellij.sh` — zellij fallback (no Windows Terminal needed).
+- `install.sh` — one-command setup: copies all `bin/*.sh` into `FIRM_BIN_DIR`,
+  writes `~/.bashrc` aliases, wires `~/.claude/settings.json` statusLine,
+  installs the brain pre-push hook, runs sanity. Idempotent.
+- `bin/*.sh` — the portable firm script set. The installer globs and installs
+  every `.sh` here, so the list grows without touching `install.sh`. Currently:
+  - `firm-wt-split.sh` — Windows Terminal: 8 split panes in 1 tab (default `firm`).
+  - `firm-wt-tabs.sh` — Windows Terminal: 8 separate tabs.
+  - `firm-zellij.sh` — zellij fallback (no Windows Terminal needed).
+  - `firm-tab-init.sh` — per-pane bootstrap (env vars, bus init, claude exec).
+  - `firm-statusline.sh` — role banner for the Claude Code status line.
+  - `firm-session-context.sh` — context dump on Claude SessionStart hook.
+  - `firm-inbox-watch.sh` — Slice 11 watcher; panes auto-pick-up dispatches
+    queued from command-center.
+  - `firm-worktree-{spawn,list,cleanup}.sh` — git worktree helpers.
+  - `firm-git-snapshot.sh`, `firm-heartbeat.sh` — periodic snapshot + liveness.
 - `bash/nexus-bashrc.sh` — Nexus shell banner + project-specific commands.
+
+> The firm `_bin` scripts canonically live in the **command-center** repo
+> (`github.com/Nithu0/command-center`, private) at `command-center/_bin/` —
+> that is where the operator edits them. The `bin/` copy here is the portable
+> installer payload for collaborators who haven't cloned command-center.
 
 ## Prerequisites
 
@@ -56,6 +70,12 @@ firm
 
 Each tab writes status lines to `~/Obsidian/Brain/00-firm-bus/feed.md` and reads its own inbox at `~/Obsidian/Brain/00-firm-bus/inbox/<role>.md`. This gives the 8 sessions a lightweight, append-only coordination channel without inter-process plumbing — anyone (including the operator) can drop a message into a role's inbox. See `_runbooks/firm-launcher.md` for the full protocol.
 
+On top of the file bus, each pane runs `firm-inbox-watch.sh` (Slice 11): it watches for dispatches queued from the **command-center** control plane and auto-picks them up, so queued work reaches the right pane without manual polling.
+
+## statusLine
+
+The installer wires `~/.claude/settings.json` → `statusLine.command` to `<FIRM_BIN_DIR>/firm-statusline.sh`, which renders the per-pane role banner. The edit is JSON-aware (python3 or jq) and idempotent; a timestamped backup of `settings.json` is made first, and a malformed existing file is left untouched with a warning.
+
 ## FIRM_ROSTER — choose your pane layout
 
 | Preset | Layout |
@@ -81,11 +101,12 @@ Set these env vars before running `install.sh` to override defaults:
 
 - `BRAIN_VAULT=~/path/to/brain` — where tiger-brain lives (default `~/Obsidian/Brain`).
 - `NEXUS_REPO=~/path/to/ai-assistent` — Nexus trading firm repo path.
-- `FIRM_BIN_DIR=~/path/to/bin` — where firm scripts get linked (default `~/.local/bin`).
+- `FIRM_BIN_DIR=~/path/to/bin` — where firm scripts get installed (default `~/code/command-center/_bin`).
+- `CLAUDE_SETTINGS=~/path/to/settings.json` — Claude Code settings file to wire the statusLine into (default `~/.claude/settings.json`).
 
 ## Uninstall
 
-Remove the `# === firm launcher ===` block from `~/.bashrc` and delete `$FIRM_BIN_DIR/firm-*.sh`. Bus files in `00-firm-bus/` are safe to keep or wipe.
+Remove the `# === firm launcher ===` block from `~/.bashrc`, delete `$FIRM_BIN_DIR/firm-*.sh`, and remove the `statusLine` key from `~/.claude/settings.json` (or restore a `settings.json.bak-*` backup). Bus files in `00-firm-bus/` are safe to keep or wipe.
 
 ## Related
 
@@ -93,4 +114,4 @@ Remove the `# === firm launcher ===` block from `~/.bashrc` and delete `$FIRM_BI
 - `00-firm-bus/README.md` — bus protocol details.
 - `KARRI-DAY-1.md` — collaborator onboarding walkthrough.
 
-Sist oppdatert: 2026-05-13
+Sist oppdatert: 2026-05-21 — _bin flyttet til command-center-repoet; statusLine-wiring + Slice 11 inbox-watcher dokumentert; full bin/-skriptsett listet.

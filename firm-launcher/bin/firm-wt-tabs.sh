@@ -18,18 +18,10 @@
 
 set -euo pipefail
 
-FIRM_ROSTER="${FIRM_ROSTER:-default}"
-
 # --- arg parsing ------------------------------------------------------------
 DRY_RUN=0
 if [[ "${1:-}" == "--dry-run" || "${1:-}" == "-n" ]]; then
   DRY_RUN=1
-  shift
-fi
-
-# Positional arg overrides FIRM_ROSTER env var (e.g. `firm-wt-tabs.sh nexus`).
-if [[ $# -ge 1 ]]; then
-  FIRM_ROSTER="$1"
   shift
 fi
 
@@ -45,78 +37,22 @@ else
   exit 1
 fi
 
-INIT="${FIRM_BIN_DIR:-$HOME/code/_bin}/firm-tab-init.sh"
+INIT="$HOME/code/command-center/_bin/firm-tab-init.sh"
 if [[ ! -x "$INIT" ]]; then
   echo "firm-wt-tabs.sh: init script missing or not executable: $INIT" >&2
   exit 1
 fi
 
 # --- tab distribution -------------------------------------------------------
-# Each row: <role> <abs-wsl-path> <project>
-# Selectable via FIRM_ROSTER env var or positional arg (default | nexus | thesis | workspace).
-CODE_DIR="${CODE_DIR:-$HOME/code}"
-NEXUS_REPO="${NEXUS_REPO:-$HOME/code/ai-assistent}"
-THESIS_REPO="${THESIS_REPO:-$HOME/code/Master-oppgave}"
-
-case "$FIRM_ROSTER" in
-  default)
-    # 2 workspace + 4 nexus + 2 thesis (original behaviour)
-    tabs=(
-      "code-1   $CODE_DIR     workspace"
-      "code-2   $CODE_DIR     workspace"
-      "ai-1     $NEXUS_REPO   nexus"
-      "ai-2     $NEXUS_REPO   nexus"
-      "ai-3     $NEXUS_REPO   nexus"
-      "ai-4     $NEXUS_REPO   nexus"
-      "thesis-1 $THESIS_REPO  master-oppgave"
-      "thesis-2 $THESIS_REPO  master-oppgave"
-    )
-    ;;
-  nexus|nexus-only)
-    # 8 nexus panes (e.g. Karri's workstation)
-    tabs=(
-      "ai-1 $NEXUS_REPO nexus"
-      "ai-2 $NEXUS_REPO nexus"
-      "ai-3 $NEXUS_REPO nexus"
-      "ai-4 $NEXUS_REPO nexus"
-      "ai-5 $NEXUS_REPO nexus"
-      "ai-6 $NEXUS_REPO nexus"
-      "ai-7 $NEXUS_REPO nexus"
-      "ai-8 $NEXUS_REPO nexus"
-    )
-    ;;
-  thesis|thesis-only)
-    # 8 thesis panes
-    tabs=(
-      "thesis-1 $THESIS_REPO master-oppgave"
-      "thesis-2 $THESIS_REPO master-oppgave"
-      "thesis-3 $THESIS_REPO master-oppgave"
-      "thesis-4 $THESIS_REPO master-oppgave"
-      "thesis-5 $THESIS_REPO master-oppgave"
-      "thesis-6 $THESIS_REPO master-oppgave"
-      "thesis-7 $THESIS_REPO master-oppgave"
-      "thesis-8 $THESIS_REPO master-oppgave"
-    )
-    ;;
-  workspace|workspace-only)
-    # 8 workspace panes
-    tabs=(
-      "code-1 $CODE_DIR workspace"
-      "code-2 $CODE_DIR workspace"
-      "code-3 $CODE_DIR workspace"
-      "code-4 $CODE_DIR workspace"
-      "code-5 $CODE_DIR workspace"
-      "code-6 $CODE_DIR workspace"
-      "code-7 $CODE_DIR workspace"
-      "code-8 $CODE_DIR workspace"
-    )
-    ;;
-  *)
-    echo "firm-wt-tabs.sh: unknown FIRM_ROSTER=$FIRM_ROSTER" >&2
-    echo "  valid: default | nexus | thesis | workspace" >&2
-    exit 1
-    ;;
-esac
+# Bruker parallelle arrays i stedet for space-splittede strenger fordi
+# soking-1's CWD inneholder mellomrom ("Søking fulltid"). Tab-rekkefølgen
+# speiler den nye 2x4 grid-distribusjonen i firm-wt-split.sh:
+#   Row 1: code-1, code-2 (workspace), ai-1, ai-2 (nexus)
+#   Row 2: thesis-1 (master-oppgave), as-1 (AS), soking-1 (soking-fulltid),
+#          personal-1 (personlig)
+roles=(    "code-1"            "code-2"            "ai-1"                          "ai-2"                          "thesis-1"                          "as-1"                "soking-1"                          "personal-1" )
+paths=(    "$HOME/code"  "$HOME/code"  "$HOME/code/ai-assistent" "$HOME/code/ai-assistent" "$HOME/code/Master-oppgave"   "$HOME/code/AS" "$HOME/code/Søking fulltid"   "$HOME/code/Personlig" )
+projects=( "workspace"         "workspace"         "nexus"                         "nexus"                         "master-oppgave"                    "AS"                  "soking-fulltid"                    "personlig" )
 
 # --- build wt.exe argv ------------------------------------------------------
 # We pass each action as a separate argv group, with literal `;` separators
@@ -125,12 +61,10 @@ esac
 args=()
 
 first=1
-for row in "${tabs[@]}"; do
-  # shellcheck disable=SC2206
-  parts=( $row )                # role path project (no spaces inside fields)
-  role="${parts[0]}"
-  path="${parts[1]}"
-  project="${parts[2]}"
+for i in "${!roles[@]}"; do
+  role="${roles[$i]}"
+  path="${paths[$i]}"
+  project="${projects[$i]}"
 
   # Inner command for `bash -lic <CMD>`. Must be a single-line string (no
   # heredoc, no $(), no double-quote interpolation). Do NOT wrap in single

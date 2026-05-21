@@ -142,6 +142,7 @@ Vanlige operasjoner — klikk for å hoppe til relevant fil.
   - [[_runbooks/dashboard-runbook]] — denne kontroll-planet
   - [[_runbooks/firm-launcher]] — 8-pane launcher
   - [[_runbooks/Runbook-Obsidian-Git-Sync]] — push/pull av Brain
+  - [[00-command-center/README]] — Workspace-wide control plane (Next.js+Fastify+SQLite at /home/nithu/code/command-center)
 
 ---
 

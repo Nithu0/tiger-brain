@@ -248,7 +248,7 @@ Hvor operatoer legger token inn (HVIS BUILD-1 ikke henter automatisk fra endpoin
   scanners:
     arbeidsplassen:
       feed_url: "https://pam-stilling-feed.nav.no/api/v1/feed"
-      api_token: "eyJhbGciOiJIUzI1NiIs..."  # JWT fra publicToken
+      api_token: "<REDACTED_JWT>"  # JWT fra publicToken (placeholder — lim inn ekte token lokalt)
   ```
 
 Sikkerhet:

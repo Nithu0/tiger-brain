@@ -28,6 +28,7 @@ Hver pane i `firm`-launcheren peker på én av disse — se [[_runbooks/firm-8-p
 - [[claude-context/START-HERE|Claude START-HERE]] — entry point for Claude Code sessions
 - [[_runbooks/firm-8-pane-2026-05-14|firm 8-pane runbook]] — current multi-Claude operating model
 - [[_runbooks/firm-launcher|firm-launcher v1 runbook]] — historical reference
+- [[00-command-center/README]] — Workspace-wide control plane (Next.js+Fastify+SQLite at /home/nithu/code/command-center)
 
 ## Health & ops
 

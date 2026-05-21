@@ -25,3 +25,6 @@ Thumbs.db
 00-firm-bus/pane-status/*
 !00-firm-bus/pane-status/.gitkeep
 00-firm-bus/git-snapshot.json
+
+# Runtime log from brain-session-start.sh (firm-tab-init)
+.brain-session-start.log

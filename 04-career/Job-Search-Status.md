@@ -25,7 +25,7 @@ A clear status flag prevents drift between "kind of looking" and "actually apply
 
 ## Next steps
 
-- (a) Kjør job-scraper daglig — se [[runbook]] (`agent/daily.py` via cron, 08:00 man–fre).
+- (a) Kjør job-scraper daglig — se [[_runbooks/job-scraper-runbook|job-scraper-runbook]] (`agent/daily.py` via cron, 08:00 man–fre).
 - (b) Ukentlig CRM-review hver søndag — gå gjennom `leads/stillinger.xlsx`, oppdater statuser, identifisér stale leads.
 - (c) Responstid på leads < 72 timer — fra Ny → vurderer/ikke aktuell, og fra positiv respons → svar.
 

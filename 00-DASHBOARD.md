@@ -12,12 +12,12 @@ Single-screen overview. If you opened the vault and don't know where to go — s
 
 | Prosjekt | Hva | MOC / pointer |
 |---|---|---|
-| **Nexus** | XAUUSD prop-firm trading system, demo-mode | [[01-nexus/01-nexus-MOC\|Nexus-MOC]] · runtime: [[01-nexus/runtime/Phase-Status-Pointer]] → `ai-assistent/docs/ops/phase-status.md` |
-| **Master-oppgave** | NTNU master, ML for solid-state battery electrolytes | [[02-thesis/Thesis-MOC\|Thesis-MOC]] → `Master-oppgave/` + `battery-electrolyte-predictor/` |
-| **Søking fulltid** | Aktiv jobb-søking (post-master) | [[04-career/Active-Job-Search-MOC\|Active-Job-Search-MOC]] *(eies av career-agent)* |
-| **Business / strategi** | Lett ops/strategi-notater | [[03-business/Business-MOC\|Business-MOC]] |
-| **AS** | Regnskap, inntekt, drift av AS | [[06-AS/AS-MOC\|AS-MOC]] *(eies av AS-agent)* |
-| **Personlig** | Effektivitet, mat, trening, vaner | [[07-personlig/Personlig-MOC\|Personlig-MOC]] *(eies av personlig-agent)* |
+| **Nexus** | XAUUSD prop-firm trading system, demo-mode | [[01-nexus/Nexus-MOC]] · runtime: [[01-nexus/runtime/Phase-Status-Pointer]] → `ai-assistent/docs/ops/phase-status.md` |
+| **Master-oppgave** | NTNU master, ML for solid-state battery electrolytes | [[02-thesis/Thesis-MOC]] → `Master-oppgave/` + `battery-electrolyte-predictor/` |
+| **Søking fulltid** | Aktiv jobb-søking (post-master) | [[04-career/Active-Job-Search-MOC]] *(eies av career-agent)* |
+| **Business / strategi** | Lett ops/strategi-notater | [[03-business/Business-MOC]] |
+| **AS** | Regnskap, inntekt, drift av AS | [[06-AS/AS-MOC]] *(eies av AS-agent)* |
+| **Personlig** | Effektivitet, mat, trening, vaner | [[07-personlig/Personlig-MOC]] *(eies av personlig-agent)* |
 
 Hver pane i `firm`-launcheren peker på én av disse — se [[_runbooks/firm-8-pane-2026-05-14]].
 

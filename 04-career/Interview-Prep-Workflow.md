@@ -113,7 +113,7 @@ Etter post-debrief, sjekk at:
 
 ## Hvis tilbud
 
-Egen flyt — se separat note: TBD ([[Offer-Evaluation-Workflow]] når relevant).
+Egen flyt — se separat note: TBD (Offer-Evaluation-Workflow når relevant — noten finnes ikke ennå).
 
 ## Relaterte noter
 

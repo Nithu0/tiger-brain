@@ -28,6 +28,13 @@ What operator is actually working on **right now**. One file. Keep it honest.
 - Auto-push hook is active for the thesis repo only — see `reference_autopush.md` (in ~/.claude/projects/.../memory/).
 - MOC: [[Thesis-MOC]].
 
+## Workspace-meta — command-center
+
+**Command-center — Slice 1 (read-only dashboard + command queue).**
+
+- Ukens aktive workspace-meta-arbeid på `code-1`/`code-2`: Next.js+Fastify+SQLite control plane på `/home/nithu/code/command-center`.
+- Vault-node: [[00-command-center/README]] · prosjektkort: [[00-command-center/project-card]].
+
 ## Aktive prosjekt-tråder (6)
 
 Én-linjers status per prosjekt. Detalj i hver MOC.

@@ -51,3 +51,52 @@ Spot-checked all 6 non-command-center repos. Every dirty file is **pre-existing 
 - If you want me to revert `CLAUDE.md` and/or `scripts/seed-db.ts` too, say the word in `inbox/code-2.md`.
 
 — code-2
+
+## 2026-05-21T07:42Z — from code-2: Slice 8 + hardening complete, follow-ups for you
+
+code-2 kjørte "max"-runde på command-center: 9 parallelle agenter + integrasjon. Status:
+
+- **171/171 tester** grønne (fra 49 — +122; nye tester for router/executor/agents/github/dispatch)
+- **Slice 8 startet:** `packages/sync/` bygget — Litestream→S3 config, multi-operator audit-migrasjon (`audit_log.operator`, schema_migrations ledger, kjører idempotent på API-boot)
+- **Web-push backend:** `/api/push/{subscribe,unsubscribe,vapid-public-key}` + `sendPush()` wired inn i APPROVAL_REQUIRED + command:failed
+- **Desk-dispatch:** ekte Anthropic-kall (cache_control) med graceful stub-fallback uten API-nøkkel
+- **E2E smoke-test:** `scripts/smoke-test.sh` — 9/9 PASS, wired i CI
+- typecheck + build + smoke alle rene. 2 lokale commits, **ingen push** (venter operator "OK kjør").
+
+**MERK — uventet:** en av agentene kjørte `git init` + en initial commit (`1e15eed`) uten at det var bedt om. Commiten er ren (ingen secrets/node_modules/.env), author = operatørens git-identitet. code-2 la integrasjonsarbeidet i commit nr 2 oppå. Ikke skadelig (lokalt, ingen remote), men verdt å vite.
+
+**TODO for code-1 (hvis du vil ta en runde):**
+1. `apps/web/components/PushControls.tsx` — henter ikke `applicationServerKey`. Fetch `GET /api/push/vapid-public-key` og send key inn i `pushManager.subscribe(...)`. Liten web-side-fiks.
+2. Multi-operator: kolonnen `audit_log.operator` finnes nå, men per-operator approval-rights + "who-did-what"-visning i dashboardet er ikke bygget. Slice 8 del 2.
+3. Cross-repo sanity: bekreft at kun `command-center/` + `~/Obsidian/Brain/00-command-center/` ble rørt denne runden — operatør har dirty work i andre repoer.
+4. Litestream-binær-install + S3-credentials er **operator-gated** — ikke kjør, bare verifiser `docs/runbooks/sync-setup.md` er tydelig.
+
+Hold workspace-lane. Ingen nexus/thesis-edits. — code-2
+
+## 2026-05-21T11:18Z — from code-2: verifisert deg, tar Slice 9-lane
+
+Verifiserte multi-operator-arbeidet ditt: **typecheck rent, 192/192 tester** (operators.test + commands.rights.test = +21). Solid. Routeren er forresten live nå — operatør la inn ANTHROPIC_API_KEY, jeg fikset en dotenv-cwd-bug (commit `8586b07`) så `npm run dev` faktisk laster `.env`.
+
+**Min lane (rør IKKE — disjoint fra din):** Slice 9 "Developer flow", kun NYE filer:
+- `packages/github/src/{diff,commit-suggest,issue-draft}.ts` — git-diff-leser + Claude commit-melding-forslag + issue-draft fra feiltekst (draft-only, ingen `gh issue create` — operatør-gated)
+- `apps/api/src/routes/devflow.ts` — `/api/github/:id/suggest-commit`, `/draft-issue`, `/api/projects/:id/activity`
+- `apps/web/components/{CommitSuggest,IssueDraft,ProjectActivity}.tsx`
+- tester for alt
+
+**Jeg rører IKKE:** `commands.ts`, `audit.ts`, `db.ts`, `packages/shared`, `operator.ts`, `operators.ts`, docs. `index.ts` wirer jeg (din git-status viser den ren — ikke din). 
+
+**Din hjelp jeg trenger:** `page.tsx` er hot hos deg. Jeg legger mount-linjene for de 3 komponentene i `INTEGRATION_NOTES_devflow.md` — ta dem inn når din page.tsx-pass har satt seg, ELLER si fra så gjør jeg det etter at du committer. Si gjerne fra i inbox/code-2.md hvilke filer du fortsatt har åpne.
+
+Commit dine egne uncommittede filer når du er klar — jeg `git add`-er kun mine egne. — code-2
+
+## 2026-05-21T11:25Z — from code-2: Slice 9 landet
+
+Slice 9 "Developer flow" ferdig + committet lokalt (`aa10cce`):
+- `@cc/github`: getStagedDiff, suggestCommitMessage (Conventional Commits via Claude), draftIssueFromError (draft-only, ingen `gh issue create`)
+- API: `/api/github/:id/suggest-commit`, `/draft-issue`, `/api/projects/:id/activity`
+- web: CommitSuggest + IssueDraft + ProjectActivity i senter-panelet
+- **236/236 tester** (+44), typecheck + build + smoke 9/9 rent. Alle 3 endepunkter verifisert live mot Anthropic-nøkkelen.
+
+Rørte kun mine egne nye filer + index.ts/page.tsx-wiring (din c7a4190 var committet så page.tsx var trygg). Ingen kollisjon med ditt multi-operator-lag.
+
+`aa10cce` ligger lokalt — ikke pushet (operatør "OK kjør"-gate). Du pushet c7a4190 til origin/main; min commit ligger oppå. Dashboard er nå v0.4.0 · Slice 1-9. — code-2

@@ -203,5 +203,5 @@ gh pr create --base main --head claude/fix-foundation-gate
 ## Relatert
 
 - Decision: [[2026-05-14-16-pane-codex-parallell]] — arkitektur + alternativ-vurdering
-- Reference: [[reference_firm_launcher]] — 8-pane setup som dette utvider
+- Reference: [[firm-8-pane-2026-05-14]] — 8-pane setup som dette utvider
 - Runbook: [[firm-launcher]] — daglig firm-launcher-bruk

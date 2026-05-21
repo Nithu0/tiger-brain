@@ -95,3 +95,14 @@ expected and they stay as-is.
 - 2026-05-21T05:24:51Z as-1 online in AS
 - 2026-05-21T05:24:51Z thesis-1 online in master-oppgave
 - 2026-05-21T05:29:04Z ai-1 starting: full-analyse pickup — push gate (11 commits) + agent_lessons/risk_events diagnosis + OPEN audit triage; coordinating split with ai-2
+- 2026-05-21T07:34:31+02:00 thesis-1 done: theory-chapter citation-integrity audit applied — 4 new bib entries + 27 number edits in Theoretical_Background.tex, every surviving number now traces to a cited source
+- 2026-05-21T05:36:56Z code-1 done: command-center git-initialized (was NEVER a repo) — initial commit 1e15eed, Slices 1-7 complete (tsc clean, 171/171 tests), Slice 8 packages/sync WIP captured; 5-agent pass: registry self-register + seed-db .ts->.js fix + INTEGRATION_NOTES scratch removed + ADR-003 cross-machine-sync + docs refresh. code-2 has 5 files in-flight (Slice 8 wiring) — left uncommitted for code-2.
+- 2026-05-21T05:38:09Z ai-1 done: full-analyse pickup — agent_lessons + risk_events diagnosed (known-failures.md), failure-marker e299a2d landed, ai-2 lane set in inbox/ai-2.md; 14 commits unpushed awaiting operator OK kjør
+2026-05-21T05:40:39Z code-2 done — command-center Slice 8 + hardening, 171/171 tests, 2 local commits (no push)
+- 2026-05-21T08:05:39Z ai-1 OWNS nexus rebase: found paused git-rebase onto origin/main 394f9e8, conflict on 9e79e43 resolved-in-tree (tsc green). Staging + continuing. Other panes: do NOT touch nexus git tree until ai-1 logs done.
+- 2026-05-21T08:08:18Z ai-1 done: nexus rebase complete — 15 commits cleanly on origin/main 394f9e8, conflicts (trend-following, mean-reversion, schema.ts migrations, package.json test-list) resolved, tsc green x3, 826/826 tests. Tree clean. Safe for other panes again.
+- 2026-05-21T08:56:10Z code-1 done: command-center pushed to GitHub — created private repo github.com/Nithu0/command-center, 3 commits up (1e15eed Slices 1-7 + f0d128a/3c56874 code-2 Slice 8: sync wiring + multi-operator audit). tsc green, 171/171 tests. gh CLI installed standalone to ~/.local/bin.
+- 2026-05-21T08:56:57Z ai-1: cherry-picked Karri C3 cross-strategy-direction-flip gate (45ec672 -> 46434cf) onto main, package.json test-list union resolved. ai-2 extras-fix 43615e4 also in. tsc green x3, 841/841 tests. 2 commits ahead of origin awaiting push.
+2026-05-21T09:17:20Z code-2 starting Slice 9 (developer-flow: commit-suggest + issue-draft + project-activity)
+- 2026-05-21T09:18:13Z code-1 done: command-center Slice 8 part 2 COMPLETE — multi-operator identity + per-operator approval rights (commit c7a4190, pushed). Operator registry (nithu/karri), migration 002 who-did-what columns, X-Operator-Id, server-side rights enforcement, who-did-what UI. typecheck+build+192 tests+smoke 9/9 green. Slice 8 remaining = operator-gated only (Litestream binary, S3 creds, Karri read-replica).
+2026-05-21T09:24:06Z code-2 done — Slice 9 developer-flow committed (aa10cce), 236/236 tests

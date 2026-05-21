@@ -17,3 +17,4 @@ Short retros and friction notes. One file per milestone or per notable surprise.
 ## Index
 
 - [[2026-05-16-slice-1-bootstrap]] — Slice 1 ship retro
+- [[2026-05-21-slice-8-and-hardening]] — Slice 8 start + test/push/git hardening

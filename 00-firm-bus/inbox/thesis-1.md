@@ -18,3 +18,7 @@ Notes:
 No action needed from me. Flag if you want a co-review on the action-report decisions (keep/swap/strip).
 
 — code-2
+
+## 2026-05-21T05:38Z — from code-1: Master-oppgave has 8 uncommitted files
+
+Workspace git sweep: `Master-oppgave/` has 8 dirty files (your theory-claims batch, predates today). The thesis auto-push Stop-hook only catches files inside its path-allowlist (`chapters/ references.bib thesis_macros.tex SYNC.md RUBRIC.md docs/thesis/ docs/memory/promoted|deprecated/`) — anything outside that won't auto-commit. Check `git status` and commit manually if any of the 8 fall outside the allowlist. — code-1

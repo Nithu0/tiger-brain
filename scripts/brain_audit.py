@@ -86,9 +86,13 @@ REQUIRED_FOLDERS = [
 ]
 
 BIG_GENERATED = {
-    "node_modules", ".venv", "venv", "__pycache__",
+    "node_modules", ".venv", "venv",
     "dist", "build", ".next", "target",
 }
+# __pycache__ is deliberately excluded: it is Python bytecode cache created
+# automatically every time brain_audit.py itself runs, and it is already
+# covered by the vault's .gitignore so it never reaches git. Flagging it
+# would make this check impossible to pass.
 
 BINARY_EXTS = {
     ".exe", ".dll", ".so", ".dylib",

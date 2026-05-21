@@ -10,8 +10,9 @@ Workspace-wide control plane. Standalone repo at `/home/nithu/code/command-cente
 
 One dashboard + command queue to see and eventually drive every project, terminal, and AI agent under `/home/nithu/code` and the Obsidian Brain. Not Nexus-specific, not thesis-specific.
 
-**Status:** Slice 1 — read-only dashboard + command queue scaffolding (no execution wired).
-**Current slice:** Slice 2 (AI Router) next per `docs/ROADMAP.md`.
+**Status:** Slices 1-8 (code) complete (dashboard, AI router, execution, real-time, PWA + push, agent system, GitHub, cross-machine sync). Slice 8 pt1 (`packages/sync`) + pt2 (multi-operator identity) landed 2026-05-21.
+**Open:** only operator-gated Slice 8 infra — Litestream binary install, S3 credentials, read replica on Karri's second machine. Per `docs/ROADMAP.md`.
+**Repo:** under git since 2026-05-21, pushed to private **github.com/Nithu0/command-center**.
 
 ## Quick run
 

@@ -208,8 +208,8 @@ Layout (skisse, pseudo-Dataview):
 
 ## Quick actions
 
-- [[broadcast-template]] — copy/paste melding til alle inbox-er
-- [[handoff-template]]
+- `broadcast-template` — copy/paste melding til alle inbox-er (mal finnes ikke ennå)
+- `handoff-template` (mal finnes ikke ennå; se [[handoffs/CURRENT-HANDOFF]] for faktisk handoff)
 - `_runbooks/rydd-inbox.md`
 ```
 

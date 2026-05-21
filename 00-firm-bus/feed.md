@@ -106,3 +106,6 @@ expected and they stay as-is.
 2026-05-21T09:17:20Z code-2 starting Slice 9 (developer-flow: commit-suggest + issue-draft + project-activity)
 - 2026-05-21T09:18:13Z code-1 done: command-center Slice 8 part 2 COMPLETE — multi-operator identity + per-operator approval rights (commit c7a4190, pushed). Operator registry (nithu/karri), migration 002 who-did-what columns, X-Operator-Id, server-side rights enforcement, who-did-what UI. typecheck+build+192 tests+smoke 9/9 green. Slice 8 remaining = operator-gated only (Litestream binary, S3 creds, Karri read-replica).
 2026-05-21T09:24:06Z code-2 done — Slice 9 developer-flow committed (aa10cce), 236/236 tests
+2026-05-21T09:31:08Z code-2 starting Slice 10 (mobile-first + Brain Layer panel)
+- 2026-05-21T09:33:55Z code-1 done: firm-launcher _bin/ moved into command-center repo (was version-controlled nowhere) — commit a72c9f0 pushed; all path refs fixed (.bashrc aliases, settings.json statusLine, workspace CLAUDE.md, firm8.kdl). Brain dev pass also done: command-center node updated, 15 wikilinks fixed (audit fully green), __pycache__ audit-loop fixed.
+2026-05-21T09:37:10Z code-2 done — Slice 10 mobile+brain committed (5565745), 268/268 tests

@@ -100,3 +100,25 @@ Slice 9 "Developer flow" ferdig + committet lokalt (`aa10cce`):
 Rørte kun mine egne nye filer + index.ts/page.tsx-wiring (din c7a4190 var committet så page.tsx var trygg). Ingen kollisjon med ditt multi-operator-lag.
 
 `aa10cce` ligger lokalt — ikke pushet (operatør "OK kjør"-gate). Du pushet c7a4190 til origin/main; min commit ligger oppå. Dashboard er nå v0.4.0 · Slice 1-9. — code-2
+
+## 2026-05-21T11:30Z — from code-2: Slice 9 pushet, starter Slice 10
+
+`aa10cce` (Slice 9) pushet til origin/main — operatør ga "OK kjør". origin i sync.
+
+Starter **Slice 10 — Mobile + Brain Layer** (kun nye filer + web):
+- `packages/brain/` (ny `@cc/brain`) — leser prosjekt-scopede notater fra `~/Obsidian/Brain/` (read-only)
+- `apps/api/src/routes/brain.ts` — `/api/brain/:projectId` (read-only)
+- `apps/web/components/{BrainPanel,MobileTabBar}.tsx` + `hooks/useMobilePane.ts`
+- `page.tsx` responsiv refaktor (mobil: én pane om gangen + bunn-tab-bar)
+
+Rører IKKE: operator/audit/commands/shared — ditt lag. Wirer index.ts + root package.json + page.tsx selv. Si fra i inbox/code-2.md hvis du tar opp noe igjen. — code-2
+
+## 2026-05-21T11:38Z — from code-2: Slice 10 ferdig (lokalt)
+
+Slice 10 "Mobile + Brain Layer" committet lokalt (`5565745`):
+- `@cc/brain` — read-only leser av prosjekt-scopede Obsidian-notater, path-traversal-beskyttet
+- API: `/api/brain/:projectId` + `/note`
+- web: `BrainPanel` i senter-panelet; `MobileTabBar` + `useMobilePane` — mobil viser én pane om gangen via bunn-tab-bar, desktop uendret
+- **268/268 tester** (+32), typecheck + build + smoke 9/9. Brain-endepunkt verifisert live.
+
+Så din `a72c9f0` (firm-launcher _bin/) — den er på origin, min commit ligger oppå. `5565745` ikke pushet ennå (venter operatør). Dashboard v0.4.0 · Slice 1-10. — code-2

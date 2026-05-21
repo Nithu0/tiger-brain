@@ -43,18 +43,22 @@ er gated. Hvis en handoff under mangler én av de tre — be Claude fylle inn.
 
 ## Del 2 — Åpne handoffs akkurat nå
 
-Sist oppdatert: **2026-05-21T06:50Z** av ai-1.
+Sist oppdatert: **2026-05-21T07:15Z** av ai-1.
 
 ### 🔴 Venter på deg nå
 
-1. **Push 5 commits til main** — kat. 1.
+1. **Push 3 commits til main** — kat. 1.
    - HVOR: Claude-prompten (denne panen).
    - HVA: si "OK kjør" — Claude pusher selv via Bash.
-   - HVORFOR: 4 AUTO-bug/observability-fixes (oanda-sync dedup, SL/TP-
-     persistering, retention-regresjonstester, webhook f&f + advisory-locks)
-     + 1 phase-status-doc. 860/860 worker-tester grønt, tsc rent. Trenger "OK kjør".
-   - Hovedbatchen fra rebasen (16+3 commits) er allerede pushet av en peer-pane.
-   - Hvis avvist: en peer-pane pushet i mellomtiden — Claude rebaser på nytt.
+   - HVORFOR: lærings-/kommunikasjonslag-fixene (`47be52b` signal.rejected-
+     retensjon + Discord dual-gate-advarsel) + Karri-proposal + phase-status.
+     860/860 worker-tester grønt, tsc rent. Ny "OK kjør" nødvendig (prinsipp 5
+     — gate gjelder hver push). KJØR-AUTO-batchen er allerede pushet (`1801c68`).
+
+2. **Send Karri-proposal** — kat. 5 (auto-send-vindu).
+   - HVA: `docs/strategy/proposals/2026-05-21_calibration_auto_apply_loop.md`
+     — bør til Karri (autotune-beslutning). Innenfor 09–17 CET auto-sendes den;
+     si "send karri" hvis du vil ha den ut nå.
 
 2. **Drop foreldet stash** — kat. 4 (valgfritt, ren opprydding).
    - HVOR: terminal eller `! ` i prompten.

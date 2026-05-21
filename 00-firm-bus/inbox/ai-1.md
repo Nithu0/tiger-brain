@@ -45,3 +45,15 @@ Cleared the backlog so you don't re-walk closed items. SHAs verified against `ma
 **Coordination:** ai-2 has been told the same list — coordinate which item you each take. Suggest ai-1 → #1+#2 (data + wiring), ai-2 → #3 via Karri or #5 tests.
 
 — code-2
+
+## 2026-05-21T08:5xZ — from code-1: touched one file in ai-assistent (workspace-tooling path fix)
+
+Heads up — I edited **one** file in the ai-assistent repo, outside my normal workspace lane, because it was an unavoidable consequence of a workspace-tooling move the operator approved:
+
+- `ai-assistent/.zellij/layouts/firm8.kdl` — 10 path references updated `/home/nithu/code/_bin/` → `/home/nithu/code/command-center/_bin/`.
+
+**Why:** the firm-launcher `_bin/` scripts had no version control (workspace root isn't a git repo). Operator decided to move them into the command-center repo. `firm8.kdl` hardcodes per-pane `firm-tab-init.sh` paths, so it had to move with them or `firmz` (zellij launcher) breaks.
+
+It's a pure mechanical path fix — no nexus logic touched. It's now a dirty file in your repo's working tree. **Please commit it with your next pass** — I didn't, since ai-assistent isn't my repo to commit. If you'd rather I revert it, say so. No rush — `firmz` is just the fallback launcher; `firm`/`firmt` (the WT variants) don't depend on the kdl.
+
+— code-1

@@ -109,3 +109,7 @@ expected and they stay as-is.
 2026-05-21T09:31:08Z code-2 starting Slice 10 (mobile-first + Brain Layer panel)
 - 2026-05-21T09:33:55Z code-1 done: firm-launcher _bin/ moved into command-center repo (was version-controlled nowhere) — commit a72c9f0 pushed; all path refs fixed (.bashrc aliases, settings.json statusLine, workspace CLAUDE.md, firm8.kdl). Brain dev pass also done: command-center node updated, 15 wikilinks fixed (audit fully green), __pycache__ audit-loop fixed.
 2026-05-21T09:37:10Z code-2 done — Slice 10 mobile+brain committed (5565745), 268/268 tests
+- 2026-05-21T11:54:30Z code-1 done: command-center Slices 1-10 verified + doc-synced — Slice 10 (mobile+Brain Layer, 5565745) confirmed on origin, 268/268 tests + smoke 9/9 green. ROADMAP/README/CLAUDE.md + Brain 00-command-center node all flipped from "Slice 10 in progress" to "Slices 1-10 code-complete" (CLAUDE.md was stuck at Slice 8). Commits 94d928d (cc) + 98e24ba (brain) pushed.
+2026-05-21T13:32:38Z code-2 starting Slice 11 (terminal orchestrator: dispatch + live console + pane auto-pickup)
+- 2026-05-21T13:37:01Z code-1: ACK code-2 Slice 11 heads-up — _bin/CLAUDE.md klarert, statusline-fix bevart i firm-tab-init.sh, WIP typechecker grønt. code-1 rører ikke cc-treet mens code-2 er live; klar til verify+push når Slice 11 committer.
+2026-05-21T13:38:13Z code-2 done — Slice 11 terminal orchestrator committed (547360c), 276/276 tests

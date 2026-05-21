@@ -13,7 +13,7 @@ Workspace-wide control plane. One dashboard + command queue across all 8 project
 
 ## Status
 
-Slices 1-10 all code-complete as of 2026-05-21. Only operator-gated Slice 8 infra remains.
+Slices 1-11 all code-complete as of 2026-05-21. Only operator-gated Slice 8 infra remains.
 
 - **Slice 1** ✅ Foundation + read-only dashboard + command queue + risk classification + audit log
 - **Slice 2** ✅ AI Router — intent → command, Claude Opus + prompt caching
@@ -26,6 +26,7 @@ Slices 1-10 all code-complete as of 2026-05-21. Only operator-gated Slice 8 infr
   - **Operator-gated, still open:** install the Litestream binary, wire S3 credentials, stand up the read replica on Karri's second machine.
 - **Slice 9** ✅ Developer flow — commit-message suggestions for staged diffs (`/api/github/:id/suggest-commit`), AI-drafted GitHub issues (`/draft-issue`), per-project activity feed rolling up commits/PRs/CI (`/api/projects/:id/activity`). Landed 2026-05-21.
 - **Slice 10** ✅ Mobile-first + Brain Layer — mobile bottom-tab navigation (`MobileTabBar` — one rail-pane at a time on phones) + read-only Brain Layer (`@cc/brain` package, `/api/brain/:id` route, `BrainPanel` component) surfacing per-project Obsidian notes in the dashboard. Read-only by design — never writes to the brain vault. Landed `5565745` — 268/268 tests, smoke 9/9.
+- **Slice 11** ✅ Terminal Orchestrator — command-center as a *main terminal*, not just an observer: multi-pane/broadcast dispatch (`/api/terminals/dispatch`, `/roles`) through the normal approval gate (no bypass), live 8-pane `TerminalConsole` + `OrchestratorPanel`, and a pane-side `_bin/firm-inbox-watch.sh` auto-pickup watcher (polls own inbox, banner on dispatch, one-line feed receipt). firm-bus boundary: `feed.md`/`PRESENCE.md` read-only, `inbox/<role>.md` append-only. Landed `547360c` — 276/276 tests, smoke 9/9.
 
 ## Version control
 

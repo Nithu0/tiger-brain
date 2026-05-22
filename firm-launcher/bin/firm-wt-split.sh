@@ -61,12 +61,17 @@ EOF
   esac
 done
 
-WT_EXE="/mnt/c/Users/nithu/AppData/Local/Microsoft/WindowsApps/wt.exe"
-if [[ ! -x "$WT_EXE" ]]; then
-  WT_EXE="$(command -v wt.exe || true)"
+# Resolve wt.exe portably: WSL-interop PATH first, then any Windows user's
+# WindowsApps dir (glob — works regardless of the Windows username).
+WT_EXE="$(command -v wt.exe 2>/dev/null || true)"
+if [[ -z "${WT_EXE:-}" || ! -x "$WT_EXE" ]]; then
+  for cand in /mnt/c/Users/*/AppData/Local/Microsoft/WindowsApps/wt.exe; do
+    [[ -x "$cand" ]] && { WT_EXE="$cand"; break; }
+  done
 fi
 if [[ -z "${WT_EXE:-}" || ! -x "$WT_EXE" ]]; then
-  echo "firm-wt-split: wt.exe not found" >&2
+  echo "firm-wt-split: wt.exe not found (PATH or /mnt/c/Users/*/...WindowsApps)" >&2
+  echo "  install Windows Terminal, or set WT_EXE manually" >&2
   exit 1
 fi
 

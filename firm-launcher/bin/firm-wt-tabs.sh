@@ -26,14 +26,17 @@ if [[ "${1:-}" == "--dry-run" || "${1:-}" == "-n" ]]; then
 fi
 
 # --- locate wt.exe ----------------------------------------------------------
-WT_DEFAULT="/mnt/c/Users/nithu/AppData/Local/Microsoft/WindowsApps/wt.exe"
-if [[ -x "$WT_DEFAULT" ]]; then
-  WT="$WT_DEFAULT"
-elif command -v wt.exe >/dev/null 2>&1; then
-  WT="$(command -v wt.exe)"
-else
-  echo "firm-wt-tabs.sh: wt.exe not found at $WT_DEFAULT and not on PATH" >&2
-  echo "  install Windows Terminal or set WT manually" >&2
+# Portable: WSL-interop PATH first, then any Windows user's WindowsApps dir
+# (glob — works regardless of the Windows username).
+WT="$(command -v wt.exe 2>/dev/null || true)"
+if [[ -z "${WT:-}" || ! -x "$WT" ]]; then
+  for cand in /mnt/c/Users/*/AppData/Local/Microsoft/WindowsApps/wt.exe; do
+    [[ -x "$cand" ]] && { WT="$cand"; break; }
+  done
+fi
+if [[ -z "${WT:-}" || ! -x "$WT" ]]; then
+  echo "firm-wt-tabs.sh: wt.exe not found (PATH or /mnt/c/Users/*/...WindowsApps)" >&2
+  echo "  install Windows Terminal, or set WT manually" >&2
   exit 1
 fi
 

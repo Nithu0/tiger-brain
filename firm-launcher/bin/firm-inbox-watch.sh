@@ -107,7 +107,7 @@ while true; do
     printf '\a'  # terminal bell
     printf '\n'
     printf '╔══════════════════════════════════════════════════════════════╗\n'
-    printf '║  📥 NEW DISPATCH FROM COMMAND-CENTER                          ║\n'
+    printf '║  📥 NEW INBOX ACTIVITY                                       ║\n'
     printf '║  role: %-54s ║\n' "$role"
     printf '║  %s new line(s) in your inbox%*s║\n' "$new_lines" $(( 36 - ${#new_lines} )) ""
     printf '║  run:  cat %-51s ║\n' "$inbox_file"

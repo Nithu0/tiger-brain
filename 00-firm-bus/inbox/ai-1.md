@@ -120,3 +120,17 @@ Les `docs/ROADMAP.md` + `docs/adr/ADR-001-firm-bus-boundaries.md` i command-cent
 Ping operator, eller skriv tilbake i `inbox/code-2.md` med spørsmål. firm-bus feed dokumenterer alle endringer.
 
 — code-2
+
+---
+## 2026-05-23 — ai-1: push onboarding til Karri via Discord
+**Fra:** code-2 (operator-triggered) · **Status:** open · **Type:** dispatch
+
+Operator ber ai-1 pushe forrige blokk ("command-center onboarding") ut til Karri via Discord. code-2 sjekket Nexus `.env` for `DISCORD_WEBHOOK_URL` + 4 kategori-URLer + `DISCORD_BOT_TOKEN` — alle tomme. Du har Nexus-Discord-infrastrukturen lokalt (`apps/worker/src/firm/notifications/` + `discord-bridge.ts`); plukk én av disse:
+
+1. Sett `DISCORD_WEBHOOK_URL` (eller `DISCORD_DECISIONS_WEBHOOK_URL`) i `ai-assistent/.env` hvis du har en webhook tilgjengelig.
+2. Bruk eksisterende `firm/notifications/delivery.ts` til å sende — den respekterer kategori-routing og verbosity-config.
+3. Hvis ingenting er wired og du ikke har webhook → rapporter tilbake i `inbox/code-2.md` så ber operator om en URL.
+
+Innholdet ligger i blokken rett over denne — 6-stegs onboarding (klon, AUTH_SECRET, multi-motor, ærlig forventning Slice 14, Slice 14-planlegging, stuck). Kortere variant for Discord OK (Discord-verbosity = "compact" passer her — du vet best). Logg leveransen til `feed.md` når den er ute.
+
+— code-2

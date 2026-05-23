@@ -117,3 +117,45 @@ expected and they stay as-is.
 - 2026-05-21T14:56:45Z code-1 done: Slice 11 (547360c) bekreftet på origin; Brain-node doc-synket for Slice 11 (e4337f9 pushet). Ba code-2 om lane-carve på Slice 12/13 — de er ikke scopet/skrevet ned ennå, code-1 kan ikke bygge blindt eller kollidere med code-2 sin live page.tsx-WIP.
 - 2026-05-21T15:06:46Z code-1 done: Karri firm-share oppsett refreshet i Brain (d59ad62 pushet til tiger-brain) — firm-launcher/bin/ synket til 12 portable scripts, install.sh peker på command-center/_bin + wirer statusLine, KARRI-DAY-1 + TEAMMATE-ONBOARDING oppdatert, 00-firm-bus README+roster fikset (gammelt 4-nexus/2-thesis-oppsett -> dagens 6-prosjekt 8-pane). Karri kan pulle tiger-brain + kjore firm-launcher/install.sh.
 2026-05-21T15:12:01Z code-2 done — Slice 12 (auth) + 13 (multi-engine Claude+Codex) committed 14e56c4, 341/341 tests
+- 2026-05-21T17:04:28Z code-1: plan notert — firm-launcher får en Windows-PowerShell-variant fra Karri ved siden av bash/Linux-varianten (firm-launcher/bin/). Karri bygger den nå, pushes til tiger-brain når ferdig. code-1 rører ikke firm-launcher/ mens Karri er live; verify + doc-sync (README + KARRI-DAY-1, to-plattform) tas når PS-varianten lander.
+- 2026-05-21T21:35:27Z code-1 done: Nexus sandbox-setup mal laget (3 filer i ai-assistent, additive — overlatt til ai-1 for commit+push): .env.example sikkerhetsblokk + scripts/sandbox-up.sh + docs/ops/sandbox-setup.md. Kjernefunn (Karri): lokal .env pekte pa prod-Railway-DB; sandkassen finnes allerede i docker-compose.yml — DATABASE_URL-verdien er grensen.
+- 2026-05-22T16:25:46Z code-1 online in workspace
+- 2026-05-22T16:25:46Z code-2 online in workspace
+- 2026-05-22T16:25:46Z ai-1 online in nexus
+- 2026-05-22T16:25:46Z ai-2 online in nexus
+- 2026-05-22T16:25:46Z personal-1 online in personlig
+- 2026-05-22T16:25:46Z as-1 online in AS
+- 2026-05-22T16:25:47Z thesis-1 online in master-oppgave
+- 2026-05-22T16:27:27Z code-1 online in workspace
+- 2026-05-22T16:27:30Z code-2 online in workspace
+- 2026-05-22T16:28:37Z code-1 online in workspace
+- 2026-05-22T16:28:37Z code-2 online in workspace
+- 2026-05-22T16:28:37Z ai-1 online in nexus
+- 2026-05-22T16:28:37Z ai-2 online in nexus
+- 2026-05-22T16:28:37Z personal-1 online in personlig
+- 2026-05-22T16:28:37Z soking-1 online in soking-fulltid
+- 2026-05-22T16:28:37Z as-1 online in AS
+- 2026-05-22T16:28:37Z thesis-1 online in master-oppgave
+- 2026-05-22T16:31:11Z code-1 online in workspace
+- 2026-05-22T16:31:11Z code-2 online in workspace
+- 2026-05-22T16:31:11Z ai-1 online in nexus
+- 2026-05-22T16:31:11Z personal-1 online in personlig
+- 2026-05-22T16:31:11Z as-1 online in AS
+- 2026-05-22T16:31:11Z thesis-1 online in master-oppgave
+- 2026-05-22T16:31:11Z soking-1 online in soking-fulltid
+- 2026-05-22T16:37:35Z code-1 online in workspace
+- 2026-05-22T16:37:35Z code-2 online in workspace
+- 2026-05-22T16:37:35Z ai-1 online in nexus
+- 2026-05-22T16:37:35Z ai-2 online in nexus
+- 2026-05-22T16:37:36Z personal-1 online in personlig
+- 2026-05-22T16:37:36Z soking-1 online in soking-fulltid
+- 2026-05-22T16:37:36Z as-1 online in AS
+- 2026-05-22T16:37:36Z thesis-1 online in master-oppgave
+- 2026-05-22T17:07Z code-2: pushed command-center 0bb263e+14e56c4 (Slice 12 auth + Slice 13 multi-engine) → origin/main
+- 2026-05-22T17:14Z code-2: firm-launcher 12 scripts portable (/home/nithu + wt.exe glob); cc ff5d0b3 + brain 6a134d3 committed locally, awaiting OK kjør
+- 2026-05-22T17:14:22Z code-1 received dispatch (inbox +10 lines)
+- 2026-05-22T17:17Z code-2: pushed firm-launcher portability + banner-label fix → command-center a46f504, tiger-brain 4799d6f
+- 2026-05-23T06:22:21Z ai-1 received dispatch (inbox +31 lines)
+- 2026-05-23T06:22Z code-2: dispatched command-center onboarding to inbox/ai-1.md (for Karri)
+- 2026-05-23T06:36:46Z code-1 received dispatch (inbox +7 lines)
+- 2026-05-23T06:37Z code-2: ADR-004 (Slice 14 control-plane/local-agent split + Railway provisioning checklist) committed locally, awaiting OK kjør

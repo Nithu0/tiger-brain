@@ -65,3 +65,58 @@ Karri gikk seg vill: `ai-assistent/tools/terminal/bash/nexus-bashrc.sh` (linje ~
 **Ikke kritisk** — jeg har fikset discoverability i `KARRI-DAY-1.md` (eksplisitt note om at `tools/terminal/` er nexus-shell-temaet, ikke firm-launcheren). Men hvis du vil rydde i din lane: en 1-linjes kommentar i `nexus-bashrc.sh` som peker til `tiger-brain/firm-launcher/` ville lukke dødblindgata helt.
 
 **Påminnelse:** `.zellij/layouts/firm8.kdl` i ai-assistent er fortsatt en dirty fil i din working tree — min mekaniske path-fiks fra `_bin`-flyttingen (`/home/nithu/code/_bin` → `command-center/_bin`). Commit den gjerne med din neste pass. — code-1
+
+## 2026-05-21T15:xxZ — from code-1: sandbox-setup files in ai-assistent — please commit+push
+
+Operatør ba meg sette opp en dev/sandbox-DB-mal etter at Karri fant at lokal `.env` pekte på prod-Railway-Postgres (ingen dev-DB-konvensjon fantes). "kjør på"-counter-signal gitt — additive, ingen money-path-kode endret.
+
+**4 filer i din working tree** — alle additive, mekaniske. Commit + push med din neste pass (jeg pusher ikke Nexus — din lane + OK-kjør-gate):
+- `.env.example` — la til en SANDBOX-vs-PROD-sikkerhetsblokk over `DATABASE_URL`. Kun kommentar, ingen verdiendring.
+- `scripts/sandbox-up.sh` (ny) — starter docker-compose postgres+redis, advarer hvis en `.env` peker på rlwy.net.
+- `docs/ops/sandbox-setup.md` (ny) — runbook: to-lags-modellen, URL-er-grensen, oppsett, recovery.
+- `.zellij/layouts/firm8.kdl` — min path-fiks fra `_bin`-flyttingen (flagget tidligere, fortsatt dirty).
+
+**Kjernen:** sandkassen finnes allerede (docker-compose.yml `postgres`-service, localhost:5432). Problemet var kun at lokal `.env` hadde drevet til prod-URL-en. Ingen kodeendring trengs — `DATABASE_URL`-verdien ER grensen.
+
+**Til vurdering i din lane (jeg implementerte IKKE — money-path-nær):** en startup-guard for firm-agent-laget — hvis `NODE_ENV != production` og `DATABASE_URL` matcher `rlwy.net`, nekt å starte firm-agentene (loud error, scoped til agent-laget, ikke hele workeren — i tråd med "no auto-disable"). Beskrevet i runbookens siste seksjon. Krever proposal hvis den rører money-path-bootstrap. — code-1
+
+---
+## 2026-05-23 — For Karri (når du booter): command-center onboarding
+**Fra:** code-2 (operator-triggered) · **Status:** open · **Type:** dispatch
+
+Command-center er nå på v0.5.0 / Slice 1-13. Klar for deg å kjøre lokalt. Bygd Slice 12 (auth) + Slice 13 (multi-motor Claude+Codex) i går — alt grønt (341/341 tester), pushet til `origin/main` (`14e56c4`).
+
+### 1. Klon + boot
+```bash
+git clone git@github.com:Nithu0/command-center.git ~/code/command-center
+cd ~/code/command-center
+cp .env.example .env
+npm install
+npm run build
+npm run dev   # api 127.0.0.1:3100, web 127.0.0.1:3200
+```
+
+### 2. Slå på auth (anbefalt — også lokalt for å teste innloggingen)
+Rediger `.env`:
+- `AUTH_SECRET=` → lang random verdi (`openssl rand -hex 32`). Tom = auth AV.
+- `AUTH_PASSWORD_KARRI=` → ditt eget passord (operator setter sitt separat).
+- `CC_OPERATOR=karri` (for audit-attribution).
+
+Restart `npm run dev`. Web-en (`localhost:3200`) skal nå vise login-skjerm. Logg inn med `karri` + ditt passord.
+
+### 3. Test multi-motor
+- API-keys i `.env`: `ANTHROPIC_API_KEY=` + `OPENAI_API_KEY=` (skaff selv eller spør operator om team-keys).
+- Header har `EngineSelector` (Claude/Codex). Skriv en intent i Router-panelet og veksel mellom motorene — begge skal returnere svar.
+
+### 4. Ærlig forventning
+- **Foreløpig lokalt per maskin** — vi har ikke bygd Slice 14 (Railway-hosting + cloud-agent-splitt) ennå. Du og operator kjører to separate instanser; delt state går via GitHub (commits) + Obsidian Brain (firm-bus + notes). Det er IKKE en ekte sky-delt sanntid-plattform enda.
+- Endringer du gjør i command-center-repoet pusher du som vanlig til `origin/main` (du er på bypass-list).
+- Audit-logger er per-instans; vi får cross-instance audit først når Slice 14 lander.
+
+### 5. Hvis du vil hjelpe Slice 14-planlegging
+Les `docs/ROADMAP.md` + `docs/adr/ADR-001-firm-bus-boundaries.md` i command-center. Trade-offs jeg vil ha din mening på: control-plane på Railway vs. self-hosted, Postgres vs. Litestream-only, hvordan lokal-agent-runner kobler til sky-API trygt.
+
+### 6. Stuck?
+Ping operator, eller skriv tilbake i `inbox/code-2.md` med spørsmål. firm-bus feed dokumenterer alle endringer.
+
+— code-2

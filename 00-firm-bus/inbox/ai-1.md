@@ -172,3 +172,281 @@ curl -i https://api.anthropic.com/v1/messages \
 Rapporter resultat i `inbox/code-2.md`.
 
 — code-2
+
+---
+## 2026-05-24 — For Karri: full system-brief + command-center oppgaver
+**Fra:** code-2 (operator-triggered, "kjøør") · **Status:** open · **Type:** strategi-dispatch + handlingspunkter
+
+Operator har bestilt full strategi for et nytt sideprosjekt: **privat on-prem AI-infrastruktur** som etter hvert skal bli et salgbart produkt. 10 parallelle agenter leverte i går (CTO/Security/Hardware/Facility/Product/Refi/Business/Sales/Compliance/Execution), syes sammen til 13-seksjons-dokument i Brain:
+
+→ **`03-business/2026-05-24-onprem-ai-strategi.md`** (908 linjer, les den først om du har 30 min)
+
+Her er destillert system-bilde + dine handlingspunkter.
+
+---
+
+### 1. Visjonen — hva vi bygger
+
+Et **privat, on-prem AI-økosystem** som kan prosessere sensitive norske data (refi-dokumenter, regnskap, klient-konfidensielle saker, HMS-rapporter) **uten at data forlater bedriftens nettverk**. Modell-vekter, vektorbase, prompter, audit-trail — alt lokalt. Ingen Anthropic/OpenAI på sensitive payloads, ingen Microsoft Copilot, ingen US-skytjeneste.
+
+**Posisjonering:** "Norsk-eid, on-prem, GDPR-trygg AI for sensitive dokumenter." Konkurrerer ikke på modell-kapasitet — konkurrerer på **data-suverenitet + bransje-spesifikk arbeidsflyt + lokal support**.
+
+**Forretningstrajektorie (12-24 mnd):**
+- Q2 2026: Tier 1 MVP oppe, pilot signert med refi-aktør
+- Q3 2026: Pilot levert + konvertert til løpende, 2 nye piloter
+- Q4 2026: 3 løpende kunder, første referansecase publisert, Tier 2 hardware
+- Q1-Q2 2027: 5-8 kunder, ARR 1.5-2.5M, første heltidsansatt
+- Q3-Q4 2027: Vurdér Tier 3 (mini-cluster) hvis pipeline tilsier
+
+**Tier 4 (mini-datasenter, ~7.5M CAPEX) er IKKE neste steg** — separat finansieringsbeslutning som krever 2-3M ARR.
+
+---
+
+### 2. Produkt-familien (4 pakker, prioritert)
+
+**Pakke 1 — Refi-Co-Pilot** (lanseres FØRST, operator har varm kunde)
+- Målgruppe: refi-formidlere, regnskap med refi-virksomhet, 2-20 ansatte
+- Boks med RTX 4090/5090 + Qwen 72B + 4 agenter (klassifiserer, tall-ekstraktor, sammendrag, avviks-flagger)
+- Reduserer saksbehandlingstid 6t → <1t per refi
+- Pris: 180-250k engangs + 8-15k/mnd, ELLER 18-25k/mnd leasing × 36 mnd
+- Demo-flyt: dra mappe inn → live klassifisering → genere saksnotat → trekk nettverkskabelen midt-demo for å bevise on-prem → vis audit-log
+
+**Pakke 2 — Kontorhjernen** (generell SMB, nr 2 i pipeline)
+- SMB 10-50 ansatte, dokumenttunge prosesser
+- Bilags-matcher mot Tripletex/Fiken API, kontrakt-oppslag, generell Q&A
+- 120-180k + 5-9k/mnd
+
+**Pakke 3 — Suverenitets-boksen** (regulerte kunder, lang syklus)
+- Forsvars-underleverandører, advokater, helse, finans, kommune
+- Air-gap-modus, signert oppdaterings-stick, full compliance-dokumentasjon
+- 250-400k + 12-20k/mnd
+
+**Pakke 4 — Felt-skriveren** (HMS/entreprenør) — **parkeres til 2027**
+
+**Kritisk strategisk valg:** vi bygger **generell on-prem dokument-AI**, ikke "refi-AI". Refi-modul oppå. Refi alene = regulatorisk konsentrasjons-risiko + smal exit + "refi-AI"-stempel som låser oss ut av advokat/HMS/eiendom. Enstemmig anbefaling på tvers av alle 10 agenter.
+
+---
+
+### 3. Teknisk arkitektur (full stack)
+
+**LLM runtime:** vLLM (produksjon, OpenAI-kompatibel API, PagedAttention + continuous batching, AWQ/GPTQ/FP8). Ollama som dev-runtime på siden.
+
+**Modeller:**
+- Primær: **Qwen 2.5 72B Instruct (AWQ-Q4)** — best åpen på norsk slutten 2025. ~40 GB VRAM. Må re-evalueres på norske refi-dokumenter.
+- Sekundær: **Llama 3.3 70B (AWQ-Q4)** — bedre tool-calling, dårligere norsk.
+- Norsk-spesialisert: **NorMistral-11B / NorwAI-Mistral-7B** for NER på personnummer/org.nr + kortere oppsummering.
+- Arbeidshest: **Qwen 2.5 7B/14B** for klassifisering, ruting, struktur-ekstraksjon (kalles 10-100x oftere enn 72B).
+- Embeddings: **bge-m3** (multilingual, 8k context, dense+sparse+colbert).
+- Reranker: **bge-reranker-v2-m3**.
+
+Mistral Large = research-lisens → ute. Nemotron-70B = engelsk-tung → ute.
+
+**Vektorbase:** **Qdrant** (Rust, single-binary, native hybrid BM25+dense+sparse, HNSW + quantization, payload-filter er kritisk for tenant-isolasjon). pgvector kun for små collections (<100k vektorer).
+
+**Hybrid retrieval:** BM25 + bge-m3 + bge-reranker (rerank top-50 → top-10). Qdrant gjør de to første natively.
+
+**OS:** Ubuntu 24.04 LTS bare-metal + Docker + NVIDIA Container Toolkit. ZFS-on-root. Multi-node senere = Proxmox VE på CPU/storage-noder, GPU-noder forblir bare-metal.
+
+**Container/orkestrering per tier:**
+- Tier 1 (1 GPU-node): docker-compose
+- Tier 2 (1 GPU + 1 storage/CPU): docker-compose + systemd
+- Tier 3 (2-3 noder + teammate): K3s
+- Tier 4 (multi-tenant produkt): K3s i HA-modus eller RKE2
+
+**Database:** Postgres 16 + pgvector for metadata. Qdrant separat for vektorer. Schemas: `auth`, `documents`, `cases`, `audit` (immutable partitionert per måned), `agents`. Migration: Atlas. Backup: pgBackRest.
+
+**Storage-arkitektur:**
+- **Hot** (modeller, aktiv DB, vektorindeks): NVMe Gen4, ZFS mirror, recordsize 128k modeller / 16k Postgres, compression=lz4
+- **Warm** (rå dokumenter, logs): SATA SSD, ZFS RAIDZ2, compression=zstd-3
+- **Cold** (backup, arkiv): HDD, ZFS RAIDZ2/mirror-stripe, compression=zstd-9, dedup AV
+
+**Backup (3-2-1):**
+- Lokal 1: ZFS snapshots hver 15. min hot, hver time warm (`sanoid`)
+- Lokal 2: `zfs send | zfs receive` til cold-pool nattlig (`syncoid`)
+- Off-site: **restic → Hetzner Storage Box** primær, **Backblaze B2** sekundær. Client-side encryption.
+- RPO 15 min / 1 t / 24 t. RTO 1 t / 8 t / 24 t.
+- Månedlig automatisert restore-test + checksum-verify. Backup uten testet restore = ingen backup.
+
+**Overvåkning:** Prometheus + Grafana + Loki + Alertmanager + node_exporter + cAdvisor + nvidia-gpu-exporter + postgres_exporter + qdrant `/metrics` + blackbox_exporter. Alarmer til ntfy/Discord — operator beslutter handling (no auto-action per global policy).
+
+**Reverse-proxy:** **Caddy** med auto-TLS via DNS-01 mot Let's Encrypt for `*.internt-domene.no`. Intern step-ca for mTLS mellom tjenester.
+
+**Agent-orkestrering:** **Utvid command-center med en LangGraph-runtime-pakke.** Ikke adopter Letta/CrewAI som rammeverk. Command-center har allerede router/executor/agents — LangGraph gir graph-state + checkpointing + human-in-the-loop som er kritisk for refi-flyt (multi-step med godkjenningssteg). Pakk LangGraph som executor-engine bak eksisterende router-API.
+
+**Logisk topologi (VLAN):**
+- mgmt (10.10.0.0/24) — IPMI, switch-mgmt, Proxmox-UI, ssh-bastion
+- ai-compute (10.10.10.0/24) — GPU-noder, vLLM, embedding, Qdrant, Postgres. **Ingen direkte internett-ut.**
+- services (10.10.20.0/24) — Caddy, command-center, agent-orchestrator, monitoring
+- klient (10.10.30.0/24) — operator + teammate-laptops
+- gjest + IoT (10.10.40.0/24, 10.10.50.0/24) — isolert
+
+Default-deny mellom alle. Allow-regler i git.
+
+---
+
+### 4. Sikkerhetsarkitektur
+
+**Trusselmodell:** opportunistisk kriminell + målrettet konkurrent + revisjonskrav fra kunde. IKKE statlig aktør.
+
+**Tilgangsmodell:** WireGuard-konsentrator på OPNsense (UDP 51820, svarer ikke på pakker uten gyldig handshake). Bak WG: intern jump-host (kun SSH + auditd). Alle AI-tjenester nås via jump-host — ALDRI direkte fra WG-subnet til compute.
+
+**Identitet + 2FA:**
+- SSH: ed25519, `PasswordAuthentication no`, `PermitRootLogin no`
+- YubiKey 5 (2 stk per person, primær + backup i safe) for sudo, WG-config, jump-host SSH
+- Recovery-koder: papir i bankboks + forseglet konvolutt hjemme. ALDRI digitalt utenom Bitwarden.
+
+**Disk-kryptering:** LUKS2 på alt persistent. Argon2id. **Clevis + Tang for compute-noder** (unattended reboot uten passphrase). Tang på OPNsense-boksen. Backup-disker: LUKS2 med egen passphrase.
+
+**Brannmur:** OPNsense, default-deny mellom VLAN. 8 konkrete allow-regler dokumentert i strategien.
+
+**Audit-logging:** SSH-auth, sudo, container start/stop, hver LLM-prompt + response-metadata, dokument-tilgang, eksport. Sentral syslog-host (egen disk, `chattr +a` + ZFS-snapshots). Daglig hash-chain rotert til S3 Glacier med Object Lock (WORM).
+
+**Secret management:** SOPS + age (key i YubiKey PIV-slot) for solo. Bytt til Vault (self-hosted) ved 2-3 teammates.
+
+**Supply chain:** pip-tools med hash-pinning, npm ci + audit signatures, Docker via egen Harbor-registry med cosign-verify, modell-weights SHA256-verifisert.
+
+**Hva er FORTSATT svakt (ærlig liste):**
+- Sosial engineering (YubiKey motstår credential-phish, ikke session-hijack)
+- Evil-maid mens du sover
+- Operator/teammate laptop kompromittert
+- GPU side-channel multi-tenant (ikke flere kunder på samme GPU samtidig før MIG-partisjonering verifisert)
+- LLM-output regurgiterer treningsdata (ingen cross-tenant finetune)
+- Brann/flom hjemme (off-site backup er svaret)
+
+**Minimum-baseline før første kunde-pilot (5 ikke-forhandlingsbare):**
+1. WireGuard + jump-host + OPNsense VLAN, pen-testet
+2. LUKS2 + Clevis/Tang, restore-test gjennomført
+3. YubiKey 2FA på SSH + sudo + WG
+4. Sentral audit-log med WORM, hash-chain verifisert
+5. Tenant-isolering (Postgres RLS + MinIO-buckets) + operator-impersonation logges
+
+---
+
+### 5. Hardware-roadmap (4 tiers)
+
+| Tier | Hva | Strøm | Støy | Kontorrom? | Kost NOK |
+|---|---|---|---|---|---|
+| 1 — MVP | 1 workstation, 2x brukt 3090 (48GB VRAM), 128GB RAM | 750-950W | 45-50 dB | Ja | ~54k |
+| 2 — Sterk prototype | Supermicro 4U SQ, 1x RTX 6000 Ada 48GB, 256GB ECC, Synology NAS, OPNsense, 18U rack | 1100W | 52-55 dB | Med tiltak | ~258k |
+| 3 — Kontor-lab | 2-node EPYC, 2x H100 PCIe + 2x L40S, 768GB ECC, TrueNAS Mini R, dedikert AC | 4500W | 65-72 dB | Nei (eget rom) | ~1.46M |
+| 4 — Mini-DC | 3x GPU-noder, 12x H100 SXM5, presisjons-AC, 3-fase 32A, gass-slukker | 11kW | 78-85 dB | Aldri | ~7.5M |
+
+**Start på Tier 1.** 54k er gjenvinnbart (3090 selges videre). Tier 2 utløses av første LOI, ikke håp. Tier 3 krever facility-investering FØR H100-bestilling.
+
+**Migrasjonssti:** Tier 1 → 6 mnd validering → Tier 2 ved første betalende → Tier 3 først når 3+ kunder + dedikert serverrom klart.
+
+---
+
+### 6. Refi som første pilot (men IKKE som produkt-identitet)
+
+Operatorens kontakt: refi-aktør (låneformidler for privatpersoner). Hver sak = 20-100 sider dokumenter, 4-8 timer manuelt.
+
+**Hva AI kan automatisere (60-75 % redusert tid, ikke 95 %):**
+- OCR + klassifisering + tall-ekstrahering (Høy)
+- Sjekklister + kredittdokumentasjon-utdrag (Full/Høy)
+- Søknadsforberedelse per bank (Middels, templates + LLM fyller slots)
+- Oppfølging + CRM + varsler (Full)
+- KYC-flagging (Lav-Middels, **må overflate**, aldri filtrere bort)
+- Rapporter (Høy)
+
+**Hva mennesket fortsatt MÅ gjøre:**
+- Endelig kredittvurdering (regulatorisk)
+- Bank-forhandling
+- Kompleks-cases (skilsmisse, sykdom, gjeldsordning)
+- Identitetsverifisering (BankID)
+- Etisk skjønn / pris-følsom rådgivning
+
+**Regulatorisk: TO åpne spørsmål til jurist FØR første salg:**
+1. Blir vi medformidler under låneformidlingsloven (2022)?
+2. Refi = high-risk under EU AI Act?
+
+Hvis (1) = ja: re-arkitekturer ELLER pivot til mindre regulert nisje først (HMS, advokat, regnskap).
+
+**Trygt design (ufravikelig):**
+- Human-in-the-loop på ALT med tall som går til kunde/bank
+- **Deterministisk Python regner tallene** — LLM forklarer, kalkulator produserer
+- Personnummer-maskert i logger og UI
+- Templates for bank-søknader = låste maler, LLM fyller definerte slots, ikke fri-form
+- Egress-kontroll: hardline-filter mot personnummer/IBAN/kontonummer-regex blokker eksterne AI-API
+- Eksport = audit-event + kvitterings-PDF
+- Tydelig juridisk merking: "Beslutningsstøtte — ikke kredittrådgivning"
+
+---
+
+### 7. Hva du må gjøre NÅ (command-center)
+
+Du har 2 ting hengende fra i går:
+
+**A. 401-fix er pushet** (commit `83d527d` på `origin/main`)
+Diagnose var: dotenv overrider ikke shell-set vars by default. En gammel `ANTHROPIC_API_KEY` i din `~/.bashrc` / `~/.profile` shadowet `.env`-verdien stille. `apps/api/src/env.ts` bruker nå `override: true` så `.env` alltid vinner (gated av i NODE_ENV=test pga vitest-stubs).
+
+**Steg på din side:**
+```bash
+cd /home/karri/code/command-center
+git pull origin main
+# Ctrl-C dev-serveren først, så:
+npm run dev
+# Test:
+curl -X POST http://localhost:3100/api/router/intent \
+  -H 'content-type: application/json' \
+  -d '{"intent":"check git status"}'
+# Skal returnere 200 med command-forslag fra Claude.
+```
+
+Hvis fortsatt 401 etter pull + restart → test nøkkelen rå:
+```bash
+KEY=$(grep ^ANTHROPIC_API_KEY= .env | cut -d= -f2- | tr -d '"' | tr -d "'")
+curl -i https://api.anthropic.com/v1/messages \
+  -H "x-api-key: $KEY" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "content-type: application/json" \
+  -d '{"model":"claude-opus-4-7","max_tokens":10,"messages":[{"role":"user","content":"hi"}]}'
+```
+200 her = appen er problemet. 401 her = nøkkelen er ugyldig på Anthropic-siden.
+
+**B. Slice 14a (Railway-scaffolding) er på origin/main**
+Commit `e59094d feat(slice-14a): Dockerfile + .dockerignore + railway.json` ligger ute. Den aktiverer ingenting før code-1's executor/Brain/firm-bus env-guards lander. Du trenger ikke gjøre noe med den nå — bare vit at den finnes.
+
+---
+
+### 8. Hva du KAN ta over framover (når du har båndbredde)
+
+Operator er solo + dette nye prosjektet blir mye. Hvis du har 5-10t/uke fra måned 2-3, her er konkrete chunks som passer din profil (Nexus strategy + sterk teknisk):
+
+**Lav-friksjon (kan startes uten mye koordinering):**
+1. **LangGraph-utforskning** — bygg en proof-of-concept LangGraph-engine bak command-centers router-API. Test refi-flyt: PDF inn → klassifiser → ekstraher → sammendrag → menneske-godkjenning → export. Egen sandbox, ikke i prod.
+2. **Modell-evaluering på norsk** — bygg en eval-suite med 20-30 norske refi-dokumenter (anonymisert). Sammenlign Qwen 2.5 72B vs Llama 3.3 70B vs NorMistral på: tall-ekstraksjon-accuracy, dokumentklassifisering, oppsummering-kvalitet. Skriv opp i Brain.
+3. **Sikkerhets-baseline-script** — bash/ansible som setter opp Tier 1-sikkerhets-baseline (LUKS-check, SSH-config, brannmur-regler, auditd, restic-cron). Idempotent, kjørbart per ny node.
+
+**Mid-friksjon (krever koordinering med operator):**
+4. **Refi-prompt-templates** — du kjenner Nexus-strategi/risk-domener, samme tankegang for refi. Bygg 5-10 prompt-templates for de vanligste sak-typene. Test mot ekte (anonymiserte) dokumenter når operator får dem fra refi-aktør.
+5. **Vektorbase-eksperimentering** — Qdrant hybrid retrieval på norske dokumenter. Tune BM25 + dense + reranker for det norske språket. Mål: recall@10 > 90% på definerte queries.
+
+**Høy-friksjon (etter pilot signert):**
+6. **Pilot-installasjon** — hjelp med å sette opp Tier 1 hardware fysisk hos refi-aktør (eller eksternt via WireGuard).
+7. **Audit-trail-modul** — innebygd fra dag 1 i refi-pilot. Append-only, hash-kjede, WORM-snapshot.
+
+---
+
+### 9. Lese-rekkefølge
+
+1. **Først:** `03-business/2026-05-24-onprem-ai-strategi.md` (full 13-seksjons-doc)
+2. Hvis du vil dykke i tech: §3 (CTO) + §4 (Security) + §5 (Hardware) — 25 min
+3. Hvis du vil hjelpe med refi-pilot: §8 (Refi-analyse) + §11 (Execution) — 15 min
+4. Hvis du vil forstå pris/forretning: §7 (Produkt) + §9 (Business) + §10 (Sales) — 15 min
+
+---
+
+### 10. Hva operator vil ha tilbake fra deg
+
+Etter du har lest:
+
+1. **Bekreft 401-fix funker** på din maskin (`inbox/code-2.md` med "OK" + curl-resultat)
+2. **Si fra om en av oppgavene i §8 frister** — operator vil gjerne dele oppgaver fra måned 2
+3. **Push-back på system-design hvis du ser noe** — du har sterke meninger på Nexus-strategi, antakelig sterke meninger her også. Spesielt: hardware-tier-valg (er Tier 1 nok? skal vi vente på Tier 2?), modell-valg (Qwen 72B vs noe annet?), agent-orkestrering (LangGraph vs build-it-self?).
+4. **Hvis du har tilgang til Discord-webhook**, sett den opp i Nexus `.env` så code-2 kan poste dispatch-bekreftelser uten å gå via firm-bus
+
+Operator er ikke avhengig av deg for noe akutt. Men hvis prosjektet skal vokse fra solo-bygger til 2-personers team, er du den naturlige co-builder gitt at vi allerede deler GitHub + Obsidian + Claude-instans.
+
+— code-2
+

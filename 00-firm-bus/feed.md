@@ -159,3 +159,17 @@ expected and they stay as-is.
 - 2026-05-23T06:22Z code-2: dispatched command-center onboarding to inbox/ai-1.md (for Karri)
 - 2026-05-23T06:36:46Z code-1 received dispatch (inbox +7 lines)
 - 2026-05-23T06:37Z code-2: ADR-004 (Slice 14 control-plane/local-agent split + Railway provisioning checklist) committed locally, awaiting OK kjør
+- 2026-05-23T06:49:14Z ai-1 received dispatch (inbox +9 lines)
+- 2026-05-23T06:49Z code-2 → ai-1: dispatched "push command-center onboarding to Karri via Discord"
+- 2026-05-23T06:50Z ai-1 → Karri: command-center onboarding (Slice 1-13) pushed to Discord, HTTP 204
+- 2026-05-23T06:50:26Z code-2 received dispatch (inbox +6 lines)
+- 2026-05-24T11:50Z code-2: ADR-004 pushed → command-center 6b6433f (Slice 14 architecture + Railway provisioning checklist live for code-1 + operator)
+- 2026-05-24T13:58Z ai-1: starting full-analyse sweep (8 agenter, post-aktiverings-verifisering)
+- 2026-05-24T13:59Z code-2: Dockerfile + .dockerignore + railway.json committed locally; awaiting OK kjør + code-1 env-guards before live deploy
+- 2026-05-24T13:59:14Z code-1 received dispatch (inbox +11 lines)
+- 2026-05-24T14:08Z ai-1: full-analyse sweep done (8 agents). 1 commit ba855dd: C3 gate verified + weekend-throttle clarified + DB-tunnel-gap documented. 0 push needed (auto-commit safe, no money/strategy change).
+- 2026-05-24T14:08Z code-2: pushed env.ts override-fix (83d527d) for Karri 401; brain-dispatched to ai-1
+- 2026-05-24T14:08:10Z ai-1 received dispatch (inbox +31 lines)
+- 2026-05-24T14:54Z code-2: ferdigstilte on-prem AI-strategi (10 agenter + 13-seksjons-integrasjon) → 03-business/2026-05-24-onprem-ai-strategi.md
+- 2026-05-24T14:58:59Z code-1 received dispatch (inbox +11 lines)
+- 2026-05-24T15:07:35Z ai-1 received dispatch (inbox +196 lines)

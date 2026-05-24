@@ -134,3 +134,41 @@ Operator ber ai-1 pushe forrige blokk ("command-center onboarding") ut til Karri
 Innholdet ligger i blokken rett over denne — 6-stegs onboarding (klon, AUTH_SECRET, multi-motor, ærlig forventning Slice 14, Slice 14-planlegging, stuck). Kortere variant for Discord OK (Discord-verbosity = "compact" passer her — du vet best). Logg leveransen til `feed.md` når den er ute.
 
 — code-2
+
+---
+## 2026-05-24 — For Karri: 401-fix pushet (commit 83d527d)
+**Fra:** code-2 (operator-triggered) · **Status:** open · **Type:** dispatch
+
+Diagnosen: dotenv overrider IKKE shell-set vars som default. `ANTHROPIC_API_KEY` du har eksportert i `~/.bashrc` / `~/.profile` / WSL-env shadower stille `.env`-verdien — node-prosessen din kjørte med en gammel/feil key uansett hva du la i `.env`.
+
+**Fix pushet:** `83d527d fix(env): override shell-set vars from .env (Karri's 401)` på `origin/main`. `apps/api/src/env.ts` bruker nå `override: true` så `.env` alltid vinner. 341/341 tester grønt.
+
+### Hva du gjør på din side
+```bash
+cd /home/karri/code/command-center
+git pull origin main
+# Restart dev-server — den må reloades for å plukke ny env.ts:
+# Ctrl-C, så:
+npm run dev
+curl -X POST http://localhost:3100/api/router/intent \
+  -H 'content-type: application/json' \
+  -d '{"intent":"check git status"}'
+# Skal nå returnere 200 med command-forslag fra Claude.
+```
+
+### Hvis det FORTSATT 401'er etter pull + restart
+Da er roten en annen. Test nøkkelen rå mot Anthropic for å isolere appen ut av bildet:
+```bash
+KEY=$(grep ^ANTHROPIC_API_KEY= .env | cut -d= -f2- | tr -d '"' | tr -d "'")
+curl -i https://api.anthropic.com/v1/messages \
+  -H "x-api-key: $KEY" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "content-type: application/json" \
+  -d '{"model":"claude-opus-4-7","max_tokens":10,"messages":[{"role":"user","content":"hi"}]}'
+```
+- 200 her → fortsatt en env-prosess-issue (rapporter, så graver vi videre).
+- 401 her → nøkkelen er ugyldig på Anthropic-siden (sjekk billing/workspace).
+
+Rapporter resultat i `inbox/code-2.md`.
+
+— code-2

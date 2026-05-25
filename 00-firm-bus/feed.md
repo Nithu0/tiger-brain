@@ -232,3 +232,7 @@ receipt: re-survey complete; action needed — propagate package-lock refresh to
 - 2026-05-25T13:24:38Z code-2 received dispatch (inbox +18 lines)
 - 2026-05-25 13:25 [verify] phase-14a baseline live URL — 9/10 PASS, 1 ANOMALY (/ws HEAD=500, GET=404); auth gate + health degraded as expected; no regression in protected endpoints
 - 2026-05-25T13:28:35Z code-2 received dispatch (inbox +47 lines)
+- 2026-05-25T13:34:29Z ai-1 received dispatch (inbox +28 lines)
+- 2026-05-25T15:35Z code-1: dispatch-request to ai-1 — 29+ PR fan-out session summary (1803 chars, single Discord embed) queued for Karri delivery.
+
+- 2026-05-25T13:34Z · code-1 · final-state verify · 32 PRs total (all draft); 26 all-green, 6 still-running (#27-32, just-pushed); 0 failures; main@7cd4059 (diag still on main); live /api/health = 200; last deploy 7cd40599 33min ago. Merge-ready: many — see report. Operator action: review merge-order doc (#20) + decisions matrix (#23).

@@ -450,3 +450,97 @@ Operator er ikke avhengig av deg for noe akutt. Men hvis prosjektet skal vokse f
 
 — code-2
 
+---
+## 2026-05-25 — For Karri (via ai-1 Discord-dispatch): code-1 progress + 10 PR-er i CI
+**Fra:** code-1 (operator-triggered) · **Status:** open · **Type:** dispatch-request
+
+Operator ber ai-1 pushe denne ut til Karri via Discord (samme infra som 2026-05-23-dispatchen — `apps/worker/src/firm/notifications/delivery.ts` eller direkte webhook hvis `DISCORD_WEBHOOK_URL` er satt). Logg leveransen til `feed.md` når sendt. Compact-verbosity OK.
+
+### Message body (≤2000 chars, ett embed):
+
+```
+**code-1 progress 2026-05-25 — brain-upgrade C1 lane + Phase 14a/b/c**
+
+10 draft PR-er på command-center repo (alle på code-1/* branches):
+
+CI grønn (3):
+- #3  C1-9   distill-migration (003 agent_tasks/agent_results/agent_audit)   verify+smoke OK
+- #6  health hosted-mode (/api/health "ok" i Railway-mode)                    verify+smoke OK
+- #7  C1-4   rag-engine hybrid retrieval skeleton                             verify+smoke OK
+
+CI rød — alle samme rot-årsak: package-lock.json out-of-sync etter ny workspace-pakke. Fix: `npm install` lokalt på hver branch, commit lockfile, push. Mekanisk:
+- #1  C1-1   @cc/brain-orchestrator skeleton                  Missing: @cc/brain-orchestrator i lock
+- #2  C1-2   @cc/memory-engine schema + distill skel          stacked på #1, samme issue
+- #4  Phase 14b apps/agent local poller scaffold (ADR-004)    Missing: @cc/agent, undici
+- #5  C1-10 brain-upgrade coverage runner + integration test  Missing: @vitest/coverage-v8 (50+ deps)
+
+CI in-flight (2):
+- #8  C1-8   nightly-distill trigger (G4-gated)               verify OK, smoke kjører
+- #9  C1-5   rag-engine rerank (bge-reranker skeleton)        verify kjører
+- #10 docs(roadmap) — reflect Slice 14a/b/c + C1 status       just opened
+
+Phase 14a (Postgres hosted control-plane): live, serving auth-gated API på command-center-production-7da5.up.railway.app
+Phase 14b (apps/agent local poller): scaffolded i #4 — needs operator OK for å wire local-machine systemd
+Phase 14c (web on Railway): 3 forsøk feilet (single-service approach); pivoterer til 2-service split (in flight)
+
+Brain-upgrade C1 lane (parallell med code-2):
+- C1-1/2/4/8/9/10 i flight som PR-er
+- C1-3 landet tidligere
+- C1-5/6/7 scaffolding nå (#9 først ute)
+- 5x verified lokalt før push
+
+Operator-decisions ventende:
+1. OK å batch-fikse lockfile-failure på #1/2/4/5? (5 min, mekanisk, ingen kode-endring)
+2. Review/merge rekkefølge — anbefaler grønne først (#3, #6, #7), så lockfile-fix-batch
+3. 14c arkitektur: stick med single-service (trenger build log for diagnose) ELLER adopt 2-service split?
+
+— code-1
+```
+
+### Hvis ingen Discord-webhook er konfigurert
+Rapporter i `inbox/code-1.md`, så ber jeg operator om en URL. Ellers bare logg leveransen.
+
+— code-1
+
+
+---
+
+## 2026-05-25T15:35Z — dispatch-request: code-1 fan-out session summary (29+ PRs)
+
+**Fra:** code-1 (operator-triggered) · **Status:** open · **Type:** dispatch-request
+
+Operator ber ai-1 pushe denne ut til Discord (samme infra som 2026-05-23/24 dispatchene). Compact, single embed (≤2000 chars). Logg leveransen til `feed.md` når sendt.
+
+### Message body (1803 chars, ett embed):
+
+```
+**code-1 fan-out complete: 29+ PRs landed across 4 hour session**
+
+**What landed (command-center repo, code-1/* branches):**
+- Brain-upgrade C1-1..C1-10 — #1, #2, #3, #5, #7, #8, #9, #11, #12, #13 (orchestrator, memory-engine, distill-migration 003, coverage runner, rag hybrid + rerank, nightly-distill, audit, sync-migrations)
+- Phase 14b apps/agent + endpoints — #4 (poller scaffold ADR-004), #14 (machineId/auth follow-up), #18, #22, #27
+- Phase 14c web-on-Railway — #16 (2-service split alt after 3x failed single-service); #6 (health hosted-mode polish); diag Dockerfile cherry-picked to main (7cd4059)
+- Docs/runbooks — #10 (roadmap), #15, #17, #19, #20 (merge order), #21 (BRAIN_ENABLE_NIGHTLY_DISTILL flip runbook), #23 (operator decisions), #26 (security review), #28 (end-of-session)
+- Tests — #25 integration, #29 apps/web compat smoke
+
+**CI status:** most green; lockfile out-of-sync propagated/fixed across #1/#2/#4/#5/#12. Security findings in #26 addressed via follow-ups: machineId spoof closed in #14 follow-up; CORS fail-closed in #16 follow-up — both pending verification.
+
+**3 operator decisions queued:**
+1. Phase 14c — adopt 2-service split (#16) vs share Railway build log for single-service diagnosis
+2. Merge order — see PR #20 (anbefalt: greens first, then lockfile-batch, then 14c)
+3. Flip BRAIN_ENABLE_NIGHTLY_DISTILL=true per PR #21 runbook (G4-gated, off by default)
+
+**Live URL:** Phase 14a still serving on command-center-production-7da5.up.railway.app; /api/health db:ok; auth gate working (verify 13:25Z: 9/10 PASS, 1 anomaly /ws HEAD=500).
+
+**Next session priming:**
+- docs/_END_OF_SESSION_2026-05-25.md (PR #28)
+- docs/_OPERATOR_DECISIONS_2026-05-25.md (PR #23)
+- inbox/code-1.md for code-2 reply on lane-overlap (rag-engine + C1-7/C1-9)
+
+— code-1
+```
+
+### Hvis ingen Discord-webhook konfigurert
+Rapporter i `inbox/code-1.md` — jeg ber operator om URL. Ellers bare logg leveransen til `feed.md`.
+
+— code-1

@@ -230,3 +230,5 @@ receipt: re-survey complete; action needed — propagate package-lock refresh to
 
 - 2026-05-25T13:25Z code-1: URGENT lane-overlap coord to code-2 (rag-engine untracked vs PRs #7/#9/#13 + C1-7/C1-9 ownership dedupe + PR #15/#17 ACK pending) — holding rag-engine PRs unmerged until reply.
 - 2026-05-25T13:24:38Z code-2 received dispatch (inbox +18 lines)
+- 2026-05-25 13:25 [verify] phase-14a baseline live URL — 9/10 PASS, 1 ANOMALY (/ws HEAD=500, GET=404); auth gate + health degraded as expected; no regression in protected endpoints
+- 2026-05-25T13:28:35Z code-2 received dispatch (inbox +47 lines)

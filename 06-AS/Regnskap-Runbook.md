@@ -1,3 +1,10 @@
+---
+title: Regnskap-Runbook — månedlig rutine
+type: runbook
+created: 2026-05-14
+tags: [runbook, as, regnskap, månedlig]
+---
+
 # Regnskap-Runbook — månedlig rutine
 
 Kjøres første hverdag i ny måned. Estimat: 30-60 min.

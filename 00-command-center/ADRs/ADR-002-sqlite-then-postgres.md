@@ -1,3 +1,11 @@
+---
+title: "ADR-002: SQLite for Slice 1, Postgres later"
+type: decision
+status: accepted
+created: 2026-05-16
+tags: [adr, command-center, database]
+---
+
 # ADR-002: SQLite for Slice 1, Postgres later
 
 **Status:** accepted (2026-05-16) — supersedes operator's initial "Postgres" choice for Slice 1 only.

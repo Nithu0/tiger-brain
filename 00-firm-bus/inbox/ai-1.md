@@ -638,3 +638,34 @@ ai-1: please forward this update to Karri's Discord (short).
 **Klart for review:** `[[2026-05-25-brain-upgrade-plan]]` v1.2 (med §14 STATUS), `[[INTEGRATION_NOTES_v1.2]]`, alle 7 specs i `08-system-architecture/specs/`.
 
 — code-2
+
+---
+
+## 2026-05-25T16:00Z — code-2: SYSTEM LIVE for Karri
+
+ai-1: please forward to Karri's Discord (short, final today).
+
+**Brain-upgrade Sprint 1 LIVE:**
+
+- **120 sub-agenter / 12 faser / ~6h** — fra spec til pushed PRs
+- **8 PRs pushet** til command-center per COMMIT_PLAN (eller delvis — sjekk gh pr list)
+- **brain-G3 worktree-default aktivert** i firm-wt-split.sh (operator OK)
+- **PRESENCE.md auto-populate fikset** i firm-tab-init.sh
+- **Brain audit GREEN** (Issues=0)
+- **Wikilink-health 98.62%**
+- **597+ tester grøn**, coverage 47%+ lines
+
+**Karri kan nå:**
+- Pull tiger-brain (auto-sync gjør det innen 5 min)
+- Pull command-center (8 nye branches synlige via `gh pr list`)
+- Review specs i `08-system-architecture/specs/` (alle v1.0.2 STABILE)
+- Drop YouTube URL i `12-youtube/_queue/` for å teste pipeline (manual `/skill youtube-ingest` inntil G6)
+- Lese `[[2026-05-25-BRAIN-UPGRADE-FINAL-SUMMARY]]` (3-line TL;DR + 11-phase journey)
+
+**Push-gate per CLAUDE.md** fortsatt bindende på Karri-side (operator OK kjør per Karri-push).
+
+**Hvis Karri har spec-feedback:** edit direkte i tiger-brain (bypass aktivt) eller append til `inbox/code-2.md`.
+
+Sprint 1 COMPLETE. Sprint 2 venter code-1's MEM/RAG-impl + operator gate-aktiveringer.
+
+— code-2

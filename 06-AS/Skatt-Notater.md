@@ -1,3 +1,10 @@
+---
+title: Skatt-Notater — norsk skatt-cheatsheet (AS + ENK + MVA)
+type: note
+created: 2026-05-14
+tags: [skatt, mva, regnskap, norge, as, enk, cheatsheet]
+---
+
 # Skatt-Notater — norsk skatt-cheatsheet (AS + ENK + MVA)
 
 > **STATUS 2026-05-14**: operatør driver som ENK. Overgang til AS i september 2026 — se [[ENK-til-AS-overgang-September-2026]]. Inntil overgangen er ENK-seksjonene under primær; AS-seksjonene er forhåndslesning.

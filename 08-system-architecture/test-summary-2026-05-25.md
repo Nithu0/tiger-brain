@@ -146,3 +146,23 @@ Coverage runner not executed in this session (5-min budget skipped; v8 coverage 
 6. **Silence intentional stderr in `github` tests.** vitest setup to suppress logger output during error-path assertions.
 7. **Add @cc/sync tests** — at minimum a smoke test that Litestream wrapper boots without throwing, plus migration apply order.
 8. **Track baseline weekly.** Capture `522` as the post-fase-4 baseline; expect ~+30 per active sprint phase.
+
+
+## Final verification (post fase 12 EXECUTE — 2026-05-25T16:00Z)
+
+| Metric | Pre-sprint | Post-fase 11 | Post-fase 12 |
+|---|---|---|---|
+| Total tests | 341 | 597 | 597 (+1 todo, 1 skipped) |
+| Passing | 341 | 597 | 597 |
+| Lines coverage | n/a | 47.63% | 47.63% |
+| Branches | n/a | 77%+ | 77.21% |
+| Functions | n/a | 73%+ | 73.1% |
+| Typecheck | n/a | clean | clean |
+| Status | baseline | GREEN | GREEN |
+
+**Run details (2026-05-25T19:00Z local):**
+- `npm install --silent`: clean (no output, no errors).
+- `npm run typecheck`: all 12 packages clean (shared, bus, engines, git, router, executor, agents, github, sync, brain, auth, apps/api).
+- `npm test`: 57 files passed, 1 skipped; 597 tests passed, 1 todo. Duration 4.58s.
+- `npm run test:coverage:summary`: Statements 47.63% (4881/10247), Branches 77.21% (1322/1712), Functions 73.1% (231/316), Lines 47.63% (4881/10247).
+- No new failing tests vs post-fase-11; test count steady at 597 — fase 12 added no new tests but did not regress existing ones.

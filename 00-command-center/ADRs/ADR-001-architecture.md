@@ -1,3 +1,11 @@
+---
+title: "ADR-001: Standalone command-center repo, loose interfaces"
+type: decision
+status: accepted
+created: 2026-05-16
+tags: [adr, command-center, architecture]
+---
+
 # ADR-001: Standalone command-center repo, loose interfaces
 
 **Status:** accepted (2026-05-16)

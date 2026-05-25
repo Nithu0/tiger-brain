@@ -1,3 +1,10 @@
+---
+title: Nexus platform status — navigation hub
+type: status
+created: 2026-05-21
+tags: [nexus, platform, status]
+---
+
 # Nexus platform status — navigation hub
 
 Single place to see what the trading platform actually shows, what is real vs

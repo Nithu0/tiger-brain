@@ -1,3 +1,10 @@
+---
+title: AS-MOC — Map of Content
+type: moc
+created: 2026-05-14
+tags: [as, regnskap, økonomi, norge, skatt]
+---
+
 # AS-MOC — Map of Content
 
 Hovedinngang for AS/ENK-relatert kunnskap i brain-vault. Bilag og analyse-noter ligger i `/home/nithu/code/AS/`, ikke her.

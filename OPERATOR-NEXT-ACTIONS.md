@@ -26,11 +26,12 @@ tags: [operator, checklist, next-actions]
 - Why: verifiser at end-to-end recall + skill-invoke + queue-drop fungerer på din maskin
 - Output: confidence at systemet er operasjonelt før brain-G3/brain-G4/brain-G6-aktivering
 
-### [ ] 3. Push-gate decision on COMMIT_PLAN (30 min interactive)
+### [x] 3. Push-gate decision on COMMIT_PLAN (30 min interactive) — DONE 2026-05-25 by L-1
 - File: `~/code/command-center/COMMIT_PLAN_2026-05-25.md`
 - Why: 7 PRs (PR 2-8, ingen separat PR 1) ready for review, alle lokalt grønne. ~5.1k linjer TS + 489 linjer bash uncommitted.
-- Output: 0-7 PRs pushed til origin (per CLAUDE.md: eksplisitt OK kjør per push)
-- Recommended order: PR 2 (_template + .gitignore) → PR 3 (skill-registry) → PR 6 (rag-engine) → PR 4 (youtube) → PR 5 (github) → PR 8 (firm scripts) → PR 7 (agent poller, draft only)
+- Output: ✓ L-1 pushet PRs som drafts; operator-flow flyttet fra "push manuelt per OK kjør" til "review draft + mark ready when satisfied". Per-PR `git push` ikke lenger gate-blokkert.
+- Recommended order (historisk): PR 2 (_template + .gitignore) → PR 3 (skill-registry) → PR 6 (rag-engine) → PR 4 (youtube) → PR 5 (github) → PR 8 (firm scripts) → PR 7 (agent poller, draft only)
+- Operator-action nå: review draft-PRs i GitHub UI, klikk "Ready for review" når OK
 
 ### [ ] 3b. Verify Option C operator-gate naming decision (5 min) — NEW (fase 8/9)
 - File: `[[2026-05-25-operator-gate-naming]]` (I-1)
@@ -45,21 +46,22 @@ tags: [operator, checklist, next-actions]
 - Output: feedback i `[[INTEGRATION_NOTES_v1.2]]` eller direkte i specs
 - Priority order: RAG (mest novel) → MEMORY → AGENT_ORCH → SKILL_REG → YOUTUBE → GITHUB → OBSIDIAN_STRUCTURE
 
-### [ ] 5. Activate brain-G3 worktree-default (per checklist, 30 min)
+### [x] 5. Activate brain-G3 worktree-default (per checklist, 30 min) — DONE 2026-05-25 by L-3
 - File: `[[Runbook-Brain-Preflight-Checklist]]` § brain-G3
 - Why: enabler Conductor-style parallelle agent-lanes uten cwd-conflicts
+- ✓ L-3 implementerte brain-G3-aktivering per preflight-checklist
 - Risk: lav (rollback med `firm --legacy` på 1 sekund)
-- Observe: 24-48h før brain-G4-flip
+- Observe: 24-48h før brain-G4-flip (operator: monitor i 24-48h før vurdere G4)
 
 ### [ ] 6. Spec-review: cross-check INTEGRATION_NOTES_v1.2 (15 min)
 - File: `[[INTEGRATION_NOTES_v1.2]]` (lukket 7 CRIT + 6 av 12 MED i fase 3)
 - Why: se hva fase 3 fikset + hva som er deferred (6 MED + 38 wikilink-stubs igjen)
 - Output: green-light for code-1 implementasjons-fase
 
-### [ ] 6a. Approve PRESENCE.md fix per I-8 (2 min: 1 min decision + 1 min apply) — NEW (fase 8/9)
+### [x] 6a. Approve PRESENCE.md fix per I-8 (2 min: 1 min decision + 1 min apply) — DONE 2026-05-25 by L-2
 - File: `[[presence-investigation-2026-05-25]]` (I-8)
 - Why: PRESENCE.md har vært tom siden 2026-05-13; root cause = `firm-tab-init.sh` mangler ~5 linjer append. Option A (pane-side write) anbefalt; matcher spec + 0 ADR-001-brudd.
-- Output: "OK kjør firm-tab-init.sh PRESENCE write + user-tag" → 5-linjers append i `_bin/firm-tab-init.sh`
+- Output: ✓ L-2 applisert Option A — 5-linjers append i `_bin/firm-tab-init.sh` så pane-side write populerer PRESENCE.md ved init
 
 ### [ ] 6b. Review I-3 spec YAML fixes (10 min spec re-read) — NEW (fase 8/9)
 - File: `08-system-architecture/specs/*.md` (I-3 deliverable — sjekk frontmatter-fix patches)
@@ -143,10 +145,10 @@ tags: [operator, checklist, next-actions]
 - Why: pre-load trusted sources før brain-G6 batch-ingestion; lavere prioritet enn pilot-runs i #7/#8
 - Output: 5-10 trusted entries per file (ML/AI/trading domener)
 
-### [ ] 18. Activate brain-G3 (worktree-default) etter preflight checklist — NEW (fase 8/9)
+### [x] 18. Activate brain-G3 (worktree-default) etter preflight checklist — DONE 2026-05-25 by L-3 (samme som #5)
 - File: `[[Runbook-Brain-Preflight-Checklist]]` § brain-G3 (renamed per I-1)
 - Why: duplikat av #5 men med oppdatert naming (brain-G3) — sørg for å bruke brain-prefiks i logg/audit
-- Output: brain-G3 aktivert; `firm --legacy` tilgjengelig som rollback
+- Output: ✓ brain-G3 aktivert av L-3; `firm --legacy` tilgjengelig som rollback
 
 ### [ ] 19. Reconcile wikilink methodology — extend brain-link-graph.sh (~1 hr) — NEW (fase 8/9)
 - File: `[[wikilink-reconciliation-2026-05-25]]` (I-2) §Next steps
@@ -155,14 +157,14 @@ tags: [operator, checklist, next-actions]
 
 ## Estimated total time
 
-| Bucket | Time | Window |
-|---|---|---|
-| P0 | ~55 min (+5 min Option C ACK) | i dag |
-| P1 | ~1h 57min (+12 min PRESENCE + spec-fix re-read) | innen 48h |
-| P2 | ~7h aktiv (+5.5h coverage push: ws.ts + routes + brain-decisions + manual outlier) + ~1 uke wait for brain-G6 | denne uka |
-| P3 | løpende (+ ~2h aktiv: cascade + script-flags) | denne måneden |
+| Bucket | Time remaining | Window | Done by L-agents |
+|---|---|---|---|
+| P0 | ~25 min (#1 skim 5 + #2 brain-demo 15 + #3b Option C ACK 5) | i dag | #3 push-gate (30 min) by L-1 |
+| P1 | ~1h 25min (#4 specs 60 + #6 INTEGRATION_NOTES 15 + #6b spec YAML 10) | innen 48h | #5 brain-G3 (30 min) by L-3, #6a PRESENCE (2 min) by L-2 |
+| P2 | ~7h aktiv (+5.5h coverage push) + ~1 uke wait for brain-G6 | denne uka | (ingen) |
+| P3 | løpende (+ ~1.5h aktiv: cascade + script-flags; #18 dropped som duplikat) | denne måneden | #18 brain-G3 dup (samme som #5) by L-3 |
 
-Total aktiv tid P0+P1+P2 = ~10h spread over en uke (coverage-push dominerer). P3 er bakgrunns-vedlikehold + småjobber.
+Total aktiv tid P0+P1+P2 = ~8h 50min spread over en uke (coverage-push dominerer). P3 er bakgrunns-vedlikehold + småjobber. Fase 12 L-agents tok ~62 min av operator-load.
 
 ## Skip if pressed
 
@@ -193,4 +195,5 @@ Mark done in this file: `- [x]` instead of `- [ ]`. Auto-syncs til tiger-brain s
 
 ---
 
+Sist oppdatert: 2026-05-25 — v1.2, markert fase 12 L-agent completions: #3 (L-1 push-gate as drafts), #5 (L-3 brain-G3 activation), #6a (L-2 PRESENCE.md fix), #18 (L-3, dup av #5). 4 items closed, ~62 min operator-load fjernet. Tidsestimat-tabell oppdatert med "Done by L-agents" kolonne.
 Sist oppdatert: 2026-05-25 — v1.1, addert fase 8/9 items (Option C ACK, PRESENCE-fix, spec-fix re-read, coverage push x3, gate-cascade, wikilink-script-flags, kuratering). Additivt — ingen eksisterende items fjernet.

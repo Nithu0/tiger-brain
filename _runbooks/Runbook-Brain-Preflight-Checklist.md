@@ -29,30 +29,46 @@ Per CLAUDE.md operator-principle: irreversible / daily-flow-altering changes are
 
 ## brain-G3 — Worktree-as-default in firm-wt-split.sh
 
+**Status (2026-05-25):** ACTIVATED as OPT-IN flag. Default behavior unchanged. Operator opts in per-invocation via `firm --worktree-default`; flip default after 24-48h of clean opt-in usage.
+
 ### What changes
-- `firm-wt-split.sh` (when launched without `--legacy`) creates `.worktrees/<role>/<branch>/` per pane instead of shared cwd
-- Each pane starts on its own git branch
-- Operator can OPT OUT with `firm-wt-split.sh --legacy`
+- `firm-wt-split.sh --worktree-default` creates `.worktrees/claude/<role>-<slug>/` per pane via `firm-worktree-spawn.sh` (idempotent), then launches wt.exe pointing each pane at its worktree
+- Each pane starts on its own git branch (`claude/<role>-<slug>`, default slug `scratch-YYYY-MM-DD`)
+- code-1 / code-2 panes target **command-center** (since `$HOME/code` is not a git repo); other panes target their natural repo
+- Operator can OPT OUT (today this is the default; flag reserved for after default-flip) with `firm-wt-split.sh --legacy`
+- `--worktree-default` and `--codex` are mutually exclusive
 
 ### Why operator-gated
 - Changes the daily startup pattern of all 8 panes
 - Disk usage increases (~50MB per worktree × 8 = ~400MB)
 - Risk of orphan worktrees if cleanup-job (Module H `worktree-gc`) isn't running
 
-### Preflight (run each before activation)
-- [ ] All 8 panes currently in a clean state (no uncommitted work) — `git -C <repo> status --short` empty across all 6 repos
-- [ ] Disk space > 5GB free (`df -h /home/nithu/`)
-- [ ] `firm-worktree-spawn.sh` is tested + works (`firm-worktree-spawn.sh claude /home/nithu/code/command-center test-spawn` then `rm -rf .worktrees/claude/test-spawn`)
-- [ ] BrainOrchestrator (when implemented) has `worktree-gc` trigger registered
-- [ ] Backup of current pane state captured (record current cwd + branch per pane in `00-firm-bus/feed.md`)
+### Preflight (run each before activation) — 2026-05-25 results
+- [x] Disk space > 5GB free — **946G free** ✅
+- [x] `firm-worktree-spawn.sh` tested + works — spawned + cleaned `claude/test-spawn-g3` in command-center and `claude/as-1-scratch-test-g3` in AS, both successful ✅
+- [x] **Exception:** command-center, ai-assistent, Master-oppgave had uncommitted/untracked work at flag-add time. Since brain-G3 is OPT-IN (additive), this does NOT block the flag itself — operator should still ensure clean state before each `firm --worktree-default` invocation
+- [x] AS, Personlig, Søking fulltid are all on `main`, clean ✅
+- [ ] BrainOrchestrator `worktree-gc` trigger registered — **pending Module H** (does not block opt-in usage; matters before default-flip)
+- [ ] Backup of current pane state captured (record current cwd + branch per pane in `00-firm-bus/feed.md`) — operator-step before first real invocation
 
 ### Activation
 ```bash
-# Operator only:
-firm  # default = firm-wt-split.sh
-# If --worktree-default has been added as a flag in B-1's update:
-firm --worktree-default
+# Per-invocation opt-in (today's mode):
+firm --worktree-default                          # default slug = scratch-YYYY-MM-DD
+firm --worktree-default --slug fix-orb-gate      # custom slug
+firm --worktree-default --dry-run                # preview without launching
+
+# Default (unchanged, legacy):
+firm
+
+# Opt-out (reserved for after default-flip):
+firm --legacy
 ```
+
+### Default-flip checklist (later — after 24-48h of clean opt-in)
+- Confirm 5+ successful `--worktree-default` sessions
+- Confirm `worktree-gc` job exists and has cleaned ≥1 stale worktree
+- Edit `firm-wt-split.sh`: set `WORKTREE_DEFAULT=1` as the initial value; ensure `--legacy` correctly resets it
 
 ### Rollback (if things go wrong)
 ```bash

@@ -3,8 +3,14 @@ title: Brain content audit v4 — final / closure
 date: 2026-05-25
 status: v4 (closure)
 purpose: Final audit state after K-1/K-2 closure fixes — target GREEN
-related: [[audit-report-v3-2026-05-25]], [[wikilink-audit-v3-2026-05-25]]
-tags: [audit, v4, final, closure]
+related:
+  - "[[audit-report-v3-2026-05-25]]"
+  - "[[wikilink-audit-v3-2026-05-25]]"
+tags:
+  - audit
+  - v4
+  - final
+  - closure
 ---
 
 # Brain content audit v4 — closure state

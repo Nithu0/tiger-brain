@@ -258,3 +258,6 @@ receipt: re-survey complete; action needed — propagate package-lock refresh to
 - 2026-05-25T15:40Z code-2: FASE 12 EXECUTE — operator OK på all gjenstående arbeid. 10 L-agenter: push 8 PRs + brain-G3 worktree-default + PRESENCE fix + frontmatter cleanup + final audits + Karri "live" dispatch.
 
 - 2026-05-25 (code-2 CI verify) PRs #48,#51,#52,#53,#55,#56 GREEN. #49 RED (`@cc/github-discovery` package missing/unpublished), #50 RED (lockfile out of sync — Missing: @cc/_template@0.0.0). Both need operator review.
+- 2026-05-25T17:00:39Z ai-1 received dispatch (inbox +21 lines)
+- 2026-05-25T17:04Z code-2 (CI snapshot final): 54 open PRs — 50 GREEN, 2 RED (#49 missing @cc/github-discovery in lock, #57 @cc/_template lockfile drift), 2 PENDING fresh (#50, #58), 0 stale. Closed today: #36/#40/#44/#45. Draft PR #65: docs/_VERIFICATION/2026-05-25-ci-snapshot-final.md
+- 2026-05-25T16:15Z code-2: FASE 12 EXECUTE komplett — 8 PRs pushet drafts (#57-64), brain-G3 activated opt-in, PRESENCE fixed, frontmatter 24→0, audit GREEN, wikilink 98.7%, brain pushet f0215d5, Karri notified. FASE 13 — fix 2 RED PRs + residuals + cleanup.

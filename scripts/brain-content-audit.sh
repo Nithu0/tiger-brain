@@ -2,12 +2,17 @@
 # brain-content-audit.sh — weekly hygiene scan of ~/Obsidian/Brain
 # Reports issues only — does NOT fix anything (operator-decision)
 #
-# Exempt paths (intentionally without frontmatter — per H-2 cleanup-report-2026-05-25):
+# Exempt paths (intentionally without frontmatter — per H-2 cleanup-report-2026-05-25
+# + 2026-05-25 extension addressing the 24 remaining missing-frontmatter files):
 # - _library/ (raw content)
 # - 90-archive/ (historical)
 # - 00-claude-inbox/ (drafts)
 # - 00-templates/ (uses placeholders)
+# - 00-firm-bus/inbox/ (append-only inter-pane inbox, no frontmatter convention)
+# - 00-firm-bus/feed.md + roster.md (append-only firm-bus logs)
+# - .github/ (PR/issue templates)
 # - README.md (subfolder intro)
+# - _README.md (variant subfolder intro)
 # - HOW-TO-*.md (operator instructions)
 #
 # These exemptions apply to [1/7] frontmatter-presence and [2/7] YAML-validity
@@ -39,11 +44,16 @@ hdr "[1/7] Frontmatter presence"
 missing_frontmatter=$(find . -name "*.md" \
   -not -path "./.git/*" \
   -not -path "./.obsidian/*" \
+  -not -path "./.github/*" \
   -not -path "./_library/*" \
   -not -path "./90-archive/*" \
   -not -path "./00-claude-inbox/*" \
   -not -path "./00-templates/*" \
+  -not -path "./00-firm-bus/inbox/*" \
+  -not -path "./00-firm-bus/feed.md" \
+  -not -path "./00-firm-bus/roster.md" \
   -not -name "README.md" \
+  -not -name "_README.md" \
   -not -name "HOW-TO-*.md" \
   -exec sh -c 'head -1 "$1" | grep -q "^---$" || echo "$1"' _ {} \; 2>/dev/null | head -20 || true)
 if [ -n "$missing_frontmatter" ]; then
@@ -64,15 +74,25 @@ except ImportError:
     print("__NO_YAML__")
     raise SystemExit(0)
 # Exempt paths (intentionally without frontmatter — see script header).
-EXEMPT_DIRS = (".git", ".obsidian", "_library", "90-archive",
+EXEMPT_DIRS = (".git", ".obsidian", ".github", "_library", "90-archive",
                "00-claude-inbox", "00-templates")
+# Sub-paths (joined) that should be skipped too.
+EXEMPT_SUBPATHS = (os.path.join("00-firm-bus", "inbox"),)
+# Files always exempt regardless of folder.
+EXEMPT_FILES = ("README.md", "_README.md")
+# Files exempt only inside 00-firm-bus (append-only logs).
+FIRM_BUS_EXEMPT = ("feed.md", "roster.md")
 broken = []
 for root, dirs, files in os.walk("."):
     if any(x in root.split(os.sep) for x in EXEMPT_DIRS):
         continue
+    if any(sp in root for sp in EXEMPT_SUBPATHS):
+        continue
+    in_firm_bus = "00-firm-bus" in root.split(os.sep)
     for f in files:
         if not f.endswith(".md"): continue
-        if f == "README.md": continue
+        if f in EXEMPT_FILES: continue
+        if in_firm_bus and f in FIRM_BUS_EXEMPT: continue
         if f.startswith("HOW-TO-") and f.endswith(".md"): continue
         p = os.path.join(root, f)
         try:

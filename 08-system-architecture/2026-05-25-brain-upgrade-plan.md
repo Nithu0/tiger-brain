@@ -1,7 +1,7 @@
 ---
 title: Workspace-wide Brain Upgrade — Audit, Target, Parallell-todo
 date: 2026-05-25
-status: v1.3 draft — fase 8-10 komplett, sprint 1 done
+status: v1.4 draft — fase 11+12 EXECUTE komplett, sprint 1 SHIPPED
 author: code-2 + 10 parallelle inspeksjons-agenter
 related:
   - "[[2026-05-24-onprem-ai-strategi]]"
@@ -929,3 +929,33 @@ Total: 4865 spec-lines + struktur. Hver agent kjørte egen 5× verify-pass før 
 **Brain-plan bumpes til v1.3 draft** etter fase 10 fullført.
 
 **Sprint 1 COMPLETE.** Sprint 2 venter operator-OK på (a) commit + push 8 PRs per COMMIT_PLAN, (b) code-1 implementasjon av MEM/RAG, (c) operator-gate aktiveringer i sekvens brain-G3 → brain-G4 → brain-G6.
+
+---
+
+## §16 STATUS — 2026-05-25T16:30Z — fase 11+12 EXECUTE komplett
+
+**Fase 11 (K-agenter — closure):** Lukket J-9's 9 broken wikilinks (3 code-spans + 2 ADR stubs + 2 frontmatter fixes), fixed siste YAML, brain-link-graph v3 (544n/2253e/31 broken/98.62% health), FINAL-SUMMARY oppdatert til 100 agenter, TOMORROW-walkthrough, audit.ts tester (+13, 0%→100%), audit v4 **GREEN** (Issues=0), SPRINT-1-COMPLETE formal closure, critical-path verify 9/10 paths green, operator-note i inbox/code-2.md.
+
+**Fase 12 (L-agenter — EXECUTE):** **8 PRs pushet** som drafts (#57-64) per COMMIT_PLAN. brain-G3 worktree-default aktivert som opt-in flag i firm-wt-split.sh. PRESENCE.md auto-populate fikset (5-line append i firm-tab-init.sh, både kanonisk + brain mirror). 24 missing-frontmatter filer adressert (6 minimal-fm + 18 exempted via script-extension) — count 24→0. Final audits: content GREEN m/ 1 residual YAML (M-5 fikser), link-graph v4 (549n/2268e/32-broken/98.6%), wikilink-audit v4 (878R/11S/1B = 98.7%). Brain pushet f0215d5 (auto-sync hadde fallt etter — 103 filer / +16087 / -54 i commit). Karri "system live" dispatch sendt via ai-1. OPERATOR-NEXT-ACTIONS markert 4 items DONE.
+
+**Test-state:** 597/597 grøn. Coverage 47.63% lines / 77.21% branches / 73.1% functions.
+
+**Spec-state:** alle 7 specs v1.0.2 STABILE.
+
+**Brain link-health:** 98.7% (var 94.3% v1).
+
+**Operator-gates aktivert:**
+- brain-G3 worktree-default — **OPT-IN** (default uendret; flag tilgjengelig via `firm --worktree-default`)
+- PRESENCE.md auto-populate — **ACTIVE** (next pane spawn populerer presence-row)
+
+**Operator-gates fortsatt pending:**
+- brain-G4 nightly-distill cron (depends on code-1's memory-engine)
+- brain-G6 queue-watcher auto-pickup (depends on G4 stable 1 uke)
+
+**Code-1 lane:** scaffolds eksisterer (node_modules-nivå). Aktivt arbeid pågår. Acked (b)-MODIFIED lane-split.
+
+**Total sprint:** 120 sub-agenter, 12 faser, ~6 timer wall-clock.
+
+**Brain-plan bumpes til v1.4 draft.**
+
+**Sprint 1: SHIPPED.** Sprint 2 venter: operator merger 8 draft-PRs etter review, code-1 lander MEM/RAG-impl, G4 + G6 activerer i sekvens.

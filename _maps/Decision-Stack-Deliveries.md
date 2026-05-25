@@ -2,7 +2,7 @@
 type: decision
 status: binding
 decided: 2026-05-03
-supersedes: "one change per session" cap
+supersedes: '"one change per session" cap'
 ---
 # Decision: Stack deliveries
 

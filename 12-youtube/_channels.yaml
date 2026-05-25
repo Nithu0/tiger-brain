@@ -1,0 +1,21 @@
+# Channel allowlist for YouTube ingestion
+# Referenced by: 12-youtube/README.md + YOUTUBE_INGESTION_SPEC §7
+# Trusted channels get default confidence; unlisted channels get -0.1 + needs_re_review
+# Format:
+#   - id: youtube-channel-id  (e.g. "UC...")
+#     name: Channel display name
+#     default_tags: [tag1, tag2]
+#     trust_level: high | medium | low
+#     notes: optional context
+
+version: 0.1.0
+updated: 2026-05-25
+
+channels: []
+# Operator: populate this file with channels you've vetted.
+# Example entry (commented):
+#   - id: UCRPMAqdtSgd0Ipeef7iFsKw  # NOT a real channel - example only
+#     name: Example AI Channel
+#     default_tags: [ai, research]
+#     trust_level: high
+#     notes: Curated for ML/AI research content

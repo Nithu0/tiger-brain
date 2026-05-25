@@ -43,46 +43,76 @@ er gated. Hvis en handoff under mangler én av de tre — be Claude fylle inn.
 
 ## Del 2 — Åpne handoffs akkurat nå
 
-Sist oppdatert: **2026-05-21T07:15Z** av ai-1.
+Sist oppdatert: **2026-05-25T10:30Z** av ai-1 (full-system improvement sweep, 10-agent).
 
-### 🔴 Venter på deg nå
+### ✅ Gjort i 25.5-sveip (lokale auto-fixes, ikke pushet enda)
+- 3 BLOCKED → VERIFIED i learning-ledger: regression-predictor non-zero (count=4), strategy_id null_pct=0% post-22.5, lesson-subprocess `:failed` markers (4 stk) — PG-tunnel åpen i dag.
+- `agent_lessons` REOPENED-rotårsak korrigert: IKKE env-flagg (cron fyrer på workeren), men subprocess exitCode 1 i `derive-lessons.mjs` 4 dager på rad. Trenger Railway-worker-logs.
+- AUTO-fix: /health weekend-aware (heartbeat-tolerance 600s → 5400s når WEEKEND) — fjerner false-positive `worker.ok=false`.
+- AUTO-fix: 5 firehose-skripter wrappet `console.error(err)` via `sanitizeForCommit()` — fjerner risiko for DATABASE_URL/credential-leak til logs.
+- AUTO-fix: `apps/api/src/routes/intelligence.ts:225` returnerte raw err.message til public API → erstattet med generisk "AI analysis temporarily unavailable".
+- AUTO-fix: `docs/ref/firm-modules.md` oppdatert 16→30 sub-dirs.
+- Memory-hygiene: 3 stale obsidian-MCP-referanser fjernet (MCP disconnected 25.5).
 
-1. **Push 3 commits til main** — kat. 1.
-   - HVOR: Claude-prompten (denne panen).
-   - HVA: si "OK kjør" — Claude pusher selv via Bash.
-   - HVORFOR: lærings-/kommunikasjonslag-fixene (`47be52b` signal.rejected-
-     retensjon + Discord dual-gate-advarsel) + Karri-proposal + phase-status.
-     860/860 worker-tester grønt, tsc rent. Ny "OK kjør" nødvendig (prinsipp 5
-     — gate gjelder hver push). KJØR-AUTO-batchen er allerede pushet (`1801c68`).
+### ✅ Gjort i 24.5-sveip (forrige)
+- Karri C3 gate VERIFIED, memory test-count reconciled, weekend-throttle false-positive dokumentert.
 
-2. **Send Karri-proposal** — kat. 5 (auto-send-vindu).
-   - HVA: `docs/strategy/proposals/2026-05-21_calibration_auto_apply_loop.md`
-     — bør til Karri (autotune-beslutning). Innenfor 09–17 CET auto-sendes den;
-     si "send karri" hvis du vil ha den ut nå.
+### 🔴 Venter på deg nå (operator-flips, ingen Claude-kapabilitet)
 
-2. **Drop foreldet stash** — kat. 4 (valgfritt, ren opprydding).
+1. **Drop foreldet stash** (fra 21.5) — kat. 4 (valgfritt, ren opprydding).
    - HVOR: terminal eller `! ` i prompten.
    - HVA: `git stash drop stash@{0}`
-   - HVORFOR: `stash@{0}` er et utdatert inline-utkast av `/firm/signal-rejections`
-     som allerede landet som egen route-fil i `7274d45`. Ufarlig å droppe.
-     (`stash@{1}` `pre-rebase-06may` — la stå, ikke verifisert.)
+   - HVORFOR: utdatert inline-utkast av `/firm/signal-rejections` (landet som egen route i `7274d45`).
+
+2. **Pull Railway worker-logs for derive-lessons crash** — kat. 2 (NY rotårsak per 25.5).
+   - HVOR: Railway → **worker** service → Logs → filter på `derive-lessons` rundt 04:51Z UTC.
+   - HVA: finn stack-trace for daglig exitCode 1 (siste 4 dager: 22.5, 23.5, 24.5, 25.5 alle `:failed`).
+   - HVORFOR: cron FYRER på workeren (env-flagg ER aktive), men subprocess i `scripts/firehose/derive-lessons.mjs` krasjer deterministisk. Eneste exitCode 1-path er line 220-223 (uncaught fatal i main). Sannsynlige rotårsaker (ranked):
+     1. **Schema-mismatch i fetchClusters SQL (line 58-78)** — `simulated_orders` kolonner: `portfolio_regime_at_entry`, `session_at_entry`, `close_reason`, `pnl`, `closed_at`, `market`, `status`. Hvis en kolonne er renamed/manglende → PG throw → exit 1.
+     2. **client.connect() failure** (line 183) — stale/rotated DATABASE_URL creds.
+     3. **lessonFingerprint-import** (line 28) — hvis `./lib/fingerprint.mjs` mangler i Railway-bundle (Dockerfile copy-issue).
+   - Bonus-diagnostikk operator kan kjøre fra Railway PG Connect:
+     ```sql
+     SELECT key, value, updated_at FROM firm_state
+     WHERE key LIKE 'firehose:derive_lessons:%'
+     ORDER BY updated_at DESC LIMIT 10;
+     -- Forventet: 4 stk `:failed`-keys (22.5-25.5). value-kolonnen kan inneholde grunnen.
+     ```
+   - Når stack-trace funnet: Claude tar fix på den lokale skript-pathen.
+
+3. **2 approved-awaiting-operator-flip proposals** (klare, ikke haster) — kat. 2.
+   - `2026-05-11_orb_observe_only.md` → flip Railway `ORB_ENABLED=false` (observe-only-modus).
+   - `2026-05-11_scalp_overlap_observe_only.md` → flip Railway `SCALP_OVERLAP_ENABLED=false`.
+   - HVORFOR: begge er Karri-godkjent (negative WR/PnL data); flippene tar dem fra aktive til shadow-observasjon uten kode-endring.
 
 ### 🟡 Klar når du vil (ikke haster)
 
-3. **Backfill-SQL: A5 + metadata-strip** — kat. 3.
+4. **Backfill-SQL: A5 + metadata-strip** (fra 21.5) — kat. 3.
    - HVOR: Railway → Postgres → Connect → Query.
    - HVA: lim inn de to `BEGIN…COMMIT`-blokkene i
      `docs/ops/2026-05-16_backfill-batch.md`, sjekk verifiserings-SELECT, COMMIT.
    - HVORFOR: fyller `portfolio_regime_at_entry` (36 rader) +
      `strategy_id`/`execution_source` (~138 rader) retroaktivt. Idempotent.
 
-4. **Railway env-flagg** — kat. 2. Claude lager eksakt flagg-liste når du ber om det
-   (ENTRY_STACK_COOLDOWN, SCALP_OVERLAP, ORB-mode m.fl. — se phase-status).
+5. **Run strategy_id residual backfill** — kat. 3.
+   - HVOR: terminal i denne repo-en, eller `! `.
+   - HVA: `DATABASE_URL=<prod-url> CONFIRM=YES node scripts/oneshot/run-backfills-21may.mjs`
+     (commit `28242f0` la til runneren fordi nexus-pg-rw MCP starter alle tx `READ ONLY`).
+   - HVORFOR: ~86 historiske rader mangler `strategy_id` (post-fix `1dd9d6a` stopper nye NULLs men forfaller ikke gamle). Idempotent — no-op hvis allerede kjørt.
 
-### ⚪ Venter på Karri (ikke deg, men du er budbringer)
+### 🟢 Browser-eye-check (kun du kan)
 
-5. ~16 strategy-proposals i `proposed`-tilstand, ureviewet. Auto-send til Karri
-   skjer 09–17 CET. Du trenger ikke gjøre noe med mindre du vil purre.
+6. **Verifiser dashboard-charts render i ekte browser** (VERIFY-BY 26.5 i learning-ledger).
+   - HVOR: åpne dashboard-URL i Edge/Chrome.
+   - HVA: åpne `/`, `/charts`, `/validation`; se etter at canvas/SVG-charts faktisk tegnes + null console-errors (F12).
+   - HVORFOR: SSR-shellen er bekreftet ren via WebFetch (200, ingen build-errors), men klient-JS som tegner charts kan WebFetch ikke teste.
+
+### ⚪ Venter på Karri (du er budbringer)
+
+7. **22 proposed-items i Karri-kø** (5 er H14-validert klynge fra 16.5, 8 dager gamle — høyest hevarm).
+   I dag er **søndag** → auto-send-vinduet er INAKTIVT. **Mandag 09 CET (25.5)**: ai-1 sender en bundle-ping til Karri med H14-batchen (BC/MR/SB/TF/volexp konfig + reaktivering). Du trenger ikke gjøre noe; jeg fyrer auto.
+
+8. **NEWS_BLACKOUT independent-emit** (REOPENED i learning-ledger). Karri-proposal eksisterer ikke ennå; jeg vil skrive en når learning-cluster-rapporten er ute.
 
 ---
 

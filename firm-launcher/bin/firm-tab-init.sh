@@ -63,12 +63,19 @@ export FIRM_COLOR
 bus_dir="$HOME/Obsidian/Brain/00-firm-bus"
 inbox_dir="$bus_dir/inbox"
 feed_file="$bus_dir/feed.md"
+presence_file="$bus_dir/PRESENCE.md"
 
 mkdir -p "$inbox_dir"
 touch "$inbox_dir/${role}.md"
 
 # Append online marker to the shared feed (one line, no heredoc).
 printf -- '- %s %s online in %s\n' "$FIRM_TAB_OPENED_AT" "$role" "$project" >> "$feed_file"
+
+# Append presence row on pane start (per I-8 Option A). Matches PRESENCE.md
+# header: | Time | User | Role | Project | Status |
+firm_user_tag="$(git config --global user.name 2>/dev/null | tr -d ' ' || echo unknown)"
+printf -- '| %s | %s | %s | %s | online |\n' \
+  "$FIRM_TAB_OPENED_AT" "${firm_user_tag:-unknown}" "$role" "$project" >> "$presence_file"
 
 # Load project-specific .env.local so MCP servers (e.g. nexus-pg requiring
 # NEXUS_READONLY_PG_URL) resolve their env vars. Without this the nexus-pg

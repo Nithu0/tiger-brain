@@ -19,6 +19,22 @@ related:
 
 ---
 
+## Brain System
+
+> Daily ops: [[Runbook-Brain-Upgrade-Workflow]]. Plan: [[2026-05-25-brain-upgrade-plan]]. Live: `~/Obsidian/Brain/00-firm-bus/feed.md`.
+
+**Drop in a queue:**
+- YouTube URL → `~/Obsidian/Brain/12-youtube/_queue/`
+- GitHub search → `~/Obsidian/Brain/13-github-repos/_queue/`
+- New task → `~/Obsidian/Brain/10-tasks/_open/<task-id>.md`
+
+**Operator-gates pending (manual OK kjør required):**
+- brain-G3 worktree-as-default i `firm-wt-split.sh`
+- brain-G4 nightly-distill cron-aktivering
+- brain-G6 queue-watcher auto-pickup (currently manual-trigger only)
+
+---
+
 ## 1. Aktive paner
 
 Leser `00-firm-bus/pane-status/<role>.md` (frontmatter via Dataview).

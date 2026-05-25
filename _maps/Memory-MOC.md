@@ -1,56 +1,85 @@
 ---
-tags: [moc, memory, claude-cognitive-os]
+title: Memory-MOC
 type: moc
-created: 2026-05-08
+created: 2026-05-25
+purpose: Index of the two-stage memory-distillation system — verbatim FTS5 layer + distilled sqlite-vec layer + MemoryObject schema + trigger sources
+related: [[2026-05-25-brain-upgrade-plan]]
+tags: [moc, memory, distillation, memory-objects, brain-upgrade]
 ---
 
 # Memory-MOC
 
-> **Last big session:** [[2026-05-11_full_session|2026-05-11 — 5-round max-mode push]] (cognitive-OS scaffolding: 7 decision-trees, 5 runbooks, 10 living-state docs, multi-Claude launch-script + clone-bootstrap landed).
+Curated index of the workspace-wide memory system per [[MEMORY_DISTILLATION_SPEC]] (Module B in [[2026-05-25-brain-upgrade-plan]]). The system has two layers: a **verbatim** layer (raw conversations + actions, FTS5-indexed, never deleted) and a **distilled** layer (semantic MemoryObjects, embedded with bge-m3, queried by the RAG engine). Distillation runs on multiple triggers (per-action, per-conversation, nightly, per-ingest, manual). This MOC points only — binding truth always lives in the spec.
 
-How Claude remembers things across sessions, machines, and projects. The cognitive OS treats memory as a layered hierarchy: each layer additive on the one above, scoped tighter as it descends.
+## Spec
 
-## The hierarchy (read order)
+- [[MEMORY_DISTILLATION_SPEC]] **v1.0.2** (post-fase-3, C-1 update) — single source of truth for layer schemas, distillation prompt template, surviving-vocabulary enforcement, migration pipeline, and acceptance tests.
 
-1. **Global** — `~/.claude/CLAUDE.md`. Operator baseline that loads on every session, every project, every device. Communication style, safety rules, secret-handling, cross-repo discipline. See [[Global-CLAUDE-md]].
-2. **Workspace** — `/home/nithu/code/CLAUDE.md`. Thin meta layer that points to project CLAUDE.md files. No project-specific content.
-3. **Project** — `<repo>/CLAUDE.md` (e.g. `ai-assistent/CLAUDE.md`, `Master-oppgave/CLAUDE.md`). Domain context, sprint anchors, project-specific operator-prinsipper.
-4. **Per-project memory** — `~/.claude/projects/<slug>/memory/`. Loaded automatically on session start in that project.
+## Schema (MemoryObject)
 
-The full read-order from highest authority down is the [[Truth-Hierarchy]] (codebase + git → phase-status → operator-decisions → promoted memory → daily memory → raw scratchpads → archived).
+The binding TypeScript interface for distilled entries lives in [[MEMORY_DISTILLATION_SPEC]] §2 (`MemoryObject` interface). Fields cover `id`, `kind` (action/conversation/note/youtube/github/etc.), `project`, `created_at`, `surviving_vocabulary`, `summary`, `back_refs`, `embedding_model`, `fingerprint`. Frontmatter template for human-readable mirrors lives in [[00-templates/memory-object]].
 
-## Per-project memory categories
+## Verbatim layer (raw)
 
-Files in `~/.claude/projects/<slug>/memory/` are categorised by `type:` in their frontmatter:
+Per [[MEMORY_DISTILLATION_SPEC]] §5 — append-only SQLite table, FTS5 virtual index for exact-phrase search, never-delete invariant. Sources:
 
-- **`user`** — operator personality, working patterns, preferences. (e.g. `user_personality.md`, `user-orchestration-style.md`)
-- **`feedback`** — corrections operator has given Claude that should not repeat. (e.g. `feedback_concise_communication.md`, `feedback_no_auto_activation.md`)
-- **`project`** — current architectural snapshots, activation state. (e.g. `cognitive_os_state.md`, `agentic_team_activation_state.md`)
-- **`reference`** — durable inventories Claude consults at session-start. (e.g. `reference_available_tools.md`, `reference_strategy_reviewer.md`)
+- command-center `audit_log` rows (per-action records — tool calls, file writes, bus messages)
+- Claude conversation transcripts (per-conversation finalisation)
+- raw transcripts from `12-youtube/_library/...` (per-ingest)
+- raw repo metadata + README snapshots from GitHub discovery (per-ingest)
 
-`MEMORY.md` in that directory is the index: every file gets a one-line entry.
+API surface in §5.2 — `verbatim.put(...)` / `verbatim.search(query, k)` / `verbatim.get(id)`. Used as fall-back when the distilled layer misses (e.g. exact-quote lookup).
 
-## Lifecycle
+## Distilled layer (semantic)
 
-Memory entries flow through stages — see [[Memory-Lifecycle]]:
+Per [[MEMORY_DISTILLATION_SPEC]] §6 — `MemoryObject` rows in SQLite + `sqlite-vec` virtual table holding **bge-m3** embeddings (**1024-dim**, local-first per [[RAG_ENGINE_SPEC]] §1.3). Each MemoryObject has a fingerprint for dedup (per §9.2 acceptance test) and a `surviving_vocabulary` field that the distillation prompt is required to preserve verbatim (per §3.3, enforced post-hoc).
 
-`RAW` (daily distilled) → `DISTILLED` (curated) → `PROMOTED` (durable, in repo) → `DEPRECATED` (kept for history) → `ARCHIVED` (read-only).
+API in §6.2 — `distilled.put(obj)` / `distilled.search(query, k, filters)` / `distilled.delete(id)`. Embedding details in §6.3.
 
-The Stop-hook distillation pipeline writes new RAW entries automatically; promotion remains operator-gated.
+## Trigger sources
 
-## Decision-trees + Runbooks (autonomous-decision brain, 2026-05-11)
+When distillation runs (per [[MEMORY_DISTILLATION_SPEC]] §4 + [[AGENT_ORCHESTRATION_SPEC]] §8.1):
 
-The Brain vault now hosts a layer of recurring-situation playbooks designed so Claude can act on "kjør" alone with minimal further questions. Two folders:
+| Trigger | Cadence | Source | Output |
+|---|---|---|---|
+| Per-action | event-driven | `audit_log` insert | one verbatim row; distilled row only if heuristic-passes |
+| Per-conversation | end-of-conversation Stop hook | Claude transcript | one verbatim row + one distilled row |
+| Nightly | cron 03:00 local via [[brain-distill-daily]] | yesterday's audit_log + transcripts | batched distill; dedup against existing MemoryObjects |
+| Per-ingest | event-driven | YouTube + GitHub queues drain | one verbatim row + one distilled row per item |
+| Manual | operator-invoked | `brain-distill-daily YYYY-MM-DD` | replay distill for a past date |
 
-- `_decisions/` — what to do WHEN a situation fires (triggers + diagnose order + classification table). Index in [[Decisions-MOC]] under "Decision-trees".
-- `_runbooks/` — HOW to execute the concrete procedures referenced by decision-trees. Index in [[Decisions-MOC]] under "Runbooks".
+## Quality + migration
 
-These cross-link to per-project memory (`feedback_*.md`, `reference_*.md`) so decisions stay grounded in operator-corrections-as-rules, not Claude's general training.
-
-## Cross-project firewall
-
-Each project gets its own memory dir. **Claude does not pollute one project's memory with another's content.** Cross-project audit lives at `docs/architecture/cross-project-fixes.md` in the Nexus repo.
+- **Quality checks** — §7 (vocab survival, fingerprint dedup, back-ref integrity).
+- **Migration pipeline** — §8 — existing hand-authored brain notes lifted into MemoryObjects without mutating originals (verified §8.3).
+- **Acceptance tests** — §9 — vague-recall MRR, dedup, verbatim survival, surviving-vocabulary, back-ref. Gates landing of Module B.
 
 ## Related
 
-[[Tools-MOC]] · [[Decisions-MOC]] · [[Workflows-MOC]] · [[Distillation-Hook]] · [[Session-Start-Hook]]
+- [[2026-05-25-brain-upgrade-plan]] §2.B — Module B (memory) within the broader brain-OS upgrade.
+- [[2603.13017v1]] — paper on structured distillation; informs §3 prompt template + §9.1 vague-recall MRR test (stub-allow per NIT 23).
+- [[00-templates/memory-object]] — frontmatter template for human-readable mirrors.
+- [[brain-distill-daily]] — the brain-tier skill that wraps the nightly trigger.
+- [[Distillation-Hook]] · [[Distillation-Stop-Hook]] — pre-spec hook scaffolding that the new orchestrator-driven flow replaces.
+- [[Github-Repos-MOC]] — discovery emits one verbatim row + one distilled MemoryObject per repo note (per-ingest trigger).
+- [[Memory-Lifecycle]] — legacy RAW → DISTILLED → PROMOTED → DEPRECATED → ARCHIVED model; superseded by the spec but retained for promotion semantics.
+- [[RAG-MOC]] — the retrieval engine that consumes the distilled layer (and falls back to the verbatim layer for exact-phrase).
+- [[Retrospectives-MOC]] — weekly roll-up pulls distilled `kind: decision` MemoryObjects into the Decisions section.
+- [[Skills-MOC]] — brain-tier skills emit distillation triggers (`brain-distill-daily`, `youtube-ingest`, `github-discover`) that write into both layers.
+- [[System-Architecture-MOC]] — parent context (Module B is one node in the upgrade graph).
+- [[Truth-Hierarchy]] — where distilled memory sits in the read-order (below operator-decisions, above raw scratchpads).
+- [[Youtube-MOC]] — ingest emits one verbatim row + one distilled MemoryObject per video (per-ingest trigger).
+
+## Legacy hierarchy (pre-distillation)
+
+The earlier per-project memory hierarchy — `~/.claude/CLAUDE.md` (global) → `<workspace>/CLAUDE.md` → `<repo>/CLAUDE.md` → `~/.claude/projects/<slug>/memory/` — remains the **session-loading** mechanism. It is orthogonal to the distillation system: CLAUDE.md files are operator-curated context; MemoryObjects are machine-distilled retrieval substrate. See [[Global-CLAUDE-md]] · [[Session-Start-Hook]] for the loading path.
+
+## Open questions
+
+- **Stub** — when does the distilled layer cross the size threshold that forces a move from `sqlite-vec` to a real vector DB (pgvector / Chroma)? Tracked in [[System-Architecture-MOC]] open questions.
+- **Stub** — auto-promotion of distilled MemoryObjects into hand-authored brain notes (reverse migration) — out of scope for v1.0.2; revisit after Module K (RAG) lands.
+- **Stub** — distillation scope: Nexus postmortems only vs. all workspace audit-log events? Cost-driver for Module B implementation.
+
+---
+
+*Replaces the pre-distillation Memory-MOC (2026-05-08); the legacy per-project memory hierarchy is preserved in the "Legacy hierarchy" section above. Spec is binding truth.*

@@ -407,3 +407,56 @@ Commits attribuert "from code-2 lane", co-author markers begge paner.
 **Når du leser dette:** sjekk gh pr list for nye `code-2/*` PR-er. ACK om noen av mine kopier IKKE matcher din lokale state (jeg cp'er fra hovedtreet — burde være identisk men verifier).
 
 — code-1
+
+## 2026-05-25T15:30Z — code-2 self-note — SPRINT 1 CLOSED
+
+100 sub-agenter ferdig over 11 faser i ~5.5h. Sprint 1 levert.
+
+**Hvis operator leser INBOX først i morgen:** start her, så fortsett til `[[TOMORROW-2026-05-26]]`.
+
+### Hva som er kjør-klart nå
+- 584/584 tester grøn
+- Coverage 47%+ lines (warning-mode)
+- Brain link-health 97.7-99%+
+- 7 specs v1.0.2 STABILE
+- 6 nye TS-packages scaffolded + tested
+- Bash tooling: firm-task-claim/complete + brain-preflight + brain-content-audit + brain-link-graph
+- API routes: 7 brain endpoints (3 wired + 4 503-stubbed)
+- Web pages: 7 brain pages + OperatorDecisionQueue widget
+- Brain content: ~50 nye artifacts, 9 MOCs, 9 skills, 4 runbooks
+
+### Hva som venter OPERATOR action
+1. **`[[TOMORROW-2026-05-26]]`** — first-3 actions (5 + 15 + 10 min = 30 min)
+2. **`[[COMMIT_PLAN_2026-05-25]]`** — 8 PRs venter ditt OK kjør per push
+3. **`[[OPERATOR-NEXT-ACTIONS]]`** — full prioritized list (P0/P1/P2/P3)
+4. **`[[Runbook-Brain-Preflight-Checklist]]`** § brain-G3 — when ready to activate
+
+### Hva CODE-1 jobber med
+C1-1 brain-orchestrator skeleton + C1-2 memory-engine schema. Scaffolds eksisterer per F-10. Venter på 14c Railway verify ferdig.
+
+### Hva som er DEFERRED (operator-decision required)
+- PRESENCE.md fix (5-line append til firm-tab-init.sh, per I-8)
+- Last broken-wikilink stubs (K-1 closed most; final fixes if interested)
+- 24 frontmatter-warnings (most are intentional per I-5 exemptions)
+- G4 nightly-distill cron (depends on code-1's MEM lane landing)
+- G6 queue-watcher auto-pickup (depends on G4 stable 1 week)
+
+### Hvor finne IKKE-ÅPENBARE ting
+- Brain audit reports: `~/Obsidian/Brain/08-system-architecture/audit-report{,-v2,-v3}-2026-05-25.md`
+- Wikilink audits: `wikilink-audit{,-v2,-v3}-2026-05-25.md`
+- Cross-spec verify: `INTEGRATION_NOTES_v{1.1,1.2}.md`
+- Sprint closure: `SPRINT-1-COMPLETE-2026-05-25.md` (K-8)
+- Artifact index: `ARTIFACT_INDEX_2026-05-25.md` (J-8)
+
+### Kontaktpunkter
+- Karri: oppdatert via ai-1 inbox (forwarded til Discord). 2 dispatches sendt.
+- Code-1: dispatched + acked. Lane-split (b)-MODIFIED akseptert.
+
+### Bug-fixes ikke implementert
+- Brain-content-audit YAML script-step bug (H-1 fixed)
+- gate-identity collision G3/G4/G6 (I-1 resolved via Option C prefix)
+- Wikilink methodology discrepancy (I-2 reconciled)
+
+**Push-gate per CLAUDE.md fortsatt bindende.** Ingen push uten ditt OK kjør per PR.
+
+— code-2 (sprint 1 closing — 2026-05-25T15:30Z)

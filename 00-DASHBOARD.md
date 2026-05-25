@@ -8,6 +8,16 @@ created: 2026-05-11
 
 Single-screen overview. If you opened the vault and don't know where to go — start here.
 
+## Brain System (workspace-wide AI-OS)
+
+> Workspace-wide AI brain: memory distillation + advanced+agentic RAG + skill registry + YouTube/GitHub ingestion + parallel agent orchestration. Built 2026-05-25 in 30-agent parallel sprint. Operator-facing usage: [[Runbook-Brain-Upgrade-Workflow]].
+
+- **Plan:** [[2026-05-25-brain-upgrade-plan]] (v1.1 draft, 10 moduler)
+- **Architecture map:** [[System-Architecture-MOC]]
+- **Subsystems:** [[Memory-MOC]] · [[RAG-MOC]] · [[Skills-MOC]] · [[Tasks-MOC]] · [[Youtube-MOC]] · [[Github-Repos-MOC]] · [[Retrospectives-MOC]]
+- **Live tracking:** `~/Obsidian/Brain/00-firm-bus/feed.md` · [[2026-05-25-brain-upgrade-fase2]]
+- **Status:** fase 1+2+3 (specs + scaffold + cross-spec fixes) ferdig. Fase 4 (implementasjon) i gang. Code-1 lane på pure-new-packages (C1-1..C1-10 minus C1-7+C1-9 som er hos code-2).
+
 ## Prosjekter (6 aktive)
 
 | Prosjekt | Hva | MOC / pointer |

@@ -33,6 +33,33 @@ Personal second brain for operator Nithu. Knowledge graph + thinking layer compa
 
 This note is the **central hub**. Everything else hangs off here. In Graph View, this is the densest cluster — every domain MOC links back.
 
+## 2026-05-25 — Brain Upgrade (workspace-wide AI-OS)
+
+This vault is now part of a workspace-wide AI brain with structured memory distillation, advanced+agentic RAG retrieval, skill registry, YouTube/GitHub ingestion, and parallel agent orchestration.
+
+**New top-level folders (additive — existing folders untouched):**
+- `03-skills/` — reusable skills (SKILL.md files) per Hermes-style 3-tier registry
+- `08-system-architecture/` — plan + 7 specs + eval-set + integration notes
+- `09-retrospectives/` — weekly roll-ups (YYYY-WNN.md)
+- `10-tasks/` — workspace-wide task backlog (_open/_in-progress/_blocked/_done)
+- `12-youtube/` — distilled YouTube notes (verbatim transcripts in `_library/` only)
+- `13-github-repos/` — scored GitHub repo notes (license-guarded)
+- `00-templates/` — note-type templates
+
+**New MOCs in `_maps/`:**
+System-Architecture, Memory, RAG, Skills, Tasks, Youtube, Github-Repos, Retrospectives.
+
+**Operator runbooks (in `_runbooks/`):**
+- `Runbook-Brain-Upgrade-Workflow.md` — daily ops guide
+- `Runbook-Sample-Task-Walkthrough.md` — task lifecycle walkthrough
+- `Runbook-Brain-Preflight-Checklist.md` — gate activation safety
+
+**Plan + architecture:** [[2026-05-25-brain-upgrade-plan]] (v1.1 draft, 10 modules)
+
+**Backing code:** `/home/nithu/code/command-center/packages/` (skill-registry, youtube-ingest, github-discovery, rag-engine, _template, integration-tests). Push-gated per CLAUDE.md.
+
+**Sister doc:** [[2026-05-24-onprem-ai-strategi]] (private on-prem AI infrastructure strategy).
+
 ## Domain MOCs
 
 - [[Nexus-MOC]] — XAUUSD trading firm: strategies, agents, ops, deploy state.

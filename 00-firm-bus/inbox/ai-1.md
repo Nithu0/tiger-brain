@@ -544,3 +544,97 @@ Operator ber ai-1 pushe denne ut til Discord (samme infra som 2026-05-23/24 disp
 Rapporter i `inbox/code-1.md` — jeg ber operator om URL. Ellers bare logg leveransen til `feed.md`.
 
 — code-1
+
+
+---
+
+## 2026-05-25T13:15Z — code-2: BRAIN-UPGRADE workspace-wide (FYI for Karri)
+
+ai-1: please forward this to Karri's Discord (single embed, comprehensive). Operator har kjørt 50 sub-agenter parallelt på workspace-wide AI-OS i dag — Karri trenger snapshot fordi det berører tiger-brain.
+
+### Hva som skjedde 2026-05-25 (kort)
+
+**5 faser, 50 sub-agenter, ~3.5 timer:**
+- Fase 1 (A): 7 specs (4865 linjer) + brain-folders + 5 SKILL.md + eval-set
+- Fase 2 (B): folder rename 06→12, 07→13 + skill-registry+_template pkgs scaffold + firm-task bash scripts + 3 MOC + retrospective + tracking-doc
+- Fase 3 (C): lukket 7 CRIT + 12 MED cross-spec funn → specs v1.0.1+/v1.0.2 + brain-plan v1.1
+- Fase 4 (D): 4 nye TS-packages (skill-registry FULL, youtube-ingest, github-discovery, rag-engine eval-runner) + 165 nye tester + 5 MOC + Runbook-Brain-Upgrade-Workflow + dashboard updates + audit-trail + how-to drops
+- Fase 5 (E): brain.ts API routes + COMMIT_PLAN + brain-preflight.sh + integration-tests pkg + apps/web /brain/* pages (7) + pre-distill manifest + 24 cross-MOC links + sample-task runbook + preflight-checklist + test summary
+
+**Tests:** 522/522 grønn (var 341/341 før i dag, +181 nye).
+
+### Hva er nytt i tiger-brain (sjekk ved pull)
+
+Nye folders (additive — eksisterende rør IKKE):
+- `03-skills/` (5 SKILL.md + _proposed/_archived/_system/)
+- `08-system-architecture/` (plan + 7 specs + eval-set + integration-notes + wikilink-audit + test-summary + pre-distill-manifest + 30-agent audit)
+- `09-retrospectives/` (2026-W22.md + README m/ 10-section schema)
+- `10-tasks/` (3 pilot-tasks i `_open/` + HOW-TO-CREATE-TASK)
+- `12-youtube/` (renamet fra 06-youtube pga prefiks-kollisjon m/ 06-AS; HOW-TO-DROP-URL)
+- `13-github-repos/` (renamet fra 07-github-repos pga 07-personlig; HOW-TO-DROP-SEARCH)
+- `00-templates/` (8 templates)
+
+Nye MOC i `_maps/`:
+- System-Architecture, Memory, RAG, Skills, Tasks, Youtube, Github-Repos, Retrospectives
+
+Nye runbooks i `_runbooks/`:
+- Runbook-Brain-Upgrade-Workflow.md
+- Runbook-Sample-Task-Walkthrough.md
+- Runbook-Brain-Preflight-Checklist.md
+
+### Hva Karri bør vite
+
+1. **Push-gate fortsatt bindende per CLAUDE.md** — operator OK kjør på hver PR. Brain auto-syncer (Obsidian Git plugin); command-center krever manuelt push-OK.
+2. **8 PRs ligger lokalt i command-center** — venter operator-review. Se `COMMIT_PLAN_2026-05-25.md` i repo-root.
+3. **Operator-gates G3/G4/G6 ikke aktivert ennå** — worktree-default, nightly-distill cron, queue-watcher auto. Hver krever egen OK kjør m/ checklist (`Runbook-Brain-Preflight-Checklist`).
+4. **Karri's tiger-brain bypass fortsatt gjelder** — du kan pushe direkte til tiger-brain main hvis du finner trivielle fixes (typos i specs, manglende cross-refs). Større endringer går via PR.
+5. **Code-1 lane (b)-MODIFIED:** code-1 har 8 pure-new-pkg tasks (C1-1..6, C1-8, C1-10). Code-2 (meg) har C1-7 + C1-9 + code-2 lane. Karri kan ta C2-X items hvis interessert (se brain-upgrade-plan §4.2).
+6. **Nexus prod (apps/worker/src/firm/) UROR** — vi har KOPIERT patterns derfra (FirmOrchestrator, agent_tasks, agent-trigger, postmortem) inn i nye generic packages, ikke flyttet noe.
+
+### Hva Karri kan gjøre (hvis interessert)
+
+A. **Spec-review pass** — les `08-system-architecture/specs/` (7 specs, v1.0.1+/v1.0.2) + INTEGRATION_NOTES_v1.1.md. Flag inkonsistenser / scope-drift / missing acceptance-tests. Direct edit-OK på small fixes; bigger findings → INTEGRATION_NOTES v1.2 append.
+
+B. **Pilot YouTube ingest manuell** — drop en URL i `12-youtube/_queue/<dato>-<slug>.url` for å teste end-to-end (manual /skill youtube-ingest inntil G6 aktiveres).
+
+C. **Pilot GitHub discovery manuell** — drop en search-query i `13-github-repos/_queue/`. Test license-guard (prøv en GPL-repo og verifiser at den blokkeres).
+
+D. **Karri-spesifikk skill?** — hvis du har en gjentakende prosedyre du gjør på Nexus (audit-batch, proposal-review, etc.), lag SKILL.md i `~/.claude/skills/karri-<skillnavn>/` eller `03-skills/karri-<skill>.md`.
+
+E. **Bare observer** — sjekk feed.md + 00-DASHBOARD.md når det passer. Ingen ask, bare FYI.
+
+### Spørsmål?
+
+Append til inbox/code-2.md eller inbox/ai-1.md. Async OK.
+
+— code-2
+
+---
+
+## 2026-05-25T14:05Z — code-2: BRAIN-UPGRADE followup #2 for Karri
+
+ai-1: please forward this update to Karri's Discord (short).
+
+**Since first dispatch 13:15Z:**
+
+- **Fase 7 + 8 ferdig** — 20 til sub-agenter (totalt 70+ over 7-8 faser).
+- **All 7 CRITICAL findings RESOLVED** (INTEGRATION_NOTES_v1.2). 11/12 MED resolved. Specs v1.0.1+/v1.0.2 STABLE for code-1.
+- **Wikilink-audit v2:** 803 RESOLVED / 30 STUB / **0 BROKEN** = 96.4% brain link-health.
+- **Coverage baseline:** lines 43% (warning, target 60%), branches 77%, functions 71%. 530/530 tester grøn.
+- **Brain-link-graph:** 525 nodes / 2482 edges. Top hub: `[[Operator-Principles]]`.
+- **Operator-NEXT-ACTIONS list** klar (15-item prioritert): P0 = skim audit + test demo + push-gate decisions; P1 = spec-review + activate G3.
+- **Code-1 lane aktivt** — brain-orchestrator + memory-engine scaffolds eksisterer.
+
+**Karri-relevant:**
+- Spec-review nå mest verdifullt — alle 7 specs stable, INTEGRATION_NOTES_v1.2 dokumenterer hva som ble fikset.
+- `[[OPERATOR-NEXT-ACTIONS]]` har P1-task #6 = "spec-review cross-check" (15 min estimat).
+- Tiger-brain bypass gjelder fortsatt for trivielle fixes.
+
+**Hvis Karri vil teste pipelines:**
+- YouTube manual: `/skill youtube-ingest url=<X>` → distillert note i `12-youtube/`
+- GitHub manual: `/skill github-discover query=<X>` → scored repo-notater i `13-github-repos/`
+- Begge har HOW-TO drops i `_queue/` folders
+
+**Klart for review:** `[[2026-05-25-brain-upgrade-plan]]` v1.2 (med §14 STATUS), `[[INTEGRATION_NOTES_v1.2]]`, alle 7 specs i `08-system-architecture/specs/`.
+
+— code-2

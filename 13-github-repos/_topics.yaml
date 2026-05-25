@@ -1,0 +1,32 @@
+# GitHub topic + search-query allowlist for github-discovery
+# Referenced by: 13-github-repos/README.md + GITHUB_DISCOVERY_SPEC §8
+# Pre-curated topics + searches operator finds interesting
+# Format:
+#   - topic: search-topic-name
+#     query: gh search query string
+#     min_stars: 100
+#     license_filter: compatible | any
+#     notes: optional context
+
+version: 0.1.0
+updated: 2026-05-25
+
+topics: []
+# Operator: populate this file with topics you want to discover.
+# Example entries (commented):
+#   - topic: agent-orchestration
+#     query: "agent orchestration TypeScript stars:>100"
+#     min_stars: 100
+#     license_filter: compatible
+#     notes: Conductor + Hermes Agent + similar patterns
+#
+#   - topic: vector-databases-sqlite
+#     query: "sqlite-vec OR sqlite-vss stars:>50"
+#     min_stars: 50
+#     license_filter: compatible
+#     notes: Local-first vector storage
+#
+#   - topic: claude-tools
+#     query: "claude code OR anthropic SDK examples stars:>20"
+#     min_stars: 20
+#     license_filter: any  # MIT/Apache common but check

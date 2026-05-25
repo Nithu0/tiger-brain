@@ -173,3 +173,47 @@ expected and they stay as-is.
 - 2026-05-24T14:54Z code-2: ferdigstilte on-prem AI-strategi (10 agenter + 13-seksjons-integrasjon) → 03-business/2026-05-24-onprem-ai-strategi.md
 - 2026-05-24T14:58:59Z code-1 received dispatch (inbox +11 lines)
 - 2026-05-24T15:07:35Z ai-1 received dispatch (inbox +196 lines)
+- 2026-05-24T15:08Z code-2 → ai-1: dispatched full system-brief (on-prem AI-strategi + command-center action items) — brain commit 4d4fc29, push pending pga SSH-blip
+- 2026-05-24T15:14Z code-2: brain pushet via HTTPS-fallback (4d4fc29) — SSH port 22 fortsatt nede; pre-push sanity 8/8 OK
+- 2026-05-24T15:19Z code-2: pushed env-guards (executor/brain/terminals) for hosted-mode → command-center main; 341/341 tests green; ready for 2nd Railway redeploy verify
+- 2026-05-24T15:24Z ai-1 → Karri: (1/2) 401-fix (83d527d) + (2/2) on-prem-AI system-brief — begge HTTP 204
+- 2026-05-24T15:24:41Z code-2 received dispatch (inbox +8 lines)
+- 2026-05-24T15:27Z code-2: pushed env.ts robustness (PORT fallback + prod 0.0.0.0 + boot log) — fix for Railway healthcheck timeout
+- 2026-05-24T15:38Z code-2: pushed Option B driver-agnostic query() wrapper + ported 4 critical files (commands/health/orchestrator/executor) — SQLite tests still green, Postgres becomes viable
+- 2026-05-24T15:51Z code-2: pushed port-resolution fix (PORT wins over non-interpolated API_PORT) + explicit console.log of resolved values — diagnoses c32b93e7 hc fail
+- 2026-05-24T16:23Z code-2: Option B Phase 2 done — dispatcher aktivert, 4 filer portet, hostet w/ DB_DRIVER=pg bruker nå faktisk Railway Postgres. 341/341 tester grønne.
+- 2026-05-25T09:07:31Z code-1 online in workspace
+- 2026-05-25T09:07:31Z code-2 online in workspace
+- 2026-05-25T09:07:31Z ai-1 online in nexus
+- 2026-05-25T09:07:31Z ai-2 online in nexus
+- 2026-05-25T09:07:31Z personal-1 online in personlig
+- 2026-05-25T09:07:31Z soking-1 online in soking-fulltid
+- 2026-05-25T09:07:31Z as-1 online in AS
+- 2026-05-25T09:07:31Z thesis-1 online in master-oppgave
+- 2026-05-25T09:58:46Z ai-1 online in nexus
+- 2026-05-25T09:59:07Z ai-1 online in nexus
+- 2026-05-25T10:00:28Z code-1 online in workspace
+- 2026-05-25T10:00:28Z code-2 online in workspace
+- 2026-05-25T10:00:28Z ai-1 online in nexus
+- 2026-05-25T10:00:28Z ai-2 online in nexus
+- 2026-05-25T10:00:28Z personal-1 online in personlig
+- 2026-05-25T10:00:28Z soking-1 online in soking-fulltid
+- 2026-05-25T10:00:28Z as-1 online in AS
+- 2026-05-25T10:00:28Z thesis-1 online in master-oppgave
+- 2026-05-25T10:08Z code-2: brain-upgrade-plan v1.0 draft skrevet til 08-system-architecture/2026-05-25-brain-upgrade-plan.md — audit + target + parallell-todo + prompt-utbedringer. Venter operator OK kjør på alternativ A/B/C i §10.
+- 2026-05-25T10:18Z code-2: brain-upgrade Alt A AKTIVERT — Module K (RAG advanced+agentic) lagt til; code-1 dispatch sendt (C1-1 til C1-10); 10 spec/setup sub-agenter dispatchet parallelt; 5× verify-policy bindende per §11
+- 2026-05-25T12:29:08Z code-1 received dispatch (inbox +50 lines)
+- 2026-05-25T11:30Z code-2: BRAIN-UPGRADE fase 1 DONE — 10 sub-agenter leverte parallelt: 7 specs (4865 linjer i 08-system-architecture/specs/) + 1 eval-set + 6 brain-folders + 9 subfolders + 6 READMEs + 8 templates + 5 SKILL.md. Code-1 dispatch sendt til inbox/code-1.md. v1.0 specs alle 5× verifisert per §11. Open items: bge-m3 dim=1024 ikke 768 (propager A-1), folder-numerering kollisjon 03/06/07 (operator-gate).
+- 2026-05-25T12:39:17Z code-2 received dispatch (inbox +17 lines)
+
+2026-05-25T12:46Z code-1: appended lane-coordination msg to inbox/code-2.md re: C1-1..C1-10 + apps/web overlap with 14c. Pushed `b80e38d` 14c-fix (next.js standalone). Awaiting Railway redeploy.
+- 2026-05-25T11:45Z code-2: FASE 2 AKTIVERT — 10 B-sub-agenter dispatchet parallelt (rename 06→12 + 07→13, cross-spec verify, bge-m3 fix, skill-registry pkg, firm-task scripts, 3 nye MOC, W22-retro, TS package template, 3 pilot-tasks, operator-facing dispatch-doc). Code-1 oppfølgings-dispatch sendt.
+- 2026-05-25T12:42:37Z code-1 received dispatch (inbox +23 lines)
+- 2026-05-25T12:08Z code-2: FASE 2 DONE — alle 10 B-agenter levert (B1 folder-rename + 56 cross-refs, B2 INTEGRATION_NOTES_v1.1 446 linjer m/ 7 CRIT + 12 MED + 9 NIT, B3 bge-m3 v1.0.1, B4 skill-registry pkg 7/7 tester, B5 firm-task scripts 5/5, B6 3 MOC, B7 W22 retro, B8 _template 349/349 root tests, B9 3 pilot-tasks, B10 tracking-doc). Fase 3: 10 C-agenter dispatchet for å fikse B-2 CRIT+MED. Spec v1.0.2 forventet T+15. Code-1 acked 12:45Z, flagger lane-overlapp C1-6/7/9 (Slice 14c Railway live) — split (b) foreslått.
+- 2026-05-25T12:05Z code-2: FASE 2 10 B-agenter komplett — folder rename (06→12, 07→13, ~56 cross-ref edits), bge-m3 fix (768→1024 v1.0.1), skill-registry pkg (10 filer, 7/7 tester x5), firm-task-claim/complete bash (5/5 tester), 3 nye MOC, W22 retro, _template pkg (349/349 tests still grøn), 3 pilot-tasks, fase-2 dispatch-doc. B-2 fanget 7 CRIT + 12 MED + 9 NIT cross-spec funn → fase 3 fix-batch 10 C-agenter dispatchet.
+- 2026-05-25T12:54:11Z code-1 received dispatch (inbox +4 lines)
+- 2026-05-25T12:25Z code-2: FASE 3 10 C-agenter komplett — alle CRIT lukket (MEMORY v1.0.2, AGENT/RAG/SKILL v1.0.1), 6 MEDIUMs landed på OBSIDIAN/YT/GH/brain-plan, retrospective README schema reconciled, System-Arch MOC oppdatert, fase-2 tracking refreshed. Wikilink-audit: 648 RESOLVED / 38 STUB (alle dokumentert) / 1 BROKEN (fikset i denne runden). Brain-plan v1.1 draft. Code-1 acked 12:45Z m/ overlap-bekymring C1-6/7/9 mot Slice 14c — håndteres nå.
+- 2026-05-25T12:30Z code-2: lane-coordination RESOLVED — adopt code-1's (b)-MODIFIED split. Code-1: C1-1/2/3/4/5/6/8/10 (8 pure-new-pkg tasks). Code-2: C1-7 (apps/api/brain.ts) + C1-9 (sync migrations) flyttet til code-2-lane. Wikilink-typo fikset (SKILL_REGISTRY_SPEC:196). Specs stabile post fase 3. Brain-plan v1.1 draft.
+- 2026-05-25T13:01:55Z code-1 received dispatch (inbox +34 lines)
+
+2026-05-25T13:00Z code-1: 4 branches pushed + 4 draft PRs created (#1-4). C1-1/C1-2/C1-9/Phase-14b skeletons all green. Diag Dockerfile cherry-picked to main (7cd4059) — Railway rebuilding with verbose logging. 10 new agents dispatched on C1-3..C1-10 + 14b endpoints + health polish (all isolated worktrees).

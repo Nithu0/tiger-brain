@@ -32,3 +32,23 @@ Thumbs.db
 # Personlig sub-vault — SENSITIV helsedata, ALDRI push til delt repo (tiger-brain)
 # Se Personlig/CLAUDE.md sensitivitets-binding. Lokal Obsidian-sync OK, git nei.
 07-personlig/
+
+# Verbatim YouTube transcripts — COPYRIGHT-sensitive, NEVER commit.
+# Only distilled notes in 12-youtube/ are commit-safe (no quotes >~25 words).
+# See 12-youtube/README.md + YOUTUBE_INGESTION_SPEC.
+_library/youtube/
+
+# Verbatim book text — COPYRIGHT-sensitive, NEVER commit.
+# Only distilled notes in 14-books/ are commit-safe (no runs >10 source words).
+# Source epub/txt files staged for ingestion also stay local-only.
+# See 14-books/README.md + @cc/book-ingest.
+_library/books/
+14-books/_queue/_inbox/
+# Raw book source files dropped directly into the queue (epub/pdf/txt/mobi/azw3)
+# are verbatim copyrighted text — local-only. Only *.book pointer files + distilled
+# notes are commit-safe. See 14-books/README.md (queue file format).
+14-books/**/*.epub
+14-books/**/*.pdf
+14-books/**/*.txt
+14-books/**/*.mobi
+14-books/**/*.azw3

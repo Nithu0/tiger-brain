@@ -1,0 +1,5 @@
+# title: Example Book Title
+# author: Example Author
+# tags: example, sample
+# note: this is a sample queue file — copy into _queue/ and point at a real epub/txt
+_library/books/_inbox/example.txt

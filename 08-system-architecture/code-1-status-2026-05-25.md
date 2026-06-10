@@ -101,3 +101,17 @@ Inferred from PR map (no formal Sprint 2 plan read in this snapshot):
 3. Recommendation actionable — explicit "leave alone, don't overlap, don't re-ping".
 4. Wikilinks point to existing notes: `[[2026-05-25-brain-upgrade-plan]]`, `[[SPRINT-1-COMPLETE-2026-05-25]]`, `[[FINAL-STATE-2026-05-25]]` all confirmed present in `08-system-architecture/`.
 5. Frontmatter YAML uses block-scalar list with quoted wikilinks (Obsidian-tolerant).
+
+---
+
+## Final snapshot — 2026-05-25T17:50Z (post fase 16)
+
+**PR count (code-1 branches):** 42 open. Most recent activity: PR #70 `code-1/rag-engine-agentic-real` (T3 agentic real LLM impls, env-gated) at 17:11:41Z. Three other fresh pushes between 17:06-17:08Z: #66 (real bge-reranker), #67 (PR #55 smoke verify), #68 (coverage-gate plan).
+
+**New inbox traffic since M-8:** none. Last direct message from code-1 in `inbox/code-2.md` remains the 13:40Z gentle-ping. Code-1 has continued shipping (4 fresh branches in the 17:06-17:11Z window) without re-pinging — consistent with the M-8 read of "continued coding = implicit ACK".
+
+**Pattern:** code-1 is now pairing scaffolds with real-impl branches (PR #66 pairs with #9 rerank scaffold; PR #70 pairs with #13 agentic scaffold; PR #47 already paired with #2 distill earlier). Coverage-gate plan (#68) signals C1-10 follow-through. PR #67 indicates code-1 is also verifying code-2's PR #55 web brain UI — cross-lane verification, not overlap.
+
+**Recommendation:** Same as M-8 — leave code-1 alone. No new blockers, no new asks, no overlap risk. The 13:40Z gentle-ping is stale; do NOT resurrect it. If operator wants to merge anything tonight, the env-gated real-impl pairs (#47, #66, #70) are safe-by-default (stubs unless env enables) and reviewable in isolation.
+
+**Action item for operator (only if asked):** consider batching review of the three real-impl pairs (#2+#47 distill, #9+#66 rerank, #13+#70 agentic) since they share the env-gate pattern and would benefit from one consistent review pass.

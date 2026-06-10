@@ -35,6 +35,8 @@ What operator is actually working on **right now**. One file. Keep it honest.
 - Ukens aktive workspace-meta-arbeid på `code-1`/`code-2`: Next.js+Fastify+SQLite control plane på `/home/nithu/code/command-center`.
 - Vault-node: [[00-command-center/README]] · prosjektkort: [[00-command-center/project-card]].
 
+**Node-migration (2026-06-03) — produkt = 24/7 autonome agenter på egen lokal GPU-node.** Hardware er fundamentet, ikke endepunkt; brain (Module A orchestrator + B memory + K RAG, lokal bge-m3 dim 1024) kjøres cloud-GPU-først → migreres uendret til noden. Sekvens: penger→MVP→hardware (~Aug 2026). Neste produkt-kritiske bygg: Module A brain-orchestrator. Autonomi-på-bryteren = gates brain-G4 (nightly-distill) + brain-G6 (queue-watcher), ship OFF. Kanon: [[2026-06-03-node-migration-MOC]].
+
 ## Aktive prosjekt-tråder (6)
 
 Én-linjers status per prosjekt. Detalj i hver MOC.

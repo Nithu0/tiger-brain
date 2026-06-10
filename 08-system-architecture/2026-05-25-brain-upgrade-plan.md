@@ -1,7 +1,7 @@
 ---
 title: Workspace-wide Brain Upgrade — Audit, Target, Parallell-todo
 date: 2026-05-25
-status: v1.4 draft — fase 11+12 EXECUTE komplett, sprint 1 SHIPPED
+status: v1.5 draft — node-migration-rebinding (2026-06-03 §17 addendum); sprint 1 SHIPPED
 author: code-2 + 10 parallelle inspeksjons-agenter
 related:
   - "[[2026-05-24-onprem-ai-strategi]]"
@@ -959,3 +959,28 @@ Total: 4865 spec-lines + struktur. Hver agent kjørte egen 5× verify-pass før 
 **Brain-plan bumpes til v1.4 draft.**
 
 **Sprint 1: SHIPPED.** Sprint 2 venter: operator merger 8 draft-PRs etter review, code-1 lander MEM/RAG-impl, G4 + G6 activerer i sekvens.
+
+---
+
+## §17 ADDENDUM — 2026-06-03 — node-migration framing + merge-train
+
+> Tilføyelse, ikke revisjon. §0–§16 står. Dette reflekterer 2-bølge-agentsweepen 2026-06-03 og rebinder planen til node-migrasjonen. Full kontekst: [[2026-06-03-node-migration-MOC]].
+
+**Reframing (binding):** Brain-upgraden er ikke et frittstående AI-OS — den ER produktet i node-migrasjonen. Hardware er FUNDAMENTET (always-on autonome agenter + co-located læring + lokal LLM), ikke en konsekvens. Spor B (denne planens Module A + B + K) kjøres først på leid cloud-GPU, så migreres uendret til den lokale Ubuntu-noden. Se workspace-memory `project_node_migration.md`.
+
+**Hva som er konkretisert siden v1.4:**
+
+1. **bge-m3 embedding-client nå BYGGET.** Tidligere `Mangler`-punkt (§1.3, §2.B) — `embedding/bge-m3.ts` fantes ingen steder. Nå bygget som **Ollama-klient, dim 1024**, som tilfredsstiller `assertValidEmbedding` / `BGE_M3_DIM` fra `@cc/memory-engine`. Dette er den GPU-bundne avhengigheten som tvinger fram noden for produksjon (lokal-først personvern).
+
+2. **Merge-train er nå eksekverbar.** [[2026-06-03-brain-merge-train-executable]] erstatter de eldre planleggingsdokene (PR_MERGE_ORDER, MASTER_BRIEF). Dedup-først (lukk 7 dup-PRs), så nummerert rekkefølge. Embedding-klienten slottes i **STEP 4** (etter storage #12, før rag-chain STEP 7a — ellers returnerer hver vektor-recall `[]`). Skarpeste konflikt: migration-id-003-kollisjon (#3 vs #14 → renummer 004).
+
+3. **sqlite-vec er default; Qdrant utsatt.** Bekreftet på tvers av Memory + RAG: storage-laget bruker **`sqlite-vec`** (in-process, lav ops-kost), ikke `sqlite-vss`. Qdrant er lazy-import bak env-flagg, kun aktivert ved on-prem node-deploy (`docker-compose.data.yml`). Risiko-3 (vector-storage scope-creep) er dermed lukket på default-nivå.
+
+4. **Module A (brain-orchestrator) er neste produkt-kritiske bygg.** Den always-running heartbeat + lease-reaper er det som gjør stacken fra "manuelt trigget" til "24/7 autonom" — kjernen i WHY-en. Merge-train STEP 2 (#1) lander skjelettet; STEP 10 wirer G4-trigger bak env-flagg. Prioriteres foran videre ingestion/dashboard-arbeid.
+
+**Gate-status oppdatert (utfyller §6 + §16):**
+- brain-G3 worktree-default — opt-in (uendret).
+- **brain-G4 / brain-G6 er nå eksplisitt rammet som AUTONOMI-PÅ-BRYTEREN** (ikke byråkrati): forskjellen mellom agent-som-venter og agent-på-jobb-24/7. Ship OFF. Forhåndskrav: recall MRR ≥ 0.6 + PII-review (G4), 1 ukes manuell-på-verifisering (G6). Ref: `command-center/docs/deploy/node-stack/AUTONOMY-GATES.md`.
+- **Ny gate i node-kontekst:** penger→MVP→hardware (`AS/docs/EXECUTION-DASHBOARD.md`, ~Aug 2026) + Nexus live-DB cutover (foundation gate + compose-herding).
+
+**Brain-plan bumpes til v1.5 draft** (node-migration-rebinding).

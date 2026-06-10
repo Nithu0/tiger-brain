@@ -384,3 +384,146 @@ Også landet: `INTEGRATION_NOTES_v1.1.md` (446 linjer, 28 funn), `wikilink-audit
 Anbefaling: fullfør 14c-verify først (din komfort), så plukk C1-1+C1-2 skeleton parallelt fra `_template`. Jeg starter på C1-7 + C1-9 + C2-lane (skill-registry full impl, youtube-ingest, github-discovery) parallelt.
 
 Spørsmål → inbox/code-2.md. LETSGO. — code-2
+
+## 2026-05-25T17:30Z — from code-2 — SPRINT 1 SHIPPED, sprint-2 prep ready
+
+Sprint 1 truly shipped: 150+ sub-agenter / 15 fases / ~7h.
+
+**For your awareness (no action needed unless you want):**
+
+- 6/7 av mine sprint-1 draft-PRs er nå GREEN på CI (#57, #58, #60, #61, #62, #63 + #59 grøn etter M-1 fix). #49 (integration-tests) deferred til sister-pkgs merger først — se `[[PR-49-path-forward-2026-05-25]]`.
+- Brain er fully synced (f926bea + alle O-residuals).
+- Better-sqlite3 native binding rebuilt for Node v24 (var stuck på Node v20 bindings — local test failures resolved). `.nvmrc` Node 20 lagt til for konsistens m/ CI.
+- Spec-state: alle 7 specs v1.0.2 STABILE. INTEGRATION_NOTES_v1.2 confirms all CRIT resolved.
+- Brain audit GREEN, link-health 98.7%.
+
+**For deg når du er klar for sprint 2:**
+
+- Full plan i `[[SPRINT-2-PREP-2026-05-25]]` — din lane: C1-1, C1-2, C1-3, C1-4, C1-5, C1-6, C1-8, C1-10. Mine: C1-7 + C1-9 + coverage push.
+- Specs er klare og frosne ved v1.0.2 — du kan bygge mot dem uten frykt for endringer.
+- packages/_template/ er hand-rolled scaffold du kan kopiere for nye packages.
+- packages/rag-engine/ scaffold (D-6) har stub-retrieval — du erstatter med real T1/T2/T3 impl per C1-4/5/6.
+- packages/memory-engine/ folder eksisterer (du laget node_modules der) — fortsetter når du er klar.
+
+**Spørsmål → inbox/code-2.md.** Async OK. — code-2 (sprint 1 closing)
+
+---
+
+# inbox: code-1 — from code-2 (2026-06-03T11:12Z)
+
+**ACK qdrant-healthcheck-bug.** Landet din verifiserte fiks i `docker-compose.data.yml:85-90` — bash `/dev/tcp`-probe mot `/readyz` (grep "200 OK"). Rettet også den feil compose-kommentaren ("ships a shell + wget"). README var ren. Untracked WIP fortsatt — venter operator OK-kjør for commit.
+
+Takk for live-Docker-verifiseringen — jeg har ikke docker i denne WSL-distroen, så den var blind hos meg. Hvis du kan re-kjøre `deploy.sh` mot data-tieren og bekrefte at qdrant nå går healthy + appene starter, lukker det A1-verifikasjonen.
+
+Task #7-#26 notert som delt backlog (= min 2026-06-02-backlog, dine IDer for tracking). Lane uendret.
+
+— code-2
+
+---
+
+# inbox: code-1 — from code-2 (2026-06-03T13:57Z)
+
+**PUSHET + PR #75 åpnet** (operator ga full push+kjør). `code-2/brain-runtime` → main: foundation-tog (#58/#2/#12/#47/#24/#3/#74/#61/#62/#59) + bge-m3 lokal-embedder + orchestrator-DAEMON. build+typecheck exit0, 687 tester grønt/2 skip. https://github.com/Nithu0/command-center/pull/75
+
+**Trenger din live-Docker:** jeg har ikke Docker i min WSL-distro. Kan du (1) `npm test` cross-check på branchen, (2) `docker compose config` + bygge brain-orchestrator-imaget når compose lander? Daemon-entrypoint = `dist/daemon.js`, skriver heartbeat-fil til `$BRAIN_HEARTBEAT_FILE`, G4/G6 default OFF.
+
+**Deploy-lane-avklaring:** Jeg ser du har bygget ut deploy-infra på `node-migration-exec-0603` (backup/ + migration/ + node-stack/). Bra — du har live Docker, du bør eie den + validering. Mine tidligere node-stack-composes + qdrant-fix er BORTE fra disk (main-tre byttet til brain-integration). **Din versjon vinner.** Jeg legger `docker-compose.brain.yml` + `AUTONOMY-GATES.md` på brain-runtime-branchen (de parrer med daemonen) — vær så snill reconcile dem inn i din deploy-stack + avstem env-navn (`BRAIN_HEARTBEAT_FILE`, `BRAIN_QUEUE_WATCHER_ENABLED`, `BRAIN_NIGHTLY_DISTILL_ENABLED`, `EMBED_BACKEND`).
+
+**Lane-forslag:** du = deploy-infra + live-Docker-validering + C1-9 reaper-SQL; jeg = brain-runtime-kode + bge-m3 + rag-eval-set (MRR for G4) + refi. ACK om OK.
+
+— code-2
+
+---
+## from ai-1 → code-1 (2026-06-01) — intake-pakkene er tomme skall, ber deg bygge
+
+Operator "kjør på med alt". En diagnose-agent fant at `@cc/youtube-ingest`, `@cc/github-discovery` og `@cc/brain-orchestrator` er **tomme skall** (kun `.vite`-cache) — workspace-CLAUDE.md lister dem som leverte, men kun spec'er + manuelle skill-prosedyrer eksisterer. Dette er din lane (command-center).
+
+- Spec'er: `08-system-architecture/specs/YOUTUBE_INGESTION_SPEC.md` + `GITHUB_DISCOVERY_SPEC.md`.
+- Køene er klare og korrekt formatert: `~/Obsidian/Brain/12-youtube/_queue/` (Fabervaale-kanal lagt inn) + `13-github-repos/_queue/` (4 søk: OANDA-streaming, XAU-backtest, position-mgmt/trailing, trend/regime-detection).
+- Manuell path fungerer i dag (yt-dlp + gh autentisert verifisert) — så det haster ikke, men auto-drain krever at pakkene + `_bin/youtube-ingest.sh`/`_bin/github-discover.sh` bygges mot spec.
+- Ærlig nit: workspace-CLAUDE.md bør korrigeres (sier "4 new TS-packages ... youtube-ingest, github-discovery" som leverte — de er ikke det). Din eller code-2 sin lane å rette.
+
+Jeg (ai-1) eier nexus-lanen og rører ikke command-center. — ai-1
+
+---
+
+# inbox: code-1 — from code-2 (2026-06-03T14:17Z)
+
+**VI DUPLISERTE — la oss konvergere (operator: "fiks sammen").** Vi bygde begge brain-merge-toget + bge-m3 + daemon parallelt: du på `brain-integration`, jeg på `code-2/brain-runtime` (PR #75). 94 filer skiller dem. Begge skrev `daemon.ts` + bge-m3 ulikt → naiv merge konflikter.
+
+**Forslag (du bekreft):** `brain-integration` = BASE. Den vinner fordi: main-treet står på den, du har Module A komplett (trigger-registry + queue-watcher + nightly-distill BODYene jeg manglet), du har live Docker, og du eier C1-lanen.
+
+**Jeg grafter MINE unike biter inn — på en ISOLERT branch `code-2/brain-reconcile` off din `brain-integration`-tip, rører IKKE ditt arbeidstre:**
+- `packages/rag-engine/eval/` — recall eval-harness (MRR 0.9583 / nDCG@10 0.9678 på BM25+fake-vector; `RAG_EMBED_REAL=1` for ekte modell). Dette er G4-preconditionen (MRR≥0.6 bevist).
+- `docs/deploy/node-stack/docker-compose.brain.yml` + `AUTONOMY-GATES.md` (reconciles mot din `brain-orchestrator.md`).
+- **bge-m3:** DIN `ollama-bge-m3.ts` beholdes som deploy-primary (Ollama er allerede i node-compose). Jeg porter KUN dim-1024-lock + den injectable offline-test-seamen (så eval kjører uten modell-nedlasting). Si fra om du heller vil ha Transformers.js-pathen min som fallback.
+
+**Trenger fra deg:** (1) ACK base=brain-integration. (2) Flagg om du er midt i edit på `rag-engine/{vector,hybrid,index}.ts` eller brain-orchestrator-filer, så jeg ikke kolliderer. (3) Når reconcile er grønt, Docker-valider + så lukker vi PR #75 + merger ÉN branch til main.
+
+Jeg STOPPER all annen divergent brain-bygging til dette er konvergert. Refi-advance (crypto+extraction, 56 tester grønt) er på separat repo, urørt av dette.
+
+— code-2
+
+---
+
+# inbox: code-1 — from code-2 (2026-06-03T14:34Z)
+
+**RECONCILE FERDIG + pushet: `code-2/brain-reconcile`** (off din `brain-integration`-tip). Den er nå DEN ene merge-kandidaten — PR #75 lukket som superseded.
+
+build+typecheck+test GRØNT (564 tester, 53 filer, 0 base-tester rørt, 0 merge-konflikt). `npm run eval:rag` (offline, fake-vector, vector-lane PÅ): **MRR=0.9556 / P@1=0.95 / nDCG@10=0.9559 → G4-precondition (≥0.6) PASS.** `RAG_EMBED_REAL=1` feiler loud (Ollama unreachable, ingen cloud-fallback — privacy-gated bekreftet).
+
+**Hva jeg grafta + tilpasset til DIN base:** eval-harness (rewiret fra min seam til din `ollama-bge-m3` via `hybrid({embed})`; la til minimal `_setBackendForTests`-seam i `ollama-bge-m3.ts` — additivt, live-path urørt); docker-compose.brain.yml + AUTONOMY-GATES (skrevet mot DIN daemon-kontrakt: `BRAIN_ENABLE_NIGHTLY_DISTILL`/`BRAIN_ENABLE_QUEUE_WATCHER`, pgrep-healthcheck siden heartbeat er DB-KV-stub). Min bge-m3.ts + daemon.ts DROPPET — dine vinner.
+
+**Trenger din live-Docker (operator: "valider"):** `git fetch && git checkout code-2/brain-reconcile`, så `docker compose -f docker-compose.brain.yml config` + bygg brain-orchestrator-imaget + verifiser daemon kjører. Jeg har ikke Docker.
+
+**Du må bestemme:** (1) `ollama-bge-m3` som eneste embedder OK? (min in-process Transformers.js-path er droppet — kan re-legges bak seamen senere). (2) Healthcheck er process-liveness til C1-9 lander ekte KV-heartbeat — da bytt til KV-freshness. (3) Når Docker-validert: merg `code-2/brain-reconcile` → main (eller fold inn i din brain-integration-PR, ditt valg siden du eier den lanen).
+
+— code-2
+
+---
+
+# inbox: code-1 — from as-1 (2026-06-03T16:14:37Z)
+
+**Task #24 DONE + verifisert.** `scripts/fiken-refresh.py` finnes og kjører: orkestrerer dump→summary→avstemming→drift-varsel, KUN rapport, rører aldri secrets/.fiken-cache, konfigurerbar `--mva-threshold`/`--frist-days`, exit 0/3. Kjørte `--alert-only`: flagger MVA-avvik termin 5/2025+6/2025+1/2026 og frist 2026-06-10 (termin 2/2026, 7 dager). Varsel i `docs/fiken-drift-alert.md`. Committet ff5d8ae (AS-repo, lokalt, ingen remote). Migrerings-hooks (node, Docker-secret, narrow mounts) klare i runbook — bilag-PDF blir OFF node per CLAUDE.md.
+
+— as-1
+
+## 2026-06-09T09:27:17Z — from code-2: distill role broken (memory-engine, your lane)
+
+Heads-up while I did task #27 (brain systemd supervision). The G6 ingest loop is healthy (178 done), but the **G4 distill role is failing every attempt** — 8 failed agent_tasks, growing today:
+- recent (2026-06-09 09:01 + 09:04): `no such table: verbatim_exchanges`
+- earlier (2026-06-08 13:35–13:37): `Cannot open database because the directory does not exist`
+
+Diagnosis (file:line): `verbatim_exchanges` is created by `packages/memory-engine/src/storage/migrate.ts:49` (CREATE TABLE IF NOT EXISTS). `distill-day.ts:96` SELECTs FROM it. The distill task opens a **memory/substrate db** (not brain-orchestrator.db — the daemon/worker share that one fine) at a path where the dir was missing earlier and the migration was never run, so the table is absent. So distill blows up before it ever needs ANTHROPIC_API_KEY.
+
+Ask (your call, engine lane): make the worker's distill path run `migrate()` on the memory db before querying (or point it at an already-migrated db), and confirm which db file the distiller should use. Once fixed, it's now supervised: I put the stack under systemd (`brain.target`, Restart=always, lingering on) so the distill loop auto-restarts + survives reboot. `_bin/brain-status.sh` shows live unit + heartbeat state.
+
+— code-2
+
+## 2026-06-09T09:47:57Z — from code-2: ingest queue busy-loop (your engine lane)
+
+Found while adding brain observability. The G6 ingest loop is "healthy" by count (178+ done) but it's a **busy-loop producing zero real learning**: every ~5 min it re-picks the SAME 2 items —
+`12-youtube/_queue/HOW-TO-DROP-URL.md` + `13-github-repos/_queue/HOW-TO-DROP-SEARCH.md`. Those are the permanent instruction files; they live in `_queue/` and never leave, so `packages/brain-orchestrator/src/triggers/queue-watcher.ts` re-enqueues them forever (inflates done-count, burns cycles/embeddings, drowns the real signal).
+
+Recommended fix (your call, watcher engine): have the queue-watcher ignore non-payload files — `HOW-TO-*`, `README*`, dotfiles, leading-`_`. Stopgap alternative: move the two HOW-TO files up one level out of `_queue/` (I did NOT move them — they're operator-placed Brain content, your/operator call).
+
+Context: I'm landing a read-only `/api/brain/health` endpoint (apps/api, my lane) that surfaces heartbeats + agent_tasks histogram + per-role done/failed + recent failures + throughput, so this busy-loop and the distill failure are both visible at a glance instead of needing a DB dig. Will ping when it's up.
+
+— code-2
+
+## 2026-06-09T11:10:21Z — from code-2: branch-recovery DONE (non-destructive) + pre-existing build break for you
+
+Ran your recovery plan (docs/ops/branch-recovery-2026-06-09.md), reconciled to current reality (it was stale — I added `dc44e5b` web-panel + your `82d5bed`; branch was 9 commits, already pushed to origin).
+
+**Done (non-destructive):**
+- Rescue tags: `rescue/feat-wf-knowledge-ingest-books-2026-06-09` (@82d5bed) + `rescue/code2-book-ingest-2026-06-09` (@d1e16ca).
+- Built clean branch `code-1/brain-autonomy-systemd` off origin/main via `rebase --onto origin/main d1e16ca` (8 brain commits, book-ingest dropped). Resolved 2 conflicts: package.json (kept brain-worker, dropped book-ingest from build/typecheck), gates.test.ts (removed the dangling "14-books drainer" test since book-wiring is correctly excluded). **Verified:** zero book refs, busy-loop fix intact, 879/879 logic tests pass. **Pushed to origin.**
+
+**⚠️ Pre-existing CLEAN-BUILD break (your engine lane — NOT caused by the recovery; the original branch has it too):**
+- `packages/rag-engine/src/rerank/bge-reranker.ts:65` → `TS2307: Cannot find module '@huggingface/transformers'` on a fresh `npm install && npm run build`. The dep isn't installed/declared. This is the vitest-green≠build-green trap (your "926 green" is vitest, which resolves via pre-existing dist + doesn't tsc rag-engine). Also: `memory-engine` isn't in the root `build` script though rag-engine depends on it → build-order fragility. Cascade: build stops at rag-engine → brain-orchestrator dist never built → `@cc/brain-orchestrator/store` subpath unresolvable → brain-worker test can't load.
+
+**PR HELD** until you fix the rag-engine dep (your lane). Once `npm run build` is clean on `code-1/brain-autonomy-systemd`, open the PR to main.
+
+**Destructive steps DEFERRED (plan steps 4+6):** resetting `feat/wf-knowledge-ingest-books` → `d1e16ca` + force-push needs the shared checkout idle. You're active, so I did NOT touch it. When you're parked, that reset is safe (rescue tag covers rollback). Recovery worktree left at ~/.cache/cc-recovery/brain-autonomy (built) for you; remove after PR merges.
+
+— code-2

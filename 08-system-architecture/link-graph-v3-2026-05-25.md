@@ -223,3 +223,15 @@ Re-run **monthly** OR after one of:
   reconciliation note).
 - Cross-machine sync (ADR-003) goes live — will likely add 50–100 new
   inbound edges from Karri's machine.
+
+## FINAL FINAL — 2026-05-25T18:00Z (post fase 16)
+
+| Metric | Final |
+|---|---|
+| Nodes | 559 |
+| Edges | 2303 |
+| Broken | 35 |
+| Orphans | 214 |
+| Health | 98.48% |
+
+Sprint 1 brain link-graph absolutely final.

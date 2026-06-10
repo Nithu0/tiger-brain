@@ -1,0 +1,4 @@
+https://www.youtube.com/channel/UCQTN8r4TYJUk2OXrkHyfVSQ
+# tags: fabervaale-eng, operator-requested
+# note: Channel "Fabervaale ENG" (215k subs, channel_id UCQTN8r4TYJUk2OXrkHyfVSQ) — operator wants to learn from this channel. NB: this is a CHANNEL URL, not a single-video watch URL. v1.0 ingest path expects single-video .url files (regex in YOUTUBE_INGESTION_SPEC §8 matches /watch?v= or youtu.be/<id>). To ingest, either (a) expand to per-video .url files, or (b) run skill youtube-ingest in channel-aware mode. Auto-captions confirmed available (en + no), so no whisper/ffmpeg needed for this channel.
+# failed_at: 2026-06-08T13:35:16Z reason=malformed_url

@@ -1,0 +1,4 @@
+https://www.youtube.com/channel/UCBP0QGCn6bKRHJRsEmh7Q5A
+# tags: systematic, backtest, mean-reversion, regime, hmm, nexus, operator-requested
+# note: "Quantified Strategies" (Oddmund Groette / Sammy). #2 fit. Every strategy backtested with stated rules + stats. Strong on mean-reversion (RSI2, rubber-band/ATR snap-back -> Nexus S4), channel/breakout patterns, and explicit HMM market-regime detection (trend vs range switch). CAVEAT: mostly equities/ETF (SPY/QQQ), edges won't transfer 1:1 to gold/FX; clickbait win-rate titles; some short-sample/in-sample backtests. Mine for METHOD & study design, not ready edges. NB: CHANNEL URL not single-video. See _library/trading/sources/2026-06-01_xauusd-systematic-sourcing.md.
+# failed_at: 2026-06-08T13:35:16Z reason=malformed_url

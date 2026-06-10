@@ -2,57 +2,55 @@
 type: handoff
 tags: [handoff, current]
 created: 2026-05-11
-updated: 2026-05-13
-owner: "Claude (Opus 4.7 1M)"
-status: Shared-instance model implemented — auto-sync configured, Linux Obsidian installer ready
-next: Karri runs Obsidian installer + opens vault; operator does same on their machine if they want Linux Obsidian (Windows Obsidian works too but no auto-sync feel)
+updated: 2026-06-03
+owner: "Claude (Opus 4.8 1M) — code-1 workspace lane"
+status: command-center main konvergert, grønt og Docker-deploybart (da81d97). Klar for cloud-GPU-spinn.
+next: Reconcile wip/node-stack-deploy-docs vs main deploy.sh; @cc/memory-engine composite-build (med vitest-alias); deretter cloud-GPU bring-up
 ---
 
-# CURRENT-HANDOFF — Nexus EOD 13.5
+# CURRENT-HANDOFF — Workspace/command-center EOD 2026-06-03
+
+> Forrige handoff (Nexus EOD 13.5) arkivert nederst som peker. Dagens fokus var workspace-lanen (node-migrasjon).
 
 ## Status
 
-**Max-mode 4-round sweep landed**. 3 commits + 4 Karri-proposals pushed to main; A2 observability flowing since 07:54Z. Two operator-gated actions pending: B1 Railway flip + A5 backfill.
+**`origin/main = da81d97` — command-center node-migrasjons-stacken er konsolidert, bygger rent OG som Docker-image.** brain-runtime + Module A daemon + node-stack (data/cc/refi/openwebui-compose, deploy.sh, backup/, migration/) + skill-registry, alt på main. #30-divergensen løst. Klar for cloud-GPU-spinn.
 
-## Next action
+## Next action (neste økt)
 
-Run morning checklist in `[[2026-05-13_eod_nexus]]` top-to-bottom. Top-3:
+1. **Reconcile `wip/node-stack-deploy-docs` (2d5f294, pushet) mot main** — den har verdifulle deploy-docs + en alternativ `BRAIN_COMPOSE`-deploy.sh som konflikterer med main sin APP_COMPOSES-fiks. Velg tilnærming, merge doc-delene.
+2. **`@cc/memory-engine` composite-build** — så rag-engine konsumerer `.d.ts` i stedet for å rekompilere kilden. MÅ løse vitest-resolusjon samtidig (ingen aliaser fins i dag → ellers knekker `npm test`). Spec i detalj-rapporten.
+3. **Cloud-GPU bring-up** — `docs/deploy/cloud-gpu-mvb-runbook.md` (Runpod/Vast) når penger er der. Hardware = penger→MVP→hardware (~Aug 2026).
 
-1. Check Karri's Discord for C1–C4 replies
-2. Verify A2 reason-histogram via T+1h SQL (Q2 from verification_playbook)
-3. Investigate `gate_decisions` 14h gap (round-4 anomaly, pre-existing)
+## Hva ble gjort i dag (rollebytte: nå code-1, m/ code-2-logg)
 
-## What was done (13.5)
+- **#30 konvergert** + landet via PR #77 → main.
+- **Fanget + fikset reell build-breakage** etter PR #77: rag-engine↔memory-engine sykkel (literal dynamic-import → tsc resolverte ivrig). PR #77 sin vitest-only-validering fanget den aldri. Fix `da81d97`.
+- **To deploy-bugs fikset**: brain.yml `depends_on: ollama` fjernet + brain.yml lagt i deploy.sh APP_COMPOSES (daemonen ble aldri deployet).
+- Validert RENT (dist slettet): build OK · 745 tester · docker build brain-orchestrator OK · eval MRR 0.9556 (G4-precond PASS).
+- Reddet ucommittet kjernearbeid: memory-engine distill (Module B) + @cc/youtube-ingest + @cc/github-discovery.
+- Parkert deploy-WIP durabelt som pushet branch (var skjør stash).
 
-- Pushed `deb7075` (observability A1–A4) + `46a2534` (4 Karri-proposals C1–C4) + `5c07156` (phase-status + 7d watch-list).
-- Confirmed LIVE on Worker via `/health` (`5c07156d`).
-- Delivered C1–C4 to Karri Discord in 2 POSTs (both HTTP 204).
-- Library bootstrapped: 16 entries under `~/Obsidian/Brain/_library/trading/` + SKILL.md v0.1.0 → v0.2.0.
-- Foundation gate: still 5/5 green.
-- Round 8: FIRM_ROSTER configurable (default/nexus/thesis/workspace); install.sh interactive (asks name+email+roster); KARRI-DAY-1 + invite message updated to reflect shared-account model + roster=nexus.
-- Round 9: Linux Obsidian installer (WSLg), Obsidian Git plugin config (2/2/5 min), SHARED-INSTANCE-MODEL.md, firm-bus presence layer strengthened
+**Full detalj:** [[2026-06-03-eod-main-converged]] (00-claude-inbox/workspace/).
 
-## What was NOT done
+## Hva ble IKKE gjort (med vilje / gated)
 
-- B1 Railway flip (`ENTRY_STACK_COOLDOWN_ENABLED=true`) — Karri-pre-approved, operator-gated
-- A5 backfill (138 NULL → ~96 fillable rows) — SQL drafted, awaits nexus-pg-rw approval
-- 4 Karri-proposals C1–C4 implementation — blocked on Karri review
-- Operator hasn't installed Linux Obsidian on their machine yet (currently using Windows Obsidian); first auto-sync verification needs both sides up
-
-## Files to read first
-
-1. [[2026-05-13_eod_nexus]] ← active handoff
-2. `/home/nithu/code/ai-assistent/docs/ops/phase-status.md`
-3. `~/Obsidian/Brain/00-claude-inbox/nexus/2026-05-13/round3/verification_playbook.md`
+- **memory-engine composite-build** — utsatt; for risikabelt å forhaste ved EOD, main er grønt uten. Spec'd i detalj-rapporten.
+- **refi-doc-agent** push — ikke git-init'd (operator-gated). 89 tester grønt lokalt.
+- **G4/G6 flip** — operatørens autonomi-bryter; precond MRR PASS, gjenstår PII-spot-check + 1-uke stabil heartbeat.
+- **Hardware-kjøp** — penger-first, ~Aug 2026.
 
 ## State pointers
 
-- Nexus phase status: `/home/nithu/code/ai-assistent/docs/ops/phase-status.md` (Foundation 5/5 🟢)
-- Watch-list: `/home/nithu/code/ai-assistent/docs/ops/2026-05-13_watch-list_7d.md` (Day 1 = 14.5)
-- Karri-proposals: `/home/nithu/code/ai-assistent/docs/strategy/proposals/2026-05-13_*.md`
-- Library: `~/Obsidian/Brain/_library/trading/INDEX.md`
-- Brain (vault hardening) still on `feat/brain-hardening` — separate track from Nexus EOD
+- command-center: `origin/main = da81d97` · parkert: `origin/wip/node-stack-deploy-docs`
+- Detalj-rapport: `~/Obsidian/Brain/00-claude-inbox/workspace/2026-06-03-eod-main-converged.md`
+- Node-migrasjon memory: Claude `project_node_migration.md` · lekse: `feedback_clean_build_verify`
+- Hardware-specs: `AS/docs/hardware/{build-spec,install-runbook}.md`
+- firm-bus: code-2 varslet i `00-firm-bus/inbox/code-2.md` (pull main før rag-engine/memory-engine)
 
 ---
 
-Sist oppdatert: 2026-05-13 (EOD).
+## Arkiv-peker: Nexus EOD 13.5 (forrige current-handoff)
+Nexus max-mode 4-round sweep landet (deb7075/46a2534/5c07156); B1 Railway-flip + A5 backfill var operator-gated. Se [[2026-05-13_eod_nexus]] + `ai-assistent/docs/ops/phase-status.md` (Foundation gate). Nexus eies nå av ai-lanen (`node-migration-nexus`).
+
+Sist oppdatert: 2026-06-03 (EOD, workspace-lane).

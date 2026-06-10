@@ -14,6 +14,32 @@ tags: [operator, checklist, next-actions]
 
 > 60 sub-agenter har levert (30 A/B/C + D/E fase). Her er hva DU bør gjøre nå, prioritert + tidsestimert. Mark done with `- [x]`; file auto-syncs til tiger-brain så Karri ser progress.
 
+## ⭐ SPRINT 1 SHIPPED 2026-05-25T17:00Z
+
+See `[[SPRINT-1-SHIPPED-2026-05-25]]` for top-level marker.
+See `[[SPRINT-2-PREP-2026-05-25]]` for what's next.
+
+**Auto-completed during fase 12-15:**
+- [x] Push 8 draft PRs (L-1) — 6 GREEN, 1 blocked (PR #49 sister-pkg deps), 1 NPM workspace-dep gap
+- [x] PRESENCE.md fix (L-2)
+- [x] brain-G3 worktree-default opt-in flag (L-3)
+- [x] 24 missing frontmatter cleanup (L-4 + I-5)
+- [x] 5 RED PRs lockfile-sync fixes (N-2 to N-6)
+- [x] better-sqlite3 native binding rebuilt for Node 24 (O-1)
+- [x] .nvmrc Node 20 pinning (O-2)
+- [x] 14 local test failures resolved (O-3 confirmed)
+- [x] Final brain push (N-10 = f926bea, sanity 8/8 GREEN)
+
+**Operator-action remaining:**
+- [ ] Merge sprint-1 PRs (~10) at your own pace — start with #57 (_template)
+- [ ] After sister-pkgs merged, fix PR #49 by either dropping deps OR pushing follow-up commit
+- [ ] Review specs v1.0.2 at convenience
+- [ ] Flip brain-G3 default after 24-48h opt-in usage proves stable
+- [ ] After code-1 lands MEM/RAG: activate brain-G4 + brain-G6 per checklist
+- [ ] Push to 60% coverage (was 47.63%; recent +4 tests but room for more)
+
+**New finding (fase 12-15):** local Node 24 vs CI Node 20 mismatch caused better-sqlite3 native-binding crashes + 14 local test failures. Now mitigated by O-1 (rebuild) + O-2 (`.nvmrc` pinned to Node 20). Re-run `nvm use` if you switch shells.
+
 ## P0 — Critical (do today)
 
 ### [ ] 1. Skim 30-agent audit (5 min)
@@ -157,14 +183,16 @@ tags: [operator, checklist, next-actions]
 
 ## Estimated total time
 
-| Bucket | Time remaining | Window | Done by L-agents |
+| Bucket | Time remaining | Window | Done by agents |
 |---|---|---|---|
+| Sprint 1 SHIPPED | 0 (auto) | done 2026-05-25T17:00Z | L/N/O fase 12-15 (~9 items + 5 RED PR fixes + Node 20 pin + native rebuild) |
 | P0 | ~25 min (#1 skim 5 + #2 brain-demo 15 + #3b Option C ACK 5) | i dag | #3 push-gate (30 min) by L-1 |
 | P1 | ~1h 25min (#4 specs 60 + #6 INTEGRATION_NOTES 15 + #6b spec YAML 10) | innen 48h | #5 brain-G3 (30 min) by L-3, #6a PRESENCE (2 min) by L-2 |
 | P2 | ~7h aktiv (+5.5h coverage push) + ~1 uke wait for brain-G6 | denne uka | (ingen) |
 | P3 | løpende (+ ~1.5h aktiv: cascade + script-flags; #18 dropped som duplikat) | denne måneden | #18 brain-G3 dup (samme som #5) by L-3 |
+| Sprint-2 prep | per `[[SPRINT-2-PREP-2026-05-25]]` | ad-hoc | — |
 
-Total aktiv tid P0+P1+P2 = ~8h 50min spread over en uke (coverage-push dominerer). P3 er bakgrunns-vedlikehold + småjobber. Fase 12 L-agents tok ~62 min av operator-load.
+Total aktiv tid P0+P1+P2 = ~8h 50min spread over en uke (coverage-push dominerer). P3 er bakgrunns-vedlikehold + småjobber. Fase 12 L-agents tok ~62 min av operator-load. Fase 13-15 N/O agents lukket 5 RED PRs + Node-version drift (added: 6 GREEN PRs out of 8 pushed, 1 deferred = PR #49).
 
 ## Skip if pressed
 
@@ -195,5 +223,6 @@ Mark done in this file: `- [x]` instead of `- [ ]`. Auto-syncs til tiger-brain s
 
 ---
 
+Sist oppdatert: 2026-05-25T17:00Z — v1.3, SPRINT 1 SHIPPED marker addert øverst. Fase 12-15 (L/N/O agents) lukket 9 auto-tasks: PR push (6 GREEN/1 deferred/1 NPM gap), PRESENCE fix, brain-G3 opt-in, 24 frontmatter, 5 RED PR lockfile-fixes, better-sqlite3 native rebuild (Node 24→20), .nvmrc Node 20 pinning, 14 lokale test failures lukket, final brain push (f926bea, sanity 8/8 GREEN). Operator-action: merge ~10 PRs, fix PR #49 etter sister-pkg merges, push mot 60% coverage, flip brain-G3 default etter 24-48h.
 Sist oppdatert: 2026-05-25 — v1.2, markert fase 12 L-agent completions: #3 (L-1 push-gate as drafts), #5 (L-3 brain-G3 activation), #6a (L-2 PRESENCE.md fix), #18 (L-3, dup av #5). 4 items closed, ~62 min operator-load fjernet. Tidsestimat-tabell oppdatert med "Done by L-agents" kolonne.
 Sist oppdatert: 2026-05-25 — v1.1, addert fase 8/9 items (Option C ACK, PRESENCE-fix, spec-fix re-read, coverage push x3, gate-cascade, wikilink-script-flags, kuratering). Additivt — ingen eksisterende items fjernet.

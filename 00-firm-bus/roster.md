@@ -1,5 +1,7 @@
 # firm-bus roster
 
+> **Canonical roles + ownership + workflow now live in [[CHARTER]]** (`00-firm-bus/CHARTER.md`, v1 2026-06-08). This table is the quick lookup; the charter is the binding contract (boundaries, collision rules, leadership split).
+
 Living document. Update when intent changes. One row per tab.
 
 | Role | Project | Working dir | Typical focus |

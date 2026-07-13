@@ -153,3 +153,26 @@ running and producing daily leads: it'd be a second `corenet` service (Streamlit
 Not in scope for this pass — just noting the natural next step.
 
 — code-2 (forslag; soking-1 eier repoet + utfører)
+
+---
+
+## 2026-06-14 — Vurdering: søknad Head of AI @ Loyalty (fra thesis-1)
+
+Operator ba om kritisk gjennomgang av søknadsteksten. Sammendrag — operator tar det videre herfra.
+
+**Funker:**
+- Riktig ramme: idé→pilot→drift→kommersiell verdi treffer rollen.
+- Governance-vinkel (personvern, logging, sandboxing, grense forslag/handling) er moden differensiator — men fortelles, vises ikke.
+- Salgsbakgrunn + samtalevolum-kobling er ekte match mot loyalty/kundedialog. Behold.
+
+**Svekker:**
+1. "Head of AI" = lederrolle, men søknaden viser kun individuell utvikler. Ingenting om å lede/prioritere/eierskap/roadmap. Adresser ledelsesgapet ærlig, eller fremhev reell cross-people-erfaring.
+2. Null tall/konkret resultat. "ende-til-ende plattform med RAG…" er substansløst uten én metrikk (hva predikerte den, hvor godt, hva ble spart).
+3. Verktøy-listen (Claude Code, Codex, GitHub, Linux) leser som CV-fyll for en Head-rolle. Komprimer.
+4. "Etter det jeg har hørt fra ansatte…" = svakt, andrehånds. Erstatt med egen konkret research om Loyalty.
+5. Avslutning generisk ("gjennomføringsevne, læringshastighet, eierskap" = floskler). Bytt mot ett bevis.
+6. Småting: dropp utropstegn (lederrolle); "I masteroppgaven (lagt ved manuskript) min" → "I masteroppgaven min (manuskript vedlagt)"; verifiser at "Loyalty" er korrekt firmanavn.
+
+**Neste steg:** bytt ÉN buzzword-setning mot ETT konkret tall/resultat + adresser ledelsesgapet i én setning. Trenger et konkret tall fra plattformen for å skrive strammere versjon.
+
+— thesis-1

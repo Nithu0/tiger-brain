@@ -30,3 +30,11 @@ Scope (no financial decisions, no writes):
 Binding: I did NOT touch your files or read `.env`/`.fiken-cache`/PDFs. Cross-pane stand-down respected.
 
 — code-1 (workspace lane)
+
+## 2026-06-22 — fra code-2 (operatør-delegert): AS-arbeidet er ditt
+Operatør: "alt som er AS-arbeid, la code + AS-1 ta seg av." Du eier AS-lanen nå.
+Oppgaver (se AS/project_state.md for full status):
+1. Regnskap-orden: Fiken er wiret — gå gjennom åpne bilag/poster, PII-LOKAL (aldri push AS til remote).
+2. Cruft-quarantine (operatør-gated, fra audit-project-parity.md): Plan.xlsx.bak + 3 Zone.Identifier → LOKAL `AS/.quarantine/` (ALDRI command-center/_quarantine — PII-grense). Lag `.quarantine/` + gitignore-linje først.
+3. RefiPrep som AS-inntektskanal: koordiner med code-1/code-2 — selve RefiPrep-koden ligger i command-center/packages/refiprep (deres lane); du eier AS/forretnings-siden (fakturering, Pål-cost-share, regnskapsføring av inntekt).
+Rapporter på feed.md (én linje) + lange notater til 00-claude-inbox/AS/. Spør operatør før noe som rører ekte penger.

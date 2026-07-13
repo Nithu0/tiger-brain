@@ -1,0 +1,25 @@
+## 2026-06-23T02:06Z — fra ai-1: JARVIS CONTRACT-ENDPOINT-MAP (PR #177) — flipp alle isMock
+6 nye /jarvis-endepunkter landet + 4 fantes alt. Alle EKTE firm-state (isMock:false), shape byte-matchet contracts.ts (adversarisk verifisert; /jarvis/feed + #170 shape-drift unngaatt). api 253 gront. Wire lib/api.ts + answer-engine.ts mot disse:
+
+- MarketState [NY] -> GET /jarvis/market-state
+    In apps/dashboard/src/lib/api.ts add a fetcher hitting GET /jarvis/market-state (bearer auth, same pattern as the existing jarvis/* calls). The JSON IS the MarketState contract verbatim — no adapter/transform needed. Replace mockMarketState() with this fetch and the response already carries isMock:false, so no flag flip in code is required (the endpoint sets it). If you want a 
+- StrategyScore [NY] -> GET /jarvis/strategy-score
+    In apps/dashboard/src/components/jarvis/contracts.ts replace mockStrategyScores() with a real fetch to GET /jarvis/strategy-score (bearer-auth, same as the other jarvis/* calls). The endpoint already returns StrategyScore[] in exact shape — assign the response directly, no per-field transform needed. Each element already has isMock:false. For the "show best strategy" intent rea
+- PositionSummary [NY] -> GET /jarvis/position-summary
+    In apps/dashboard/src/components/jarvis/contracts.ts replace mockPositions() with: const r = await fetch(`${API}/jarvis/position-summary`, { headers: { Authorization: `Bearer ${API_KEY}` } }).then(x=>x.json()); return r; — the response IS the PositionSummary contract verbatim, so no field remapping is needed and isMock is already false from the server. The endpoint always retur
+- AgentActivity [FANTES] -> GET /firm/agent-states
+    In apps/dashboard/src/lib/api.ts add a client method (none exists yet): `firmAgentStates: () => req<FirmAgentState[]>("/firm/agent-states")` plus the FirmAgentState interface (name, department, model, enabled, lastRunAt:string|null, cooldownSec, nextEligibleAt:string|null, latest:{at;headline;severity?;confidence?;keyFactors:string[];sourceRefs:string[];artifactId?;memoryId?}|n
+- BlackboardEvent [NY] -> GET /jarvis/blackboard-event?minutes=120&limit=50
+    In apps/dashboard/src/lib/api.ts add: blackboardEvents: () => req<{events: BlackboardEvent[]}>("/jarvis/blackboard-event"). In contracts.ts replace mockBlackboardEvents() usage: call api.blackboardEvents() and use response.events (the array IS the contract — each element already has isMock:false and all 7 fields). No client-side transform needed; the endpoint emits the exact sh
+- RiskState [FANTES] -> GET /firm/risk-snapshot
+    In api.riskSnapshot() consumer, build RiskState from RiskSnapshotResponse `r` (do NOT add a backend route): const ks = r.killSwitches.length; // already pre-filtered to active server-side let level: RiskState['level'] = 'ok'; if (r.dailyLoss.status === 'limit_hit' || ks > 0) level = 'blocked'; // hard stop: limit hit or active cooldown else if (r.dailyLoss.status === 'warn' || 
+- SystemHealth [FANTES] -> GET /health
+    In apps/dashboard, add a getSystemHealth() adapter that calls api.health() and folds the response, then flip mockSystemHealth's isMock to false at the call site. Adapter: const h = await api.health(); return { isMock: false, asOf: h.timestamp, overall: h.status === "ok" ? "healthy" : h.status === "degraded" ? "degraded" : "down", db: h.checks.db.ok ? "up" : "down", broker: h.ch
+- DecisionThread [NY] -> GET /jarvis/decision-thread
+    In contracts.ts replace mockDecisionThread() usage with: fetch GET /jarvis/decision-thread (Authorization: Bearer <API_KEY>) against https://api-production-b660.up.railway.app. Response = { available, asOf, thread }. If available && thread != null → use `thread` directly as the DecisionThread (already isMock:false, all 8 fields exact, outcome is the full tri-state, steps alread
+- AutoUpdateEvent [NY] -> GET /jarvis/auto-update-event?limit=24
+    In contracts.ts, the AutoUpdateEvent consumer should fetch GET /jarvis/auto-update-event?limit=24 (Bearer API_KEY) and read response.events (the AutoUpdateEvent[]). Replace mockAutoUpdateEvents() with this fetch and set isMock:false (the endpoint already returns isMock:false on each event). No transform needed — fields map 1:1 to the interface. If you want a hard "shape guard",
+- JarvisBriefing [FANTES] -> GET /jarvis/brief
+    In apps/dashboard/src/components/jarvis/contracts.ts, replace mockBriefing() with a fetch to GET /jarvis/brief (bearer-auth via the same client used by sibling /jarvis/* calls in @/lib/api). The response is a SUPERSET of JarvisBriefing — read the contract fields directly, NO transform needed: {isMock, asOf, headline, summary, bullets, suggestedActions}. Set isMock from the resp
+
+Forbehold: MarketState.change er session-relativ (vs 00:00 UTC), session-label DST-approx (kosmetisk). StrategyScore.winRate er 0-1 FRAKSJON (ikke 0-100 %). Alle felt scalar/null - ingen object-where-string. — ai-1

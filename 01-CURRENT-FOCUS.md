@@ -2,6 +2,7 @@
 tags: [focus, meta, status]
 type: meta
 created: 2026-05-11
+updated: 2026-07-13
 ---
 
 # 01-CURRENT-FOCUS
@@ -12,104 +13,85 @@ What operator is actually working on **right now**. One file. Keep it honest.
 
 ## Primary focus
 
-**Nexus — calibration phase, foundation gate 5/5 🟢.**
+**Nexus — demo-mode, læringsloop + GPU-leveranse under verifisering.**
 
-- System is demo-mode. Live-capital flip is operator-gated and depends on the foundation gate staying green.
-- Foundation gate is currently **5/5 🟢** per `phase-status.md` (2026-05-11).
-- Calibration run + verification must pass before any "OK kjør" on the flip.
-- Live truth: `ai-assistent/docs/ops/phase-status.md` (mirror: [[01-nexus/runtime/Phase-Status-Pointer]]).
-- Related: [[Nexus-MOC]], [[Decisions-MOC]] for recent gate decisions.
+- CALIBRATION_MODE=RECOMMEND_ONLY siden 27.06, SAFE_AUTO_APPLY OFF, mults=1.0. Live-capital flip er operatør-gated.
+- GPU+læringsloop-leveranse merget 11.07 (PR #228–#234, flag-gated/behavior-neutral) — operatør-flip-liste i `00-claude-inbox/ai-assistent/2026-07-11_gpu-laeringsloop-leveranse.md`.
+- Læringsloop-evidensbase + per-trade provenance-monitor: `00-claude-inbox/nexus/2026-07-03_learning-loop-evidence-base.md` (flight-recorder-spec §4; code-2 venter på ai-1s entry_snapshot).
+- Live truth: `ai-assistent/docs/ops/phase-status.md` (mirror: [[01-nexus/runtime/Phase-Status-Pointer]]). Related: [[Nexus-MOC]], [[Decisions-MOC]].
 
 ## Secondary
 
 **Master-oppgave — chapters in flight.**
 
-- Active drafting in `Master-oppgave/` (LaTeX/Overleaf), with code/results from `battery-electrolyte-predictor/`.
-- Auto-push hook is active for the thesis repo only — see `reference_autopush.md` (in ~/.claude/projects/.../memory/).
+- Active drafting in `Master-oppgave/` (LaTeX/Overleaf), code/results fra nestet `battery-electrolyte-predictor/`.
+- Auto-push hook aktiv for thesis-repoet only.
 - MOC: [[Thesis-MOC]].
 
-## Workspace-meta — command-center
+## Workspace-meta — command-center + brain
 
-**Command-center — Slice 1 (read-only dashboard + command queue).**
+**Brain-autonomien er I DRIFT** (se [[System-Wiring-MOC]] for hele koblingskartet):
 
-- Ukens aktive workspace-meta-arbeid på `code-1`/`code-2`: Next.js+Fastify+SQLite control plane på `/home/nithu/code/command-center`.
-- Vault-node: [[00-command-center/README]] · prosjektkort: [[00-command-center/project-card]].
-
-**Node-migration (2026-06-03) — produkt = 24/7 autonome agenter på egen lokal GPU-node.** Hardware er fundamentet, ikke endepunkt; brain (Module A orchestrator + B memory + K RAG, lokal bge-m3 dim 1024) kjøres cloud-GPU-først → migreres uendret til noden. Sekvens: penger→MVP→hardware (~Aug 2026). Neste produkt-kritiske bygg: Module A brain-orchestrator. Autonomi-på-bryteren = gates brain-G4 (nightly-distill) + brain-G6 (queue-watcher), ship OFF. Kanon: [[2026-06-03-node-migration-MOC]].
+- `brain-orchestrator.service` + `brain-worker.service` kjører 24/7 (systemd --user). **G4 nightly-distill + G6 queue-watcher: PÅ.** C1-9 task-persistence landet og verifisert (agent_tasks, heartbeats, lease/reaper).
+- Memory-loop lukket: capture (Stop-hook) → distill (Haiku, nightly) → embed (lokal Ollama bge-m3, keepwarm) → recall (SessionStart, hybrid BM25+vektor siden 13.07).
+- Gjenstående svakheter (fra dyp-analysen 13.07): ingen distill-catch-up for dager maskinen er av · ingen automatisk varsling av failed tasks · brain-worker kjører tsx fra src (bør bygges til dist) · vault-notater nesten ikke embeddet (86 av ~1260).
+- **Node-migration**: penger→MVP→hardware (~aug 2026) står. Brain kjører lokalt/cloud-først og migreres uendret. Kanon: [[2026-06-03-node-migration-MOC]].
+- **Vast-boksen (~$289/mnd) er idle** — PAUSE-beslutning hos operatør.
 
 ## Aktive prosjekt-tråder (6)
 
-Én-linjers status per prosjekt. Detalj i hver MOC.
-
 | Prosjekt | Tråd nå | Eier-pane |
 |---|---|---|
-| Nexus | Calibration + foundation-gate watch; ingen live-flip uten "OK kjør" | `ai-1`, `ai-2` |
-| Master-oppgave | Kapittel-drafting + figur-pipeline fra battery-repo | `thesis-1` |
-| Søking fulltid | Aktiv scrape + søknader (career-agent eier flyt) | `soking-1` |
-| Business / strategi | Lett vedlikehold, ikke push | *(deles av ops-paner)* |
-| AS | Regnskap + inntekt-oppfølging (AS-agent eier) | `as-1` |
-| Personlig | Effektivitet/mat/trening (personlig-agent eier) | `personal-1` |
+| Nexus | Læringsloop-verifisering + GPU-flip-liste; ingen live-flip uten "OK kjør" | `ai-1`, `ai-2` |
+| Master-oppgave | Kapittel-drafting + figur-pipeline | `thesis-1` |
+| Søking fulltid | Scrape-agent PAUSET siden 14.06 (bevisst? sjekk conductor.timer) | `soking-1` |
+| Business | Managed AI-ops (Pål/RefiPrep først), leadgen | `code-1`/`code-2` |
+| AS | Regnskap + inntekt-oppfølging | `as-1` |
+| Personlig | Lav aktivitet (personal-1-pane droppet fra firm-oppsettet 11.07) | — |
 
 Workspace-meta (cross-cutting fixes, brain hygiene, runbooks) ligger på `code-1` + `code-2`.
 
-## 8-pane multi-Claude operating model
+## Multi-Claude operating model (firm)
 
-Operatør kjører nå én Windows Terminal-tab med 8 paner, alle på `claude --dangerously-skip-permissions`. Start med `firm` (alias) eller `bash /home/nithu/code/_bin/firm-wt-split.sh`.
+`firm` (alias) → `command-center/_bin/firm-wt-split.sh`: 8 Claude-paner i 4×2-grid + åpner automatisk 8 Codex-paner i eget vindu (`FIRM_NO_CODEX=1` for å slippe; på 16 GB RAM lukker operatør Codex-vinduet ved behov). Pane-navn i WT-tittel + Claude statusLine (`rolle · prosjekt`).
 
-### Layout
+| Pane | Rolle | Prosjekt | cwd |
+|---|---|---|---|
+| V1 | `code-1` | workspace | `~/code` |
+| V2 | `code-2` | workspace | `~/code` |
+| V3 | `ai-1` | nexus | `~/code/ai-assistent` |
+| V4 | `ai-2` | nexus | `~/code/ai-assistent` |
+| H1 | `thesis-1` | master-oppgave | `~/code/Master-oppgave` |
+| H2 | `as-1` | AS | `~/code/AS` |
+| H3 | `soking-1` | soking-fulltid | `~/code/Søking fulltid` |
+| H4 | `personal-1` | personlig | *(droppet 11.07 — trengs ikke)* |
 
-| Pane | Rolle (`FIRM_ROLE`) | Prosjekt (`FIRM_PROJECT`) | cwd | Farge |
-|---|---|---|---|---|
-| 1 | `code-1` | workspace | `~/code` | grå |
-| 2 | `code-2` | workspace | `~/code` | grå |
-| 3 | `ai-1` | nexus | `~/code/ai-assistent` | gul |
-| 4 | `ai-2` | nexus | `~/code/ai-assistent` | gul |
-| 5 | `thesis-1` | master | `~/code/Master-oppgave` | grønn |
-| 6 | `as-1` | AS | `~/code/AS` | blå |
-| 7 | `soking-1` | soking-fulltid | `~/code/soking-fulltid` | lilla |
-| 8 | `personal-1` | personlig | `~/code/personlig` | rosa |
-
-Fargen settes i `nexus-bashrc.sh` via PS1 (rolle-bracket foran prompten — `[ai-1] ❯`).
-
-### Hva hver pane forventes å gjøre
-
-- **code-1, code-2** — workspace-meta: cross-repo refactor, brain hygiene, runbook-arbeid, dispatcher for parallelle subagents.
-- **ai-1, ai-2** — Nexus-arbeid. ai-1: phase-status + calibration; ai-2: review av audit-noter, gate-decisions, strategi-proposals.
-- **thesis-1** — master-oppgave kapittel-drafting + figurer fra battery-repo.
-- **as-1** — AS regnskap, inntekt, fakturering (egen agent-rolle).
-- **soking-1** — jobb-scrape, søknader, intervju-prep (career-agent rolle).
-- **personal-1** — effektivitet/mat/trening (personlig-agent rolle).
+Fokus-launchere (én om gangen): `skole` (4×thesis) · `gull` (4×nexus, alias mangler i bashrc) · `salg` (3×call-center, alias mangler).
 
 ### Koordinering
 
-- Felles buss: `~/Obsidian/Brain/00-firm-bus/feed.md` (en-linjers `done: ...`-meldinger ved chunk-slutt).
-- Per-pane inbox: `~/Obsidian/Brain/00-firm-bus/inbox/<role>.md`. Skriv hit ved handoff til en annen rolle.
-- Lange rapporter → `~/Obsidian/Brain/00-claude-inbox/<project>/`, aldri i `feed.md`.
-- Day-end handoffs → `~/Obsidian/Brain/handoffs/`.
-
-Full runbook: [[_runbooks/firm-8-pane-2026-05-14]].
+- Felles buss: `00-firm-bus/feed.md` (én linje per event). Regler: [[CHARTER]] §3 (injiseres i hver sesjon).
+- Per-pane inbox: `00-firm-bus/inbox/<role>.md` — handoffs. NB: session-start viser kun siste 1200 bytes; les hele fila ved tvil.
+- Lange rapporter → `00-claude-inbox/<project>/`, aldri i `feed.md`.
+- Day-end handoffs → `handoffs/`.
+- PRESENCE.md er død (ingen writer) — bruk feed-online-linjer inntil videre.
 
 ## Parked / not now
 
-- Business/Career-notater (utenom de som eies av soking-agent) — light maintenance only, no active push.
-- Learning backlog — capture in inbox, don't promote unless directly relevant to primary/secondary.
-- Any vault restructuring — needs explicit operator go-ahead (see [[BRAIN-RULES]]).
-- 16-pane / Conductor-utvidelse — se `_decisions/2026-05-14-16-pane-codex-parallell.md` for vurdering.
+- Remote-autonomy executors (Telegram→pane): bygget, ikke enablet (operatør-gated).
+- Hermes kanban-dispatcher: aldri brukt; Docker-sandbox krever at Docker Desktop kjører.
+- 14-books-køen: ikke overvåket av queue-watcher ennå.
+- Learning backlog — capture in inbox, don't promote unless directly relevant.
 
 ## Active TODOs
 
-1. **Operator**: create github.com/Nithu0/tiger-brain (private) → `bash scripts/push-and-protect.sh` → rotate Obsidian REST API key. After: tell teammate to clone.
-2. Foundation-gate calibration: run + verify, log outcome in `_decisions/` once decided.
-3. Phase-status pointer accuracy: confirm [[01-nexus/runtime/Phase-Status-Pointer]] reflects the repo's `phase-status.md`.
-4. Master-oppgave: continue chapter drafting; promote relevant inbox notes into `Master-oppgave/`.
-5. Inbox triage: walk [[00-claude-inbox/README|inbox]] once this week, promote or archive.
-6. Decisions log: ensure any gate-state change lands in `_decisions/` with date + rationale.
-7. Dry-run `firm` med ny 8-pane-layout og verifiser at alle 6 prosjekt-paner ankommer riktig cwd.
-
-## Working-tree note
-
-- 30 modified files in working tree still pending operator review (unrelated to the `feat/brain-hardening` branch). Decide commit-or-discard before next push.
+1. **Operatør-beslutning:** Vast-boksen ($289/mnd, idle siden juni) — pause/destroy eller wire reell last (Nexus-worker local-vei)?
+2. **Operatør:** hvorfor stoppet Obsidian Git-plugin-syncen 10.06? (Lokal checkpoint tatt 13.07; push av vault + command-center venter på "OK kjør".)
+3. Distill-catch-up (dager uten memory_objects) + failed-task-varsling i morning-briefing — code-2.
+4. brain-worker: bygg dist + pek uniten på artefakt (vekk fra tsx/src i delt checkout) — code-2.
+5. Vault-notat-backfill til memory.db (1260 notater, ~7 % dekket) — kost-estimat før kjøring.
+6. `gull`/`salg`-aliaser i ~/.bashrc (operatør, dotfiles er gated).
 
 ---
 
-Sist oppdatert: 2026-05-14
+Sist oppdatert: 2026-07-13 (forrige 2026-05-14/06-03; oppdatert fra dyp-analyse `w7c1cutap` — G4/G6 er PÅ, ikke OFF som forrige versjon sa)

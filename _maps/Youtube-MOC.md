@@ -25,11 +25,11 @@ Curated index of `12-youtube/` and its ingestion pipeline per [[YOUTUBE_INGESTIO
 
 ## Queue mechanism
 
-Per [[YOUTUBE_INGESTION_SPEC]] §8 (queue file format) + [[12-youtube/README]]:
+**Slik koden faktisk virker per 2026-07-13** (`packages/youtube-ingest/src/queue.ts` + `index.ts` — spec-teksten under §8 er justert av virkeligheten):
 
-1. Operator (or any agent) drops a file in `12-youtube/_queue/` containing one YouTube URL per line (`.url` or plain text both accepted).
-2. BrainOrchestrator (per [[AGENT_ORCHESTRATION_SPEC]] §8.1) scans the queue on a poll cycle; non-empty queue triggers `youtube-ingest --drain`.
-3. Each URL is fetched (metadata + transcript via `yt-dlp`), filtered, distilled, and written as a brain note. Processed queue files move to `_queue/_processed/<date>/`.
+1. Drop **én fil per video** i `12-youtube/_queue/`: filnavn `YYYY-MM-DDTHHMM-<slug>.url`, første linje = enkeltvideo-URL (`watch?v=` eller `youtu.be/`), valgfritt `# tags:` / `# note:`. **KUN `*.url`-filer konsumeres** — `.txt`-lister, kanal- og playlist-URLer blir liggende for alltid (legg dem i `_queue/_manual/`; ekspander med `yt-dlp --flat-playlist --print url`).
+2. BrainOrchestrators G6 queue-watcher (PÅ i drift) fanger nye filer → enqueuer ingest-task → `brain-worker` kjører `drainYoutubeQueue`.
+3. Hver URL fetches (metadata + transcript via `yt-dlp` — må finnes i daemonens PATH; fikset 13.07), filtreres, distilleres, skrives som brain-note. Ferdige køfiler → `_queue/_done/`, feilede → `_queue/_failed/` med `# failed_at:`-linje (IKKE `_processed/`/`_rejected/` som spec-en opprinnelig sa).
 
 ## Verbatim storage
 
@@ -48,7 +48,7 @@ Per [[YOUTUBE_INGESTION_SPEC]] §5 — LLM scoring step gates note creation.
 - Confidence computation (§5.3).
 - Hard flags (§5.4) — overrides confidence; e.g. `paid-promotion` blocks unconditionally.
 
-Failed scores route the URL to `_queue/_rejected/<date>/` with the score breakdown attached.
+Failed scores route the URL to `_queue/_failed/` with the reason appended to the queue file.
 
 ## Channel allowlist
 
@@ -61,8 +61,13 @@ Per [[YOUTUBE_INGESTION_SPEC]] §7 — channel-level trust:
 
 Note frontmatter contract — [[YOUTUBE_INGESTION_SPEC]] §3. Sections of the body — [[YOUTUBE_INGESTION_SPEC]] §4 (Core idea / Practical system ideas / Implementation opportunities / Risks & hype-filter results / Suggested tasks / Source). Template at [[00-templates/youtube-note]].
 
+## Transcripts (orphan-fix 2026-07-13)
+
+Rå transcripts ligger i `12-youtube/transcripts/` (26 notater fra manuell `yt-transcribe.sh`-kjøring juni) — egen klynge utenfor pipeline-strukturen over. Distillerte notater fra pipelinen lander per kanal-mappe (`12-youtube/<channel>/`).
+
 ## Related
 
+- [[System-Wiring-MOC]] — hvor denne pipelinen sitter i hele systemet.
 - [[2026-05-25-brain-upgrade-plan]] §2.E — Module E (YouTube) within the upgrade graph.
 - [[00-templates/youtube-note]] — frontmatter + section template.
 - [[AGENT_ORCHESTRATION_SPEC]] §8.1 — poll cadence that drains the queue.

@@ -12851,3 +12851,6 @@ Svar JA, så bygger jeg.
 - veldora.no svarer fortsatt 200 etter 8 t med vakt. TXT-postene for _vercel.veldora.no er ikke lagt inn, så SC#345 har ikke tatt effekt. Ny vakt i 24 t; jeg melder når 301 er ute.
 
 ## STATUS data-1 17:07Z: ledig, ingen endring
+
+## STATUS fra paal-1 (18:19Z)
+- Terra #10, #11 og #13 er fortsatt ikke merget (alle clean, CI grønn, review hos tintun2602). Jeg har stoppet merge-vakten og retter README-konflikten når du sier at en er merget. Ledig og overvåker innboksen.

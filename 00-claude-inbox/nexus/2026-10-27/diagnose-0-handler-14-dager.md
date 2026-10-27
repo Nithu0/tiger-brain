@@ -48,3 +48,24 @@ Følge: `[llm-cache] background refresh failed for news-narrative / market-pulse
 | 4 | Watch: `gated_cycles` og alarm ved 0 handler på N handelsdager | trading-1 | observabilitet |
 | 5 | ATR-ratio 1.3 og tesebar 42 i dagens marked | **Karri og operatøren** | strategi (docs/strategy/proposals/) |
 Rekkefølge: 1 og 2 først. Hvis LLM-laget virker igjen og det fortsatt ikke kommer signaler, er hypotese 1 avkreftet, og spørsmålet blir punkt 5.
+
+## Oppdatering 2026-10-27 ~09:45Z (etter fiks)
+- ai-assistent #325 (f8a3acd) er i drift: **Anthropic svarer igjen**. Loggen viser «anthropic call completed { model: 'claude-sonnet-5' }» for reasoning og sentiment, uten 400 og uten fallback.
+- **Viktig for operatøren og Karri:** når LLM-laget virker igjen, kan firmaet gi signaler og handle i demo igjen (tiltenkt atferd). Kontoen er DEMO (OANDA fxpractice, NORMAL_DEMO).
+- Fortsatt nede: narrativ- og makroagentene (gemini CLI exit=1), lokal GPU, OpenAI-nøkkel og OpenRouter-konto. Tese-skåren er 21 og tesen er ennå ikke laget på nytt. Det følges opp.
+- Watch: ALARM ved 0 handler på 7 dager (report-only) er i drift (d792620).
+
+## Gemini: årsaken funnet (~09:55Z)
+- Narrativ, makrohendelse og research-drainer bruker Gemini SDK (`callGeminiSdk`, gemini-2.5-flash). Probe fra worker-containeren (nøkkel maskert):
+  - `GET models/gemini-2.5-flash` gir **200**. Nøkkelen er gyldig og modellen finnes.
+  - Ett minimalt `generateContent` (5 utdata-tokens) gir **402 RESOURCE_EXHAUSTED: «Your prepayment credits are depleted.»**
+- **Tiltak (operatør):** fyll på forhåndsbetalt kreditt i Google AI Studio (prosjektet bak `GEMINI_API_KEY` på nexus-worker).
+- Mest sannsynlig årsak til «no narrative» i tesen. Agent-bussen har dessuten 395 åpne oppgaver og 0 i arbeid (ikke undersøkt videre).
+
+| Leverandør | Status 2026-10-27 | Hvem |
+| --- | --- | --- |
+| Anthropic (ruteren) | **OK** etter #325 | — |
+| Gemini (agentene) | 402: kreditten er brukt opp | operatør |
+| OpenAI | 401: ugyldig nøkkel | operatør |
+| OpenRouter | 401: «User not found» | operatør |
+| Lokal GPU | fetch failed, breaker open | operatør |

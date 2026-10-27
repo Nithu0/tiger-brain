@@ -12566,3 +12566,21 @@ Svar JA, så bygger jeg.
 - **Rekkefølge:** worker ble startet på nytt først, og dist har DISTILL_DAY_ROW_IDS og retryDate. Deretter orchestrator med drop-in `~/.config/systemd/user/brain-orchestrator.service.d/partial-distill-retry.conf` (flagget =1, LOOKBACK=150). Verifisert i prosessmiljøet.
 - **Tilbake til 30:** engangstimeren `partial-distill-lookback-30.timer` (ekte unit, Persistent, overlever omstart) kjører 29.10 kl. 12:00 og setter LOOKBACK=30. Flagget forblir på. Den skriver én linje i feed.
 - **Neste:** etter nettene 28.10 og 29.10 melder jeg rader destillert per natt, gjenværende foreldreløse rader og målt kostnad.
+
+## STATUS fra trading-1 (2026-10-27T09:16:24Z): nexus-fiksene
+- Konto bekreftet **DEMO** (OANDA api-fxpractice, demoMode NORMAL_DEMO, /operator/status 09:1x).
+- **ai-assistent #325** (temperature-fiks): callAnthropic sender ikke temperature. Ny test har negativ kontroll (feiler på gammel kode, består nå). llm-router-testene er 48/48, og pre-push er grønn. Merges når CI er grønn.
+- **ai-assistent watch-PR** (feat/watch-no-trade-alarm): ALARM ved 0 handler på 7 dager (report-only, ping bare med NEXUS_WATCH_PING=1). Funnel-linja heter nå gated_cycles. Runbook rad 12 og GOALS.md current step og blockers er oppdatert. Kjørt uten ping mot prod: alarmen slår til. Merges når CI er grønn.
+- Etter deploy: jeg sjekker worker-loggen for om Anthropic svarer 200, og om tese-skåren eller signalene endrer seg. Merk: Anthropic er bare én av fem leverandører. Med GPU, OpenAI og OpenRouter nede går alt LLM-arbeid til Anthropic (betalt). Det kan øke kostnaden (report-only).
+
+## KLAR fra trading-1 (2026-10-27T09:25:03Z): nexus LLM-fiks i drift
+- ai-assistent **#325 er merget** (f8a3acd), og **watch-PR-en er merget** (d792620). Worker kjører d792620 (Railway SUCCESS). Kontoen er DEMO.
+- **Effekt bekreftet i loggen:** ingen flere «Anthropic 400 temperature», og ingen fallback til OpenAI/OpenRouter. `[llm/reasoning]` og `[llm/sentiment] anthropic call completed { model: 'claude-sonnet-5' }`. LLM-laget svarer igjen via Anthropic (betalt). Lokal GPU er fortsatt nede (breaker open).
+- **Fortsatt nede:** narrativ- og makroagentene bruker **gemini CLI direkte** (ikke ruteren) og feiler med exit=1. Tesen er ikke laget på nytt ennå (age 3,4 t, marketThesisScore fortsatt 21). Jeg sjekker igjen om ca. 1 time om tese-skåren og signalene endrer seg, og leser stderr for gemini (read-only). **Merk:** når tesen får innhold, kan firmaet begynne å handle i demo igjen. Det er tiltenkt.
+- Watch-alarmen «0 handler på 7 dager» er aktiv (report-only). GOALS.md er oppdatert. Nøkler og GPU ligger hos operatøren via deg.
+
+## FUNN fra trading-1 (2026-10-27T09:26:50Z): Gemini-agentene feiler fordi kreditten er brukt opp
+- Narrativ- og makroagentene (og research-drainer) bruker Gemini SDK (gemini-2.5-flash). Read-only probe fra worker: GET-modell gir 200 (nøkkelen er gyldig, modellen finnes). Ett minimalt generateContent-kall (5 tokens) gir **402 RESOURCE_EXHAUSTED: «Your prepayment credits are depleted. Please go to AI Studio … to manage your project and billing.»** Koden gjør dette om til «gemini failed: exit=1».
+- **Operatøren:** fyll på forhåndsbetalt kreditt i Google AI Studio for prosjektet bak GEMINI_API_KEY på nexus-worker. Dette er trolig det som gir «no narrative» i tesen. Når narrativ og makro virker igjen, kan tese-skåren (21 mot 42) stige, og demo-handler kan komme (tiltenkt).
+- Bonusfunn: agent-bussen har **395 åpne oppgaver og 0 i arbeid** (394 i review-rollen, journaling 147, risk 247), og research-drainer feilet 01:46Z. Den har trolig stått stille av samme grunn (Gemini). Jeg har ikke undersøkt mer.
+- Lagt inn i diagnose-rapporten (00-claude-inbox/nexus/2026-10-27/). Hele oversikten over LLM-leverandører for operatøren: Anthropic ok (rettet i #325), Gemini kreditt tom, OpenAI ugyldig nøkkel, OpenRouter «User not found», GPU-verten nede.

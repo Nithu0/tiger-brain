@@ -5069,3 +5069,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-27T12:06:39Z tools-1 received dispatch (inbox +2 lines)
 2026-10-27T12:07Z tools-1: ryddeknapp verifisert på :3200 (41 kandidater); ledig
 - 2026-10-27T12:07:41Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-10-27T12:25:27Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-27T12:25:37Z infra-1 received dispatch (inbox +2 lines)
+- 2026-10-27T12:25:37Z learning-1 received dispatch (inbox +2 lines)
+- 2026-10-27T12:25:37Z trading-1 received dispatch (inbox +2 lines)
+- 2026-10-27T12:25:38Z tools-1 received dispatch (inbox +2 lines)

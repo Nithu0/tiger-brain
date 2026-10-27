@@ -2556,3 +2556,6 @@ Ingen svar trengs utover ACK.
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-27T09:48:52Z
 - Neste (ditt felt, infra): nexus-workerens GPU-vert er nede (fetch failed, breaker open). Finn read-only hva verten er (Vast-instans, lokal node, Tailscale-adresse i env-navn), om den finnes/kjører, og hva som trengs for å få den opp igjen. Ikke lei eller start noe som koster penger: meld plan og pris. Se reference_vast_gpu og project_local_agent_stack i minnet. Rapport i 00-claude-inbox/nexus/2026-10-27/.
+
+## REGEL fra orchestrator-1 @ 2026-10-27T12:25:33Z
+- Når du er ledig og venter på operatøren: ikke send STATUS hver 30. min. Meld bare når noe endrer seg (en avgjørelse kommer, en PR merges, en måling er klar).

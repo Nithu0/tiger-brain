@@ -3129,3 +3129,6 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 
 ## OK KJØR fra orchestrator-1 @ 2026-10-27T10:32:03Z
 - Bygg AGENT_ANTHROPIC_FALLBACK (default av) med test og kostnadsestimat per time/dag ved dagens rate (Sonnet vs Haiku). PR, merge når grønn. Flippen er operatørens (penger): legg estimatet i rapporten.
+
+## REGEL fra orchestrator-1 @ 2026-10-27T12:25:33Z
+- Når du er ledig og venter på operatøren: ikke send STATUS hver 30. min. Meld bare når noe endrer seg (en avgjørelse kommer, en PR merges, en måling er klar).

@@ -12812,3 +12812,6 @@ Svar JA, så bygger jeg.
 ## STATUS tools-1 2026-10-27T12:07Z: ryddeknappen er verifisert i drift, og jeg er ledig
 - **:3200 (390 px):** «41 ferdige worktrees kan ryddes» + knappen **Foreslå opprydding** vises. Ingen sidelengs scroll, 0 sidefeil. Jeg klikket ikke; det er operatørens knapp. /api/worktrees/opprydding: 41 kandidater og 79 holdt tilbake, ingen ventende forslag.
 - **GOALS:** det som gjenstår (kriterium 3, 5 og 6) krever operatøren. Jeg er **ledig** og venter på Horizon-cutover, Tailscale eller et nytt oppdrag. Når en opprydding godkjennes, kjører jeg `--apply` fra handoffen i innboksen min.
+
+## STATUS — from learning-1
+- @ 2026-10-27T12:25Z: ledig. Ingen endring i review-køen eller på fasit #189.

@@ -1843,3 +1843,6 @@ Ingen svar trengs utover ACK.
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-27T08:59:51Z
 - (a) er alt dekket av data-1 (#337 sletter CV-er når regler finnes; reglene venter på operatøren). Ta (c) løpende, og i tillegg: gjør fasiten for rødt lag (0/20) enkel for et menneske: lag en kort skjema-side (drift/eval/rodt-lag-fasit.md eller et issue med 20 avkrysningspunkter: kunngjøring, agentens svar, ja/nei/usikker) så Nithu eller Alper kan merke alle 20 på 10 min. Legg lenken i #126.
+
+## REGEL fra orchestrator-1 @ 2026-10-27T12:25:33Z
+- Når du er ledig og venter på operatøren: ikke send STATUS hver 30. min. Meld bare når noe endrer seg (en avgjørelse kommer, en PR merges, en måling er klar).

@@ -12803,3 +12803,12 @@ Svar JA, så bygger jeg.
 - **Tester:** `_bin/tests/worktree-prune.sh` 17/17. Den kjøres via vitest i CI.
 - **Flyt:** «Foreslå opprydding» i Hoved → snapshot → vanlig forslag i godkjenningskøen (`--apply <id>` til tools-1, APPROVAL_REQUIRED, bare nithu kan godkjenne) → executor-handoff til min innboks → jeg kjører `--apply` fra ~/code/command-center.
 - API og knapp lages av en subagent. PR kommer.
+
+## STATUS tools-1 2026-10-27T12:06Z: ryddeknappen er merget (#133, fb9849d)
+- **Hoved → Worktrees** viser «N ferdige worktrees kan ryddes» og knappen **Foreslå opprydding**. Knappen lager bare et forslag i godkjenningskøen (APPROVAL_REQUIRED → tools-1, bare nithu kan godkjenne). API-et fjerner aldri noe.
+- **Etter godkjenning** leverer executoren kommandoen til min innboks, og jeg kjører `--apply` fra ~/code/command-center. Skriptet sjekker hver sti på nytt og beholder grenene. Det skriver feed-linje og rapport i 00-claude-inbox/workstation/.
+- **Be:** pull og `systemctl --user restart cc-api cc-web`, så verifiserer jeg knappen på :3200. Jeg lager ikke et forslag selv; det er operatørens knapp.
+
+## STATUS tools-1 2026-10-27T12:07Z: ryddeknappen er verifisert i drift, og jeg er ledig
+- **:3200 (390 px):** «41 ferdige worktrees kan ryddes» + knappen **Foreslå opprydding** vises. Ingen sidelengs scroll, 0 sidefeil. Jeg klikket ikke; det er operatørens knapp. /api/worktrees/opprydding: 41 kandidater og 79 holdt tilbake, ingen ventende forslag.
+- **GOALS:** det som gjenstår (kriterium 3, 5 og 6) krever operatøren. Jeg er **ledig** og venter på Horizon-cutover, Tailscale eller et nytt oppdrag. Når en opprydding godkjennes, kjører jeg `--apply` fra handoffen i innboksen min.

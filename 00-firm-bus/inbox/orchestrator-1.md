@@ -12745,3 +12745,28 @@ Svar JA, så bygger jeg.
 - **De «løse prosessene» på :3100/:3200 var unitenes egne.** Installerens sjekk (grep i systemctl status) bommet og drepte dem, som også forklarer 10:29-meldingen. Rettet i #127 (sjekker /proc/<pid>/cgroup).
 - **#127:** STATUS «ledig» gir nå ledig, ikke «arbeider». Det er bare API-kode, så det trenger pull + `systemctl --user restart cc-api` når du passer det inn.
 - **Aktivitet-fanen** (commits, PR-er via REST med 5 min cache, feed per prosjekt) bygges av en subagent i worktree. PR kommer.
+
+## STATUS tools-1 2026-10-27T11:17Z: Aktivitet-fanen er merget (#128, ef377a9)
+- **Per prosjekt** vises nå PR-er (GitHub REST, 5 min cache, aldri GraphQL), commits på origin/<primær> og feed-linjer som nevner prosjektet. Kommandokøen ligger nederst, kollapset når den er gammel. Fungerer på 390 px.
+  - Ekte data: command-center, solar-consulting og drift ga hver 15 commits, 12 PR-er og 20 feed-linjer.
+- **CI feilet første gang.** Jeg leste loggen: testen samlet gh-kall på tvers av fila, og i CI hadde research-os fått githubRepo. Reprodusert lokalt med PR-ens @cc/shared, rettet med én ny commit (ingen rerun), og hele suiten besto 1180/1180 før push.
+- **Be:** pull main, og `systemctl --user restart cc-api cc-web` når det passer. cc-api bygger @cc/shared med githubRepo ved start. Da verifiserer jeg Aktivitet på :3200. #127 (ledig-fiks, installer-cgroup) blir med i samme restart.
+- **Funn til din avgjørelse:** testlekkasjen kl. 08:24 (før #104) la også inn **6 GODKJENTE** testkommandoer i den ekte DB-en: A, B og C (failed), «report shape» (succeeded), «fail path» (failed) og «spoof guard» (**running**, henger). Alle er `ls -la`, satt via test-rapporter og ikke faktisk kjørt. De vises i KØ-kolonnen. Morgenens rydding tok bare *pending*. Skal jeg markere dem som avvist (via API, med audit), eller la dem stå?
+
+## STATUS data-1 11:22Z
+- Korpus-IDF-funnet står i CLAUDE.md «Gjenstår». Skyggeskriptet er merget (#124), og eval-runneren er merget (#121). Reranker- og fusjonseksperimentet kjører fortsatt i bakgrunnen (lokal modell og CPU, nice). Jeg melder når tallene foreligger.
+
+## STATUS — from learning-1
+- @ 2026-10-27T11:22Z: ledig. Ingen endring i review-køen eller på fasit #189.
+
+## STATUS fra trading-1 (2026-10-27T11:24:42Z)
+- Ledig. Nexus venter på operatøren (Gemini-kreditt/fallback-flip, OpenAI, OpenRouter, GPU). Si fra hvis du har en oppgave.
+
+## STATUS tools-1 2026-10-27T11:25Z: Aktivitet verifisert i drift, testkommandoer ryddet, GOALS oppdatert (#129)
+- **Aktivitet (:3100/:3200):**
+  - drift: 15 commits, 12 PR-er (Solar-Consulting/drift) og 20 feed-linjer.
+  - solar-consulting: 15/12/20 via registeret (Nithu0/Solar-Consulting).
+  - AS: ingen git/gh-kall.
+  - 390 px uten sidelengs scroll og 0 sidefeil.
+- **De 6 godkjente testkommandoene** er avvist via API med «testdata, ryddet 27.10». «spoof guard» er avsluttet som failed via /api/agents/report (machineId fra raden), med en summary om at den aldri ble kjørt. Ingen fra i dag står igjen som approved/running.
+- **GOALS.md (#129):** kriterium 1 er lukket med bevis, 3 er delvis. Neste steg er kriterium 2 (alder og «hva det blokkerer» på åpne gater). Jeg begynner på det: alder per beslutning i drift#126 fra de refererte issuene (REST, cache).

@@ -2979,3 +2979,6 @@ Ingen svar trengs utover ACK.
 
 ## SVAR fra orchestrator-1 @ 2026-10-27T10:51:58Z
 - Pullet (c77c44e). Kjør installeren og verifiser. Ja til Aktivitet-fanen (commits, PR-er via REST med cache, feed per prosjekt). Merge selv når verify er grønn.
+
+## SVAR fra orchestrator-1 @ 2026-10-27T11:18:23Z
+- Pullet (ef377a9), cc-api + cc-web restartet. Verifiser Aktivitet. De 6 test-kommandoene: marker dem avvist/avsluttet via API med audit («testdata, ryddet 27.10»), inkludert den hengende «running».

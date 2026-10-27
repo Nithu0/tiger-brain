@@ -94,3 +94,19 @@ Rekkefølge: 1 og 2 først. Hvis LLM-laget virker igjen og det fortsatt ikke kom
 - **(b) Gjort:** 247 gate_spike-oppgaver (review/risk, ikke claimet, over SLA, 14.05–08.09) er satt til `cancelled`, med én `agent_audit`-rad hver (`task_cancelled`, reason «expired: gate_spike review task past SLA, no review drainer»). **Ingenting er slettet.** Før: risk queued 247, journaling queued 147, code 1. Etter: risk cancelled 247, journaling queued 147, code 1. Skript: `scripts/oneshot/2026-10-27_cancel-stale-gate-spike-tasks.mjs` (dry-run, så --apply i én transaksjon). Status `cancelled` ble valgt fordi `AgentTaskStatus` ikke har `expired`. Kan reverseres via audit-radene.
 - **(c) PR:** gate_spike publiserer ikke når ingen review-oppgave er claimet på 7 dager. Det logges som «damped» (report-only).
 - **(a) Til operatøren og Karri:** skal review-rollen (postmortem-læring, 147 i kø) drives av firm-speilet (zellij + Ralph, `shield`/`atlas`, lokalt), eller av en server-drainer som research-drainer (krever kode og en Claude-nøkkel på worker)? Læringssløyfen fra postmortems har stått siden mai.
+
+## Status ~10:50Z
+Uendret: tese-skår 21, tesen er 4,5 t gammel, 0 handler. Anthropic virker i ruteren, men narrativ, makrohendelse og markedsresearch går via `routeGemini` (lokal GPU, så Gemini), **uten Anthropic-fallback**. Begge er nede. Det som låser opp: Gemini-kreditt eller GPU-verten (operatør). Alternativ i kode (forslag): Anthropic-fallback i routeGemini bak et flagg (default av), som flytter kostnaden til Anthropic.
+
+## AGENT_ANTHROPIC_FALLBACK: kostnadsestimat (til operatøren, som flipper)
+Flagget (default **av**) gjør at narrativ, makrohendelse, markedsresearch og research-drainer faller tilbake til Anthropic når lokal GPU **og** Gemini feiler.
+Rate: standard cooldown er narrativ 30 min, makro 60 min og research 60 min, altså ~**4 kall/t**. Research-drainer har 0 research-oppgaver i kø. Tokens per kall er ikke målt i DB (agentkall meteres ikke i `llm_results`), så tallene er `ASSUMPTION`. «Høy» = 50 kB prompt-tak og 4 096 max_tokens.
+
+| Modell | Scenario | per kall | per time | per døgn | per måned |
+| --- | --- | --- | --- | --- | --- |
+| claude-sonnet-5 ($3/$15 per M) | typisk 2k inn / 0,5k ut | 0,0135 $ | 0,054 $ | **1,30 $** | ~39 $ |
+| claude-sonnet-5 | høy 12,5k / 4k | 0,099 $ | 0,40 $ | 9,50 $ | ~285 $ |
+| claude-haiku-4-5 ($1/$5 per M) | typisk | 0,0045 $ | 0,018 $ | **0,43 $** | ~13 $ |
+| claude-haiku-4-5 | høy | 0,033 $ | 0,13 $ | 3,17 $ | ~95 $ |
+
+Anbefaling (`ASSUMPTION`): fyll på Gemini-kreditten først (dagens leverandør, billigst). Flip `AGENT_ANTHROPIC_FALLBACK=true` med `AGENT_ANTHROPIC_FALLBACK_MODEL=claude-haiku-4-5` som sikkerhetsnett, og mål faktiske tokens den første dagen. Når fallbacken virker, kan tese-skåren stige og demo-handler komme (tiltenkt). Kontoen er DEMO.

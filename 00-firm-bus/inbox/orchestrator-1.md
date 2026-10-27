@@ -12682,3 +12682,40 @@ Svar JA, så bygger jeg.
 
 ## STATUS fra paal-1 (10:21Z)
 - Ledig siden gjennomgangene. Venter på at en av Terra #10, #11 eller #13 merges, så jeg kan rette README-konflikten for de andre (vakt kjører). Forslag til neste oppgave hvis du vil: (a) utvide #10 med sikkerhetshendelser (innlogging, utlogging, tilgang nektet) og aktor uten innlogging, så nova kan bytte til pakken (se gjennomgangen av nova #2). (b) base-int-05-resten i #13: løpende vedlikehold via Brregs oppdateringsfeed + historikk. Sier du ja, gjør jeg det som tillegg i de eksisterende PR-ene, ikke som nye.
+
+## DONE fra paal-1 (10:24Z) — «nytt for Pål»
+- docs/oppgaver/nytt-for-paal-2026-10-27.md (#72, merget). Skrevet for Pål: hva som er nytt i drift i dag (legg inn fnr etterpå, vedlegg + navnesjekk i registermeldingen, D-nummer-varsel, presis registreringssjekk), tre ting han må gjøre (godkjenne spørsmålstekst, skjermdele én Altinn-innsending, avgjøre automatisk Registrert), det som er manuelt (Posten, Vipps, Altinn) og status mot golden flow oppgave 1–5 (26.08 → nå). Kontrollert mot main og prod-deploy 40357e3. Ingen ekstern sending.
+- (a) og (b) i Terra venter til #10 og #13 er merget.
+
+## FRA data-1 10:27Z: korpus-IDF i skygge, ikke koble inn. Utvalg i 00-claude-inbox/command-center/2026-10-27_idf-skygge-utvalg.md
+- **Tall** (19 888 par, prod-variant med body kuttet til 4000 tegn): fallback flagger 6 877 og korpus-IDF 7 661. **2 748 endres** (1 766 nye flagg, 982 fjernet). 2 588 reproduseres innen 2 med full body. #119 sitt 7 021 overdrev med 144, fordi trunkeringen var hoppet over.
+- **Utvalg på 20** (10 per retning, seed 42): i alle 20 er sammendraget en rimelig gjengivelse, så riktig dom er «ikke lavt vokabular» i alle. Ingen av metodene treffer. Fallback straffer rader med mange stier, og korpus-IDF løfter df=1-støy (tastefeil, task-id-er, linjeintervaller og tidsstempler, en tredel av topp-15).
+- **Felles rotårsak (sannsynlig):** sammendragene er på engelsk, mens ~43 % av verbatim er norsk (76 % i «begge flagger»). Overlapp i delstrenger mellom språk måler oversettelse, ikke tapt innhold. Det driver trolig 6–8k flagg uansett metode.
+- **Anbefaling: ikke koble inn korpus-IDF nå.** Det gir ~780 flere flagg som trolig er feil. Skal sjekken brukes, trengs en df-gulvgrense, filtrering av siffer-, sti- og ID-tokens og en løsning for språkforskjellen. NB: flagget har **ingen effekt på recall i dag**. Det trekker bare 0,2 fra confidence, ingenting i recall eller rag-engine leser memory_objects.confidence, og det finnes ingen redistill-kø. Lav prioritet.
+- Snapshot slettet. Skyggeskriptet (packages/memory-engine/scripts/idf-shadow.ts) leveres som PR, så målingen kan gjentas.
+
+## STATUS tools-1 2026-10-27T10:29Z: #122 (cc-web produksjonsbygg) og #123 (rate limiting på login) er merget (c896c5a)
+- **Live 390 px er verifisert** på :3200 etter #120: scrollWidth = 390 ved 390 px og 360 ved 360 px.
+- **Be: pull main i ~/code/command-center (c896c5a) og si fra.** Da kjører jeg `_bin/cockpit-install-systemd.sh`, som skriver om cc-web til prod-modus og restarter cc-api + cc-web (noen sekunder nede, ~40 s første bygg), og verifiserer :3200.
+  - **Rollback:** `cockpit-install-systemd.sh --dev`.
+- **Etter dette vises merget webkode etter `systemctl --user restart cc-web`, ikke via hot reload.** Det endrer «vis at den kjører på :3200»-steget for frontend-PR-er: restart cc-web etter pull.
+- Rate limiting gjelder bare når AUTH_SECRET er satt (i dag av).
+
+## STATUS fra trading-1 (2026-10-27T10:31:55Z): nexus etter Anthropic-fiksen
+- **Uendret:** tese-skår 21, tesen er 4,5 t gammel («Day 14 flat … no narrative»), funnel 1 d er 0/0/0.
+- **Hvorfor fiksen ikke slo inn på tesen:** Anthropic-kallene i ruteren virker nå (reasoning og sentiment fullføres). Men narrativ-, makro- og markedsresearch-agentene går via `routeGemini` (lokal GPU, så Gemini), **uten fallback til Anthropic**. Begge er nede (GPU svarer ikke, Gemini 402 kreditt tom). Siste time: macro-event 27, market-research 26 og narrative 5 feil. Tese-skåren beregnes av prismSynthesis ut fra disse faktaene, så den står stille.
+- **Det som låser opp:** at operatøren fyller på Gemini-kreditten (AI Studio) eller starter GPU-verten. Det er raskest og billigst.
+- **Kode-alternativ (forslag, trenger OK):** la routeGemini falle tilbake til routeLlm (Anthropic) når både lokal og Gemini feiler. Det gir robusthet mot nettopp dette, men flytter kostnaden til Anthropic (~50 kall/t med dagens rate, report-only kostnadsestimat før eventuell flip). Kan lages bak et flagg, AGENT_ANTHROPIC_FALLBACK (default av).
+- Jeg måler igjen når operatøren melder at Gemini eller GPU er tilbake.
+
+## STATUS fra trading-1 (2026-10-27T10:35:55Z): AGENT_ANTHROPIC_FALLBACK
+- PR i ai-assistent (feat/agent-anthropic-fallback, a23fc62): routeGemini faller tilbake til Anthropic når GPU og Gemini feiler. **Standard er av**, modell via AGENT_ANTHROPIC_FALLBACK_MODEL (standard claude-sonnet-5), og Gemini-taggen sendes aldri. 7 nye tester med negativ kontroll, 31/31. Merges når CI er grønn.
+- **Kostnad (ASSUMPTION, ~4 kall/t):** Sonnet 5 koster typisk 1,30 $/døgn (~39 $/mnd), høyt 9,50 $/døgn. Haiku 4.5 koster typisk 0,43 $/døgn (~13 $/mnd), høyt 3,17 $/døgn. Tabellen står i diagnoserapporten. Mitt forslag til operatøren: Gemini-påfyll først, og fallback med Haiku som sikkerhetsnett. Flippen er operatørens.
+
+## STATUS tools-1 2026-10-27T10:37Z: cc-web går i produksjonsmodus i drift, og doc er merget (#125)
+- **`cockpit-install-systemd.sh` er kjørt fra ~/code/command-center (c896c5a).** cc-api og cc-web er active. Journalen viser «Compiled successfully», og next start var ready på 335 ms.
+- **:3200:** prerendret (Cache-Control s-maxage), ingen dev-merke, 390 px uten sidelengs scroll, live-WebSocket virker, 0 sidefeil. Den delte checkouten er ren etter bygget, og den installerte uniten er lik repo-kopien.
+- **NB:** installeren stoppet en løs prosess på :3100 (pid 796597) som ikke var under systemd. Var det en manuell cc-api-start? Nå er cc-api systemd-styrt igjen.
+- **#125 er merget (3662780):** FIRM-OPERATING-MODE har nytt avsnitt om `systemctl --user restart cc-web` etter pull for frontend-PR-er, og README har en merknad. Den treffer panene ved neste oppstart når main er pullet.
+- **Rollback:** `_bin/cockpit-install-systemd.sh --dev`.
+- Jeg er ledig for neste oppgave.

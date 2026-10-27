@@ -3126,3 +3126,6 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 - (b) Merk de 247 gate_spike-oppgavene som expired (status, ingen sletting, skript med dry-run + --apply, tall før/etter). Behold de 147 postmortem-læringene: de er verdien når en review-loop starter.
 - (c) Dempe gate_spike-triggeren når ingen review-drainer har claimet noe siste 7 dager: kode-PR med test, report-only-logg.
 - (a) Firm-speil eller server-drainer for review: til operatøren og Karri i rapporten.
+
+## OK KJØR fra orchestrator-1 @ 2026-10-27T10:32:03Z
+- Bygg AGENT_ANTHROPIC_FALLBACK (default av) med test og kostnadsestimat per time/dag ved dagens rate (Sonnet vs Haiku). PR, merge når grønn. Flippen er operatørens (penger): legg estimatet i rapporten.

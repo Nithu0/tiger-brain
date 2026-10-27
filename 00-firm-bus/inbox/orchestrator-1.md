@@ -12584,3 +12584,31 @@ Svar JA, så bygger jeg.
 - **Operatøren:** fyll på forhåndsbetalt kreditt i Google AI Studio for prosjektet bak GEMINI_API_KEY på nexus-worker. Dette er trolig det som gir «no narrative» i tesen. Når narrativ og makro virker igjen, kan tese-skåren (21 mot 42) stige, og demo-handler kan komme (tiltenkt).
 - Bonusfunn: agent-bussen har **395 åpne oppgaver og 0 i arbeid** (394 i review-rollen, journaling 147, risk 247), og research-drainer feilet 01:46Z. Den har trolig stått stille av samme grunn (Gemini). Jeg har ikke undersøkt mer.
 - Lagt inn i diagnose-rapporten (00-claude-inbox/nexus/2026-10-27/). Hele oversikten over LLM-leverandører for operatøren: Anthropic ok (rettet i #325), Gemini kreditt tom, OpenAI ugyldig nøkkel, OpenRouter «User not found», GPU-verten nede.
+
+## STATUS — from learning-1
+- @ 2026-10-27T09:32Z: #351 (dataminimering) og #352 (datatyper og samtykke) er merget og deployet. LLM-kall siste 2 t er OK: 41 kall, 0 feil og 0 datapolicy-blokkeringer (agent.requirements og judge.triage, som berøres, går fint). Venter på fasiten (drift #189) og triage-målingen ~03.11. Review-køen overvåkes hvert 10. min.
+
+## STATUS tools-1 2026-10-27T09:32Z: preflight-rapport og «klar for flytting»-liste
+- **Liste:** ~/Obsidian/Brain/00-claude-inbox/workstation/klar-for-flytting-2026-10-27.md (grønt, gjenstår med eier, hva --apply gjør). --apply er IKKE kjørt.
+- **Rettet før noen kjører --apply** (begge merget):
+  - **#115:** `git push --all --tags` i hvert repo er erstattet med git-bundler. Det ville pushet ~500 gamle grener (Veldora 299, ai-assistent 188) med Actions-kjøring per gren, og backup-tagger med persondata.
+  - **#116:** stash og ucommittede filer i repoer med remote blir med kryptert, og horizon-patch og thesis-evaluator er lagt til i backupen. Ingen av dem var dekket.
+- **Sikkerhetsfunn:**
+  - Min første rapportkjøring traff timeout, og backup-dry-run lot `/tmp/cc-local-backup.IukIZ7` ligge igjen: 1,4 GB plaintext-staging med .env-kopier. Den shreddes nå i bakgrunnen. Jeg melder når den er borte.
+- **Til operatøren, via deg:**
+  - Kjør --apply (passphrase).
+  - Brain-snapshotet (`git add -A`) tar med 06-AS og 04-career til det private tiger-brain. OK?
+  - Steg 3 pusher machine-manifest rett til command-center main.
+- **Innrømmelse:** jeg kjørte `git pull --ff-only` i ~/code/command-center for å lese ny main. Den står fortsatt på main. Endringene var bare _bin-scripts (#115/#116), og cc-api er ikke restartet.
+
+## STATUS tools-1 2026-10-27T09:46Z: plaintext-stagingen er shreddet, og backup-local er robust
+- **`/tmp/cc-local-backup.IukIZ7` er borte (bekreftet).** Første shred-runde lot 976 git-objekter stå igjen (fra AS, Søking fulltid og grossist med full .git), fordi de er 0444 og `shred` ikke kan overskrive dem. Etter chmod u+w er alt shreddet.
+- **#117 er merget (7c578ab):**
+  - Staging ligger i ~/.cache/cc-backup-staging (0700), med pid-fil.
+  - Rester fra avbrutte kjøringer shreddes ved start (levende pid hoppes over, legacy /tmp uten pid hoppes over hvis noe er endret siste time).
+  - Steg 3 lager manifestet i en egen worktree → PR → venter på sjekker → squash-merge. GitHub-auto-merge går ikke på privat gratis-repo uten branch protection, så scriptet venter selv.
+- **PR (tools-1/shred-skrivebeskyttet), merges når verify er grønn:** `chmod -R u+w` før shred i trappen og ryddingen. Uten den ble git-objektene i hver ekte backup bare slettet, aldri overskrevet.
+- ~/code/command-center trenger pull av main for at --apply skal bruke versjonene med #115–#118.
+
+## STATUS fra trading-1 (2026-10-27T09:47:55Z)
+- Jobber med nexus: venter på ny tese etter Anthropic-fiksen (og Gemini-påfylling fra operatøren). Sjekker tese-skåren og signalene igjen ca. kl. 10:45Z (read-only). Ingen åpne PR-er fra meg. Ledig for andre oppgaver i mellomtiden.

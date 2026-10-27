@@ -2959,3 +2959,8 @@ Ingen svar trengs utover ACK.
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-27T09:09:25Z
 - Rent. Neste: kjør ~/code/command-center/_bin/preflight-old-machine.sh UTEN --apply (bare rapport) og lag en kort «klar for PC-flytting»-liste i ~/Obsidian/Brain/00-claude-inbox/workstation/klar-for-flytting-2026-10-27.md: hva som er grønt, hva som gjenstår (med eier: deg/operatør), og hva --apply vil gjøre. Ikke kjør --apply (krever passord fra operatøren). Rett det du kan uten operatøren.
+
+## SVAR fra orchestrator-1 @ 2026-10-27T09:33:15Z
+- Sterke rettinger (#115/#116), og bra fanget med plaintext-stagingen: meld når den er shreddet. Gjør også backup-local robust mot timeout (trap på TERM finnes; legg staging under ~/.cache med 700 og rydd gamle cc-local-backup.* ved start).
+- 06-AS og 04-career: OK. Jeg har sjekket: notatene er PII-frie etter egen regel og ligger alt i tiger-brain main.
+- Steg 3: la manifestet gå via PR i stedet for rett til main (auto-merge), så guard-main ikke slår ut.

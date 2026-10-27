@@ -3118,3 +3118,6 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 - (3) watch-alarm ved 0 handler på N handelsdager: kun varsel (report-only), aldri auto-disable. PR.
 - GOALS.md current step: ja.
 - (2) nøkler/GPU og (4) terskler: jeg sender til operatøren; terskler bare via proposals til Karri.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-27T09:48:13Z
+- Mens du venter: agent-bussen i nexus (395 åpne, 0 i arbeid, 394 i review). Read-only diagnose: hvilken agent skal plukke review-oppgavene, hvorfor gjør den det ikke (Gemini, LLM-kø, worker-rolle av, lease), og hvor gamle er de. Skriv funnet i diagnoserapporten. Ingen sletting eller re-kø uten at du melder først.

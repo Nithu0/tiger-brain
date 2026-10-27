@@ -24,7 +24,7 @@ Single-screen overview. If you opened the vault and don't know where to go — s
 | Prosjekt | Hva | MOC / pointer |
 |---|---|---|
 | **Nexus** | XAUUSD prop-firm trading system, demo-mode | [[01-nexus/Nexus-MOC]] · runtime: [[01-nexus/runtime/Phase-Status-Pointer]] → `ai-assistent/docs/ops/phase-status.md` |
-| **Master-oppgave** | NTNU master, ML for solid-state battery electrolytes | [[02-thesis/Thesis-MOC]] → `Master-oppgave/` (+ nestet `battery-electrolyte-predictor/`) |
+| **Master-oppgave** _(arkivert 2026-07, levert juni 2026)_ | NTNU master, ML for solid-state battery electrolytes | [[_CLOSING-MOC\|Thesis (arkiv)]] · [[Thesis-MOC]] → `Master-oppgave/` (+ nestet `battery-electrolyte-predictor/`) |
 | **Søking fulltid** | Aktiv jobb-søking (post-master) | [[04-career/Active-Job-Search-MOC]] |
 | **Business / strategi** | Managed AI-ops-produkt + leadgen | [[03-business/Business-MOC]] |
 | **AS** | Regnskap, inntekt, drift av AS | [[06-AS/AS-MOC]] |

@@ -122,3 +122,14 @@ Sist oppdatert: **2026-05-25T10:30Z** av ai-1 (full-system improvement sweep, 10
 - Når Claude gir deg en muntlig handoff i chatten → samme punkt skal stå her.
 - Når en kategori i Del 1 endrer seg (ny MCP gir Claude tilgang) → oppdater tabellen.
 - Relatert: phase-status (`docs/ops/phase-status.md`), `feedback_access_proactivity` memory.
+
+---
+
+## 2026-07-20 — nexus: samlet flipp-liste flyttet til repo-rot
+
+Alle ventende operatør-flipp for nexus/ai-assistent ligger nå i ÉN lett-finnbar fil:
+`~/code/ai-assistent/OPERATOR-INSTRUKS.md` (repo-roten). Innhold per 20.07:
+API-tjenesten (STRATEGY_LAB_API_ENABLED + JARVIS_CHAT_ENABLED + LOCAL_LLM_API_KEY),
+Worker GPU-vars (LOCAL_LLM_BASE_URL/_API_KEY/FIRM_LOCAL_AGENTS/LOCAL_LLM_MODEL — P1.1
+godkjent 15.07, aldri flippet), oneshot normalize-thesis-quality-score.sql,
+ENGINE_OBJECTIVE=pnl (Karri-gate). Denne runbooken peker dit i stedet for å duplisere.

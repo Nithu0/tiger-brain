@@ -53,3 +53,10 @@ created: 2026-05-25T13:00Z
 - Skill: `[[github-discover]]`
 - Spec: `[[GITHUB_DISCOVERY_SPEC]]`
 - Folder: `[[13-github-repos/README]]`
+
+## Reserverte filnavn (2026-07-15)
+
+Filer i `_queue/` med navn som starter på `HOW-TO` eller `README` (uansett
+store/små bokstaver) behandles som hjelpe-dokumenter og **draines aldri** —
+ikke gi en ekte søke-spec et slikt navn. Bruk mønsteret
+`YYYY-MM-DD-<tema>.md`.

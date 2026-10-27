@@ -1,0 +1,21 @@
+{
+  "id": "job-20260814-161435-paal1-31476",
+  "role": "paal-1",
+  "engine": "claude",
+  "project": "aslisten",
+  "cwd": "/home/nithu/code/aslisten-crm",
+  "pii": true,
+  "prompt": "Sett opp daglig backup-rutine for aslisten-crm prod (Railway). Krav: (1) script scripts/fetch-backup.sh som henter GET $CRM_BASE_URL/api/backup med admin-auth fra .env (les variabelnavn, ALDRI print verdier), lagrer til ~/backups/aslisten-crm/aslisten-YYYYMMDD.db, beholder siste 14, exit != 0 + tydelig feilmelding ved HTTP != 200 eller ugyldig sqlite-fil (sjekk med sqlite3 \"PRAGMA integrity_check\" eller file-magic); (2) systemd --user timer (daglig 03:30) + service som kjører scriptet; (3) kjør én manuell verifisering nå og bekreft at fila er gyldig sqlite med cases-tabell; (4) kort rapport til ~/Obsidian/Brain/00-claude-inbox/aslisten-crm/ + én feed-linje. Ingen PII i rapport/feed. Commit på branch — operatør har gitt full kjør for batchen, så verify/push går via vanlig verdict-flyt.",
+  "prompt_raw": "Sett opp daglig backup-rutine for aslisten-crm prod (Railway). Krav: (1) script scripts/fetch-backup.sh som henter GET $CRM_BASE_URL/api/backup med admin-auth fra .env (les variabelnavn, ALDRI print verdier), lagrer til ~/backups/aslisten-crm/aslisten-YYYYMMDD.db, beholder siste 14, exit != 0 + tydelig feilmelding ved HTTP != 200 eller ugyldig sqlite-fil (sjekk med sqlite3 \"PRAGMA integrity_check\" eller file-magic); (2) systemd --user timer (daglig 03:30) + service som kjører scriptet; (3) kjør én manuell verifisering nå og bekreft at fila er gyldig sqlite med cases-tabell; (4) kort rapport til ~/Obsidian/Brain/00-claude-inbox/aslisten-crm/ + én feed-linje. Ingen PII i rapport/feed. Commit på branch — operatør har gitt full kjør for batchen, så verify/push går via vanlig verdict-flyt.",
+  "origin": "orchestrator-1",
+  "reply_to": "telegram",
+  "status": "pushed",
+  "created": "2026-08-14T16:14:35Z",
+  "updated": "2026-08-14T16:29:57Z",
+  "result_path": "/home/nithu/Obsidian/Brain/00-firm-bus/jobs/results/job-20260814-161435-paal1-31476.md",
+  "branch": "ops/daglig-backup",
+  "summary": "⚠ claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login · Unset it to load your organization's connectors\nFerdig — daglig backup-rutine er oppe, verifisert mot prod, og committet på branch `ops/daglig-backup` (b396006, upushet).\n**Levert:**\n1. `scripts/fetch-backup.sh` — henter `GET /api/backup` med Basic auth, lagrer `~/backups/aslisten-crm/aslisten-YYYYMMDD.db`, beholder siste 14, exit != 0 med tydelig feilmelding ved HTTP != 200 eller ugyldig sqlite (file-magic + `PRAGMA integrity_check`; sqlite3-CLI mangler på maskinen, så python3-stdlib brukes). Creds går via `--netrc-file` på tmpfile, aldri i prosessliste eller output.\n2. systemd --user timer `aslisten-crm-backup.timer` daglig 03:30 med `Persistent=true` (WSL er ofte av på natta — glippede kjøringer tas ved neste oppstart). Enabled, neste kjøring i morgen 03:30. Unit-kopier versjonert i `scripts/systemd/`.\n3. Manuell verifisering kjørt: både direkte og via `systemctl --user start` → `aslisten-20260814.db` (307 kB), integrity ok, `cases`-tabell finnes (17 rader). Feilsti testet: gir «FEIL: HTTP 401» og exit 1.\n4. Rapport i `00-claude-inbox/aslisten-crm/2026-08-14_daglig-backup-rutine.md` + feed-linje. Ingen PII.\n**Ett avvik fra bestillingen du bør vite om:** `.env.local` inneholder dev-creds — de gir 401 mot prod. Timeren kjører derfor `CRM_BACKUP_AUTH=railway` og henter prod-creds runtime fra `railway variables` (CLI er innlogget og linket); ingen secrets skrives til disk. Konsekvens: utløper Railway-CLI-innloggingen, feiler backupen (synlig i journalctl) uten å fikse seg selv. Prod-URL er pinnet til `aslisten-crm-production.up.railway.app` siden `crm.aslisten.no` ikke resolverer ennå.\nVerify/push av branchen går via vanlig verdict-flyt.",
+  "exit_code": 0,
+  "head": "b396006",
+  "dirty": false
+}

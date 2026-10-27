@@ -1,0 +1,31 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-27T081714Z
+# kode: UKJENT
+# kilde: projects/anbud/crm/scripts/baseline/dps-kan-soke.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh --sql dps-kan-soke.sql
+
+BEGIN
+SET
+KAN|2025-109971|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Sikkerhets- og kvalitetsstyring|2026-11-17
+KAN|2022-901920|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Sikkerhets- og kvalitetsstyring|2026-11-17
+KAN|2022-962877|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Sammensatte team knyttet til systemutvikling|2026-11-22
+KAN|2025-109974|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Forretningsutvikling og innovasjon|2029-08-16
+KAN|2025-109972|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Testing og testledelse|2029-08-16
+KAN|2025-109970|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Analyser og utredninger|2029-08-16
+KAN|2025-109969|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Agile metoder|2029-08-16
+KAN|2025-109967|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Produktledelse og -støtte|2029-08-16
+KAN|2025-109973|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Arkitektur|2029-08-16
+KAN|2025-109968|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Forretningsroller|2029-08-16
+KAN|2025-109976|Registerenheten i Brønnøysund|Dynamisk innkjøpsordning - Virksomhets- og porteføljestyring|2029-08-16
+KAN|2026-106810|Stortinget|IT applikasjonsforvaltning - dynamisk innkjøpsordning|2030-05-08
+GAPKEY|narrative|12|8|Beskriv hvordan vi oppfyller kravet, eller legg det inn i kompetansebanken
+GAPKEY|credit_rating|8|0|Last opp kredittvurdering (kredittleverandør ikke valgt ennå)
+GAPKEY|payment_defaults|8|0|Kredittvurderingen må vise om det finnes betalingsanmerkninger
+GAPKEY|quality_certificate|5|0|Last opp kvalitetssertifikatet i bevisarkivet
+GAPKEY|environmental_certificate|4|0|Last opp miljøsertifikatet i bevisarkivet
+GAPKEY|tax_certificate|3|0|Registrer referanse til skatteattesten (Altinn) — selve attesten lagres ikke hos oss
+GAPKEY|contract_references|2|0|Fyll inn verdi/periode i kompetansebanken: Solprosjekt for El-24 (tidligere referanse) (El
+GAPKEY|authorisation_licence|1|0|Last opp autorisasjonen/godkjenningen i bevisarkivet
+GAPKEY|EXCLUSION_INSOLVENCY_MISCONDUCT|1|0|Må vurderes av et menneske: Other economic or financial requirements
+GAPKEY|TECHNICAL_REFERENCES|1|0|Må vurderes av et menneske: Tekniske og faglige egenskaper
+ROLLBACK

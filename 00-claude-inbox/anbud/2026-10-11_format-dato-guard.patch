@@ -1,0 +1,45 @@
+--- /home/nithu/code/Veldora-triage-c/projects/anbud/dashboard/src/lib/format.ts	2026-10-11 11:19:36.563819453 +0200
++++ /tmp/claude-1000/-home-nithu-code/4f3d8747-ee63-41c2-9cfe-4f8fc459fc8a/scratchpad/dpl/projects/anbud/dashboard/src/lib/format.ts	2026-10-11 12:26:04.569934377 +0200
+@@ -32,16 +32,21 @@
+ });
+ 
+ export function formatDate(iso: string | null | undefined): string {
+-  return iso ? dateFmt.format(new Date(iso)) : "Ukjent";
++  return valid(iso) ? dateFmt.format(new Date(iso)) : "Ukjent";
+ }
+ 
+ export function formatDateTime(iso: string | null | undefined): string {
+-  return iso ? dateTimeFmt.format(new Date(iso)) : "Ukjent";
++  return valid(iso) ? dateTimeFmt.format(new Date(iso)) : "Ukjent";
++}
++
++/** True only for a string Date can actually parse: brief facts are free text ("31.10.2026"). */
++function valid(iso: string | null | undefined): iso is string {
++  return !!iso && Number.isFinite(new Date(iso).getTime());
+ }
+ 
+ /** Oslo calendar date as YYYY-MM-DD (for <input type="date">). */
+ export function isoDateOslo(iso: string | null | undefined): string {
+-  if (!iso) return "";
++  if (!valid(iso)) return "";
+   return new Intl.DateTimeFormat("sv-SE", { timeZone: TZ }).format(new Date(iso));
+ }
+ 
+@@ -54,7 +59,7 @@
+ 
+ /** Whole calendar days (Oslo) until the deadline; negative once passed. */
+ export function daysUntil(iso: string | null | undefined, now = new Date()): number | null {
+-  if (!iso) return null;
++  if (!valid(iso)) return null;
+   return osloDayNumber(new Date(iso)) - osloDayNumber(now);
+ }
+ 
+@@ -69,7 +74,7 @@
+ }
+ 
+ export function relativeAge(iso: string | null | undefined, now = new Date()): string {
+-  if (!iso) return "aldri";
++  if (!valid(iso)) return "aldri";
+   const s = Math.round((now.getTime() - new Date(iso).getTime()) / 1000);
+   if (s < 60) return `${Math.max(s, 0)} s siden`;
+   if (s < 3600) return `${Math.round(s / 60)} min siden`;

@@ -1,0 +1,29 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-27T081648Z
+# kode: UKJENT
+# kilde: projects/anbud/crm/scripts/baseline/dps-skygge-maling.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh --sql dps-skygge-maling.sql
+
+BEGIN
+SET
+RUN|37094|ok|76 åpne DPS i våre vertikaler (av 300): 12 kan søke, 19 mangler noe, 0 kan ikke, 45 ukjent; 76 nye signaler (skygge)|76|76|2419
+TOPIC|dps.gaps.shadow|1||||
+TOPIC|dps.qualifiable.shadow|76||||
+IT17|2022-962877|kan-soke|-|Dynamisk innkjøpsordning - Sammensatte team knyttet til systemutviklin||
+IT17|2022-343586|mangler|narrative|Dynamisk innkjøpsordning IT – Konsulenter – Analytics, Maskinlæring og||
+IT17|2022-318980|mangler|narrative|Dynamisk innkjøpsordning IT – Konsulenter - Utviklere og Techlead||
+IT17|2022-353024|mangler|narrative|Dynamisk innkjøpsordning IT – Konsulenter – Test og Testlead||
+IT17|2026-105761|ukjent|-|IKT Konsulenttjenester||
+IT17|2024-105583|ukjent|-|20-019 Systemutvikling (backend & frontend)||
+IT17|2025-111353|ukjent|-|Dynamisk innkjøpsordning - bistand til IT- og tjenesteutvikling (1)||
+IT17|2025-103853|mangler|credit_rating,narrative,payment_defaults|Dynamisk innkjøpsordning for konsulenttjenester innen systemutvikling||
+IT17|2025-112751|ukjent|-|Dynamisk innkjøpsordning - Utvikling og teknisk støtte||
+IT17|2025-118721|mangler|narrative,tax_certificate|Dynamisk innkjøpsordning for IKT-konsulenter||
+IT17|2025-104594|ukjent|-|DPS - IT- og digitaliseringstjenester||
+IT17|2026-106810|kan-soke|-|IT applikasjonsforvaltning - dynamisk innkjøpsordning||
+IT17|2022-374835|ukjent|-|Dynamisk innkjøpsordning for konsulentbistand innen digitalisering||
+VERDICT|kan-soke|12||||
+VERDICT|mangler|19||||
+VERDICT|ukjent|45||||
+GAPS|08:16|[{"key": "narrative", "what": "Beskriv hvordan vi oppfyller kravet, eller legg det inn i kompetansebanken", "blocks": 12, "unlocks": 8, "examples": [71469, 71443, 71429, 71406, 71394]}, {"key": "credit_rating", "what": "Last opp kredittvurdering (kredittleverandør ikke valgt ennå)", "blocks": 8, "unlocks": 0, "examples": [45272, 141917, 39369, 140104, 60021]}, {"key": "payment_defaults", "what": "Kredittvurderingen må vise om det finnes betalingsanmerkninger", "blocks": 8, "unlocks": 0, "examples": [45272, 141917, 39369, 140104, 60021]}, {"key": "quality_certificate", "what": "Last opp kvalitetssertifikatet i bevisarkivet", "blocks": 5, "unlocks": 0, "examples": [45272, 46503, 140104, 58940, 137091]}, {"key": "environmental_certificate", "what": "Last opp miljøsertifikatet i bevisarkivet", "blocks": 4, "unlocks": 0, "examples": [45272, 46503, 58940, 137091]}, {"key": "tax_certificate", "what": "Registrer referanse til skatteattesten (Altinn) — selve attesten lagres ikke hos oss", "blocks": 3, "unlocks": 0, "examples": [130575, 127985, 140104]}, {"key": "contract_references", "what": "Fyll inn verdi/periode i kompetansebanken: Solprosjekt for El-24 (tidligere referanse) (El-24), Solprosjekt for Provitaz (tidligere referanse) (Provitaz), Solprosjekt for Suncel (tidligere referanse) (Suncel), Solprosjekt for Hassel Solar Design (tidligere referanse) (Hassel Solar Design), Solprosjekt for Sastech (tidligere referanse) (Sastech), Kravspesifikasjon solcelleanlegg, kommunale boliger — Sauda kommune (Sauda kommune)", "blocks": 2, "unlocks": 0, "examples": [144053, 137091]}, {"key": "authorisation_licence", "what": "Last opp autorisasjonen/godkjenningen i bevisarkivet", "blocks": 1, "unlocks": 0, "examples": [137091]}, {"key": "EXCLUSION_INSOLVENCY_MISCONDUCT", "what": "Må vurde||||
+ROLLBACK

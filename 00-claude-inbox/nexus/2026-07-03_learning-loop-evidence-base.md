@@ -3,6 +3,7 @@
 _thesis-2 (researcher, operator-directed), 2026-07-03. Read-only forensic; NO flag flipped, NO nexus code edited. Code-side from workflow `wcaii29az` (193 agents, 10 subsystems, 3-lens adversarial verify). Trade-side (Section 2 + §3 live values) pending codex-3/4 live-DB pull. Companion: `2026-07-01_bleed-diagnosis-and-fix-plan.md`, `2026-07-03_OUTPUT-CONTRACT.md`._
 
 ## ACCEPTANCE VERDICT — NOT ready for auto-learning (proven, code-side)
+> **STATUS-UPDATE 2026-07-21:** The verdict below described 03.07. Since then ai-1 executed the sequencing: (1) P0/P1 bugfixes landed #228–#234, (2) `TIER3_ENGINE_ATTRIBUTION_ENABLED=true` on prod (engine_scores present at open on 10/10 trades 08–15.07), (3) the §4 flight-recorder is BUILT+MERGED (PR #243, main 1af0fb1) and **prod-verified 2026-07-20: 7/7 fills after 15.07 have `entry_snapshot` version=1**. The acceptance bar — explain ONE trade end-to-end — is now mechanically satisfiable for trades opened after 15.07T14Z. Remaining before considering SAFE_AUTO_APPLY (Karri-gated): accumulate a clean outcome set on the new provenance (weeks, not days), plus the still-open items in Addendum 21.07.
 The bar: explain ONE trade raw-data → param-source → scoring → gate → sizing → outcome → learning-feedback. **We cannot, today.** On the executing TIER-3 path `entry_snapshot` is never written, `engine_scores` are absent (`TIER3_ENGINE_ATTRIBUTION_ENABLED` default-OFF), and sizing-lineage + dissent are never persisted. The learning loop reaches a live decision through at most ONE wire — engine multipliers under `SAFE_AUTO_APPLY` — and that wire is fed by an empty/`no_trade`-poisoned outcome set with an inverted correct-label, and is frozen at 1.0 in the default `RECOMMEND_ONLY` mode. Every other path (lessons, session thresholds, meta-label) is write-only / dead-wired. The exit side (`CONVICTION_FLIP_EXIT`/`DEGRADE_CUT`) is entirely dead under `ORB_ONLY_MODE`. **Do not actuate auto-learning until the flight-recorder (§4) makes one trade fully explainable and the P0/P1 wires are proven safe.**
 
 Counts: 43 confirmed defects — P0:6, P1:17, P2:17, P3:3. Gates: bug-fix 17, operator-flip 13, karri 13.
@@ -367,8 +368,11 @@ _learning_impact: blocks-learning | blocks-gate | observability-only. trade_exam
 - trade example: pending codex §2
 
 ---
-## Section 2 — Per-trade forensic summary, last 7d LOSERS FIRST — PARTIALLY CLOSED (ai-1 aggregate 2026-07-07); per-trade table still OPEN
-Owner was codex-3/4 — never delivered. ai-1's prod-DB sweep (`00-claude-inbox/ai-assistent/2026-07-07_full-analyse-gpu-laering-data.md`) closes the AGGREGATE level:
+## Section 2 — Per-trade forensic summary, last 7d LOSERS FIRST — **CLOSED 2026-07-21** (ai-1 per-trade pull 2026-07-15 + aggregate 2026-07-07)
+**Per-trade table delivered by ai-1:** `00-claude-inbox/nexus/2026-07-15_per-trade-provenance-7d.md` (SELECT-only, 10 closed firm-trades 08–15.07: 6W/4L, net +$225.44). Losers: b7dc6929 −$242 (MR long, OANDA_SL_TP), ec66d49e −$104 (SB short, CONVICTION_FLIP_EXIT), 1606def7 −$24 (VE short, STALE_TRADE_EXIT), 8515d98c −$1 (SB short). **Contract answer: SAFE_AUTO_APPLY/multipliers moved sizing on NONE of them** — `engine_multipliers:current` all 1.0, mode RECOMMEND_ONLY (Railway env confirmed), every calibration_log row last 14d `applied=false`, last applied=true 26.06. Losers and winners sized by the same stop-distance rule at flat 0.60 conviction → the PnL spread is entry/exit quality, not sizing modulation. Biggest loser and biggest winner were the same setup (MR long) at near-identical size (63/64) — consistent with no-edge, not with harmful learning.
+Residual (historical only): multiplier≠1.0 incidence per-loser inside the 08–26.06 applied-window remains unquantified — deprioritized since the wire is off and forward provenance is now recorded.
+
+ai-1's earlier prod-DB sweep (`00-claude-inbox/ai-assistent/2026-07-07_full-analyse-gpu-laering-data.md`) closed the AGGREGATE level:
 - **108 clean live trades 23.04→07.07: real net ≈ −$761** (raw `pnl` sum −$3,411.79 overstates loss 4.5× — partials booked separately: `realized_partial_pnl` +$2,650.69). 35.2% winners.
 - Weekly since GPU-connect: 22.06 −$12.50 · 29.06 −$1,249.81 · 06.07 +$320. No trading decision has ever run on GPU (PR #211 never merged) — GPU cannot be causal either way.
 - **Query traps for anyone re-running this:** `excluded_from_learning` is NULL on live rows → `NOT excluded_from_learning` filters out EVERYTHING; use `IS NOT TRUE`. Never sum `pnl` alone.
@@ -390,7 +394,8 @@ Still OPEN (per-trade, losers-first, via `2026-07-03_per-trade-forensic-prompt.m
 | `SAFE_AUTO_APPLY` state / multiplier≠1.0 incidence on losers | **OFF since 27.06** → multipliers neutral 1.0 now. Exposure window with applied≠neutral = 08–26.06 (374 rows). Per-loser incidence in that window still unquantified (needs the §2 per-trade pull) | ai-1 prod-DB sweep; calibration_log |
 
 ---
-## Section 4 — Monitor spec = per-trade FLIGHT RECORDER
+## Section 4 — Monitor spec = per-trade FLIGHT RECORDER — **EXECUTED by ai-1 (PR #243, main 1af0fb1), prod-verified 2026-07-20**
+_The core write below is live: TIER-3 oanda-fill UPDATE + paper UPDATE + gate-after-fill recovery INSERT now populate `entry_snapshot` (COALESCE, never overwrite) with the canonical Blade model-keys; session resolved as `proposalSession ?? getSessionWindow().state` (scalp-overlap sessionCode=-1 bug caught in review, fixed pre-merge). Honest nulls: adx + macroBias. Verified 7/7 fills after 15.07T14Z carry `entry_snapshot` version=1, sessionCode 0–3. Remaining spec-fields not yet captured: gate_ledger[], multiplier/calibration-mode snapshot, sizing parameter_lineage, counterfactual threshold, dissent[] — tracked below as the delta._
 **Single highest-leverage build step:** extend the TIER-3 fill/paper UPDATE (`strategy-execution.ts:1592-1650`) to also populate the EXISTING `entry_snapshot` JSONB (`schema.ts:572`) with the same shape the Blade path already builds (`managers.ts:949-1010`). One write closes why/criteria/conviction-tiers/macro/range/dissent provenance for the executing path — no new table. Then add ONE read-only SQL VIEW `trade_provenance` LEFT JOINing simulated_orders → market_snapshots/gate_decisions/shadow_signals/engine_scores/meta_label_scores on `decision_cycle_id`.
 
 Minimum fields (operator-locked) — captured today vs new:
@@ -461,3 +466,51 @@ Source: `00-claude-inbox/ai-assistent/2026-07-07_full-analyse-gpu-laering-data.m
 **Meta-label reality-check (updates §3 row 3 nuance):** 4 models WERE trained (daily cron until 30.06) — all verdict no-signal, negative Brier skill (−0.073 to −0.176) at n≈96. Nothing mechanical blocks training; the data has no learnable signal yet. MinTRL is INFINITE at Sharpe ≤ 0 — waiting proves nothing without an edge.
 
 **Status of my 07-01 P0 recommendation:** CALIBRATION_MODE reverted to RECOMMEND_ONLY on 27.06 (before/independent of the rec) — the one live learning wire is now OFF. Remaining exposure window to audit per-trade: 08–26.06 (374 applied rows).
+
+---
+## Addendum 2026-07-21 — CONTRACT CLOSED: per-trade table delivered, flight-recorder live-verified
+Sources: `2026-07-15_per-trade-provenance-7d.md` (ai-1), `docs/ops/learning-ledger.md` (verify-rows), watch 2026-07-21T19:00Z.
+
+**All four contract sections now answered:**
+1. §1 register — 43 code-side defects + 6 live-side (07-09). Sequencing pkt 1 executed: bugfixes landed in #228–#234 (ai-1, file:line-verified).
+2. §2 per-trade — CLOSED (see section). Answer: learning loop moved sizing on ZERO recent trades; losses are entry/exit quality.
+3. §3 truth table — CLOSED 07-09; two live flips since: `TIER3_ENGINE_ATTRIBUTION_ENABLED=true` on prod (engine_scores at open on 10/10 trades) and derive-lessons cron healthy again (latestSuccess=2026-07-21; still 0 approved lessons → injection remains vacuous, as designed).
+4. §4 flight-recorder — EXECUTED (PR #243) and **prod-verified 2026-07-20: 7/7 fills carry entry_snapshot**. entry_snapshot was NULL on all 10 trades in the 08–15.07 window (pre-merge), confirming both the gap and the fix boundary.
+
+**New open items (forward watch):**
+- **result_r-partial-close-mismatch** — trade 1606def7: result_r=+0.33 but net PnL −$24.05. Root-caused by ai-1: DEGRADE_CUT partial ignored by computeRealizedR (`postmortem-r-multiple.ts:119-122`). Karri proposal `2026-07-20_size-weighted-result-r.md`, VERIFY-BY 2026-08-01. Poisons R-based learning labels until fixed/rejected.
+- **asian-session-reduced-path** — overnight cycles log only 3/5 engines (missing momentum+technical) and NULL regime_at_entry/portfolio_regime — model features systematically sparser for Asian opens; must be encoded or masked in any future training set.
+- **result_r sparsity** — populated on only 4/10 closes (missing on plain OANDA_SL_TP MR closes).
+
+**Where this leaves the acceptance criterion:** for any trade opened after 15.07T14Z we can now mechanically trace raw-data → params → scoring (engine_scores + conviction) → gate → sizing → outcome → and the learning-feedback answer ("none — RECOMMEND_ONLY, mults 1.0"). The bar is met for EXPLAINABILITY going forward. It is NOT met for auto-learning actuation: perf n=135, WR 40%, PF 1.06, sharpe 0.02 — no edge to amplify, and the outcome set on clean provenance is days old. Recommendation unchanged: keep RECOMMEND_ONLY, let the flight-recorder accumulate ≥30–50 fully-instrumented closes, fix/decide result_r weighting first (it defines the label), then revisit SAFE_AUTO_APPLY via Karri.
+
+— thesis-2 (researcher), 2026-07-21. Read-only: no flags, no nexus code touched.
+
+---
+## Addendum 2026-07-27 — REGIME CHANGE: the live wire is now ARMED (operator decision 23.07)
+Sources: feed 23–27.07 (ai-1, code-2), watch 2026-07-27T19:30Z. Read-only; local ai-assistent checkout is on stale branch 2856344 (shared-checkout hazard — do not trust it for current file:line claims; everything below is from feed/reports).
+
+**What flipped (operator decision, 23.07):** `SAFE_AUTO_APPLY` + `ENGINE_OBJECTIVE=pnl` + `META_LABEL` are LIVE. The one wire this document proved could reach a live decision (engine multipliers → `scoring.ts:53`) is no longer frozen at 1.0-by-mode.
+
+**Preconditions that were met first (the sequencing this evidence base demanded):**
+- Pkt 1 P0/P1 bugfixes landed #228–#234 (ai-1, file:line-verified 15.07) — assumed to include correct-label inversion + no_trade poisoning; NOT independently re-verified from here (stale checkout).
+- `TIER3_ENGINE_ATTRIBUTION_ENABLED=true` → executing trades carry engine_scores (verified 10/10, 15.07).
+- Flight-recorder live + prod-verified 20.07 (7/7 fills have entry_snapshot).
+- PR #250 merged 23.07: **size-weighted result_r** (fixes the label-defining bug from Addendum 21.07), per-strategy FVG floor, HLE labeler v2, backfill script. Residual: operator must run backfill dry-run + `--apply`; VERIFY-BY 01.08 still open.
+- HLE v2-relabel COMPLETE 27.07: 91 v2-labels, eval switched to v2 — retires the 185R/23.8R poison-label defect on the v2 path.
+- `ENGINE_OBJECTIVE=pnl` — closes the "directional_accuracy decoupled from P&L" objection (P1 rec from `2026-07-01_bleed-diagnosis`).
+
+**Newly-armed risks (report-only, operator/ai-1 own):**
+1. **Per-trade multiplier provenance is the missing spec-delta.** entry_snapshot does NOT yet capture engine_multipliers/calibration_mode at open (§4 delta). With SAFE_AUTO_APPLY live this is no longer nice-to-have: the first applied≠1.0 multiplier will influence sizing/selection with no per-trade record. Interim monitor: `calibration_log` rows with `applied=true` after 23.07 + `firm_state engine_multipliers:current` ≠ 1.0; join trades opened after that timestamp.
+2. **META_LABEL live** — this document proved the meta-label path was shadow-only with a dead-end output and (pre-#234) constant-zero features. What the flag now wires (gate? sizing? still shadow?) is unverified from here. Needs one file:line answer from ai-1 on current main.
+3. **Guardrails to watch on first apply:** minSamples=30 + ±20% clamp (calibrate-weights.ts) — verify the clamp holds on the first applied row; watch for self-reinforcing tighten/boost loops (operator-prinsipp: report, never auto-disable).
+4. **Edge still thin:** n=141, WR 40.4%, PF 1.10, expectancy 12.03, sharpe 0.03. SAFE_AUTO_APPLY amplifies whatever signal exists — with PF ~1.1 the loop is now learning on a weak but no longer clearly-absent signal. Lessons: 8 proposed / 0 approved → injection still vacuous; derive-cron healthy (latestSuccess 27.07).
+
+**Verdict trajectory:** 03.07 = NOT ready (nothing explainable, wire fed by poisoned/empty set). 21.07 = explainable going forward, wire off. **27.07 = wire ON with materially cleaner labels/attribution — acceptance now hinges on the FIRST applied multiplier being fully traceable.** Watch item for whoever reads this next: the first `applied=true` calibration_log row after 23.07 is the event that ends the "learning influenced zero trades" era; capture it.
+
+— thesis-2 (researcher), 2026-07-27. No flags/code touched.
+
+### Supplement 27.07 (kveld) — ai-1/trading-1 besvarte begge verifiseringsspørsmålene
+1. **META_LABEL-risikoen AVKREFTET:** fortsatt shadow-only på current main (`orchestrator.ts:826-842` — «Observability only — never gates/sizes a trade», bak META_LABEL_SHADOW_ENABLED; TRAIN-flagget gater kun trainer + nightly eval). Ingen gate/sizing-konsument. Fase 3-flippen av META_LABEL endrer altså INGEN live-beslutning.
+2. **Multiplier-snapshot bygges FØR første apply:** `calibration_log` siden 23.07 = **414 rader mode=APPLY, applied=false på samtlige** — første applied-rad har ikke skjedd. ai-1 bygger engine_multipliers + calibration_mode inn i entry_snapshot-writen (branch `feat/trade-provenance`, FIRM v2 §11). Kappløpet mellom proveniens og første apply ligger dermed an til å vinnes av proveniensen.
+**Nytt verifiseringsspørsmål (sendt ai-1):** HVORFOR er alle 414 APPLY-rader applied=false? Forventet svar = guardrails (minSamples=30 per engine / ±20%-klamp) — men hvis grunnen er en ny stille blocker (f.eks. outcome-join fortsatt for tynn per engine), er fase 3-flippen vakuøs og «SAFE_AUTO_APPLY live» en papirtiger. Trenger reason-breakdown per rad/engine.

@@ -1,0 +1,40 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-13T121937Z
+# kode: c4a0468
+# kilde: projects/anbud/crm/scripts/baseline/triage-baseline.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh
+
+BEGIN
+SET
+ANTALL_VERTER||13||
+DOK_ARKIV||0|0|0
+FILENDELSE|ikke fil|1184||
+KO_MED_TEKST||742|0|
+KO_URL_DEKNING||742|625|84.2
+KO_VERT|permalink.mercell.com|228|36.5|
+KO_VERT|tendsign.com|112|17.9|
+KO_VERT|hyyr.no|82|13.1|
+KO_VERT|app.artifik.no|66|10.6|
+KO_VERT|eu.eu-supply.com|63|10.1|
+KO_VERT|sykehusinnkjop.ivalua.app|60|9.6|
+KO_VERT|nav.ivalua.app|6|1.0|
+KO_VERT|ivalua-supplier.statnett.no|2|0.3|
+KO_VERT|tilbudsportal.miljodirektoratet.no|2|0.3|
+KO_VERT|vy-supplier.ivalua.app|2|0.3|
+KO_VERT|achilles.com|1|0.2|
+KO_VERT|supplierportal.c1.app.mercell.com|1|0.2|
+URL_DEKNING||1751|1184|67.6
+VERT|permalink.mercell.com|435|36.7|
+VERT|tendsign.com|215|18.2|
+VERT|hyyr.no|149|12.6|
+VERT|app.artifik.no|137|11.6|
+VERT|eu.eu-supply.com|110|9.3|
+VERT|sykehusinnkjop.ivalua.app|108|9.1|
+VERT|nav.ivalua.app|12|1.0|
+VERT|tilbudsportal.miljodirektoratet.no|5|0.4|
+VERT|ivalua-supplier.statnett.no|4|0.3|
+VERT|innkjopshuset.no|3|0.3|
+VERT|vy-supplier.ivalua.app|3|0.3|
+VERT|achilles.com|2|0.2|
+VERT|supplierportal.c1.app.mercell.com|1|0.1|
+COMMIT

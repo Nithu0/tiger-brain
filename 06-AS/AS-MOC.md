@@ -22,6 +22,7 @@ Hovedinngang for AS/ENK-relatert kunnskap i brain-vault. Bilag og analyse-noter 
 - [[Regnskap-Runbook]] — månedlig sjekkliste for regnskap
 - [[Skatt-Notater]] — norsk skatt/MVA-cheatsheet
 - [[Inntekt-Strategier-Research]] — markeds-research for inntekt-strategier *(eies av research-agent)*
+- [[Medieovervakning-MOC]] — **AI-medieovervåkning for offentlig sektor** (GO, 30-dagers sprint mot oktober-anbud)
 
 ## Rutiner
 

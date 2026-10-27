@@ -1,0 +1,133 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-27T073024Z
+# kode: UKJENT
+# kilde: projects/anbud/crm/scripts/baseline/dps-apne-it.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh --sql dps-apne-it.sql
+
+BEGIN
+SET
+DPS|2025-109971|2026-11-17|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Sikkerhets- og kvalitetsstyring|24/1|firmaattest,miljø|https://permalink.mercell.com/187783033.aspx
+DPS|2022-901920|2026-11-17|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Sikkerhets- og kvalitetsstyring|2/2|firmaattest,forsikring|https://permalink.mercell.com/187783033.aspx
+DPS|2022-962877|2026-11-22|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Sammensatte team knyttet til systemutvikling|2/2|firmaattest,forsikring|https://permalink.mercell.com/188361116.aspx
+DPS|2023-664176|2026-12-30|FLYTOGET AS (965694404)|Konsulentbistand IT-utvikling (rettet versjon)|0/0|-|https://permalink.mercell.com/197063252.aspx
+DPS|2021-361268|2026-12-31|MATTILSYNET (985399077)|Dynamisk innkjøpsordning for kjøp av bistand til IKT-utvikling|0/0|-|https://permalink.mercell.com/165916010.aspx
+DPS|2021-312453|2026-12-31|NOVARI IKS (998283914)|Dynamisk innkjøpsordning, IKT-tjenester til Vigo IKS|0/0|-|https://tendsign.no/doc.aspx?UniqueId=afeezkaufb&GoTo=Docs
+DPS|2022-351735|2026-12-31|SJØFARTSDIREKTORATET (974761262)|Dynamisk innkjøpsordning IT – Konsulenter – Strategisk rådgiving og Kvalitetssikring|2/2|skatteattest|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=321669&B=DFO
+DPS|2022-353024|2026-12-31|SJØFARTSDIREKTORATET (974761262)|Dynamisk innkjøpsordning IT – Konsulenter – Test og Testlead|2/2|skatteattest|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=321673&B=DFO
+DPS|2022-343586|2026-12-31|SJØFARTSDIREKTORATET (974761262)|Dynamisk innkjøpsordning IT – Konsulenter – Analytics, Maskinlæring og Dataforvaltning|2/2|skatteattest|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=321645&B=DFO
+DPS|2022-318980|2026-12-31|SJØFARTSDIREKTORATET (974761262)|Dynamisk innkjøpsordning IT – Konsulenter - Utviklere og Techlead|2/2|skatteattest|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=321714&B=DFO
+DPS|2022-314581|2026-12-31|SJØFARTSDIREKTORATET (974761262)|Dynamisk innkjøpsordning IT – Konsulenter - Brukeropplevelser|2/2|skatteattest|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=321663&B=DFO
+DPS|2022-333116|2026-12-31|SJØFARTSDIREKTORATET (974761262)|dynamisk innkjøpsordningen IT – Konsulenter - Team/Gruppe|2/2|skatteattest|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=321672&B=DFO
+DPS|2022-303121|2026-12-31|SJØFARTSDIREKTORATET (974761262)|Dynamisk innkjøpsordning IT – Konsulenter – Prosjektledelse og Teamlead|2/2|skatteattest|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=321667&B=DFO
+DPS|2022-370543|2026-12-31|SJØFARTSDIREKTORATET (974761262)|Dynamisk innkjøpsordning IT – Konsulenter - IT – Sikkerhet og Arkitektur|2/2|skatteattest|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=321666&B=DFO
+DPS|2022-673748|2027-01-21|DIGITALISERINGSDIREKTORATET (991825827)|Dynamisk innkjøpsordning - System-, web- og testutvikler - ny utlysing 2023|0/0|-|https://permalink.mercell.com/192721411.aspx
+DPS|2021-386923|2027-02-01|ENTUR AS (917422575)|DPS - IT-Utviklingstjenester - individuelle ressurser|0/0|-|https://tendsign.no/doc.aspx?UniqueId=afhowrvfua&GoTo=Docs
+DPS|2021-320600|2027-03-29|ENTUR AS (917422575)|DPS - IT-utviklingstjenester team/gruppe|0/0|-|https://tendsign.no/doc.aspx?UniqueId=afziuwapgg&GoTo=Docs
+DPS|2021-351611|2027-04-01|ENTUR AS (917422575)|DPS - HR og organisasjonsutvikling|0/0|-|https://tendsign.no/doc.aspx?UniqueId=afneizddhp&GoTo=Docs
+DPS|2021-361991|2027-04-30|ENTUR AS (917422575)|DPS - Rådgivningstjenester innen digitalisering|0/0|-|https://tendsign.no/doc.aspx?UniqueId=afrnpzrwnr&GoTo=Docs
+DPS|2023-678480|2027-07-12|DIGITALISERINGSDIREKTORATET (991825827)|Dynamisk innkjøpsordning - Kompetanse på Optimizely|0/0|-|https://permalink.mercell.com/205966295.aspx
+DPS|2025-110145|2027-07-30|LOTTERIES ENTERTAINMENT INNOVATION ALLIANCE AS (921756763)|Invitasjon til dynamisk innkjøpsordning - innovasjons partnere|27/3|miljø,referanse|https://permalink.mercell.com/260495102.aspx
+DPS|2022-610287|2027-12-01|AVINOR AS (985198292)|Avinor AS - K-190980 - Dynamisk innkjøpsordning Lisenser|0/0|-|https://tendsign.no/doc.aspx?UniqueId=afshqlyazi&GoTo=Docs
+DPS|2023-665946|2027-12-31|KOLUMBUS AS (914749360)|Dynamisk innkjøpsordning for kjøp av konsulentbistand innenfor mobilitetstjenester|0/0|-|https://tendsign.no/doc.aspx?UniqueId=afvhcjbway&GoTo=Docs
+DPS|2026-105761|2027-12-31|KRIMINALOMSORGSDIREKTORATET (911830868)|IKT Konsulenttjenester|0/0|-|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=320594&TID=287897&B=
+DPS|2025-115383|2027-12-31|SKAUN KOMMUNE (939865942)|DPS - Konsulenttjenester innenfor bygg og anlegg i Skaun og Melhus|24/1|miljø|https://permalink.mercell.com/145719141.aspx
+DPS|2024-105746|2028-05-08|Aktieselskapet Vinmonopolet (817209882)|20-021 Design og brukeropplevelse/Universell utforming|34/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/126564479.aspx
+DPS|2024-105583|2028-05-08|Aktieselskapet Vinmonopolet (817209882)|20-019 Systemutvikling (backend & frontend)|34/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/126563668.aspx
+DPS|2024-105499|2028-05-08|Aktieselskapet Vinmonopolet (817209882)|20-018 Analytics, maskinlæring og dataforvaltning|34/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/126510500.aspx
+DPS|2024-105743|2028-05-08|Aktieselskapet Vinmonopolet (817209882)|20-020 Systemforvaltning|34/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/126564133.aspx
+DPS|2024-107299|2028-05-24|Aktieselskapet Vinmonopolet (817209882)|20-014 Infrastruktur og skytjenester|34/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/127695760.aspx
+DPS|2024-107298|2028-05-24|Aktieselskapet Vinmonopolet (817209882)|20-013 Arkitektur|34/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/127625223.aspx
+DPS|2024-107300|2028-05-24|Aktieselskapet Vinmonopolet (817209882)|20-015 Sikkerhet IT|34/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/127699787.aspx
+DPS|2024-106399|2028-06-01|DIGITALISERINGSDIREKTORATET (991825827)|Dynamisk innkjøpsordning - Utvikling og teknisk støtte|50/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/227143127.aspx
+DPS|2024-106024|2028-06-01|DIGITALISERINGSDIREKTORATET (991825827)|Dynamisk innkjøpsordning -  Testing/testledelse - ny utlysning 2024|50/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/227460755.aspx
+DPS|2024-110619|2028-07-19|Aktieselskapet Vinmonopolet (817209882)|20-016 Test og testledelse|34/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/131760757.aspx
+DPS|2025-111353|2028-08-04|NASJONAL KOMMUNIKASJONSMYNDIGHET (974446871)|Dynamisk innkjøpsordning - bistand til IT- og tjenesteutvikling (1)|23/0|miljø|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=438325&B=
+DPS|2024-112234|2028-08-29|DIGITALISERINGSDIREKTORATET (991825827)|Dynamisk innkjøpsordning - Brukeropplevelse, design og universell utforming|50/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/236228323.aspx
+DPS|2024-112730|2028-09-10|DIGITALISERINGSDIREKTORATET (991825827)|Dynamisk innkjøpsordning - Teknisk prosjektleder/Smidig utviklingsleder - ny utlysning 2024|50/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/232142498.aspx
+DPS|2024-113363|2028-09-24|DIGITALISERINGSDIREKTORATET (991825827)|Dynamisk innkjøpsordning - Prosjekt- og prosessledelse|50/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/238504258.aspx
+DPS|2024-113971|2028-10-01|DIGITALISERINGSDIREKTORATET (991825827)|Dynamisk innkjøpsordning - Kurs og kompetanseutvikling|50/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/239118573.aspx
+DPS|2024-115001|2028-10-22|DIGITALISERINGSDIREKTORATET (991825827)|Dynamisk innkjøpsordning - Arkitektur|50/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/240861481.aspx
+DPS|2024-115629|2028-10-23|Aktieselskapet Vinmonopolet (817209882)|20-049 Digital læring og produksjon av medier til opplæring|34/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/138702492.aspx
+DPS|2024-112287|2028-11-01|KS-KOMMUNESEKTORENS ORGANISASJON (971032146)|Konsulenttjenester - Informasjonssikkerhet|26/3|miljø|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=410868&B=
+DPS|2024-112289|2028-11-01|KS-KOMMUNESEKTORENS ORGANISASJON (971032146)|Konsulenttjenester - Virksomhetsarkitektur|26/3|miljø|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=410888&B=
+DPS|2024-112290|2028-11-01|KS-KOMMUNESEKTORENS ORGANISASJON (971032146)|Konsulenttjenester –  Utredning og økonomisk analyse|26/3|miljø|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=410887&B=
+DPS|2024-112286|2028-11-01|KS-KOMMUNESEKTORENS ORGANISASJON (971032146)|Konsulenttjenester Design og innovasjon|26/3|miljø|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=410814&B=
+DPS|2022-929656|2028-11-01|MATTILSYNET (985399077)|Dynamisk innkjøpsordning for kjøp av bistand til prosjekt, -team og produktledelse|0/0|-|https://permalink.mercell.com/187006690.aspx
+DPS|2022-919180|2028-12-28|MATTILSYNET (985399077)|Dynamisk innkjøpsordning for kjøp av bistand til Nettverk, Sikkerhet, Infrastruktur og Skytjene|0/0|-|https://permalink.mercell.com/190933788.aspx
+DPS|2023-377452|2028-12-29|FREDRIKSTAD KOMMUNE (940039541)|DIO- konsulentbistand anskaffelser og innkjøpsaktiviteter- etablering av DIO|3/3|firmaattest|https://permalink.mercell.com/208148644.aspx
+DPS|2021-371467|2028-12-31|RUTER AS (991609407)|DIO rådgiveroppdrag plan og utvikling - prosjekter og prosesser|0/0|-|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=292453&B=RUTER
+DPS|2025-103853|2029-04-12|MATTILSYNET (985399077)|Dynamisk innkjøpsordning for konsulenttjenester innen systemutvikling|53/39|egenerklæring,forsikring,kredittverd,miljø,omsetning,presentasjon,referanse,russisk|https://permalink.mercell.com/251324550.aspx
+DPS|2021-381454|2029-05-11|STORTINGET (971524960)|"Virksomhetsutvikling" - dynamisk innkjøpsordning (DPS)|0/0|-|https://permalink.mercell.com/149274685.aspx
+DPS|2024-106681|2029-05-31|ORKLAND KOMMUNE (921233418)|Dynamisk innkjøpsordning konsulenttjenester - Orkland kommune|7/8|firmaattest,skatteattest|https://tendsign.com/doc.aspx?MeFormsNoticeId=18925
+DPS|2025-109970|2029-08-16|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Analyser og utredninger|24/1|miljø|https://permalink.mercell.com/160358247.aspx
+DPS|2025-109976|2029-08-16|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Virksomhets- og porteføljestyring|24/1|miljø|https://permalink.mercell.com/160360792.aspx
+DPS|2025-109974|2029-08-16|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Forretningsutvikling og innovasjon|24/1|miljø|https://permalink.mercell.com/160360618.aspx
+DPS|2025-109973|2029-08-16|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Arkitektur|24/1|miljø|https://permalink.mercell.com/160360519.aspx
+DPS|2025-109972|2029-08-16|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Testing og testledelse|24/1|miljø|https://permalink.mercell.com/160360268.aspx
+DPS|2025-109969|2029-08-16|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Agile metoder|24/1|miljø|https://permalink.mercell.com/160357119.aspx
+DPS|2025-109968|2029-08-16|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Forretningsroller|24/1|miljø|https://permalink.mercell.com/160354957.aspx
+DPS|2025-109967|2029-08-16|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Produktledelse og -støtte|24/1|miljø|https://permalink.mercell.com/160354333.aspx
+DPS|2025-111103|2029-08-31|FORSVARSMATERIELL (916075855)|Dynamisk innkjøpsordning - Konsulenttjenester innen fagfeltet Strategisk rådgivning|24/0|miljø|https://permalink.mercell.com/261522510.aspx
+DPS|2025-111102|2029-08-31|FORSVARSMATERIELL (916075855)|Dynamisk innkjøpsordning - Konsulenttjenester innen fagfeltet IKT-ledelse og gjennomføring|24/0|miljø|https://permalink.mercell.com/261522988.aspx
+DPS|2025-111104|2029-08-31|FORSVARSMATERIELL (916075855)|Dynamisk innkjøpsordning - Konsulenttjenester innen fagfeltet Offentlige anskaffelser, innkjøp |24/0|miljø|https://permalink.mercell.com/261521553.aspx
+DPS|2025-111107|2029-08-31|FORSVARSMATERIELL (916075855)|Dynamisk innkjøpsordning - Konsulenttjenester innen fagfeltet Prosjektledelse- og støtte|24/0|miljø|https://permalink.mercell.com/261515500.aspx
+DPS|2025-111105|2029-08-31|FORSVARSMATERIELL (916075855)|Dynamisk innkjøpsordning - Konsulenttjenester innen fagfeltet Systemteknikk|24/0|miljø|https://permalink.mercell.com/261520554.aspx
+DPS|2024-113186|2029-09-16|RUTER AS (991609407)|Dynamisk innkjøpsordning - Programvare og lisenser|4/4|-|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=412644&B=
+DPS|2025-112444|2029-10-01|REGISTERENHETEN I BRØNNØYSUND (974760673)|Dynamisk innkjøpsordning - Brukskvalitet og design|0/0|-|https://permalink.mercell.com/264056877.aspx
+DPS|2025-112751|2029-10-05|DIGITALISERINGSDIREKTORATET (991825827)|Dynamisk innkjøpsordning - Utvikling og teknisk støtte|0/0|-|https://permalink.mercell.com/263812459.aspx
+DPS|2026-107462|2029-10-31|SKIEN KOMMUNE - GRENLANDSKOMMUNENES INNKJØPSENHET (GKI) (991799710)|Etablering av dynamisk innkjøpsordning konsulenttjenester OpenText NETIQ IAM|0/0|-|https://tendsign.com/doc.aspx?MeFormsNoticeId=72692
+DPS|2025-118721|2029-11-27|DEPARTEMENTENES DIGITALISERINGSORGANISASJON (DIO) (932931311)|Dynamisk innkjøpsordning for IKT-konsulenter|28/3|firmaattest,miljø,skatteattest|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=446029&TID=407258&B=
+DPS|2026-102316|2030-03-01|HAMAR KOMMUNE (970540008)|Dynamisk innkjøpsordning - Konsulenttjenester IKT|3/3|firmaattest|https://permalink.mercell.com/275740854.aspx
+DPS|2025-101884|2030-03-11|MIDT-TELEMARK KOMMUNE (920297293)|Dynamisk innkjøpsordning - Rådgivende konsulenttjenester i teknisk sektor for 6 kommuner i Tele|45/33|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/249110088.aspx
+DPS|2025-104594|2030-04-23|SOLA KOMMUNE (948243113)|DPS - IT- og digitaliseringstjenester|30/7|firmaattest,miljø|https://tendsign.com/doc.aspx?MeFormsNoticeId=52109
+DPS|2026-106810|2030-05-08|STORTINGET (971524960)|IT applikasjonsforvaltning - dynamisk innkjøpsordning|1/1|-|https://permalink.mercell.com/82964079.aspx
+DPS|2026-106821|2030-05-31|TRONDHEIM KOMMUNE (942110464)|Dynamisk innkjøpsordning - kjøp av pedagogiske tjenester - alternative opplæringsarenaer for gr|0/0|-|https://permalink.mercell.com/281227993.aspx
+DPS|2024-105470|2030-06-03|INNLANDET FYLKESKOMMUNE (920717152)|Dynamisk innkjøpsordning for Fylkesveg – konsulent og rådgivningstjenester|51/34|egenerklæring,forsikring,miljø,omsetning,referanse,skatteattest|https://permalink.mercell.com/227471167.aspx
+DPS|2025-101105|2030-06-03|NORSK HELSENETT SF (994598759)|Dynamisk innkjøpsordning innen Administrative konsulenttjenester (Analyse og evaluering og Pros|50/33|forsikring,kredittverd,miljø,omsetning,referanse|https://permalink.mercell.com/247665043.aspx
+DPS|2024-112944|2030-09-30|RANDABERG KOMMUNE (934945514)|DPS - IT-Konsulenter og IT-tjenester|36/14|miljø|https://tendsign.com/doc.aspx?MeFormsNoticeId=30220
+DPS|2024-112550|2030-10-21|STJØRDAL KOMMUNE (939958851)|Dynamisk Innkjøpsordning (DIO) kjøp av konsulenttjenester|31/11|firmaattest,iso 9001,kredittverd,miljø,referanse,skatteattest|https://tendsign.com/doc.aspx?MeFormsNoticeId=29323
+DPS|2025-106184|2030-11-30|Anskaffelser i Akershus, Buskerud og Østfold KO (932593688)|DPS (DIO) ordning IKT konsulenter|6/11|firmaattest,iso 9001,miljø,skatteattest|https://www.doffin.no/notices/2023-680500
+DPS|2025-101029|2030-12-27|VÅGAN KOMMUNE (938644500)|DPS for konsulent og prosjektleder Vågan kommune 2025-2030|34/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/247717960.aspx
+DPS|2025-119732|2030-12-29|VÅGAN KOMMUNE (938644500)|DPS for konsulent og prosjektleder Vågan kommune 2025-2030|0/0|-|https://permalink.mercell.com/272332114.aspx
+DPS|2024-114335|2030-12-31|INNLANDET FYLKESKOMMUNE (920717152)|Dynamisk innkjøpsordning - konsulenttjenester HR|54/41|firmaattest,forsikring,iso 9001,kredittverd,miljø,omsetning,referanse,skatteattest|https://permalink.mercell.com/234969609.aspx
+DPS|2025-101755|2030-12-31|NOVARI IKS (998283914)|Dynamsik innkjøpsordning - konsulenttjenester til Novari IKS|33/11|kredittverd,miljø|https://tendsign.com/doc.aspx?MeFormsNoticeId=44974
+DPS|2025-101480|2031-01-31|SARPSBORG KOMMUNE (938801363)|Dynamisk innkjøpsordning (DIO) - Bygg og anleggsrelaterte konsulenttjenester|27/3|-|https://tendsign.com/doc.aspx?MeFormsNoticeId=44353
+DPS|2021-397146|2031-02-23|IKT VALDRES IKS (995607409)|Dynamisk innkjøpsordning Konsulenttjenester innen IKT-systemer og plattformer.|0/0|-|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=294341&B=KGVLIGHT
+DPS|2021-340861|2031-02-23|IKT VALDRES IKS (995607409)|Dynamisk innkjøpsordning Konsulenttjenester virksomhetsutvikling innen IKT området|0/0|-|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=294333&B=KGVLIGHT
+DPS|2021-393018|2031-02-23|IKT VALDRES IKS (995607409)|Dynamisk innkjøpsordning Konsulenttjenester innen Informasjonssikkerhet.|0/0|-|http://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=294340&B=KGVLIGHT
+DPS|2021-342962|2031-12-01|FREDRIKSTAD KOMMUNE (940039541)|DIO Bygg og anleggsrelaterte Konsulenttjenester - etablering av DIO|0/0|-|https://permalink.mercell.com/165992361.aspx
+DPS|2021-336821|2031-12-19|INNOVASJON NORGE (986399445)|Rekrutteringsbistand IT-Fagstillinger|0/0|-|https://permalink.mercell.com/169497479.aspx
+DPS|2025-118299|2031-12-31|MIDT-TELEMARK KOMMUNE (920297293)|Begrenset anbudskonkurranse etter forskriftens del I og III for etablering av Dynamisk innkjøps|30/14|iso 9001,miljø|https://app.artifik.no/procurements/2051
+DPS|2025-120134|2032-01-11|MIDT-TELEMARK KOMMUNE (920297293)|Etablering av dynamisk innkjøpsordning (DIO) for Rådgivende konsulenttjenester i teknisk sektor|33/18|firmaattest,iso 9001,miljø,skatteattest|https://app.artifik.no/procurements/2586
+DPS|2024-106230|2032-06-07|VESTBY KOMMUNE (943485437)|Tekniske konsulenttjenester - Dynamisk Innkjøpsordning|50/32|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/224523593.aspx
+DPS|2022-396509|2032-08-13|NORDRE FOLLO KOMMUNE (922092648)|Dynamisk innkjøpsordning konsulent- og rådgivertjenester bygg og anlegg og øvrige områder|0/0|-|https://permalink.mercell.com/178988441.aspx
+DPS|2026-112986|2032-08-13|TROMSØ KOMMUNE (940101808)|Dynamisk innkjøpsordning IKT-konsulenttjenester|0/0|-|https://tendsign.com/doc.aspx?MeFormsNoticeId=97528
+DPS|2022-374835|2032-08-16|STAVANGER KOMMUNE (964965226)|Dynamisk innkjøpsordning for konsulentbistand innen digitalisering|0/0|-|https://permalink.mercell.com/183058394.aspx
+DPS|2023-662974|2032-11-30|LINEA AS (917424799)|Kvalifikasjonsordning: Varer, tjenester, bygg og anlegg for utvikling, drift og vedlikehold av |0/0|-|https://permalink.mercell.com/190452285.aspx
+DPS|2022-635572|2033-01-20|NORSK HELSENETT SF (994598759)|DPS - Publiseringsløsninger Content Management Systems (CMS)|5/5|kredittverd,referanse|https://permalink.mercell.com/192730188.aspx
+DPS|2023-613655|2033-03-15|STAVANGER KOMMUNE (964965226)|Anskaffelse av arkitekttjenester - DPS konkurranse|0/0|-|https://permalink.mercell.com/192664817.aspx
+DPS|2023-652140|2033-05-23|ROGALAND FYLKESKOMMUNE (971045698)|Dynamisk innkjøpsordning for Kjøp av konsulenttjenester - Bygningsbesiktigelse|0/0|-|https://tendsign.no/doc.aspx?UniqueId=afyegaanxk&GoTo=Docs
+DPS|2023-668513|2033-06-28|MALVIK KOMMUNE (971035560)|Dynamisk innkjøpsordning for konsulenttjenester innenfor bygg og anlegg|3/3|firmaattest|https://permalink.mercell.com/207270185.aspx
+DPS|2025-114386|2033-07-01|LEVANGER KOMMUNE (938587051)|Dynamisk innkjøpsordning - arkitekter, konsulenter - og rådgivende ingeniører|0/0|-|-
+DPS|2023-387096|2033-09-15|HARSTAD KOMMUNE / HÁRSTTÁID SUOHKAN (972417971)|Dynamisk innkjøpsordning for kjøp av konsulenttjenester|0/0|-|https://tendsign.no/doc.aspx?UniqueId=afumzsbkii&GoTo=Docs
+DPS|2023-102470|2033-12-15|SKATTEETATEN (974761076)|20230085 DPS Kurs Databricks|13/13|miljø|https://tendsign.com/doc.aspx?MeFormsNoticeId=4195
+DPS|2023-102985|2034-01-02|MOLDE KOMMUNE (921221967)|Dynamisk innkjøpsordning for innleie av lastebiler og anleggsmaskiner med og uten fører, rystel|38/43|egenerklæring,firmaattest,forsikring,iso 9001,miljø,omsetning,referanse,skatteattest|https://permalink.mercell.com/219007931.aspx
+DPS|2026-105897|2034-03-07|OSLO KOMMUNE UTDANNINGSETATEN (976820037)|1-UDE-2024 Dynamisk innkjøpsordning for digitale læremidler i Osloskolen (BRUK)|27/1|firmaattest,miljø|https://app.artifik.no/procurements/4777
+DPS|2024-101721|2034-03-07|OSLO KOMMUNE UTDANNINGSETATEN (976820037)|1-UDE- 2024 Dynamisk innkjøpsordning for digitale læremidler i Osloskolen|4/4|firmaattest|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=393276&B=
+DPS|2026-105445|2034-03-07|OSLO KOMMUNE UTDANNINGSETATEN (976820037)|1-UDE-2024 Dynamisk innkjøpsordning for digitale læremidler i Osloskolen (BRUK)|27/1|firmaattest,miljø|https://app.artifik.no/procurements/4237
+DPS|2024-113399|2034-09-22|FORSVARETS LOGISTIKKORGANISASJON FLO (988517860)|2023021252 DPS – Dronesystemer (RPAS)|53/46|egenerklæring,firmaattest,forsikring,iso 9001,kredittverd,miljø,omsetning,referanse,russisk,skatteattest|https://permalink.mercell.com/238508903.aspx
+DPS|2024-112883|2034-10-31|FORSVARSMATERIELL (916075855)|Dynamisk innkjøpsordning for programvarelisenser|51/33|forsikring,miljø,omsetning,referanse|https://permalink.mercell.com/237955485.aspx
+DPS|2025-101284|2035-03-01|NASJONALARKIVET (961181399)|Dynamisk innkjøpsordning for servere og lagring|52/34|firmaattest,forsikring,kredittverd,miljø,omsetning,referanse|https://permalink.mercell.com/248198359.aspx
+DPS|2025-110538|2035-07-01|ROGALAND FYLKESKOMMUNE (971045698)|Dynamisk innkjøpsordning Kjøp av tjenester innen - Byggadministrasjon|23/0|miljø|https://tendsign.com/doc.aspx?MeFormsNoticeId=64524
+DPS|2025-109651|2035-08-01|KOLUMBUS AS (914749360)|Dynamisk innkjøpsordning for konsulenttjenester innen økonomi, administrasjon og bærekraft - K2|26/7|firmaattest,miljø,referanse,skatteattest|https://tendsign.com/doc.aspx?MeFormsNoticeId=63256
+DPS|2025-109653|2035-08-01|KOLUMBUS AS (914749360)|Dynamisk innkjøpsordning for konsulenttjenester innen innkjøp og logistikk - K25-16|26/7|firmaattest,miljø,referanse,skatteattest|https://tendsign.com/doc.aspx?MeFormsNoticeId=63317
+DPS|2025-109632|2035-08-01|KOLUMBUS AS (914749360)|Dynamisk innkjøpsordning for konsulenttjenester innen prosjektledelse - K25-15|27/7|firmaattest,miljø,referanse,skatteattest|https://tendsign.com/doc.aspx?MeFormsNoticeId=63143
+DPS|2025-114157|2035-09-01|Anskaffelser i Akershus, Buskerud og Østfold KO (932593688)|DIO Produksjon av arkivuttrekk for langtidsbevaring (ordning)|0/0|-|https://tendsign.com/doc.aspx?MeFormsNoticeId=71015
+DPS|2025-113324|2035-09-16|KOLUMBUS AS (914749360)|Dynamisk innkjøpsordning - Konsulenttjenester innen evaluering, analyse og tilhørende rådgivnin|0/0|-|https://tendsign.com/doc.aspx?MeFormsNoticeId=69550
+DPS|2025-116151|2035-12-09|NORDRE FOLLO KOMMUNE (922092648)|Dynamisk innkjøpsordning - IKT-konsulenttjenester|0/0|-|https://permalink.mercell.com/264857952.aspx
+DPS|2026-111965|2036-07-01|BERGEN KOMMUNE (964338531)|DIO 059-2026 Dynamisk innkjøpsordning for utstyr til datasenter|29/13|firmaattest,miljø,referanse|https://app.artifik.no/procurements/5977
+DPS|2026-111966|2036-08-01|BERGEN KOMMUNE (964338531)|DIO 067-2026 Dynamisk innkjøpsordning for konsulenttjenester|30/7|firmaattest,iso 9001,miljø,referanse|https://app.artifik.no/procurements/6369
+DPS|2026-108513|2038-07-01|DIREKTORATET FOR FORVALTNING OG ØKONOMISTYRING (986252932)|Dynamiske Innkjøpsordninger - Strategisk og teknisk rådgivning|0/0|-|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=274551&TID=244430&B=
+DPS|2026-108122|2038-07-01|DIREKTORATET FOR FORVALTNING OG ØKONOMISTYRING (986252932)|Dynamisk Innkjøpsordning - Teknisk bistand|0/0|-|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=274554&TID=244433&B=
+DPS|2026-108514|2038-07-01|DIREKTORATET FOR FORVALTNING OG ØKONOMISTYRING (986252932)|Dynamisk Innkjøpsordning - Prosess-støtte|0/0|-|https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=274553&TID=244432&B=
+ROLLBACK

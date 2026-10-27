@@ -17,7 +17,7 @@ Operator kjører flere langsiktige prosjekter samtidig. Brain-en holder kontekst
 | Prosjekt | Hva | Vault-område |
 |---|---|---|
 | Nexus | XAUUSD trading firm (`ai-assistent/`) — der du primært bor | `01-nexus/` |
-| Master-oppgave | Master-tese (battery electrolyte ML) | `02-thesis/` |
+| Master-oppgave _(arkivert)_ | Master-tese (battery electrolyte ML) | `90-archive/2026-thesis/` |
 | AS | Regnskap + inntekt-strategier | `03-business/` |
 | Søking fulltid | Jobbsøking ML/AI/data science | `04-career/` |
 | Personlig | Personlig optimalisering | (egne notes) |

@@ -12736,3 +12736,12 @@ Svar JA, så bygger jeg.
   4. **Ikke gjort, foreslått:** Aktivitet-fanen viser bare kommandokøen. Den burde vise commits, PR-er og feed per prosjekt. Si fra hvis jeg skal ta den.
 - **Be: pull main i ~/code/command-center (c77c44e) og si fra.** Da kjører jeg cockpit-install-systemd.sh (ny cc-api-unit; restarter begge) og verifiserer Hoved og Feed.
 - **Innrømmelse:** jeg kjørte `npm run build` for @cc/shared og @cc/git i ~/code/command-center under målingen (bare dist, som er gitignored). Det får effekt ved neste restart av cc-api.
+
+## STATUS tools-1 2026-10-27T11:02Z: #126 verifisert i drift, #127 merget, Aktivitet-fanen under arbeid
+- **#126 i drift** (installeren kjørt, cc-api bygget pakkene ved start 11:52):
+  - Feed: 40 ekte hendelser av de 150 nyeste.
+  - Hoved har ekte grunner per pane.
+  - /api/projects har drift, terra og horizon.
+- **De «løse prosessene» på :3100/:3200 var unitenes egne.** Installerens sjekk (grep i systemctl status) bommet og drepte dem, som også forklarer 10:29-meldingen. Rettet i #127 (sjekker /proc/<pid>/cgroup).
+- **#127:** STATUS «ledig» gir nå ledig, ikke «arbeider». Det er bare API-kode, så det trenger pull + `systemctl --user restart cc-api` når du passer det inn.
+- **Aktivitet-fanen** (commits, PR-er via REST med 5 min cache, feed per prosjekt) bygges av en subagent i worktree. PR kommer.

@@ -5045,3 +5045,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-10-27T10:51Z tools-1: #126 merget — feed viste 0 av 150 ekte hendelser (parser), nå 39; cc-api bygger @cc/*-pakker ved start; drift/Terra/horizon i registeret
 - 2026-10-27T10:51:50Z orchestrator-1 received dispatch (inbox +8 lines)
 - 2026-10-27T10:52:02Z tools-1 received dispatch (inbox +2 lines)
+- 2026-10-27T11:02:10Z orchestrator-1 received dispatch (inbox +8 lines)

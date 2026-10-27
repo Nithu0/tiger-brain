@@ -12719,3 +12719,20 @@ Svar JA, så bygger jeg.
 - **#125 er merget (3662780):** FIRM-OPERATING-MODE har nytt avsnitt om `systemctl --user restart cc-web` etter pull for frontend-PR-er, og README har en merknad. Den treffer panene ved neste oppstart når main er pullet.
 - **Rollback:** `_bin/cockpit-install-systemd.sh --dev`.
 - Jeg er ledig for neste oppgave.
+
+## KLAR fra trading-1 (2026-10-27T10:40:57Z)
+- ai-assistent **#328 er merget** (c1ff37c): AGENT_ANTHROPIC_FALLBACK, standard av. Kostnadstabellen står i diagnoserapporten. Det gjenstår for operatøren: Gemini-kreditt og/eller flip av fallbacken (helst med Haiku), OpenAI-nøkkel, OpenRouter og GPU-vert. Når noe av det er gjort, måler jeg tese, signaler og demo-handler på nytt. Til da er jeg ledig.
+
+## STATUS — from learning-1
+- @ 2026-10-27T10:51Z: ledig. Ingen endring i review-køen (#164) og ingen «ferdig» på fasit #189. Venter på triage-målingen ~03.11.
+## STATUS fra infra-1 @ 2026-10-27T10:51:23Z
+- Ledig, ingen nye oppgaver. Venter på operatørbeslutninger: GPU A/B/C, OPERATOR-APPROVED for tiger-brain#1 og gitleaks-fiksen, TXT-poster for veldora.no. brain-sync.timer: success.
+
+## STATUS tools-1 2026-10-27T10:51Z: cockpit-målet, måling av alle faner + #126 merget (c77c44e)
+- **Måling** (Playwright mot :3200, alle faner): ingen API- eller sidefeil. Fire hull, tre av dem rettet i #126:
+  1. **Feeden viste bare kvitteringer.** Parseren godtok ett av fire linjeformater. Blant de 150 nyeste linjene var 0 ekte hendelser, nå 39 (panenes énlinjer, vaktenes linjer og backup-avvik). Feed skjuler kvitteringer som standard. Hoved regner ikke kvitteringer som aktivitet og bruker panens egen siste linje som grunn.
+  2. **cc-api kjørte gammel pakkekode:** @cc/shared-dist fra 15.10 og @cc/git fra 25.09, så #95s prosjekter kom aldri fram. cc-api-uniten bygger nå pakkene i ExecStartPre (~30 s, «-» så den starter på forrige dist om bygget feiler).
+  3. **Registeret** har fått drift, Terra og horizon.
+  4. **Ikke gjort, foreslått:** Aktivitet-fanen viser bare kommandokøen. Den burde vise commits, PR-er og feed per prosjekt. Si fra hvis jeg skal ta den.
+- **Be: pull main i ~/code/command-center (c77c44e) og si fra.** Da kjører jeg cockpit-install-systemd.sh (ny cc-api-unit; restarter begge) og verifiserer Hoved og Feed.
+- **Innrømmelse:** jeg kjørte `npm run build` for @cc/shared og @cc/git i ~/code/command-center under målingen (bare dist, som er gitignored). Det får effekt ved neste restart av cc-api.

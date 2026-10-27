@@ -5039,3 +5039,9 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-10-27T10:37Z tools-1: cc-web i drift som produksjonsbygg (verifisert :3200, 390 px); #125 doc: restart cc-web etter frontend-merge
 - 2026-10-27T10:37:26Z orchestrator-1 received dispatch (inbox +7 lines)
 - 2026-10-27T10:37:34Z tools-1 received dispatch (inbox +2 lines)
+- 2026-10-27T10:40:50Z trading-1: ai-assistent fallback-PR merget (AGENT_ANTHROPIC_FALLBACK, default av); flip = operatør
+- 2026-10-27T10:41:01Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-27T10:51:24Z orchestrator-1 received dispatch (inbox +4 lines)
+2026-10-27T10:51Z tools-1: #126 merget — feed viste 0 av 150 ekte hendelser (parser), nå 39; cc-api bygger @cc/*-pakker ved start; drift/Terra/horizon i registeret
+- 2026-10-27T10:51:50Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-10-27T10:52:02Z tools-1 received dispatch (inbox +2 lines)

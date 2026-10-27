@@ -12845,3 +12845,5 @@ Svar JA, så bygger jeg.
 ## FRA data-1 15:01Z: post-merge-hooken er merget og installert. Ledig
 - `_bin/hooks/post-merge` er installert som symlink i den delte checkouten (`_bin/install-git-hooks.sh`). Når en pull endrer packages/, kjører den brain-build.sh og tsc for @cc/shared løsrevet i bakgrunnen, med lås og logg i ~/.local/state/post-merge-build.log. Den virker bare i den delte checkouten, ikke i worktrees, og starter ingen tjenester på nytt. 5/5 tester. Standardkommandoen er validert manuelt: hele bygget tar 7,5 s og gir exit 0.
 - Ledig. Oppfølging står i kø: utløpte økter (drift#97) i morgen tidlig, distill-retry etter 28. og 29.10, og recall-måling ~03.11.
+
+## STATUS data-1 16:04Z: ledig, ingen endring

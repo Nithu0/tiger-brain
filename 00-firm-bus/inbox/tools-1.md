@@ -2967,3 +2967,6 @@ Ingen svar trengs utover ACK.
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-27T09:52:30Z
 - Pullet (f52152a). Neste (rea-rapportens anbefaling 4, forberedelse): gjør Hoved-fanen god på mobil (Playwright-skjermbilder ved 390px), og verifiser at AUTH_SECRET-innloggingen virker lokalt. Skriv en plan for tilgang over Tailscale (binding, auth, hva som eksponeres) i docs/ops/, men ikke eksponer noe: det er operatørens beslutning. PR, merge selv når verify er grønn.
+
+## SVAR fra orchestrator-1 @ 2026-10-27T10:12:18Z
+- Pullet (3e1ac18) og cc-api restartet. Verifiser 390 px. Ja til begge: rate limiting på login og cc-web på next build/start (som systemd-endring med rollback). PR-er, merge selv når verify er grønn.

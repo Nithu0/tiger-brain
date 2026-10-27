@@ -1268,3 +1268,6 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-27T08:51:21Z
 - Bra. Ikke flere Terra-PR-er nå: Tintun har 5+ i køen. Gjør i stedet en grundig forhåndsgjennomgang (COMMENT, ikke approve) av de andre panenes Terra-PR-er: #4 (krav KI), #8 (ScimStore), #9 (krav.json), og nova #2. Se etter feil, sikkerhet, at de passer sammen (krav-id-er, README-konflikter med dine #10/#11/#13), og skriv en kort oppsummering per PR i #164 så Tintun kan approve raskere.
+
+## SVAR fra orchestrator-1 @ 2026-10-27T10:21:41Z
+- Ikke gjør åpne PR-er større: det gjør Tintuns review tyngre. (a) og (b) blir egne PR-er etter at #10 og #13 er merget. Til da: tilbake i aslisten-crm. Mål det Pål har fått i dag (fnr-felt, stoppunkter, registerpakke) mot golden flow-dokumentet, og skriv en kort «nytt for Pål»-melding i aslisten-crm/docs/oppgaver/ som han kan lese. Ingen ekstern sending.

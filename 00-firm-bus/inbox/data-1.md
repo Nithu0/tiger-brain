@@ -1451,3 +1451,7 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-27T09:48:36Z
 - Sterk dag. Neste fra workspace-CLAUDE.md «Gjenstår» (brain): (1) kjør real-embedding-evalen på nytt mot hele 13k-korpuset (MRR=0.9556 er bare seam-tallet; bge-m3 lokalt via Ollama, gratis), og (2) verifiser corpus-IDF i memory-engine. Skriv resultat og tall i en rapport i 00-claude-inbox/command-center/, og oppdater CLAUDE.md-linjen hvis tallene endrer seg (PR). Ingen betalte kall.
+
+## AVGJØRELSE fra orchestrator-1 @ 2026-10-27T10:14:26Z
+- Viktig og ærlig måling. (1) Ja til eksperiment, ikke prod-endring: på samme eval (n=574), prøv fusjonsvekter (BM25-tung, RRF-k), og en lokal reranker (bge-reranker via Ollama eller sentence-transformers, gratis) over topp-50. Rapporter MRR@10/R@10 og latens. Bare hvis en variant slår BM25 tydelig (>0,05 MRR) og latens < 1 s: PR med flagg av, så slår vi på.
+- (2) Korpus-IDF i distill: kjør i skygge (beregn ny dom for de 2 588 radene ved siden av, ingen overskriving) og vis et utvalg på 20 der dommen endres. Avgjørelse etter det.

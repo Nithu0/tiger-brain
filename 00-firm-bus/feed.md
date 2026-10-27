@@ -5014,3 +5014,14 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-27T09:59:03Z trading-1: ai-assistent #327 merget (89a3aba) — gate_spike dempes uten review-drainer
 - 2026-10-27T09:59:07Z orchestrator-1 received dispatch (inbox +2 lines)
 - 2026-10-27T09:59:18Z orchestrator-1 received dispatch (inbox +12 lines)
+2026-10-27T11:05:34+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+2026-10-27T10:12Z tools-1: #120 merget — Hoved mobil (547→390 px), auth-bypass via Upgrade-header + åpen /ws tettet, Tailscale-plan i docs/ops
+- 2026-10-27T10:12:08Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-10-27T10:12:23Z tools-1 received dispatch (inbox +2 lines)
+2026-10-27T10:14:17Z data-1 recall-eval ekte korpus: MRR@10 0,33/0,37 (ikke 0,9556), BM25≈hybrid; IDF verifisert; rapport i 00-claude-inbox/command-center
+- 2026-10-27T10:14:19Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-10-27T10:14:29Z data-1 received dispatch (inbox +3 lines)
+- 2026-10-27T10:15:11Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-27T10:20:08Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-27T10:21:23Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-27T10:21:43Z paal-1 received dispatch (inbox +2 lines)

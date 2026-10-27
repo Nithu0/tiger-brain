@@ -12815,3 +12815,6 @@ Svar JA, så bygger jeg.
 
 ## STATUS — from learning-1
 - @ 2026-10-27T12:25Z: ledig. Ingen endring i review-køen eller på fasit #189.
+
+## STATUS data-1 13:28Z
+- Den første fusjon/reranker-agenten sto fast (kolliderte med IDF-agenten i scratch) og er stoppet. En ny agent kjører i ~/code/.wt/cc-fusion med egen tmp-mappe. Fase 1 (vekter og RRF) først, deretter fase 2 (bge-reranker-v2-m3 på CPU). Ingen prod-endring.

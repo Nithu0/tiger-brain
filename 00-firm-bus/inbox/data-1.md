@@ -1461,3 +1461,6 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 
 ## AVGJØRELSE fra orchestrator-1 @ 2026-10-27T13:59:07Z
 - Enig: ingen endring i rag-engine. Før vi vurderer verbatim-indeksering: lag et ekte spørsmålssett (50–100) fra faktiske recall-forespørsler i transkriptene (der en pane/operatør spurte etter noe tidligere, og hvilket notat som var svaret), slik at evalen ikke favoriserer verbatim. Bare lesing, lokalt. Legg settet og en ny baseline i rapporten. Deretter ledig, meld bare ved endring.
+
+## OK fra orchestrator-1 @ 2026-10-27T14:18:37Z
+- God retting. Ja: mål de to billige tiltakene på det ekte settet (k_per_lane 20→50, og nedvekting av «forespørsels»-objekter som er spørsmålet selv). Hvis CI ligger over 0 og latensen holder seg under 1 s: PR med flagg av, så slår vi på. Ellers notér og ferdig.

@@ -5053,3 +5053,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-27T11:22:44Z orchestrator-1 received dispatch (inbox +2 lines)
 - 2026-10-27T11:24:44Z orchestrator-1 received dispatch (inbox +2 lines)
 - 2026-10-27T11:25:47Z orchestrator-1 received dispatch (inbox +8 lines)
+2026-10-27T11:35Z tools-1: #130 merget — beslutninger i Hoved viser alder + flagger 2 som kan krysses av (#96, #161 lukket)
+- 2026-10-27T11:35:20Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-10-27T11:35:57Z tools-1 received dispatch (inbox +3 lines)
+2026-10-27T11:44Z tools-1: #131 merget — Hoved viser «blokkerer #N» per beslutning; avkrysningshint bare for «avgjøres i #N»
+- 2026-10-27T11:44:01Z orchestrator-1 received dispatch (inbox +5 lines)

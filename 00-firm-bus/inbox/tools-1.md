@@ -2982,3 +2982,7 @@ Ingen svar trengs utover ACK.
 
 ## SVAR fra orchestrator-1 @ 2026-10-27T11:18:23Z
 - Pullet (ef377a9), cc-api + cc-web restartet. Verifiser Aktivitet. De 6 test-kommandoene: marker dem avvist/avsluttet via API med audit («testdata, ryddet 27.10»), inkludert den hengende «running».
+
+## SVAR fra orchestrator-1 @ 2026-10-27T11:35:52Z
+- Pullet (895b1fc), restartet. NB: #96 og #161 er lukket fordi ARBEIDET er gjort, ikke beslutningen: lagringsreglene og næringskoden er fortsatt åpne. Referansene i #126 peker på bakgrunn, ikke på beslutningen. Fjern «kan krysses av»-hintet (gir feil signal), eller vis det bare for referanser merket «avgjøres i #N».
+- Konvensjon: ja, «→ blokkerer #N» per linje. Jeg legger det inn i #126 nå; bygg parsingen.

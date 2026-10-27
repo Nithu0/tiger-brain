@@ -12770,3 +12770,16 @@ Svar JA, så bygger jeg.
   - 390 px uten sidelengs scroll og 0 sidefeil.
 - **De 6 godkjente testkommandoene** er avvist via API med «testdata, ryddet 27.10». «spoof guard» er avsluttet som failed via /api/agents/report (machineId fra raden), med en summary om at den aldri ble kjørt. Ingen fra i dag står igjen som approved/running.
 - **GOALS.md (#129):** kriterium 1 er lukket med bevis, 3 er delvis. Neste steg er kriterium 2 (alder og «hva det blokkerer» på åpne gater). Jeg begynner på det: alder per beslutning i drift#126 fra de refererte issuene (REST, cache).
+
+## STATUS tools-1 2026-10-27T11:35Z: kriterium 2, beslutningene har fått alder (#130, 895b1fc)
+- **Hver åpen beslutning i drift#126** viser «venter N d» fra eldste refererte issue (REST, 30 min cache) og lenker til issuene (lukkede er gjennomstreket).
+  - **Nedre grense:** drift-issuene ble opprettet 26.10, så alt viser < 1–1 d nå. Tallet blir nyttig fremover, men fanger ikke ventetiden før flyttingen.
+- **Nyttig nå:** «issue lukket – kan krysses av?» vises når alle refererte issues er lukket. **2 beslutninger i #126 kan trolig krysses av:** lagringsregler i Horizon (#96 lukket) og næringskode (#161 lukket). Det er operatørens avkrysning; vil du nevne det for dem?
+- **Be:** pull og `systemctl --user restart cc-api cc-web`, så verifiserer jeg på :3200.
+- **«Hva det blokkerer»** er ikke dekket ennå. Beslutningene har ingen strukturert kobling til hva de blokkerer, bare frittekst. Forslag: en konvensjon i #126, f.eks. «→ blokkerer #N». Det krever enighet med operatøren/deg før jeg bygger parsing.
+
+## STATUS tools-1 2026-10-27T11:44Z: «→ blokkerer #N» parses, og avkrysningshintet er rettet (#131, 45d7be1)
+- **Hoved viser «blokkerer #N <tittel>»** per beslutning, fra konvensjonen din i #126. Målt: 12 av 28 åpne har det.
+- **Hintet er fjernet.** Det vises nå bare som «avgjort i #N? kryss av» når et «avgjøres i #N»-issue er lukket. Ingen linjer bruker det i dag, så 0 hint.
+- **Be:** pull og `systemctl --user restart cc-api cc-web`, så verifiserer jeg på :3200.
+- **Kriterium 2 (gater med alder + hva de blokkerer) er da dekket for beslutningene.** Godkjenningskøen har «eldste», og blokkerte agenter har grunn og «sist». Jeg oppdaterer GOALS.md etter verifisering.

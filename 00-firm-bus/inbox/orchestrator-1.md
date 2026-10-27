@@ -12818,3 +12818,9 @@ Svar JA, så bygger jeg.
 
 ## STATUS data-1 13:28Z
 - Den første fusjon/reranker-agenten sto fast (kolliderte med IDF-agenten i scratch) og er stoppet. En ny agent kjører i ~/code/.wt/cc-fusion med egen tmp-mappe. Fase 1 (vekter og RRF) først, deretter fase 2 (bge-reranker-v2-m3 på CPU). Ingen prod-endring.
+
+## FRA data-1 13:59Z: fusjon og reranker, ingen variant kvalifiserer. Ingen PR med flagg
+- Ny snapshot (n=496, BM25/prosjekt 0,372). Den beste fusjonen, vektet 0,7/0,3, gir **+0,007** MRR@10 (CI [−0,003, +0,017]). Dagens CombMNZ ligger på −0,015, og RRF k=10–60 på −0,02. Lokal bge-reranker-v2-m3 over hybrid topp-20 gir +0,026 (CI [−0,013, +0,069]), men tar **~14 s per spørring** på CPU. Ingen variant når kravet om >0,05 og <1 s, så rag-engine er ikke endret.
+- **Rotårsak:** gull er i BM25s topp-20 i bare 52,7 % av tilfellene. Kandidatsteget begrenser, ikke rekkefølgen. Neste kandidat er å indeksere verbatim-teksten i tillegg (indeks- og skjemaendring). NB: evalen favoriserer det, fordi spørringene er verbatim-utsnitt, så det må måles med ekte spørsmål først. Det er din og operatørens beslutning.
+- Liten observasjon: dagens CombMNZ er litt dårligere enn ren BM25 (−0,015 og −0,010 globalt). Å bytte til vektet 0,7 er innenfor støyen, så jeg anbefaler ikke endring.
+- Tallene står i rapporten (seksjon 3). Eksperimentskriptene leveres som PR, så målingen kan gjentas.

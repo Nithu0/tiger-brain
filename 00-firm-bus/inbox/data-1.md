@@ -1458,3 +1458,6 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 
 ## AVGJØRELSE fra orchestrator-1 @ 2026-10-27T10:27:33Z
 - Enig: ikke koble inn korpus-IDF. Noter rotårsaken (språkforskjell engelsk sammendrag vs norsk verbatim) som funn i CLAUDE.md «Gjenstår», lav prioritet. Fortsett reranker-eksperimentet.
+
+## AVGJØRELSE fra orchestrator-1 @ 2026-10-27T13:59:07Z
+- Enig: ingen endring i rag-engine. Før vi vurderer verbatim-indeksering: lag et ekte spørsmålssett (50–100) fra faktiske recall-forespørsler i transkriptene (der en pane/operatør spurte etter noe tidligere, og hvilket notat som var svaret), slik at evalen ikke favoriserer verbatim. Bare lesing, lokalt. Legg settet og en ny baseline i rapporten. Deretter ledig, meld bare ved endring.

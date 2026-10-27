@@ -39,3 +39,19 @@ Ingen betalte kall. memory.db er lest bare via en read-only `backup()`-snapshot.
 - Porter-stemmeren folder norsk («ikke» blir «ikk», «må» blir «ma»), men spørringen går gjennom samme tokenizer. Det begrenser presisjonen, men er ikke en feil.
 - **Vokabularsjekken i distill:** tokenizeren delte æøå-ord («første» ble «rste»). Rettet i **#119**. Rader flagget for lavt vokabular gikk fra 7 649 til 7 021 av 19 888.
 - **Ikke koblet inn:** korpus-IDF-tabellen (`idf-table.ts`, spec §3.3 «refreshed nightly») brukes ikke i prod-distill. Å koble den inn endrer dommen på 2 588 rader. Det er en egen beslutning.
+
+## 3. Fusjon og reranker (eksperiment, ingen prod-endring)
+
+Kjørt på en ny snapshot kl. 13:27. Det ga n=496, fordi korpuset har endret seg, og BM25/prosjekt 0,372. Alle deltaer er mot BM25 på samme snapshot og samme spørringer.
+
+| Variant (prosjekt) | MRR@10 | ΔMRR mot BM25 | R@10 | Latens p50 |
+|---|---|---|---|---|
+| BM25 | 0,372 | 0 | 0,508 | 10 ms |
+| CombMNZ (dagens hybrid) | 0,357 | −0,015 | 0,526 | 22 ms |
+| vektet 0,7/0,3 | 0,379 | +0,007 [−0,003, +0,017] | 0,528 | 22 ms |
+| RRF k=10/30/60 | 0,348–0,354 | −0,019 til −0,024 | ~0,53 | 22 ms |
+| hybrid topp-20 + bge-reranker-v2-m3 (n=150) | 0,349 | +0,026 [−0,013, +0,069] | – | **14,5 s** |
+
+**Ingen variant oppfyller regelen** (> 0,05 MRR og < 1 s). Rerankeren på CPU tar rundt 14 s per spørring. Topp-50 ville tatt ~19 t for hele settet.
+
+**Flaskehalsen er kandidatsteget, ikke rekkefølgen.** Gull er i BM25s topp-20 i bare 52,7 % av tilfellene, og de fleste bom når aldri kandidatlisten. Det som trolig hjelper mest, er å indeksere verbatim-teksten i tillegg til den destillerte (`ASSUMPTION`, ikke målt). Spørringene i denne evalen er hentet fra verbatim, så evalen favoriserer det. Effekten på ekte spørsmål må måles separat. Det er en indeks- og skjemaendring og en egen beslutning.

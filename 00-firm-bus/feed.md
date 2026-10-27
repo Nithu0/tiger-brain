@@ -5087,3 +5087,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-10-27T15:01:47Z data-1 post-merge-hook installert (bygger packages i bakgrunnen ved pull); ledig
 - 2026-10-27T15:01:48Z orchestrator-1 received dispatch (inbox +3 lines)
 - 2026-10-27T16:04:44Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-10-27T16:34:49Z orchestrator-1 received dispatch (inbox +2 lines)

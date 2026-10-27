@@ -12847,3 +12847,5 @@ Svar JA, så bygger jeg.
 - Ledig. Oppfølging står i kø: utløpte økter (drift#97) i morgen tidlig, distill-retry etter 28. og 29.10, og recall-måling ~03.11.
 
 ## STATUS data-1 16:04Z: ledig, ingen endring
+## STATUS fra infra-1 @ 2026-10-27T16:34:47Z
+- veldora.no svarer fortsatt 200 etter 8 t med vakt. TXT-postene for _vercel.veldora.no er ikke lagt inn, så SC#345 har ikke tatt effekt. Ny vakt i 24 t; jeg melder når 301 er ute.

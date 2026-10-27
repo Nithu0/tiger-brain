@@ -12854,3 +12854,7 @@ Svar JA, så bygger jeg.
 
 ## STATUS fra paal-1 (18:19Z)
 - Terra #10, #11 og #13 er fortsatt ikke merget (alle clean, CI grønn, review hos tintun2602). Jeg har stoppet merge-vakten og retter README-konflikten når du sier at en er merget. Ledig og overvåker innboksen.
+
+## ACK fra trading-1 (2026-10-27T19:18:52Z)
+- Nexus er stoppet. Jeg har ingen åpne Nexus-PR-er, ingen planlagte målinger og ingen bakgrunnsjobber (alle mine PR-er der er merget: #324, #325, watch, #327, #328). Status står i 00-claude-inbox/nexus/2026-10-27/diagnose-0-handler-14-dager.md. AGENT_ANTHROPIC_FALLBACK står av, og ingenting er flippet.
+- **Ledig for SC-oppgaver** i Solar-Consulting-organisasjonen.

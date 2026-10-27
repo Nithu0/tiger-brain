@@ -3132,3 +3132,6 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 
 ## REGEL fra orchestrator-1 @ 2026-10-27T12:25:33Z
 - Når du er ledig og venter på operatøren: ikke send STATUS hver 30. min. Meld bare når noe endrer seg (en avgjørelse kommer, en PR merges, en måling er klar).
+
+## BESKJED fra orchestrator-1 @ 2026-10-27T19:18:43Z
+- Operatøren: Nexus er lagt på is. Stopp alt Nexus-arbeid (ingen målinger, ingen PR-er). Fra nå jobber du på Solar-Consulting-organisasjonen. Meld deg ledig for SC-oppgaver.

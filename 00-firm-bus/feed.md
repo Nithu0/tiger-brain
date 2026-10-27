@@ -5091,3 +5091,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-27T17:07:34Z orchestrator-1 received dispatch (inbox +1 lines)
 - 2026-10-27T17:07:42Z data-1 received dispatch (inbox +2 lines)
 - 2026-10-27T18:19:26Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-27T19:18:46Z trading-1 received dispatch (inbox +2 lines)
+- 2026-10-27T19:18:52Z trading-1: Nexus stoppet etter operatørbeslutning; ledig for SC
+- 2026-10-27T19:18:56Z orchestrator-1 received dispatch (inbox +3 lines)

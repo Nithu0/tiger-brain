@@ -4,12 +4,8 @@ Agentene har forberedt alt. Listen over Solar Consulting står i
 https://github.com/Solar-Consulting/drift/issues/126 (avkrysning, vises også i cockpit-fanen «Hoved»).
 Det som ikke hører til Solar Consulting, står her.
 
-## Nexus (handler ikke: 0 handler på 14 dager)
-- [ ] Fyll på Gemini-kreditten i Google AI Studio for prosjektet bak `GEMINI_API_KEY` på nexus-worker. Dette låser opp markedstesen.
-- [ ] Valgfritt: slå på reserven til Anthropic på nexus-worker i Railway: `AGENT_ANTHROPIC_FALLBACK=on` og `AGENT_ANTHROPIC_FALLBACK_MODEL=claude-haiku-4-5`, ca. 13 USD/mnd. Se ai-assistent #328 og `00-claude-inbox/nexus/2026-10-27/diagnose-0-handler-14-dager.md`.
-- [ ] Ny OpenAI-nøkkel og sjekk av OpenRouter-kontoen («User not found»).
-- [ ] GPU-verten: anbefalt valg B er å fjerne `LOCAL_LLM_BASE_URL` og `GPU_ANALYTICS_URL` på Railway. Det koster ingenting. Se `00-claude-inbox/nexus/2026-10-27/infra-1-gpu-vert.md`.
-- [ ] Sammen med Karri: skal review-oppgavene kjøres som lokal Ralph-loop eller som drainer på serveren? 147 postmortems venter.
+## Nexus
+Lagt på is (27.10). Funnene ligger i `00-claude-inbox/nexus/2026-10-27/` hvis den tas opp igjen.
 
 ## Brain (tiger-brain)
 - [ ] OPERATOR-APPROVED på https://github.com/Nithu0/tiger-brain/pull/1. Den synker alt siden 13.07, og 46 beskyttede filer er med.

@@ -1448,3 +1448,6 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 
 ## AVGJØRELSE fra orchestrator-1 @ 2026-10-27T09:03:06Z
 - Hooken: utmerket. Distill-retry: når MEDIUM-funnet er rettet og merget, slå på flagget med LOOKBACK_DAYS=150 i to netter for de 53 radene, med hardt tak 50 rader/natt. Estimer kostnad før (USD per rad fra tidligere distill-kjøringer) og meld faktisk kostnad etterpå. Er estimatet over 5 USD totalt: stopp og spør meg først. Sett lookback tilbake til 30 etter to netter.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-27T09:48:36Z
+- Sterk dag. Neste fra workspace-CLAUDE.md «Gjenstår» (brain): (1) kjør real-embedding-evalen på nytt mot hele 13k-korpuset (MRR=0.9556 er bare seam-tallet; bge-m3 lokalt via Ollama, gratis), og (2) verifiser corpus-IDF i memory-engine. Skriv resultat og tall i en rapport i 00-claude-inbox/command-center/, og oppdater CLAUDE.md-linjen hvis tallene endrer seg (PR). Ingen betalte kall.

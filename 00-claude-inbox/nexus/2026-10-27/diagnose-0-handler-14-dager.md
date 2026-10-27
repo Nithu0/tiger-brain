@@ -69,3 +69,28 @@ Rekkefølge: 1 og 2 først. Hvis LLM-laget virker igjen og det fortsatt ikke kom
 | OpenAI | 401: ugyldig nøkkel | operatør |
 | OpenRouter | 401: «User not found» | operatør |
 | Lokal GPU | fetch failed, breaker open | operatør |
+
+## Agent-bussen: 395 åpne, 0 i arbeid (read-only, ~10:00Z)
+**Hvem skal plukke dem:** review-oppgaver (`role=review`, `model=claude-opus`) lages av `agent-trigger.ts` (`new_postmortem`, `gate_spike`). De skal **ikke** tas av worker. Worker-drainer (`research-drainer.ts`) tar bare `role=research` og sier selv: «Other roles (code/review/journal) still need a local Ralph loop». De skal plukkes av **lokale Ralph-loops i firm-speilet** (`docs/ref/local-firm-mirror.md`): `shield` (review/risk) og `atlas` (review/journaling), i zellij-paner på operatørens maskin.
+**Hvorfor de ikke blir plukket:** ingen Ralph-loop kjører (`pgrep ralph` gir ingenting, 2026-10-27). Dette er **ikke** Gemini, LLM-kø eller lease. Ingen er claimet.
+
+| Hva | Antall | Laget av |
+| --- | --- | --- |
+| review / journaling: «A new postmortem was written …» | 147 | new_postmortem |
+| review / risk: gate min_rr | 104 | gate_spike |
+| review / risk: gate mean_revert | 94 | gate_spike |
+| review / risk: gate risk_level | 47 | gate_spike |
+| review / risk: gate sl_cooldown | 2 | gate_spike |
+| code / orchestrator | 1 | — |
+
+**Alder:** eldste er 2026-05-11, nyeste er 2026-10-08. Per måned: mai 100, jun 99, jul 129, aug 54, sep 11, okt 2. Ingen nye siden 08.10, fordi uten handler kommer det ingen postmortems eller gate-spikes. Køen er **historisk**, ikke et nytt brudd.
+**Konsekvens:** liten for handelen (review-oppgavene er rådgivende og endrer ingen beslutninger), men læringssløyfen fra postmortems har i praksis ikke kjørt siden mai.
+**Forslag (ingenting er gjort, krever OK):**
+(a) Operatøren avgjør om firm-speilet (zellij + Ralph) skal kjøre igjen, eller om review-rollen skal flyttes til en server-drainer (krever kode).
+(b) Merk oppgaver eldre enn SLA som `expired`. Det er en DB-skriving, så den krever OK. Det er ikke sletting.
+(c) Juster `publishOnce`, så samme gate ikke lager én oppgave i timen når ingen drainer kjører.
+
+### Agent-bussen: utført etter beslutning fra orchestrator-1 (09:49Z)
+- **(b) Gjort:** 247 gate_spike-oppgaver (review/risk, ikke claimet, over SLA, 14.05–08.09) er satt til `cancelled`, med én `agent_audit`-rad hver (`task_cancelled`, reason «expired: gate_spike review task past SLA, no review drainer»). **Ingenting er slettet.** Før: risk queued 247, journaling queued 147, code 1. Etter: risk cancelled 247, journaling queued 147, code 1. Skript: `scripts/oneshot/2026-10-27_cancel-stale-gate-spike-tasks.mjs` (dry-run, så --apply i én transaksjon). Status `cancelled` ble valgt fordi `AgentTaskStatus` ikke har `expired`. Kan reverseres via audit-radene.
+- **(c) PR:** gate_spike publiserer ikke når ingen review-oppgave er claimet på 7 dager. Det logges som «damped» (report-only).
+- **(a) Til operatøren og Karri:** skal review-rollen (postmortem-læring, 147 i kø) drives av firm-speilet (zellij + Ralph, `shield`/`atlas`, lokalt), eller av en server-drainer som research-drainer (krever kode og en Claude-nøkkel på worker)? Læringssløyfen fra postmortems har stått siden mai.

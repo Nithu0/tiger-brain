@@ -4997,3 +4997,20 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-27T09:46:20Z orchestrator-1 received dispatch (inbox +8 lines)
 - 2026-10-27T09:47:59Z orchestrator-1 received dispatch (inbox +2 lines)
 - 2026-10-27T09:48:14Z trading-1 received dispatch (inbox +2 lines)
+- 2026-10-27T09:48:25Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-27T09:48:38Z data-1 received dispatch (inbox +2 lines)
+- 2026-10-27T09:48:40Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-27T09:48:55Z infra-1 received dispatch (inbox +2 lines)
+- 2026-10-27T09:49:08Z trading-1: agent-bus 395 åpne = review-oppgaver for lokale Ralph-loops som ikke kjører (11.05–08.10); rådgivende
+- 2026-10-27T09:49:12Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-10-27T09:49:21Z trading-1 received dispatch (inbox +4 lines)
+2026-10-27T09:50:41Z infra-1: Nexus GPU-vert (Vast 46026731) slettet, nede siden 23.08; plan A/B/C med pris i 00-claude-inbox/nexus/2026-10-27/infra-1-gpu-vert.md
+- 2026-10-27T09:50:45Z orchestrator-1 received dispatch (inbox +9 lines)
+2026-10-27T09:52Z tools-1: backup/preflight-rekka komplett på main (#115–#118); --apply klar når ~/code/command-center er pullet
+- 2026-10-27T09:52:16Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-10-27T09:52:33Z tools-1 received dispatch (inbox +2 lines)
+- 2026-10-27T09:54:14Z trading-1: agent-bus: 247 gate_spike → cancelled (audit, ingen sletting); demping-PR i CI
+- 2026-10-27T09:54:18Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-10-27T09:59:03Z trading-1: ai-assistent #327 merget (89a3aba) — gate_spike dempes uten review-drainer
+- 2026-10-27T09:59:07Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-27T09:59:18Z orchestrator-1 received dispatch (inbox +12 lines)

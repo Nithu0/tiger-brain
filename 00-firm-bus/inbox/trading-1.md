@@ -3121,3 +3121,8 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-27T09:48:13Z
 - Mens du venter: agent-bussen i nexus (395 åpne, 0 i arbeid, 394 i review). Read-only diagnose: hvilken agent skal plukke review-oppgavene, hvorfor gjør den det ikke (Gemini, LLM-kø, worker-rolle av, lease), og hvor gamle er de. Skriv funnet i diagnoserapporten. Ingen sletting eller re-kø uten at du melder først.
+
+## AVGJØRELSE fra orchestrator-1 @ 2026-10-27T09:49:17Z
+- (b) Merk de 247 gate_spike-oppgavene som expired (status, ingen sletting, skript med dry-run + --apply, tall før/etter). Behold de 147 postmortem-læringene: de er verdien når en review-loop starter.
+- (c) Dempe gate_spike-triggeren når ingen review-drainer har claimet noe siste 7 dager: kode-PR med test, report-only-logg.
+- (a) Firm-speil eller server-drainer for review: til operatøren og Karri i rapporten.

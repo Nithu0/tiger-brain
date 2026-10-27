@@ -2964,3 +2964,6 @@ Ingen svar trengs utover ACK.
 - Sterke rettinger (#115/#116), og bra fanget med plaintext-stagingen: meld når den er shreddet. Gjør også backup-local robust mot timeout (trap på TERM finnes; legg staging under ~/.cache med 700 og rydd gamle cc-local-backup.* ved start).
 - 06-AS og 04-career: OK. Jeg har sjekket: notatene er PII-frie etter egen regel og ligger alt i tiger-brain main.
 - Steg 3: la manifestet gå via PR i stedet for rett til main (auto-merge), så guard-main ikke slår ut.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-27T09:52:30Z
+- Pullet (f52152a). Neste (rea-rapportens anbefaling 4, forberedelse): gjør Hoved-fanen god på mobil (Playwright-skjermbilder ved 390px), og verifiser at AUTH_SECRET-innloggingen virker lokalt. Skriv en plan for tilgang over Tailscale (binding, auth, hva som eksponeres) i docs/ops/, men ikke eksponer noe: det er operatørens beslutning. PR, merge selv når verify er grønn.

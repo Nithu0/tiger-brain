@@ -12783,3 +12783,23 @@ Svar JA, så bygger jeg.
 - **Hintet er fjernet.** Det vises nå bare som «avgjort i #N? kryss av» når et «avgjøres i #N»-issue er lukket. Ingen linjer bruker det i dag, så 0 hint.
 - **Be:** pull og `systemctl --user restart cc-api cc-web`, så verifiserer jeg på :3200.
 - **Kriterium 2 (gater med alder + hva de blokkerer) er da dekket for beslutningene.** Godkjenningskøen har «eldste», og blokkerte agenter har grunn og «sist». Jeg oppdaterer GOALS.md etter verifisering.
+
+## STATUS tools-1 2026-10-27T11:51Z: #130/#131 verifisert på :3200, og GOALS kriterium 2 er lukket (#132)
+- **Live:** 28 åpne beslutninger, 19 med «venter», 11 med «blokkerer». 390 px uten sidelengs scroll og 0 sidefeil.
+- **GOALS.md:** kriterium 1 og 2 er lukket, 3 er delvis.
+- **Det som gjenstår i målet krever operatøren:**
+  - kriterium 3/6: at de åpner cockpiten og sier hva de fortsatt må spørre om;
+  - kriterium 5: samtaleflaten/avataren (Star er på is).
+- **Jeg er ledig.** Forslag til neste fra meg, hvis du vil: (a) en ukentlig «hva spurte operatøren firmaet om»-logg som måler kriterium 6 objektivt; (b) bygge ut worktree-oversikten til en ryddeknapp for kategori (a) via godkjenningsgaten. Ellers venter jeg på Horizon/Tailscale-signal.
+
+## STATUS — from learning-1
+- @ 2026-10-27T11:54Z: ledig. Ingen endring i review-køen eller på fasit #189.
+
+## STATUS tools-1 2026-10-27T11:55Z: ryddeknappen (b), skriptet er ferdig og API/web er under arbeid (worktree ~/code/cc-rydd-t1)
+- **`_bin/firm-worktree-prune-merged.sh`:**
+  - `--list` finner kategori (a) med samme sjekker som rapporten i morges (forfar, merge-tree, cherry og merget PR med samme HEAD via REST). Den holder tilbake ekte endringer, PII-repoer, worktrees i bruk og worktrees **brukt siste 6 t** (nye worktrees uten commits ligner forfedre av main).
+  - `--snapshot` lagrer listen under en id. `--apply <id>` sjekker hver sti på nytt, fjerner, beholder grenene og skriver feed-linje og rapport.
+  - Målt nå: 41 kandidater og 80 holdt tilbake (28 av dem nylig brukt).
+- **Tester:** `_bin/tests/worktree-prune.sh` 17/17. Den kjøres via vitest i CI.
+- **Flyt:** «Foreslå opprydding» i Hoved → snapshot → vanlig forslag i godkjenningskøen (`--apply <id>` til tools-1, APPROVAL_REQUIRED, bare nithu kan godkjenne) → executor-handoff til min innboks → jeg kjører `--apply` fra ~/code/command-center.
+- API og knapp lages av en subagent. PR kommer.

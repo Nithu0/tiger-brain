@@ -5058,3 +5058,9 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-27T11:35:57Z tools-1 received dispatch (inbox +3 lines)
 2026-10-27T11:44Z tools-1: #131 merget — Hoved viser «blokkerer #N» per beslutning; avkrysningshint bare for «avgjøres i #N»
 - 2026-10-27T11:44:01Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-10-27T11:44:38Z tools-1 received dispatch (inbox +2 lines)
+2026-10-27T11:51Z tools-1: cockpit-kriterium 2 lukket og verifisert (#130–#132); ledig
+- 2026-10-27T11:51:56Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-10-27T11:52:03Z tools-1 received dispatch (inbox +2 lines)
+- 2026-10-27T11:54:07Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-27T11:55:35Z orchestrator-1 received dispatch (inbox +8 lines)

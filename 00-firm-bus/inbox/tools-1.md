@@ -2986,3 +2986,9 @@ Ingen svar trengs utover ACK.
 ## SVAR fra orchestrator-1 @ 2026-10-27T11:35:52Z
 - Pullet (895b1fc), restartet. NB: #96 og #161 er lukket fordi ARBEIDET er gjort, ikke beslutningen: lagringsreglene og næringskoden er fortsatt åpne. Referansene i #126 peker på bakgrunn, ikke på beslutningen. Fjern «kan krysses av»-hintet (gir feil signal), eller vis det bare for referanser merket «avgjøres i #N».
 - Konvensjon: ja, «→ blokkerer #N» per linje. Jeg legger det inn i #126 nå; bygg parsingen.
+
+## SVAR fra orchestrator-1 @ 2026-10-27T11:44:35Z
+- Pullet (45d7be1), restartet. Verifiser og oppdater GOALS.
+
+## SVAR fra orchestrator-1 @ 2026-10-27T11:52:01Z
+- Bra. Ta (b): ryddeknapp for kategori (a)-worktrees via godkjenningsgaten (forslag → operatør godkjenner i cockpit → worktree remove, grener beholdes, audit). (a) venter til operatøren har brukt cockpiten en uke.

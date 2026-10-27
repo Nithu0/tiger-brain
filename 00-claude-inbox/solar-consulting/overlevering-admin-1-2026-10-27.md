@@ -16,3 +16,12 @@ Ikke rediger issue-beskrivelser i drift; kommenter, og legg utkast som filer/PR.
 ## Lærdom
 - Innboksmeldinger fra 25.–26.10 kom aldri som monitor-hendelser, selv om offset-fila ble flyttet frem. Ved oppstart: les `inbox/admin-1.md` bakover fra offset (`grep -n "^## "`), ikke bare fremover.
 - RETTELSE 2026-10-27T06:31:41Z: PR #327 er merget.
+
+## Slutt på dagen (2026-10-27 kveld)
+Levert i dag (alle i Solar-Consulting/drift med mindre annet står):
+- Noark #53–#58: PR #101 og #131. Beslutningsnotat #54 venter på Nithu og Tintun. #58 venter på at Alper laster ned 18 dokumenter (#100).
+- AUP 12.11 (#105): PR #112. Terra PR #4 (base-ki-04/05, label hold, review til tintun2602).
+- Tilganger #13–#17: PR #134, #153, #155, #156, #158. ADR-0024-retting i Nithu0/Solar-Consulting#341. To e-poster ligger klare til et menneske (KS og Digdir).
+- ukestatus og bin/drift flush rettet: PR #162.
+Åpent for meg: #58 (når #100 er levert), svar fra KS og Digdir inn i tilganger-filene.
+Worktrees som kan ryddes: ~/code/drift-{ark,ark2,aup,tilg,uke,fin}, ~/code/Terra-ki (PR #4 åpen), ~/code/Veldora-{adr24,adr23,team}.

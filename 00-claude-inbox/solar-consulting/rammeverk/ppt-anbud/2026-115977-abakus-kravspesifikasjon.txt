@@ -1,0 +1,473 @@
+BILAG 1
+Krav- og behovsspesifikasjon
+Fagsystem for PP-tjenesten/logopedtjenesten
+PP-tjenesten/logopedtjenesten i samarbeid med FARTT
+Innledning
+Dokumentet beskriver oppdragsgivers behov og krav til et nytt fagsystem for PP-tjenesten. Spesifikasjonen er utformet for å gi leverandørene handlingsrom til å tilby sin standardløsning og beskrive hvordan denne støtter tjenestens arbeidsprosesser.
+Leverandørens besvarelse
+Leverandøren skal besvare kravene i tabellene nedenfor. Besvarelsen skal være konkret og vise hvordan behovet dekkes i tilbudt løsning på leveringstidspunktet. Dersom funksjonalitet forutsetter utvikling, tredjepartsløsninger, tilleggslisenser eller særskilt konfigurering, skal dette opplyses tydelig sammen med plan, kostnad og eventuelle avhengigheter.
+Kravtyper
+Kravtype
+Betydning
+A
+Absolutt krav. Manglende oppfyllelse kan medføre avvisning.
+E1
+Særlig viktig evalueringskrav. Oppfyllelse og kvaliteten på løsningen vurderes.
+E2
+Evalueringskrav som gir merverdi og vurderes med lavere betydning enn E1.
+Bakgrunn, formål og behov
+Oppdragsgiver og omfang
+PPT/logopedtjenesten i Nord Østerdal er organisert etter vertskommuneprinsippet. Der Tynset er vertskommune, og Folldal, Os, Tolga, Alvdal og Rendalen kjøper tjenester basert på barnetallet for PPT og folketallet for logopedtjenesten.
+Antall interne roller: PP-tjenesten/logopedtjenesten/FARTT totalt har tjenesten 9,6 stilllingshjemler (inkludert leder og konsulent /merkantil), dvs 10 interne brukere
+Dagens journalsystemer: HK Oppvekst.
+Aktive individsaker pr. 31.08.26: PP-tjenesten: 237, og logopedtjenesten: 110
+Avsluttede 2025/2026: PP-tjenesten 94, logopedtjenesten 51
+Antall nye henvisninger 25/26: PP-tjenesten 57, logopedtjenesten 42
+Sakkyndige vurderinger: 103
+Formål
+Anskaffelsen skal gi PP-tjenesten/logopedtjenesten et sikkert, brukervennlig og effektivt verktøy for saksbehandling, dokumentasjon, journalføring, samhandling og styringsinformasjon. Løsningen støtter både forebyggende, individrettet og systemrettet arbeid og reduserer behovet for manuelle rutiner og dobbeltregistrering.
+Overordnede behov
+Fagsystemet må følge barnehageloven og opplæringsloven med tilhørende forskrifter.
+Leverandøren må beskrive hvordan fagsystemet oppfyller rask og enkel innlogging, automatisering ved henvisning/persondata, brev om at henvisningen er mottatt, ev. digital overføring til klient, transkripsjon, konvertere arkiv til ev. nytt fagsystem, automatisk oppdatering med hensyn til alder/trinn - nytt barnehage/skoleår, hvor langt er dere kommet i integreringen av KI.
+En sammenhengende digital arbeidsflate fra henvendelse og opprettelse av sak til avslutning, arkivering og senere gjenfinning.
+God støtte for faglig arbeid, dokumentproduksjon, kvalitetssikring, frister, oppgaver og ledelsesoppfølging.
+Sikker samhandling med barn, elever, foresatte, barnehager, skoler og andre samarbeidspartnere.
+Rolle- og behovsstyrt tilgang (rollehierarki), sporbarhet og forsvarlig behandling av personopplysninger.
+Integrasjoner som sikrer oppdaterte grunndata, arkivering, sikker kommunikasjon og gjenbruk av informasjon.
+En løsning som kan utvikles og holdes oppdatert ved endringer i regelverk, arbeidsprosesser og nasjonale fellesløsninger.
+Programvaren må være tilpasset interkommunale tjenester
+Skanne direkte inn i fagsystemet det som ikke sendes elektronisk (kartleggingsskjemaer/tester/brev o.l.)
+Delingsfunksjon for godkjenning og informasjonsflyt/dokumenter (rettefunksjon for godkjenner i sakkyndige vurderinger og rapporter)
+Kontrollfunksjon som gir god oversikt over arbeidsoppgaver
+Automatisk oppdatering av foreldreansvar
+Brukere uten personnummer må kunne registreres via et automatisk generte person nummer eller DUF-nr.
+Arbeidsprosesser som skal støttes
+Skybasert løsning for enkel sikker pålogging i fagsystemet
+Mottak og registrering av henvendelser, henvisninger og samtykker.
+Sende og motta brev via KS-Svar Ut/Inn
+Automatisk dataoppdatering
+Adresseliste (hovedmottaker, kopimottaker av utgående post)
+Sende meldinger mellom ansatte/saksansvarlige
+Beskrivelse av type brev/hva brevet gjelder
+Det må være mulig å filtrere henvisninger på dato og år, både historisk og fremtidig
+Registrere i to ulike tjenester med tydelig skille på hver enkelt tjeneste (PP-tjenesten/logopedtjenesten)
+Verktøyet må tilfredsstille oppdragsgivers behov for å produsere egne brevmaler i systemet
+Opprettelse, fordeling og oppfølging av individ- og systemsaker/forebyggende. Dokumentasjon av veiledning og kompetanseutvikling rettet mot skole/barnehage. Støtte for systemarbeid og tiltak på gruppe/klassenivå. Planlegging og oppfølging av tiltak
+Automatisk SMS varsling når kalender er oppdatert, og synkronisering med outlook
+Kartlegging, utredning, vurdering, dokumentasjon og oppfølging av tiltak.
+Integrasjon med digitale kartleggingsverktøy. Automatisert skåring og rapportgenerering og lagring av testresultater og observasjoner direkte i barnets/elevens sak
+Utarbeidelse, kvalitetssikring, godkjenning, signering og utsendelse av dokumenter. F.eks. esignering av samtykke
+Løpende journalføring av aktiviteter, kontakt og hendelser, og søkemulighet i journalnotat og brevjournal
+Henvisningsskjema til habiliteringstjenesten og Statped
+Samhandling internt og sikkert med eksterne parter. (evt. integrasjon til andre kommunale systemer?)
+Avslutning, arkivering, avlevering, innsyn og senere gjenfinning.
+Fagsystemet støtter at saksbehandlere skriver i samme dokument og være inne på samme dokument/sak
+Fagsystemet støtter visning av flere dokumenter/saker samtidig
+Arbeid med ulike saker eller samme sak på flere skjermer
+Tidsregistrering, varsler, frister
+Digital kartlegging som checkware sitt kartleggingsverktøy ASEBA, Hogrefe  Brief-2, SRS-2
+Ledelsesoppfølging, rapportering og statistikk, f.eks. kjønn, alder, skole/barnehage, kommune, henvisningsgrunn og ev. Diagnose, tid/ varighet på henviste saker. Antall sakkyndige vurderinger per saksbehandler, rapporter etter utredning, venteliste, avslåtte saker, passive saker med saksansvarlig. Mulighet til å lage egne rapporter etter behov i forhold til data som er lagt inn.
+Leverandør må legge ved en oversikt over hvilke standardrapporter som systemet kan generere.
+Funksjonelle krav
+Kravene under samler detaljkravene i funksjonelle behov og ønskede resultater. Leverandøren skal beskrive hvordan standardløsningen støtter faktisk arbeidsflyt.
+Nr.
+Tema
+Krav og behov
+Type
+Leverandørens svar
+1
+Helhetlig saksflyt
+Løsningen støtter en sammenhengende saksprosess fra mottak og registrering til avslutning, arkivering og gjenfinning. Leverandøren skal beskrive arbeidsflyten og hvilke trinn som kan konfigureres av kunden.
+E1
+Beskriv standard arbeidsflyt, konfigurasjonsmuligheter og eventuelle avvik.
+2
+Individ, forebyggende- og systemarbeid
+Løsningen støtter både individrettede saker og systemsaker/forebyggende arbeid mot barnehage, skole, gruppe eller organisatorisk enhet. Relevant aktivitet og dokumentasjon skal kunne knyttes til riktig nivå.
+E1
+Beskriv med eksempler.
+3
+Registrering og grunndata
+Løsningen støtter effektiv registrering og vedlikehold av personer, foresatte, relasjoner, enheter og andre nødvendige grunndata. Skjermingsbehov og særlige forhold, som fortrolig adresse, skal fremgå tydelig for autoriserte brukere.
+E1
+Beskriv datakilder, validering og varsling.
+4
+Saksorganisering
+Det skal være mulig å opprette saker, fordele ansvar, knytte flere saksbehandlere til en sak, angi status og fase, og finne saker gjennom fleksibelt søk og filtrering.
+E1
+Beskriv saksstruktur, statuser, søk og filtrering.
+5
+Journal og dokumentasjon
+All relevant saksbehandling, aktiviteter, undersøkelser, vurderinger, kontakt og dokumenter skal kunne dokumenteres i en oversiktlig journal med dato, ansvarlig og historikk. Iht. Noark standarden
+E1
+Beskriv journalvisning, registrering og sporbarhet.
+6
+Dokument-produksjon
+Løsningen støtter effektiv utarbeidelse av sakkyndige vurderinger, rapporter, planer, samtykker, referater og annen korrespondanse. Kunden skal kunne forvalte maler og flette relevante saksopplysninger.
+E1
+Beskriv redigering, malforvaltning, fletting og versjonering.
+7
+Kvalitetssikring og godkjenning
+Løsningen støtter gjennomlesing, kommentering, retur til saksbehandler og godkjenning før utsendelse. Det skal fremgå hvem som har gjort hva.
+E1
+Beskriv arbeidsflyt og sporbarhet.
+8
+Oppgaver, frister og varsler
+Brukere får oversikt over egne oppgaver, frister, innkommet post og saker som krever oppfølging. Løsningen bør kunne varsle foresatte eller andre mottakere om avtaler uten å røpe sensitive opplysninger. SMS varsling.
+E1
+Beskriv oversikter, varslingsregler og kanaler.
+9
+Samhandling internt
+Løsningen støtter intern samhandling knyttet til sak eller dokument, inkludert meldinger, deling av arbeidsoppgaver og samarbeid mellom flere saksbehandlere.
+E2
+Beskriv hvordan samarbeid foregår og hvordan historikk bevares.
+10
+Samhandling eksternt
+Løsningen bør støtte sikker digital kommunikasjon, mottak, utsendelse, vedlegg, digital signering og innhenting av samtykke med relevante eksterne parter.
+E1
+Beskriv støttede kanaler, identifikasjon og sporbarhet. Integrering til andre kommunale systemer som har f.eks. individuell plan
+11
+Brukerflate og arbeidsstøtte
+Løsningen er oversiktlig og intuitiv, forebygger feilregistrering og gir forståelige feilmeldinger. Informasjon og funksjoner bør kunne tilpasses rolle og arbeidssituasjon.
+E1
+Beskriv og vis sentrale arbeidsflater.
+12
+Søk og gjenfinning
+Autoriserte brukere kan raskt finne personer, saker, dokumenter, aktiviteter og avsluttede saker gjennom søk, filtrering og sortering.
+E1
+Beskriv søkemuligheter og tilgangskontroll i treff.
+13
+Rapportering og styrings-informasjon
+Ledere og autoriserte brukere kan følge saksmengde, status, frister, aktivitet og andre relevante nøkkeltall, og hente ut rapporter og statistikk uten leverandørbistand.
+E1
+Beskriv standardrapporter, egendefinerte uttrekk og eksport.
+Tekniske krav og integrasjoner
+Kravene skal sikre at løsningen fungerer i kundens tekniske landskap og at informasjon kan flyte sikkert og effektivt mellom relevante systemer.
+Nr.
+Tema
+Krav og behov
+Type
+Leverandørens svar
+14
+Tilgjengelig løsning
+Løsningen skal være SaaS-basert, ha responsivt design og fungere i oppdaterte, standardbaserte nettlesere på kundens støttede enheter.
+A
+Bekreft og oppgi støttede nettlesere og enheter.
+15
+Universell utforming og språk
+Brukerrettede deler av løsningen skal være på norsk og oppfylle gjeldende krav til universell utforming av IKT.
+A
+Bekreft og oppgi standard, testmetode og eventuelle kjente avvik.
+16
+Innlogging
+Løsningen støtter sikker innlogging for interne og eksterne brukere, herunder SSO for ansatte og egnet autentisering på høyt sikkerhetsnivå for eksterne brukere.
+A
+Beskriv støttede identitetsløsninger og sikkerhetsnivåer.
+Beskriv når og hvor lenge løsningen har fungert.
+17
+Tilgangsstyring
+Løsningen skal ha rollebasert og behovsstyrt tilgang som kan administreres av kunden. Rettigheter skal kunne differensieres for visning, registrering, endring, sletting, sperring, godkjenning og administrasjon.
+A
+Beskriv rollemodell, administrasjon, delegasjon og kontroll.
+18
+Integrasjons-arkitektur
+Løsningen bør ha dokumenterte og standardbaserte grensesnitt for sikker lesing og skriving av data. Integrasjoner skal kunne videreutvikles og forvaltes uten unødig leverandørlåsing.
+E1
+Beskriv API-er, standarder, autentisering, dokumentasjon og prismodell.
+19
+Folkeregister og grunndata
+Løsningen skal kunne motta og vedlikeholde nødvendige person- og relasjonsopplysninger fra autoritative kilder. Det sentrale folkeregisteret (DSF) og enhetsregisteret.
+A
+Beskriv kilde, oppdateringsfrekvens, avvikshåndtering og historikk.
+20
+Arkiv og avlevering
+Løsningen skal håndtere arkivverdig materiale og støtte lovlig arkivering, uttrekk og avlevering. Det skal beskrives hvordan løsningen samhandler med kundens arkivløsning og hvordan data kan hentes ut ved avtaleopphør.
+E1
+Beskriv arkitektur, standarder, formater, ansvar og eventuelle integrasjoner.
+Hvordan konvertere data
+21
+Sikker digital kommunikasjon
+Løsningen støtter relevante nasjonale eller kommunale fellesløsninger for sikker inn- og utgående kommunikasjon, med vedlegg og forsendelseslogg.
+E1
+Beskriv støttede løsninger og eventuelle avhengigheter.
+22
+Dataimport og eksport
+Kunden skal kunne importere nødvendige data og hente ut egne data, dokumenter, metadata og logger i dokumenterte, åpne og anvendelige formater.
+A
+Beskriv formater, fullstendighet, kostnader og begrensninger.
+Personvern og informasjonssikkerhet
+Løsningen vil behandle opplysninger med høyt beskyttelsesbehov. Kravene må ses sammen med databehandleravtalen og kundens sikkerhetskrav.
+Krav i oversikten under er basert på krav fra KINS, Foreningen Kommunal Informasjonssikkerhet.
+Nr.
+Tema
+Krav og behov
+Type
+Leverandørens svar
+23
+Regelverk og innebygd personvern
+Løsningen og leveransen skal gjøre kunden i stand til å oppfylle gjeldende krav til personvern, informasjonssikkerhet, forvaltning, dokumentasjon og arkiv. Personvern og informasjonssikkerhet skal være innebygd og standardinnstillingene skal være forsvarlige.
+E1
+Beskriv hvordan dette ivaretas og oppgi kjente begrensninger.
+24
+Kundens eierskap og separasjon
+Kunden skal eie egne data. Data for ulike kunder skal være logisk eller fysisk separert og beskyttet mot uautorisert innsyn, endring og sammenblanding.
+E1
+Beskriv dataarkitektur, separasjon og kontrollmekanismer.
+25
+Styringssystem for informasjonssikkerhet
+Alle som har digitale løsninger i offentlig sektor, skal tilse at deres leverandører også har styringssystem for informasjonssikkerhet. Kravet skal sikre at leverandør har et helhetlig og aktivt forhold til informasjonssikkerhet. Styringssystemet vil diktere at leverandør involverer ledelsen, gjennomfører risikovurderinger og implementerer sikringstiltak.
+E1
+Beskriv styringssystemet.
+26
+Sikkerhetstiltak
+Leverandør skal etablere og forvalte tilstrekkelige sikkerhetstiltak for å ivareta informasjonssikkerheten for behandlingen av informasjonen i tjenesten. Sikkerhetstiltak er nødvendig for å opprettholde tilstrekkelig sikkerhet, leverandøren må beskrive hvordan de håndterer sikkerhet og løpende gjør tiltak.
+E1
+Beskriv sikkerhetstiltak.
+27
+Risikovurderinger
+Leverandør skal løpende gjennomføre risikovurderinger. Risikovurderingene skal fremvises på forespørsel og ved behov. Risikovurderinger er nødvendig for å kunne vurdere risikobildet og iverksette nødvendige sikkerhetstiltak også for kunden.
+E1
+Beskriv risikovurderingene.
+28
+Sikkerhetsorganisasjon
+Leverandør skal dokumentere sin sikkerhetsorganisasjon. Dokumentasjonen skal inkludere oversikt over personell med tilhørende rollebeskrivelser og ansvar.
+E1
+Beskriv sikkerhetsorganisasjon
+29
+Informasjonssikkerhetskompetanse
+Leverandør skal ha en dokumentert prosess for opplæring/kompetanseheving i informasjonssikkerhet og personvern for sine ansatte. Kravet skal sikre at leverandøren har et regime for å styrke kompetansen for egne ansatte.
+E1
+Beskriv prosess for opplæring/kompetanseheving
+30
+Leveranseoversikt
+Leverandøren skal ha oversikt over utstyr og systemer som er involvert i leveransen. Det vil si komponenter som er en del av leveransen, og verktøy og utstyr for å gjennomføre leveransen.
+E1
+Beskriv oversikt over utstyr og systemer som del av leveransen.
+31
+Leverandørens utstyrspolicy
+Leverandøren skal ha en dokumentert policy for akseptabel bruk av utstyr og informasjonssystemer. Kravet skal bidra til å regulere hva de ansatte kan bruke sitt utstyr til.
+E1
+Beskriv policy.
+32
+Sletting av data
+Når verktøy eller systemer ikke er en del av leveransen, eller leveransen er avsluttet, må personopplysninger slettes. Dette gjelder for eksempel PC/minnepinne benyttet under installasjon, utfaset hardware, utgått backup og lignende. Avhending/sletting av medier, herunder backupmedier, skal skje på en tilstrekkelig sikker måte.
+E1
+Beskrives sletting av data.
+33
+Tilgangsstyring
+Leverandør skal ha en dokumentert prosess for tilgangsstyring, herunder oppretting, endring og sletting av brukere. Bruk av privilegerte kontoer skal begrenses og løsningen skal ha rollebasert tilgangsstyring. Alle registrerte brukere i tjenesten skal være unike og personlige.
+E1
+Beskriv prosess for tilgangsstyring.
+34
+Sterk autentisering
+Dersom tjenesten tilbyr autentisering over usikrede nett, så skal sterk autentisering støttes og aktiveres. Kravet er spesielt viktig dersom tjenesten skal gjøres tilgjengelig over Internett eller tjenesten inneholder personopplysninger.
+E1
+Beskriv løsningen basert på om løsningen er tilgjengelig på internett, eller internt for andre brukere.
+35
+Krav til kryptering
+Leverandør skal ha en dokumentert prosess for bruk av kryptering, og håndtering av krypteringsnøkler. Kryptering er et viktig teknisk sikringstiltak, for oppbevaring og transport.
+E1
+Beskriv prosess for kryptering
+36
+Fysisk sikring
+Leverandør skal ha tilstrekkelig fysisk sikring knyttet til sine datarom, som adgangskontroll, brannsikring, ventilasjon, redundant strømforsyning og naturhendelser.
+E1
+Beskriv hvordan krav til fysisk sikring oppfylles.
+37
+Varsling ved endringer og nedetid
+Leverandør skal ha en dokumentert prosess for endringshåndtering, som sikrer at kommunen blir varslet ved eventuelle endringer og/eller vedlikehold av løsning som krever nedetid.
+E1
+Beskriv rutiner for varsling ved planlagt nedetid og bortfall av tjenesten.
+38
+Bruk av testmiljø
+Leverandør skal ha en dokumentert prosess for testing av endringer i tjenesten, samt overføring av endringer fra testmiljø til produksjonsmiljø. Testmiljøet skal være atskilt fra produksjonsmiljøet og ikke benytte kommunens produksjonsdata.
+E1
+Beskriv prosess for testing av endringer i tjenesten.
+39
+Separere data
+Leverandør skal separere kommunens data fra andre kunders data, fysisk eller logisk.
+E1
+Beskriv hvordan separering av data gjøres. ,
+40
+Kapasitetsstyring
+Leverandør skal ha en dokumentert prosess for kapasitetsstyring, som sikrer tilgjengelighet på tjenesten ved varierende behov. Kapasitetsstyring inkluderer også bemanning.
+E2
+Beskriv prosess for kapasitetsstyring. Dette kravet ble aktualisert ifbm koronasituasjonen, hvor tjenester ble tilnærmet utilgjengelig på grunn av økt bruk.
+41
+Sikring mot datainnbrudd
+Tjenesten skal være hensiktsmessig sikret mot ondsinnet kode og datainnbrudd.
+E1
+Beskriv sikring mot datainnbrudd.
+42
+Leverandørens sikkerhetskopi
+Leverandør skal ha en dokumentert prosess for sikkerhetskopiering. Kravet skal sikre at leverandør tar sikkerhetskopier av kundens data.
+E1
+Beskriv prosess for sikkerhetskopiering.
+43
+Test av leverandørs sikkerhetskopi
+Leverandør skal jevnlig verifisere innhold i sikkerhetskopier og teste gjenoppretting av data for å verifisere kvaliteten på sikkerhetskopiene.
+E1
+Beskriv testing av sikkerhetskopier.
+44
+Oppbevaring av leverandørens sikkerhetskopi
+Leverandør skal oppbevare sikkerhetskopier fysisk eller logisk atskilt fra produksjonsmiljøet.
+E1
+Beskriv oppbevaring av sikkerhetskopier.
+45
+Overvåkning av tjenesten
+Leverandør skal etablere og har også ansvaret for overvåking av tjenesten, dataoverføringer og grensesnitt. Avvik skal rapporteres til kunden.
+E1
+Beskriv overvåking av tjenesten.
+46
+Overvåkning av leveranseprosess
+Leverandør skal sikre en forsvarlig og systematisk overvåking av hele leveranseprosessen av tjenesten.
+E1
+Beskriv hvordan leveranseprosessen overvåkes.
+47
+Logging av autorisert og uautorisert tilgang
+Leverandør skal logge alle forsøk på autorisert og uautorisert tilgang til tjenesten, samt relevante sikkerhetshendelser som er tilknyttet løsningen.
+E1
+Beskriv logging av autorisert og uautorisert tilgang.
+48
+Logging ved aksess av data i tjenesten
+Leverandør skal sikre logging av hvem som aksesserte, når data ble aksessert, hvilke data som ble aksessert, og ved endring alle data/felter som ble endret.
+E1
+Beskriv logging av aksess av data i tjenesten.
+49
+Sikring av logger
+Leverandør skal sikre at logger beskyttes mot uautorisert innsyn, endring og sletting.
+E1
+Beskriv hvordan logger sikres.
+50
+Patching og oppdatering
+Leverandør skal ha en dokumentert prosess for sikkerhetsoppdateringer som dekker alle komponenter i tjenesten.
+E1
+Beskriv prosess for sikkerhetsoppdateringer
+51
+Sikkerhetstesting av tjenesten
+Leverandør skal sørge for jevnlig sikkerhetstesting av tjenesten. Dokumentasjon av test med tiltak skal kunne fremlegges på forespørsel.
+E1
+Beskriv sikkerhetstesting av tjenesten.
+52
+Sikring av leverandørens datautstyr
+Datautstyr som er i kontakt med kundens informasjon skal være tilstrekkelig sikret.
+E1
+Beskriv hvordan datautstyr er sikret
+53
+Konfigurasjonskart over design på tjenesten
+Leverandør skal ha utarbeidet konfigurasjonskart som viser sikkerhetskontroller og teknisk beskrivelse av informasjonssystemene, inkludert dataflyt.
+E2
+Beskriv dette.
+54
+Sikring av grensesnitt mot uautorisert tilgang
+Alle grensesnitt for nettjenester (web, API-er, endepunkter) skal være sikret mot uautorisert tilgang.
+E1
+Beskriv hvordan grensesnitt er sikret.
+55
+Kryptering av datakommunikasjon over usikre nettverk
+All datakommunikasjon over usikre nettverk skal være kryptert i henhold til beste praksis. Trafikk i klartekst skal ikke forekomme.
+E1
+Beskriv hvordan datakommunikasjon over usikre nett krypteres.
+56
+Leverandørens taushetserklæring
+Alle som behandler kundens produksjonsdata, skal ha signert taushetserklæring. Taushetserklæringen skal gjennomgås med jevne mellomrom for å sikre relevans.
+A
+57
+Sikker utviklingsmetodikk
+Tjenesten skal være utviklet etter sikker utviklingsmetodikk. Kravet skal sikre at leverandør har hatt fokus på informasjonssikkerhet gjennom hele utviklingsløpet.
+E1
+Beskriv dette.
+58
+Bruk av underleverandør
+Leverandør skal beskrive hvilke underleverandører som brukes, og hvilke roller og oppgaver de har i forbindelse med leveranse av tjenesten. Der personopplysninger overføres, skal dette innlemmes i databehandleravtalen.
+E1
+Beskriv bruk av underleverandører.
+59
+Leverandørs prosess for hendelseshåndtering
+Leverandør skal ha en dokumentert prosess for hendelseshåndtering, inklusive registrering, kategorisering og rapportering av hendelser. Prosessen skal ha en klar beskrivelse av hva som skal utløse rapportering til kunde.
+E1
+Beskriv prosess for hendelseshåndtering.
+60
+Leverandørs avvikssystem
+Leverandør skal ha et fungerende avvikssystem. Systemet skal fange opp og håndtere informasjonssikkerhetsavvik.
+E1
+Beskriv avvikssystemet
+61
+Leverandørs beredskaps- og kontinuitetsplaner
+Leverandør skal ha tilstrekkelig beredskaps- og kontinuitetsplaner for å sikre tilgjengelighet på tjenesten i henhold til tjenesteleveranseavtalen (SLA).
+E1
+Beskriv beredskaps- og kontinuitetsplaner
+62
+Beskyttelse av tjeneste mot angrep
+Tjenesten skal være beskyttet mot angrep. Kravet er aktuelt dersom leverandør tilbyr tjenesten i sin skytjeneste.
+E2
+Beskriv dette.
+63
+Leveranse iht. norske lover og regler
+Leverandør skal sikre at alle leveranser til kunden skjer i henhold til norske lover og regler.
+A
+64
+Regelmessig gjennomgang av informasjonssikkerheten fra tredjepart
+Leverandør skal minimum en gang i året, og ved signifikante endringer, foreta en uavhengig gjennomgang av informasjonssikkerheten. Gjennomgangen skal sikre samsvar med policyer og standarder, samt teknisk samsvar.
+E2
+Beskriv hvordan dette gjennomføres.
+65
+Sikkerhetsrevisjon av leverandør eller underleverandør
+Kunden skal kunne gjennomføre sikkerhetsrevisjon av leverandøren eller dens underleverandør, enten selv eller gjennom tredjepart.
+E2
+66
+Bistand til ROS og DPIA
+Leverandøren skal gi kunden nødvendig dokumentasjon og faglig bistand til risikovurderinger, personvernkonsekvensvurdering og kontroll av leveransen.
+E1
+Beskriv tilgjengelig dokumentasjon, bistand og hva som inngår i prisen.
+Innføring, drift og forvaltning
+Leveransen omfatter ikke bare programvaren, men også innføring, migrering, opplæring, drift, support og kontrollert avslutning.
+Nr.
+Tema
+Krav og behov
+Type
+Leverandørens svar
+67
+Innføringsplan
+Leverandøren skal beskrive en realistisk innføring med aktiviteter, milepæler, ansvar, kundebidrag, avhengigheter, risiko, test, opplæring og produksjonssetting.
+E1
+Legg ved overordnet plan og beskriv kritiske forutsetninger.
+68
+Datamigrering
+Leverandøren skal beskrive hvordan eksisterende data og dokumenter kan kartlegges, kvalitetssikres, konverteres, testes og overføres. Ansvar, formater, avgrensninger og kostnader skal fremgå.
+E1
+Beskriv metode, verktøy, kundebidrag og kvalitetssikring.
+69
+Testing og godkjenning
+Leverandøren skal ha en teststrategi som dekker funksjon, integrasjoner, sikkerhet, ytelse, migrering og kundespesifikk konfigurasjon. Akseptansekriterier og feilretting skal avtales før produksjonssetting.
+E1
+Beskriv testopplegg, miljøer, data, ansvar og dokumentasjon.
+70
+Opplæring og dokumentasjon
+Leverandøren skal levere rollebasert opplæring og oppdatert bruker-, system- og driftsdokumentasjon. Brukerrettet opplæring og dokumentasjon skal være på norsk og elektronisk tilgjengelig.
+E1
+Beskriv opplegg, målgrupper, materiell og vedlikehold.
+71
+Drift og tjenestenivå
+Leverandøren skal levere drift og vedlikehold med avtalte krav til tilgjengelighet, overvåking, sikkerhetskopiering, kapasitet, hendelseshåndtering og rapportering.
+A
+Bekreft og beskriv leveransemodell i Bilag 4.
+72
+Brukerstøtte
+Kunden skal ha tilgang til kompetent brukerstøtte på norsk i avtalt åpningstid gjennom egnede kanaler. Henvendelser, status og løsningstid skal kunne følges.
+A
+Beskriv organisering, kanaler, åpningstid, kompetanse og eskalering.
+73
+Oppgraderinger og endringer
+Nye versjoner og nødvendige sikkerhetsoppdateringer skal inngå i leveransen. Leverandøren skal teste kundespesifikk konfigurasjon og integrasjoner og varsle endringer som påvirker kunden i god tid.
+A
+Beskriv releaseprosess, testing, varsling og kundens påvirkning.
+74
+Videreutvikling
+Løsningen skal holdes faglig, teknisk og regulatorisk oppdatert gjennom avtaleperioden. Kunden bør kunne påvirke prioritering av utvikling og bestille avtalte tilpasninger uten å svekke standardløsningens oppgraderbarhet.
+E1
+Beskriv produktstyring, veikart, kundemedvirkning og prismodell.
+75
+Exit og overgang
+Ved opphør skal leverandøren bistå med sikker og kontrollert overgang til ny løsning eller annen leverandør. Data, dokumenter, metadata, logger og nødvendig dokumentasjon skal utleveres i avtalte formater, og gjenværende kopier slettes etter instruks.
+A
+Beskriv prosess, formater, tidsbehov, kostnader og slettedokumentasjon.

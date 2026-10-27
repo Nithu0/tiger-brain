@@ -1,0 +1,22 @@
+{
+  "id": "job-20260728-130348-trading1-23541",
+  "role": "trading-1",
+  "engine": "echo",
+  "project": "nexus",
+  "cwd": "/home/nithu/code/ai-assistent",
+  "pii": false,
+  "prompt": "FIRM v2 e2e-test (echo): svar med rolleinfo",
+  "prompt_raw": "FIRM v2 e2e-test (echo): svar med rolleinfo",
+  "origin": "v2-e2e-test",
+  "reply_to": "telegram",
+  "status": "rejected",
+  "created": "2026-07-28T13:03:48Z",
+  "updated": "2026-07-28T13:04:01Z",
+  "result_path": "/home/nithu/Obsidian/Brain/00-firm-bus/jobs/results/job-20260728-130348-trading1-23541.md",
+  "branch": "feat/hle-import-resilience",
+  "summary": "[echo-stub] role=trading-1 engine=echo cwd=/home/nithu/code/ai-assistent\n--- prompt ---\nFIRM v2 e2e-test (echo): svar med rolleinfo",
+  "exit_code": 0,
+  "head": "2856344",
+  "dirty": true,
+  "note": "e2e-test, ingenting å pushe"
+}

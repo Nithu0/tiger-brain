@@ -1,0 +1,49 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-27T072553Z
+# kode: UKJENT
+# kilde: projects/anbud/crm/scripts/baseline/innsyn-kandidater.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh --sql innsyn-kandidater.sql
+
+BEGIN
+SET
+K|2026-112907|2026-08-10|JERNBANEDIREKTORATET (916810962, stat)|Kjøp av konsulentbistand til neste generasjon trafikkavtaler på Østlandet|Egil Smestad Rådgivning AS (917692203)|4000000|6
+K|2026-110871|2026-06-15|ENERGIDEPARTEMENTET (977161630, stat)|Anskaffelse av ekstern bistand innen økonomiområdet til Energidepartementet|BDO AS 1 (993606650)|1500000|4
+K|2026-110055|2026-06-03|DRAMMEN KOMMUNE (921234554, kommune)|Kunngjøring av kontraktsinngåelse - Eierstrategisk rådgivningsbistand til de samordnede kommunale ei|MERSLAND AS (989849751)|4000000|12
+K|2026-109515|2026-05-11|DIREKTORATET FOR FORVALTNING OG ØKONOMISTYRING (986252932, stat)|Åpen anbudskonkurranse - Anskaffelse av konsulentbistand til utviklingsteam|Swusj Trondheim AS (929470826)|4500000|12
+K|2026-108167|2026-05-05|STATSBYGG (971278374, stat)|2025/2787 - Verktøy for medarbeiderundersøkelser og pulsmålinger med tilhørende konsulentbistand - P|Rambøll Management Consulting AS (987886609)|1177000|3
+K|2026-108183|2026-05-05|KOLUMBUS AS (914749360, kommune)|Konsulentbistand innen UX-design|Okse (912879402)|4500000|10
+K|2026-105337|2026-03-09|STATSFORVALTERENS FELLESTJENESTER (921627009, stat)|Rammeavtale for konsulent og rådgivningstjenester ifm. sikkerhetstesting og hendelseshåndtering|PricewaterhouseCoopers AS (987009713)|5000000|4
+K|2026-104728|2026-03-09|FORSVARSMATERIELL (916075855, stat)|Dynamisk innkjøpsordning - Konsulenttjenester innen fagfeltet Systemteknikk|C13 Consulting AS (934845250)|2000000|1
+K|2026-105337|2026-03-09|STATSFORVALTERENS FELLESTJENESTER (921627009, stat)|Rammeavtale for konsulent og rådgivningstjenester ifm. sikkerhetstesting og hendelseshåndtering|Defendable AS (925880140)|5000000|4
+K|2026-103915|2026-02-18|DIGITALISERINGSDIREKTORATET (991825827, stat)|Kontraktstildeling - Backendutvikler med spisskompetanse på .Net til Altinn Studio – DPS|Forse .Net AS (914951852)|4950000|1
+K|2026-103917|2026-02-18|DIGITALISERINGSDIREKTORATET (991825827, stat)|Kontraktstildeling - Backendutvikler med spisskompetanse innen .Net og Azure til Altinn Studio – DPS|Relato Code AS (928602869)|5000000|7
+K|2026-103824|2026-02-11|SUNNFJORD KOMMUNE (921244207, kommune)|Konsulentbistand til omstillingsarbeid|Tell Norge AS (834836912)|2444250|6
+K|2026-104490|2026-02-09|HOVEDREDNINGSSENTRALEN (971390425, stat)|Anskaffelse av konsulentbistand innen områdene flytenikk, vedlikehold, flyoperative hjelpemiddler, k|MAP Aircraft Projects AS (986550119)|3000000|2
+K|2026-105725|2026-01-21|DIREKTORATET FOR SAMFUNNSSIKKERHET OG BEREDSKAP (DSB) (974760983, stat)|Bistand til vedlikehold og utvikling av webløsninger|Epinova AS (995215748)|5000000|2
+K|2026-101612|2026-01-06|JERNBANEDIREKTORATET (916810962, stat)|Konsulentbistand til prosjektledelse, prosjektbistand og risikovurderinger i forbindelse med oppfølg|Norconsult Norge AS (962392687)|5000000|12
+K|2025-120639|2025-12-05|DIGITALISERINGSDIREKTORATET (991825827, stat)|Kontraktstildeling - 2 frontendutviklere til Team Altinn Studio – DPS|KNOWIT AS (997725646)|4950000|13
+K|2025-120639|2025-12-04|DIGITALISERINGSDIREKTORATET (991825827, stat)|Kontraktstildeling - 2 frontendutviklere til Team Altinn Studio – DPS|WITTED MEGACORP AS (923930299)|4950000|13
+K|2025-121391|2025-11-26|SJØFARTSDIREKTORATET (974761262, stat)|Konsulentbistand – Strategisk rådgivning    Evaluering av IT-utviklingsarbeid|Bouvet Norge AS (hovedenhet) (996756246)|4000000|19
+K|2025-116244|2025-10-16|IKT NORDHORDLAND KOMMUNALT OPPGÅVEFELLESSKAP (923971890, kommune)|Konsulentbistand utvikling av KI-Plattform|PricewaterhouseCoopers AS (PwC) (-)|2000000|17
+K|2025-114942|2025-09-01|OSLO KOMMUNE KLIMAETATEN (876819902, stat)|Kjøp av konsulentbistand på energifeltet: Koordinere prosjektet mikroenergisystem Furuset og bistand|Energidata Consulting AS (991833250)|2000000|8
+K|2025-111512|2025-07-18|STATSBYGG (971278374, stat)|2025/2571 - Konsulentbistand til digitaliseringsprosjekt i Dokumentforvaltning|HRP AS (988889245)|2000000|4
+K|2025-109912|2025-06-23|JERNBANEDIREKTORATET (916810962, stat)|Bistand til avtalegjennomgang i forbindelse med oppdraget «Trafikkavtalegjennomgang»|Oslo Economics (993924741)|3700000|5
+K|2025-110112|2025-06-20|SOLA KOMMUNE (948243113, kommune)|IT-konsulent, Windows server, integrasjoner og IAM|Crayon AS (991124810)|4100000|1
+K|2025-109299|2025-06-11|BÆRUM KOMMUNE (935478715, kommune)|Kjøp av teknisk driftsbistand Oracle|Antire AS (932436787)|2532816|2
+K|2025-106528|2025-04-24|STATSFORVALTERENS FELLESTJENESTER (921627009, stat)|Rammeavtale konsulentbistand IKT|Atea AS (Hovedenhet) (976239997)|1000000|1
+K|2025-106372|2025-04-22|DIGITALISERINGSDIREKTORATET (991825827, stat)|Kontraktstildeling - Dynamisk innkjøpsordning - bistand - fagekspert digital identitet|Udelt AS (932925982)|1000000|6
+K|2025-105235|2025-04-01|DIGITALISERINGSDIREKTORATET (991825827, stat)|Kontraktstildeling - Marked- og kommunikasjonskonsulent til prosjekt Modernisering Altinn - DPS|Experis AS (982683955)|3250000|9
+K|2025-103948|2025-03-13|SANDNES KOMMUNE (964965137, kommune)|Konsulent - Innsparing- og effektiviseringsprosjekt|Agenda Kaupang AS (968938525)|3500000|8
+K|2024-118623|2024-12-22|NORGES MILJØ- OG BIOVITENSKAPELIGE UNIVERSITET (NMBU) (969159570, stat)|Konsulentbistand til forprosjekt, anskaffelse og implementering av ERP system|BDO AS 1 (993606650)|2000000|12
+K|2024-117778|2024-12-09|RANDABERG KOMMUNE (934945514, kommune)|IT Konsulent til drift|Crayon AS (991124810)|3500000|3
+K|2024-118622|2024-12-05|VESTLAND FYLKESKOMMUNE (821311632, fylkeskommune)|Anskaffing av IT-konsulentar innan hendingshandtering|Atea AS (Hovedenhet) (976239997)|2000000|3
+K|2024-116164|2024-11-11|DIGITALISERINGSDIREKTORATET (991825827, stat)|Kontraktstildeling - DevOps-fullstackutvikler – DPS|Netlight AS (991952802)|5000000|4
+K|2024-115316|2024-10-27|DIREKTORATET FOR FORVALTNING OG ØKONOMISTYRING (986252932, stat)|Frontend utvikler|Bouvet Norge AS (hovedenhet) (996756246)|5000000|6
+K|2024-115316|2024-10-27|DIREKTORATET FOR FORVALTNING OG ØKONOMISTYRING (986252932, stat)|Frontend utvikler|Deca People AS (929008006)|5000000|6
+K|2024-115203|2024-10-23|DIGITALISERINGSDIREKTORATET (991825827, stat)|Kontraktstildeling - Frontendutvikler med utvidet kompetanse - til Altinn 3|Techpros AS (931246992)|4800000|47
+K|2024-115135|2024-10-22|DIGITALISERINGSDIREKTORATET (991825827, stat)|Kontraktstildeling - Fullstackutvikler til prosjekt Oppgjør etter dødsfall|IVER ACCELERATE GROUP AS (924655445)|495000|27
+K|2024-114951|2024-10-20|NORSK RIKSKRINGKASTING AS (976390512, stat)|NRK MA3261/19E - Dynamisk innkjøpsordning IKT Konsulenter|PricewaterhouseCoopers AS (987009713)|2000000|9
+K|2024-114949|2024-10-20|NORSK RIKSKRINGKASTING AS (976390512, stat)|NRK MA3261/19E - Dynamisk innkjøpsordning IKT Konsulenter|Cgi Norge AS (919562390)|1500000|15
+K|2024-114069|2024-10-01|KOLUMBUS AS (914749360, kommune)|Konsulentbistand for videreutvikling av sanntidssystem|Miles AS (988340316)|4500000|10
+K|2024-113338|2024-08-07|DIGITALISERINGSDIREKTORATET (991825827, stat)|Kontraktstildeling - konsulentbistand - App-utviklere og -designer - MinID-apper|Forse .Net AS (914951852)|1700000|9
+ROLLBACK

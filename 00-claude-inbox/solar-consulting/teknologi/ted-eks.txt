@@ -1,0 +1,11 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-27T064249Z
+# kode: UKJENT
+# kilde: projects/anbud/crm/scripts/baseline/ted-eks.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh --sql ted-eks.sql
+
+BEGIN
+SET
+RAW|137864-2024|{"ti": ["978 632 378", "915 211 631", "977 349 990", "971 509 120"], "tn": {"eng": ["LOS Elektro AS", "A/S Pettersson & Gjellesvik's Elektriske Installasjonsforretning", "Frøland & Noss Elektro AS", "Vangen Elektriske AS"]}, "wi": ["978 632 378", "915 211 631", "977 349 990", "971 509 120"], "wn": {"eng": ["A/S Pettersson & Gjellesvik's Elektriske Installasjonsforretning", "Frøland & Noss Elektro AS", "LOS Elektro AS", "Vangen Elektriske AS", "LOS Elektro AS"]}}
+RAW|617155-2024|{"ti": ["915 213 952"], "tn": {"eng": ["Philips Norge AS"]}, "wi": ["915 213 952"], "wn": {"eng": ["Philips Norge AS"]}}
+ROLLBACK

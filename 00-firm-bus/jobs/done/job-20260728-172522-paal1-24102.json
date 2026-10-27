@@ -1,0 +1,21 @@
+{
+  "id": "job-20260728-172522-paal1-24102",
+  "role": "paal-1",
+  "engine": "claude",
+  "project": "aslisten",
+  "cwd": "/home/nithu/code/aslisten-crm",
+  "pii": true,
+  "prompt": "Railway-deploy av fix/prod-blokkere — operatøren har GITT eksplisitt GO på Telegram (Railway + PII-unntak for kundedata i EU-region akseptert). Gjør følgende, i rekkefølge:\n\n1. Legg CURRENT-STATE.md i .gitignore (maskingenerert artefakt, blokkerer verify-gaten) og committ på fix/prod-blokkere.\n2. Opprett PR fix/prod-blokkere → main på GitHub (gh pr create) med kort beskrivelse av de 4 blokkerne. IKKE merge ennå.\n3. Sjekk hvilke env-vars som finnes på Railway-prosjektet (railway CLI): rapporter KUN navn som PRESENT/MISSING for CRM_ADMIN_USER, CRM_ADMIN_PASSWORD, CRM_INBOUND_SECRET, CRM_BASE_URL. ALDRI print verdier (secrets-regel).\n4. Rapporter tilbake: PR-lenke + hvilke vars operatøren må sette i Railway-UI-et FØR merge (appen fail-closer uten dem — merge før vars = 503 i prod). Operatøren setter verdiene selv (nano-prinsippet).\n5. STOPP der. Merge skjer først når operatøren sier \"merge\" (ny dispatch).",
+  "prompt_raw": "Railway-deploy av fix/prod-blokkere — operatøren har GITT eksplisitt GO på Telegram (Railway + PII-unntak for kundedata i EU-region akseptert). Gjør følgende, i rekkefølge:\n\n1. Legg CURRENT-STATE.md i .gitignore (maskingenerert artefakt, blokkerer verify-gaten) og committ på fix/prod-blokkere.\n2. Opprett PR fix/prod-blokkere → main på GitHub (gh pr create) med kort beskrivelse av de 4 blokkerne. IKKE merge ennå.\n3. Sjekk hvilke env-vars som finnes på Railway-prosjektet (railway CLI): rapporter KUN navn som PRESENT/MISSING for CRM_ADMIN_USER, CRM_ADMIN_PASSWORD, CRM_INBOUND_SECRET, CRM_BASE_URL. ALDRI print verdier (secrets-regel).\n4. Rapporter tilbake: PR-lenke + hvilke vars operatøren må sette i Railway-UI-et FØR merge (appen fail-closer uten dem — merge før vars = 503 i prod). Operatøren setter verdiene selv (nano-prinsippet).\n5. STOPP der. Merge skjer først når operatøren sier \"merge\" (ny dispatch).",
+  "origin": "orchestrator-1",
+  "reply_to": "telegram",
+  "status": "pushed",
+  "created": "2026-07-28T17:25:22Z",
+  "updated": "2026-08-09T14:37:24Z",
+  "result_path": "/home/nithu/Obsidian/Brain/00-firm-bus/jobs/results/job-20260728-172522-paal1-24102.md",
+  "branch": "fix/prod-blokkere",
+  "summary": "⚠ claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login · Unset it to load your organization's connectors\nFerdig med steg 1–4, stoppet før merge som instruert.\n**PR:** https://github.com/Nithu0/aslisten-crm/pull/1 (fix/prod-blokkere → main, ikke merget). Beskrivelsen dekker de 4 blokkerne: fail-closed `/api/inbound`, WAL-trygg backup, fnr-maskering før Anthropic, health-herding.\n**Railway env-vars** (prosjekt motivated-strength / service aslisten-crm, production):\n- CRM_ADMIN_USER: **PRESENT**\n- CRM_ADMIN_PASSWORD: **PRESENT**\n- CRM_INBOUND_SECRET: **PRESENT**\n- CRM_BASE_URL: **PRESENT**\nAlle fire er allerede satt — **ingen vars mangler før merge**, fail-close-risikoen (503) er avverget. Bonusobservasjoner: `CRM_DB_PATH` er satt og et Railway-volum er montert, så SQLite-persistens ser riktig ut. `ANTHROPIC_API_KEY` er ikke satt, men den er valgfri (bak feature-flagget `CRM_AI_EXTRACT=1`, appen faller tilbake til regex-ekstraksjon) — kun aktuelt hvis du vil ha AI-ekstraksjon i prod.\n**Ett forbehold:** gitignore-committen for CURRENT-STATE.md (`a61e91c`) ligger kun lokalt på fix/prod-blokkere — push er operatør-gated, så PR-en viser foreløpig bare `9385e19`. Push branchen før/ved merge så den blir med.\nVenter på «merge»-dispatch.",
+  "exit_code": 0,
+  "head": "a61e91c",
+  "dirty": false
+}

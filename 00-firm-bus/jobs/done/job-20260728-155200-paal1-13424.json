@@ -1,0 +1,22 @@
+{
+  "id": "job-20260728-155200-paal1-13424",
+  "role": "paal-1",
+  "engine": "claude",
+  "project": "aslisten",
+  "cwd": "/home/nithu/code/aslisten-crm",
+  "pii": true,
+  "prompt": "kjør inbox",
+  "prompt_raw": "kjør inbox",
+  "origin": "telegram",
+  "reply_to": "telegram",
+  "status": "rejected",
+  "created": "2026-07-28T15:52:00Z",
+  "updated": "2026-08-14T15:53:39Z",
+  "result_path": "/home/nithu/Obsidian/Brain/00-firm-bus/jobs/results/job-20260728-155200-paal1-13424.md",
+  "branch": "fix/prod-blokkere",
+  "summary": "⚠ claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login · Unset it to load your organization's connectors\nFerdig. Inbox hadde ingen ny dispatch — alt var kvittert — så jeg kjørte det aktive målet: **pilot-herding av aslisten-crm**. Alt ligger på branch `fix/prod-blokkere` (commit `9385e19`), ikke pushet (OK kjør-gaten).\n**De 4 prod-blokkerne, fikset med TDD (rød→grønn per fiks):**\n1. `/api/inbound` fail-closer nå i produksjon uten `CRM_INBOUND_SECRET` (503, samme konvensjon som middleware) + timing-safe secret-sjekk.\n2. WAL-fella tettet: `backupDatabase()` (VACUUM INTO + checkpoint) pluss admin-beskyttet `GET /api/backup` som laster ned et komplett øyeblikksbilde — fungerer likt lokalt og på Railway.\n3. Fnr/D-nummer maskeres før tekst går til Anthropic — inkludert grensetilfellet der 5000-tegns-cappen kutter midt i nummeret (maskering skjer før kutt).\n4. `/api/health` svarer `{ok:true}` uten saksantall, 503 ved DB-feil.\n**Adversariell review etterpå ga 6 funn** — 5 fikset (slice/redact-rekkefølgen var en reell delvis-fnr-lekkasje, separator-varianter som en-dash, checkpoint gjort best-effort, regresjonslås på at middleware dekker `/api/backup`, tsbuildinfo i gitignore); funn 6 (hele DB-en i minnet per backup-kall) er akseptert for pilot-størrelse og notert som senere-punkt. Sluttverifisert: 70/70 tester, `tsc` ren, prod-bygg grønt.\n**Til deg å beslutte:** `docs/deploy-anbefaling.md` — jeg anbefaler lokal drift + named tunnel som primærvalg fordi PII-gaten («kundedata aldri til leide tjenester») ellers brytes som bieffekt; Railway er driftsmessig bedre hvis du eksplisitt avklarer PII-lagring i EU-sky. Deretter: OK kjør på push av `fix/prod-blokkere`. Feed-kvittering er lagt inn og GOALS.md oppdatert — av målets tre punkter gjenstår bare dine to gates.",
+  "exit_code": 0,
+  "head": "9385e19",
+  "dirty": true,
+  "note": "Superseded: samme fix/prod-blokkere-arbeid levert via job-20260728-172522-paal1-24102 (approvet 09.08, PR #1 merget, prod live). Ingen handling tapt."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "job-20260921-181150-data1-92823",
+  "role": "data-1",
+  "engine": "claude",
+  "project": "command-center",
+  "cwd": "/home/nithu/code/command-center",
+  "pii": false,
+  "prompt": "Prosjekt Renseri (nytt norsk mobilt serviceselskap: rens/tekstil, skomaker/skoreparasjon, mobil nøkkelservice/nøkkelfiling, 24/7 mobil utrykning; B2B-primær: eiendomsforvaltere, vaktmesterfirmaer, borettslag, sameier, kontorer, hoteller, klinikker). Lag en Google Ads + Meta-annonseringsplan for lansering: kampanjestruktur (search per tjeneste, B2B vs privat), søkeordliste med match-typer og negative søkeord på norsk, konverteringer som bør måles (skjema innsendt=generate_lead, klikk på tlf=phone_click, Meta Lead/Contact), Consent Mode v2-krav i Norge (ny ekomlov 2025, informasjonskapsler), anbefalt startbudsjett-logikk (ikke oppdiktede CPC-tall uten kilde), og landingsside-krav per kampanje. Fil: 2026-09-21_ads-plan.md. Skriv rapporten til ~/Obsidian/Brain/00-claude-inbox/renseri/ (lag mappa). REPORT-ONLY: ingen DNS-endringer, ingen kjøp, ingen kontoopprettelse, ingen push, ikke rør ~/code/Renseri (en annen sesjon bygger den). Merk påstander FACT (med kilde+dato) / ASSUMPTION / UNKNOWN. En linje til feed.md når ferdig.",
+  "prompt_raw": "Prosjekt Renseri (nytt norsk mobilt serviceselskap: rens/tekstil, skomaker/skoreparasjon, mobil nøkkelservice/nøkkelfiling, 24/7 mobil utrykning; B2B-primær: eiendomsforvaltere, vaktmesterfirmaer, borettslag, sameier, kontorer, hoteller, klinikker). Lag en Google Ads + Meta-annonseringsplan for lansering: kampanjestruktur (search per tjeneste, B2B vs privat), søkeordliste med match-typer og negative søkeord på norsk, konverteringer som bør måles (skjema innsendt=generate_lead, klikk på tlf=phone_click, Meta Lead/Contact), Consent Mode v2-krav i Norge (ny ekomlov 2025, informasjonskapsler), anbefalt startbudsjett-logikk (ikke oppdiktede CPC-tall uten kilde), og landingsside-krav per kampanje. Fil: 2026-09-21_ads-plan.md. Skriv rapporten til ~/Obsidian/Brain/00-claude-inbox/renseri/ (lag mappa). REPORT-ONLY: ingen DNS-endringer, ingen kjøp, ingen kontoopprettelse, ingen push, ikke rør ~/code/Renseri (en annen sesjon bygger den). Merk påstander FACT (med kilde+dato) / ASSUMPTION / UNKNOWN. En linje til feed.md når ferdig.",
+  "origin": "telegram",
+  "reply_to": "telegram",
+  "status": "awaiting-verify",
+  "created": "2026-09-21T18:11:50Z",
+  "updated": "2026-09-21T18:12:53Z",
+  "result_path": "/home/nithu/Obsidian/Brain/00-firm-bus/jobs/results/job-20260921-181150-data1-92823.md",
+  "branch": "main",
+  "summary": "Ingenting nytt å skrive. Denne jobben var en gjenkjøring av det headless-oppdraget som feilet med exit 127 tidligere i dag, og data-1 fullførte rapporten manuelt kl. 18:03Z. Jeg verifiserte den eksisterende fila i stedet for å overskrive den.\n**Fil:** `~/Obsidian/Brain/00-claude-inbox/renseri/2026-09-21_ads-plan.md` (280 linjer)\nDen dekker alt oppdraget ba om:\n- **Kampanjestruktur** med 7 Search-kampanjer delt på tjeneste × B2B/privat, egen 24/7-utrykningskampanje, og Meta som retargeting/lokal synlighet.\n- **Søkeordliste** på norsk med match-typer (phrase og exact først), felles negativliste på kontonivå og kryssnegativer mellom B2B- og privatkampanjer.\n- **Konverteringer:** generate_lead via GA4-import, phone_click som tel-klikk, samtaler fra annonser, og Meta Lead/Contact via Pixel + Conversions API. Rapporten flagger som FACT at Norge ikke er på Googles liste over land med forwarding numbers, så samtalelengde kan ikke måles via Google.\n- **Consent Mode v2:** ekomloven § 3-15 fra 1.1.2025, GDPR-nivå samtykke, default denied på alle fire parametere, Datatilsynets pikselbøter som kilde.\n- **Budsjettlogikk** basert på ønsket antall leads × CPL fra Keyword Planner etter kontoopprettelse. Ingen oppdiktede CPC-tall.\n- **Landingssidekrav** per kampanje og 7 åpne spørsmål til operatøren.\n- 47 FACT/ASSUMPTION/UNKNOWN-merker og 16 kilder, alle datert 2026-09-21.\nIngen kontoer, kjøp, DNS eller push. `~/code/Renseri` er ikke rørt. Én kvitteringslinje er lagt til feed.md. Ingen commits, ingen branch, siden ingen repo-filer ble endret.\n**Verdt å merke seg:** firm-remote-executor feiler fortsatt med `claude: command not found` i WSL, ifølge infra-1 sin feed-linje. Alle tre Renseri-jobbene fra samme dispatch feilet og ble kjørt manuelt. Det er årsaken til at denne gjenkjøringen kom.",
+  "exit_code": 0,
+  "head": "fa0fd8d",
+  "dirty": true,
+  "work_branches": ""
+}

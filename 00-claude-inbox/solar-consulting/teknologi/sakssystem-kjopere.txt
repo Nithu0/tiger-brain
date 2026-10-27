@@ -1,0 +1,81 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-27T071744Z
+# kode: UKJENT
+# kilde: projects/anbud/crm/scripts/baseline/sakssystem-kjopere.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh --sql sakssystem-kjopere.sql
+
+BEGIN
+SET
+KJOPER|IKT NORDHORDLAND KOMMUNALT OPPGÅVEFELLESSKAP|923971890|kommune/none|3|2026-10-20|FDV Vegløysing og flåtestyring
+KJOPER|OSLO KOMMUNE BYDEL 5 FROGNER|874778702|stat/none|1|2026-10-07|Konsulent saksbehandling barnevern
+KJOPER|BODØ KOMMUNE|972418013|kommune/none|2|2026-09-28|Markedsdialog - nytt inkassosystem i Bodø kommune
+KJOPER|LILLEHAMMER KOMMUNE|945578564|kommune/none|1|2026-09-28|Brannforebyggende fagsystem for håndtering av §13-objekter (særskilte brannobjekter)
+KJOPER|BERGEN KOMMUNE|964338531|kommune/none|5|2026-09-23|BME X 2026-07 RFI - Markedskartlegging av fagsystem for lekeplasskontroller
+KJOPER|VESTBY KOMMUNE|943485437|kommune/none|2|2026-09-18|Fagsystem til PPT
+KJOPER|IKT AGDER IKS|985359385|interkommunalt/none|5|2026-09-15|Intensjonskunngjøring om anskaffelse av fagsystem for pedagogisk-psykologisk tjeneste
+KJOPER|LILLESTRØM KOMMUNE|820710592|kommune/none|1|2026-09-14|Anskaffelse av fagsystem for PPT
+KJOPER|SKIEN KOMMUNE|938759839|kommune/none|2|2026-09-02|Intensjonskunngjøring - Fagsystem for Eiendomsskatt
+KJOPER|FÆRDER KOMMUNE|817263992|kommune/none|1|2026-09-01|Markedsdialog - Saksbehandlingssystem for PPT-tjenesten
+KJOPER|LARVIK KOMMUNE|918082956|kommune/none|1|2026-08-20|Innleie av byggesaksbehandler
+KJOPER|ASKER KOMMUNE|920125298|kommune/none|4|2026-08-12|Fagsystem for forvaltning av kommunale tjenester
+KJOPER|TRONDHEIM KOMMUNE|942110464|kommune/none|1|2026-07-12|Markedsundersøkelse -  Fagsystem for kommunalt NAV
+KJOPER|ROMERIKE AVFALLSFOREDLING IKS|965075364|interkommunalt/none|1|2026-07-06|Veiledende kunngjøring om Fagsystem for renovasjon RFI
+KJOPER|SYSIKT KOMMUNALT OPPGAVEFELLESSKAP|995501872|kommune/none|1|2026-07-02|Endring av drift og leveransemodell på nåverende sak og arkivsystem for Kommunane i SySIKT KO
+KJOPER|SAUDA KOMMUNE|964979367|kommune/none|1|2026-06-26|Konsulentbistand byggesaksbehandling
+KJOPER|KS-KOMMUNESEKTORENS ORGANISASJON|971032146|other/none|3|2026-06-22|Hvordan kan saksbehandlingskrav knyttet til individuelle rettigheter forenkles uten å svekke kvaliteten av tje
+KJOPER|TRØNDELAG BRANN- OG REDNINGSTJENESTE IKS|992047364|interkommunalt/none|2|2026-06-15|Fagsystem feier til Trøndelag brann- og redningstjeneste IKS
+KJOPER|STEINKJER KOMMUNE|840029212|kommune/none|1|2026-06-14|Intensjonskunngjøring - Saksbehandlingssystem for motorferdsel i utmark
+KJOPER|FREDRIKSTAD KOMMUNE|940039541|kommune/none|4|2026-06-08|Intensjonskunngjøring -  midlertidig avtale kommunalteknisk fagsystem
+KJOPER|NORDRE FOLLO KOMMUNE|922092648|kommune/none|4|2026-05-31|Markedsundersøkelse RFI - Generell saksbehandling
+KJOPER|NARVIK KOMMUNE|959469059|kommune/none|2|2026-05-31|Skybasert fagsystem for kommunaltekniske tjenester
+KJOPER|BAMBLE KOMMUNE|940244145|kommune/none|1|2026-05-22|Fagsystem for kunst- og gjenstandsregister
+KJOPER|GJØVIK KOMMUNE FELLESENHET ANSKAFFELSER|912862089|UNKNOWN/none|1|2026-05-18|RA-26-001-GK-PPT FAGSYSTEM IKT
+KJOPER|GJØVIK KOMMUNE|940155223|kommune/none|2|2026-05-18|RA-26-001-GK-PPT FAGSYSTEM IKT
+KJOPER|HAMMERFEST KOMMUNE|921770669|kommune/none|1|2026-05-14|Kjøp av digitalt renholdsprogram
+KJOPER|ULLENSVANG KOMMUNE|920500633|kommune/none|1|2026-05-11|Byggesaksbehandler
+KJOPER|MELHUS KOMMUNE|938726027|kommune/none|3|2026-05-06|Anskaffelse helpdesksystem – sakssystem for brukerstøtte
+KJOPER|ÅLESUND KOMMUNE|929911709|kommune/none|1|2026-05-06|Anskaffelse - Fagsystem Utekontakter, 2026
+KJOPER|VESTFOLD FYLKESKOMMUNE|929882385|fylkeskommune/none|4|2026-04-28|Markedsdialog for: saksbehandling av søknader og/eller planlegging av tilrettelagt skoleskyss.
+KJOPER|SANDNES KOMMUNE|964965137|kommune/none|2|2026-03-31|Anskaffelse av helhetlig parkeringssystem
+KJOPER|INDIGO IKT IKS|930283487|interkommunalt/none|1|2026-03-03|Del 1: Anskaffelse av fagsystem for PP-tjenester
+KJOPER|IRIS SALTEN IKS|967518190|interkommunalt/none|1|2026-02-11|Fagsystem til Iris Salten IKS
+KJOPER|ENEBAKK KOMMUNE|964949581|kommune/none|1|2026-02-05|Intensjonskunngjøring anskaffelse av fagsystem for Follo Brannvesen IKS
+KJOPER|SKIEN KOMMUNE - GRENLANDSKOMMUNENES INNKJØPSENHET (GKI)|991799710|stat/none|1|2026-01-19|Fagsystem Stoffkartotek
+KJOPER|MELØY KOMMUNE|970189866|kommune/none|1|2026-01-05|Intensjonskunngjøring: Nytt sakarkivsystem
+KJOPER|LØRENSKOG KOMMUNE|842566142|kommune/none|3|2025-12-16|Fagsystem NAV kommune
+KJOPER|SOLØR RENOVASJON IKS|970961747|interkommunalt/none|1|2025-12-11|Trinn 1: Nytt fagsystem - Solør Renovasjon
+KJOPER|HOL KOMMUNE|971030607|other/none|1|2025-11-19|25352 Bistand til byggesaksbehandling
+KJOPER|EIDSVOLL KOMMUNE|964950113|kommune/none|1|2025-10-09|Innleie av konsulent til byggesaksbehandling for nedbygging av restanser
+KJOPER|BÆRUM KOMMUNE|935478715|kommune/none|2|2025-10-09|Fagsystem for spesialpedagogisk tjeneste
+KJOPER|OSLO KOMMUNE INNKREVINGSETATEN|976819934|stat/none|3|2025-09-22|Anskaffelse av system for kommunale gebyrer og eiendomsskatt
+KJOPER|NESODDEN KOMMUNE|944383565|kommune/none|1|2025-08-22|Intensjonskunngjøring - anskaffelse av fagsystem for tekniske tjenester for kommunal avgifter, samt eiendomssk
+KJOPER|TELEMARK FYLKESKOMMUNE|929882989|fylkeskommune/none|4|2025-08-21|Sak- og arkivsystem
+KJOPER|MIDT-TELEMARK KOMMUNE|920297293|kommune/none|2|2025-07-14|Prekvalifisering Anskaffelse Sak/arkivsystem for Nome og Midt Telemark kommuner 25/10878
+KJOPER|SUNNFJORD MILJØVERK IKS|970921915|interkommunalt/none|1|2025-07-13|Fagsystem for kommunalteknisk tjeneste - administrering av husholdningsrenovasjon og slam
+KJOPER|SARPSBORG KOMMUNE|938801363|kommune/none|2|2025-07-09|Veiledende kunngjøring - Nytt fagsystem sosiale tjenester til NAV Sarpsborg
+KJOPER|OSLO KOMMUNE GRAVPLASSETATEN|976820010|stat/none|4|2025-07-03|Anskaffelse av nytt fagsystem for Gravplassetaten
+KJOPER|VANYLVEN KOMMUNE|964978662|kommune/none|1|2025-06-24|Markedsundersøkelse/RFI - Saksbehandlingssystem
+KJOPER|HARSTAD KOMMUNE / HÁRSTTÁID SUOHKAN|972417971|kommune/none|4|2025-05-30|Konsulenttjenester for byggesaksbehandling - rammeavtale
+KJOPER|DRAMMEN KOMMUNE|921234554|kommune/none|2|2025-05-12|Fagsystem for bestilling av lokaler for Drammen kommune
+KJOPER|FAUSKE KOMMUNE|972418021|kommune/none|1|2025-04-22|Digitalisering av byggesaksarkiv
+KJOPER|INDRE ØSTFOLD KOMMUNE|920123899|kommune/none|1|2025-04-02|Saksbehandling barnevern - rammeavtale
+KJOPER|NOTODDEN KOMMUNE|938583986|kommune/none|1|2025-03-20|Kjøp av saksbehandlersystem til K-IKT i Kongsbergregionen
+KJOPER|SØNDRE HELGELAND MILJØVERK|975824845|interkommunalt/none|1|2025-03-17|Fagsystem for kommunalteknisk tjeneste - administrering av husholdningsrenovasjon og slam
+KJOPER|LIER KOMMUNE|857566122|kommune/none|1|2025-03-07|Inntauing, lagring og saksbehandling av feilparkerte kjøretøy
+KJOPER|ØYGARDEN KOMMUNE|922530890|kommune/none|1|2025-03-04|Intensjonskunngjering oppgradering av sak/arkiv
+KJOPER|SOKNDAL KOMMUNE|964965692|kommune/none|1|2025-02-26|Rammeavtale konsulent byggesaksbehandling
+KJOPER|GJESDAL KOMMUNE|964978573|kommune/none|1|2025-02-24|Skanning av byggesaksarkiv - markedsundersøkelse
+KJOPER|TRØNDELAG FYLKESKOMMUNE|817920632|fylkeskommune/none|1|2025-01-06|Tjenesteavtale for fagsystem PPT
+KJOPER|HERØY KOMMUNE|964978840|kommune/none|1|2024-12-22|Fagsystem eigedomsskatt
+KJOPER|HORTEN KOMMUNE|964951284|kommune/none|1|2024-12-18|Intensjonskunngjøring - Fagsystem for eiendomsskatt
+KJOPER|BALSFJORD KOMMUNE|940208580|kommune/none|1|2024-12-13|Nytt fagsystem barnevern - Balsfjord kommune
+KJOPER|SANDEFJORD KOMMUNE|916882807|kommune/none|1|2024-11-12|Fagsystem håndtering av selvkostområder
+KJOPER|KRISTIANSUND KOMMUNE|991891919|kommune/none|1|2024-11-12|IKT Orkide - Invitasjon til Markedsdialog – Fagsystem for kommunale gebyr, avgifter og eiendomsskatt
+KJOPER|OSEN KOMMUNE|944350675|kommune/none|1|2024-11-11|Intensjonskunngjøring Fagsystem Eiendomsskatt - Osen
+KJOPER|INDRE FOSEN KOMMUNE|944305483|kommune/none|1|2024-11-11|Intensjonskunngjøring Fagsystem Eiendomsskatt - Indre Fosen
+KJOPER|OSLO KOMMUNE VANN- OG AVLØPSETATEN|971185589|stat/none|1|2024-11-05|Automatisere saksbehandling FTS
+KJOPER|UTENRIKSDEPARTEMENTET|972417920|stat/none|1|2024-10-28|Fagsystemet EØS- og Schengen notatbase
+KJOPER|BØ KOMMUNE|945452676|kommune/none|1|2024-10-28|Intensjonskunngjøring anskaffelse fagsystem eiendomsskatt
+KJOPER|NÆRØYSUND KOMMUNE|921785410|kommune/none|1|2024-10-28|Fagsystem Gebyr, VA, Eiendomsskatt, Brannforebygging og selvbetjening.
+TOTAL|172|121|71|||
+ROLLBACK

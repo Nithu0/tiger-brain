@@ -1,0 +1,23 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-27T064210Z
+# kode: UKJENT
+# kilde: projects/anbud/crm/scripts/baseline/ted-winner-orgnr.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh --sql ted-winner-orgnr.sql
+
+BEGIN
+SET
+KLASSE|fra 17.10|begge_null|967
+KLASSE|fra 17.10|lagret_men_ny_null|10
+KLASSE|fra 17.10|lik|11287
+KLASSE|fra 17.10|uten_raw|131
+ULIK_EKS|137864-2024|A/S Pettersson & Gjellesvik's Elektriske Installasjonsforretning|915211631 -> -
+ULIK_EKS|137864-2024|Frøland & Noss Elektro AS|977349990 -> -
+ULIK_EKS|137864-2024|LOS Elektro AS|978632378 -> -
+ULIK_EKS|137864-2024|Vangen Elektriske AS|971509120 -> -
+ULIK_EKS|155428-2024|Mediq Norge AS|981080262 -> -
+ULIK_EKS|372236-2025|Holmenkollen Dagsenter og Boliger|971540788 -> -
+ULIK_EKS|527108-2025|Frelsesarmeen|938498318 -> -
+ULIK_EKS|617155-2024|Philips Norge AS|915213952 -> -
+ULIK_EKS|623914-2024|Philips Norge AS|915213952 -> -
+ULIK_EKS|744638-2024|ULMO AS|932958252 -> -
+ROLLBACK

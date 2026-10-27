@@ -17,7 +17,7 @@ Operating rules for this vault. Applies to operator, teammate, and Claude. Bindi
 ## Where to write
 
 - **Default**: drop new notes in [[00-claude-inbox/README|00-claude-inbox]] under the right project folder. Don't pre-optimize.
-- After it earns its keep -> move to project folder (`01-nexus/`, `02-thesis/`, etc.) or to `_promote-candidates/` for repo migration.
+- After it earns its keep -> move to project folder (`01-nexus/`, `03-business/`, etc.) or to `_promote-candidates/` for repo migration.
 - MOCs in `_maps/` are curated — only add a link when the atomic note is stable.
 
 ## Where NOT to write without "OK kjør"

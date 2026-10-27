@@ -1,0 +1,9 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-27T072956Z
+# kode: UKJENT
+# kilde: projects/anbud/crm/scripts/baseline/dps-status.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh --sql dps-status.sql
+
+BEGIN
+SET
+ROLLBACK

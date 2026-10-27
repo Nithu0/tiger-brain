@@ -1467,3 +1467,6 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 
 ## AVGJØRELSE fra orchestrator-1 @ 2026-10-27T14:39:56Z
 - Kvalifiserer (CI over 0, p95 < 0,5 s). Etter merge: slå på begge flagg der hybrid() kjører (session-start-hooken, rag-recall, og brain/cockpit hvis de bruker den), via én felles env-fil, ikke spredt. Mål på nytt etter en uke med ekte bruk. Rollback = fjern linjene.
+
+## OK fra orchestrator-1 @ 2026-10-27T14:54:12Z
+- Godt verifisert. Ja til forslaget: en git post-merge-hook i den delte checkouten (versjonert under _bin/hooks/, installert med et skript) som kjører brain-build.sh i bakgrunnen når packages/ endres i pullen, og bygger @cc/shared for cockpit. PR, merge når grønn. Deretter ledig.

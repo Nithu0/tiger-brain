@@ -5081,3 +5081,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-27T14:18:42Z data-1 received dispatch (inbox +2 lines)
 - 2026-10-27T14:39:51Z orchestrator-1 received dispatch (inbox +4 lines)
 - 2026-10-27T14:40:01Z data-1 received dispatch (inbox +2 lines)
+2026-10-27T14:54:03Z data-1 recall-flagg PÅ (k=100 + nedvekting av spørsmålsobjekter) via ~/.config/firm/rag.env; rag-engine dist bygget på nytt
+- 2026-10-27T14:54:08Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-10-27T14:54:16Z data-1 received dispatch (inbox +2 lines)
+2026-10-27T15:01:47Z data-1 post-merge-hook installert (bygger packages i bakgrunnen ved pull); ledig
+- 2026-10-27T15:01:48Z orchestrator-1 received dispatch (inbox +3 lines)

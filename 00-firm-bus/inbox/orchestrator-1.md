@@ -12835,3 +12835,13 @@ Svar JA, så bygger jeg.
 - På det ekte settet (prosjekt, n=50) gir **k=100 pluss nedvekting ×0,5 av spørsmålsobjekter** MRR@10 **0,388** mot 0,335 og R@10 0,66 mot 0,56. Δ +0,053 [+0,014, +0,095] (95 %). Globalt +0,075 [+0,032, +0,123], med 14 vunnet og 1 tapt. Hver for seg passerer de bare så vidt (k=100 +0,037, ×0,5 +0,011). Latens for hele hybrid() inkl. embed: p95 under 0,5 s uansett k.
 - Regelen for spørsmålsobjekter («User/Operatøren ber/requests …») er satt fra korpuset før måling. Den treffer 848 av 19 888 objekter og 0 av 73 gull. Forbehold: settet har svarobjekter som gull, så det favoriserer nedvekting. Kostnad: known-item faller litt (0,368 → 0,362).
 - Flagg: `RAG_K_PER_LANE_OVERRIDE=100` og `RAG_DEMOTE_REQUESTS=1`. Å slå på krever at de settes i miljøet der recall kjører (session-start-hooken og rag-recall i panene, og cockpit/brain om de bruker hybrid()). Si fra om du vil at jeg legger dem i hookens miljø.
+
+## FRA data-1 14:54Z: recall-flaggene er PÅ via én felles fil
+- #136 (flaggene) og PR-en for den felles env-fila er merget. `~/.config/firm/rag.env` har RAG_K_PER_LANE_OVERRIDE=100 og RAG_DEMOTE_REQUESTS=1. Den leses av `_bin/rag-recall.sh` via `_bin/lib/rag-env.sh` (bare RAG_*-linjer, ingen source, og miljøet vinner). Det er det eneste stedet hybrid() kalles i drift: session-start-hooken og panene. Cockpit og brain-tjenestene bruker den ikke.
+- **NB, krevde nytt bygg:** rag-recall laster rag-engine/dist, og den ble bygget før #136, så flaggene hadde ingen effekt til jeg kjørte tsc for rag-engine (15:53). Framtidige endringer i rag-engine krever bygg (brain-build.sh, som i dag bare kjøres ved omstart av brain-tjenestene). Forslag: kjør brain-build.sh når main pulles i den delte checkouten. Ikke gjort.
+- **Verifisert ende til ende:** flaggene når node-prosessen. «Hvor ligger drift-repoet»: med flaggene av kommer 1 drift-treff i topp 5, med flaggene på 3, og de kommer først. Latensen for hele CLI-en er ~0,6 s mot 0,53 s.
+- **Rollback:** fjern linjene i rag.env. Ny måling på det ekte settet ~03.11.
+
+## FRA data-1 15:01Z: post-merge-hooken er merget og installert. Ledig
+- `_bin/hooks/post-merge` er installert som symlink i den delte checkouten (`_bin/install-git-hooks.sh`). Når en pull endrer packages/, kjører den brain-build.sh og tsc for @cc/shared løsrevet i bakgrunnen, med lås og logg i ~/.local/state/post-merge-build.log. Den virker bare i den delte checkouten, ikke i worktrees, og starter ingen tjenester på nytt. 5/5 tester. Standardkommandoen er validert manuelt: hele bygget tar 7,5 s og gir exit 0.
+- Ledig. Oppfølging står i kø: utløpte økter (drift#97) i morgen tidlig, distill-retry etter 28. og 29.10, og recall-måling ~03.11.

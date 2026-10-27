@@ -1464,3 +1464,6 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 
 ## OK fra orchestrator-1 @ 2026-10-27T14:18:37Z
 - God retting. Ja: mål de to billige tiltakene på det ekte settet (k_per_lane 20→50, og nedvekting av «forespørsels»-objekter som er spørsmålet selv). Hvis CI ligger over 0 og latensen holder seg under 1 s: PR med flagg av, så slår vi på. Ellers notér og ferdig.
+
+## AVGJØRELSE fra orchestrator-1 @ 2026-10-27T14:39:56Z
+- Kvalifiserer (CI over 0, p95 < 0,5 s). Etter merge: slå på begge flagg der hybrid() kjører (session-start-hooken, rag-recall, og brain/cockpit hvis de bruker den), via én felles env-fil, ikke spredt. Mål på nytt etter en uke med ekte bruk. Rollback = fjern linjene.

@@ -114,3 +114,27 @@ To mønstre går igjen i topptreffene ved bom:
 - Korpuset er snapshoten fra 27.10. Rader som ennå ikke er destillert, kan ikke være gull. Derfor falt blant annet doffin-nøkkel- og Superset-spørsmålene ut.
 
 **Lesning (`ASSUMPTION`):** Known-item-evalen i seksjon 1 og 3 favoriserer leksikalsk overlapp, så der ser BM25 best ut, og vektet 0,7/0,3 vinner. På ekte spørsmål er det vektorlaget som bærer, særlig for operatørens korte norske spørsmål. Det taler mot å flytte fusjonen mot BM25 på grunnlag av seksjon 3 alene. Det taler også for å måle verbatim-indeksering mot dette settet før det besluttes. En verbatim-indeks vil trolig gi flere bestillingstreff av typen over, fordi spørsmålets egen rad blir søkbar ordrett. Den kan også løfte de 14 tilfellene der gull er dypt eller fraværende. Begge deler er umålt. Det billigste som kan prøves først, er å nedvekte objekter som bare er en bestilling. Ingenting i prod er endret.
+
+## 5. To billige tiltak på de ekte spørsmålene
+
+Kjørt på en ny snapshot kl. 15:22. Grunnlinjen ble gjenskapt eksakt (CombMNZ k=20: 0,335 prosjekt og 0,280 globalt). KI er 90 % med parret bootstrap mot grunnlinjen.
+
+**Regelen for bestillingsobjekter** ble satt fra korpusets fordeling av første ord før målingen, uten å se på gull: `exchange_core` begynner med User/Operator/Brukeren/Operatøren og et bestillingsverb (requests, asks, instructs, wants, needs, demands, ber, spør, vil ha). Den treffer 848 av 19 888 objekter og 0 av 73 gull-objekter. Over de 50 spørsmålene lå det 31 slike objekter i grunnlinjens topp-10. Merk: merkingen min valgte svarobjekter med vilje, så settet er bygd slik at det favoriserer dette tiltaket.
+
+| Variant (prosjekt) | MRR@10 | R@1 | R@10 | ΔMRR [90 % KI] |
+|---|---|---|---|---|
+| CombMNZ k=20 | 0,335 | 0,26 | 0,56 | – |
+| k=30 | 0,332 | 0,24 | 0,58 | −0,004 [−0,024, +0,012] |
+| k=50 | 0,351 | 0,24 | 0,64 | +0,016 [−0,010, +0,044] |
+| k=100 | 0,373 | 0,26 | 0,64 | +0,037 [+0,002, +0,076] |
+| nedvekting ×0,5 | 0,347 | 0,28 | 0,56 | +0,011 [+0,000, +0,031] |
+| bestilling sist | 0,350 | 0,28 | 0,58 | +0,015 [+0,002, +0,034] |
+| **k=100 + ×0,5** | **0,388** | 0,28 | **0,66** | **+0,053 [+0,014, +0,095]** |
+
+Globalt gir k=100 + ×0,5 0,354, en ΔMRR på +0,075 [+0,032, +0,123]. Den vinner 14 spørsmål og taper 1.
+
+**Latens:** et helt `hybrid()`-kall med prosjektavgrensning og embedding tar p50 330–360 ms og p95 420–476 ms for k = 20, 30, 50 og 100. Embeddingen dominerer.
+
+**Bivirkning på known-item-evalen (n=574):** hybrid/prosjekt går fra 0,368 til 0,362, og globalt fra 0,329 til 0,321. Det er et lite fall på verbatim-spørringene.
+
+**Bygget, flagget av:** `RAG_K_PER_LANE_OVERRIDE` og `RAG_DEMOTE_REQUESTS` i `rag-engine/src/hybrid.ts` og `request-demotion.ts`, med tester. Med flaggene på gir ekte `hybrid()` 0,388 og 0,66, og uten flagg 0,335 og 0,56. Lokal gren `data-1/recall-tiltak`, ikke pushet. Om flaggene skal slås på, er operatørens valg.

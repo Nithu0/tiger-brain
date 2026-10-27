@@ -12542,3 +12542,27 @@ Svar JA, så bygger jeg.
 - **Søking fulltid og AS:** ikke rørt.
 - Ingen ekte hemmeligheter eller persondata gikk til GitHub.
 - NB: NO_REMOTE_REPOS i backup-local nevner lavera-site og refi-doc-agent, som ikke finnes under ~/code her.
+## STATUS fra infra-1 @ 2026-10-27T09:08:45Z
+- command-center#112 er merget, og den delte checkouten er ff til main (den var ren). gitleaks 8.21.2 ligger i ~/.local/bin. brain-sync.timer er AKTIV (15 min).
+- Første kjøring pushet 1 317 filer til sync/NithuPC (2314f0f). Vaulten er urørt: main a90aaf7, endringene står fortsatt.
+- Første start feilet med 209/STDOUT (logg-append åpnes før mappen finnes). Mappen er laget, så det virker nå. Den varige rettingen er cc#114 (journald). Den merges når verify er grønn, og så reloades unit-en.
+- Jeg venter på OPERATOR-APPROVED for tiger-brain#1 og gitleaks-fiksen. Uten den bruker jeg ikke --no-verify.
+
+## STATUS tools-1 2026-10-27T09:09Z: leadgen-platform er komplett på GitHub, og lokal checkout følger origin
+- **Gjort uten force-push:** GitHub-main hadde allerede den filtrerte historikken uten fila. Jeg la n1881.test.ts til som en ny commit oppå (fast-forward), med syntetiske numre og ID-er i samme format. Testen består 4/4.
+- Lokal main er flyttet til origin/main og skiller seg fra før bare i den ene testfila.
+- Den opprinnelige historikken ligger på den lokale taggen `backup/pre-syntetisk-1881-2026-10-27` (ikke pushet) og følger med USB.
+- Jeg er ledig for neste oppgave.
+
+## RAPPORT fra trading-1 (2026-10-27T09:09:38Z): nexus 0 handler på 14 dager (read-only)
+- Rapport: 00-claude-inbox/nexus/2026-10-27/diagnose-0-handler-14-dager.md (til operatøren og Karri), med rådata ved siden av.
+- **Fakta:** 2 handler på 30 d, 0 på 14 d. Firmaets egen tese: «Day 14 flat». Readiness READY, men marketThesisScore 21 mot terskel 42. **Hele LLM-laget er nede:** GPU-verten (fetch failed, breaker open), **Anthropic 400 «temperature is deprecated for this model» (kodefeil: llm-router.service.ts:414 sender alltid temperature til claude-sonnet-5)**, OpenAI 401 ugyldig nøkkel, OpenRouter 401 «User not found», Gemini exit=1. Narrativ- og makroagentene feiler hver syklus.
+- **Hypotese (ikke bevist):** tesen får lite innhold uten LLM, så skåren blir 21 og ingen signaler kommer fram. Volatilitetsbaren «ATR ratio < 1.3» stopper i tillegg breakout-strategiene, men det er Karris domene.
+- **Watch-feil:** «funnel cycles=0» teller bare sykluser med gate-rader, og watch er HEALTHY etter 14 dager uten handel. Jeg foreslår alarm ved 0 handler på N handelsdager.
+- **Forslag:** (1) Bugfiks for temperature i Anthropic-kallet (liten PR i ai-assistent, trenger OK kjør). (2) Operatøren: OpenAI-nøkkel, OpenRouter og GPU-vert. (3) Watch-alarm. (4) Strategiterskler går til Karri og operatøren via proposals. Ingenting er endret. GOALS.md for nexus bør få current step = dette (docs-commit, trenger OK).
+
+## FRA data-1 09:11Z: command-center#113 er merget, og radvis distill-retry er slått PÅ med LOOKBACK 150
+- **Estimat før** (målt read-only i memory.db): 53 foreldreløse rader over 10 dager, 168 KB tekst (median 1,3 KB, maks 16 KB), som gir ~48k input-tokens pluss prompt (≤3k tokens per kall), altså ~210k input. Output er maks 1024 tokens per kall, ×2 ved retry etter trunkering. Med Haiku 4.5 (/ per MTok) blir det **realistisk ~/bin/bash,30, verste fall ~/bin/bash,75**, under 5 USD-grensen. NB: kostnaden logges ikke noe sted (api-usage.jsonl finnes ikke, og agent_tasks har ingen kost). «Faktisk» blir derfor målt fra input-rader og størrelsen på output-objektene, ikke fakturert. Fakturert beløp må leses i Anthropic Console.
+- **Rekkefølge:** worker ble startet på nytt først, og dist har DISTILL_DAY_ROW_IDS og retryDate. Deretter orchestrator med drop-in `~/.config/systemd/user/brain-orchestrator.service.d/partial-distill-retry.conf` (flagget =1, LOOKBACK=150). Verifisert i prosessmiljøet.
+- **Tilbake til 30:** engangstimeren `partial-distill-lookback-30.timer` (ekte unit, Persistent, overlever omstart) kjører 29.10 kl. 12:00 og setter LOOKBACK=30. Flagget forblir på. Den skriver én linje i feed.
+- **Neste:** etter nettene 28.10 og 29.10 melder jeg rader destillert per natt, gjenværende foreldreløse rader og målt kostnad.

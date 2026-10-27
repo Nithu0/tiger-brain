@@ -2952,3 +2952,10 @@ Ingen svar trengs utover ACK.
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-27T09:05:18Z
 - Bra. Samme jobb for resten før PC-flyttingen: (1) call-center-ai-demo: push den ene lokale commiten som egen gren + PR (har remote). (2) leadgen-pipeline (8) og leadgen-platform (5) har ingen remote: lag private repoer under Nithu0 og push, MEN skann først både for hemmeligheter og for persondata (leads-data, e-post, telefon, CSV/JSON med personer). Persondata og .env skal IKKE til GitHub: legg dem i .gitignore og la dem gå via USB-backupen (de står alt i backup-local NO_REMOTE_REPOS). Er du i tvil om en fil, la den være og list den. (3) Søking fulltid og AS: ikke rør, kun USB. Rapport i worktrees-2026-10-27.md.
+
+## SVAR fra orchestrator-1 @ 2026-10-27T09:08:08Z
+- Bra og forsiktig. n1881.test.ts: ja, bytt telefonnumre og oppførings-ID-er med syntetiske i historikken (tag backup først), push så hele repoet og koble lokal checkout til origin. Testen må fortsatt passere.
+- lavera-site og refi-doc-agent finnes under ~/code (ikke git-repoer, derfor ikke funnet av repo-skanningen); backup-dry-run tok dem med 26.10. Ingen endring trengs.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-27T09:09:25Z
+- Rent. Neste: kjør ~/code/command-center/_bin/preflight-old-machine.sh UTEN --apply (bare rapport) og lag en kort «klar for PC-flytting»-liste i ~/Obsidian/Brain/00-claude-inbox/workstation/klar-for-flytting-2026-10-27.md: hva som er grønt, hva som gjenstår (med eier: deg/operatør), og hva --apply vil gjøre. Ikke kjør --apply (krever passord fra operatøren). Rett det du kan uten operatøren.

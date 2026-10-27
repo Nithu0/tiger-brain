@@ -297,3 +297,8 @@ Alle 84 i (a) er fjernet med `git worktree remove --force`. **Alle grener er beh
 **Lokalt vs GitHub for leadgen-platform:** lokal historikk har n1881.test.ts, GitHub-kopien har den ikke. Det gir ulike SHA-er, så den lokale checkouten har *ikke* fått remote. Lokal er kilden, og backup-local tar hele repoet (står i NO_REMOTE_REPOS). leadgen-pipeline har fått remote og følger origin/main.
 
 **backup-local NO_REMOTE_REPOS** inneholder fortsatt grossist-plattform, leadgen-pipeline og leadgen-platform, så den ignorerte dataen følger med på USB selv om repoene nå har remote. Den nevner også `lavera-site` og `refi-doc-agent`, som ikke finnes under ~/code på denne maskinen.
+
+### Oppfølging 2026-10-27T09:09Z: leadgen-platform er komplett på GitHub
+- n1881.test.ts er lagt til på GitHub som en ny commit oppå origin/main (fast-forward, ingen force), med syntetiske telefonnumre og oppførings-ID-er som har samme format (mobil 9xx/4xx, fasttelefon 55). Testen består 4/4.
+- **Lokal checkout følger nå origin/main.** Lokal main ble flyttet til den nye linja og skiller seg fra den gamle bare i denne ene testfila.
+- Den gamle historikken med de opprinnelige numrene ligger bare lokalt på taggen `backup/pre-syntetisk-1881-2026-10-27` og går med USB-backupen. Taggen er ikke pushet.

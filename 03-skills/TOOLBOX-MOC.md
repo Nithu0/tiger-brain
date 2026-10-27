@@ -2,7 +2,7 @@
 title: TOOLBOX MOC — hele verktøykassen
 folder: 03-skills
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-07-28
 purpose: Master-oversikt (Map of Content) over ALT verktøy i operatørens AI-OS — skills, subagenter, MCP-er, plugins, firm-scripts. CURRENT (installert) + PROPOSED (utvidelser). Organisert etter kategori og prosjekt. Recall-bar via obsidian-ingest.
 related:
   - "[[README]]"
@@ -18,6 +18,9 @@ tags: [toolbox, moc, skills, subagents, mcp, plugins, firm-scripts, tooling, ind
 # TOOLBOX MOC — hele verktøykassen
 
 Master-indeks over alt verktøy i AI-OS-en: **skills, subagenter, MCP-er, plugins, firm-scripts**. Hver oppføring har: hva, hvorfor, hvilket prosjekt, hvordan-aktivere, vet-status.
+
+> [!important] Status-autoritet flyttet (2026-07-28, tools-1)
+> **Kanonisk status per verktøy = `command-center/docs/ops/CAPABILITY-REGISTRY.md`** (live-testet, `sist verifisert`-dato per rad). Denne MOC-en er recall-view; statusene under er fra 2026-06-22 og har kjente sprik som registryet korrigerer, bl.a.: github-MCP er LIVE (ikke PROPOSED) · obsidian-MCP LIVE · fetch-MCP NEDE · ms365 NEEDS-AUTH · superpowers 6.2.0 user+project (ikke 6.0.3/kun-project) · 8 plugins enabled (ikke 3) · `_bin` = 81 filer (ikke ~40) · **Gmail-MCP finnes og manglet her helt**. Ved konflikt vinner registryet.
 
 > [!info] Hvordan lese statusene
 > - **LIVE** — installert og verifisert på disk / via live-kommando på denne maskinen (WSL).

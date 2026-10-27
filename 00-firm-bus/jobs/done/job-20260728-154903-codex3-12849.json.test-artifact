@@ -1,0 +1,19 @@
+{
+  "id": "job-20260728-154903-codex3-12849",
+  "role": "codex-3",
+  "engine": "codex",
+  "project": "nexus",
+  "cwd": "/home/nithu/code/ai-assistent",
+  "pii": false,
+  "prompt": "hook-test: svar med ordet ok",
+  "prompt_raw": "hook-test: svar med ordet ok",
+  "origin": "telegram",
+  "reply_to": "telegram",
+  "status": "queued",
+  "created": "2026-07-28T15:49:03Z",
+  "updated": "2026-07-28T15:49:03Z",
+  "result_path": "",
+  "branch": "",
+  "summary": "",
+  "exit_code": null
+}

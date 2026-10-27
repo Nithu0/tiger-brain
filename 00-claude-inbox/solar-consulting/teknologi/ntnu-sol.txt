@@ -1,0 +1,18 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-27T090237Z
+# kode: UKJENT
+# kilde: projects/anbud/crm/scripts/baseline/ntnu-sol.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh --sql ntnu-sol.sql
+
+BEGIN
+SET
+T|2035-06-19 21:59|https://tendsign.com/doc.aspx?MeFormsNoticeId=63195|Oppdragsgiver etablerer en dynamisk innkjøpsordning for solceller, som omfatter følgende: - Komplette solcelleanlegg - Montasje - Drift og vedlikehold
+K|Enrolment in a trade register||Krav: Leverandøren skal være registrert i et foretaksregister, faglig register eller et handlesregister i den stat leverandøren er etablert Dokumentasjonskrav: Norske selskaper: Firmaattest /Utenlandske selskaper: Godtgjørelse på at selskapet er registrert i et foretaksregister, faglig register eller et handelsregister i den staten leverandøren er etablert.
+K|Authorisation or membership of a particular organisation needed for service contracts||Krav: Leverandøren skal være registrert i Elvirksomhetsregisteret.  Dokumentasjonskrav: Oppdragsgiver sjekker om leverandør er registrert i Elvirksomhetsregisteret. https://elvirksomhetsregisteret.dsb.no/
+K|Other economic or financial requirements||Krav: Leverandøren skal være kredittverdig uten krav til sikkerhetsstillelse. Dokumentasjonskrav: Kredittvurdering som baserer seg på siste kjente regnskapstall. Ratingen skal være utført av kredittopplysningsvirksomhet som har konsesjon til å drive slik virksomhet.
+K|References on specified deliveries||Krav: Leverandøren skal ha erfaring fra sammenlignbare oppdrag. De sammenlignbare oppdragene må vise til erfaring med: - installasjoner med minimum 50 kWp. - minimum erfaring med 3 av disse innfestningsmetodene. Ballastert montasje Direkte innfesting Snøsmelteanlegg Fasade-system Bygningsintegrerte systemer Limte moduler - drift og vedlikeholdsavtaler på installasjoner. Dokumentasjonskrav: Beskrivelse av leverandørens inntil 10 mest relevante oppdrag i løpet av de siste 3 årene, med verdi, tidsp
+K|Environmental management measures||Krav: Leverandøren skal ha et velfungerende miljøstyringssystem. Dokumentasjonskrav: Sertifiseringsbevis ihht nasjonal/internasjonal miljøledelse/-styringssystem standard, eller redegjørelse for tilsvarende miljøstyring/-tiltak i foretaket.
+K|Measures for ensuring quality||Krav: Leverandøren skal ha et velfungerende kvalitetsstyringssystem. Dokumentasjonskrav: Sertifiseringsbevis ihht nasjonal/internasjonal kvalitetsledelse/-styringssystem standard, eller redegjørelse for tilsvarende kvalitetsstyring/-tiltak i foretaket.
+K|Measures for ensuring quality||Krav: Leverandørens skal ha metoder for styring av leverandørkjeden og sporbarhetssystemer som muliggjør oppfølgning av kravene til etisk handel - grunnleggende krav til menneskerettigheter, miljø og ILOs kjernekonvensjoner. Dokumentasjonskrav: Aktsomhetsvurdering, eller en beskrivelse av sporbarhetssystemene som leverandøren vil bruke til å utføre kontrakten. Beskrivelsen skal angi metoder og/eller systemer som muliggjør sporing av produksjonssteder og opprinnelsesland som er involvert i levera
+S|mangler||authorisation_licence,contract_references,credit_rating,environmental_certificate,payment_defaults,quality_certificate
+ROLLBACK

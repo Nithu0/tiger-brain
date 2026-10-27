@@ -1,0 +1,96 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-13T103128Z
+# kode: 47ddaf4
+# kilde: projects/anbud/crm/scripts/baseline/triage-baseline.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh
+
+BEGIN
+SET
+AARSAKSKODE_PER_SIDE|competence-gap|nei|15||
+AARSAKSKODE_PER_SIDE|core-fit|ja|25||
+AARSAKSKODE_PER_SIDE|core-fit|undersok|1||
+AARSAKSKODE_PER_SIDE|deadline|nei|3||
+AARSAKSKODE_PER_SIDE|geography|nei|1||
+AARSAKSKODE_PER_SIDE|market-entry|ja|2||
+AARSAKSKODE_PER_SIDE|market-entry|undersok|2||
+AARSAKSKODE_PER_SIDE|not-a-tender|nei|6||
+AARSAKSKODE_PER_SIDE|other|ja|2||
+AARSAKSKODE_PER_SIDE|other|nei|2||
+AARSAKSKODE_PER_SIDE|other|undersok|1||
+AARSAKSKODE_PER_SIDE|own-product|ja|13||
+AARSAKSKODE_PER_SIDE|own-product|undersok|2||
+AARSAKSKODE_PER_SIDE|partner-opportunity|ja|1||
+AARSAKSKODE_PER_SIDE|price|nei|1||
+AARSAKSKODE_PER_SIDE|qualification|nei|7||
+AARSAKSKODE_PER_SIDE|references|nei|2||
+AARSAKSKODE_PER_SIDE|right-size|ja|2||
+AARSAKSKODE_PER_SIDE|scope|nei|42||
+AARSAKSKODE_PER_SIDE|too-large|nei|8||
+AARSAKSKODE_PER_SIDE|winnable|ja|3||
+AARSAKSKODE_PER_SIDE|winnable|undersok|1||
+AARSAKSKODE_UFILTRERT|competence-gap||15||
+AARSAKSKODE_UFILTRERT|core-fit||26||
+AARSAKSKODE_UFILTRERT|deadline||3||
+AARSAKSKODE_UFILTRERT|geography||1||
+AARSAKSKODE_UFILTRERT|market-entry||4||
+AARSAKSKODE_UFILTRERT|not-a-tender||6||
+AARSAKSKODE_UFILTRERT|other||5||
+AARSAKSKODE_UFILTRERT|own-product||15||
+AARSAKSKODE_UFILTRERT|partner-opportunity||1||
+AARSAKSKODE_UFILTRERT|price||1||
+AARSAKSKODE_UFILTRERT|qualification||7||
+AARSAKSKODE_UFILTRERT|references||2||
+AARSAKSKODE_UFILTRERT|right-size||2||
+AARSAKSKODE_UFILTRERT|scope||42||
+AARSAKSKODE_UFILTRERT|too-large||8||
+AARSAKSKODE_UFILTRERT|winnable||4||
+DELTA_ERP|bare-uten-ordgrense|ja|1||
+DELTA_ERP|bare-uten-ordgrense|nei|2||
+DELTA_ERP|ingen|ja|29||
+DELTA_ERP|ingen|nei|66||
+DELTA_ERP|ingen|undersok|6||
+DELTA_ERP|med-ordgrense|nei|1||
+DELTA_ORDGRENSE|med-ordgrense|ja|8||
+DELTA_ORDGRENSE|med-ordgrense|nei|18||
+DELTA_ORDGRENSE|med-ordgrense|undersok|1||
+DELTA_ORDGRENSE|uten-ordgrense|ja|8||
+DELTA_ORDGRENSE|uten-ordgrense|nei|19||
+DELTA_ORDGRENSE|uten-ordgrense|undersok|1||
+ENHET|1-konkurranse|ja|17||
+ENHET|1-konkurranse|nei|39||
+ENHET|1-konkurranse|undersok|4||
+ENHET|2-forkonkurranse-dialog|ja|13||
+ENHET|2-forkonkurranse-dialog|nei|30||
+ENHET|2-forkonkurranse-dialog|undersok|2||
+KRYSS_JA|COMPETITION|kvalitetssystem|1||
+KRYSS_JA|COMPETITION|medarbeiderundersokelse|1||
+KRYSS_JA|COMPETITION|oversettelse|1||
+KRYSS_JA|COMPETITION|regnskapssystem|1||
+KRYSS_JA|COMPETITION|saksbehandling|2||
+KRYSS_JA|PLANNING|rapportering-renhold-lekeplass|1||
+KRYSS_JA_UTEN_FAG|COMPETITION||11||
+KRYSS_JA_UTEN_FAG|PLANNING||12||
+LAERBAR|EKSKLUDERT-not-a-tender|nei/PLANNING|6||
+LAERBAR|laerbar|ja/COMPETITION|17||
+LAERBAR|laerbar|ja/PLANNING|13||
+LAERBAR|laerbar|nei/COMPETITION|39||
+LAERBAR|laerbar|nei/PLANNING|24||
+LAERBAR|laerbar|undersok/COMPETITION|4||
+LAERBAR|laerbar|undersok/PLANNING|2||
+RFID_TREFF|ingen RFID|ja|30||
+RFID_TREFF|ingen RFID|nei|68||
+RFID_TREFF|ingen RFID|undersok|6||
+RFID_TREFF|RFID i teksten|nei|1||
+SAKSTYPE|COMPETITION||60|17|39
+SAKSTYPE|PLANNING||45|13|30
+SAKSTYPE_KO|CHANGE||2||
+SAKSTYPE_KO|COMPETITION||1154||
+SAKSTYPE_KO|PLANNING||202||
+SAKSTYPE_KO|RESULT||393||
+TREFF_TITTEL|kvalitetssystem||5|4|1
+TREFF_TITTEL|medarbeiderundersokelse||1|1|0
+TREFF_TITTEL|oversettelse||1|1|0
+TREFF_TITTEL|rapportering-renhold-lekeplass||4|2|2
+TREFF_TITTEL|regnskapssystem||2|1|1
+TREFF_TITTEL|saksbehandling||5|1|4
+COMMIT

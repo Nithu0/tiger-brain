@@ -1,0 +1,72 @@
+# DPS-søknad — prod read-only, målt 2026-10-19T0552Z, skript crm/scripts/baseline/dps-soknad-krav.sql
+BEGIN
+SET
+KRAV
+2022-318980|Dynamisk innkjøpsordning IT – Konsulenter - Utviklere og Techlead|2026-12-31 11:00:00+00|Sjøfartsdirektoratet|[{"code": null, "kind": "selection", "name": "Suitability to pursue the professional activity", "source": null, "description": "• Leverandøren skal være et lovlig registrert foretak. • Tilbyder skal vedlegge attest for registrering i det faglige register som er bestemt ved lovgivning i det land hvor leverandøren er etablert (attest fra foretaks- og bransjeregister eller lignende)."}, {"code": null, "kind": "selection", "name": "Economic and financial standing", "source": null, "description": "• Virksomheten bør ikke ha restanser knyttet til betaling av skatter og avgifter til det offentlige. • Skatteattest som bekrefter at leverandøren har ordnede skatte- og avgiftsforhold."}]|[]|Det inviteres til dynamisk innkjøpsordning med leverandører for å dekke Sjøfartsdirektoratets behov for IT konsulenter innenfor området - Utviklere og Techlead. Under har vi skissert oppgaver det vil være aktuelt med rådgivning og bistand til, samt relevante krav til erfaring og kompetanse. Oversikten er ikke uttømmende. Kravene kan og vil spesifiseres til den enkelte konkurranse som gjennomføres under innkjøpsordningen. Det vil komme tilbudsforespørsler på bl.a. følgende: Tjeneste - og applikasjonsutvikling Kodeforvaltning Teknologi - og løsningsrådgivning Integrasjon og API-utvikling Mer informasjon om ønsket erfaring og kompetanse finnes i kvalifikasjonsgrunnlaget.
+2022-343586|Dynamisk innkjøpsordning IT – Konsulenter – Analytics, Maskinlæring og Dataforvaltning|2026-12-31 11:00:00+00|Sjøfartsdirektoratet|[{"code": null, "kind": "selection", "name": "Suitability to pursue the professional activity", "source": null, "description": "Øvrige krav for kvalifisering: • Leverandøren skal være et lovlig registrert foretak. • Tilbyder skal vedlegge attest for registrering i det faglige register som er bestemt ved lovgivning i det land hvor leverandøren er etablert (attest fra foretaks- og bransjeregister eller lignende)."}, {"code": null, "kind": "selection", "name": "Economic and financial standing", "source": null, "description": "• Virksomheten bør ikke ha restanser knyttet til betaling av skatter og avgifter til det offentlige. • Skatteattest som bekrefter at leverandøren har ordnede skatte- og avgiftsforhold."}]|[]|Dekker rådgivning og bistand på alle områder innenfor analytics, maskinlæring og dataforvaltning. Dette innebærer støtte for analyse av forretningsdata til å beskrive, predikere og forbedre forretningsområder; finne meningsfulle mønstre og kunnskap ved hjelp av matematikk, statistikk og prediktiv modellering og maskinlæringsteknikker. I dette området inngår også operative oppgaver innenfor datavarehus og master data management. Oversikten er ikke uttømmende. Kravene kan og vil spesifiseres til den enkelte konkurranse som gjennomføres under innkjøpsordningen. Vi ønsker kompetanse og erfaring innen: • Natural Language Processing • Resource Description - rammeverk • SHACL og SPARQL • Master data management og systemintegrasjoner • Skybasert ETL og datavarehus - løsninger
+2022-962877|Dynamisk innkjøpsordning - Sammensatte team knyttet til systemutvikling|2026-11-22 23:00:00+00|Registerenheten i Brønnøysund|[{"code": null, "kind": "selection", "name": "Suitability to pursue the professional activity", "source": null, "description": "KVALIFIKASJONSKRAV: Leverandøren skal være et lovlig registrert foretak. DOKUMENTASJONSKRAV: Brønnøysundregistrene innhenter selv firmaattest via tjenesten eBevis for norske leverandører. Enkeltpersonforetak som ikke er registrert i Foretaksregisteret må oppgi dette i søknadsbrevet. For disse vil registerutskrift fra Enhetsregisteret være tilstrekkelig dokumentasjon. Brønnøysundregistrene innhenter denne selv. Utenlandske leverandører må vedlegge attest som viser at de er et lovlig etablert foretak og at de er registrert i det faglige register som bestemt ved lovgivningen i det land hvor leverandøren er etablert."}, {"code": null, "kind": "selection", "name": "Economic and financial standing", "source": null, "description": "KVALIFIKASJONSKRAV: Virksomheten bør ikke ha restanser knyttet til betaling av skatter og avgifter til det offentlige. DOKUMENTASJONSKRAV: For leverandører etablert i Norge vil Brønnøysundregistrene innhente dokumentasjon på innbetaling av skatter og avgifter via tjenesten eBevis. Tilbydere med forretningsadresse utenfor Norge skal fremlegge attest som bekrefter at tilbyderen har ordnede skatte- og avgiftsforhold i sitt hjemland. Attesten skal utstedes av offentlig myndighet som er autorisert til å utstede slik attest, og må ikke være eldre enn seks måneder. Hvis tilbyderens hjemland ikke utsteder slike dokumenter eller attester, kan de erstattes av en erklæring avgitt under ed eller forsikring fra den aktuelle personen overfor en retts- eller forvaltningsmyndighet, en notarius publicus eller en annen kompetent myndighet i hjemlandet eller nåværende oppholdsland."}]|[]|Den dynamiske innkjøpsordningen omfatter systemutviklingsteam, hvor alle rollene i teamet kommer fra samme leverandør. Klikk her https://permalink.mercell.com/188361116.aspx
+FAKTA
+1|partial|interview|Et tilbud som samsvarer med oppdragsgivers kravspesifikasjon trenger «nok ikke» en direkte juridisk gjennomgang (svaret er formulert med for
+2|have|interview|Juridisk gjennomgang er aktuelt ved klage, når man ber om innsyn i andre leverandørers tilbud (typisk vinnerens) for å se hva som er gjort f
+3|lack|interview|Svaret nevner ingen terskler for juridisk gjennomgang knyttet til kontraktsverdi, avvik fra standardavtalen eller nye kunder (UNKNOWN).
+4|have|interview|Prismodellen avhenger av den enkelte anskaffelsen.
+5|have|interview|Vi priser etter timepris, fastpris, rammeavtale og egne priser for opsjoner.
+6|partial|interview|Svaret oppgir ingen konkrete tall eller maler vi starter fra. Prisskjemaene som brukes skal legges inn i et senere svar.
+7|have|interview|Vi bruker firmapresentasjon og metode som gjenbrukte tekster, men de må tilpasses den enkelte anskaffelse.
+8|have|interview|Vi har en mal til tilbudsbrev, intensjonserklæringer osv.
+9|partial|interview|Svaret oppgir ikke hvor tekstene ligger i dag, og nevner ikke sikkerhet eller kvalitet som gjenbrukte tekster (UNKNOWN).
+10|have|interview|Ifølge teamet må dokumentene nevnt i spørsmålet (skatteattest, HMS-egenerklæring, ESPD, firmaattest) være med i tilbudet.
+11|partial|interview|Noen ganger holder det med ebevis, mens andre ganger kreves mer dokumentasjon.
+12|lack|interview|Svaret oppgir ikke hvem som skaffer dokumentene eller hvor lang tid det tar: UNKNOWN.
+13|have|interview|Anbudsansvarlig trenger varsling på e-post når noe krever handling.
+14|lack|interview|Varslingsbehovet til IT-teamet er ikke avklart (UNKNOWN).
+15|lack|interview|Hvor ofte varsler skal sendes er ikke oppgitt (UNKNOWN), og Slack eller dashbord er ikke nevnt som kanal.
+16|have|interview|Tilbudstekstene skal skrives på norsk bokmål.
+17|lack|interview|Svaret sier ikke om tonen skal være formell eller enkel (UNKNOWN).
+18|lack|interview|Svaret sier ikke om tilbudstekstene skal bruke «vi» eller selskapsnavnet (UNKNOWN).
+19|lack|interview|Svaret oppgir ingen ord eller formuleringer som skal unngås (UNKNOWN).
+20|have|interview|Vi vil helst ha oppdrag som gjelder enkle IT-systemer.
+21|have|interview|Vi vil helst ha oppdrag innen arkivuttrekk, medieovervåkning og internettstyring.
+22|have|interview|Vi vil helst ha oppdrag om prøvemodus for lærere (gjøre det lettere for lærere å lage prøver).
+23|lack|interview|Svaret oppgir ikke hvilke typer oppdrag vi aldri vil by på uansett.
+24|have|interview|Solar Consulting eier kildekoden og arkitekturen i egne løsninger, og teamet kan forklare alle funksjoner
+25|have|interview|Selskapet leveres som konsulentselskap; teamet fordeler roller selv. Nithusan stiller med KI/løsningsdesign, salg og drift — utviklerrollen 
+26|lack|interview|Kundereferanser på leverte IT-oppdrag (per 2026-10-18 er alt bygget internt; solreferanser finnes)
+27|lack|interview|Leveranser innen helse (Normen) — sier nei til helse foreløpig
+28|have|interview|Hele systemet stresstestes før levering; utviklerne Tintun og Alper har flere års erfaring
+29|partial|interview|Databehandleravtaler med underleverandører (Anthropic, hosting) er ikke på plass ennå — kommer med Anthropic Business og hosting på Azure
+30|have|interview|Nithusan: AI-ingeniør i fulltidsstilling fra 2026-08, behandling av eiendomsdata (dataflyt, metadata, sporbarhet)
+31|have|interview|Nithusan er tilgjengelig ca. 20 t/uke, inntil 40 t/uke ved behov
+32|have|interview|Selskapet tar oppdrag opp til 4 MNOK; større oppdrag er over kapasiteten nå
+33|lack|interview|Faste underleverandører — kan skaffes ved behov
+34|lack|interview|Ansvarsforsikring — tegnes når eierskiftet er gjennomført (ventet uke 43, 2026)
+35|lack|interview|Dokumentert miljøarbeid/miljøledelse (klima og miljø som tildelingskriterium)
+36|have|interview|Eierskiftet av Solarconsulting AS er ikke formelt gjennomført per 2026-10-18 (ventet uke 43)
+REFERANSER
+1|Kravspesifikasjon solcelleanlegg, kommunale boliger — Sauda kommune|prime|t|interview
+2|Solprosjekt for Sastech (tidligere referanse)|prime|t|interview
+3|Solprosjekt for Hassel Solar Design (tidligere referanse)|prime|t|interview
+4|Solprosjekt for Suncel (tidligere referanse)|prime|t|interview
+5|Solprosjekt for Provitaz (tidligere referanse)|prime|t|interview
+6|Solprosjekt for El-24 (tidligere referanse)|prime|t|interview
+PERSONER
+1|Alper Adiyaman|Software Developer|t
+3|Nithusan Kukaraja|AI-ingeniør og daglig drift|t
+4|Tintun Naing|Software Engineer|t
+BEVIS
+1|REGISTRY_ENTRY|VERIFIED_FACT|931949837|brreg-enhet|
+2|VAT_REGISTRATION|VERIFIED_FACT|931949837|brreg-enhet|
+3|INSOLVENCY_STATUS|VERIFIED_FACT|931949837|brreg-enhet|
+4|FINANCIAL_STATEMENTS|VERIFIED_FACT|931949837|brreg-regnskap|
+5|TURNOVER_FIGURES|VERIFIED_FACT|931949837|brreg-regnskap|
+6|CONTRACT_REFERENCE|SELF_DECLARED|931949837|kompetansebank-struktur|
+7|CONTRACT_REFERENCE|SELF_DECLARED|931949837|kompetansebank-struktur|
+8|CONTRACT_REFERENCE|SELF_DECLARED|931949837|kompetansebank-struktur|
+9|CONTRACT_REFERENCE|SELF_DECLARED|931949837|kompetansebank-struktur|
+10|CONTRACT_REFERENCE|SELF_DECLARED|931949837|kompetansebank-struktur|
+11|CONTRACT_REFERENCE|SELF_DECLARED|931949837|kompetansebank-struktur|
+12|CV_STAFF_QUALIFICATION|SELF_DECLARED|931949837|kompetansebank-struktur|
+13|CV_STAFF_QUALIFICATION|SELF_DECLARED|931949837|kompetansebank-struktur|
+14|CV_STAFF_QUALIFICATION|SELF_DECLARED|931949837|kompetansebank-struktur|
+LEVERANDORPROFIL
+COMMIT

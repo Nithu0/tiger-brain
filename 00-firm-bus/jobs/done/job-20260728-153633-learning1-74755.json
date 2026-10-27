@@ -1,0 +1,22 @@
+{
+  "id": "job-20260728-153633-learning1-74755",
+  "role": "learning-1",
+  "engine": "claude",
+  "project": "nexus",
+  "cwd": "/home/nithu/code/ai-assistent",
+  "pii": false,
+  "prompt": "allowlist-test",
+  "prompt_raw": "allowlist-test",
+  "origin": "telegram",
+  "reply_to": "telegram",
+  "status": "rejected",
+  "created": "2026-07-28T15:36:33Z",
+  "updated": "2026-07-28T15:37:58Z",
+  "result_path": "/home/nithu/Obsidian/Brain/00-firm-bus/jobs/results/job-20260728-153633-learning1-74755.md",
+  "branch": "feat/hle-import-resilience",
+  "summary": "Permission deny rule (.claude/settings.json): Write(./.env) is not matched by file permission checks — only Edit(path) rules are. Use Edit(./.env) instead (Edit rules cover all file-editing tools).\nPermission deny rule (.claude/settings.json): Write(.env) is not matched by file permission checks — only Edit(path) rules are. Use Edit(.env) instead (Edit rules cover all file-editing tools).\nPermission deny rule (.claude/settings.json): Write(.git/**) is not matched by file permission checks — only Edit(path) rules are. Use Edit(.git/**) instead (Edit rules cover all file-editing tools).\nPermission deny rule (.claude/settings.json): Write(~/.ssh/**) is not matched by file permission checks — only Edit(path) rules are. Use Edit(~/.ssh/**) instead (Edit rules cover all file-editing tools).\n⚠ claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login · Unset it to load your organization's connectors\nTest OK. Headless-pipen fungerer: melding mottatt via Hermes, Bash eksekverte uten permission-prompt, svar på vei tilbake. Rolle `learning-1`, repo `ai-assistent`, branch `feat/hle-import-resilience`. Ingen endringer gjort.",
+  "exit_code": 0,
+  "head": "2856344",
+  "dirty": true,
+  "note": "allowlist-test, ingenting å pushe"
+}

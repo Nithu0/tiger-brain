@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "krav-gold-row",
+  "title": "Gullsett-rad for kravuttrekk og kvalifikasjon (AG-01 1.5, utkast 2026-10-17)",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "docId", "page", "section", "quote", "quoteVerified", "obligation", "category", "role", "status", "proposedBy", "reviewedBy"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "docId": { "type": "string" },
+      "sourceUrl": { "type": ["string", "null"] },
+      "opportunityId": { "type": ["integer", "null"] },
+      "page": { "type": ["integer", "null"], "minimum": 1, "description": "PDF-side, 1-basert; null for kunngjøringsfelt" },
+      "section": { "type": ["string", "null"] },
+      "quote": { "type": "string", "minLength": 1, "description": "Ordrett, whitespace normalisert" },
+      "quoteVerified": { "type": "boolean" },
+      "obligation": { "enum": ["must", "should", "nice-to-have"] },
+      "category": { "enum": ["qualification", "technical", "functional", "security", "commercial", "legal", "other"] },
+      "role": { "enum": ["kvalifikasjonskrav", "avvisningsgrunn", "tildelingskriterium", "kravspesifikasjon", "kontraktsvilkår", "tilbudsinnhold", "frist", "opsjon"] },
+      "espdCode": { "type": ["string", "null"] },
+      "labelSource": { "type": ["string", "null"] },
+      "status": { "enum": ["forslag", "godkjent", "avvist", "rettet"] },
+      "proposedBy": { "type": "string" },
+      "reviewedBy": { "type": ["string", "null"] },
+      "note": { "type": ["string", "null"] }
+    }
+  }
+}

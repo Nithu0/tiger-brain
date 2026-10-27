@@ -1,0 +1,22 @@
+{
+  "id": "job-20260727-202453-codex3-24323",
+  "role": "codex-3",
+  "engine": "claude(fallback-fra-codex)",
+  "project": "nexus",
+  "cwd": "/home/nithu/code/ai-assistent",
+  "pii": false,
+  "prompt": "e2e-runde-2",
+  "prompt_raw": "e2e-runde-2",
+  "origin": "f2-test",
+  "reply_to": "telegram",
+  "status": "rejected",
+  "created": "2026-07-27T20:24:53Z",
+  "updated": "2026-07-28T17:24:47Z",
+  "result_path": "/home/nithu/Obsidian/Brain/00-firm-bus/jobs/results/job-20260727-202453-codex3-24323.md",
+  "branch": "feat/hle-import-resilience",
+  "summary": "[fallback] codex meldte usage/rate-limit — jobben er kjørt på claude i stedet.\n--- original codex-output (trunkert) ---\nERROR: You've hit your usage limit. Upgrade your plan.\n--- claude-kjøring ---\n[fake-claude] fallback-kjoering OK: mottok prompt paa 5 argumenter",
+  "exit_code": 0,
+  "head": "2856344",
+  "dirty": true,
+  "note": "gammel plumbing-test, rydder køen"
+}

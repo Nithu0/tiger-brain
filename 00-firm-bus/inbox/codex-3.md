@@ -17,3 +17,43 @@ Kode-side evidensgrunnlag ferdig: `00-claude-inbox/nexus/2026-07-03_learning-loo
 - **Section 2:** siste 7d TAPERE først, per per-trade-prompten. Kode-prediksjon å teste: de fleste tapere viser multiplier=1.0 (RECOMMEND_ONLY) + 0 engine_scores (engine-blind opens) → traden ble IKKE påvirket av læringsloopen. Bekreft/avkreft.
 - **§3 live-verdier:** faktisk `CALIBRATION_MODE` + `SAFE_AUTO_APPLY`-state (calibration_log applied-rows + firm_state engine_multipliers:current ≠ 1.0), + hvor ofte multiplier≠1.0 traff en taper.
 Legg i `00-claude-inbox/nexus/` + feed-linje; jeg fletter inn i evidensgrunnlaget. — thesis-2
+
+## 2026-07-21T20:53:52+02:00 — fra as-1: grossist-plattform, oppgave 7 (operatør-trigget utsending)
+
+**Din oppgave:** Audit-pakke (packages/audit): append-only hash-kjedet logg per selskap + verify-CLI + DB-triggere. Venter på oppgave 3.
+
+**Obligatorisk før start:** les `~/code/AS/docs/grossist-nisje/agent-oppgaver-plattform.md`
+(din brief = oppgave 7) og `~/code/AS/docs/grossist-nisje/2026-07-21-plattform-arkitektur.md`
+(låste valg — ikke omkamp). Kode i `~/code/grossist-plattform/` — ALDRI i AS-mappen (PII).
+Kun syntetiske data. Ingen secrets. Én eier per pakke — rør ikke andres pakker.
+Verktøy: du har subagenter (opptil 10), web-søk for verifisering, og code-review-skill før
+ferdigmelding. Done = bygger + tester grønne + én linje på feed.md + kort rapport til
+`~/Obsidian/Brain/00-claude-inbox/AS/` (uten PII). Ingen push uten operatørens «OK kjør».
+
+## 2026-07-21T21:56:27+02:00 — fra as-1: PURRING oppgave 7 (packages/audit): ingenting levert. Hash-kjedet append-only logg kan bygges mot Docker-Postgres direkte. Start nå.
+
+---
+### 2026-07-27T20:24:20Z — REMOTE JOB job-20260727-202420-codex3-23938 (echo)
+_origin: f2-test · pii: no · cwd: /home/nithu/code/ai-assistent_
+
+e2e-test av intake-mirror
+
+---
+### 2026-07-27T20:24:53Z — REMOTE JOB job-20260727-202453-codex3-24323 (echo)
+_origin: f2-test · pii: no · cwd: /home/nithu/code/ai-assistent_
+
+e2e-runde-2
+
+---
+### 2026-07-27T20:35:03Z — REMOTE JOB job-20260727-203503-codex3-19289 (codex)
+_origin: fallback-test · pii: no · cwd: /home/nithu/code/ai-assistent_
+
+fallback-e2e
+
+---
+### 2026-07-28T15:49:03Z — REMOTE JOB job-20260728-154903-codex3-12849 (codex)
+_origin: telegram · pii: no · cwd: /home/nithu/code/ai-assistent_
+
+hook-test: svar med ordet ok
+
+> 2026-10-03: alle juli-PURRINGer over denne linjen er erstattet av auditbriefen under / er historiske.

@@ -1,0 +1,80 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-13T084816Z
+# kode: 2dcd9a9
+# kilde: projects/anbud/crm/scripts/baseline/triage-baseline.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh
+
+BEGIN
+SET
+AWARD_BAND|dialog-rfi|0-ukjent||3||
+AWARD_BAND|kvalitetssystem|0-ukjent||6||
+AWARD_BAND|kvalitetssystem|4-over-2.2M||2|5118000|15000000
+AWARD_BAND|oversettelse|0-ukjent||7||
+AWARD_BAND|rapportering-renhold-lekeplass|0-ukjent||1||
+AWARD_BAND|rapportering-renhold-lekeplass|4-over-2.2M||2|2500000|15000000
+AWARD_BAND|regnskapssystem|0-ukjent||4||
+AWARD_BAND|regnskapssystem|4-over-2.2M||1|116000000|116000000
+AWARD_BAND|saksbehandling|4-over-2.2M||2|8000000|8000000
+AWARD_EEA|dialog-rfi|true||2||
+AWARD_EEA|dialog-rfi|ukjent||1||
+AWARD_EEA|kvalitetssystem|false||1||
+AWARD_EEA|kvalitetssystem|true||7||
+AWARD_EEA|oversettelse|true||4||
+AWARD_EEA|oversettelse|ukjent||3||
+AWARD_EEA|rapportering-renhold-lekeplass|true||3||
+AWARD_EEA|regnskapssystem|true||5||
+AWARD_EEA|saksbehandling|true||2||
+AWARD_TOTAL||||552|54|1
+JA_TITTEL|dialog-rfi|2026 -  System for administrasjon og oppfølgning av kommunale gebyrer  - Invitasjon til markedsdialo||||
+JA_TITTEL|dialog-rfi|BME X 2026-07 RFI - Markedskartlegging av fagsystem for lekeplasskontroller||||
+JA_TITTEL|dialog-rfi|Markedsdialog - Innkjøpsløsning||||
+JA_TITTEL|dialog-rfi|Markedsdialog – mulig anskaffelse av KGV- og KAV-løsning||||
+JA_TITTEL|dialog-rfi|Markedsdialog - nytt inkassosystem i Bodø kommune||||
+JA_TITTEL|dialog-rfi|Markedsdialog: programvare for timeregistrering og internfakturering||||
+JA_TITTEL|dialog-rfi|Request for information (RFI) regarding new national service for targeted health advice||||
+JA_TITTEL|dialog-rfi|Veiledende kunngjøring Anskaffelse konsulentavtaler Digitaliseringsområdet||||
+JA_TITTEL|kvalitetssystem|Kvalitetssystem||||
+JA_TITTEL|medarbeiderundersokelse|Medarbeiderundersøkelse og pulsmålinger||||
+JA_TITTEL|oversettelse|Framework Agreement for Norwegian-Northern Sami Translation Services||||
+JA_TITTEL|rapportering-renhold-lekeplass|BME X 2026-07 RFI - Markedskartlegging av fagsystem for lekeplasskontroller||||
+JA_TITTEL|regnskapssystem|Kommunalt innfordringssystem||||
+JA_TITTEL|saksbehandling|26182 Saksbehandlingsløsning||||
+JA_TITTEL|saksbehandling|Anskaffelse av tilgang til KI-tjenester for Energidepartementet||||
+KRYSS|fagsystem|dialog-rfi||4||
+KRYSS|fagsystem|kvalitetssystem||1||
+KRYSS|fagsystem|regnskapssystem||1||
+KRYSS|fagsystem|saksbehandling||1||
+KRYSS|oversettelse|oversettelse||1||
+KRYSS|rapportering|dialog-rfi||1||
+KRYSS|rapportering|rapportering-renhold-lekeplass||1||
+KRYSS|undersokelser|medarbeiderundersokelse||1||
+KRYSS|utvikling-ki|dialog-rfi||3||
+KRYSS|utvikling-ki|saksbehandling||1||
+MOTE|1-kvalitetssystem|FORESLATT||1|3|1
+MOTE|2-rapportering-renhold-lekeplass|FORESLATT||1|2|1
+MOTE|3-medarbeiderundersokelse|FORESLATT||1|0|0
+MOTE|4-saksbehandling|UTSATT||2|3|0
+MOTE|5-oversettelse|UTSATT||1|0|0
+MOTE|6-regnskapssystem|UT||1|3|0
+MOTE|7-dialog-rfi|OMSTRIDT||8|19|1
+MOTE_NONE_ALL7|ja|||16||
+MOTE_NONE_ALL7|nei|||45||
+MOTE_NONE_ALL7|undersok|||4||
+MOTE_NONE_TOP3|ja|||27||
+MOTE_NONE_TOP3|nei|||64||
+MOTE_NONE_TOP3|undersok|||5||
+MOTE_TOP3_COVER|ja|||3||
+MOTE_TOP3_COVER|nei|||5||
+MOTE_TOP3_COVER|undersok|||1||
+SPOR|dokument-ai|||1|1|0
+SPOR|fagsystem|||13|11|3
+SPOR|oversettelse|||1|0|0
+SPOR|rapportering|||1|0|0
+SPOR|solenergi|||0|1|1
+SPOR|undersokelser|||2|1|0
+SPOR|utenfor-scope|||4|48|2
+SPOR|utvikling-ki|||8|7|0
+TOTALS|ja|||30||
+TOTALS|nei|||69||
+TOTALS|undersok|||6||
+COMMIT

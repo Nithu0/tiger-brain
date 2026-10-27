@@ -1,0 +1,22 @@
+{
+  "id": "job-20260727-202420-codex3-23938",
+  "role": "codex-3",
+  "engine": "echo",
+  "project": "nexus",
+  "cwd": "/home/nithu/code/ai-assistent",
+  "pii": false,
+  "prompt": "e2e-test av intake-mirror",
+  "prompt_raw": "e2e-test av intake-mirror",
+  "origin": "f2-test",
+  "reply_to": "telegram",
+  "status": "rejected",
+  "created": "2026-07-27T20:24:20Z",
+  "updated": "2026-07-28T17:24:44Z",
+  "result_path": "/home/nithu/Obsidian/Brain/00-firm-bus/jobs/results/job-20260727-202420-codex3-23938.md",
+  "branch": "feat/hle-import-resilience",
+  "summary": "[echo-stub] role=codex-3 engine=echo cwd=/home/nithu/code/ai-assistent\n--- prompt ---\ne2e-test av intake-mirror",
+  "exit_code": 0,
+  "head": "2856344",
+  "dirty": true,
+  "note": "gammel plumbing-test, rydder køen"
+}

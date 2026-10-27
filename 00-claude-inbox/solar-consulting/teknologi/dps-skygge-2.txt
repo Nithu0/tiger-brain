@@ -1,0 +1,36 @@
+# triage-grunnlinje — produksjon, read-only
+# målt: 2026-10-27T084718Z
+# kode: UKJENT
+# kilde: projects/anbud/crm/scripts/baseline/dps-skygge-2.sql
+# reproduser: ./scripts/baseline/run-triage-baseline.sh --sql dps-skygge-2.sql
+
+BEGIN
+SET
+GAPKEY|authorisation_licence|1|0|
+GAPKEY|contract_references|2|0|
+GAPKEY|credit_rating|7|0|
+GAPKEY|environmental_certificate|2|0|
+GAPKEY|EXCLUSION_INSOLVENCY_MISCONDUCT|1|0|
+GAPKEY|narrative|3|0|
+GAPKEY|payment_defaults|7|0|
+GAPKEY|quality_certificate|3|0|
+GAPKEY|tax_certificate|3|0|
+GAPKEY|TECHNICAL_REFERENCES|1|0|
+K10|2022-318980|kan-soke|-|08:45
+K10|2022-343586|kan-soke|-|08:45
+K10|2022-353024|kan-soke|-|08:45
+K10|2022-635572|mangler|credit_rating,narrative,payment_defaults|08:16
+K10|2022-962877|kan-soke|-|08:16
+K10|2024-103225|mangler|credit_rating,environmental_certificate,narrative,payment_defaults,quality_certificate|08:16
+K10|2024-105583|ukjent|-|08:16
+K10|2025-103853|mangler|credit_rating,narrative,payment_defaults|08:16
+K10|2025-109971|kan-soke|-|08:16
+K10|2025-109972|kan-soke|-|08:16
+K10|2025-118721|mangler|narrative,tax_certificate|08:16
+K10|2026-106810|kan-soke|-|08:16
+RUN|37094|ok|76 åpne DPS i våre vertikaler (av 300): 12 kan søke, 19 mangler noe, 0 kan ikke, 45 ukjent; 76 nye signaler (skygge)|08:16:28
+RUN|37178|ok|72 åpne DPS i våre vertikaler (av 300): 20 kan søke, 9 mangler noe, 0 kan ikke, 43 ukjent; 8 nye signaler (skygge)|08:45:44
+VERDICT|kan-soke|20||
+VERDICT|mangler|11||
+VERDICT|ukjent|45||
+ROLLBACK

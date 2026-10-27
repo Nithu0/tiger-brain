@@ -21,7 +21,7 @@ For hvordan systemene SNAKKER sammen (hooks, daemons, køer): [[System-Wiring-MO
 | `00-firm-bus/` | Inter-pane koordinering: [[CHARTER]], feed.md, inbox/<role>.md |
 | `00-command-center/` | Command-center-notater (kontrollplan) |
 | `01-nexus/` | Nexus XAUUSD trading firm — [[Nexus-MOC]] |
-| `02-thesis/` | NTNU master's thesis (battery electrolyte ML) |
+| `90-archive/2026-thesis/` | NTNU master's thesis (battery electrolyte ML) — arkivert 2026-07 |
 | `03-business/`, `04-career/`, `05-learning/` | Domene-notater (egne MOC-er) |
 | `03-skills/` | Skill-registry 3-tier + [[TOOLBOX-MOC]] (kanonisk verktøy-roster) |
 | `06-AS/`, `07-personlig/` | AS-regnskap · personlig (PII — aldri leid GPU) |

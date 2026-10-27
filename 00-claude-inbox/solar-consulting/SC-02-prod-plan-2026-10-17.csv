@@ -1,0 +1,659 @@
+award_id;root_tender_id;notice;source;supplier;org_number;action;merged_into;dedup_key;reason
+1;4;671041-2026;ted;ENTRO AS;830090002;merge;4|*|830090002;4|*|830090002;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 671041-2026 (RESULT)"
+33;4;2026-115183;doffin;ENTRO AS;830090002;rekey;;4|*|830090002;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+34;4;2026-115183;doffin;EG Norge AS;983781233;remove;;4|-|32;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115183, men ikke i noen vinnerblokk
+2;8;674109-2026;ted;MTG AS;;merge;8|*|982389836;8|*|982389836;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 674109-2026 (RESULT)"
+3;8;674109-2026;ted;Maskinentreprenør Fundamentering og Graving AS;;merge;8|*|936948340;8|*|936948340;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 674109-2026 (RESULT)"
+4;8;674109-2026;ted;Maskinentreprenør Stig Kristiansen AS;;merge;8|*|941835651;8|*|941835651;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 674109-2026 (RESULT)"
+5;8;674109-2026;ted;Memm Drift AS;;merge;8|*|929579798;8|*|929579798;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 674109-2026 (RESULT)"
+6;8;674109-2026;ted;Roald Madsen AS;;merge;8|*|925510610;8|*|925510610;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 674109-2026 (RESULT)"
+7;8;674109-2026;ted;Maskinentreprenør Herbjørn Nilssen AS;;merge;8|*|979710968;8|*|979710968;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 674109-2026 (RESULT)"
+8;8;674109-2026;ted;Transportsentralen Tromsø SA;;merge;8|*|958914083;8|*|958914083;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 674109-2026 (RESULT)"
+35;8;2026-115182;doffin;MTG AS;982389836;rekey;;8|*|982389836;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+36;8;2026-115182;doffin;Maskinentreprenør Fundamentering og Graving AS;936948340;rekey;;8|*|936948340;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+37;8;2026-115182;doffin;Maskinentreprenør Stig Kristiansen AS;941835651;rekey;;8|*|941835651;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+38;8;2026-115182;doffin;Memm Drift AS;929579798;rekey;;8|*|929579798;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+39;8;2026-115182;doffin;Roald Madsen AS;925510610;rekey;;8|*|925510610;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+40;8;2026-115182;doffin;Maskinentreprenør Herbjørn Nilssen AS;979710968;rekey;;8|*|979710968;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+41;8;2026-115182;doffin;Transportsentralen Tromsø SA;958914083;rekey;;8|*|958914083;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+42;8;2026-115182;doffin;Tenkon as;996908747;remove;;8|-|40;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115182, men ikke i noen vinnerblokk
+9;19;673743-2026;ted;VOLVO NORGE AS;910712799;merge;19|*|910712799;19|*|910712799;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 673743-2026 (RESULT)"
+32;19;2026-115179;doffin;VOLVO NORGE AS;910712799;rekey;;19|*|910712799;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+10;31;670014-2026;ted;SWECO NORGE AS;967032271;merge;31|*|967032271;31|*|967032271;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 670014-2026 (RESULT)"
+11;31;670014-2026;ted;Norconsult Norge AS;962392687;merge;31|*|962392687;31|*|962392687;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 670014-2026 (RESULT)"
+12;31;670014-2026;ted;COWI AS;979364857;merge;31|*|979364857;31|*|979364857;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 670014-2026 (RESULT)"
+13;31;670014-2026;ted;ASPLAN VIAK AS;910209205;merge;31|*|910209205;31|*|910209205;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 670014-2026 (RESULT)"
+63;31;2026-115141;doffin;SWECO NORGE AS;967032271;rekey;;31|*|967032271;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+64;31;2026-115141;doffin;Norconsult Norge AS;962392687;rekey;;31|*|962392687;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+65;31;2026-115141;doffin;COWI AS;979364857;rekey;;31|*|979364857;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+66;31;2026-115141;doffin;ASPLAN VIAK AS;910209205;rekey;;31|*|910209205;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+14;35;669605-2026;ted;Atea AS (Hovedenhet);976239997;merge;35|*|976239997;35|*|976239997;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 669605-2026 (RESULT)"
+61;35;2026-115139;doffin;Atea AS (Hovedenhet);976239997;rekey;;35|*|976239997;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+54;38;2026-115131;doffin;Yllw AS;933901327;rekey;;38|*|933901327;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+15;41;667657-2026;ted;BDO AS 1;;merge;41|*|993606650;41|*|993606650;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 667657-2026 (RESULT)"
+55;41;2026-115135;doffin;BDO AS 1;993606650;rekey;;41|*|993606650;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+56;41;2026-115135;doffin;Tower Newco AS;935701430;remove;;41|-|50;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115135, men ikke i noen vinnerblokk
+57;41;2026-115135;doffin;PricewaterhouseCoopers AS;987009713;remove;;41|-|51;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115135, men ikke i noen vinnerblokk
+58;41;2026-115135;doffin;Ernst & Young AS;976389387;remove;;41|-|52;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115135, men ikke i noen vinnerblokk
+16;46;670363-2026;ted;VIVICTA AS;931190628;merge;46|*|931190628;46|*|931190628;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 670363-2026 (RESULT)"
+60;46;2026-115136;doffin;VIVICTA AS;931190628;rekey;;46|*|931190628;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+44;48;2026-115118;doffin;Matvarehuset AS;988078263;rekey;;48|*|988078263;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+17;49;668438-2026;ted;Matriks AS;981059794;merge;49|*|981059794;49|*|981059794;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 668438-2026 (RESULT)"
+62;49;2026-115140;doffin;Matriks AS;981059794;rekey;;49|*|981059794;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+18;51;668551-2026;ted;UNO-X MOBILITY NORGE AS;921757131;merge;51|*|921757131;51|*|921757131;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 668551-2026 (RESULT)"
+19;51;668551-2026;ted;Circle K Norge AS;914766451;merge;51|*|914766451;51|*|914766451;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 668551-2026 (RESULT)"
+20;51;668551-2026;ted;Oljeleverandøren AS;912391426;merge;51|*|912391426;51|*|912391426;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 668551-2026 (RESULT)"
+51;51;2026-115132;doffin;UNO-X MOBILITY NORGE AS;921757131;rekey;;51|*|921757131;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+52;51;2026-115132;doffin;Circle K Norge AS;914766451;rekey;;51|*|914766451;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+53;51;2026-115132;doffin;Oljeleverandøren AS;912391426;rekey;;51|*|912391426;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+21;56;667383-2026;ted;Mester Grønn AS;933944522;merge;56|*|933944522;56|*|933944522;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 667383-2026 (RESULT)"
+59;56;2026-115137;doffin;Mester Grønn AS;933944522;rekey;;56|*|933944522;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+22;57;669679-2026;ted;MSS-MASKINELL SNØSERVICE AS;;merge;57|*|978624278;57|*|978624278;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 669679-2026 (RESULT)"
+45;57;2026-115128;doffin;MSS-MASKINELL SNØSERVICE AS;978624278;rekey;;57|*|978624278;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+46;57;2026-115128;doffin;Vaktmesterkompaniet;911935589;remove;;57|-|44;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115128, men ikke i noen vinnerblokk
+47;57;2026-115128;doffin;Norteko Anlegg as;926302396;remove;;57|-|45;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115128, men ikke i noen vinnerblokk
+48;57;2026-115128;doffin;Apila AS;927473151;remove;;57|-|46;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115128, men ikke i noen vinnerblokk
+49;57;2026-115128;doffin;Frode Gran Service As;995687046;remove;;57|-|47;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115128, men ikke i noen vinnerblokk
+23;58;670660-2026;ted;Advokatfirmaet Dehn Da;921625189;merge;58|*|921625189;58|*|921625189;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 670660-2026 (RESULT)"
+50;58;2026-115130;doffin;Advokatfirmaet Dehn Da;921625189;rekey;;58|*|921625189;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+24;62;667058-2026;ted;Buypass;983163327;merge;62|*|983163327;62|*|983163327;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 667058-2026 (RESULT)"
+76;62;2026-115070;doffin;Buypass;983163327;rekey;;62|*|983163327;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+25;71;665757-2026;ted;NOR TEKSTIL AS;988023868;merge;71|*|988023868;71|*|988023868;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 665757-2026 (RESULT)"
+79;71;2026-115088;doffin;NOR TEKSTIL AS;988023868;rekey;;71|*|988023868;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+26;73;663800-2026;ted;Gemidan A/S;;merge;73|*|navn:gemidan a/s;73|*|navn:gemidan a/s;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 663800-2026 (RESULT)"
+86;73;2026-115062;doffin;Gemidan A/S;;rekey;;73|*|navn:gemidan a/s;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+87;73;2026-115062;doffin;ODD GRØDUM TRANSPORT AS;992847557;rekey;;73|*|992847557;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+80;75;2026-115094;doffin;NORMEDI NORGE AS;914423562;rekey;;75|*|914423562;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+27;88;664174-2026;ted;Bio-Rad Norway AS;919981210;merge;88|*|919981210;88|*|919981210;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 664174-2026 (RESULT)"
+77;88;2026-115079;doffin;Bio-Rad Norway AS;919981210;rekey;;88|*|919981210;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+78;88;2026-115079;doffin;Bio-Rad Laboratories Inc.;009127663;rekey;;88|*|009127663;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+28;105;664519-2026;ted;Servicegrossisten Øst AS;942545258;merge;105|*|942545258;105|*|942545258;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 664519-2026 (RESULT)"
+29;105;664519-2026;ted;Tine Sa;947942638;merge;105|*|947942638;105|*|947942638;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 664519-2026 (RESULT)"
+30;105;664519-2026;ted;Bakermester Klausen AS;959216908;merge;105|*|996330990;105|*|996330990;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 664519-2026 (RESULT)"
+31;105;664519-2026;ted;Odd Langdalen Frukt & Grønt En Gros AS;996330990;merge;105|*|996330990;105|*|996330990;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 664519-2026 (RESULT)"
+72;105;2026-115071;doffin;Servicegrossisten Øst AS;942545258;rekey;;105|*|942545258;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+73;105;2026-115071;doffin;Tine Sa;947942638;rekey;;105|*|947942638;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+74;105;2026-115071;doffin;Odd Langdalen Frukt & Grønt En Gros AS;996330990;rekey;;105|*|996330990;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+75;105;2026-115071;doffin;Bakermester Klausen AS;959216908;rekey;;105|*|959216908;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+43;137;2026-115206;doffin;Assessio Norge AS;984801483;rekey;;137|*|984801483;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+67;197;2026-115168;doffin;KS-Konsulent as;997711017;rekey;;197|*|997711017;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+68;197;2026-115168;doffin;Proactima AS;915641938;rekey;;197|*|915641938;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+69;197;2026-115168;doffin;Cedra Norge AS;935416779;rekey;;197|*|935416779;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+70;197;2026-115168;doffin;Underveis Tiltak AS;937600127;rekey;;197|*|937600127;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+71;197;2026-115168;doffin;Agenda Kaupang AS;968938525;rekey;;197|*|968938525;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+81;282;2026-115022;doffin;Kiwa AS;976491696;rekey;;282|*|976491696;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+82;295;2026-114975;doffin;AEA SRL;;rekey;;295|*|navn:aea srl;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+83;298;2026-114988;doffin;ECURA BO OG HABILITERING AS;991737308;rekey;;298|*|991737308;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+84;301;2026-114978;doffin;Renasys Solutions AS;928887634;rekey;;301|*|928887634;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+85;306;2026-114989;doffin;Drammen Papir Engros AS;950222905;rekey;;306|*|950222905;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+88;317;675809-2026;ted;WSP Norge AS;;merge;317|*|881894742;317|*|881894742;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+89;317;675809-2026;ted;VARI ARKITEKTUR AS;;merge;317|*|974373483;317|*|974373483;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+90;317;675809-2026;ted;Opak AS;;merge;317|*|960816862;317|*|960816862;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+91;317;675809-2026;ted;Norconsult Norge AS;;merge;317|*|962392687;317|*|962392687;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+92;317;675809-2026;ted;P7 Prosjekt AS;;merge;317|*|915859526;317|*|915859526;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+93;317;675809-2026;ted;Arkitektkontoret GASA AS;;merge;317|*|940952662;317|*|940952662;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+94;317;675809-2026;ted;Østengen & Bergo AS;;merge;317|*|976582705;317|*|976582705;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+95;317;675809-2026;ted;AFRY NORWAY ADVISORY AS;;merge;317|*|883889762;317|*|883889762;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+96;317;675809-2026;ted;Dark Design Group AS;;merge;317|*|946749745;317|*|946749745;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+97;317;675809-2026;ted;Cowi AS;;merge;317|*|979364857;317|*|979364857;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+98;317;675809-2026;ted;Asplan Viak AS;;merge;317|*|910209205;317|*|910209205;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+99;317;675809-2026;ted;Multiconsult Norge AS;;merge;317|*|918836519;317|*|918836519;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675809-2026 (RESULT)"
+136;317;2026-115232;doffin;Østengen & Bergo AS;976582705;rekey;;317|*|976582705;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+137;317;2026-115232;doffin;AFRY NORWAY ADVISORY AS;883889762;rekey;;317|*|883889762;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+138;317;2026-115232;doffin;Dark Design Group AS;946749745;rekey;;317|*|946749745;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+139;317;2026-115232;doffin;COWI AS;979364857;rekey;;317|*|979364857;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+140;317;2026-115232;doffin;ASPLAN VIAK AS;910209205;rekey;;317|*|910209205;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+141;317;2026-115232;doffin;MULTICONSULT NORGE AS;918836519;rekey;;317|*|918836519;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+142;317;2026-115232;doffin;WSP Norge AS;881894742;rekey;;317|*|881894742;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+143;317;2026-115232;doffin;VARI ARKITEKTUR AS;974373483;rekey;;317|*|974373483;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+144;317;2026-115232;doffin;Opak AS;960816862;rekey;;317|*|960816862;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+145;317;2026-115232;doffin;Norconsult Norge AS;962392687;rekey;;317|*|962392687;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+146;317;2026-115232;doffin;P7 Prosjekt AS;915859526;rekey;;317|*|915859526;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+147;317;2026-115232;doffin;Arkitektkontoret GASA AS;940952662;rekey;;317|*|940952662;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+148;317;2026-115232;doffin;Rambøll Norge AS 1;915251293;remove;;317|-|121;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115232, men ikke i noen vinnerblokk
+100;318;675883-2026;ted;PST Sportsanlegg;;rekey;;318|*|navn:pst sportsanlegg;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+101;323;676476-2026;ted;OSLO EIENDOMSUTLEIEREN AS;;merge;323|*|932286645;323|*|932286645;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 676476-2026 (RESULT)"
+122;323;2026-115222;doffin;OSLO EIENDOMSUTLEIEREN AS;932286645;rekey;;323|*|932286645;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+123;323;2026-115222;doffin;247 Bolig AS;937941870;remove;;323|-|100;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115222, men ikke i noen vinnerblokk
+102;331;675577-2026;ted;Ottar Augdal AS;938524831;rekey;;331|*|938524831;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+103;337;675354-2026;ted;Jentoft og Brumle gård;;merge;337|*|980991164;337|*|980991164;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675354-2026 (RESULT)"
+104;337;675354-2026;ted;Jessen Entreprenør As;;merge;337|*|988336947;337|*|988336947;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675354-2026 (RESULT)"
+105;337;675354-2026;ted;Innhavet transport as;;merge;337|*|972409797;337|*|972409797;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675354-2026 (RESULT)"
+106;337;675354-2026;ted;Øverås Gård v/nilsen;;merge;337|*|969429020;337|*|969429020;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675354-2026 (RESULT)"
+107;337;675354-2026;ted;Øyvind Johansen Maskin AS;;merge;337|*|989953982;337|*|989953982;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675354-2026 (RESULT)"
+108;337;675354-2026;ted;Sivertsen Trebygg AS;;merge;337|*|912185613;337|*|912185613;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675354-2026 (RESULT)"
+109;337;675354-2026;ted;Krokan Gård Da;;merge;337|*|986401091;337|*|986401091;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675354-2026 (RESULT)"
+124;337;2026-115227;doffin;Jentoft og Brumle gård;980991164;rekey;;337|*|980991164;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+125;337;2026-115227;doffin;Jessen Entreprenør As;988336947;rekey;;337|*|988336947;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+126;337;2026-115227;doffin;Innhavet transport as;972409797;rekey;;337|*|972409797;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+127;337;2026-115227;doffin;Øverås Gård v/nilsen;969429020;rekey;;337|*|969429020;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+128;337;2026-115227;doffin;Øyvind Johansen Maskin AS;989953982;rekey;;337|*|989953982;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+129;337;2026-115227;doffin;Sivertsen Trebygg AS;912185613;rekey;;337|*|912185613;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+130;337;2026-115227;doffin;Krokan Gård Da;986401091;rekey;;337|*|986401091;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+131;337;2026-115227;doffin;Roald Hansen;969713098;remove;;337|-|108;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115227, men ikke i noen vinnerblokk
+132;337;2026-115227;doffin;Ellingsen maskin AS;995358999;remove;;337|-|109;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115227, men ikke i noen vinnerblokk
+133;337;2026-115227;doffin;Brattli Ved;925397830;remove;;337|-|110;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115227, men ikke i noen vinnerblokk
+134;337;2026-115227;doffin;Rossvoll Gård;913155645;remove;;337|-|111;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115227, men ikke i noen vinnerblokk
+135;337;2026-115227;doffin;M Larsson Maskin & Konsult AS;930830739;remove;;337|-|112;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115227, men ikke i noen vinnerblokk
+110;340;676467-2026;ted;Menon Economics;;merge;340|*|977213193;340|*|977213193;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 676467-2026 (RESULT)"
+120;340;2026-115216;doffin;Menon Economics;977213193;rekey;;340|*|977213193;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+121;340;2026-115216;doffin;PricewaterhouseCoopers AS;987009713;remove;;340|-|51;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115216, men ikke i noen vinnerblokk
+111;344;675153-2026;ted;Brennabu AS;;merge;344|*|992054301;344|*|992054301;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675153-2026 (RESULT)"
+112;344;675153-2026;ted;Rondedrøm Drift as;;merge;344|*|921902158;344|*|921902158;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675153-2026 (RESULT)"
+113;344;675153-2026;ted;Langedrag Naturpark;;merge;344|*|924291737;344|*|924291737;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675153-2026 (RESULT)"
+115;344;2026-115217;doffin;Brennabu AS;992054301;rekey;;344|*|992054301;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+116;344;2026-115217;doffin;Rondedrøm Drift as;921902158;rekey;;344|*|921902158;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+117;344;2026-115217;doffin;Langedrag Naturpark;924291737;rekey;;344|*|924291737;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+118;344;2026-115217;doffin;Jønnbu leirskule;970273387;remove;;344|-|96;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115217, men ikke i noen vinnerblokk
+119;344;2026-115217;doffin;Aarholt-tunet AS;915186955;remove;;344|-|97;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115217, men ikke i noen vinnerblokk
+114;345;675352-2026;ted;MULTICONSULT NORGE AS;918836519;merge;345|*|918836519;345|*|918836519;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 675352-2026 (RESULT)"
+149;345;2026-115233;doffin;MULTICONSULT NORGE AS;918836519;rekey;;345|*|918836519;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+150;378;2026-114987;doffin;Watchmaker Genomics;;rekey;;378|*|navn:watchmaker genomics;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+151;379;2026-114996;doffin;OVUN AS;964538794;rekey;;379|*|964538794;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+152;379;2026-114996;doffin;SAIV AS;952325620;rekey;;379|*|952325620;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+153;379;2026-114996;doffin;Fugro Norway AS;969059789;rekey;;379|*|969059789;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+154;380;2026-114997;doffin;NORBIT Subsea;994353098;rekey;;380|*|994353098;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+155;380;2026-114997;doffin;Kongsberg Discovery AS;930770426;rekey;;380|*|930770426;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+156;381;2026-114998;doffin;Bimo AS;912312771;rekey;;381|*|912312771;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+157;382;2026-114999;doffin;Furuno Norge AS;927200724;rekey;;382|*|927200724;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+158;384;2026-115001;doffin;Proneo AS;991500936;rekey;;384|*|991500936;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+159;386;2026-115005;doffin;TELENOR NORGE AS;976967631;rekey;;386|*|976967631;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+160;390;2026-114995;doffin;Blueye Robotics AS;915666450;rekey;;390|*|915666450;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+161;390;2026-114995;doffin;Boxfish Robotics Limited;;rekey;;390|*|navn:boxfish robotics limited;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+162;390;2026-114995;doffin;Algetun AS;917530068;rekey;;390|*|917530068;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+163;399;2026-115006;doffin;Iss Facility Services AS;914791723;rekey;;399|*|914791723;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+164;399;2026-115006;doffin;Nor-log AS;916407157;rekey;;399|*|916407157;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+165;404;2026-114917;doffin;Recovery Bo og Omsorg AS;986199055;rekey;;404|*|986199055;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+166;404;2026-114917;doffin;Omsorgsgruppen Øst AS;927783274;rekey;;404|*|927783274;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+167;404;2026-114917;doffin;Stiftelsen Guts;992459190;rekey;;404|*|992459190;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+168;405;2026-114919;doffin;Netcompany Norway AS;;rekey;;405|*|navn:netcompany norway;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+169;408;2026-114931;doffin;Hamilton Storage GmbH;;rekey;;408|*|navn:hamilton storage gmbh;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+170;419;2026-114934;doffin;Fearsome Ltd;;rekey;;419|*|navn:fearsome ltd;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+171;423;2026-114944;doffin;Techstep Norway AS;977189888;rekey;;423|*|977189888;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+172;426;2026-114928;doffin;MONTEBELLO DIAGNOSTICS AS;994171127;rekey;;426|*|994171127;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+173;429;2026-114949;doffin;Alier AS;999065465;rekey;;429|*|999065465;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+174;437;2026-114953;doffin;Hug betong As;821620392;rekey;;437|*|821620392;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+175;437;2026-114953;doffin;ACO Anlegg as;996342778;rekey;;437|*|996342778;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+176;437;2026-114953;doffin;Ålesund Bygg as;957364012;rekey;;437|*|957364012;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+177;437;2026-114953;doffin;Brenne Entreprenør as;994315404;rekey;;437|*|994315404;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+178;437;2026-114953;doffin;HS Bygg AS;936854044;rekey;;437|*|936854044;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+179;437;2026-114953;doffin;Søvik & Skåravik AS;966981911;rekey;;437|*|966981911;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+180;437;2026-114953;doffin;HOV Prosjekt AS;921298331;rekey;;437|*|921298331;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+181;445;2026-114961;doffin;Sponsor Insight;929933540;rekey;;445|*|929933540;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+182;445;2026-114961;doffin;Menon Economics;977213193;rekey;;445|*|977213193;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+183;445;2026-114961;doffin;Veridian analyse AS;921359756;rekey;;445|*|921359756;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+184;445;2026-114961;doffin;Oslo Economics;993924741;rekey;;445|*|993924741;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+185;464;2026-114892;doffin;Søvik & Skåravik AS;966981911;rekey;;464|*|966981911;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+186;464;2026-114892;doffin;Brenne Entreprenør as;994315404;rekey;;464|*|994315404;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+187;464;2026-114892;doffin;Ålesund Bygg as;957364012;rekey;;464|*|957364012;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+188;464;2026-114892;doffin;HS Bygg AS;936854044;rekey;;464|*|936854044;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+189;464;2026-114892;doffin;Hug betong As;821620392;rekey;;464|*|821620392;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+190;496;2026-114858;doffin;Storm Elektro AS;922633959;rekey;;496|*|922633959;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+191;496;2026-114858;doffin;Drøbak Elektriske;980433994;rekey;;496|*|980433994;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+192;496;2026-114858;doffin;Bravida Norge as;987582561;rekey;;496|*|987582561;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+193;496;2026-114858;doffin;Firesafe AS;958249799;rekey;;496|*|958249799;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+194;496;2026-114858;doffin;Installatøren Oslo as;985885443;rekey;;496|*|985885443;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+195;496;2026-114858;doffin;EDA Elektro data Romerike AS;944957146;rekey;;496|*|944957146;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+196;496;2026-114858;doffin;Oslo Elektriske AS;961732778;rekey;;496|*|961732778;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+197;496;2026-114858;doffin;Caverion Norge AS;959069743;rekey;;496|*|959069743;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+198;496;2026-114858;doffin;AA Elektro Inst. AS;987660392;rekey;;496|*|987660392;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+199;496;2026-114858;doffin;Granitor Electro AS;897688182;rekey;;496|*|897688182;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+200;496;2026-114858;doffin;Ski Elektriske Installasjon AS;948248638;rekey;;496|*|948248638;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+201;496;2026-114858;doffin;OneCo Elektro AS 1;996669173;rekey;;496|*|996669173;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+202;496;2026-114858;doffin;Xpert Installasjon AS;981574036;rekey;;496|*|981574036;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+203;496;2026-114858;doffin;Ingeniør Ivar Pettersen AS;961773490;rekey;;496|*|961773490;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+204;496;2026-114858;doffin;MerElektro AS;917886172;rekey;;496|*|917886172;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+205;496;2026-114858;doffin;Sectech AS;993872636;rekey;;496|*|993872636;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+206;496;2026-114858;doffin;Sg elektriker AS;925354805;rekey;;496|*|925354805;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+207;498;2026-114860;doffin;Bravida Norge as;987582561;rekey;;498|*|987582561;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+208;498;2026-114860;doffin;Veas Rør AS;812481312;rekey;;498|*|812481312;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+209;498;2026-114860;doffin;Lp Rør AS;990019150;rekey;;498|*|990019150;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+210;505;2026-114867;doffin;Atik Cameras Unipessoal Lda;505474700;rekey;;505|*|505474700;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+211;506;2026-114868;doffin;Antec Biogas AS;914077974;rekey;;506|*|914077974;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+212;510;2026-114872;doffin;Cubit AS;919062223;rekey;;510|*|919062223;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+213;513;2026-114875;doffin;Task Alliance AS;987655208;rekey;;513|*|987655208;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+214;514;2026-114877;doffin;Apila AS;927473151;rekey;;514|*|927473151;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+215;514;2026-114877;doffin;Consolvo AS;944024875;rekey;;514|*|944024875;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+216;514;2026-114877;doffin;BMO Entreprenør AS;976098412;rekey;;514|*|976098412;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+217;544;2026-114795;doffin;Vest Energi AS;;rekey;;544|*|navn:vest energi;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+218;545;2026-114796;doffin;Kemira OYJ;;rekey;;545|*|navn:kemira oyj;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+219;547;2026-114798;doffin;Aidn AS;927384302;rekey;;547|*|927384302;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+220;547;2026-114798;doffin;TIETO NORWAY AS;933012867;rekey;;547|*|933012867;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+221;547;2026-114798;doffin;Systematic A/S;;rekey;;547|*|navn:systematic a/s;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+222;549;2026-114799;doffin;Liebherr.Norge AS;921819013;rekey;;549|*|921819013;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+223;551;2026-114802;doffin;Tools AS;980341097;rekey;;551|*|980341097;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+224;551;2026-114802;doffin;Sverre W. Monsen AS;916488386;rekey;;551|*|916488386;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+225;551;2026-114802;doffin;Wenaas Workwear AS;976502132;rekey;;551|*|976502132;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+226;551;2026-114802;doffin;Tess Øst AS;916939787;rekey;;551|*|916939787;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+227;552;2026-114803;doffin;Prenax AB;;rekey;;552|*|navn:prenax ab;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+228;552;2026-114803;doffin;EBSCO International, Inc. Sweden filial;;rekey;;552|*|navn:ebsco international, inc. sweden filial;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+229;553;2026-114804;doffin;Ragn-Sells AS;952187627;rekey;;553|*|952187627;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+230;558;2026-114810;doffin;Boreal Buss AS;979437218;rekey;;558|*|979437218;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+231;559;2026-114809;doffin;Oslo Economics;993924741;rekey;;559|*|993924741;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+232;562;2026-114813;doffin;If Skadeforsikring Nuf;981290666;rekey;;562|*|981290666;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+233;569;2026-114705;doffin;Servicegrossisten Øst AS;942545258;rekey;;569|*|942545258;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+234;569;2026-114705;doffin;Tine Sa;947942638;rekey;;569|*|947942638;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+235;569;2026-114705;doffin;DLVRY AS;926493353;rekey;;569|*|926493353;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+236;569;2026-114705;doffin;Bama Storkjøkken AS;995518333;rekey;;569|*|995518333;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+237;569;2026-114705;doffin;Bakermester Klausen AS;959216908;rekey;;569|*|959216908;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+238;573;2026-114710;doffin;Kreativ Catering Tommy Østhagen AS;985509778;rekey;;573|*|985509778;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+239;573;2026-114710;doffin;Nobel Catering & Conditori AS;931878409;rekey;;573|*|931878409;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+240;573;2026-114710;doffin;Norami Catering AS;934514750;rekey;;573|*|934514750;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+241;573;2026-114710;doffin;FLYT CATERING AS;915379974;rekey;;573|*|915379974;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+242;587;2026-114726;doffin;Arbeidsforskningsinstituttet AFI;974747715;rekey;;587|*|974747715;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+243;588;2026-114725;doffin;Ortomedic AS;938998582;rekey;;588|*|938998582;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+244;588;2026-114725;doffin;Oxford Instruments GmbH;;rekey;;588|*|navn:oxford instruments gmbh;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+245;588;2026-114725;doffin;Holger Hartmann AS;967289965;rekey;;588|*|967289965;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+246;589;2026-114727;doffin;Winsnes AS;922043973;rekey;;589|*|922043973;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+247;595;2026-114733;doffin;BERTEL O STEEN ROGALAND AS;912771784;rekey;;595|*|912771784;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+248;604;2026-114742;doffin;Løvaas Maskin AS;925264342;rekey;;604|*|925264342;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+249;604;2026-114742;doffin;Kystarbeid AS;926548670;rekey;;604|*|926548670;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+250;604;2026-114742;doffin;Tertnes Entreprenør AS;930572098;rekey;;604|*|930572098;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+251;604;2026-114742;doffin;AKERSHUS MASKINUTLEIE AS, SANERINGSSERVICE AS, Valen Marina AS - Sjøentreprenør, TOPO OPPMÅLING AS, ING. ASBJØRN DANIELSEN AS;;rekey;;604|*|navn:akershus maskinutleie as, saneringsservice as, valen marina as - sjøentreprenør, topo oppmåling as, ing. asbjørn danielsen;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+252;609;2026-114747;doffin;Apotek 1 Gruppen AS;983044778;rekey;;609|*|983044778;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+253;617;2026-114755;doffin;Systra Norge AS;942064853;rekey;;617|*|942064853;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+254;659;678604-2026;ted;ECURA BO OG HABILITERING AS;991737308;merge;659|*|991737308;659|*|991737308;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 678604-2026 (RESULT)"
+265;659;2026-115284;doffin;ECURA BO OG HABILITERING AS;991737308;rekey;;659|*|991737308;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+255;668;677901-2026;ted;TOTALTEKST AS;916885903;rekey;;668|LOT-0002|916885903;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+256;668;677901-2026;ted;SEMANTIX TRANSLATIONS NORWAY AS;956153557;rekey;;668|LOT-0002|956153557;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+257;668;677901-2026;ted;Svanhild Solløs;976655990;rekey;;668|LOT-0002|976655990;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+273;668;2026-115314;doffin;TOTALTEKST AS;916885903;rekey;;668|LOT-0001|916885903;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+274;668;2026-115314;doffin;SEMANTIX TRANSLATIONS NORWAY AS;956153557;rekey;;668|LOT-0001|956153557;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+275;668;2026-115314;doffin;Svanhild Solløs;976655990;rekey;;668|LOT-0001|976655990;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+258;683;681240-2026;ted;TELENOR NORGE AS;976967631;merge;683|*|976967631;683|*|976967631;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 681240-2026 (RESULT)"
+267;683;2026-115299;doffin;TELENOR NORGE AS;976967631;rekey;;683|*|976967631;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+259;695;680742-2026;ted;Aschehoug AS;;merge;695|*|935302137;695|*|935302137;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 680742-2026 (RESULT)"
+269;695;2026-115300;doffin;Aschehoug AS;935302137;rekey;;695|*|935302137;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+270;695;2026-115300;doffin;BoldBooks AS;917634327;remove;;695|-|224;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115300, men ikke i noen vinnerblokk
+271;695;2026-115300;doffin;Forente Forlag AS (Spartacus Forlag);929556240;remove;;695|-|225;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115300, men ikke i noen vinnerblokk
+272;695;2026-115300;doffin;Cappelen Damm As;948061937;remove;;695|-|226;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115300, men ikke i noen vinnerblokk
+260;700;680501-2026;ted;West-team AS;993369993;merge;700|*|993369993;700|*|993369993;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 680501-2026 (RESULT)"
+268;700;2026-115298;doffin;West-team AS;993369993;rekey;;700|*|993369993;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+261;701;680661-2026;ted;CytoCypher B.V.;;merge;701|*|navn:cytocypher b.v.;701|*|navn:cytocypher b.v.;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 680661-2026 (RESULT)"
+266;701;2026-115286;doffin;CytoCypher B.V.;;rekey;;701|*|navn:cytocypher b.v.;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+276;806;681489-2026;ted;Sopra Steria AS;910909088;merge;806|*|910909088;806|*|910909088;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 681489-2026 (RESULT)"
+296;806;2026-115371;doffin;Sopra Steria AS;910909088;rekey;;806|*|910909088;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+277;808;681598-2026;ted;Mediafarm AS;976964403;merge;808|*|976964403;808|*|976964403;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 681598-2026 (RESULT)"
+312;808;2026-115378;doffin;Mediafarm AS;976964403;rekey;;808|*|976964403;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+278;811;682977-2026;ted;Nye Evercom AS;;merge;811|*|929933702;811|*|929933702;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 682977-2026 (RESULT)"
+337;811;2026-115386;doffin;Nye Evercom AS;929933702;rekey;;811|*|929933702;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+338;811;2026-115386;doffin;Holi Installasjon AS;832838942;remove;;811|-|280;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115386, men ikke i noen vinnerblokk
+339;811;2026-115386;doffin;Vodacom AS;993925756;remove;;811|-|281;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115386, men ikke i noen vinnerblokk
+340;811;2026-115386;doffin;Iteam AS;923456317;remove;;811|-|282;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115386, men ikke i noen vinnerblokk
+279;815;683229-2026;ted;Aventi Technology AS;941010229;merge;815|*|941010229;815|*|941010229;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 683229-2026 (RESULT)"
+322;815;2026-115407;doffin;Aventi Technology AS;941010229;rekey;;815|*|941010229;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+280;822;681668-2026;ted;Upheads AS;;merge;822|*|980893936;822|*|980893936;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 681668-2026 (RESULT)"
+329;822;2026-115385;doffin;Upheads AS;980893936;rekey;;822|*|980893936;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+330;822;2026-115385;doffin;HJELSETH AS;920852963;remove;;822|-|273;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115385, men ikke i noen vinnerblokk
+281;824;681706-2026;ted;Aksell AS;;merge;824|LOT-0001|919996013;824|LOT-0001|919996013;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 681706-2026 (RESULT)"
+324;824;2026-115417;doffin;Aksell AS;919996013;rekey;;824|LOT-0001|919996013;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+325;824;2026-115417;doffin;Byråservice AS;934959477;remove;;824|-|268;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115417, men ikke i noen vinnerblokk
+326;824;2026-115417;doffin;Dinamo AS;921294751;remove;;824|-|269;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115417, men ikke i noen vinnerblokk
+327;824;2026-115417;doffin;Norengros - Erik Tanche Nilssen AS;819075832;remove;;824|-|270;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115417, men ikke i noen vinnerblokk
+328;824;2026-115417;doffin;SKIPNES SVENIL AS;916960425;remove;;824|-|271;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115417, men ikke i noen vinnerblokk
+282;828;683429-2026;ted;Braathe AS;;merge;828|*|981933311;828|*|981933311;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 683429-2026 (RESULT)"
+331;828;2026-115387;doffin;Braathe AS;981933311;rekey;;828|*|981933311;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+332;828;2026-115387;doffin;Arribatec Cloud AS;983407641;remove;;828|-|275;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115387, men ikke i noen vinnerblokk
+333;828;2026-115387;doffin;Upheads AS;980893936;remove;;828|-|272;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115387, men ikke i noen vinnerblokk
+334;828;2026-115387;doffin;Procano AS;989997149;remove;;828|-|276;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115387, men ikke i noen vinnerblokk
+283;841;682690-2026;ted;MEDVIND ASSISTANSE AS;924481358;merge;841|*|924481358;841|*|924481358;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 682690-2026 (RESULT)"
+321;841;2026-115405;doffin;MEDVIND ASSISTANSE AS;924481358;rekey;;841|*|924481358;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+335;842;2026-115424;doffin;METOS AS;938454213;rekey;;842|*|938454213;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+336;842;2026-115424;doffin;LINDRUP MARTINSEN AS;980915964;rekey;;842|*|980915964;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+284;845;684755-2026;ted;Brun Bygg AS;825151362;merge;845|*|825151362;845|*|825151362;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 684755-2026 (RESULT)"
+297;845;2026-115372;doffin;Brun Bygg AS;825151362;rekey;;845|*|825151362;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+285;849;683299-2026;ted;Advokatfirmaet Føyen AS;;merge;849|LOT-0001|885719392;849|LOT-0001|885719392;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 683299-2026 (RESULT)"
+286;849;683299-2026;ted;Advokatfirmaet Mageli DA;;merge;849|LOT-0001|880636502;849|LOT-0001|880636502;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 683299-2026 (RESULT)"
+287;849;683299-2026;ted;Advokatfirmaet Dehn DA;;merge;849|LOT-0001|921625189;849|LOT-0001|921625189;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 683299-2026 (RESULT)"
+298;849;2026-115384;doffin;Advokatfirmaet Føyen AS;885719392;rekey;;849|LOT-0001|885719392;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+299;849;2026-115384;doffin;Advokatfirmaet Mageli DA;880636502;rekey;;849|LOT-0001|880636502;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+300;849;2026-115384;doffin;Advokatfirmaet Dehn Da;921625189;rekey;;849|LOT-0001|921625189;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+301;849;2026-115384;doffin;Marstrand Advokatfirma AS;921751036;remove;;849|-|249;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115384, men ikke i noen vinnerblokk
+302;849;2026-115384;doffin;Simonsen Vogt Wiig;898783812;remove;;849|-|250;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115384, men ikke i noen vinnerblokk
+303;849;2026-115384;doffin;Advokat Løvdal AS;922356475;remove;;849|-|251;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115384, men ikke i noen vinnerblokk
+304;849;2026-115384;doffin;Kvale Advokatfirma DA;947996053;remove;;849|-|252;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115384, men ikke i noen vinnerblokk
+305;849;2026-115384;doffin;RYGER ADVOKATFIRMA AS;918930477;remove;;849|-|253;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115384, men ikke i noen vinnerblokk
+288;851;684004-2026;ted;Securitas Technology AS;;merge;851|*|983445349;851|*|983445349;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 684004-2026 (RESULT)"
+309;851;2026-115396;doffin;Securitas Technology AS;983445349;rekey;;851|*|983445349;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+310;851;2026-115396;doffin;Caverion Norge AS;959069743;remove;;851|-|163;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115396, men ikke i noen vinnerblokk
+311;851;2026-115396;doffin;Avarn Security AS;943184097;remove;;851|-|258;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115396, men ikke i noen vinnerblokk
+289;853;684824-2026;ted;Bravida Norge as;;merge;853|*|987582561;853|*|987582561;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 684824-2026 (RESULT)"
+290;853;684824-2026;ted;Varp Rør as;;merge;853|*|920848966;853|*|920848966;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 684824-2026 (RESULT)"
+291;853;684824-2026;ted;Rørlegger GS AS;;merge;853|*|934040228;853|*|934040228;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 684824-2026 (RESULT)"
+292;853;684824-2026;ted;Varme & sanitær AS;;merge;853|*|981696247;853|*|981696247;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 684824-2026 (RESULT)"
+293;853;684824-2026;ted;Venåsen Rørservice AS;;merge;853|*|952163353;853|*|952163353;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 684824-2026 (RESULT)"
+294;853;684824-2026;ted;Rørleggerne j&L AS;;merge;853|*|987614668;853|*|987614668;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 684824-2026 (RESULT)"
+313;853;2026-115389;doffin;Bravida Norge as;987582561;rekey;;853|*|987582561;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+314;853;2026-115389;doffin;Varp Rør as;920848966;rekey;;853|*|920848966;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+315;853;2026-115389;doffin;Rørlegger GS AS;934040228;rekey;;853|*|934040228;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+316;853;2026-115389;doffin;Varme & sanitær AS;981696247;rekey;;853|*|981696247;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+317;853;2026-115389;doffin;Venåsen Rørservice AS;952163353;rekey;;853|*|952163353;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+318;853;2026-115389;doffin;Rørleggerne j&L AS;987614668;rekey;;853|*|987614668;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+319;853;2026-115389;doffin;Snersrud & Pedersen AS;922609993;remove;;853|-|264;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115389, men ikke i noen vinnerblokk
+320;853;2026-115389;doffin;GK Norge AS;915892981;remove;;853|-|265;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115389, men ikke i noen vinnerblokk
+295;863;681880-2026;ted;KARL INGE SANDTRØEN AS;;merge;863|*|912128938;863|*|912128938;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 681880-2026 (RESULT)"
+306;863;2026-115391;doffin;KARL INGE SANDTRØEN AS;912128938;rekey;;863|*|912128938;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+307;863;2026-115391;doffin;Nordkyn bilberging & vaktselskap as;976307135;remove;;863|-|255;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115391, men ikke i noen vinnerblokk
+308;863;2026-115391;doffin;Selvaste Persen AS;937592213;remove;;863|-|256;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115391, men ikke i noen vinnerblokk
+323;864;2026-115414;doffin;MÅSØVAL AKVA AS;917977151;rekey;;864|*|917977151;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+352;932;2026-115450;doffin;Enovate AS;985471029;rekey;;932|*|985471029;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+341;937;687577-2026;ted;Normatic AS;979746628;merge;937|*|979746628;937|*|979746628;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 687577-2026 (RESULT)"
+356;937;2026-115459;doffin;Normatic AS;979746628;rekey;;937|*|979746628;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+357;938;2026-115472;doffin;Veterinærvakta i Ål og Hol;990422559;rekey;;938|*|990422559;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+342;942;688514-2026;ted;The Norwegian Agency for Classified Information Systems;;rekey;;942|*|navn:the norwegian agency for classified information systems;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+360;942;2026-115478;doffin;Bouvet Norge AS (hovedenhet);996756246;rekey;;942|*|996756246;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+361;942;2026-115478;doffin;Capra Consulting AS;988097039;rekey;;942|*|988097039;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+343;951;685955-2026;ted;SERVICEGROSSISTENE AS;933444724;merge;951|*|933444724;951|*|933444724;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 685955-2026 (RESULT)"
+362;951;2026-115481;doffin;SERVICEGROSSISTENE AS;933444724;rekey;;951|*|933444724;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+363;951;2026-115481;doffin;Måkestad Engros AS;981521935;remove;;951|-|296;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115481, men ikke i noen vinnerblokk
+344;954;686337-2026;ted;Creative Technology Norway AS;979144695;merge;954|*|979144695;954|*|979144695;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 686337-2026 (RESULT)"
+358;954;2026-115475;doffin;Creative Technology Norway AS;979144695;rekey;;954|*|979144695;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+345;966;688006-2026;ted;Jenssen Mobility AS;997592034;merge;966|*|997592034;966|*|997592034;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 688006-2026 (RESULT)"
+353;966;2026-115455;doffin;Jenssen Mobility AS;997592034;rekey;;966|*|997592034;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+346;968;688144-2026;ted;SoCentral AS;;rekey;;968|*|navn:socentral;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+347;974;686505-2026;ted;Bravida Norge as;987582561;merge;974|*|987582561;974|*|987582561;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 686505-2026 (RESULT)"
+355;974;2026-115458;doffin;Bravida Norge as;987582561;rekey;;974|*|987582561;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+348;981;686945-2026;ted;Securitas AS (hovedenhet);920144950;merge;981|*|920144950;981|*|920144950;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 686945-2026 (RESULT)"
+359;981;2026-115476;doffin;Securitas AS (hovedenhet);920144950;rekey;;981|*|920144950;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+349;984;688806-2026;ted;Notto Tekstil og Solskjerming AS;819401802;merge;984|*|819401802;984|*|819401802;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 688806-2026 (RESULT)"
+351;984;2026-115442;doffin;Notto Tekstil og Solskjerming AS;819401802;rekey;;984|*|819401802;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+350;987;688519-2026;ted;Universitetet i Oslo/Naturfagsenteret;971035854;merge;987|*|971035854;987|*|971035854;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 688519-2026 (RESULT)"
+354;987;2026-115457;doffin;Universitetet i Oslo/Naturfagsenteret;971035854;rekey;;987|*|971035854;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+364;1063;2026-115511;doffin;Dynates A/S;;rekey;;1063|*|navn:dynates a/s;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+365;1071;689938-2026;ted;BG Eiendomsmegling AS;;rekey;;1071|*|navn:bg eiendomsmegling;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+400;1071;2026-115546;doffin;Bg30 Eiendomsmegling AS;919945958;rekey;;1071|*|919945958;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+401;1071;2026-115546;doffin;Privatmegleren Aksept;991458409;remove;;1071|-|325;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115546, men ikke i noen vinnerblokk
+402;1071;2026-115546;doffin;Atrium Eiendomsmegling AS;933326020;remove;;1071|-|326;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115546, men ikke i noen vinnerblokk
+403;1071;2026-115546;doffin;Lørenskog eiendomsmegling AS;984607865;remove;;1071|-|327;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115546, men ikke i noen vinnerblokk
+366;1078;690765-2026;ted;Erling Olsen AS;955675932;merge;1078|*|955675932;1078|*|955675932;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 690765-2026 (RESULT)"
+415;1078;2026-115566;doffin;Erling Olsen AS;955675932;rekey;;1078|*|955675932;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+367;1079;690844-2026;ted;Veidekke Entreprenør AS;;merge;1079|*|984024290;1079|*|984024290;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 690844-2026 (RESULT)"
+393;1079;2026-115526;doffin;Veidekke Entreprenør AS;984024290;rekey;;1079|*|984024290;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+394;1079;2026-115526;doffin;Christie Nordang;974353547;remove;;1079|-|322;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115526, men ikke i noen vinnerblokk
+395;1079;2026-115526;doffin;Repstad Anlegg;915372201;remove;;1079|-|323;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115526, men ikke i noen vinnerblokk
+396;1079;2026-115526;doffin;BMO Entreprenør AS;976098412;remove;;1079|-|180;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115526, men ikke i noen vinnerblokk
+368;1091;689892-2026;ted;NESTOR NORGE AS;928538729;merge;1091|*|928538729;1091|*|928538729;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 689892-2026 (RESULT)"
+413;1091;2026-115554;doffin;NESTOR NORGE AS;928538729;rekey;;1091|*|928538729;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+369;1094;689509-2026;ted;Field Geospatial AS;832436542;merge;1094|*|832436542;1094|*|832436542;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 689509-2026 (RESULT)"
+370;1094;689509-2026;ted;Technogarden AS;986076905;merge;1094|*|986076905;1094|*|986076905;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 689509-2026 (RESULT)"
+388;1094;2026-115516;doffin;Field Geospatial AS;832436542;rekey;;1094|*|832436542;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+389;1094;2026-115516;doffin;Technogarden AS;986076905;rekey;;1094|*|986076905;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+371;1099;691589-2026;ted;Romerike Traktor Og Maskin AS;937402465;merge;1099|*|937402465;1099|*|937402465;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 691589-2026 (RESULT)"
+399;1099;2026-115542;doffin;Romerike Traktor Og Maskin AS;937402465;rekey;;1099|*|937402465;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+372;1108;692299-2026;ted;Ktv Group AS;985994641;merge;1108|*|985994641;1108|*|985994641;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 692299-2026 (RESULT)"
+397;1108;2026-115531;doffin;Ktv Group AS;985994641;rekey;;1108|*|985994641;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+373;1116;691819-2026;ted;PS anlegg AS;912561798;merge;1116|LOT-0001|912561798;1116|LOT-0001|912561798;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 691819-2026 (RESULT)"
+374;1116;691819-2026;ted;Spyleservice Sør AS;937918399;merge;1116|LOT-0001|937918399;1116|LOT-0001|937918399;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 691819-2026 (RESULT)"
+375;1116;691819-2026;ted;Lovisenro Maskin A;937588674;merge;1116|LOT-0001|937588674;1116|LOT-0001|937588674;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 691819-2026 (RESULT)"
+379;1116;691819-2026;ted;Listi Drift AS;919883731;merge;1116|LOT-0001|919883731;1116|LOT-0001|919883731;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 691819-2026 (RESULT)"
+380;1116;691819-2026;ted;Helge Haugaas;992392061;merge;1116|LOT-0001|992392061;1116|LOT-0001|992392061;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 691819-2026 (RESULT)"
+381;1116;691819-2026;ted;Fiære Entrepenør AS;992821175;merge;1116|LOT-0001|992821175;1116|LOT-0001|992821175;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 691819-2026 (RESULT)"
+376;1116;691819-2026;ted;Ødegårdens Planteskole og Utemiljø AS;983136613;rekey;;1116|LOT-0002|983136613;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+377;1116;691819-2026;ted;Grimstad Brøyteservice AS;913881435;rekey;;1116|LOT-0002|913881435;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+378;1116;691819-2026;ted;Flos Båtservice AS;927346567;rekey;;1116|LOT-0002|927346567;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+404;1116;2026-115551;doffin;PS anlegg AS;912561798;rekey;;1116|LOT-0001|912561798;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+405;1116;2026-115551;doffin;Spyleservice Sør AS;937918399;rekey;;1116|LOT-0001|937918399;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+406;1116;2026-115551;doffin;Lovisenro Maskin A;937588674;rekey;;1116|LOT-0001|937588674;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+407;1116;2026-115551;doffin;Ødegårdens Planteskole og Utemiljø AS;983136613;rekey;;1116|LOT-0001|983136613;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+408;1116;2026-115551;doffin;Grimstad Brøyteservice AS;913881435;rekey;;1116|LOT-0001|913881435;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+409;1116;2026-115551;doffin;Flos Båtservice AS;927346567;rekey;;1116|LOT-0001|927346567;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+410;1116;2026-115551;doffin;Listi Drift AS;919883731;rekey;;1116|LOT-0001|919883731;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+411;1116;2026-115551;doffin;Helge Haugaas;992392061;rekey;;1116|LOT-0001|992392061;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+412;1116;2026-115551;doffin;Fiære Entrepenør AS;992821175;rekey;;1116|LOT-0001|992821175;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+382;1118;692246-2026;ted;Elis Norge AS;930151246;merge;1118|*|930151246;1118|*|930151246;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 692246-2026 (RESULT)"
+390;1118;2026-115518;doffin;Elis Norge AS;930151246;rekey;;1118|*|930151246;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+383;1119;691917-2026;ted;Bertel O. Steen Lørenskog AS;984993226;merge;1119|*|984993226;1119|*|984993226;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 691917-2026 (RESULT)"
+392;1119;2026-115521;doffin;Bertel O. Steen Lørenskog AS;984993226;rekey;;1119|*|984993226;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+384;1120;692565-2026;ted;Naturleg Aktiv AS;915053939;merge;1120|*|915053939;1120|*|915053939;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 692565-2026 (RESULT)"
+398;1120;2026-115539;doffin;Naturleg Aktiv AS;915053939;rekey;;1120|*|915053939;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+385;1126;689481-2026;ted;Nordnes Verksteder AS;959505160;merge;1126|*|959505160;1126|*|959505160;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 689481-2026 (RESULT)"
+391;1126;2026-115519;doffin;Nordnes Verksteder AS;959505160;rekey;;1126|*|959505160;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+386;1129;689569-2026;ted;Clave Consulting AS;933567389;merge;1129|*|933567389;1129|*|933567389;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 689569-2026 (RESULT)"
+414;1129;2026-115553;doffin;Clave Consulting AS;933567389;rekey;;1129|*|933567389;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+387;1131;691234-2026;ted;Plandent AS;914768217;merge;1131|*|914768217;1131|*|914768217;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 691234-2026 (RESULT)"
+416;1131;2026-115571;doffin;Plandent AS;914768217;rekey;;1131|*|914768217;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+417;1223;2026-115602;doffin;Egenes Brannteknikk AS;966861320;rekey;;1223|*|966861320;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+418;1223;2026-115602;doffin;Liftco AS;985601976;remove;;1223|-|329;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115602, men ikke i noen vinnerblokk
+419;1231;694355-2026;ted;TT-Teknikk AS;940484871;merge;1231|*|940484871;1231|*|940484871;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 694355-2026 (RESULT)"
+471;1231;2026-115656;doffin;TT-Teknikk AS;940484871;rekey;;1231|*|940484871;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+420;1232;695001-2026;ted;Biblioteksentralen SA;;merge;1232|*|910568183;1232|*|910568183;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 695001-2026 (RESULT)"
+447;1232;2026-115613;doffin;Biblioteksentralen SA;910568183;rekey;;1232|*|910568183;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+448;1232;2026-115613;doffin;Steinkjer Bokhandel;913708318;remove;;1232|-|352;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115613, men ikke i noen vinnerblokk
+421;1241;693075-2026;ted;Toslab as;980508870;rekey;;1241|LOT-0002|980508870;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+461;1241;2026-115632;doffin;Toslab as;980508870;rekey;;1241|LOT-0001|980508870;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+422;1244;694456-2026;ted;VXTR;987693088;merge;1244|*|987693088;1244|*|987693088;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 694456-2026 (RESULT)"
+470;1244;2026-115654;doffin;VXTR;987693088;rekey;;1244|*|987693088;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+423;1248;696283-2026;ted;El-Tilsynet AS;;merge;1248|*|963679890;1248|*|963679890;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 696283-2026 (RESULT)"
+457;1248;2026-115628;doffin;El-Tilsynet AS;963679890;rekey;;1248|*|963679890;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+458;1248;2026-115628;doffin;Omexom Elsikkerhet AS;984594453;remove;;1248|-|359;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115628, men ikke i noen vinnerblokk
+459;1248;2026-115628;doffin;Elsikkerhet Norge AS;987290994;remove;;1248|-|360;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115628, men ikke i noen vinnerblokk
+460;1248;2026-115628;doffin;Ekvaly Elsikkerhet AS;930154423;remove;;1248|-|361;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115628, men ikke i noen vinnerblokk
+424;1252;694431-2026;ted;VY BUSS AS;976948394;merge;1252|*|976948394;1252|*|976948394;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 694431-2026 (RESULT)"
+425;1252;694431-2026;ted;Oslobuss AS;996644294;merge;1252|*|996644294;1252|*|996644294;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 694431-2026 (RESULT)"
+426;1252;694431-2026;ted;Viken Bil AS;986681604;merge;1252|*|986681604;1252|*|986681604;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 694431-2026 (RESULT)"
+465;1252;2026-115636;doffin;VY BUSS AS;976948394;rekey;;1252|*|976948394;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+466;1252;2026-115636;doffin;Oslobuss AS;996644294;rekey;;1252|*|996644294;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+467;1252;2026-115636;doffin;Viken Bil AS;986681604;rekey;;1252|*|986681604;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+427;1254;693888-2026;ted;VY BUSS AS;976948394;merge;1254|*|976948394;1254|*|976948394;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 693888-2026 (RESULT)"
+468;1254;2026-115641;doffin;VY BUSS AS;976948394;rekey;;1254|*|976948394;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+428;1262;694772-2026;ted;PEOPLE AT WORK AS;;merge;1262|*|921058497;1262|*|921058497;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 694772-2026 (RESULT)"
+473;1262;2026-115657;doffin;PEOPLE AT WORK AS;921058497;rekey;;1262|*|921058497;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+474;1262;2026-115657;doffin;Impact IT AS;933470849;remove;;1262|-|367;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115657, men ikke i noen vinnerblokk
+475;1262;2026-115657;doffin;AS3 Norge AS;983603912;remove;;1262|-|368;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115657, men ikke i noen vinnerblokk
+476;1262;2026-115657;doffin;Medco bedriftshelsetjeneste as;957423426;remove;;1262|-|369;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115657, men ikke i noen vinnerblokk
+477;1262;2026-115657;doffin;4human HRM AS;897757222;remove;;1262|-|370;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115657, men ikke i noen vinnerblokk
+478;1262;2026-115657;doffin;Dr.Dropin BHT AS;927103036;remove;;1262|-|371;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115657, men ikke i noen vinnerblokk
+429;1266;696511-2026;ted;Maske AS (Hovedenhet);975872378;merge;1266|*|975872378;1266|*|975872378;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 696511-2026 (RESULT)"
+446;1266;2026-115611;doffin;Maske AS (Hovedenhet);975872378;rekey;;1266|*|975872378;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+472;1271;2026-115655;doffin;Medidyne AS;990752354;rekey;;1271|*|990752354;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+430;1274;693848-2026;ted;TESS Nord as;980386996;merge;1274|*|980386996;1274|*|980386996;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 693848-2026 (RESULT)"
+431;1274;693848-2026;ted;Wenaas Workwear AS;976502132;merge;1274|*|976502132;1274|*|976502132;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 693848-2026 (RESULT)"
+449;1274;2026-115618;doffin;TESS Nord as;980386996;rekey;;1274|*|980386996;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+450;1274;2026-115618;doffin;Wenaas Workwear AS;976502132;rekey;;1274|*|976502132;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+432;1277;695231-2026;ted;Abacus IT AS;;merge;1277|*|987493348;1277|*|987493348;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 695231-2026 (RESULT)"
+451;1277;2026-115619;doffin;Abacus IT AS;987493348;rekey;;1277|*|987493348;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+452;1277;2026-115619;doffin;Atea AS (Hovedenhet);976239997;remove;;1277|-|14;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115619, men ikke i noen vinnerblokk
+453;1277;2026-115619;doffin;Dustin Norway AS;939483969;remove;;1277|-|354;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115619, men ikke i noen vinnerblokk
+454;1277;2026-115619;doffin;Komplett Services AS;979642121;remove;;1277|-|355;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115619, men ikke i noen vinnerblokk
+455;1277;2026-115619;doffin;Advania Norge AS;992009241;remove;;1277|-|356;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115619, men ikke i noen vinnerblokk
+456;1277;2026-115619;doffin;IT Data AS;843095712;remove;;1277|-|357;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115619, men ikke i noen vinnerblokk
+433;1280;695199-2026;ted;ARTEA MALERMESTER AS;925218839;merge;1280|*|925218839;1280|*|925218839;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 695199-2026 (RESULT)"
+469;1280;2026-115652;doffin;ARTEA MALERMESTER AS;925218839;rekey;;1280|*|925218839;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+434;1281;696466-2026;ted;Låssenteret as;;merge;1281|*|913143159;1281|*|913143159;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 696466-2026 (RESULT)"
+479;1281;2026-115659;doffin;Låssenteret as;913143159;rekey;;1281|*|913143159;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+480;1281;2026-115659;doffin;EL-24 Ensiko AS;914986303;remove;;1281|-|373;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115659, men ikke i noen vinnerblokk
+435;1282;696035-2026;ted;Bouvet Norge AS (hovedenhet);996756246;merge;1282|LOT-0001|996756246;1282|LOT-0001|996756246;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 696035-2026 (RESULT)"
+436;1282;696035-2026;ted;Webstep AS;941612474;merge;1282|LOT-0001|941612474;1282|LOT-0001|941612474;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 696035-2026 (RESULT)"
+437;1282;696035-2026;ted;Bekk Consulting AS;981566378;merge;1282|LOT-0001|981566378;1282|LOT-0001|981566378;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 696035-2026 (RESULT)"
+438;1282;696035-2026;ted;Geodata AS;893136932;merge;1282|LOT-0001|893136932;1282|LOT-0001|893136932;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 696035-2026 (RESULT)"
+439;1282;696035-2026;ted;Computas AS;986352325;merge;1282|LOT-0001|986352325;1282|LOT-0001|986352325;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 696035-2026 (RESULT)"
+443;1282;696035-2026;ted;Kantega AS;985815534;merge;1282|LOT-0004|985815534;1282|LOT-0004|985815534;"Samme anskaffelse, delkontrakt LOT-0004 og leverandør som 2 kunngjøring(er); raden kom fra ted 696035-2026 (RESULT)"
+440;1282;696035-2026;ted;PricewaterhouseCoopers AS;987009713;rekey;;1282|LOT-0003|987009713;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+441;1282;696035-2026;ted;Variant Norge AS;928539210;rekey;;1282|LOT-0003|928539210;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+442;1282;696035-2026;ted;Sopra Steria AS;910909088;rekey;;1282|LOT-0003|910909088;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+482;1282;2026-115663;doffin;Bouvet Norge AS (hovedenhet);996756246;rekey;;1282|LOT-0001|996756246;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+483;1282;2026-115663;doffin;Webstep AS;941612474;rekey;;1282|LOT-0001|941612474;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+484;1282;2026-115663;doffin;Bekk Consulting AS;981566378;rekey;;1282|LOT-0001|981566378;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+485;1282;2026-115663;doffin;Geodata AS;893136932;rekey;;1282|LOT-0001|893136932;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+486;1282;2026-115663;doffin;Computas AS;986352325;rekey;;1282|LOT-0001|986352325;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+487;1282;2026-115663;doffin;PricewaterhouseCoopers AS;987009713;rekey;;1282|LOT-0002|987009713;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+488;1282;2026-115663;doffin;Variant Norge AS;928539210;rekey;;1282|LOT-0002|928539210;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+489;1282;2026-115663;doffin;Sopra Steria AS;910909088;rekey;;1282|LOT-0002|910909088;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+490;1282;2026-115663;doffin;Kantega AS;985815534;rekey;;1282|LOT-0004|985815534;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+444;1286;695647-2026;ted;Norconsult Norge AS;962392687;merge;1286|*|962392687;1286|*|962392687;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 695647-2026 (RESULT)"
+481;1286;2026-115662;doffin;Norconsult Norge AS;962392687;rekey;;1286|*|962392687;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+445;1287;692995-2026;ted;42 labs as;;merge;1287|*|937695136;1287|*|937695136;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 692995-2026 (RESULT)"
+462;1287;2026-115635;doffin;42 labs as;937695136;rekey;;1287|*|937695136;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+463;1287;2026-115635;doffin;BILLOD AS;924686812;remove;;1287|-|363;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115635, men ikke i noen vinnerblokk
+464;1287;2026-115635;doffin;Shorewise AS;935303222;remove;;1287|-|364;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115635, men ikke i noen vinnerblokk
+491;1391;697350-2026;ted;Bio Visjon AS;948521083;merge;1391|*|948521083;1391|*|948521083;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 697350-2026 (RESULT)"
+492;1391;697350-2026;ted;VELLA MANGO AS;932993953;merge;1391|*|932993953;1391|*|932993953;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 697350-2026 (RESULT)"
+506;1391;2026-115711;doffin;Bio Visjon AS;948521083;rekey;;1391|*|948521083;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+507;1391;2026-115711;doffin;VELLA MANGO AS;932993953;rekey;;1391|*|932993953;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+508;1391;2026-115711;doffin;Base Property AS, FOTOPHONO AS;;remove;;1391|-|383;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115711, men ikke i noen vinnerblokk
+493;1394;699989-2026;ted;KNOWIT AS;997725646;merge;1394|*|997725646;1394|*|997725646;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 699989-2026 (RESULT)"
+509;1394;2026-115710;doffin;KNOWIT AS;997725646;rekey;;1394|*|997725646;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+521;1396;2026-115747;doffin;ORTOMEDIC AS;;merge;1396|*|938998582;1396|*|938998582;"Samme anskaffelse, delkontrakt * og leverandør som 1 kunngjøring(er); raden kom fra doffin 2026-115747 (RESULT)"
+494;1400;699179-2026;ted;Miles AS;988340316;merge;1400|*|988340316;1400|*|988340316;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 699179-2026 (RESULT)"
+510;1400;2026-115712;doffin;Miles AS;988340316;rekey;;1400|*|988340316;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+495;1401;699308-2026;ted;Ability Fm AS;911463830;merge;1401|*|911463830;1401|*|911463830;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 699308-2026 (RESULT)"
+511;1401;2026-115719;doffin;Ability Fm AS;911463830;rekey;;1401|*|911463830;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+496;1414;698151-2026;ted;GETINGE NORGE AS;;merge;1414|*|958625820;1414|*|958625820;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 698151-2026 (RESULT)"
+514;1414;2026-115735;doffin;GETINGE NORGE AS;958625820;rekey;;1414|*|958625820;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+515;1414;2026-115735;doffin;THUNE PRODUKTER AS;970972730;remove;;1414|-|385;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115735, men ikke i noen vinnerblokk
+516;1414;2026-115735;doffin;STEELCOBELIMED AS;937275846;remove;;1414|-|386;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115735, men ikke i noen vinnerblokk
+517;1414;2026-115735;doffin;LABHJELP AS;931945246;remove;;1414|-|387;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115735, men ikke i noen vinnerblokk
+518;1414;2026-115735;doffin;CISA NORDIC AS;935011167;remove;;1414|-|388;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115735, men ikke i noen vinnerblokk
+497;1417;699421-2026;ted;VY BUSS AS;976948394;merge;1417|*|976948394;1417|*|976948394;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 699421-2026 (RESULT)"
+512;1417;2026-115733;doffin;VY BUSS AS;976948394;rekey;;1417|*|976948394;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+498;1428;700189-2026;ted;Kraiburg Strail Gmbh & Co;;merge;1428|*|navn:kraiburg strail gmbh & co;1428|*|navn:kraiburg strail gmbh & co;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 700189-2026 (RESULT)"
+519;1428;2026-115741;doffin;Kraiburg Strail Gmbh & Co;;rekey;;1428|*|navn:kraiburg strail gmbh & co;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+524;1432;2026-115755;doffin;Olympus Norge AS;950637323;rekey;;1432|*|950637323;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+499;1434;697909-2026;ted;ASPLAN VIAK AS;910209205;merge;1434|*|910209205;1434|*|910209205;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 697909-2026 (RESULT)"
+513;1434;2026-115734;doffin;ASPLAN VIAK AS;910209205;rekey;;1434|*|910209205;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+500;1435;698580-2026;ted;Ipsos AS;947636936;merge;1435|*|947636936;1435|*|947636936;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 698580-2026 (RESULT)"
+520;1435;2026-115744;doffin;Ipsos AS;947636936;rekey;;1435|*|947636936;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+501;1439;699254-2026;ted;Liebherr.Norge AS;921819013;merge;1439|*|921819013;1439|*|921819013;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 699254-2026 (RESULT)"
+522;1439;2026-115749;doffin;Liebherr.Norge AS;921819013;rekey;;1439|*|921819013;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+502;1440;699490-2026;ted;Arcon Prosjekt A;963028644;merge;1440|*|963028644;1440|*|963028644;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 699490-2026 (RESULT)"
+504;1440;2026-115708;doffin;Arcon Prosjekt A;963028644;rekey;;1440|*|963028644;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+503;1444;699755-2026;ted;Oslobuss AS;996644294;merge;1444|*|996644294;1444|*|996644294;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 699755-2026 (RESULT)"
+505;1444;2026-115709;doffin;Oslobuss AS;996644294;rekey;;1444|*|996644294;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+523;1450;2026-115751;doffin;Timik AS;938373590;rekey;;1450|*|938373590;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+525;1508;2026-115769;doffin;Advokatfirmaet Pricewaterhousecoopers AS;988371084;rekey;;1508|*|988371084;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+526;1564;704068-2026;ted;Ahlsell Norge AS (hovedenhet);910478656;merge;1564|*|910478656;1564|*|910478656;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 704068-2026 (RESULT)"
+542;1564;2026-115842;doffin;Ahlsell Norge AS (hovedenhet);910478656;rekey;;1564|*|910478656;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+527;1569;702509-2026;ted;SilvaNord as;916603371;merge;1569|*|916603371;1569|*|916603371;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 702509-2026 (RESULT)"
+543;1569;2026-115843;doffin;SilvaNord as;916603371;rekey;;1569|*|916603371;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+528;1583;702903-2026;ted;Atea AS (Hovedenhet);976239997;merge;1583|*|976239997;1583|*|976239997;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 702903-2026 (RESULT)"
+535;1583;2026-115824;doffin;Atea AS (Hovedenhet);976239997;rekey;;1583|*|976239997;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+529;1584;701392-2026;ted;AddSecure AS;;merge;1584|*|976145178;1584|*|976145178;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 701392-2026 (RESULT)"
+536;1584;2026-115827;doffin;AddSecure AS;976145178;rekey;;1584|*|976145178;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+537;1584;2026-115827;doffin;RAYVN AS;918322701;remove;;1584|-|401;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115827, men ikke i noen vinnerblokk
+538;1584;2026-115827;doffin;Stix Utvikling AS;998327490;remove;;1584|-|402;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115827, men ikke i noen vinnerblokk
+539;1584;2026-115827;doffin;EVERBRIDGE NORWAY AS;980400255;remove;;1584|-|403;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115827, men ikke i noen vinnerblokk
+530;1598;701253-2026;ted;Retriever Norge AS;981076605;merge;1598|*|981076605;1598|*|981076605;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 701253-2026 (RESULT)"
+544;1598;2026-115846;doffin;Retriever Norge AS;981076605;rekey;;1598|*|981076605;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+531;1599;701468-2026;ted;Vendla AS;982165407;merge;1599|*|982165407;1599|*|982165407;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 701468-2026 (RESULT)"
+540;1599;2026-115828;doffin;Vendla AS;982165407;rekey;;1599|*|982165407;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+532;1602;701899-2026;ted;Malercompagniet Oslo AS;960992482;merge;1602|*|960992482;1602|*|960992482;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 701899-2026 (RESULT)"
+541;1602;2026-115829;doffin;Malercompagniet Oslo AS;960992482;rekey;;1602|*|960992482;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+533;1611;703022-2026;ted;Technoalpin Nordic AB/NUF;;merge;1611|*|navn:technoalpin nordic ab/nuf;1611|*|navn:technoalpin nordic ab/nuf;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 703022-2026 (RESULT)"
+534;1611;2026-115823;doffin;Technoalpin Nordic AB/NUF;;rekey;;1611|*|navn:technoalpin nordic ab/nuf;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+545;1659;705942-2026;ted;Oslo Economics;993924741;merge;1659|*|993924741;1659|*|993924741;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 705942-2026 (RESULT)"
+564;1659;2026-115877;doffin;Oslo Economics;993924741;rekey;;1659|*|993924741;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+554;1664;2026-115868;doffin;Uhlmann Nordiska AB;;rekey;;1664|*|navn:uhlmann nordiska ab;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+546;1665;706668-2026;ted;Norsk Scania AS;879263662;merge;1665|*|879263662;1665|*|879263662;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 706668-2026 (RESULT)"
+563;1665;2026-115876;doffin;Norsk Scania AS;879263662;rekey;;1665|*|879263662;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+547;1669;705439-2026;ted;TWODAY AS;990432368;merge;1669|*|990432368;1669|*|990432368;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 705439-2026 (RESULT)"
+565;1669;2026-115880;doffin;TWODAY AS;990432368;rekey;;1669|*|990432368;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+548;1672;706014-2026;ted;Schindler AS;919876522;merge;1672|*|919876522;1672|*|919876522;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 706014-2026 (RESULT)"
+553;1672;2026-115866;doffin;Schindler AS;919876522;rekey;;1672|*|919876522;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+549;1676;705559-2026;ted;Unite Event AS;;merge;1676|*|919308044;1676|*|919308044;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 705559-2026 (RESULT)"
+566;1676;2026-115883;doffin;Unite Event AS;919308044;rekey;;1676|*|919308044;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+567;1676;2026-115883;doffin;Atlantic MICE AS;979466269;remove;;1676|-|419;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115883, men ikke i noen vinnerblokk
+568;1676;2026-115883;doffin;Bergen Live;984993412;remove;;1676|-|420;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115883, men ikke i noen vinnerblokk
+569;1676;2026-115883;doffin;KITE KOMMUNIKASJON EVENT AS;992324821;remove;;1676|-|421;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115883, men ikke i noen vinnerblokk
+550;1679;705206-2026;ted;ANLEGG ØST ENTREPRENØR AS;;merge;1679|*|911866773;1679|*|911866773;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 705206-2026 (RESULT)"
+570;1679;2026-115890;doffin;ANLEGG ØST ENTREPRENØR AS;911866773;rekey;;1679|*|911866773;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+571;1679;2026-115890;doffin;Aktiv Veidrift AS;990679886;remove;;1679|-|413;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115890, men ikke i noen vinnerblokk
+551;1681;705445-2026;ted;Kreativ Catering Tommy Østhagen AS;985509778;merge;1681|*|985509778;1681|*|985509778;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 705445-2026 (RESULT)"
+562;1681;2026-115875;doffin;Kreativ Catering Tommy Østhagen AS;985509778;rekey;;1681|*|985509778;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+561;1684;2026-115873;doffin;Philips Norge AS;915213952;rekey;;1684|*|915213952;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+552;1689;705751-2026;ted;Marthinsen & Duvholt AS;;merge;1689|*|980416976;1689|*|980416976;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 705751-2026 (RESULT)"
+555;1689;2026-115869;doffin;Marthinsen & Duvholt AS;980416976;rekey;;1689|*|980416976;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+556;1689;2026-115869;doffin;JR Anlegg AS;934763505;remove;;1689|-|412;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115869, men ikke i noen vinnerblokk
+557;1689;2026-115869;doffin;Aktiv Veidrift AS;990679886;remove;;1689|-|413;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115869, men ikke i noen vinnerblokk
+558;1689;2026-115869;doffin;Kjeldaas AS;877341062;remove;;1689|-|414;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115869, men ikke i noen vinnerblokk
+559;1689;2026-115869;doffin;Isachsen Anlegg AS;970999507;remove;;1689|-|415;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115869, men ikke i noen vinnerblokk
+560;1689;2026-115869;doffin;Veflen entreprenør AS;887756252;remove;;1689|-|416;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115869, men ikke i noen vinnerblokk
+583;1758;2026-115931;doffin;FUGLESANGDAHL AS;991836330;rekey;;1758|*|991836330;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+572;1760;711141-2026;ted;Norsk Miljøservice Vest AS;912524698;merge;1760|*|912524698;1760|*|912524698;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 711141-2026 (RESULT)"
+591;1760;2026-115964;doffin;Norsk Miljøservice Vest AS;912524698;rekey;;1760|*|912524698;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+584;1763;2026-115939;doffin;Solør Bioenergi Varme AS;982435358;rekey;;1763|*|982435358;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+573;1765;709444-2026;ted;MASTERNES GJENVINNING AS;979128150;rekey;;1765|LOT-0002|979128150;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+587;1765;2026-115952;doffin;MASTERNES GJENVINNING AS;979128150;rekey;;1765|LOT-0001|979128150;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+594;1768;2026-115972;doffin;Institutt for samfunnsforskning;974760991;rekey;;1768|*|974760991;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+574;1773;710000-2026;ted;KLP Skadeforsikring AS;970896856;merge;1773|*|970896856;1773|*|970896856;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 710000-2026 (RESULT)"
+592;1773;2026-115965;doffin;KLP Skadeforsikring AS;970896856;rekey;;1773|*|970896856;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+575;1776;711000-2026;ted;Spørsmål til minikonkurranse – Sikkerhetstesting av IT- og OT-miljøer;821678102;merge;1776|*|821678102;1776|*|821678102;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 711000-2026 (RESULT)"
+589;1776;2026-115957;doffin;Spørsmål til minikonkurranse – Sikkerhetstesting av IT- og OT-miljøer;821678102;rekey;;1776|*|821678102;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+590;1791;2026-115961;doffin;Metalprogetti S.p.a;;rekey;;1791|*|navn:metalprogetti s.p.a;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+576;1796;707655-2026;ted;Franzefoss Gjenvinning AS;;merge;1796|*|975265412;1796|*|975265412;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 707655-2026 (RESULT)"
+580;1796;2026-115922;doffin;Franzefoss Gjenvinning AS;975265412;rekey;;1796|*|975265412;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+581;1796;2026-115922;doffin;Norsk Gjenvinning AS;937270062;remove;;1796|-|431;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115922, men ikke i noen vinnerblokk
+582;1796;2026-115922;doffin;Ragn-Sells AS;952187627;remove;;1796|-|193;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-115922, men ikke i noen vinnerblokk
+585;1798;2026-115940;doffin;HMSREG AS;925879819;rekey;;1798|*|925879819;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+577;1799;710030-2026;ted;Atea AS (Hovedenhet);976239997;merge;1799|*|976239997;1799|*|976239997;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 710030-2026 (RESULT)"
+588;1799;2026-115958;doffin;Atea AS (Hovedenhet);976239997;rekey;;1799|*|976239997;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+578;1800;708976-2026;ted;Upciti;;merge;1800|*|navn:upciti;1800|*|navn:upciti;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 708976-2026 (RESULT)"
+586;1800;2026-115946;doffin;Upciti;;rekey;;1800|*|navn:upciti;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+579;1806;710770-2026;ted;DATEK LIGHT CONTROL AS;913143051;merge;1806|*|913143051;1806|*|913143051;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 710770-2026 (RESULT)"
+593;1806;2026-115966;doffin;DATEK LIGHT CONTROL AS;913143051;rekey;;1806|*|913143051;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+595;1866;2026-115984;doffin;Humberset Maskin as;917998736;rekey;;1866|*|917998736;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+596;1866;2026-115984;doffin;Aurvoll og Furesund;882937402;rekey;;1866|*|882937402;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+597;1866;2026-115984;doffin;Berknes Maskin AS;937078978;rekey;;1866|*|937078978;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+598;1866;2026-115984;doffin;Hjelle Maskinlag as;980173372;rekey;;1866|*|980173372;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+599;1868;2026-115983;doffin;Caverion Norge AS;959069743;rekey;;1868|*|959069743;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+616;1897;2026-116041;doffin;Allstad Eiendomsutvikling AS;995141450;rekey;;1897|*|995141450;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+600;1901;714664-2026;ted;Orbify.Services AS;981425391;merge;1901|*|981425391;1901|*|981425391;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 714664-2026 (RESULT)"
+618;1901;2026-116021;doffin;Orbify.Services AS;981425391;rekey;;1901|*|981425391;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+601;1905;714260-2026;ted;Linde Gas AS;934863909;merge;1905|*|934863909;1905|*|934863909;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 714260-2026 (RESULT)"
+627;1905;2026-116029;doffin;Linde Gas AS;934863909;rekey;;1905|*|934863909;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+602;1911;712440-2026;ted;Håtunalab AB;;rekey;;1911|LOT-0002|navn:håtunalab ab;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+629;1911;2026-116039;doffin;Håtunalab AB;;rekey;;1911|LOT-0001|navn:håtunalab ab;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+603;1912;713541-2026;ted;Mnemonic AS;982089549;merge;1912|*|982089549;1912|*|982089549;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 713541-2026 (RESULT)"
+626;1912;2026-116007;doffin;Mnemonic AS;982089549;rekey;;1912|*|982089549;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+604;1914;711382-2026;ted;Lilltech AS;985991359;merge;1914|LOT-0001|985991359;1914|LOT-0001|985991359;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 711382-2026 (RESULT)"
+605;1914;711382-2026;ted;Defendo AS;985699135;merge;1914|LOT-0002|985699135;1914|LOT-0002|985699135;"Samme anskaffelse, delkontrakt LOT-0002 og leverandør som 2 kunngjøring(er); raden kom fra ted 711382-2026 (RESULT)"
+630;1914;2026-116013;doffin;Lilltech AS;985991359;rekey;;1914|LOT-0001|985991359;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+631;1914;2026-116013;doffin;Defendo AS;985699135;rekey;;1914|LOT-0002|985699135;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+606;1917;714650-2026;ted;SOLLAND ELEKTRO AS;943506698;merge;1917|*|943506698;1917|*|943506698;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 714650-2026 (RESULT)"
+607;1917;714650-2026;ted;Rogaland Elektro AS;981513886;merge;1917|*|981513886;1917|*|981513886;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 714650-2026 (RESULT)"
+632;1917;2026-116005;doffin;Rogaland Elektro AS;981513886;rekey;;1917|*|981513886;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+633;1917;2026-116005;doffin;SOLLAND ELEKTRO AS;943506698;rekey;;1917|*|943506698;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+608;1921;711502-2026;ted;Saveen & Werner AS;970986715;merge;1921|*|970986715;1921|*|970986715;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 711502-2026 (RESULT)"
+609;1921;711502-2026;ted;Merck Life Science AS;976145801;merge;1921|*|976145801;1921|*|976145801;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 711502-2026 (RESULT)"
+610;1921;711502-2026;ted;AH Diagnostics AS;975914089;merge;1921|*|975914089;1921|*|975914089;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 711502-2026 (RESULT)"
+611;1921;711502-2026;ted;Sarstedt AS;947818678;merge;1921|*|947818678;1921|*|947818678;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 711502-2026 (RESULT)"
+612;1921;711502-2026;ted;Fisher Scientific AS;940354137;merge;1921|*|940354137;1921|*|940354137;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 711502-2026 (RESULT)"
+613;1921;711502-2026;ted;VWR International AS;860964732;merge;1921|*|860964732;1921|*|860964732;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 711502-2026 (RESULT)"
+619;1921;2026-116008;doffin;Saveen & Werner AS;970986715;rekey;;1921|*|970986715;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+620;1921;2026-116008;doffin;Merck Life Science AS;976145801;rekey;;1921|*|976145801;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+621;1921;2026-116008;doffin;AH Diagnostics AS;975914089;rekey;;1921|*|975914089;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+622;1921;2026-116008;doffin;Sarstedt AS;947818678;rekey;;1921|*|947818678;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+623;1921;2026-116008;doffin;Fisher Scientific AS;940354137;rekey;;1921|*|940354137;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+624;1921;2026-116008;doffin;VWR International AS;860964732;rekey;;1921|*|860964732;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+614;1924;712536-2026;ted;CMS Kluge Advokatfirma AS;913296117;merge;1924|*|913296117;1924|*|913296117;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 712536-2026 (RESULT)"
+628;1924;2026-116035;doffin;CMS Kluge Advokatfirma AS;913296117;rekey;;1924|*|913296117;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+615;1929;712950-2026;ted;Stjørdal- Meråker Trafikkskole AS;988331465;merge;1929|*|988331465;1929|*|988331465;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 712950-2026 (RESULT)"
+625;1929;2026-116033;doffin;Stjørdal- Meråker Trafikkskole AS;988331465;rekey;;1929|*|988331465;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+617;1930;2026-116031;doffin;Bruker Nordic AB;;rekey;;1930|*|navn:bruker nordic ab;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+634;1997;2026-116057;doffin;Cetus AS;976117492;rekey;;1997|*|976117492;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+635;2004;716230-2026;ted;Norconsult Norge AS;962392687;merge;2004|*|962392687;2004|*|962392687;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 716230-2026 (RESULT)"
+636;2004;716230-2026;ted;Opak AS;960816862;merge;2004|*|960816862;2004|*|960816862;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 716230-2026 (RESULT)"
+637;2004;716230-2026;ted;MULTICONSULT NORGE AS;918836519;merge;2004|*|918836519;2004|*|918836519;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 716230-2026 (RESULT)"
+653;2004;2026-116080;doffin;Opak AS;960816862;rekey;;2004|*|960816862;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+654;2004;2026-116080;doffin;MULTICONSULT NORGE AS;918836519;rekey;;2004|*|918836519;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+655;2004;2026-116080;doffin;Norconsult Norge AS;962392687;rekey;;2004|*|962392687;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+638;2015;715077-2026;ted;Hønefoss Lyd AS;;merge;2015|*|997626400;2015|*|997626400;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 715077-2026 (RESULT)"
+644;2015;2026-116093;doffin;Hønefoss Lyd AS;997626400;rekey;;2015|*|997626400;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+645;2015;2026-116093;doffin;avonlyd as;991089500;remove;;2015|-|464;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-116093, men ikke i noen vinnerblokk
+646;2015;2026-116093;doffin;PROLYD AS;977089751;remove;;2015|-|465;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-116093, men ikke i noen vinnerblokk
+647;2015;2026-116093;doffin;Holi Installasjon AS;832838942;remove;;2015|-|280;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-116093, men ikke i noen vinnerblokk
+648;2015;2026-116093;doffin;PRO SYSTEMER AS;933261859;remove;;2015|-|466;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-116093, men ikke i noen vinnerblokk
+649;2015;2026-116093;doffin;ASSIST NORGE AS;832387002;remove;;2015|-|467;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-116093, men ikke i noen vinnerblokk
+650;2015;2026-116093;doffin;Arva Lydsystemer AS;943733066;remove;;2015|-|468;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-116093, men ikke i noen vinnerblokk
+651;2015;2026-116093;doffin;Rubicon AS;881478072;remove;;2015|-|469;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-116093, men ikke i noen vinnerblokk
+652;2015;2026-116093;doffin;Bravo Norge AS;912235157;remove;;2015|-|470;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-116093, men ikke i noen vinnerblokk
+639;2016;715425-2026;ted;Sopra Steria AS;910909088;merge;2016|*|910909088;2016|*|910909088;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 715425-2026 (RESULT)"
+656;2016;2026-116087;doffin;Sopra Steria AS;910909088;rekey;;2016|*|910909088;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+640;2017;715903-2026;ted;Iss Facility Services AS;914791723;merge;2017|*|914791723;2017|*|914791723;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 715903-2026 (RESULT)"
+643;2017;2026-116081;doffin;Iss Facility Services AS;914791723;rekey;;2017|*|914791723;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+661;2027;2026-116107;doffin;TOYOTA MATERIAL HANDLING NORWAY AS;925806005;rekey;;2027|*|925806005;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+641;2028;716345-2026;ted;GE VINGMED ULTRASOUND AS;;merge;2028|LOT-0001|938937583;2028|LOT-0001|938937583;"Samme anskaffelse, delkontrakt LOT-0001 og leverandør som 2 kunngjøring(er); raden kom fra ted 716345-2026 (RESULT)"
+658;2028;2026-116100;doffin;GE VINGMED ULTRASOUND AS;938937583;rekey;;2028|LOT-0001|938937583;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)
+659;2028;2026-116100;doffin;VINGMED AS;848236632;remove;;2028|-|472;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-116100, men ikke i noen vinnerblokk
+660;2028;2026-116100;doffin;SECMA AS;912051676;remove;;2028|-|473;Tilbyder, ikke vinner: står i resultatblokken til kunngjøring 2026-116100, men ikke i noen vinnerblokk
+642;2034;715551-2026;ted;TRY AS;980129942;merge;2034|*|980129942;2034|*|980129942;"Samme anskaffelse, delkontrakt * og leverandør som 2 kunngjøring(er); raden kom fra ted 715551-2026 (RESULT)"
+657;2034;2026-116097;doffin;TRY AS;980129942;rekey;;2034|*|980129942;Ny nøkkel: anskaffelse + delkontrakt + leverandør (SC-02)

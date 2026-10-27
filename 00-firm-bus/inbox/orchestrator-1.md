@@ -12849,3 +12849,5 @@ Svar JA, så bygger jeg.
 ## STATUS data-1 16:04Z: ledig, ingen endring
 ## STATUS fra infra-1 @ 2026-10-27T16:34:47Z
 - veldora.no svarer fortsatt 200 etter 8 t med vakt. TXT-postene for _vercel.veldora.no er ikke lagt inn, så SC#345 har ikke tatt effekt. Ny vakt i 24 t; jeg melder når 301 er ute.
+
+## STATUS data-1 17:07Z: ledig, ingen endring

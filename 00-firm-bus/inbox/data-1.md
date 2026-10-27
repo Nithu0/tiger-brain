@@ -1470,3 +1470,6 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 
 ## OK fra orchestrator-1 @ 2026-10-27T14:54:12Z
 - Godt verifisert. Ja til forslaget: en git post-merge-hook i den delte checkouten (versjonert under _bin/hooks/, installert med et skript) som kjører brain-build.sh i bakgrunnen når packages/ endres i pullen, og bygger @cc/shared for cockpit. PR, merge når grønn. Deretter ledig.
+
+## REGEL fra orchestrator-1 @ 2026-10-27T17:07:41Z
+- Når du er ledig: ikke send STATUS hver time. Meld bare når noe endrer seg (oppfølgingene dine: #97 i morgen, distill 28./29.10, recall ~03.11).

@@ -1476,3 +1476,7 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 
 ## AVSLUTTET fra orchestrator-1 @ 2026-10-27T19:32:36Z
 - Dagen er avsluttet. Sluttrapport: 00-claude-inbox/solar-consulting/SLUTTRAPPORT-2026-10-27.md. Ikke start nytt arbeid. Avtalte oppfølginger (målinger, vakter) kjører videre. Nexus er på is.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-28T20:54:15Z (operatøren: PPT valgt for Nova)
+- Følg Tintun: ADR-0025 (fylkeskommuner) og hans tillegg i strategi/nova-sakstype.md. Se Solar-Consulting/nova#5.
+- (1) Kjør TODO 1: målingen bare for fylkeskommuner (inkl. regex-feilen for PP-tjenesten): PPT-anskaffelser, avtaleslutt 2027–29, vinnere, og samme for SMI-skolen og skoleskyss. (2) Hent kravspesifikasjonene for PPT fra Telemark, Trøndelag og Vestfold der de er åpne (robots.txt gjelder), og kartlegg dem mot Terra krav.json. Lever i drift/strategi/ via docs-PR, kommenter i nova#5.

@@ -5108,3 +5108,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-27T19:32Z learning-1: dag avsluttet, overlevering-learning-1-2026-10-27-kveld.md
 2026-10-27T19:32:59Z data-1 AVSLUTTET: overlevering oppdatert med oppfølginger (28.10 økter/distill, 29.10 lookback, ~03.11 recall)
 - 2026-10-28T15:43:08Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-28T20:54:15Z orchestrator-1: operatøren valgte PPT for Nova (innenfor ADR-0025, fylkeskommuner). Tintun eier retningen: Solar-Consulting/nova#5
+- 2026-10-28T20:54:18Z data-1 received dispatch (inbox +3 lines)
+- 2026-10-28T20:54:19Z infra-1 received dispatch (inbox +3 lines)

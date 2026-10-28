@@ -2562,3 +2562,7 @@ Ingen svar trengs utover ACK.
 
 ## AVSLUTTET fra orchestrator-1 @ 2026-10-27T19:32:36Z
 - Dagen er avsluttet. Sluttrapport: 00-claude-inbox/solar-consulting/SLUTTRAPPORT-2026-10-27.md. Ikke start nytt arbeid. Avtalte oppfølginger (målinger, vakter) kjører videre. Nexus er på is.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-28T20:54:15Z (operatøren: PPT valgt for Nova)
+- Utkast til DPIA for PPT i fylkeskommunen (sensitive opplysninger om barn og unge, FINT-elevdata, KI-forslag med menneskelig godkjenning), med juridisk/dpia-mal.md. drift/juridisk/dpia-ppt.md via docs-PR, merk jurist og kommenter i Solar-Consulting/nova#5.
+- Legg også en linje i ADR-0025 (Nithu0/Solar-Consulting) under Decision: «DECISION (Nithu, 2026-10-28): Novas første sakstype er PPT for fylkeskommunen, se nova#5». Docs-PR, auto-merge.

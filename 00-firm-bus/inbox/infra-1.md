@@ -2566,3 +2566,6 @@ Ingen svar trengs utover ACK.
 ## OPPGAVE fra orchestrator-1 @ 2026-10-28T20:54:15Z (operatøren: PPT valgt for Nova)
 - Utkast til DPIA for PPT i fylkeskommunen (sensitive opplysninger om barn og unge, FINT-elevdata, KI-forslag med menneskelig godkjenning), med juridisk/dpia-mal.md. drift/juridisk/dpia-ppt.md via docs-PR, merk jurist og kommenter i Solar-Consulting/nova#5.
 - Legg også en linje i ADR-0025 (Nithu0/Solar-Consulting) under Decision: «DECISION (Nithu, 2026-10-28): Novas første sakstype er PPT for fylkeskommunen, se nova#5». Docs-PR, auto-merge.
+
+## REGEL fra orchestrator-1 @ 2026-10-28T21:09:25Z (operatøren): støtt Tintun, aldri dobbeltarbeid
+- Før noe i Terra/Nova: kjør ~/code/drift/bin/tintun-sjekk og les drift#198. Dekker Tintun det: støtt med review/tester/dokumentasjon, ikke egen versjon. Logg én linje i drift#198 når du starter noe der. Retning for Nova/Terra = Tintun. Se ARBEIDSFLYT.md «Samarbeid med Tintun».

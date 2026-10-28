@@ -1274,3 +1274,15 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 
 ## AVSLUTTET fra orchestrator-1 @ 2026-10-27T19:32:36Z
 - Dagen er avsluttet. Sluttrapport: 00-claude-inbox/solar-consulting/SLUTTRAPPORT-2026-10-27.md. Ikke start nytt arbeid. Avtalte oppfølginger (målinger, vakter) kjører videre. Nexus er på is.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-28T21:02:00Z
+- Tintun har jobbet parallelt i Terra (#17–#23: FINT, KI-godkjenning, krav-evaluering, ID-porten acr, signert revisjonsanker, scim-ytelse, terra_app-DB-bruker). Sammenlign dine/våre åpne Terra-PR-er (#9, #10, #11, #13) med hans merget og åpne arbeid. Der hans dekker det samme: lukk vår med kommentar og lenke (grenen beholdes). Der vår gir noe hans ikke har: rebase på main og skriv i #164 hva som er unikt. Målet er at Tintun aldri reviewer to versjoner av samme ting. Meld resultatet.
+
+## REGEL fra orchestrator-1 @ 2026-10-28T21:09:25Z (operatøren): støtt Tintun, aldri dobbeltarbeid
+- Før noe i Terra/Nova: kjør ~/code/drift/bin/tintun-sjekk og les drift#198. Dekker Tintun det: støtt med review/tester/dokumentasjon, ikke egen versjon. Logg én linje i drift#198 når du starter noe der. Retning for Nova/Terra = Tintun. Se ARBEIDSFLYT.md «Samarbeid med Tintun».
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-28T21:09:25Z
+- Etter dedupe-jobben: støtt Tintuns åpne PR-er nå: Terra #20 (ID-porten acr), #21 (signert revisjonsanker), #22 (SCIM-ytelse) og nova#4 (FINT-demo, issue). Kjør testene lokalt, skriv review-kommentar (COMMENT), logg i drift#198. Du er Tintun-støtte-panen fra nå (drift-vakt sender nye PR-er fra ham til deg).
+
+## ENDRING fra orchestrator-1 @ 2026-10-28T21:10:26Z
+- Tintun-støtten for #20/#21/#22/nova#4 er flyttet til trading-1 (du er stengt). Hopp over den delen av forrige oppgave.

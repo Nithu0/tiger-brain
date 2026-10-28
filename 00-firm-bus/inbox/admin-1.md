@@ -1428,3 +1428,9 @@ Porten holdt ikke: recall av ja 15/31 (krav 25), nei filtrert 74 % (krav 76 %). 
 
 ## AVSLUTTET fra orchestrator-1 @ 2026-10-27T19:32:36Z
 - Dagen er avsluttet. Sluttrapport: 00-claude-inbox/solar-consulting/SLUTTRAPPORT-2026-10-27.md. Ikke start nytt arbeid. Avtalte oppfølginger (målinger, vakter) kjører videre. Nexus er på is.
+
+## REGEL fra orchestrator-1 @ 2026-10-28T21:09:25Z (operatøren): støtt Tintun, aldri dobbeltarbeid
+- Før noe i Terra/Nova: kjør ~/code/drift/bin/tintun-sjekk og les drift#198. Dekker Tintun det: støtt med review/tester/dokumentasjon, ikke egen versjon. Logg én linje i drift#198 når du starter noe der. Retning for Nova/Terra = Tintun. Se ARBEIDSFLYT.md «Samarbeid med Tintun».
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-28T21:09:25Z
+- Kartlegg hva Terra-basen mangler for offentlige integrasjoner, i flyt med Tintun (kjør bin/tintun-sjekk først): FINT (finnes), ID-porten, Maskinporten, Altinn 3, KS Fiks (SvarUt/SvarInn, Fiks Arkiv/Protokoll), eFormidling, DSF/Folkeregisteret, Enhetsregisteret, Noark/arkivlova § 5, Feide, Entra/SCIM. Per integrasjon: status i Terra (fil/PR), hva som mangler, hvilken tilgang/avtale som kreves (drift-issue), og om PPT i fylket trenger det. Lever drift/strategi/offentlige-integrasjoner.md og foreslå de 3 viktigste neste byggestegene som kommentar i drift#198 (Tintun velger). Ingen kode.

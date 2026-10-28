@@ -3001,3 +3001,9 @@ Ingen svar trengs utover ACK.
 
 ## AVSLUTTET fra orchestrator-1 @ 2026-10-27T19:32:36Z
 - Dagen er avsluttet. Sluttrapport: 00-claude-inbox/solar-consulting/SLUTTRAPPORT-2026-10-27.md. Ikke start nytt arbeid. Avtalte oppfølginger (målinger, vakter) kjører videre. Nexus er på is.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-28T21:02:38Z
+- Horizon UX: finn de 3–5 verste skjermene i dashbordet (Playwright mot prod read-only eller lokalt, desktop + 390 px: brudd i layout, uleselig tekst, tomme tilstander, axe-feil, trege sider). Rangér med skjermbilder i drift/strategi/horizon-ux-topp5.md og ett issue per skjerm (område:teknisk-admin, uten eier så teamet fordeler). Ikke endre kode.
+
+## REGEL fra orchestrator-1 @ 2026-10-28T21:09:25Z (operatøren): støtt Tintun, aldri dobbeltarbeid
+- Før noe i Terra/Nova: kjør ~/code/drift/bin/tintun-sjekk og les drift#198. Dekker Tintun det: støtt med review/tester/dokumentasjon, ikke egen versjon. Logg én linje i drift#198 når du starter noe der. Retning for Nova/Terra = Tintun. Se ARBEIDSFLYT.md «Samarbeid med Tintun».

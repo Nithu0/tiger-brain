@@ -1480,3 +1480,6 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 ## OPPGAVE fra orchestrator-1 @ 2026-10-28T20:54:15Z (operatøren: PPT valgt for Nova)
 - Følg Tintun: ADR-0025 (fylkeskommuner) og hans tillegg i strategi/nova-sakstype.md. Se Solar-Consulting/nova#5.
 - (1) Kjør TODO 1: målingen bare for fylkeskommuner (inkl. regex-feilen for PP-tjenesten): PPT-anskaffelser, avtaleslutt 2027–29, vinnere, og samme for SMI-skolen og skoleskyss. (2) Hent kravspesifikasjonene for PPT fra Telemark, Trøndelag og Vestfold der de er åpne (robots.txt gjelder), og kartlegg dem mot Terra krav.json. Lever i drift/strategi/ via docs-PR, kommenter i nova#5.
+
+## REGEL fra orchestrator-1 @ 2026-10-28T21:09:25Z (operatøren): støtt Tintun, aldri dobbeltarbeid
+- Før noe i Terra/Nova: kjør ~/code/drift/bin/tintun-sjekk og les drift#198. Dekker Tintun det: støtt med review/tester/dokumentasjon, ikke egen versjon. Logg én linje i drift#198 når du starter noe der. Retning for Nova/Terra = Tintun. Se ARBEIDSFLYT.md «Samarbeid med Tintun».

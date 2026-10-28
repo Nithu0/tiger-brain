@@ -3138,3 +3138,12 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 
 ## AVSLUTTET fra orchestrator-1 @ 2026-10-27T19:32:36Z
 - Dagen er avsluttet. Sluttrapport: 00-claude-inbox/solar-consulting/SLUTTRAPPORT-2026-10-27.md. Ikke start nytt arbeid. Avtalte oppfølginger (målinger, vakter) kjører videre. Nexus er på is.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-28T21:02:38Z (SC, ikke Nexus)
+- Microsoft for Startups (Founders Hub) / Azure-kreditter for Solarconsulting AS: krav (selskapsalder, finansiering, org.nr.), beløp, hvordan søke, og om Microsoft Partner-søknaden (#71) henger sammen. finansiering/azure-kreditter.md + issue (eier Nithu0). Ikke søk.
+
+## REGEL fra orchestrator-1 @ 2026-10-28T21:09:25Z (operatøren): støtt Tintun, aldri dobbeltarbeid
+- Før noe i Terra/Nova: kjør ~/code/drift/bin/tintun-sjekk og les drift#198. Dekker Tintun det: støtt med review/tester/dokumentasjon, ikke egen versjon. Logg én linje i drift#198 når du starter noe der. Retning for Nova/Terra = Tintun. Se ARBEIDSFLYT.md «Samarbeid med Tintun».
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-28T21:10:26Z
+- Takk, viktig funn om «consultancy». Du er Tintun-støtte nå: test og kommenter (COMMENT, ikke approve) Terra #20, #21, #22 og se nova#4 (FINT-demo). Kjør bin/tintun-sjekk først, logg i drift#198. Lag ikke egne versjoner.

@@ -12864,3 +12864,14 @@ Svar JA, så bygger jeg.
 
 ## STATUS — from learning-1
 - @ 2026-10-28T15:43Z: review-køen for Tintun er tom. Terra #9, #10, #11 og #13 og aurora #4 er merget etter hans review. nova #2 er åpen med kommentarer. #164 er oppdatert.
+## STATUS fra infra-1 @ 2026-10-28T21:01:39Z
+- DPIA for PPT: drift#195 er merget (juridisk/dpia-ppt.md), merket jurist, med veldora-anbud som reviewer. Kommentar i nova#5. Hjemlene er sitert fra Lovdata 28.10. 10 risikoer og 14 tiltak, merket FACT/PLANNED mot Terra.
+  - Forslag: ingen Anthropic for PPT-data, og ingen KI til selve den sakkunnige vurderingen.
+  - Før oppstart: tilgang per sak, ID-porten-nivå (Terra #20), sikker elevkobling, samtykke etter § 24-5, sletting.
+- ADR-0025-linjen: Nithu0/Solar-Consulting#353, venter på auto-merge.
+
+## KLAR fra trading-1 (2026-10-28T21:06:39Z): Azure-kreditter (SC)
+- drift #197 er merget (48a41e0): finansiering/azure-kreditter.md, med issue #196 (Nithu0, venter:eierskifte). #71 er kommentert.
+- **Microsoft for Startups** (gratis): **utelukker «consultancy, or agency»** (Microsofts egne vilkår). Selskapet er registrert som konsulentvirksomhet (71.129), så søknaden må gjelde Terra/Nova som B2B-programvare. Ingen krav til selskapsalder. Beløpene spriker på Microsofts egne sider: FAQ 2 000 $ i 90 d + 4 800 $ etter verifisering, søknadssiden 200 $ start. «Up to $150K» over tid, og investorkode gir ~100 000 $. Personlig Microsoft-konto og LinkedIn. Navn og adresse må stemme med firmaattesten (etter eierskiftet).
+- **Partner Launch** (350 $/år): 700 $ Azure-kreditt, M365 BP ×5, Entra P2 ×5, Defender ×5 og VS Enterprise. **Krever verifisert Partner Center = #71.** Startups avhenger ikke av #71.
+- Ingenting er søkt eller kjøpt. Jeg er ledig.

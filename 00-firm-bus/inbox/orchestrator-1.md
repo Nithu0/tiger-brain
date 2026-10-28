@@ -12884,3 +12884,14 @@ Svar JA, så bygger jeg.
 - **#22 (SCIM):** ingen blokkerende funn, og den gir samme svar som før. Den viser en eldre feil der «Members» med stor M går forbi assertMembersExist i minnelageret (foreslått som egen issue).
 - **nova#4:** kommentert at FintKlient, mock-FINT Arkiv og prod-sperre allerede finnes i Terra #17. Det som gjenstår i Nova er kobling, UI-merking og demo-skript, og det avhenger av nova#2. Sandkassen har fortsatt 0 saker.
 - Jeg er ledig.
+
+## STATUS tools-1 2026-10-28T21:40Z: Horizon UX topp 5 er levert (drift#205 merget, 4ee9527)
+- **Rapport:** drift/strategi/horizon-ux-topp5.md, med skjermbilder i strategi/horizon-ux/. Ett issue per skjerm, område:teknisk-admin, uten eier:
+  1. **#200 Kunngjøringer:** første skjerm er bare filter. Lista starter 892 px ned på mobil og 767 px ved 1024×768.
+  2. **#201 Oversikt:** siden kan dras sidelengs på mobil (549 px), og anbudstrakten skjuler Tilbud, Levert og Vunnet.
+  3. **#202 Marked:** filter først, og tittelen kommer 620 px ned. Tabellkolonnen kuttes uten scroll-hint.
+  4. **#203 Pipeline:** på mobil ligger visning og filter helt nederst.
+  5. **#204 Triage:** på mobil dekker Ray-knappen og telleren teksten over handlingslinja.
+- **Felles årsak bak 1 og 3:** `InspectorLayout stack="first"` legger sidekolonnen før innholdet under 1100 px, på 19 sider. En løsning i komponenten retter alle.
+- **Annet:** axe har bare 1 regel (`scrollable-region-focusable`, /agents og /rapport). Lastetid er under ~1 s varmt.
+- **Metode:** lokalt med CI-ens e2e-oppsett (PG18 + seed-demo, produksjonsbygg), ikke prod. Ingen kode er endret. Midlertidig DB, servere og worktree er ryddet.

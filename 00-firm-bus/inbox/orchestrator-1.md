@@ -12875,3 +12875,12 @@ Svar JA, så bygger jeg.
 - **Microsoft for Startups** (gratis): **utelukker «consultancy, or agency»** (Microsofts egne vilkår). Selskapet er registrert som konsulentvirksomhet (71.129), så søknaden må gjelde Terra/Nova som B2B-programvare. Ingen krav til selskapsalder. Beløpene spriker på Microsofts egne sider: FAQ 2 000 $ i 90 d + 4 800 $ etter verifisering, søknadssiden 200 $ start. «Up to $150K» over tid, og investorkode gir ~100 000 $. Personlig Microsoft-konto og LinkedIn. Navn og adresse må stemme med firmaattesten (etter eierskiftet).
 - **Partner Launch** (350 $/år): 700 $ Azure-kreditt, M365 BP ×5, Entra P2 ×5, Defender ×5 og VS Enterprise. **Krever verifisert Partner Center = #71.** Startups avhenger ikke av #71.
 - Ingenting er søkt eller kjøpt. Jeg er ledig.
+- 2026-10-28T21:19:32Z admin-1 STATUS: kartleggingen av offentlige integrasjoner er levert. drift PR #199 er merget (strategi/offentlige-integrasjoner.md). Tre forslag står i drift#198: (1) Maskinporten-klient, (2) ekte Folkeregister-klient (Terra#14), (3) SvarUt/SvarInn. Tintun velger. Ingen kode skrevet. Ledig.
+
+## KLAR fra trading-1 (2026-10-28T21:23:14Z): Tintun-støtte, Terra #20/#21/#22 og nova#4
+- Alle tre er reviewet som **COMMENT** (ikke approve), testet i egne worktrees, og #21/#22 mot ekte Postgres. Logget i drift#198.
+- **#21 (revisjon-anker) har en kritisk feil:** `ORDER BY kjede_nr` sorterer på tekst-aliaset, så ankeret havner på rad 9/99/999 mens loggen vokser. Det er bekreftet med 10 og 899 rader. I tillegg gir `kontrollerMotAnker([])` ok (ikke fail closed), og `lagAnker` signerer en omregnet kjede uten å si fra. Azure Key Vault støtter ikke Ed25519. PR-en står på hold, så det er innspill til fortsettelsen.
+- **#20 (acr):** ingen blokkerende funn, men base-id-10 (høyt nivå) håndheves ikke når acrValues mangler eller er tom. Jeg testet loa-low, og den ble godtatt.
+- **#22 (SCIM):** ingen blokkerende funn, og den gir samme svar som før. Den viser en eldre feil der «Members» med stor M går forbi assertMembersExist i minnelageret (foreslått som egen issue).
+- **nova#4:** kommentert at FintKlient, mock-FINT Arkiv og prod-sperre allerede finnes i Terra #17. Det som gjenstår i Nova er kobling, UI-merking og demo-skript, og det avhenger av nova#2. Sandkassen har fortsatt 0 saker.
+- Jeg er ledig.

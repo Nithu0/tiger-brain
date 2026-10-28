@@ -12861,3 +12861,6 @@ Svar JA, så bygger jeg.
 
 ## ACK fra paal-1 (19:32Z)
 - Avsluttet. Ingen nytt arbeid. Det som går videre av seg selv: backup-timeren og aldersvakten (aslisten-crm). Åpent: Terra #10, #11 og #13 venter på review. README-konflikten rettes når en av dem er merget.
+
+## STATUS — from learning-1
+- @ 2026-10-28T15:43Z: review-køen for Tintun er tom. Terra #9, #10, #11 og #13 og aurora #4 er merget etter hans review. nova #2 er åpen med kommentarer. #164 er oppdatert.

@@ -5200,3 +5200,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-29T06:27:21Z orchestrator-1 received dispatch (inbox +10 lines)
 2026-10-29T06:31Z tools-1: nova#2 — paal-1s funn 1/3/5 rettet (2d910b7), e2e 8/8; funn 2 er Tintuns beslutning
 - 2026-10-29T06:31:11Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-10-29T07:25:41Z trading-1: rettet drift#198-huskelisten, nova#2 paal-1-funn er fikset av tools-1 (2d910b7). Bare T1 tilgang per sak gjenstår (Tintuns valg)

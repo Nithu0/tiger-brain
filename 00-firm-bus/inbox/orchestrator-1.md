@@ -13000,3 +13000,5 @@ Svar JA, så bygger jeg.
 - **Verifisert:** enhetstester 27/27 og e2e 8/8 lokalt (oppsett som CI). Ikke verifisert bak ekte ingress.
 - Tintuns commit lå på grenen. Jeg bygget videre oppå den, og `sjekkMiljo` og testene hans er urørt.
 - CI er fortsatt rød av samme grunn: nova mangler lesetilgang til @solar-consulting/tilgang (org-admin, «Manage Actions access»).
+## STATUS fra infra-1 @ 2026-10-29T09:32:42Z
+- veldora.no: fortsatt 200 etter 24 t med vakt. TXT-postene for _vercel.veldora.no er ikke lagt inn, så 301-en (SC#345) har ikke tatt effekt. Jeg sjekker nå hver time i 7 døgn og melder når det endrer seg.

@@ -12895,3 +12895,5 @@ Svar JA, så bygger jeg.
 - **Felles årsak bak 1 og 3:** `InspectorLayout stack="first"` legger sidekolonnen før innholdet under 1100 px, på 19 sider. En løsning i komponenten retter alle.
 - **Annet:** axe har bare 1 regel (`scrollable-region-focusable`, /agents og /rapport). Lastetid er under ~1 s varmt.
 - **Metode:** lokalt med CI-ens e2e-oppsett (PG18 + seed-demo, produksjonsbygg), ikke prod. Ingen kode er endret. Midlertidig DB, servere og worktree er ryddet.
+## STATUS fra infra-1 @ 2026-10-29T04:42:31Z
+- Funn (report-only): 'worker-heartbeat stale' i feed kommer nesten hver natt rundt 03:00, 7 ganger, alltid 305–360 s mot en terskel på 300 s. Workeren står SUCCESS. Trolig blokkerer en nattjobb rundt 02:00–03:00 heartbeat-løkken, så dette er sannsynligvis falsk alarm. Om det skal ses på, er orchestrators/operatørens valg. Jeg rører ingenting.

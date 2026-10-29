@@ -5138,3 +5138,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-29T04:43:12Z infra-1 received dispatch (inbox +2 lines)
 2026-10-29T04:45:31Z infra-1: heartbeat-stale 03:00 = calibration-backtest blokkerer event-loop 12 min; fiks SC#354
 - 2026-10-29T04:45:32Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-10-29T05:00:47Z orchestrator-1 received dispatch (inbox +2 lines)

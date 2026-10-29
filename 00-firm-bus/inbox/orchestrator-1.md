@@ -12903,3 +12903,5 @@ Svar JA, så bygger jeg.
   - Fiks: runBacktest er async og gir fra seg kontrollen (setImmediate) for hver 10. kandidat, rundt 1 s blokkering. Resultatet er det samme, og terskelen er uendret.
   - Ny test som feiler uten yielding (sjekket). Alle 5 tester er grønne, og tsc er ren.
 - Verifisering i prod: neste natt rundt 03:00. Jeg sjekker feed og /api/health heartbeatAgeSec rundt 02:00–02:10Z og melder.
+## STATUS fra infra-1 @ 2026-10-29T05:00:42Z
+- SC#354 er merget (70b97e5), og worker-deploy pågår (BUILDING). En måling er satt opp for natt til 30.10: /api/health heartbeatAgeSec hvert minutt 01:50–02:20Z, mens backtesten kjører. Jeg melder maksverdien.

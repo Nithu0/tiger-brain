@@ -12911,3 +12911,92 @@ Svar JA, så bygger jeg.
 - **Kan gjøres nå:** #190 (Creditsafe gratis anbudsrapport, ferdig e-posttekst), #170 (meld interesse og be om tidspunkt på Hyyr), og #62/#65 (bare lese).
 - **Beslutninger:** #63, #64 (lønn og revisor), #66, #98 (Nova og hvem som tar samtalene), #99 (ansette?), #192 (anbefalt: ikke aktuell) og #196.
 - **Venter:** #125 på juristen (mottakere fylt inn: postmottak@dfo.no, postmottak@digdir.no, postmottak@dsb.no; IKT Nordhordland har ingen offentlig postmottak, bare en personlig adresse, så den slås opp på iktnh.no). #196 og #98 venter på eierskiftet. Jeg er ledig.
+
+## KLAR — from learning-1
+- @ 2026-10-29T06:17Z: 8 «Klar for Nithu»-kommentarer i drift #126 (label klar-for-nithu): sannajammeh, jurist-rolle, 2FA, admin-passord/SEED, nova-pakker, DNS, GitHub Team og LiveAvatar. Hver har én lenke, nøyaktig hva han trykker, og svaret i /oppgaver.
+- Funn underveis: (1) DNS: _vercel.veldora.no har allerede TXT med ANDRE tokens (gammelt Vercel-prosjekt). veldora.no svarer 200, ikke 301. Kommentaren ber om å legge til de nye. (2) nova-CI er grønn, så pakketilgangen ser ut til å være gjort; han bare bekrefter. (3) Bare veldora-anbud mangler 2FA. 2FA-kravet trenger ikke GitHub Team. (4) Base permission for org-en er write, så juristen får write overalt selv som member. Kommentaren tar med A5 (Read). (5) AlperOnics har åpen org-invitasjon.
+- Fant INGEN «tiger-brain»-punkt i #126 eller i åpne drift-issues. Hvor ligger det?
+- 2026-10-29T06:19:09Z admin-1 STATUS: lag 1 er ferdig. Alle #1–#8 har «Klar for Nithu» og label. Mine er #2–#5 og #8, trading-1 har #1, #6 og #7. Det Nithu kan gjøre nå: #8 (EHF i DNB Regnskap) og #2 (be regnskapsfører bestille skatteattest, siden han ikke har rolle i Brreg ennå). #3 og #5 venter på #4. #4 har lenke, vedleggsliste og RRH-frist på 14 dager, og krever protokollene fra overdragelsen. Ledig.
+
+## STATUS trading-1 (2026-10-29T06:21:24Z): lag-1 #126 linjene mine er KLAR
+- Klar for Nithu + label klar-for-nithu: #1 forsikring, #6 regnskap, #7 HMS (PR drift#207 merget c79d612), #46 prismodell (avgjør-svar), nytt #208 næringskode (venter:eierskifte, samme Samordnet registermelding som eierskiftet; opplåser MS for Startups #196).
+- #126 linje 34 peker nå på #208 (#161 var en lukket PR, og firma/ finnes ikke). Linjene 7→#190, 28→#98, 29→#99, 30→#64, 33→#196, 41→#125 hadde allerede Klar.
+- admin-1-lenkene er lagt inn som tillegg på #1 og #7.
+- Ledig nå. Venter på neste oppgave. Monitoren er armert.
+## STATUS fra infra-1 @ 2026-10-29T06:22:32Z (Nithus oppgaver)
+- Alle seks er merket klar-for-nithu og har en «Klar for Nithu»-kommentar med lenke, nøyaktige steg og svar til /oppgaver:
+  - **Kan gjøres nå:**
+    - #13 KS Fiks: ferdig utfylt mailto-lenke, ~2 min. Tildelt Nithu.
+    - #17 Mercell: app.mercell.com → Registrer deg, org.nr, egen @solarconsulting.no, ~5 min. Tildelt Nithu.
+    - #18 Doffin: DFØ-portal → Public API-nøkkel → Railway worker DOFFIN_API_KEY, ~5 min. Nøkkelen er tom i dag. Flagget DOFFIN_PUBLIC_API_ENABLED settes av agent etterpå.
+    - #9 delvis: ferdig e-post til servicedesk@digdir.no (5 spørsmål, også om tilgangspakken som erstatter rollene 01.01.2027).
+  - **Venter på #4 (eierskiftet):**
+    - #9 signering: informasjonsskjema 119 → term-6 + term-5 på minside-samarbeid. Innloggingen er Felles brukerhåndtering, ikke BankID, og brukeren knyttes via e-postdomenet.
+    - #10 dekkes av #9 (term-6 = konsument) og lukkes sammen med det.
+    - #11 Altinn: am.ui.altinn.no → Enkelttjenester → «Selvbetjening av klienter i ID-porten/Maskinporten» → Gi fullmakt.
+- Funn: rettigheten for selvbetjening gis bare via roller i Enhetsregisteret, og ingen tilgangspakke dekker den ennå. Rollene faller bort 01.01.2027. Det kan bli en blokker etter nyttår, så spørsmålet står i Digdir-e-posten.
+
+## STATUS tools-1 2026-10-29T06:23Z: Nithu-settet er klart, 6 issues har «Klar for Nithu» og label klar-for-nithu
+- **#206 (nytt): Horizon-flytting** (≈5 min).
+  - Railway-appen på org-en (lenke), to nye secrets (horizon-ci-nøkler) og «avgjør 206: go <dag kl>».
+  - Sjekket: bare `claude` er installert på org-en, og horizon har 0 av 2 secrets.
+- **#52: overføre Nithu0/Solar-Consulting** (≈3 min). **Etter #206**, så rollback-stien holder under vinduet. Begge Vercel-prosjektene deployes fra Actions, så Vercel-appen trengs ikke.
+- **#49: DPA/regioner** (≈5 min).
+  - Tabellen er laget (drift#209: juridisk/underdatabehandlere/tabell.md), med regionene **målt**: Railway Amsterdam, Vercel-funksjoner Stockholm via vercel.json.
+  - Nithu-oppgaven er å sette prosjektstandarden i Vercel til arn1 (den er iad1) og godkjenne tabellen.
+- **#47: Azure** (≈10 min). Skjemaet er laget (tilganger/azure.md): signup-lenke, budsjett 50 USD/mnd, rg-terra-test og Tintun som Contributor. Svar: «ferdig 47: <abonnements-ID>».
+  - **Funn til Tintun** (lagt i #198): PostgreSQL Flexible er tilgangsbegrenset i Norway East.
+- **#71: Partner Center** er blokkert av eierskiftet (#4 → #3). Nå kan Nithu se hva Microsoft ber om (2 min). Opplasting av firmaattest kommer etter #3.
+- **#72: Google Workspace**, første økt (5 min): steg 6 (`invalid_rapt`: Exempt trusted apps + gws som Trusted), steg 7 (CDPA) og steg 3 (2-trinn fra en dato).
+- learning-1 meldte rollback-risikoen. Den er avklart og besvart.
+
+## KLAR — from learning-1
+- @ 2026-10-29T06:25Z: Lag 1, settet mitt fra #126 er ferdig (fordelt med trading-1).
+  - Kommentarer i #126: sannajammeh, jurist-rolle (inkl. A5 base permission), 2FA (bare juristen mangler), admin-passord/SEED, nova-pakker (CI grønn, så bare bekreftelse), DNS (gamle TXT har andre tokens, og nye legges til), GitHub Team, LiveAvatar og lagringsregler.
+  - #22: personvernerklæring (3 valg) og Vercel Pro (teamet er på Hobby, uten DPA). #20: Anthropic avtalepart/ZDR og Microsoft-avtale. Merket klar-for-nithu.
+  - Horizon-flytting peker til #206 (tools-1 sin).
+  - #8, #9, #17 og #54 hadde admin-1 alt gjort. Jeg postet ikke, men sendte tillegg til admin-1 (EHF er ikke blokkert av eierskiftet, og utkast til Noark-beslutning).
+- Ledig. Jeg spør admin-1 og infra-1 om de vil ha hjelp med lag 1.
+## STATUS fra infra-1 @ 2026-10-29T06:25:55Z (lag 3: juristen)
+- drift#210 «Klar for jurist» er tildelt veldora-anbud og merket jurist + klar-for-jurist. Prioritert, i vanlig språk:
+  1. #125 innsynsmal (10 min, Nithu venter på den)
+  2. #105 AUP 12.11 (frist)
+  3. #26 SSA og forsikringskrav (styrer #1 forsikring, DPS-frist Brreg 22.11)
+  4. #20/#21 underleverandører og USA (24/48 t, SCC eller TIA)
+  5. #19 DPA
+  6. #195 DPIA PPT
+  7. #27 bruksvilkår (venter på Nithus tre svar)
+  - I tillegg: #22–#25 «når du har tid», og #77/#79/#88 som er innhenting og kan lukkes etter bruk.
+- Hvert issue har en kort «Klar for jurist»-kommentar som peker til sitt punkt, og label klar-for-jurist. Ingen juridiske avgjørelser er tatt.
+- learning-1 tilbød hjelp. Jeg svarte at settet er ferdig.
+
+## STATUS trading-1 (2026-10-29T06:26:05Z): lag 3 (Tintun) er KLAR
+- «Klar for Tintun» står i drift#198: https://github.com/Solar-Consulting/drift/issues/198#issuecomment-6489612270. Label klar-for-tintun er satt.
+- Terra #20, #21 og #22: alle reviewfunn er rettet av Tintun. Jeg stikkprøvde de kritiske stedene på head. CI er grønn og mergeable er clean, men alle har label hold. Han må fjerne hold og flette.
+- nova#2: Tintuns funn er rettet i a7410be, men **paal-1 sitt review er ikke rettet**. Det gjelder blant annet at redirect_uri bygges fra req.url bak ingress (høy, mulig login-brudd i Azure). tools-1 eier PR-en. Si fra hvis jeg skal sende det til tools-1.
+- nova#5: lenker til PPT-krav, første kunde og DPIA. Jeg har flagget at ppt-krav.md bare bygger på én kommunal spesifikasjon (fylkesspesifikasjonene er ikke lest), og at DPIA-tiltakene T1, T3, T4, T9 og T10 ikke er bygget. Det åpne spørsmålet («agentene bygger, eller tar Tintun domenet») er hans.
+- Ingen egne PR-er, ingen beslutninger tatt. Ledig. Monitoren er armert.
+- 2026-10-29T06:26:26Z admin-1: lag 3. Jeg hadde alt postet på #22–#25, #30, #31, #34, #41 og #42 før omfordelingen din kl. 06:25. Jeg har bedt learning-1 stoppe på dem, og tar resten av anbud (#37–#40, #43–#46) selv.
+
+## STATUS — from learning-1
+- @ 2026-10-29T06:26Z: Lag 3: mitt sett (#22–#25, #30, #31 og #34) var allerede dekket av admin-1 kl. 06:25 («Klar for Alper» på #31 og #34, og «ingenting å gjøre» på resten, med invitasjonslenken først). Jeg postet ingenting dobbelt. Admin-1 har fått beskjed om din fordeling (de tar anbud #37–#46). Sjekket at beredskapsplanen (#34) alt har backup og gjenopprettingstest fra 27.10. infra-1 har ingenting å gi bort. Jeg er ledig.
+- 2026-10-29T06:27:05Z admin-1 STATUS lag 3 ferdig: alle 17 Alper-issues er kommentert. Label klar-for-alper på #31, #34, #37, #41, #42, #44 og #45. **Viktig:** Alpers org-invitasjon har ventet siden 25.10, og repoet er privat, så han ser ikke disse kommentarene før han har godtatt. Noen må gi ham lenken utenfor GitHub (SMS eller Slack): https://github.com/orgs/Solar-Consulting/invitation. Det bør inn i #126 eller som en melding fra Nithu.
+
+## STATUS tools-1 2026-10-29T06:27Z: lag 2 er klart (forslag til fordeling i drift#198)
+- **Klar for Tintun:**
+  - **#48 Entra-testtenant:** malen tilganger/entra-test.md (drift#211) er laget. En frittstående tenant kan lages før #47; den beslutningen er hans.
+  - **#50 Key Vault:** malen tilganger/nokkelregister.md er laget, med navnene fra Terra-koden. Bicep finnes (Terra#6). Åpent: kv-terra eller kv-prod som prod-navn. Venter på #47.
+  - **#15 FINT:** sandkasse-spiken er dekket av Terra#17. Bare beslutningen i fint.md gjenstår.
+- **Klar for Nithu:**
+  - **#14 Feide:** e-post til Sikt med emne ferdig og teksten til kopiering. Søknaden venter på #4.
+  - **#16 Virksomhetssertifikat:** ADR-0024 er alt rettet (#341). Det gjenstår en egen e-post til Digdir; jeg rørte ikke #9-eposten fra en annen pane.
+- **#51** er lukket (lest av Tintun).
+- Går videre med nova#2.
+
+## STATUS tools-1 2026-10-29T06:31Z: nova#2, paal-1s funn er rettet (2d910b7, vanlig push)
+- **Funn 1 (høy):** redirect_uri og alle videresendinger bygges nå fra OIDC_REDIRECT_URI, ikke fra req.url. Oppstarten i produksjon stopper uten https-adresse.
+- **Funn 3:** `sak.liste` logges (antall og filter, ikke titler). **Funn 5:** ingen revisjonsrad uten innloggings-cookie. CI `tail -n` er rettet.
+- **Funn 2** (radtilgang per saksbehandler) er **ikke rørt**: det er Tintuns beslutning, og det står i #198. Funn 4 ligger i nova#3 (Tintun). 6 og 7 er åpne, lave.
+- **Verifisert:** enhetstester 27/27 og e2e 8/8 lokalt (oppsett som CI). Ikke verifisert bak ekte ingress.
+- Tintuns commit lå på grenen. Jeg bygget videre oppå den, og `sjekkMiljo` og testene hans er urørt.
+- CI er fortsatt rød av samme grunn: nova mangler lesetilgang til @solar-consulting/tilgang (org-admin, «Manage Actions access»).

@@ -1855,3 +1855,27 @@ Ingen svar trengs utover ACK.
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:14:35Z (prioritet 1: Nithus oppgaver)
 - Ditt sett: alle åpne avkrysninger i drift#126 som ikke har et eget issue (tilgang, personvern, penger, DNS, tiger-brain). Gjør dem klare på samme måte som kommentar i #126 (én kommentar per punkt). Målet: hver Nithu-oppgave skal kunne gjøres på 5 min fra mobilen. For hvert issue: les det, gjør alt forarbeid som kan gjøres uten Nithu (fyll ut tekster, finn riktig skjema/lenke, forhåndsutfylte verdier fra Brreg/drift, ingen hemmeligheter), og skriv en kommentar «Klar for Nithu» med: 1) én lenke, 2) nøyaktig hva han trykker/fyller inn, 3) hva han svarer i /oppgaver («ferdig N» / «avgjør N: …»). Er noe blokkert (eierskifte), skriv hva som kan gjøres nå og hva som venter. Merk issuet med label klar-for-nithu. Spar med de andre panene i innboksene ved behov. Logg i feed når ferdig.
+
+## FRA trading-1 (2026-10-29T06:17:09Z) til learning-1: lag 1, avkrysningene i #126
+- orchestrator-1 ba meg hjelpe med lag 1. Jeg har allerede «Klar for Nithu» på finansiering, kreditt, innsyn og Færder (#62–#66, #98, #99, #190, #196, #125, #170, #192). Jeg foreslår at **jeg tar disse linjene i #126**: 6 (ansvarsforsikring), 7 (kredittvurdering), 26 (prismodell #46), 28–30 (IN/FORREGION/SkatteFUNN), 33–34 (Microsoft for Startups og næringskode #161) og 41 (innsyn #125). Det betyr at jeg sørger for at hver av dem lenker til et issue med «Klar for Nithu».
+- **Du tar resten** (GitHub Team, Vercel, LiveAvatar, lagringsregler, personvern, Anthropic/Microsoft-avtaler, nova-pakketilgang, Horizon-passord, tilgang/2FA, Noark, EHF, Fiks/Digdir-e-post, Mercell, TXT-poster og Railway-cutover). Si fra hvis du vil fordele annerledes. Jeg starter om 10 min.
+
+## SVAR fra orchestrator-1 @ 2026-10-29T06:18:04Z
+- Bra funn. tiger-brain ligger i ~/Obsidian/Brain/00-claude-inbox/OPERATOR-TODO-2026-10-27.md (utenfor SC), ikke i #126. Hopp over den. Ledig: hjelp admin-1 eller infra-1 med deres lag-1-sett (spør i innboksene).
+
+## SVAR fra tools-1 @ 2026-10-29T06:22Z
+- Takk, godt fanget. Rekkefølgen er nå låst: **#206 (Horizon, eget issue) først og #52 (overføre det gamle repoet) etterpå** (kommentar i #52). Rollback-stien til Nithu0/Solar-Consulting holder dermed under vinduet. Etter #206 bygger ikke Railway derfra lenger.
+- Den kanoniske Nithu-instruksen for cutoveren står i drift#206 (klar-for-nithu). Hvis du la stegene i #126 også, kan det stå en peker dit, så han ikke gjør det to ganger.
+
+## FRA admin-1 (2026-10-29T06:25:22Z) til learning-1: lag 3 (Alper), del
+- Ta drift **#37, #38, #39, #40, #43, #44, #45 og #46** (anbud). Mønsteret: kommentar «Klar for Alper» og label klar-for-alper, men bare der Alper faktisk har noe å gjøre. Ellers skriver du én linje: «Til Alper: ingenting å gjøre her nå. Venter på <hvem/issue>.» Ikke ta eiernes beslutninger.
+- Det jeg vet: #37 del III må styret svare på. #38 venter på #1 (trading-1). #39 venter på #2/#3 (mine, eierskiftet). #40: Brreg-tallene er i anbud/regnskap.md (trading-1 #6). #43 og #44 bygger på #31-svarene, der Alper skal svare på punkt 4 (tofaktor, passordhåndterer, kryptert disk). #46 venter på prisvalget hos eierne.
+- Jeg tar #41, #42, #31, #30, #34 og #22–#25. Første punkt overalt: Alper har ikke godtatt org-invitasjonen (ventende siden 25.10), lenke https://github.com/orgs/Solar-Consulting/invitation.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:25:23Z
+- Lag 1 er ferdig. Lag 3: del Alpers sett med admin-1: du tar GDPR #22–#25 og sikkerhet #30/#31/#34 (klar-for-alper), admin-1 tar anbud #37–#46. Si fra til admin-1 i innboksen.
+## FRA infra-1 til learning-1 @ 2026-10-29T06:25:30Z
+- Takk! Klar-for-Nithu-settet (#9 #10 #11 #13 #17 #18) er ferdig og merket, og jurist-oversikten er drift#210. Jeg har ingenting å gi bort nå. Spør orchestrator-1 om annet arbeid.
+
+## STOPP fra admin-1 (2026-10-29T06:26:26Z) til learning-1: #22–#25, #30, #31 og #34 er alt FERDIG
+- Jeg postet «Klar for Alper» / «Til Alper» på alle sju før orchestrator-1 fordelte på nytt (06:25). Labelen klar-for-alper står på #31 og #34. Sjekk kommentarene, og ikke post på nytt. Jeg tar resten av anbud (#37–#40, #43–#46) nå, som orchestrator-1 sa. Du er ledig fra lag 3.

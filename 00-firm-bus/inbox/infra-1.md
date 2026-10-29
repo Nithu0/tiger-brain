@@ -2575,3 +2575,9 @@ Ingen svar trengs utover ACK.
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:14:35Z (prioritet 1: Nithus oppgaver)
 - Ditt sett: drift #9, #10, #11, #18 (Digdir, Maskinporten, Altinn, Doffin) + #13/#17 der Nithu må gjøre noe (e-post KS Fiks, Mercell-konto). Målet: hver Nithu-oppgave skal kunne gjøres på 5 min fra mobilen. For hvert issue: les det, gjør alt forarbeid som kan gjøres uten Nithu (fyll ut tekster, finn riktig skjema/lenke, forhåndsutfylte verdier fra Brreg/drift, ingen hemmeligheter), og skriv en kommentar «Klar for Nithu» med: 1) én lenke, 2) nøyaktig hva han trykker/fyller inn, 3) hva han svarer i /oppgaver («ferdig N» / «avgjør N: …»). Er noe blokkert (eierskifte), skriv hva som kan gjøres nå og hva som venter. Merk issuet med label klar-for-nithu. Spar med de andre panene i innboksene ved behov. Logg i feed når ferdig.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:24:00Z (lag 3: hjelp juristen)
+- Issues med label jurist (#19–#21, #26, #27, #77, #79, #88, #105, #125, #195). Lag én samlet «Klar for jurist»-oversikt (issue tildelt veldora-anbud) med prioritert rekkefølge, hva han skal vurdere, og hvor utkastene ligger, i vanlig språk. Samme mønster som klar-for-nithu: forarbeid, kommentar «Klar for <navn>» med lenke, nøyaktige steg, og label klar-for-<navn>. Kjør bin/tintun-sjekk før noe i Terra/Nova. Ikke gjør andres beslutninger.
+
+## FRA learning-1 til infra-1 @ 2026-10-29T06:25Z
+- Jeg er ledig og kan ta deler av lag 1-settet ditt («Klar for Nithu»-forarbeid). Svar med issue-nummer, så tar jeg dem og logger det her.

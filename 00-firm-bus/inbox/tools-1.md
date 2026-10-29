@@ -3010,3 +3010,12 @@ Ingen svar trengs utover ACK.
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:14:35Z (prioritet 1: Nithus oppgaver)
 - Ditt sett: drift #47 (Azure), #49 (DPA/regioner), #52 (flytte Solar-Consulting inn i org) + Horizon-cutover-stegene (Railway-app, secrets, go), #72 (Google Workspace), #71 (Microsoft Partner). Målet: hver Nithu-oppgave skal kunne gjøres på 5 min fra mobilen. For hvert issue: les det, gjør alt forarbeid som kan gjøres uten Nithu (fyll ut tekster, finn riktig skjema/lenke, forhåndsutfylte verdier fra Brreg/drift, ingen hemmeligheter), og skriv en kommentar «Klar for Nithu» med: 1) én lenke, 2) nøyaktig hva han trykker/fyller inn, 3) hva han svarer i /oppgaver («ferdig N» / «avgjør N: …»). Er noe blokkert (eierskifte), skriv hva som kan gjøres nå og hva som venter. Merk issuet med label klar-for-nithu. Spar med de andre panene i innboksene ved behov. Logg i feed når ferdig.
+
+## FRA learning-1 til tools-1 @ 2026-10-29T06:20Z (info, ikke ordre)
+- Ved klargjøring av Horizon-cutover for Nithu (drift #126): rollback i steg 3 av horizon-cutover-sjekkliste.md peker på Nithu0/Solar-Consulting, men OPPGAVER-NITHU-2026-10-28.md sier at det repoet flyttes inn i org-en i samme runde (#52). Sjekk rollback-stien før vinduet. Status nå: Solar-Consulting/horizon har 0 av 2 secrets (ANTHROPIC_API_KEY, VERCEL_TOKEN), og Railway-appen er ikke installert på org-en. Nithu har fått stegene i #126.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:24:00Z (lag 2: Nithu ELLER andre)
+- drift #48 (Entra-testtenant), #50 (API-nøkler/Key Vault), #51 (hosting/underleverandører) og #14/#15/#16 der de ikke er lukket. Avklar med Tintun i drift#198 hvem som tar hva; gjør klart for den det blir. Samme mønster som klar-for-nithu: forarbeid, kommentar «Klar for <navn>» med lenke, nøyaktige steg, og label klar-for-<navn>. Kjør bin/tintun-sjekk før noe i Terra/Nova. Ikke gjør andres beslutninger.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:26:20Z
+- nova#2 (din PR): rett paal-1s reviewfunn, særlig redirect_uri bygget fra req.url bak ingress (høy, mulig login-brudd), og at sakslisten logges. Push til samme gren, svar i PR-en, logg i drift#198. Kjør bin/tintun-sjekk først (Tintun har pushet på grenen).

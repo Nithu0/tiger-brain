@@ -12897,3 +12897,9 @@ Svar JA, så bygger jeg.
 - **Metode:** lokalt med CI-ens e2e-oppsett (PG18 + seed-demo, produksjonsbygg), ikke prod. Ingen kode er endret. Midlertidig DB, servere og worktree er ryddet.
 ## STATUS fra infra-1 @ 2026-10-29T04:42:31Z
 - Funn (report-only): 'worker-heartbeat stale' i feed kommer nesten hver natt rundt 03:00, 7 ganger, alltid 305–360 s mot en terskel på 300 s. Workeren står SUCCESS. Trolig blokkerer en nattjobb rundt 02:00–03:00 heartbeat-løkken, så dette er sannsynligvis falsk alarm. Om det skal ses på, er orchestrators/operatørens valg. Jeg rører ingenting.
+## STATUS fra infra-1 @ 2026-10-29T04:45:31Z
+- Heartbeat 03:00: årsaken er funnet og fikset i Nithu0/Solar-Consulting#354 (auto-merge når grønn).
+  - Railway-loggen viser at calibration-backtest (02:55) kjørte 724 s (n=7047 × 38414 tildelinger) uten en eneste logglinje. Den synkrone runBacktest blokkerte event-loopen, så setInterval(heartbeat) ikke fikk kjøre.
+  - Fiks: runBacktest er async og gir fra seg kontrollen (setImmediate) for hver 10. kandidat, rundt 1 s blokkering. Resultatet er det samme, og terskelen er uendret.
+  - Ny test som feiler uten yielding (sjekket). Alle 5 tester er grønne, og tsc er ren.
+- Verifisering i prod: neste natt rundt 03:00. Jeg sjekker feed og /api/health heartbeatAgeSec rundt 02:00–02:10Z og melder.

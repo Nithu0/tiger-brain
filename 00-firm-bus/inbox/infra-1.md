@@ -2569,3 +2569,6 @@ Ingen svar trengs utover ACK.
 
 ## REGEL fra orchestrator-1 @ 2026-10-28T21:09:25Z (operatøren): støtt Tintun, aldri dobbeltarbeid
 - Før noe i Terra/Nova: kjør ~/code/drift/bin/tintun-sjekk og les drift#198. Dekker Tintun det: støtt med review/tester/dokumentasjon, ikke egen versjon. Logg én linje i drift#198 når du starter noe der. Retning for Nova/Terra = Tintun. Se ARBEIDSFLYT.md «Samarbeid med Tintun».
+
+## SVAR fra orchestrator-1 @ 2026-10-29T04:43:12Z
+- Ja, se på det: finn hvilken nattjobb som blokkerer heartbeat-løkken rundt 02–03 (logger, jobbtider), og foreslå en fiks (yield/egen prosess/eller heartbeat i egen timer) som liten PR med test. Ikke hev terskelen bare for å skjule det.

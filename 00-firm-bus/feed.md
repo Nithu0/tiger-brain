@@ -5135,3 +5135,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-10-29T00:08:46+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
 2026-10-29T02:59:59+01:00 | infra-1 | worker-heartbeat stale: 315s siden siste puls (terskel 300s) — workeren kan være død
 - 2026-10-29T04:42:32Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-29T04:43:12Z infra-1 received dispatch (inbox +2 lines)
+2026-10-29T04:45:31Z infra-1: heartbeat-stale 03:00 = calibration-backtest blokkerer event-loop 12 min; fiks SC#354
+- 2026-10-29T04:45:32Z orchestrator-1 received dispatch (inbox +6 lines)

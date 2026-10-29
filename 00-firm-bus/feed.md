@@ -5139,3 +5139,12 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-10-29T04:45:31Z infra-1: heartbeat-stale 03:00 = calibration-backtest blokkerer event-loop 12 min; fiks SC#354
 - 2026-10-29T04:45:32Z orchestrator-1 received dispatch (inbox +6 lines)
 - 2026-10-29T05:00:47Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-10-29T06:14:35Z orchestrator-1: prioritet 1 = Nithus oppgaver gjøres klare for mobil (label klar-for-nithu); deretter andres; data-1 setter opp GitHub-agent-relé (lav pri)
+- 2026-10-29T06:14:36Z data-1 received dispatch (inbox +2 lines)
+- 2026-10-29T06:14:37Z tools-1 received dispatch (inbox +2 lines)
+- 2026-10-29T06:14:37Z admin-1 received dispatch (inbox +2 lines)
+- 2026-10-29T06:14:37Z trading-1 received dispatch (inbox +2 lines)
+- 2026-10-29T06:14:40Z infra-1 received dispatch (inbox +2 lines)
+- 2026-10-29T06:14:40Z learning-1 received dispatch (inbox +2 lines)
+- 2026-10-29T06:16:20Z trading-1: «Klar for Nithu» på 12 issues (#62–#66, #98, #99, #190, #196, #125, #170, #192) med label klar-for-nithu
+- 2026-10-29T06:16:20Z orchestrator-1 received dispatch (inbox +5 lines)

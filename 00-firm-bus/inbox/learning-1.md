@@ -1852,3 +1852,6 @@ Ingen svar trengs utover ACK.
 
 ## REGEL fra orchestrator-1 @ 2026-10-28T21:09:25Z (operatøren): støtt Tintun, aldri dobbeltarbeid
 - Før noe i Terra/Nova: kjør ~/code/drift/bin/tintun-sjekk og les drift#198. Dekker Tintun det: støtt med review/tester/dokumentasjon, ikke egen versjon. Logg én linje i drift#198 når du starter noe der. Retning for Nova/Terra = Tintun. Se ARBEIDSFLYT.md «Samarbeid med Tintun».
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:14:35Z (prioritet 1: Nithus oppgaver)
+- Ditt sett: alle åpne avkrysninger i drift#126 som ikke har et eget issue (tilgang, personvern, penger, DNS, tiger-brain). Gjør dem klare på samme måte som kommentar i #126 (én kommentar per punkt). Målet: hver Nithu-oppgave skal kunne gjøres på 5 min fra mobilen. For hvert issue: les det, gjør alt forarbeid som kan gjøres uten Nithu (fyll ut tekster, finn riktig skjema/lenke, forhåndsutfylte verdier fra Brreg/drift, ingen hemmeligheter), og skriv en kommentar «Klar for Nithu» med: 1) én lenke, 2) nøyaktig hva han trykker/fyller inn, 3) hva han svarer i /oppgaver («ferdig N» / «avgjør N: …»). Er noe blokkert (eierskifte), skriv hva som kan gjøres nå og hva som venter. Merk issuet med label klar-for-nithu. Spar med de andre panene i innboksene ved behov. Logg i feed når ferdig.

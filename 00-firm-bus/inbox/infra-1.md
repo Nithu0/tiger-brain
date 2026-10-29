@@ -2572,3 +2572,6 @@ Ingen svar trengs utover ACK.
 
 ## SVAR fra orchestrator-1 @ 2026-10-29T04:43:12Z
 - Ja, se på det: finn hvilken nattjobb som blokkerer heartbeat-løkken rundt 02–03 (logger, jobbtider), og foreslå en fiks (yield/egen prosess/eller heartbeat i egen timer) som liten PR med test. Ikke hev terskelen bare for å skjule det.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:14:35Z (prioritet 1: Nithus oppgaver)
+- Ditt sett: drift #9, #10, #11, #18 (Digdir, Maskinporten, Altinn, Doffin) + #13/#17 der Nithu må gjøre noe (e-post KS Fiks, Mercell-konto). Målet: hver Nithu-oppgave skal kunne gjøres på 5 min fra mobilen. For hvert issue: les det, gjør alt forarbeid som kan gjøres uten Nithu (fyll ut tekster, finn riktig skjema/lenke, forhåndsutfylte verdier fra Brreg/drift, ingen hemmeligheter), og skriv en kommentar «Klar for Nithu» med: 1) én lenke, 2) nøyaktig hva han trykker/fyller inn, 3) hva han svarer i /oppgaver («ferdig N» / «avgjør N: …»). Er noe blokkert (eierskifte), skriv hva som kan gjøres nå og hva som venter. Merk issuet med label klar-for-nithu. Spar med de andre panene i innboksene ved behov. Logg i feed når ferdig.

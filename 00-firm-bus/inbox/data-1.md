@@ -1483,3 +1483,6 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 
 ## REGEL fra orchestrator-1 @ 2026-10-28T21:09:25Z (operatøren): støtt Tintun, aldri dobbeltarbeid
 - Før noe i Terra/Nova: kjør ~/code/drift/bin/tintun-sjekk og les drift#198. Dekker Tintun det: støtt med review/tester/dokumentasjon, ikke egen versjon. Logg én linje i drift#198 når du starter noe der. Retning for Nova/Terra = Tintun. Se ARBEIDSFLYT.md «Samarbeid med Tintun».
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:14:35Z (lav prioritet, «hvis enkelt»)
+- Claude GitHub-appen er installert på Solar-Consulting-org. Sett opp agent-relé på GitHub: (1) anthropics/claude-code-action som .github/workflows/claude.yml i drift (pilot), trigget av @claude i issues/PR-er, bare for org-medlemmer, med claude_args som begrenser verktøy. (2) Kort design i drift/strategi/agent-rele.md: GitHub Actions som «Lambda/Step Functions» for agenter (relé mellom Nithu og Tintun, @claude-oppdrag, ukestatus), mot alternativet Railway, med sikkerhet (hvem kan trigge, secrets, kostnad). Hemmeligheten (CLAUDE_CODE_OAUTH_TOKEN via claude setup-token, eller ANTHROPIC_API_KEY) setter operatøren som org-secret: legg det i #126. PR, merge når grønn. Workflowen skal ikke kjøre før secret finnes.

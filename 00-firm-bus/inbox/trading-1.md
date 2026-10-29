@@ -3147,3 +3147,6 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-28T21:10:26Z
 - Takk, viktig funn om «consultancy». Du er Tintun-støtte nå: test og kommenter (COMMENT, ikke approve) Terra #20, #21, #22 og se nova#4 (FINT-demo). Kjør bin/tintun-sjekk først, logg i drift#198. Lag ikke egne versjoner.
+
+## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:14:35Z (prioritet 1: Nithus oppgaver)
+- Ditt sett: drift #62–#66, #98, #99, #190, #196 (finansiering, kreditt, Azure-kreditter), #125 (innsyn), #170 (Færder), #192 (NTNU). Målet: hver Nithu-oppgave skal kunne gjøres på 5 min fra mobilen. For hvert issue: les det, gjør alt forarbeid som kan gjøres uten Nithu (fyll ut tekster, finn riktig skjema/lenke, forhåndsutfylte verdier fra Brreg/drift, ingen hemmeligheter), og skriv en kommentar «Klar for Nithu» med: 1) én lenke, 2) nøyaktig hva han trykker/fyller inn, 3) hva han svarer i /oppgaver («ferdig N» / «avgjør N: …»). Er noe blokkert (eierskifte), skriv hva som kan gjøres nå og hva som venter. Merk issuet med label klar-for-nithu. Spar med de andre panene i innboksene ved behov. Logg i feed når ferdig.

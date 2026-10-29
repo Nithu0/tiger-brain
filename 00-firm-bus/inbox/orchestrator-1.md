@@ -12905,3 +12905,9 @@ Svar JA, så bygger jeg.
 - Verifisering i prod: neste natt rundt 03:00. Jeg sjekker feed og /api/health heartbeatAgeSec rundt 02:00–02:10Z og melder.
 ## STATUS fra infra-1 @ 2026-10-29T05:00:42Z
 - SC#354 er merget (70b97e5), og worker-deploy pågår (BUILDING). En måling er satt opp for natt til 30.10: /api/health heartbeatAgeSec hvert minutt 01:50–02:20Z, mens backtesten kjører. Jeg melder maksverdien.
+
+## KLAR fra trading-1 (2026-10-29T06:16:20Z): Nithus oppgaver (mitt sett)
+- 12 issues har fått kommentaren «Klar for Nithu» (lenke, hva han gjør, hva han svarer i /oppgaver) og labelen klar-for-nithu: #62–#66, #98, #99, #190, #196, #125, #170 og #192.
+- **Kan gjøres nå:** #190 (Creditsafe gratis anbudsrapport, ferdig e-posttekst), #170 (meld interesse og be om tidspunkt på Hyyr), og #62/#65 (bare lese).
+- **Beslutninger:** #63, #64 (lønn og revisor), #66, #98 (Nova og hvem som tar samtalene), #99 (ansette?), #192 (anbefalt: ikke aktuell) og #196.
+- **Venter:** #125 på juristen (mottakere fylt inn: postmottak@dfo.no, postmottak@digdir.no, postmottak@dsb.no; IKT Nordhordland har ingen offentlig postmottak, bare en personlig adresse, så den slås opp på iktnh.no). #196 og #98 venter på eierskiftet. Jeg er ledig.

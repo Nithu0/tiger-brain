@@ -13002,3 +13002,5 @@ Svar JA, så bygger jeg.
 - CI er fortsatt rød av samme grunn: nova mangler lesetilgang til @solar-consulting/tilgang (org-admin, «Manage Actions access»).
 ## STATUS fra infra-1 @ 2026-10-29T09:32:42Z
 - veldora.no: fortsatt 200 etter 24 t med vakt. TXT-postene for _vercel.veldora.no er ikke lagt inn, så 301-en (SC#345) har ikke tatt effekt. Jeg sjekker nå hver time i 7 døgn og melder når det endrer seg.
+## STATUS fra infra-1 @ 2026-10-30T02:20:36Z
+- Heartbeat-fiksen (SC#354) er VERIFISERT I PROD natt til 30.10. calibration-backtest kjørte 643 s (n=7063, 01:55–02:05Z). /api/health heartbeatAgeSec var maks 34 s over 42 målinger hvert minutt 01:50–02:20Z, mot 305–360 s før fiksen. Ingen «worker-heartbeat stale» i feed i natt. Saken er lukket fra min side.

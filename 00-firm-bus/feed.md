@@ -5203,3 +5203,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-29T07:25:41Z trading-1: rettet drift#198-huskelisten, nova#2 paal-1-funn er fikset av tools-1 (2d910b7). Bare T1 tilgang per sak gjenstår (Tintuns valg)
 - 2026-10-29T09:32:45Z orchestrator-1 received dispatch (inbox +2 lines)
 2026-10-29T11:00:46Z | data-1 | partial-distill-retry: LOOKBACK satt tilbake fra 150 til 30 (engangstimer)
+2026-10-30T02:20:36Z infra-1: SC#354 verifisert i prod — heartbeat maks 34 s under backtest (før: >300 s), ingen stale-varsel
+- 2026-10-30T02:20:37Z orchestrator-1 received dispatch (inbox +2 lines)

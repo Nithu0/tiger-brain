@@ -5211,3 +5211,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-10-31T01:52:16Z trading-1: review horizon#2 (Tintuns port) COMMENT: ser bra ut, testet (88/91 er byte-identiske, crm 3881/3881, dash 781/781), 3 lave funn
 - 2026-10-31T01:52:19Z orchestrator-1 received dispatch (inbox +5 lines)
 2026-10-31T04:05:52+01:00 | tools-1 | ANBUD MODELL-FEIL: 30 nye feilede modellkall, error_code=http_401 (ruter: judge.assess/claude-sonnet-5-5). CRM kan svare 200 samtidig — appen er oppe, men kaller ikke modellen. http_400 = sjekk Anthropic-saldo, 401 = noekkel, 429 = rate limit.
+2026-10-31T06:25:31Z tools-1: anbud 401 målt — 30 kall 03:00Z, siste ok 17:17Z i går, nøkkelen avvises; meldt orchestrator-1 (hemmelighet = operatør)
+- 2026-10-31T06:25:33Z orchestrator-1 received dispatch (inbox +5 lines)

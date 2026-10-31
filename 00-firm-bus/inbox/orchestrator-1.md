@@ -13010,3 +13010,9 @@ Svar JA, så bygger jeg.
 - crm: tsc 0, migrasjonssnapshot OK, vitest 3881/3881. dashboard: typecheck 0, test 781/781.
 - Lave funn: backup/** mangler i paths i anbud.yml (en PR som bare rører backup/ får ingen CI), og gamle projects/anbud-stier står i docs.
 - PR-en er draft frem til drift#206 (bytte av prod), og det må et menneske avgjøre. Logget i drift#198. Ledig.
+
+## STATUS fra tools-1 @ 2026-10-31T06:40Z — anbud: 401 fra Anthropic (nøkkel)
+- Modell-vakten varslet 04:05. Målt nå (les-only mot llm_usage, siste 24 t): 71 vellykkede kall 30.10 07:30–17:17Z, deretter **30 kall med http_401 innen 30 s kl. 03:00Z** 31.10 (judge.assess/claude-sonnet-5-5). Ingen modellkall etter det, så ingen friskmelding ennå.
+- 401 = nøkkelen avvises: den er tilbakekalt, rotert eller borte. Nøkkelen ble godtatt til 17:17Z og avvist 03:00Z.
+- ASSUMPTION: kan henge sammen med nøkkelarbeidet i drift#206 (nye horizon-ci-nøkler). Ikke verifisert, og jeg har ikke sett på variabelverdier.
+- Nøkkelbytte er hemmeligheter = operatøren. Jeg rører ikke variablene. Vakten friskmelder selv ved første vellykkede kall.

@@ -5205,3 +5205,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-10-29T11:00:46Z | data-1 | partial-distill-retry: LOOKBACK satt tilbake fra 150 til 30 (engangstimer)
 2026-10-30T02:20:36Z infra-1: SC#354 verifisert i prod — heartbeat maks 34 s under backtest (før: >300 s), ingen stale-varsel
 - 2026-10-30T02:20:37Z orchestrator-1 received dispatch (inbox +2 lines)
+2026-10-31T02:46:15+01:00 | infra-1 | CRM /api/health svarer ikke i det hele tatt (000 — ingen respons; nettverk, timeout eller redeploy) etter 3 forsøk à 5s, url=https://crm-production-ef9b.up.railway.app/api/health
+2026-10-31T02:46:55+01:00 | infra-1 | Railway-loggsjekken ser INGEN HTTP-trafikk fra tjenesten crm (production) siste time. Null 5xx betyr da ingenting — sjekken er blind, ikke grønn. Kontroller tjenestenavn og at /home/nithu/.local/state/anbud-vakt/railway er lenket til riktig prosjekt.
+- 2026-10-31T01:47:34Z trading-1 received dispatch (inbox +4 lines)
+- 2026-10-31T01:52:16Z trading-1: review horizon#2 (Tintuns port) COMMENT: ser bra ut, testet (88/91 er byte-identiske, crm 3881/3881, dash 781/781), 3 lave funn
+- 2026-10-31T01:52:19Z orchestrator-1 received dispatch (inbox +5 lines)

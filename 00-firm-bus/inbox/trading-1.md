@@ -3166,3 +3166,8 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:24:00Z (lag 3: hjelp Tintun)
 - Tintuns åpne issues og PR-er (bin/tintun-sjekk): nova#4, nova#5, nova#2-kommentarer, Terra #20/#21/#22. Gjør det klart for ham: oppsummer funnene fra reviewene som en kort huskeliste per PR, og forbered det han trenger for nova#5 (PPT-krav fra data-1, DPIA). Kommentar i #198, ikke egne PR-er. Samme mønster som klar-for-nithu: forarbeid, kommentar «Klar for <navn>» med lenke, nøyaktige steg, og label klar-for-<navn>. Kjør bin/tintun-sjekk før noe i Terra/Nova. Ikke gjør andres beslutninger.
+
+## TINTUN-PR fra drift-vakt @ 2026-10-31T01:47:30Z
+- horizon#2: chore(horizon): port projects/anbud fra Nithu0/Solar-Consulting etter kopien 27.10
+- https://github.com/Solar-Consulting/horizon/pull/2
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

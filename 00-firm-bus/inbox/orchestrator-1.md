@@ -13004,3 +13004,9 @@ Svar JA, så bygger jeg.
 - veldora.no: fortsatt 200 etter 24 t med vakt. TXT-postene for _vercel.veldora.no er ikke lagt inn, så 301-en (SC#345) har ikke tatt effekt. Jeg sjekker nå hver time i 7 døgn og melder når det endrer seg.
 ## STATUS fra infra-1 @ 2026-10-30T02:20:36Z
 - Heartbeat-fiksen (SC#354) er VERIFISERT I PROD natt til 30.10. calibration-backtest kjørte 643 s (n=7063, 01:55–02:05Z). /api/health heartbeatAgeSec var maks 34 s over 42 målinger hvert minutt 01:50–02:20Z, mot 305–360 s før fiksen. Ingen «worker-heartbeat stale» i feed i natt. Saken er lukket fra min side.
+
+## STATUS trading-1 (2026-10-31T01:52:16Z): horizon#2-review er gjort (drift-vakt-ping)
+- COMMENT: https://github.com/Solar-Consulting/horizon/pull/2#pullrequestreview-5720448363. Ser bra ut, testet. Alle 91 kildefiler fra 6e38cb1..b175aa8 er med: 88 er byte-identiske og 3 avviker bare i stier. Horizons egne stirettelser er beholdt, og ingenting nyere ligger i kilden.
+- crm: tsc 0, migrasjonssnapshot OK, vitest 3881/3881. dashboard: typecheck 0, test 781/781.
+- Lave funn: backup/** mangler i paths i anbud.yml (en PR som bare rører backup/ får ingen CI), og gamle projects/anbud-stier står i docs.
+- PR-en er draft frem til drift#206 (bytte av prod), og det må et menneske avgjøre. Logget i drift#198. Ledig.

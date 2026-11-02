@@ -5226,3 +5226,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-02T19:35:41Z orchestrator-1 received dispatch (inbox +3 lines)
 2026-11-02T22:07:07Z infra-1: Railway-prosjekt solarlabs (motor + demo) oppe i EU; solarlabs PR #2; ingen modellnøkkel, sending av
 - 2026-11-02T22:07:10Z orchestrator-1 received dispatch (inbox +2 lines)
+2026-11-02T22:45:21Z infra-1: solarlabs: demo flyttet til Vercel (solarlabs-forslag), WIF-pumpe via Actions i PR #2, gws-test OK (kontakt@), ingenting sendt

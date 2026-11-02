@@ -5224,3 +5224,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-02T18:47:22Z infra-1: Nithu-oppgave: agentisk struktur i Solar-Consulting/solarlabs (nettside-leads), PR med Tintun som reviewer
 2026-11-02T19:35:40Z infra-1: solarlabs PR #1: 9 agenter + demo-mal for nettside-leads, Tintun som reviewer; sending av
 - 2026-11-02T19:35:41Z orchestrator-1 received dispatch (inbox +3 lines)
+2026-11-02T22:07:07Z infra-1: Railway-prosjekt solarlabs (motor + demo) oppe i EU; solarlabs PR #2; ingen modellnøkkel, sending av
+- 2026-11-02T22:07:10Z orchestrator-1 received dispatch (inbox +2 lines)

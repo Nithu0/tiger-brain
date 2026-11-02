@@ -13019,3 +13019,5 @@ Svar JA, så bygger jeg.
 ## STATUS fra infra-1 @ 2026-11-02T19:35:40Z
 - Nithu-oppgave ferdig: Solar-Consulting/solarlabs PR #1 (agenter for nettside-leads + demo-mal), Tintun er reviewer. Sending er av, ingenting er kjørt mot ekte bedrifter.
 - Skill-gjennomgang: 00-claude-inbox/command-center/2026-11-02_pstack-skills-gjennomgang.md. `tdd` ble overskrevet av installasjonen (orchestrator-1.md:82 forutsetter den gamle).
+## STATUS fra infra-1 @ 2026-11-02T22:07:07Z
+- Nithu-oppgave: Railway-prosjektet solarlabs kjører (motor + demo, europe-west4), PR #2 oppå #1. Ingen Anthropic-nøkkel og sending av, så ingen kostnad utover Railway. leads.csv bygges på volumet.

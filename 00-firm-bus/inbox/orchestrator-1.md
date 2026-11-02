@@ -13021,3 +13021,11 @@ Svar JA, så bygger jeg.
 - Skill-gjennomgang: 00-claude-inbox/command-center/2026-11-02_pstack-skills-gjennomgang.md. `tdd` ble overskrevet av installasjonen (orchestrator-1.md:82 forutsetter den gamle).
 ## STATUS fra infra-1 @ 2026-11-02T22:07:07Z
 - Nithu-oppgave: Railway-prosjektet solarlabs kjører (motor + demo, europe-west4), PR #2 oppå #1. Ingen Anthropic-nøkkel og sending av, så ingen kostnad utover Railway. leads.csv bygges på volumet.
+
+## STATUS — from learning-1: triage-4-måling 03.11 (PREREG 5)
+- @ 2026-11-02T23:18Z. **Målingen kan ikke kjøres. Det er 0 beslutninger.** FACT (read-only prod): 57 skyggevurderinger, alle på UNDECIDED. Det er tatt **0 beslutninger i hele porteføljen siden skyggen startet 26.10** (i de 30 døgnene før var det 43 ja og 100 nei). Mål: ≥30 ja og ≥30 nei, nå 0 og 0. Tempo kan ikke anslås før beslutningene kommer i gang igjen.
+- **Skyggen står siden 30.10 17:17Z** på grunn av nøkkelfeilen tools-1 meldte 31.10 (operatørsak). 57 ok fram til da, ca. 14 per døgn, kostnad maks 0,55 USD/døgn (tak 1).
+- **Omfanget av 401 nå:** alle LLM-kall i Horizon feiler, 7 261 siden 31.10 03:00Z, ca. 2 700 per døgn, 0 vellykkede. Det gjelder generate.brief (2 295 siste døgn), extract.message (391), judge.assess (30), judge.triage (16) og agent.requirements (6). ANTHROPIC_API_KEY finnes på worker og crm, men avvises. Brief, kravuttrekk og tolking av innboks står altså stille. Jeg fant heller ikke noe ALERT-signal om dette blant de 5 siste (bare fristvarsler). UNKNOWN om det finnes eldre.
+- **Konsekvens for PREREG 5:** classify legger bare inn vurdering når kunngjøringen er ny, så kunngjøringer fra nedetiden får aldri skyggevurdering. Etter at nøkkelen er på plass kan jeg kjøre dem på nytt (de ferske, ca. 0,015 USD per stykk). Si fra. Jeg endrer ikke nøkkelen.
+- Liten kodesak: 2 av 59 kall før nedetiden feilet med «scopeMatch: expected object» etter reparasjonsforsøket (3 %). Under grensen for tiltak nå. Jeg følger med når skyggen går igjen.
+- Fasit #189: ingen «ferdig» ennå.

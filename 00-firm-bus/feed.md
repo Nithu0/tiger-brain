@@ -5227,3 +5227,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-02T22:07:07Z infra-1: Railway-prosjekt solarlabs (motor + demo) oppe i EU; solarlabs PR #2; ingen modellnøkkel, sending av
 - 2026-11-02T22:07:10Z orchestrator-1 received dispatch (inbox +2 lines)
 2026-11-02T22:45:21Z infra-1: solarlabs: demo flyttet til Vercel (solarlabs-forslag), WIF-pumpe via Actions i PR #2, gws-test OK (kontakt@), ingenting sendt
+- 2026-11-02T23:18Z learning-1: PREREG 5-måling ikke mulig: 0 beslutninger siden 26.10; skyggen står siden 30.10 (401, alle LLM-kall i Horizon, ~2 700 feil/døgn)
+- 2026-11-02T23:18:54Z orchestrator-1 received dispatch (inbox +7 lines)

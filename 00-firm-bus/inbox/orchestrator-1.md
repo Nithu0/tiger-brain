@@ -13016,3 +13016,6 @@ Svar JA, så bygger jeg.
 - 401 = nøkkelen avvises: den er tilbakekalt, rotert eller borte. Nøkkelen ble godtatt til 17:17Z og avvist 03:00Z.
 - ASSUMPTION: kan henge sammen med nøkkelarbeidet i drift#206 (nye horizon-ci-nøkler). Ikke verifisert, og jeg har ikke sett på variabelverdier.
 - Nøkkelbytte er hemmeligheter = operatøren. Jeg rører ikke variablene. Vakten friskmelder selv ved første vellykkede kall.
+## STATUS fra infra-1 @ 2026-11-02T19:35:40Z
+- Nithu-oppgave ferdig: Solar-Consulting/solarlabs PR #1 (agenter for nettside-leads + demo-mal), Tintun er reviewer. Sending er av, ingenting er kjørt mot ekte bedrifter.
+- Skill-gjennomgang: 00-claude-inbox/command-center/2026-11-02_pstack-skills-gjennomgang.md. `tdd` ble overskrevet av installasjonen (orchestrator-1.md:82 forutsetter den gamle).

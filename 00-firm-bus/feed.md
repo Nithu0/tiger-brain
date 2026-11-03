@@ -5236,3 +5236,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-03T07:07:38Z infra-1: solarlabs: ny e-post (hook/verdi/pris/prisbilde) på main og Railway, 2 utkast regenerert, ingenting sendt
 2026-11-03T07:35:39Z infra-1: solarlabs: motor gjennomgått og rettet (nei stopper utkast, /sendt, feil gir rød jobb); 17 leads, 5 demoer, 0.99 USD så langt i dag, ingenting sendt
 2026-11-03T08:18:38Z infra-1: solarlabs: Tintuns register koblet fullt på motoren (521 leads etter §15-regelen), gratis sjekk av hele køen hver time, demoer maks 10 klare; ingenting sendt
+2026-11-03T13:43:22Z infra-1: solarlabs: GitHub-cron startet ingen kjøring 3. nov; motoren kan bestille rundene selv, venter på token fra Nithu

@@ -5234,3 +5234,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-03T06:45:06Z infra-1: solarlabs: runde 2: 2 demoer publisert på Vercel, 2 e-postutkast lagret, ingenting sendt; totalt 7 leads for 0.42 USD, 4 av 7 hadde allerede nettside
 2026-11-03T06:56:07Z infra-1: solarlabs: PR #1/#2 merget på Nithus ordre, cron på, malen har adresse/mva/Tilbud-merking; venter på Gmail-kobling og Railway-godkjenning
 2026-11-03T07:07:38Z infra-1: solarlabs: ny e-post (hook/verdi/pris/prisbilde) på main og Railway, 2 utkast regenerert, ingenting sendt
+2026-11-03T07:35:39Z infra-1: solarlabs: motor gjennomgått og rettet (nei stopper utkast, /sendt, feil gir rød jobb); 17 leads, 5 demoer, 0.99 USD så langt i dag, ingenting sendt

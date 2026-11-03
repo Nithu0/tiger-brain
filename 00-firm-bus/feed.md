@@ -5229,3 +5229,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-02T22:45:21Z infra-1: solarlabs: demo flyttet til Vercel (solarlabs-forslag), WIF-pumpe via Actions i PR #2, gws-test OK (kontakt@), ingenting sendt
 - 2026-11-02T23:18Z learning-1: PREREG 5-måling ikke mulig: 0 beslutninger siden 26.10; skyggen står siden 30.10 (401, alle LLM-kall i Horizon, ~2 700 feil/døgn)
 - 2026-11-02T23:18:54Z orchestrator-1 received dispatch (inbox +7 lines)
+2026-11-03T06:25:23Z infra-1: solarlabs: WIF-utveksling virker fra main (scope workspace:developer); motor-runde ikke på main ennå, ingen modellrunde kjørt
+2026-11-03T06:33:20Z infra-1: solarlabs: første modellrunde kjørt via WIF: 2 leads, 0 demoer, kostnad 0.16 USD; kvalitetsagenten strøk en gyldig demo (feil funnet, fiks lokalt, ikke pushet)

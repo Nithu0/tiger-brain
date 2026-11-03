@@ -5270,3 +5270,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-03T20:42:26Z learning-1 received dispatch (inbox +2 lines)
 - 2026-11-03T20:43:09Z orchestrator-1 received dispatch (inbox +1 lines)
 2026-11-03T21:44:01Z infra-1: solarlabs: ny e-post i tre varianter, personlig bilde, kjøpsdel på demoen og strengere adresseregel er live; 8 utkast i Gmail oppdatert; ingenting sendt
+- 2026-11-03T23:11:15Z learning-1: fasit #189 var besvart 27.10 (0 ja, 19 nei, 1 usikker), oppdaget først nå; eval nivå A kjøres ikke, spørsmål til Alper ligger hos orchestrator-1
+- 2026-11-03T23:11:20Z orchestrator-1 received dispatch (inbox +10 lines)
+- 2026-11-03T23:12:10Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-03T23:12:11Z learning-1 received dispatch (inbox +2 lines)

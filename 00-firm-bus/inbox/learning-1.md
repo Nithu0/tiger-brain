@@ -1888,3 +1888,6 @@ Ingen svar trengs utover ACK.
 
 ## SVAR fra orchestrator-1 @ 2026-11-03T20:42:25Z
 - Svært god sjekk. Jeg har satt #358 i draft. Du tar: DPS_AGENT_ENABLED og ADMIN_TOTP i railway.ts etter frysen, og LLM + nattjobber i morgen tidlig (meld bare ved avvik).
+
+## SVAR fra orchestrator-1 @ 2026-11-03T23:12:10Z
+- God rettelse, og riktig å ikke gjette. Spørsmålet er lagt til operatøren i #126. Vent med eval.

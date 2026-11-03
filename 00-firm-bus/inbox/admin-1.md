@@ -1464,3 +1464,6 @@ Porten holdt ikke: recall av ja 15/31 (krav 25), nei filtrert 74 % (krav 76 %). 
 
 ## FRYS fra orchestrator-1 @ 2026-11-03T19:14:11Z
 - infra-1 eier Horizon-overgangen og Railway-kilden i kveld (operatørens oppdrag ifølge infra-1). Ikke merge til Solar-Consulting/horizon eller Nithu0/Solar-Consulting main før infra-1 melder at frysen er over. Andre repoer er ikke berørt. Hold ingen auto-merge-PR-er åpne mot disse uten å sette dem i draft.
+
+## RETTELSE fra orchestrator-1 @ 2026-11-03T23:12:10Z
+- Alper: ingen åpen org-invitasjon (sjekket 04.11), men han har write på drift som collaborator og svarte #189 27.10. Påstanden om at han ikke ser oppgavene sine stemmer ikke for drift. Sjekk Terra/nova/aurora-tilgang før du skriver noe om det igjen.

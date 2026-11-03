@@ -13072,3 +13072,18 @@ Konklusjon: **det som kjører i prod er friskt, men overgangen er ikke ferdig. T
 
 Min anbefaling: opphev frysen først når token er satt og #358 er avklart. Git-koblingen kan tas rett etter, siden prod bruker CLI-deploy. Jeg sjekker LLM og nattjobbene i morgen tidlig og melder bare hvis noe avviker.
 2026-11-03T20:43:05Z FRA infra-1: ferdig. Vercel: prosjektet anbud-veldora er koblet fra gammelt repo. Kobling til horizon nektes (repo_not_found: Vercels GitHub-app er ikke på org-en), men trengs ikke siden deploy går med CLI og token. Gaten: horizon-PR gjør deploy rød når dashboard er endret og VERCEL_TOKEN mangler. VERCEL_TOKEN står på Nithus liste.
+
+## KORREKSJON + AVGJØRELSE fra learning-1 @ 2026-11-03T23:11:15Z: fasit #189 for rødt lag er besvart: 0 av 20 godkjent
+**Feil fra meg:** Alper krysset av og skrev «ferdig» 27.10 kl. 11:35Z. Mine statuser 27.10 kl. 11:54Z og 12:25Z, og senere «ingen ferdig ennå», var feil. Også 03.11 skrev jeg at jeg ventet på fasiten. Monitoren telte antall «ferdig»-kommentarer fra oppstart, så en kommentar som allerede fantes ble aldri varslet. Den slo ut nå bare fordi tellingen ble ny. Jeg endrer den til å følge endringstidspunktet på saken. Svaret har dermed ligget ubehandlet i en uke.
+
+**Svaret (FACT):** 19 nei, 1 usikker (nr. 19), 0 ja. Ingen begrunnelser, verken i saken eller i kommentaren. Alle 20 avkryssingene ble gjort 11:32:05–11:34:55Z, altså på under 3 minutter (saken anslo ca. 10). Tiden sier ikke om svarene er lest. UNKNOWN: om nei gjelder hvert svar for seg, hele det syntetiske settet, eller om noe er misforstått.
+
+**Konsekvens:** eval nivå A kjøres ikke. `GODKJENNING.md` sier at ingenting kjøres før alle 20 er godkjent, og bare ja teller. Rødt lag blir værende av (`REDTEAM_AGENT_ENABLED`). Jeg har ikke endret `originaler.json` eller saken, og jeg skriver ikke om svarene uten å vite hva som er galt. Da ville jeg bare gjettet og siden målt mot mine egne gjetninger.
+
+**Trenger avgjørelse fra deg/operatøren (hastesak: nei):** noen må spørre Alper. Jeg anbefaler at du eller operatøren gjør det, heller enn en agent i saken. Forslag til tekst:
+«Du krysset nei på 19 av 20 svar i fasiten for rødt lag (drift#189). Hva er galt med dem: er det enkeltsvar, eller er det at svarene er syntetiske? To–tre stikkord holder.»
+- Gjelder det enkeltsvar: jeg retter dem etter begrunnelsen, og et menneske godkjenner på nytt.
+- Gjelder det hele settet: nivå A slik det er bygget, er feil mål, og vi må finne et annet datasett. Da legger jeg fram et forslag. Eval-kostnaden (~17 USD) er ikke brukt.
+- Alternativ: Nithu svarer på saken uavhengig av Alper, slik at vi får to lesere. Da ser vi også om de er enige.
+
+Merk: jeg brukte to små GraphQL-kall for redigeringshistorikken, siden den ikke finnes i REST.

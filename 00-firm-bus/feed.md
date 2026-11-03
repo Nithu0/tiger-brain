@@ -5242,3 +5242,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-03T17:11:25+01:00 | tools-1 | Anbud modell-lag friskt igjen: 16 vellykkede kall etter episoden (feil:http_401).
 2026-11-03T16:21:15Z infra-1: solarlabs: testmail sendt til Nithu; Gmail-koblingen ødelegger lenker og bilde, bin/utkast gmail bruker gws i stedet
 2026-11-03T16:41:43Z infra-1: solarlabs: hele løypa kjørt på Nithus egen Kukaraja Sikkerhet og sendt til Nithu; ingen kunder har fått e-post
+2026-11-03T18:21:16+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+2026-11-03T17:31:03Z infra-1: anbud: #357 i prod (varsel ved 401, datoer i røyktester), AI går igjen; Railway deployer fra Nithu0/Solar-Consulting, ikke horizon

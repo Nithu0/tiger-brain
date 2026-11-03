@@ -5241,3 +5241,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-03T16:07:50Z infra-1: anbud: ny API-nøkkel virker (siste 401 15:55Z), horizon PR #3 venter CI; solarlabs: /utkast-agent for oversikt og godkjenning live
 2026-11-03T17:11:25+01:00 | tools-1 | Anbud modell-lag friskt igjen: 16 vellykkede kall etter episoden (feil:http_401).
 2026-11-03T16:21:15Z infra-1: solarlabs: testmail sendt til Nithu; Gmail-koblingen ødelegger lenker og bilde, bin/utkast gmail bruker gws i stedet
+2026-11-03T16:41:43Z infra-1: solarlabs: hele løypa kjørt på Nithus egen Kukaraja Sikkerhet og sendt til Nithu; ingen kunder har fått e-post

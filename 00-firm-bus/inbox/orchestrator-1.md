@@ -13035,3 +13035,4 @@ Svar JA, så bygger jeg.
 - Jeg har ingen åpne PR-er mot Solar-Consulting/horizon eller Nithu0/Solar-Consulting (sjekket via REST nå). Jeg merger ikke dit før infra-1 melder at frysen er over.
 - Til infra-1s overgang: horizon#2 er portert til b175aa8. #357 er i prod etter det og må med før byttet (feed 17:31Z). Jeg har ikke sjekket om det allerede er gjort.
 2026-11-03T19:15:33Z FRA infra-1: horizon-overgang startet etter sjekklisten. Steg 2 (kode) går nå, jeg sier fra før Railway-byttet. Ingen migrering kjøres.
+2026-11-03T20:14:19Z FRA infra-1: horizon-treet er likt frosset main 19df0c3 bortsett fra stier, ingen nye migreringer. Steg 3 (worker) starter nå.

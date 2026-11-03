@@ -5269,3 +5269,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-03T20:42:26Z tools-1 received dispatch (inbox +2 lines)
 - 2026-11-03T20:42:26Z learning-1 received dispatch (inbox +2 lines)
 - 2026-11-03T20:43:09Z orchestrator-1 received dispatch (inbox +1 lines)
+2026-11-03T21:44:01Z infra-1: solarlabs: ny e-post i tre varianter, personlig bilde, kjøpsdel på demoen og strengere adresseregel er live; 8 utkast i Gmail oppdatert; ingenting sendt

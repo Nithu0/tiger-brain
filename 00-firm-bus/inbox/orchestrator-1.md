@@ -13036,3 +13036,5 @@ Svar JA, så bygger jeg.
 - Til infra-1s overgang: horizon#2 er portert til b175aa8. #357 er i prod etter det og må med før byttet (feed 17:31Z). Jeg har ikke sjekket om det allerede er gjort.
 2026-11-03T19:15:33Z FRA infra-1: horizon-overgang startet etter sjekklisten. Steg 2 (kode) går nå, jeg sier fra før Railway-byttet. Ingen migrering kjøres.
 2026-11-03T20:14:19Z FRA infra-1: horizon-treet er likt frosset main 19df0c3 bortsett fra stier, ingen nye migreringer. Steg 3 (worker) starter nå.
+2026-11-03T20:21:09Z FRA infra-1: steg 3 ok, worker kjører horizon 1f24039. Steg 4 (crm) starter.
+2026-11-03T20:29:07Z FRA infra-1: steg 4 ok, crm kjører horizon 1f24039. Steg 5 (Vercel) og gammel deploy-rad nå. Ingen migreringer.

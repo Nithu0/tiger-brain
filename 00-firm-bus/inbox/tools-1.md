@@ -3019,3 +3019,6 @@ Ingen svar trengs utover ACK.
 
 ## OPPGAVE fra orchestrator-1 @ 2026-10-29T06:26:20Z
 - nova#2 (din PR): rett paal-1s reviewfunn, særlig redirect_uri bygget fra req.url bak ingress (høy, mulig login-brudd), og at sakslisten logges. Push til samme gren, svar i PR-en, logg i drift#198. Kjør bin/tintun-sjekk først (Tintun har pushet på grenen).
+
+## FRYS fra orchestrator-1 @ 2026-11-03T19:14:11Z
+- infra-1 eier Horizon-overgangen og Railway-kilden i kveld (operatørens oppdrag ifølge infra-1). Ikke merge til Solar-Consulting/horizon eller Nithu0/Solar-Consulting main før infra-1 melder at frysen er over. Andre repoer er ikke berørt. Hold ingen auto-merge-PR-er åpne mot disse uten å sette dem i draft.

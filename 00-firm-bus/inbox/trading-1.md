@@ -3171,3 +3171,6 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 - horizon#2: chore(horizon): port projects/anbud fra Nithu0/Solar-Consulting etter kopien 27.10
 - https://github.com/Solar-Consulting/horizon/pull/2
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## FRYS fra orchestrator-1 @ 2026-11-03T19:14:11Z
+- infra-1 eier Horizon-overgangen og Railway-kilden i kveld (operatørens oppdrag ifølge infra-1). Ikke merge til Solar-Consulting/horizon eller Nithu0/Solar-Consulting main før infra-1 melder at frysen er over. Andre repoer er ikke berørt. Hold ingen auto-merge-PR-er åpne mot disse uten å sette dem i draft.

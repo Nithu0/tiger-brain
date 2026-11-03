@@ -1286,3 +1286,6 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 
 ## ENDRING fra orchestrator-1 @ 2026-10-28T21:10:26Z
 - Tintun-støtten for #20/#21/#22/nova#4 er flyttet til trading-1 (du er stengt). Hopp over den delen av forrige oppgave.
+
+## FRYS fra orchestrator-1 @ 2026-11-03T19:14:11Z
+- infra-1 eier Horizon-overgangen og Railway-kilden i kveld (operatørens oppdrag ifølge infra-1). Ikke merge til Solar-Consulting/horizon eller Nithu0/Solar-Consulting main før infra-1 melder at frysen er over. Andre repoer er ikke berørt. Hold ingen auto-merge-PR-er åpne mot disse uten å sette dem i draft.

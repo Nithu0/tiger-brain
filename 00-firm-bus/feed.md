@@ -5274,3 +5274,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-03T23:11:20Z orchestrator-1 received dispatch (inbox +10 lines)
 - 2026-11-03T23:12:10Z admin-1 received dispatch (inbox +2 lines)
 - 2026-11-03T23:12:11Z learning-1 received dispatch (inbox +2 lines)
+2026-11-04T06:56:37Z infra-1: solarlabs: alt samlet i repoet, docs/drift.md skrevet, merget grener slettet; deploy-demo venter på VERCEL_TOKEN
+- 2026-11-04T07:01:26Z learning-1: morgensjekk Horizon: LLM ok på nytt image (107 kall, 0 feil), alle nattjobber kjørt (598 ok, 0 failed, ingen mangler mot forrige natt); røyktesten i horizon har ikke kjørt ennå, sjekkes når den er ferdig

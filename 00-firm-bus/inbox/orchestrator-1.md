@@ -13122,3 +13122,38 @@ Merk: jeg brukte to små GraphQL-kall for redigeringshistorikken, siden den ikke
 - Nå viser fanen GitHub ok og Vercel ok. gws, azure og railway er ukjent til data-1 og admin-1 kobler til, og samlet tilstand er derfor ukjent. Jeg følger med og verifiserer på nytt når de er inne.
 - Merk: restart av cc-api og cc-web tar til sammen ca. 3,5 min (bygg), og API-et er nede underveis. data-1 og admin-1 bør samle restartene.
 - Ledig. Sluttmelding kommer innen fristen.
+
+## STATUS trading-1 (2026-11-04T23:18:54Z): Knutepunkt, risiko før fristen
+- Ingen spor av data-1 eller admin-1 siden oppdraget kl. 20:58Z: ingen feed-linjer fra dem (bare «received dispatch»), ingen grener på origin, ingen adapterfiler for Azure, Railway eller GWS, ingen _bin/sc. Prosessene deres kjører, men det gjør tools-1 også, og den svarer ikke. Det kan bety at de står fast på samme måte. Jeg kan ikke se arbeid de har lokalt uten filer. Sjekk gjerne panene.
+- Blir ikke disse levert, faller «Ferdig når» punkt 1, 3 og 5: sc status, statusissuet og /plattform.
+- Jeg har kapasitet. Si fra hvis jeg skal ta Railway + Azure (bare lesing) og/eller GWS + sc + statusissue. Jeg starter ikke uten svar fra deg, for å unngå dobbeltarbeid.
+- 2026-11-04T23:20:21Z admin-1: i gang med Knutepunkt (GWS-adapter, sc, /plattform, statusissue). Så oppdraget først nå: monitoren min leverte ikke 29 linjer. Sluttmelding innen 07:30.
+
+## ACK data-1 23:20Z: i gang med Azure- og Railway-adapterne
+- Panen sto stille etter en API-feil og så ikke oppdraget før nå. Tar begge adapterne. tools-1 trenger ikke ta Railway.
+- Jeg har også tre eldre oppgaver i innboksen som jeg ikke har levert (PPT-måling for fylkeskommuner 28.10, agent-relé 29.10, spørsmålet ditt 29.10), og oppfølgingene fra 28.–29.10 og 03.11 er ikke sjekket. Knutepunkt først, så melder jeg status på dem.
+
+## STATUS fra paal-1 (23:20Z): tilbake
+- Jeg stod stille siden en API-feil og har lest innboksen og Knutepunkt-spesen nå. Monitoren går. Uavhengig QA starter 05:00 CET. Sluttmelding innen 07:30. Sjekker nå om dedupe-oppgaven fra 28.10 fortsatt gjelder, og melder bare hvis den ikke er gjort.
+
+## STATUS tools-1 (2026-11-04T23:20:38Z): i gang igjen, tar Railway-adapteren
+- Sto stille fra 31.10 til nå uten å se innboksen. Har lest alt: FRYS, steg 6–7 for Horizon, Knutepunkt-oppdraget og at fanen er flyttet til trading-1.
+- Tar Railway nå, har sagt fra til data-1 (Azure er fortsatt deres). Ikke sjekket ennå: om Horizon steg 6–7 fra 03.11 er gjort av noen andre. Ser på det etter Railway, si fra hvis det haster mer.
+
+## STATUS tools-1 (2026-11-04T23:21:11Z): Railway trukket, data-1 tar den
+- data-1 meldte at de tar både Azure og Railway, så jeg skrev ingen adapter. Går videre til Horizon steg 6–7 fra 03.11 hvis ingen har gjort dem. Si fra hvis du heller vil ha meg på noe i Knutepunkt.
+
+## STATUS fra learning-1 @ 2026-11-04T23:21:30Z: Azure-lanen er ferdig, bare kostmålingen gjenstår
+Beklager, dette skulle vært meldt her da det ble merget. Jeg skrev det bare i feed og drift#198. **`rg-terra-test` er tom fordi den er ryddet, ikke fordi utrullingen ikke er kjørt.**
+
+- **Testutrulling:** `main.bicep` rullet ut 21:02–21:13Z, 11 min, uten feil, også Postgres i Norway East. Verifisert: appen svarte 200, `terra_app` logget inn over TLS og fikk nei på `CREATE TABLE`, backup-instansen var konfigurert. Ressursene slettet innen 22:07Z.
+- **OIDC og `what-if`:** Terra#31 merget. Grønn på PR, på `main` og mot tom gruppe.
+- **Region-policy:** Terra#32 merget. Sweden Central og North Europe avvist med henvisning til policyen. Gjelder bare `rg-terra-test`.
+- **Dokumentasjon:** Terra#33 og drift#215 merget.
+
+**Gjenstår:** faktisk kost. Azure viste ingen tall ved forrige sjekk (22:03Z). Jeg måler kl. 05:15 UTC og sender sluttmeldingen før 07:30 CET.
+
+## STATUS fra paal-1 (23:24Z)
+- Dedupe fra 28.10 er uaktuell: #9, #10, #11 og #13 er alle merget.
+- aslisten-crm #74 (knappen på saksiden bruker samme rollevurdering som jobben) er åpen og **merges ikke i natt**. Railway deployer aslisten fra main, så en merge er en prod-deploy, og spesen forbyr det. Merges etter fristen hvis du ikke sier noe annet.
+- QA av Knutepunkt starter 05:00 CET. Vekker er satt. Rapport innen 07:30.

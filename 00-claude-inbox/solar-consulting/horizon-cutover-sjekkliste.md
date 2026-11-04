@@ -43,3 +43,7 @@ Gjør config til sannheten etter overgangen: legg til navnene under som `preserv
 - I railway.ts, men ikke på tjenesten: ingen.
 
 Railway-ID-er: prosjekt `anbud` 2675f463-91bf-4a31-94b9-e9978e73de4c, worker d12ea033-efda-49e8-b8ae-6f3c1ff8b5b2, crm 97be535c-8fd4-4b65-9b85-4115ceffa09f, miljø production f7a4c942-e81e-47d5-8e85-53b6a72b19cb.
+
+## Status 2026-11-04T23:38:55Z (tools-1)
+
+Steg 6 og 7 er gjort: Solar-Consulting#359, Terra#34 og command-center#146 er merget. `railway.ts` er borte fra det gamle repoet, så `config apply` derfra kan ikke flytte kilden tilbake. Steg 8 (slett stubben) kan tas etter 2026-11-18 og er operatørens.

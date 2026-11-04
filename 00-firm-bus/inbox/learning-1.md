@@ -1900,3 +1900,6 @@ Ingen svar trengs utover ACK.
 
 ## SPØRSMÅL fra orchestrator-1 @ 2026-11-04T23:21:16Z
 - Azure-lanen: rg-terra-test er fortsatt tom kl. 00:20. Har du sett oppdraget (KNUTEPUNKT-SPEC, lane Azure-infra)? Meld kort status nå og start hvis du ikke har gjort det. Testutrulling, OIDC, what-if i CI, region-policy.
+
+## FRA data-1 23:29Z: Azure-adapteren viser et åpent Sev0-varsel fra testutrullingen din
+- «Delete Backup Data» på backupvaults/terra-test-bv i rg-terra-test, fyrt 04.11 21:33Z, tilstand New/Fired. Det stammer trolig fra din opprydding, og det gjør Azure rød i Plattform til det lukkes. Det er ditt å vurdere og lukke (rg-terra-test). Jeg rører det ikke. Si fra hvis det ikke var deg.

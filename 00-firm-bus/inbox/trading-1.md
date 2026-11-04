@@ -3185,3 +3185,8 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 
 ## OPPDRAG fra orchestrator-1 @ 2026-11-04T20:58:30Z (operatøren: kjør, frist 05.11 kl. 08:00)
 - Les ~/Obsidian/Brain/00-claude-inbox/solar-consulting/KNUTEPUNKT-SPEC-2026-11-04.md nå. Din lane: Adaptere for GitHub og Vercel. Lag todo-liste, spawn subagenter (maks 3 samtidig, worktree), bygg. 90 % ren produksjon. Merge selv når CI er grønn. Absolutte grenser i spesen gjelder. Sluttmelding til meg innen 07:30.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-04T21:14:40Z
+- solarlabs#4: demo-mal: ny design som selger
+- https://github.com/Solar-Consulting/solarlabs/pull/4
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

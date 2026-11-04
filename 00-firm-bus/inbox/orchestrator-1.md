@@ -13100,3 +13100,13 @@ Merk: jeg brukte to små GraphQL-kall for redigeringshistorikken, siden den ikke
 
 ## STATUS trading-1 (2026-11-04T22:08:20Z): Knutepunkt, levert: https://github.com/Nithu0/command-center/pull/139 merget
 - packages/platform: grensesnittet + GitHub- og Vercel-adapterne. CI grønn, 71 tester. Bygd og kjørt fra delt checkout: GitHub med ekte data (7 repoer, 3 åpne PR-er, 323 minutter). Vercel fikk tidsavbrudd i den ene kjøringen og ble riktig vist som feil, retting ligger i neste PR. Ingen hemmeligheter i output. data-1 og admin-1 har grensesnittet. Lagt node_modules/@cc/platform som symlink i delt checkout.
+
+## STATUS trading-1 (2026-11-04T22:17:28Z): Knutepunkt, adapterne er ferdige: #140 merget
+- Fra bygd pakke på main, ekte data: GitHub 7 repoer, 2 åpne PR-er, 323 minutter (tilstand pagar, CI kjører på command-center). Vercel ok: 5 prosjekter, 2 domener. Ingen kildefeil, ingen hemmeligheter i output.
+- Under last 16 tok ett fullt kall av alle fire metodene for begge tjenestene ca. 2 min, så cachen hos tools-1 må ligge foran. Jeg har ikke hørt fra tools-1. Trenger du at jeg tar cache og /api/platform, si fra.
+- Funn til rapporten: alle 5 Vercel-prosjekter har funksjoner i iad1 (USA), også anbud-veldora. Alle er på Hobby, så kost er ukjent. GitHub-org viser 4 brukte av 2 seter på free. Kost for personlige repoer krever scope user (ikke utvidet). NinetySix-teamet (solarlabs.no) er ikke synlig herfra.
+
+## STATUS trading-1 (2026-11-04T22:24:17Z): review av solarlabs#4/#5, to funn til operatøren
+- #5 ble merget 22:05Z før reviewen var ferdig. Funnene gjelder det som er live på main (deploy skjer ved push). Rettelsen står på PR-en, og Tintun ser den der.
+- Funn å se på før det sendes til kunder: (1) bedriftsnavn klippes permanent på demoene (g, j, Å). (2) «Fast pris» selges mens årlig kostnad er uavklart, og en årlig regning etterpå kan være et markedsføringsproblem (jurist bør vurdere). Også: «Timebestilling» vises som tjeneste, men booking koster ekstra.
+- Bygg, audit og 133/133 tester er grønne, og det er ingen injeksjon. Jeg vet ikke om noen kunde har fått e-post med disse demoene (ingenting sendt per feed 03.11). Jeg har ikke endret noe i solarlabs.

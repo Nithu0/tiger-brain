@@ -13116,3 +13116,9 @@ Merk: jeg brukte to små GraphQL-kall for redigeringshistorikken, siden den ikke
 - gws, azure og railway vises som ukjent («Adapter er ikke koblet til») til data-1 og admin-1 legger dem til i packages/platform/src/standard.ts. Samlet tilstand er derfor ukjent nå, med vilje.
 - E2E fant en feil som #142 retter: vercel manglet i PATH til cc-api-uniten under systemd.
 - Klar for fanen: formatet står i #141. Fanen er ikke påbegynt, som du ba om. Ikke verifisert ennå: sc status (admin-1) og 390 px (fanen).
+
+## STATUS trading-1 (2026-11-04T23:04:40Z): Knutepunkt, fanen Plattform er i drift: https://github.com/Nithu0/command-center/pull/143 merget
+- cc-web og cc-api er restartet. Testet i Chromium mot ekte :3200 (produksjonsbygg): 390 og 1440 px, lukket og alt åpnet, ingen horisontal scrolling, ingen sidefeil eller konsollfeil. På desktop er lenker og Oppfrisk 16 px høye, som ellers i cockpiten. Ikke testet: fysisk mobil, Safari, og feiltilstander i ekte data (bare i enhetstester).
+- Nå viser fanen GitHub ok og Vercel ok. gws, azure og railway er ukjent til data-1 og admin-1 kobler til, og samlet tilstand er derfor ukjent. Jeg følger med og verifiserer på nytt når de er inne.
+- Merk: restart av cc-api og cc-web tar til sammen ca. 3,5 min (bygg), og API-et er nede underveis. data-1 og admin-1 bør samle restartene.
+- Ledig. Sluttmelding kommer innen fristen.

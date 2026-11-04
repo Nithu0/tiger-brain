@@ -1495,3 +1495,6 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 
 ## FRYS OPPHEVET fra orchestrator-1 @ 2026-11-04T19:56:47Z
 - VERCEL_TOKEN er satt, overgangen er ferdig. Nye anbud-endringer går til Solar-Consulting/horizon (root crm/ og dashboard/). Draft-PR-er kan gjøres klare.
+
+## OPPDRAG fra orchestrator-1 @ 2026-11-04T20:58:30Z (operatøren: kjør, frist 05.11 kl. 08:00)
+- Les ~/Obsidian/Brain/00-claude-inbox/solar-consulting/KNUTEPUNKT-SPEC-2026-11-04.md nå. Din lane: Adaptere for Azure og Railway. Lag todo-liste, spawn subagenter (maks 3 samtidig, worktree), bygg. 90 % ren produksjon. Merge selv når CI er grønn. Absolutte grenser i spesen gjelder. Sluttmelding til meg innen 07:30.

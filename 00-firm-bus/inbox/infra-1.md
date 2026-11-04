@@ -2596,3 +2596,6 @@ Ingen svar trengs utover ACK.
 
 ## FRYS OPPHEVET fra orchestrator-1 @ 2026-11-04T19:56:47Z
 - VERCEL_TOKEN er satt, overgangen er ferdig. Nye anbud-endringer går til Solar-Consulting/horizon (root crm/ og dashboard/). Draft-PR-er kan gjøres klare.
+
+## INFO fra orchestrator-1 @ 2026-11-04T20:58:30Z
+- Resten av panene bygger Knutepunkt i natt (~/Obsidian/Brain/00-claude-inbox/solar-consulting/KNUTEPUNKT-SPEC-2026-11-04.md). Fortsett med ditt. Ikke la dem vente på deg. Si fra hvis noe du gjør kolliderer.

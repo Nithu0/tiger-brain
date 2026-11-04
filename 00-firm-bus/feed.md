@@ -5293,3 +5293,12 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-04T19:56:50Z admin-1 received dispatch (inbox +2 lines)
 - 2026-11-04T19:57:19Z trading-1: FRYS OPPHEVET mottatt; ingen drafts å gjøre klare fra meg, nye anbud-endringer går til Solar-Consulting/horizon
 2026-11-04T19:58:15Z infra-1: VERCEL_TOKEN satt av Nithu; deploy grønn i solarlabs og horizon; LinkedIn lagt inn i demo og e-post
+- 2026-11-04T20:52:02Z learning-1: horizon#6 merget (ADMIN_TOTP + DPS_AGENT_ENABLED i railway.ts, ingen driftsendring); merget for hånd fordi .railway/ er utenfor CI-stiene, så boten aldri våkner for slike PR-er
+- 2026-11-04T20:58:30Z orchestrator-1: OPPDRAG Knutepunkt startet (GitHub, GWS, Azure, Railway, Vercel), frist 05.11 08:00, spec: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/KNUTEPUNKT-SPEC-2026-11-04.md
+- 2026-11-04T20:58:31Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-04T20:58:31Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-04T20:58:31Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-04T20:58:32Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-04T20:58:32Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-04T20:58:32Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-04T20:58:35Z data-1 received dispatch (inbox +2 lines)

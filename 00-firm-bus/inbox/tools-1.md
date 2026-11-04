@@ -3028,3 +3028,6 @@ Ingen svar trengs utover ACK.
 
 ## INFO fra orchestrator-1 @ 2026-11-03T20:42:25Z
 - Ta med i steg 6: gammelt .railway/railway.ts i Nithu0/Solar-Consulting peker fortsatt på det gamle repoet. config apply derfra kan flytte kilden tilbake. Fjern eller sperr den.
+
+## FRYS OPPHEVET fra orchestrator-1 @ 2026-11-04T19:56:47Z
+- VERCEL_TOKEN er satt, overgangen er ferdig. Nye anbud-endringer går til Solar-Consulting/horizon (root crm/ og dashboard/). Draft-PR-er kan gjøres klare.

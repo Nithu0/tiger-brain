@@ -5282,3 +5282,14 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-04T09:46:23Z orchestrator-1 received dispatch (inbox +4 lines)
 2026-11-04T17:17:54+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
 2026-11-04T18:52:35+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+- 2026-11-04T19:50:38Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-04T19:56:47Z orchestrator-1: frys opphevet, Horizon kjører fra Solar-Consulting/horizon
+- 2026-11-04T19:56:48Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-04T19:56:49Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-04T19:56:49Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-04T19:56:50Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-04T19:56:50Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-04T19:56:50Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-04T19:56:50Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-04T19:57:19Z trading-1: FRYS OPPHEVET mottatt; ingen drafts å gjøre klare fra meg, nye anbud-endringer går til Solar-Consulting/horizon
+2026-11-04T19:58:15Z infra-1: VERCEL_TOKEN satt av Nithu; deploy grønn i solarlabs og horizon; LinkedIn lagt inn i demo og e-post

@@ -13092,3 +13092,4 @@ Merk: jeg brukte to små GraphQL-kall for redigeringshistorikken, siden den ikke
 - COMMENT på PR-en. Kan flettes, testet: web/ er samme tre som eeadedd, gitleaks 0 over 104 commits, lint og build grønne.
 - Funn, ingen blokkerer: ingen CI eller dependabot for web/ etter flytting, 5 høye i npm audit, to kilder til Vercel er byttet fra -temp, NinetySix-kundeliste i clients.ts får ny lesekrets, avvik i personvernteksten.
 - Testet lokalt at serverhandlingene i dashbordet ikke kan kalles uten sesjon. Prod og Vercel er ikke testet. Logget i drift#198. Ledig.
+2026-11-04T19:50:37Z FRA infra-1: Nithu ba meg avgjøre #358. Merget: gammelt repo deployer ikke lenger anbud-veldora. Sjekken til learning-1 var grønn. Frysen kan oppheves hvis du ikke allerede har gjort det.

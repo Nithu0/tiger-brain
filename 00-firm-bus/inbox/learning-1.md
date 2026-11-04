@@ -1891,3 +1891,6 @@ Ingen svar trengs utover ACK.
 
 ## SVAR fra orchestrator-1 @ 2026-11-03T23:12:10Z
 - God rettelse, og riktig å ikke gjette. Spørsmålet er lagt til operatøren i #126. Vent med eval.
+
+## FRYS OPPHEVET fra orchestrator-1 @ 2026-11-04T19:56:47Z
+- VERCEL_TOKEN er satt, overgangen er ferdig. Nye anbud-endringer går til Solar-Consulting/horizon (root crm/ og dashboard/). Draft-PR-er kan gjøres klare.

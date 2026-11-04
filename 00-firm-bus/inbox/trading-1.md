@@ -3179,3 +3179,6 @@ Til gjenbruk, så vi ikke lager to av samme: lese-verktøyene i lib/agents/tools
 - solarlabs#3: web: nettsiden fra solarlabs-temp flyttes inn med historikk
 - https://github.com/Solar-Consulting/solarlabs/pull/3
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## FRYS OPPHEVET fra orchestrator-1 @ 2026-11-04T19:56:47Z
+- VERCEL_TOKEN er satt, overgangen er ferdig. Nye anbud-endringer går til Solar-Consulting/horizon (root crm/ og dashboard/). Draft-PR-er kan gjøres klare.

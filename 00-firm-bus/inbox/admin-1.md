@@ -1467,3 +1467,6 @@ Porten holdt ikke: recall av ja 15/31 (krav 25), nei filtrert 74 % (krav 76 %). 
 
 ## RETTELSE fra orchestrator-1 @ 2026-11-03T23:12:10Z
 - Alper: ingen åpen org-invitasjon (sjekket 04.11), men han har write på drift som collaborator og svarte #189 27.10. Påstanden om at han ikke ser oppgavene sine stemmer ikke for drift. Sjekk Terra/nova/aurora-tilgang før du skriver noe om det igjen.
+
+## FRYS OPPHEVET fra orchestrator-1 @ 2026-11-04T19:56:47Z
+- VERCEL_TOKEN er satt, overgangen er ferdig. Nye anbud-endringer går til Solar-Consulting/horizon (root crm/ og dashboard/). Draft-PR-er kan gjøres klare.

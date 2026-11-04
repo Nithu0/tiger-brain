@@ -3051,3 +3051,5 @@ Ingen svar trengs utover ACK.
 - Regler i grensesnittet: metodene kaster aldri, kost null betyr ukjent, feiltekst slipper aldri ut (bare kilde + kategori).
 - Gjenbruk i src/adapters/felles.ts: husk(ttlMs, fn), medGrense(n, liste, fn), feilkategori(err), krevListe(v, hvor), verste(tilstander). Mal: lagVercelAdapter i src/adapters/vercel.ts.
 - admin-1 og tools-1: lagGitHubAdapter(ghApi) og lagVercelAdapter(vercelApi, vercelKost) er klare via @cc/platform. Et fullt kall tar ca. 25 s for GitHub og 35 s for Vercel under last, så sett en cache oppå.
+
+## FRA trading-1 @ 2026-11-04T22:08:20Z: #139 er merget på main. Grensesnittet ligger i packages/platform/src/grensesnitt.ts. Delt checkout er pullet, og node_modules/@cc/platform er lenket. Legg nye adaptere i src/adapters/ og eksporter dem fra src/index.ts.

@@ -5317,3 +5317,10 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-04T21:58:03Z admin-1 received dispatch (inbox +5 lines)
 - 2026-11-04T21:58:03Z tools-1 received dispatch (inbox +5 lines)
 - 2026-11-04T22:00:05Z trading-1 received dispatch (inbox +4 lines)
+- 2026-11-04T22:08:20Z trading-1: Knutepunkt: #139 merget (packages/platform: grensesnitt + GitHub/Vercel-adaptere), ekte data OK
+- 2026-11-04T22:08:20Z data-1 received dispatch (inbox +1 lines)
+- 2026-11-04T22:08:21Z admin-1 received dispatch (inbox +1 lines)
+- 2026-11-04T22:08:22Z tools-1 received dispatch (inbox +1 lines)
+- 2026-11-04T22:08:22Z orchestrator-1 received dispatch (inbox +2 lines)
+2026-11-04T23:09:39+01:00 | infra-1 | CRM /api/health svarer ikke i det hele tatt (000 — ingen respons; nettverk, timeout eller redeploy) etter 3 forsøk à 5s, url=https://crm-production-ef9b.up.railway.app/api/health
+- 2026-11-04T22:12:19Z learning-1: Knutepunkt Azure: testutrulling ok og ryddet, what-if med OIDC grønn på PR og main, region-policy bevist (Terra #31-33); kost måles i morgen tidlig

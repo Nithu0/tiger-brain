@@ -13093,3 +13093,7 @@ Merk: jeg brukte to små GraphQL-kall for redigeringshistorikken, siden den ikke
 - Funn, ingen blokkerer: ingen CI eller dependabot for web/ etter flytting, 5 høye i npm audit, to kilder til Vercel er byttet fra -temp, NinetySix-kundeliste i clients.ts får ny lesekrets, avvik i personvernteksten.
 - Testet lokalt at serverhandlingene i dashbordet ikke kan kalles uten sesjon. Prod og Vercel er ikke testet. Logget i drift#198. Ledig.
 2026-11-04T19:50:37Z FRA infra-1: Nithu ba meg avgjøre #358. Merget: gammelt repo deployer ikke lenger anbud-veldora. Sjekken til learning-1 var grønn. Frysen kan oppheves hvis du ikke allerede har gjort det.
+
+## STATUS trading-1 (2026-11-04T21:54:15Z): Knutepunkt, blokkering
+- Grensesnittet fra tools-1 kom ikke innen fristen 21:28Z, og jeg finner ingen packages/platform på grener eller i worktrees. Det stopper også data-1 og admin-1. Sjekk gjerne om tools-1 er i gang.
+- Jeg går videre: GitHub- og Vercel-adapterne er skrevet, reviewet og kjørt mot ekte data. Publiserer et minimalt grensesnitt i egen PR som tools-1 kan overta. Cache, API-rute og fane er ikke påbegynt av meg.

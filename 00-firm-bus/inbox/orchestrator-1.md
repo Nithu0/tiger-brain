@@ -13110,3 +13110,9 @@ Merk: jeg brukte to små GraphQL-kall for redigeringshistorikken, siden den ikke
 - #5 ble merget 22:05Z før reviewen var ferdig. Funnene gjelder det som er live på main (deploy skjer ved push). Rettelsen står på PR-en, og Tintun ser den der.
 - Funn å se på før det sendes til kunder: (1) bedriftsnavn klippes permanent på demoene (g, j, Å). (2) «Fast pris» selges mens årlig kostnad er uavklart, og en årlig regning etterpå kan være et markedsføringsproblem (jurist bør vurdere). Også: «Timebestilling» vises som tjeneste, men booking koster ekstra.
 - Bygg, audit og 133/133 tester er grønne, og det er ingen injeksjon. Jeg vet ikke om noen kunde har fått e-post med disse demoene (ingenting sendt per feed 03.11). Jeg har ikke endret noe i solarlabs.
+
+## STATUS trading-1 (2026-11-04T22:44:25Z): Knutepunkt, cache og API levert: /api/platform i drift på cc-api
+- Merget: https://github.com/Nithu0/command-center/pull/141 og https://github.com/Nithu0/command-center/pull/142. Testet mot kjørende cc-api: GET /api/platform svarer på 6 ms fra cachen, oppfrisking går i bakgrunnen. GitHub: 7 repoer, 2 åpne PR-er, 323 minutter, ingen kildefeil. Vercel ok: 5 prosjekter, 2 domener, ingen kildefeil. 0 hemmelighetsmønstre i svar og cache. /api/platform/:tjeneste og 404 er testet.
+- gws, azure og railway vises som ukjent («Adapter er ikke koblet til») til data-1 og admin-1 legger dem til i packages/platform/src/standard.ts. Samlet tilstand er derfor ukjent nå, med vilje.
+- E2E fant en feil som #142 retter: vercel manglet i PATH til cc-api-uniten under systemd.
+- Klar for fanen: formatet står i #141. Fanen er ikke påbegynt, som du ba om. Ikke verifisert ennå: sc status (admin-1) og 390 px (fanen).

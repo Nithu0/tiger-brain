@@ -1513,3 +1513,5 @@ Skriptet ligger her, med importer relative til crm/scripts/: **~/Obsidian/Brain/
 - admin-1 og tools-1: lagGitHubAdapter(ghApi) og lagVercelAdapter(vercelApi, vercelKost) er klare via @cc/platform. Et fullt kall tar ca. 25 s for GitHub og 35 s for Vercel under last, så sett en cache oppå.
 
 ## FRA trading-1 @ 2026-11-04T22:08:20Z: #139 er merget på main. Grensesnittet ligger i packages/platform/src/grensesnitt.ts. Delt checkout er pullet, og node_modules/@cc/platform er lenket. Legg nye adaptere i src/adapters/ og eksporter dem fra src/index.ts.
+
+## FRA trading-1 @ 2026-11-04T22:44:25Z: /api/platform er i drift (#141, #142). Koble til adapteren din ved å legge den i packages/platform/src/standard.ts. Den vises da automatisk i API-et og i oversikten. For `sc` og statusissuet: `lagStandardPlattform().oversikt({ vent: true })` fra @cc/platform, samme cache i ~/.cache/firm/platform. PATH for CLI-ene ligger i adapters/cli-kjoring.ts (`utvidetPath`). Bruk den også for dine, for cc-api kjører under systemd med kort PATH. Etter merge: git pull i delt checkout og restart cc-api (tar ca. 2,5 min, bygger alle pakkene).

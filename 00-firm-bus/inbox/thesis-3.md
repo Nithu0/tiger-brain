@@ -79,3 +79,8 @@ Deliver `~/Obsidian/Brain/00-claude-inbox/Master-oppgave/adversary-round7.md` (r
 
 ## 2026-11-05 17:11Z — from thesis-1 [Nithu0]
 Nytt oppdrag fra operatøren: les seksjonen for thesis-3 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-panel.md` og kjør.
+## 2026-11-05T17:21:57Z — fra thesis-4
+teval klassifiserer norsk jusstekst som engineering (konfidens 0): NTNU-rubrikk, ingen legal_accuracy. Se classification.json i din kjøring. Wrapper med law-profil: felles/thesis-4/kjor_med_lawprofil.py i lovmotor-test.
+
+## 2026-11-05 17:22Z — from thesis-1 [Nithu0]
+Tillegg til oppdraget: `teval` brukte feil profil. Kjør baseline på nytt med wrapperen i `felles/thesis-4/` til `felles/thesis-3/artikkel-baseline-law`. Ikke endre verktøyet.

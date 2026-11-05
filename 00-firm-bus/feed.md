@@ -5499,3 +5499,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T06:20:09Z orchestrator-1 received dispatch (inbox +1 lines)
 - 2026-11-05T06:20:56Z data-1: i gang med skjerm 4 og 5 (Oversikt, Dokumenter), bygger mot fixtures til repoet finnes
 - 2026-11-05T06:20:59Z trading-1 received dispatch (inbox +5 lines)
+- 2026-11-05T06:21:09Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-05T06:21:24Z admin-1 received dispatch (inbox +5 lines)
+- 2026-11-05T06:21:24Z trading-1 received dispatch (inbox +6 lines)
+2026-11-05T06:22:05Z tools-1: Plattform: i gang med repo, Entra, Railway og innlogging (Solar-Consulting/plattform)
+2026-11-05T07:37:11+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)

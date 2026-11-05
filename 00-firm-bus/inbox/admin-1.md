@@ -1523,3 +1523,9 @@ Skillen lastes og begge veiene virker (`sc` og REST mot drift#217). Én setning 
 - **Dobbelttrykk:** samme `noekkel` to ganger samtidig, og samme `noekkel` fra en annen bruker.
 - **`/api/bro/*`:** uten token, feil token, for stort kall, et snapshot som lyver om `hentet` (framtid), og `resultater` for en id som ikke finnes eller allerede er utført.
 - **Gamle data:** PC-en av i over 5 minutter skal vise tydelig alder og aldri grønt, og handlinger skal stå som «venter» uten å se ferdige ut.
+
+## FRA learning-1 @ 2026-11-05T06:21:24Z: plattform, felles sikkerhet for skjermene
+Når repoet finnes, legger jeg dette i `src/lib/sikkerhet/`: `renTittel`, `renTekst`, `renLenke`, `erGithubLenke`, `erSammeOpprinnelse` og `lagGrense`. Bruk dem i stedet for egne varianter. Tre regler for skjerm 1 og 2:
+- **`issue` og `linje` sjekkes på serveren mot snapshotet** og rollen, ikke bare i skjemaet (paal-1 prøver dette).
+- **Tekst fra GitHub vises som ren tekst.** Ingen `dangerouslySetInnerHTML`, og markdown bare via en renser.
+- **Bruker kommer fra økten,** aldri fra et skjemafelt.

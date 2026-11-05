@@ -13363,3 +13363,31 @@ Ledig, monitoren går. Jeg retter det paal-1 finner i min del.
 - Rollback: revert av #157 og restart.
 - Til info: en tom, usporet fil kalt `9` ligger i ~/code/command-center siden 01:34 (ikke fra meg, ikke rørt).
 - Beslutning for operatøren står fortsatt: AUTH_SECRET må settes før Tailscale.
+
+## TILLEGG data-1 04:53Z: QA-funnet fra paal-1 er rettet (#158)
+- Plattform viser nå: `acceptable-adaptation/command-center: Deploy FAILED, versjonen som kjører er fra 2026-05-24`. Bekreftet i `/api/platform` etter omstart. Tjenesten kjører altså over fem måneder gammel kode, og eier må avgjøre om den skal fjernes eller fikses.
+- Skriptfeil fra meg i prosessen: en tom PR-respons førte til en unødvendig omstart av cc-api 04:28Z (ingen kodeendring). Ingen skade. Rettet i ventejobben.
+
+## SLUTTMELDING paal-1 (2026-11-05T05:04:59Z): Knutepunkt QA
+Plattformen virker, og ingen hemmeligheter er funnet. Kriterium 1 er delvis oppfylt, fordi GWS mangler brukere og 2FA. Det krever et scope fra operatøren.
+- **Levert:** https://github.com/Nithu0/command-center/pull/156 merget og i drift. Rettet seks feil: UTC vist som lokal tid i fanen, svar med feil form tok ned hele cockpit, hull i sladdingen, kontrolltegn i terminalen, `@navn` i issuet og labelen som alene valgte issue. To funn til ble rettet av eierne: #157 (fremmed Host og Origin, tools-1) og #158 (alderen på Railway-versjonen, data-1).
+- **Verifisert på d1e6478:**
+  - Tallene i `sc` stemmer med `gh`, `az` og `vercel`. For Railway er bare de 9 prosjektene kontrollert mot kilden.
+  - Fanen fungerer ved 1440 og 390 px uten sidefeil, testet i headless Chromium.
+  - Fanen tåler feilsvar og fiendtlig tekst.
+  - 59 av 59 forsøk på å komme rundt #157 ga forventet svar.
+  - 40 samtidige oppfriskinger ga én runde.
+  - Ødelagt eller gammel cache blir aldri grønn.
+  - Timeren kjørte 06:01 CET, og drift#217 ble oppdatert.
+  - `/plattform` lastes, og begge veiene gir data.
+  - 200 tester er grønne.
+  - `rg-terra-test` har 0 ressurser.
+- **Ikke testet:** fysisk mobil og Safari, selve Azure-utrullingen, OIDC og innholdet i `what-if` (jeg så bare at `infra` er grønn). Kost for testutrullingen er ikke målt av meg. Hemmelighetsskanningen er mønstersøk, så ukjente formater blir ikke funnet.
+- **Til operatøren:**
+  1. GWS-scopet `admin.reports.usage.readonly`.
+  2. `AUTH_SECRET` er ikke satt, så enhver prosess på maskinen kan lese og skrive mot cc-api. Må på plass før Tailscale.
+  3. Railway `acceptable-adaptation/command-center` kjører kode fra 24.05. De siste deployene feiler, den jeg slo opp i HEALTHCHECK, og hver merge starter en ny. Rett helsesjekken eller koble fra autodeploy.
+  4. GitHub-organisasjonen bruker 4 seter på en plan som oppgir 2.
+- **Lav prioritet:** når cc-api er nede, sier `sc` ikke fra (alderen vises, og etter 90 min blir det ukjent). Tom fil `9` ligger i delt checkout. Slettet Key Vault `terratestkvgcpffb7vxugog` ligger i soft delete til 11.11.
+- **Rapport:** `00-claude-inbox/solar-consulting/KNUTEPUNKT-QA-paal-1.md`
+- **Aslisten-crm #74** merges ikke før etter 08:00, fordi Railway deployer fra main. Si fra hvis du vil noe annet.

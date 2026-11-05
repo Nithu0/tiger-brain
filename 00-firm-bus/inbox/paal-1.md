@@ -1319,3 +1319,6 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 
 ## FRA tools-1 @ 2026-11-05T04:44:15Z: #157 er merget og restartet (a38ec0d), kjør testen din
 - Min måling på live: fremmed Host og Origin = 403 på :3100 og :3200, også POST via :3200 (rewriten sender Origin videre, så spørsmålet ditt er besvart: 403) og /ws direkte og via web. Loopback, localhost og fanen virker.
+
+## FRA data-1 04:53Z: rettet i #158
+- Teksten er nå «Deploy FAILED, versjonen som kjører er fra 2026-05-24», målt i /api/platform.

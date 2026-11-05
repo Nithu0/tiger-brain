@@ -1,10 +1,10 @@
 # Knutepunkt: QA-rapport fra paal-1
 
-Uavhengig test 05.11 fra kl. 05:00 CET, mot command-center 86431d5 og deretter a581b34 (#156).
+Uavhengig test 05.11 fra kl. 05:00 CET, mot command-center 86431d5, deretter a581b34 (#156) og til slutt d1e6478 (#157 og #158).
 
 ## Konklusjon
 
-Plattformen virker, og tallene stemmer med kildene der jeg kunne kontrollere dem. Jeg fant ingen hemmeligheter. Testen fant seks feil, og alle er rettet i [#156](https://github.com/Nithu0/command-center/pull/156). To av dem var synlige for brukeren: fanen viste UTC som lokal tid, og et svar med feil form tok ned hele cockpit.
+Plattformen virker, og tallene stemmer med kildene der jeg kunne kontrollere dem. Jeg fant ingen hemmeligheter. Testen fant seks feil, og alle er rettet i [#156](https://github.com/Nithu0/command-center/pull/156). To av dem var synlige for brukeren: fanen viste UTC som lokal tid, og et svar med feil form tok ned hele cockpit. To funn til ble rettet av eierne: fremmed Host og Origin ([#157](https://github.com/Nithu0/command-center/pull/157), tools-1) og alderen på Railway-versjonen ([#158](https://github.com/Nithu0/command-center/pull/158), data-1).
 
 Kriterium 1 er bare delvis oppfylt: Google Workspace mangler brukere og 2FA, fordi innloggingen mangler et scope som bare en admin kan gi.
 
@@ -14,7 +14,7 @@ Kriterium 1 er bare delvis oppfylt: Google Workspace mangler brukere og 2FA, for
 |---|---|---|---|
 | 1 | `sc status` viser ekte data fra alle fem | Delvis | GWS mangler brukere og 2FA. Lagring, delte disker og kalendere gjelder bare den innloggede kontoen |
 | 2 | Fanen viser det samme, også 390 px, uten sidefeil | Ja | Headless Chromium ved 1440 og 390 px. Ikke testet på fysisk mobil eller Safari |
-| 3 | Statusissuet oppdateres automatisk | Ja | Se kontrollen av timeren under |
+| 3 | Statusissuet oppdateres automatisk | Ja | Timeren kjørte 05:00 og 06:01 CET, begge uten feil. Etter rettelsene: issuet oppdatert 05:01Z, tallene de samme som i `sc`, fortsatt ett issue med labelen |
 | 4 | Azure ryddet, kost målt, OIDC og `what-if` | Delvis kontrollert | Se under. Selve utrullingen er ikke gjentatt |
 | 5 | `/plattform`-skillen virker | Ja | Lastes, og begge veiene gir data. Utdatert tekst rettet av admin-1 |
 | 6 | Tester grønne, ingen hemmeligheter | Ja | Se tall under |
@@ -42,7 +42,8 @@ Holdt uten endring:
 - **Fanen mot feilsvar:** 500, 404, ikke-JSON og brutt nett ga en lesbar feilmelding.
 - **Fanen mot fiendtlig tekst:** HTML og `<script>` ble ikke kjørt. `javascript:`- og `data:`-lenker ble ikke lenker, og 4000 tegn lang tittel ga ikke sidelengs scroll.
 - **`Oppfrisk` i fanen ved 390 px:** to raske klikk ga to kall med 200 og ingen sidefeil. Knappen er 44 px høy.
-- **Enhetstester:** 179 grønne i `packages/platform` før rettelsene. Etter rettelsene: 59 grønne i de berørte filene, og CI grønn på #156.
+- **Fremmed Host og Origin etter #157:** 59 av 59 forsøk ga forventet svar på :3100 og :3200. Forsøkene var `127.0.0.1.evil.example`, `localhost@evil.example`, `localhost.`, `127.1`, `2130706433`, `Origin: null`, `http://localhost:3200@evil.example`, POST med `text/plain`, `/ws` med fremmed Origin, og HTTP/1.0 uten Host. Loopback slipper fortsatt inn.
+- **Enhetstester:** 200 grønne på d1e6478 (`packages/platform`, visningen i fanen og Host-vernet). CI grønn på #156.
 
 ## Feil funnet og rettet i #156
 
@@ -57,7 +58,7 @@ Rettelsene er i drift: `cc-web` ble startet på nytt av meg 05:22, `sc` og timer
 
 ## Hemmeligheter
 
-Skannet med brede mønstre: API-svar, `sc status --json`, alle `sc`-kommandoer, cachen, drift#217 (tekst, 0 kommentarer), feed-linjer om plattformen, journalen for `cc-api` og `sc-statusissue`, og teksten i fanen.
+Skannet med brede mønstre, siste gang på d1e6478: API-svar, `sc status --json`, alle `sc`-kommandoer, cachen, drift#217 (tekst, 0 kommentarer), feed-linjer om plattformen, journalen for `cc-api` og `sc-statusissue`, og teksten i fanen.
 
 - **Hemmeligheter:** ingen funnet.
 - **E-post:** bare den innloggede GWS-kontoen, i API, `--json`, `sc tilgang` og cachen. Ingen i issuet.
@@ -70,8 +71,8 @@ Dette er mønstersøk, så en hemmelighet i et format jeg ikke har mønster for,
 
 | Funn | Alvor | Eier | Status |
 |---|---|---|---|
-| cc-api og cc-web svarer uten innlogging og sjekker ikke Host. En nettside åpnet på maskinen kan lese svaret med DNS-rebinding. Gjelder hele cc-api, også skriverutene. Binder 127.0.0.1, så ikke åpent utenfra | Middels, må lukkes før Tailscale | tools-1 | Host-liste under arbeid. `AUTH_SECRET` er operatørens beslutning |
-| `acceptable-adaptation/command-center` på Railway: siste vellykkede deploy er 24.05. De åtte siste feilet, og den siste jeg slo opp, feilet i HEALTHCHECK. Hver merge til command-center starter en ny | Middels | Operatøren: rette helsesjekken eller koble fra autodeploy | data-1 viser datoen i teksten. Tjenesten er ikke rørt |
+| cc-api og cc-web svarer uten innlogging. Fremmed Host og Origin stoppes nå (#157), men enhver prosess på maskinen kan lese og skrive | Middels, må lukkes før Tailscale | Operatøren | `AUTH_SECRET` er operatørens beslutning og er ikke satt |
+| `acceptable-adaptation/command-center` på Railway: siste vellykkede deploy er 24.05. De åtte siste feilet, og den siste jeg slo opp, feilet i HEALTHCHECK. Hver merge til command-center starter en ny | Middels | Operatøren: rette helsesjekken eller koble fra autodeploy | Teksten viser nå datoen (#158). Tjenesten er ikke rørt, og #156 til #158 har startet nye deploy-forsøk |
 | GWS: innloggingen mangler `admin.reports.usage.readonly` | Hindrer kriterium 1 | Operatøren | Kjent |
 | Kost er ukjent for Azure, GWS og Vercel. Azure: budsjettet viser 0 av 500 NOK, men ingen kostrader ennå | Lav | Ingen handling nå | Vises riktig som ukjent |
 | GitHub-organisasjonen bruker 4 seter på en plan som oppgir 2 | Lav, bør sjekkes | Operatøren | Data er ekte |
@@ -94,3 +95,5 @@ Dette er mønstersøk, så en hemmelighet i et format jeg ikke har mønster for,
 ## Last under testen
 
 Lasten nådde rundt 50 kl. ~05:08 mens jeg kjørte 11 feiltester i fanen. Prosessene som kjørte da var mest `firm-worktree-prune` og `firm-worktree-list`, men hver sidelasting i cockpit gir også et `/api/git/status`. Jeg kan ikke skille hva som kom fra hva. Lasten falt til rundt 2 kl. ~05:15.
+
+Rydding: QA-worktreen er fjernet. Den merget grenen `fix/plattform-qa-funn` står igjen, fordi spec ikke tillater sletting av grener.

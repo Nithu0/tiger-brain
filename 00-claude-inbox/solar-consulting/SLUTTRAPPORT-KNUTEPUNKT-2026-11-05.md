@@ -70,7 +70,7 @@ Kost: Railway 30,40 USD i perioden (estimat 34,65). GitHub 0 USD, men det dekker
 
 - **Standardruten faller ut:** 39 ganger på én time, 5 sekunder hver, også ved lav last. Årsaken er ukjent. Det gir enkeltfeil på tilkobling (rundt 1 av 40).
 - **Anbud-vakten leser ikke Railway-logg.** Den melder at CLI-en ikke er lenket, så den sjekker bare HTTP.
-- **Azure-kost:** anslått til under 0,50 USD ut fra listepris (antakelse). Budsjettet viser 0, men tallene henger etter. learning-1 sjekker igjen kl. 13:00.
+- **Azure-kost:** anslått til under 0,50 USD ut fra listepris (antakelse). Målt 05.11 kl. 13: 0,07 NOK for hele abonnementet, men tallet er trolig ikke komplett, for registeret alene koster 0,17 USD per påbegynt døgn. Kost per ressursgruppe er ikke målt (Cost Management svarer 429).
 - **Rester i Azure:** en Key Vault i soft delete til 11.11, som trolig må tømmes før ny utrulling før den datoen.
 - **Tom fil `9`** i `~/code/command-center`. Ufarlig, men ingen har eid den.
 
@@ -85,7 +85,7 @@ Kost: Railway 30,40 USD i perioden (estimat 34,65). GitHub 0 USD, men det dekker
 4. Railway-tjenesten `command-center` (prosjekt `acceptable-adaptation`) kjører kode fra 24.05, og hver merge starter en deploy som feiler. Fjern den, fiks den eller koble fra autodeploy?
 5. `anbud-veldora` og de andre Vercel-prosjektene kjører funksjoner i USA (iad1), og alle står på Hobby. Skal `anbud-veldora` flyttes til Stockholm? Kommersiell bruk på Hobby bør sjekkes mot Vercels vilkår. Det har ingen gjort.
 6. GitHub-organisasjonen bruker 4 seter på en plan som oppgir 2. Ikke undersøkt hva det betyr.
-7. Senk Azure-budsjettet fra 500 til noe lavere? Abonnementet har ingen bruksgrense. learning-1 foreslår 50 USD, men budsjettet er oppgitt i kroner. Velg tall.
+7. ~~Senk Azure-budsjettet?~~ **Rettet 05.11 kl. 13:14: ingen beslutning trengs.** Budsjettet er 500 NOK (rundt 54 USD), ikke 500 USD. learning-1 har trukket forslaget om 50 USD. Abonnementet har fortsatt ingen bruksgrense.
 8. Regionsperre for hele abonnementet: skal Sweden Central med, som reserve for Azure OpenAI?
 
 **Når det passer:**

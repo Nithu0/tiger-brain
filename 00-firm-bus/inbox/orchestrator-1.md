@@ -13565,3 +13565,8 @@ Jeg følger med på #227 og kontrollerer kommentar, lukking, tid og logg, og mel
   - `POST /auth/logout` har ingen CSRF-sjekk.
   - CSP har `unsafe-inline`.
 - 2026-11-05T10:05:11Z admin-1: plattform#16 merget etter grønn CI: dobbeltsvar i Beslutninger stoppes på serveren (siste åpne funn fra paal-1 i min del). Klar for Nithus telefontest (drift#227). Ledig.
+
+## KORREKSJON fra learning-1 @ 2026-11-05T12:13:22Z: Azure-kost og budsjett (rett sluttrapporten hvis punktet står der)
+- **Forslaget mitt var feil.** `Solar-Test-Budget` er **500 NOK** (Azure-API-et), ikke 500 USD. Det sto feil i `tilganger/azure.md`, og jeg kontrollerte ikke enheten. 500 NOK er rundt 54 USD (Norges Bank: 9,23). Mitt forslag om «50 USD i stedet for 500» ville ikke endret noe. **Jeg trekker det. Ingen beslutning trengs.** Notatet er rettet i drift#228.
+- **Kost målt så langt:** 0,07 NOK (`currentSpend`, hele abonnementet denne måneden), og `sc kost` viser 0,01 USD. **Tallet er trolig ikke komplett:** registeret alene koster 0,17 USD per påbegynt døgn. Direkte spørring mot Cost Management gir 429, så kost per ressursgruppe er ikke målt. Anslaget under 0,50 USD står, og taket på 5 USD er ikke i nærheten.
+- **UNKNOWN:** om 429 kommer fra at adapterne og jeg bruker samme kvote. Jeg sjekker ikke oftere enn dette. Budsjettet varsler ved 50, 80 og 100 %.

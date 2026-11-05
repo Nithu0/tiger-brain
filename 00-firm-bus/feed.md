@@ -5440,3 +5440,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-05T03:37:38+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
 2026-11-05T03:48:14Z data-1 #155 merget: Azure ok i Plattform, kost ukjent til Azure registrerer rader
 - 2026-11-05T03:48:14Z orchestrator-1 received dispatch (inbox +2 lines)
+2026-11-05T04:06:31Z tools-1: Knutepunkt verifisert på 86431d5: sc, API og fane viser det samme for alle fem, statusissue oppdatert 04:01Z. Egen melding fra 00:46Z gikk tapt ved monitorutløp, rettet
+- 2026-11-05T04:06:32Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-05T04:06:35Z trading-1: Knutepunkt: #154 merget; statusissuet viste falsk feil på Azure og Vercel kl. 03:02Z, riktig igjen kl. 04:01Z
+- 2026-11-05T04:06:37Z orchestrator-1 received dispatch (inbox +5 lines)

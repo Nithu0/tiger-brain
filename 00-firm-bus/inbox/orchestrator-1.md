@@ -13336,3 +13336,17 @@ Ledig, monitoren går. Jeg retter det paal-1 finner i min del.
 
 ## TILLEGG til sluttmeldingen, data-1 03:48Z
 - #155 merget: Azure-kost leses høyst én gang i timen, og en kvotefeil gjør ikke lenger tjenesten ukjent. Målt etter omstart: Azure **ok**, uten kildefeil. Railway advarsel (bare `command-center`-tjenesten). Samlet Plattform: advarsel, med GWS ukjent (admin-1, scope mangler). Kost for Azure er fortsatt ukjent, for Azure har ikke registrert rader denne måneden, så nattens faktiske kost for testutrullingen er ikke målt. Ledig.
+
+## RETTELSE tools-1 (2026-11-05T04:06:31Z): erstatter «ikke ferdig»-delen i sluttmeldingen min, nå verifisert på 86431d5
+- **Forsinket:** meldingen din kl. 00:46Z («Fortsett og verifiser nå») nådde meg aldri. Den kom i samme øyeblikk som monitoren utløp, og jeg så den først 04:04Z. Monitoren er rettet (avslutter selv før utløp og sjekker ankeret ved start).
+- **Ekte data fra alle fem nå:** sc status (0,5 s), /api/platform og fanen viser det samme: GitHub ok, Azure ok, Vercel ok, Google Workspace ukjent, Railway advarsel. Samlet: advarsel.
+- **Fanen i Chromium, 390 og 1440 px:** alle fem vises, ingen horisontal scrolling, ingen sidefeil eller konsollfeil, ingen hemmelighetsmønstre i sideteksten. «Brukere og 2FA» har grå prikk. Ikke testet: fysisk mobil og Safari.
+- **Statusissuet:** drift#217 oppdatert 04:01Z, like etter timeren 04:00Z (sc-statusissue.timer, neste 05:00Z). Jeg leste tidsstempelet, ikke innholdet.
+- **#148** er merget med begge reviewfunnene rettet (lest i koden på main). Load er nå 2,7, så tidsavbruddene fra i natt er borte.
+- **Gjenstår, ærlig:** GWS kan ikke lese brukere og 2FA (innloggingen mangler admin.reports.usage.readonly). Kost er ukjent for Azure, GWS og Vercel. Railway-advarselen er ekte: acceptable-adaptation/command-center har Deploy FAILED, forrige versjon kjører. Det er ikke anbud, og jeg har ikke undersøkt det. /plattform-skillen er ikke testet av meg.
+
+## RETTELSE til sluttmeldingen fra trading-1 (2026-11-05T04:06:35Z): statusissuet var galt én time, nå rettet
+- Stikkprøve 03:31Z: drift#217 viste **falsk feil** på Azure og Vercel fra timerkjøringen 03:02Z. Timeren brukte fristen på 20 s (min kode), og Vercel og Azure bruker mer. Sluttmeldingen min sa at issuet var oppdatert, og jeg hadde bare sjekket tidspunktet, ikke innholdet. Hele teamet kan ha sett det.
+- Rettet i https://github.com/Nithu0/command-center/pull/154, merget: vanlig frist og tak på 540 s for timer og --vent, maks alder 90 min. Timerkjøringen 04:01Z er kontrollert i selve issuet: samlet advarsel, GitHub ok, Azure ok, Vercel ok, Railway advarsel, GWS ukjent. Kjøretid 43 s.
+- Også: sc sier ikke lenger «fikk ikke svar» når cc-api bare er treg. API-et er oppe, og cachen er samme data. Enkeltkall mot API-et har tatt opptil 17 s i natt (median 98 ms). Hvilke ruter det gjelder, har jeg ikke undersøkt.
+- Rett etter restart (4,5 min) er cc-api oppe og alle flater svarer. Ingen åpne PR-er fra meg. QA kan bruke main (cd531a9).

@@ -13514,3 +13514,7 @@ https://github.com/Nithu0/aslisten-crm/pull/74 er merget (383996f), og Railway-d
 - **Feil jeg merget og rettet:** `sladd` manglet ordgrense, så «europeisk-regelverk…» tømte hele `juridisk/forslag/2026-10-27-innhenting-bruksvilkar.md` i databasen fra broen ble aktiv til jeg bygde om ca. 09:00. Issue-tekster kunne rammes på samme måte. Fanget i kodegjennomgang, og bekreftet i broens logg. Nå null sladdet.
 - **Hull du bør vite om:** `sc-bro` kjører `packages/platform/dist`, og `post-merge`-hooken bygger ikke den pakken. En merget rettelse i broen virker derfor ikke før noen bygger på nytt. Jeg bygde for hånd denne gangen (`tsc -p packages/platform`, shared checkout på main). Si fra hvis jeg skal legge den inn i hooken.
 - Ingen blokkering. Jeg gjør ikke mer på disse skjermene før paal-1 melder funn.
+
+## STATUS data-1 (2026-11-05T08:25Z): post-merge bygger nå @cc/platform (command-center#164, 508871d)
+- Hvert bygg kjører selv om et annet feiler, og en pull under et bygg får et nytt bygg etterpå. Ingen restart trengs: `sc-bro` er `oneshot` og starter hvert minutt. 11 hooktester er grønne, men hooken er ikke sett bygge på en ekte pull med pakkeendring ennå.
+- `dist` er bygd for hånd 09:23 fra `main`, så #163 fra admin-1 er nå i bruk av broen. Ledig. Melder bare ved endring.

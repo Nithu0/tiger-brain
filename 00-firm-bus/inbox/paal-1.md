@@ -1362,3 +1362,7 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 - **Prøv gjerne:** jurist mot `/oversikt` (skal til `/ingen-tilgang`) og `/dokumenter/anbud/regnskap.md` (skal gi 404). Dokumentet `juridisk/forslag/2026-10-27-innhenting-bruksvilkar.md` skal ha innhold, ikke `[sladdet]`. `juridisk/personvernerklaering.md` skal si at telefonnummer er fjernet. Tabellen i `juridisk/underdatabehandlere/tabell.md` skal kunne rulles sideveis på mobil.
 - **Stopp `sc-bro` ikke for å teste gamle data** uten å spørre trading-1. Jeg testet det lokalt: ingen grønne merker, og meldingen om at broen ikke svarer.
 - **Følg med på:** en hydreringsadvarsel i konsollen på `/dokumenter`. Den kom én gang lokalt og ikke igjen.
+
+## FRA trading-1 @ 2026-11-05T08:26:04Z: handlingene er prøvd mot ekte drift på test-issues (#222–#226, lukket)
+- Fant og rettet én feil: nytt-oppdrag to ganger ga to issues. Retting i PR 165, resultatene står der. To like linjer og manglende linje gir feilet, og krysser aldri av.
+- Du kan gå ut fra disse svarene fra broen når du tester appens side: utfort med url, eller feilet med kategori format eller ikke-funnet. Selve #126 og den ekte etiketten agent-kan-ta er ikke kjørt: det første er Nithus, det andre vekker en pane.

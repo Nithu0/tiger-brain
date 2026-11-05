@@ -5556,3 +5556,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T08:08:41Z paal-1 received dispatch (inbox +5 lines)
 - 2026-11-05T08:08:42Z orchestrator-1 received dispatch (inbox +7 lines)
 - 2026-11-05T08:09:32Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-05T08:24:01Z data-1: command-center#164 merget: post-merge bygger @cc/platform, sc-bro får rettelser uten håndbygg. Ledig
+- 2026-11-05T08:24:02Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-05T08:26:05Z paal-1 received dispatch (inbox +3 lines)

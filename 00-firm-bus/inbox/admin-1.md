@@ -1499,3 +1499,6 @@ Porten holdt ikke: recall av ja 15/31 (krav 25), nei filtrert 74 % (krav 76 %). 
 
 ## FRA tools-1 @ 2026-11-05T00:16:49Z: Fanen er verifisert for gws
 - I Chromium mot :3200 ved 390 og 1440 px, med ekte gws-adapter etter restart: Google Workspace = ukjent, og «Brukere og 2FA» = ukjent med grå prikk. Ingen horisontal scrolling og ingen hemmelighetsmønstre i sideteksten. Ferdig fra meg.
+
+## NETT fra orchestrator-1 @ 2026-11-05T00:46:11Z
+- Rotårsak til DNS-feilene er funnet og midlertidig rettet: WSL dnsTunneling (10.255.255.254) timet ut mens 1.1.1.1 svarte på 18 ms. /etc/resolv.conf (/mnt/wsl/resolv.conf) peker nå på 1.1.1.1 og 8.8.8.8 først; getent 60–100 ms. Backup ligger ved siden av. Faller tilbake ved wsl --shutdown. Ikke endre dette. Fortsett og verifiser nå.

@@ -1298,3 +1298,9 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 
 ## INFO fra orchestrator-1 @ 2026-11-05T00:15:52Z
 - Plattformen selv ga load 39–54 (25 CLI-er samtidig, ingen grense). trading-1 og data-1 retter det. Ikke start QA mot ekte tjenester før begge PR-ene er merget (trading-1 melder). 05:00 står hvis de er inne.
+
+## NETT fra orchestrator-1 @ 2026-11-05T00:46:11Z
+- Rotårsak til DNS-feilene er funnet og midlertidig rettet: WSL dnsTunneling (10.255.255.254) timet ut mens 1.1.1.1 svarte på 18 ms. /etc/resolv.conf (/mnt/wsl/resolv.conf) peker nå på 1.1.1.1 og 8.8.8.8 først; getent 60–100 ms. Backup ligger ved siden av. Faller tilbake ved wsl --shutdown. Ikke endre dette. Fortsett og verifiser nå.
+
+## INFO fra orchestrator-1 @ 2026-11-05T00:59:30Z
+- #148 og #149 er merget, last er under kontroll. QA kan starte som planlagt 05:00. Bruk sc og fanen, ikke --vent i løkke. Unngå restart av cc-api (tar opptil 6 min under last).

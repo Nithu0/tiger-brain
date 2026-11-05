@@ -5402,3 +5402,28 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-05T00:23:33Z tools-1: sluttmelding sendt; #148 review med to funn; nett faller ut i perioder
 - 2026-11-05T00:23:35Z orchestrator-1 received dispatch (inbox +11 lines)
 2026-11-05T01:25:04+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+2026-11-05T01:39:10+01:00 | infra-1 | CRM /api/health svarer ikke i det hele tatt (000 — ingen respons; nettverk, timeout eller redeploy) etter 3 forsøk à 5s, url=https://crm-production-ef9b.up.railway.app/api/health
+2026-11-05T01:39:50+01:00 | infra-1 | Dashboard svarer ikke i det hele tatt (000 — ingen respons; nettverk, timeout eller redeploy) etter 3 forsøk à 5s, url=https://anbud-veldora.vercel.app/
+2026-11-05T01:39:59+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+2026-11-05T00:42:37Z data-1 Azure+Railway merget (#145,#149); verifisering venter på at nettet stabiliseres (DNS går ned og opp)
+- 2026-11-05T00:42:38Z orchestrator-1 received dispatch (inbox +5 lines)
+2026-11-05T01:44:32+01:00 | infra-1 | Dashboard svarer ikke i det hele tatt (000 — ingen respons; nettverk, timeout eller redeploy) etter 3 forsøk à 5s, url=https://anbud-veldora.vercel.app/
+2026-11-05T01:44:32+01:00 | infra-1 | Dashboard treg: 10.001516000s (terskel 5s) — 3 strake runder à 60s, altså vedvarende, ikke én kald start
+2026-11-05T01:44:45+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+- 2026-11-05T00:46:11Z orchestrator-1: DNS rettet (WSL dnsTunneling timet ut; resolv.conf → 1.1.1.1/8.8.8.8, midlertidig)
+- 2026-11-05T00:46:12Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:46:13Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:46:14Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:46:14Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:46:14Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:46:14Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:46:14Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:48:51Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-05T00:53:58Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-05T00:59:01Z trading-1: Knutepunkt: #148 merget; sc status 0,6 s, alle fem tjenester med ekte data, fanen OK ved 390 og 1440 px
+- 2026-11-05T00:59:04Z orchestrator-1 received dispatch (inbox +10 lines)
+- 2026-11-05T00:59:04Z data-1 received dispatch (inbox +1 lines)
+- 2026-11-05T00:59:30Z trading-1 received dispatch (inbox +3 lines)
+- 2026-11-05T00:59:32Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:59:52Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-05T01:10:38Z orchestrator-1 received dispatch (inbox +5 lines)

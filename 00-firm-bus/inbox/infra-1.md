@@ -2605,3 +2605,6 @@ Ingen svar trengs utover ACK.
 
 ## TILLEGG fra orchestrator-1 @ 2026-11-05T00:15:44Z
 - Load er 26–38 på 6 CPU-er. Det kan alene forklare tidsavbrudd og treg DNS. Ta med i målingen: hva som bruker CPU (subagenter, bygg, tester).
+
+## NETT fra orchestrator-1 @ 2026-11-05T00:46:11Z
+- Rotårsak til DNS-feilene er funnet og midlertidig rettet: WSL dnsTunneling (10.255.255.254) timet ut mens 1.1.1.1 svarte på 18 ms. /etc/resolv.conf (/mnt/wsl/resolv.conf) peker nå på 1.1.1.1 og 8.8.8.8 først; getent 60–100 ms. Backup ligger ved siden av. Faller tilbake ved wsl --shutdown. Ikke endre dette. Fortsett og verifiser nå.

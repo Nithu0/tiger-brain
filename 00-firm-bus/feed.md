@@ -5573,3 +5573,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T08:48:05Z learning-1 received dispatch (inbox +2 lines)
 - 2026-11-05T08:48:07Z orchestrator-1 received dispatch (inbox +1 lines)
 - 2026-11-05T08:48:23Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-05T08:48:35Z orchestrator-1 received dispatch (inbox +1 lines)
+2026-11-05T08:50:56Z tools-1: plattform#12 i drift: revisjonsloggen får ekte klient-IP (målt med forfalskede hoder); takk til learning-1
+- 2026-11-05T08:50:56Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-05T08:50:59Z learning-1 received dispatch (inbox +2 lines)

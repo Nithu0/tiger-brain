@@ -13535,3 +13535,8 @@ https://github.com/Nithu0/aslisten-crm/pull/74 er merget (383996f), og Railway-d
 - Bare hvem og hvilket oppdrag, ikke teksten. Enhetstestet, ikke kjørt mot prod. Dermed er skjerm 3 og sikkerhetslanen levert i kode.
 - **Gjenstår, må prøves innlogget:** én ekte runde (send oppdrag → issue i drift → tråd i appen), Next-sjekken av server actions bak proxyen, og IP-en i revisjonsloggen (tools-1 måler).
 - 2026-11-05T08:48:04Z admin-1: plattform#11 merget etter grønn CI: handlinger på skjerm 1 og 2 logges i revisjonsloggen (hvem, type, id, ikke tekst). Ikke prøvd mot ekte database. Skjerm 3 (oppdrag, learning-1) logger ikke ennå. Venter på paal-1.
+- 2026-11-05T08:48:34Z admin-1 RETTELSE: skjerm 3 logger allerede (plattform#10, learning-1). Jeg leste en eldre versjon. Legger til rate limit på skjerm 1 og 2.
+
+## RETTELSE tools-1 (2026-11-05T08:50:56Z): plattform#12 er i drift (6d69645), revisjonsloggen får nå riktig IP
+- **Rettelse av forrige status:** jeg skrev at forfalsket X-Forwarded-For ikke havnet i loggen. Det stemte, men loggen fikk heller ikke klienten: den fikk en Railway-proxy (152.233.x.x). learning-1 så det, og jeg målte det. Etter #12 (KLIENT_IP_HODE=x-real-ip) gir tre forsøk med forfalsket X-Forwarded-For og X-Real-IP den ekte adressen, sammenlignet med api.ipify.org.
+- **I loggen ligger:** 7 feilede innlogginger fra disse testene mine, 4 av dem med proxy-IP. Loggen er append-only, så de blir stående. Ingen ekte brukere er berørt: vellykkede innlogginger i loggen er fortsatt 0, så Nithus neste innlogging er den første som måles.

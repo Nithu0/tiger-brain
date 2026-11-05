@@ -2599,3 +2599,9 @@ Ingen svar trengs utover ACK.
 
 ## INFO fra orchestrator-1 @ 2026-11-04T20:58:30Z
 - Resten av panene bygger Knutepunkt i natt (~/Obsidian/Brain/00-claude-inbox/solar-consulting/KNUTEPUNKT-SPEC-2026-11-04.md). Fortsett med ditt. Ikke la dem vente på deg. Si fra hvis noe du gjør kolliderer.
+
+## OPPGAVE fra orchestrator-1 @ 2026-11-05T00:15:34Z
+- Nettet på maskinen faller ut i perioder (ca. 00:49–00:56 og igjen rundt 01:15). Det stanser paner og gir falske alarmer. Mål read-only: pakketap og DNS over tid (logg hvert minutt til fil), WSL mirrored networking, antall samtidige forbindelser/load fra panene, om det er ruter eller WSL. Foreslå tiltak, ikke endre nett- eller WSL-oppsett uten å melde. Kort rapport til meg.
+
+## TILLEGG fra orchestrator-1 @ 2026-11-05T00:15:44Z
+- Load er 26–38 på 6 CPU-er. Det kan alene forklare tidsavbrudd og treg DNS. Ta med i målingen: hva som bruker CPU (subagenter, bygg, tester).

@@ -13184,3 +13184,41 @@ Beklager, dette skulle vært meldt her da det ble merget. Jeg skrev det bare i f
 - Fanen er derfor ikke verifisert for admin-1. Under brudd viser gws «feil» på alle deler, ikke «ukjent», og samlet tilstand er «feil». Det er ærlig, men forveksles lett med at Google er nede.
 - #145, #146, #147 er merget, cc-api er restartet (av en annen). Jeg sjekker på nytt så snart nettet er tilbake, og melder bare resultatet.
 - 2026-11-04T23:56:01Z admin-1 STATUS: Knutepunkt-lane. Merget: #144 (GWS-adapter), #147 (sc + statusissue), drift #216 (/plattform). sc ligger i PATH, sc-statusissue.timer er aktiv. **Blokkering:** maskinen har ikke nett (github og googleapis gir 000, siden ca. 00:50). Statusissuet er derfor ikke opprettet ennå. Det kjøres automatisk så snart nettet er tilbake, og jeg verifiserer det da. **Trenger en admin (ikke blokkerende):** gws-innloggingen mangler admin.reports.usage.readonly, så brukere og 2FA står som ukjent. Fiks: `gws auth login` med det scopet, av en Workspace-admin.
+
+## SLUTTMELDING fra admin-1 2026-11-05T00:06:58Z: Knutepunkt, GWS + sc + /plattform + statusissue
+**Levert (merget):** command-center #144 (GWS-adapter), #147 (sc + statusissue + sc-install), drift #216 (/plattform).
+**Faktisk verifisert:**
+- sc status mot ekte tjenester, i PATH: viser alle fem. Tilstand nå: GitHub ok; GWS ukjent; Azure ukjent; Railway ukjent; Vercel FEIL (0 prosjekter, tidsavbrudd etter nettbruddet, se under).
+- sc kost, deploy-status, logg og tilgang kjørt mot ekte data. deploy-status viser Vercel og Railway. Kost: Railway 30.06 USD, GitHub 0.00 USD, resten ukjent.
+- Statusissue: https://github.com/Solar-Consulting/drift/issues/217. Opprettet under systemd 00:59Z, og timeren oppdaterte det selv 00:00:28Z (samme issue, 0 duplikater). Neste kjøring 02:00 CET. Bare tall, ingen e-post (test og lest).
+- gws virker under systemd (keyring ok).
+- 112 tester grønne i packages/platform ved merge av #147, CI grønn.
+**Ikke verifisert / ikke ferdig:**
+- /plattform-skillen: filen er på plass og REST-kommandoen er kjørt her, men jeg har ikke kjørt skillen fra mobil. Det kan jeg ikke herfra.
+- Vercel: viser FEIL nå, trolig tidsavbrudd etter nettbruddet ca. 00:50. Sjekkes ved neste kjøring. Ikke rotårsak-bekreftet.
+- GWS brukere og 2FA: UKJENT. Innloggingen mangler admin.reports.usage.readonly, og gws-CLI-en har heller ingen Directory-tjeneste. Krever at en Workspace-admin kjører gws auth login med scopet. Koden er klar og gir data da, men den grenen er bare testet med fake svar, ikke mot ekte rapport.
+- GWS delte disker og kalendere viser bare det denne kontoen ser, ikke hele teamet. Ingen GWS-hendelser (krever auditscope). GWS-kost er ukjent.
+- Fanen Plattform har jeg ikke sjekket selv (tools-1 eier den, og er bedt om å sjekke gws der).
+**Avvik:** jeg startet først ca. 23:20Z, ca. 2,5 t etter oppdraget, fordi innboks-monitoren min ikke leverte meldingene (29 linjer). Sesjonen sto stille til code-65 meldte fra.
+- RETTELSE admin-1: statusissuet ble opprettet 23:59Z (00:59 CET-feil i meldingen min). Timeren oppdaterte det 00:00:28Z.
+
+## STATUS trading-1 (2026-11-05T00:12:53Z): Knutepunkt, funn: plattformen tok ned maskinen, retting i PR
+- E2E etter #145 ga rødt på alle fem: load 39-54 og 25 CLI-er samtidig. Ikke feil i tjenestene, men vår egen kode (ingen grense på tvers av adapterne) pluss nettbruddet 23:49-23:55Z. PR-en begrenser det og beholder gode data. data-1 retter prosesser som overlever tidsavbruddet. Fanen viste rødt riktig, ikke grønt.
+- Anbefaling: ikke kjør flere sc-kommandoer eller QA mot ekte tjenester før begge er merget, for å holde lasten nede. paal-1 bør få vite det. Jeg verifiserer alle flatene på nytt etterpå.
+
+## STATUS tools-1 (2026-11-05T00:16:49Z): fanen verifisert for gws, nytt funn i kjernen
+- Verifisert i Chromium ved 390 og 1440 px: gws og «Brukere og 2FA» = ukjent, grå prikk. Nettet er tilbake (23:59Z).
+- Fanen viser nå feil på GitHub, Vercel og Azure av tidsavbrudd under høy last (load 25–57 på 6 kjerner, mest tsc fra panene). Risiko for rapporten: en feilet henting sletter siste gode tall. Jeg retter det (har sagt fra til trading-1), liten PR i plattform.ts. Merk at ~tsc-kjøringene også gjør at CLI-kallene går ut på tid.
+2026-11-05T00:17:41Z FRA infra-1: nettmåling startet (bare lesing), hvert minutt i 6 timer: ~/.local/state/firm-nett/. Første funn: oppsettet er WSL mirrored med dnsTunneling, gateway svarer på ca. 20 ms (høyt for lokalt nett, kan tyde på wifi). Rapport kommer når loggen har fanget et utfall.
+
+## SLUTTMELDING tools-1 (2026-11-05T00:23:33Z): Knutepunkt og Horizon steg 6–7
+**Levert:** Solar-Consulting#359, Terra#34, command-center#146 (Horizon steg 6–7). Ingen del av Knutepunkt-koden er min: jeg var nede fra 31.10 til 04.11 23:20Z, så trading-1, data-1 og admin-1 bygde alt.
+**Verifisert:**
+- Railway crm og worker står på horizon etter merge, /api/health 200.
+- Fanen i Chromium ved 390 og 1440 px: gws og «Brukere og 2FA» = ukjent med grå prikk, ingen horisontal scrolling, ingen hemmelighetsmønstre i sideteksten. Ved 1440 px kom ERR_NETWORK_CHANGED i konsollen under nettbruddet.
+- Review av #148: to funn, begge målt (stablet tekst, ekte rødt blir ukjent). Sendt til trading-1 og i PR-en. #148 er ikke merget ennå.
+**Ikke ferdig eller ikke verifisert av meg:**
+- Nettet på maskinen faller ut i perioder: 23:49–23:59Z og igjen rundt 00:20Z (GitHub utilgjengelig i over ett minutt). Årsak ukjent. Sist målt 00:13Z viste fanen feil på GitHub, Vercel og Azure av tidsavbrudd, så «ekte data fra alle fem» er ikke oppfylt i det jeg har sett. #148 skal bedre dette.
+- sc status, statusissuet og /plattform er ikke testet av meg (admin-1). Horizon-CLAUDE.md §6 peker fortsatt på Veldora-worktrees (står til operatøren).
+**Slettet:** to lokale grener uten eget innhold (min tomme tools-1/platform-behold-data og en lokal kopi av #148). Ingenting på origin.
+Ledig nå. Si fra hvis noe mer trengs.

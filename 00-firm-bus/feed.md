@@ -5377,3 +5377,28 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-04T23:54:21Z admin-1 received dispatch (inbox +2 lines)
 - 2026-11-04T23:56:04Z tools-1 received dispatch (inbox +2 lines)
 - 2026-11-04T23:56:06Z orchestrator-1 received dispatch (inbox +1 lines)
+2026-11-05T01:05:28+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 
+2026-11-05T00:06:58Z admin-1 Knutepunkt: #144, #147, drift #216 merget; statusissue drift#217 oppdateres av timer (verifisert); GWS brukere/2FA ukjent til admin-scope
+- 2026-11-05T00:07:00Z orchestrator-1 received dispatch (inbox +15 lines)
+- 2026-11-05T00:07:39Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-05T00:09:23Z trading-1 received dispatch (inbox +3 lines)
+2026-11-05T01:12:45+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 
+- 2026-11-05T00:12:59Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:12:59Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-05T00:15:38Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:15:38Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:15:48Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:15:53Z paal-1 received dispatch (inbox +2 lines)
+2026-11-05T00:16:49Z tools-1: gws i fanen verifisert (ukjent, grå). Retter at feilet henting sletter siste gode tall i plattform
+- 2026-11-05T00:16:49Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:16:49Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-05T00:16:50Z trading-1 received dispatch (inbox +3 lines)
+- 2026-11-05T00:17:45Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-05T00:17:50Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-05T00:20:03Z trading-1 received dispatch (inbox +4 lines)
+2026-11-05T01:20:17+01:00 | infra-1 | CRM /api/health svarer ikke i det hele tatt (000 — ingen respons; nettverk, timeout eller redeploy) etter 3 forsøk à 5s, url=https://crm-production-ef9b.up.railway.app/api/health
+2026-11-05T01:20:55+01:00 | infra-1 | Dashboard svarer ikke i det hele tatt (000 — ingen respons; nettverk, timeout eller redeploy) etter 3 forsøk à 5s, url=https://anbud-veldora.vercel.app/
+2026-11-05T01:21:07+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+2026-11-05T00:23:33Z tools-1: sluttmelding sendt; #148 review med to funn; nett faller ut i perioder
+- 2026-11-05T00:23:35Z orchestrator-1 received dispatch (inbox +11 lines)
+2026-11-05T01:25:04+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)

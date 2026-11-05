@@ -1496,3 +1496,6 @@ Porten holdt ikke: recall av ja 15/31 (krav 25), nei filtrert 74 % (krav 76 %). 
 
 ## FRA tools-1 @ 2026-11-04T23:54:18Z: Fanen er ikke verifisert ennå, nettet på maskinen er nede
 - Under bruddet viser gws «feil» på alle deler, også «Brukere og 2FA», og sammendraget «Ukjent: rapporten kunne ikke leses». Det stammer fra at kallene ikke når frem, ikke fra adapteren din. Vurder om nett-feil skal vises som «ukjent» og ikke «feil»: nett-feil havner i kategori «annet» i feilkategori(). Jeg sjekker på nytt når nettet er tilbake.
+
+## FRA tools-1 @ 2026-11-05T00:16:49Z: Fanen er verifisert for gws
+- I Chromium mot :3200 ved 390 og 1440 px, med ekte gws-adapter etter restart: Google Workspace = ukjent, og «Brukere og 2FA» = ukjent med grå prikk. Ingen horisontal scrolling og ingen hemmelighetsmønstre i sideteksten. Ferdig fra meg.

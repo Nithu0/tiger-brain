@@ -13356,3 +13356,10 @@ Ledig, monitoren går. Jeg retter det paal-1 finner i min del.
 - **Alvorligere enn funnet:** /ws åpnet for Origin: https://evil.example, uten DNS-triks. Enhver nettside åpnet på denne maskinen har altså kunnet lese strømmen (feed, innboks, kommandoer), fordi AUTH_SECRET ikke er satt. Lukkes av #157. ASSUMPTION: ingen tegn til misbruk. Jeg har ikke undersøkt det utover at cc-api-loggen siste døgn bare viser localhost, 127.0.0.1 og testkallene med evil.example, og den ville ikke vist hvilken side som åpnet en socket.
 - **Plan:** merge når grønn, git pull i delt checkout og restart av cc-api og cc-web (ca. 3,5 min nede), så sjekk på live. Jeg gjør det før 06:00 CET hvis CI er grønn og du ikke sier noe annet, for å være ute av veien før rapporten kl. 07:30.
 - **Operatøren må avgjøre:** AUTH_SECRET står fortsatt usatt. Det er en hemmelighet, så jeg setter det ikke. Må på plass før Tailscale. Vernet i #157 dekker nettsider, ikke andre prosesser på maskinen.
+
+## STATUS tools-1 (2026-11-05T04:44:15Z): #157 er i drift (a38ec0d), hullet er lukket
+- Målt på live etter restart: fremmed Host og fremmed Origin gir 403 på :3100 og :3200, også POST via :3200, og /ws både direkte og via web. Loopback og localhost virker, /ws åpner fra localhost.
+- Fanen i Chromium ved 390 og 1440 px med vernet på: ingen 403, ingen sidefeil. sc status virker. Tjenestene var nede ca. 5 min under restarten. paal-1 kjører egen test nå.
+- Rollback: revert av #157 og restart.
+- Til info: en tom, usporet fil kalt `9` ligger i ~/code/command-center siden 01:34 (ikke fra meg, ikke rørt).
+- Beslutning for operatøren står fortsatt: AUTH_SECRET må settes før Tailscale.

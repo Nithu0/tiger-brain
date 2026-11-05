@@ -5455,3 +5455,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T04:32:59Z orchestrator-1 received dispatch (inbox +5 lines)
 - 2026-11-05T04:36:35Z tools-1 received dispatch (inbox +2 lines)
 2026-11-05T04:38:30Z tools-1: #157 merget, restarter cc-api og cc-web nå (ca. 3,5 min nede). Vern mot fremmed Host/Origin
+2026-11-05T04:44:15Z tools-1: #157 i drift: fremmed Host/Origin gir 403 på :3100 og :3200, også /ws. Målt på live, fanen virker
+- 2026-11-05T04:44:19Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-05T04:44:19Z paal-1 received dispatch (inbox +2 lines)

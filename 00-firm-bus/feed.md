@@ -5437,3 +5437,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T02:06:18Z orchestrator-1 received dispatch (inbox +6 lines)
 - 2026-11-05T02:06:48Z trading-1: Knutepunkt: sluttmelding sendt til orchestrator-1
 - 2026-11-05T02:06:50Z orchestrator-1 received dispatch (inbox +25 lines)
+2026-11-05T03:37:38+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)

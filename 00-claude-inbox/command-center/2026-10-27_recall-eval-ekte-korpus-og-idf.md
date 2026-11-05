@@ -138,3 +138,18 @@ Globalt gir k=100 + ×0,5 0,354, en ΔMRR på +0,075 [+0,032, +0,123]. Den vinne
 **Bivirkning på known-item-evalen (n=574):** hybrid/prosjekt går fra 0,368 til 0,362, og globalt fra 0,329 til 0,321. Det er et lite fall på verbatim-spørringene.
 
 **Bygget, flagget av:** `RAG_K_PER_LANE_OVERRIDE` og `RAG_DEMOTE_REQUESTS` i `rag-engine/src/hybrid.ts` og `request-demotion.ts`, med tester. Med flaggene på gir ekte `hybrid()` 0,388 og 0,66, og uten flagg 0,335 og 0,56. Lokal gren `data-1/recall-tiltak`, ikke pushet. Om flaggene skal slås på, er operatørens valg.
+
+## 6. Ny måling 05.11 (forfalt 03.11), med flaggene på
+
+Samme ekte spørsmålssett (n=50) på en ny snapshot, 22 218 objekter. Flaggene holder:
+
+| Variant | MRR@10 | R@10 | ΔMRR [90 % KI] | Bedre/dårligere |
+|---|---|---|---|---|
+| Uten flagg, prosjekt | 0,333 | 0,56 | – | – |
+| **k=100 + ×0,5, prosjekt (i drift)** | **0,373** | **0,66** | **+0,041 [+0,008, +0,074]** | 14/1 |
+| Uten flagg, globalt | 0,269 | 0,46 | – | – |
+| k=100 + ×0,5, globalt | 0,328 | 0,60 | +0,059 [+0,028, +0,095] | 12/1 |
+
+Merk: settet ble laget 27.10, så dette viser at flaggene ikke har blitt dårligere med mer data, ikke hvordan ekte bruk har vært. Gevinsten er litt mindre enn første måling (+0,053).
+
+**Latens er derimot verre:** hele `hybrid()` tok p50 5,2 s og p95 14,4 s (27.10: under 0,5 s). `rag-recall` tok 7–17 s, og ett kall traff `timed out after 20s — no recall this session`. Årsaken er embedding og ikke k (k=20 gir p50 4,4 s): 2–9 CPU-sekunder i brukerkode per kort tekst, `majflt=0`, så ikke swap. `llama-server` har 8 tråder på 6 CPU-er, og tiden faller til 0,4 s når maskinen er rolig. `ASSUMPTION`: trådene spinner under konkurranse.

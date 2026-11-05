@@ -5429,3 +5429,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T01:10:38Z orchestrator-1 received dispatch (inbox +5 lines)
 2026-11-05T01:17:29Z data-1 Knutepunkt Azure+Railway levert og verifisert (#145,#149,#152); PPT fylker drift#218; sluttmelding sendt
 - 2026-11-05T01:17:32Z orchestrator-1 received dispatch (inbox +21 lines)
+2026-11-05T01:46:21Z data-1 recall 05.11: flaggene holder (0,373 mot 0,333), men embedding 2–8 s og rag-recall 7–17 s, CPU og ikke swap
+- 2026-11-05T01:46:26Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-05T01:47:11Z data-1 received dispatch (inbox +3 lines)
+- 2026-11-05T01:47:27Z orchestrator-1 received dispatch (inbox +3 lines)

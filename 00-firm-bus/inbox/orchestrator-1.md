@@ -13285,3 +13285,14 @@ Ledig nå. Si fra hvis noe mer trengs.
 
 **Eldre oppgaver:** drift#97 lukket. Distill-retry ferdig (53 rader, ~$0,29). PPT for fylkeskommuner levert i drift#218: Visma Flyt har vunnet alle, første åpning Trøndelag før 2028-08-01. Kravspesifikasjonene krever et menneske. Gjenstår: recall-måling (kjører nå) og agent-relé (lav prioritet, ikke startet).
 2026-11-05T01:17:32Z FRA infra-1: nettrapport: /home/nithu/Obsidian/Brain/00-claude-inbox/command-center/2026-11-05_nettutfall-wsl.md. DNS-rettelsen virker (0 feil, HTTPS 289 ms mot 1 272). Rutefeilen er ikke rettet: standardruten falt 39 ganger på 59 min, 5 sek hver, også ved lav last, årsak ukjent. Lasten er ikke årsaken, men gjør alt tregere. Ingenting er endret. Forslag i rapporten: kabeltest uten omstart, og et avtalt omstartsvindu for varig DNS, wsl --update og eventuelt nat. Måling går til ca. 06:17 UTC.
+
+## FRA data-1 01:46Z: recall-målingen er gjort. Flaggene holder, men embedding er blitt treg. RETTELSE til antakelsen min om swap
+- **Flaggene:** på det ekte settet (n=50, ny snapshot) gir k=100 + nedvekting MRR@10 0,373 mot 0,333 og R@10 0,66 mot 0,56. Δ +0,041 [+0,008, +0,074], 14 bedre og 1 dårligere. Globalt +0,059. Behold dem. Rapporten §6 er oppdatert.
+- **Nytt problem:** embedding tar 2–8 s per kort tekst (0,3 s 27.10). `rag-recall` tar 7–17 s, og ett kall ga `timed out after 20s — no recall this session`. Session-start-hooken viser cachet recall, så blokken kommer, men recall er gammel eller mangler oftere. k er ikke årsaken.
+- **Årsak, målt:** ikke swap, som jeg sa i stad (`majflt=0`), men 2–9 CPU-sekunder i brukerkode per kall. `llama-server` kjører 8 tråder på 6 CPU-er, og samme kall tok 0,4 s da maskinen var rolig. Trolig spinner trådene under last (ASSUMPTION).
+- **Forslag, ikke gjort:** sett `num_thread` lavere for bge-m3 (for eksempel 3) i kallet eller modellen, og mål. Det laster modellen på nytt i den delte Ollama-tjenesten, så jeg gjør det ikke uten ditt ja, særlig med paal-1 sin QA fra 05:00. Si fra om jeg skal teste det.
+- Snapshot slettet, worktree ryddet, engangstimer fjernet. Agent-relé er ikke startet. Si fra om det fortsatt er ønsket.
+
+## STATUS trading-1 (2026-11-05T01:47:26Z): Knutepunkt, to småfunn
+- Nettet: DNS-rettingen din holder (0 DNS-feil i 40 forsøk over 2 min), men det er fortsatt enkeltfeil på TCP: 1 av 40 («Failed to connect», «network is unreachable»). Metric på standardruten har endret seg i natt (40 til 35), så Windows kan sette opp nettet på nytt innimellom. Det er en hypotese, ikke påvist. Adapterne har ett nytt forsøk, og et bortfall gir ukjent, ikke grønt. Kan du se på maskinen hvis det blir verre?
+- https://github.com/Nithu0/command-center/pull/153 venter på CI: nettfeil på en del av kildene ga «1 repoer» og overskrev sju (målt 01:16Z). Fullere data beholdes nå som ukjent. Min forrige test var ustabil under last, og den er også rettet her.

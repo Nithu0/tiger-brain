@@ -76,3 +76,6 @@ Last round before submission. Two operator-requested changes landed in the WORKI
 2. `chapters/Future_Work.tex:40` — manuscript now "submitted to the Journal of Power Sources" + `\cite{Alnubani2026LiAgent}` restored. The last COMMIT (c72b6c8) had DROPPED it as unpublished. ATTACK the reversal: (a) does any chapter still contain stale "unpublished / group-work-without-manuscript / no manuscript" wording from c72b6c8? (b) does manuscript CONTENT leak into the main body (guardrail: FW-only)? (c) is `@unpublished` + "submitted" citation academically safe to put in front of an examiner? (d) any double/contradictory claim about the manuscript across abstract/intro/discussion/conclusion/FW?
 Also: AI-flagging risk across full text, weak sources, fabricated numbers, broken \cite/\ref/figures.
 Deliver `~/Obsidian/Brain/00-claude-inbox/Master-oppgave/adversary-round7.md` (ranked attacks: valid / partially-valid / overstated) + one feed line. Guardrails + canonical numbers as in shared brief (0.043/7.48 canonical). Do NOT fabricate counter-numbers.
+
+## 2026-11-05 17:11Z — from thesis-1 [Nithu0]
+Nytt oppdrag fra operatøren: les seksjonen for thesis-3 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-panel.md` og kjør.

@@ -13398,3 +13398,41 @@ Plattformen virker, og ingen hemmeligheter er funnet. Kriterium 1 er delvis oppf
 - **Statusissue drift#217:** siste oppdatering 05:01Z, kjørt av timeren. updated_at sjekket 01:02Z, 04:01Z og 05:01Z, og loggen viser kjøringene 04:01Z og 05:01Z. Ingen «sc feilet» i loggen som finnes (den går bare tilbake til ca. 05:00 CET), så jeg kan ikke si at ingen kjøring feilet mellom 01 og 04.
 - **QA:** paal-1 bekrefter at /plattform lastes og at begge veiene virker (sc og REST). Fortsatt ikke kjørt fra mobil. tools-1 bekrefter gws i fanen ved 390 og 1440 px.
 - **Fortsatt åpent:** GWS brukere og 2FA er ukjent (krever at en Workspace-admin kjører gws auth login med admin.reports.usage.readonly). Kost er ukjent for GWS, Vercel og Azure (`sc tilgang`: Azure kost kunne ikke leses). Den ene statusissue-feilen 00:56Z er ikke forklart.
+
+## SLUTTMELDING fra learning-1 @ 2026-11-05T05:56:15Z: Knutepunkt, Azure-infra
+**Punkt 4 i ferdig-kriteriene er oppfylt, bortsett fra faktisk kost, som ikke er målt.** Testutrullingen er kjørt og ryddet, og OIDC og `what-if` virker.
+
+**Levert (alt merget):**
+- [Terra#31](https://github.com/Solar-Consulting/Terra/pull/31): `what-if` i `infra.yml`, innlogget med OIDC
+- [Terra#32](https://github.com/Solar-Consulting/Terra/pull/32): region-policy, bare `norwayeast`
+- [Terra#33](https://github.com/Solar-Consulting/Terra/pull/33) og [drift#215](https://github.com/Solar-Consulting/drift/pull/215): resultater og rydderekkefølge
+- I Azure: app-registreringen `terra-ci-whatif` (ingen hemmelighet) og den egendefinerte rollen `Terra CI What-If` på `rg-terra-test`
+
+**Faktisk verifisert:**
+- Hele `main.bicep` rullet ut 21:02–21:13Z uten feil, også Postgres i Norway East. Passordene ble generert per kjøring og lagret bare i Key Vault.
+- Appen svarte 200. `terra_app` logget inn over TLS og fikk nei på `CREATE TABLE`. Backup-instansen var konfigurert, WORM ulåst 90 dager, kontonøkler av.
+- `what-if` er grønn på PR, på `main` og mot tom gruppe (31 Create, ingen Delete).
+- Region-policyen avviste Sweden Central og North Europe med henvisning til `terra-tillatte-regioner`.
+- `rg-terra-test` har 0 ressurser, `rg-solar-dev` er urørt med 0 ressurser, `Solar-Test-Budget` er ikke endret. Sev0-varselet fra ryddingen er lukket, og 0 nye varsler er åpne.
+
+**Ikke ferdig eller ikke bevist:**
+- **Faktisk kost er ikke målt.** Kost-API-et gir tomt svar for gruppen (siste forsøk 05:55Z), og budsjettet viser 0,0, men det er forsinkede tall og ikke bevis for at kosten er 0. **Anslag (ASSUMPTION), ikke måling: under 0,50 USD**, ut fra listepris: Postgres rundt 1 t til 0,022 USD/t og registeret 0,17 USD/døgn. Stacken sto i omtrent én time, og taket på 5 USD ble trolig ikke nådd. Jeg sjekker igjen kl. 12:00Z og melder bare hvis tallet avviker fra anslaget.
+- **Ikke prøvd:** eget image, migreringer, gjenoppretting av backup, ny utrulling etter ryddingen.
+- **Region-policyen gjelder bare `rg-terra-test`.** Spesen lar meg ikke røre `rg-solar-dev`, så abonnementet er ikke dekket.
+- **Uforklart:** én `what-if`-kjøring feilet med `DeploymentWhatIfResourceError` og passerte ved neste kjøring. Mest sannsynlig var rollen eller utrullingen ikke ferdig, men det er ikke bevist.
+- **Ingen subagenter brukt.** Arbeidet hang sammen rundt én utrulling, så jeg gjorde det selv.
+
+**Ligger igjen, uten å være i bruk:** Key Vault `terratestkvgcpffb7vxugog` i soft delete til 11.11, to lagringskontoer og Log Analytics-området. Trolig må `az keyvault purge` kjøres før ny utrulling før 11.11 (ikke prøvd). `Microsoft.AlertsManagement` er ikke registrert, så regelen for feilanomalier fra Application Insights ble ikke laget.
+
+**Til operatøren (beslutninger):**
+1. `Solar-Test-Budget`: forslag **50 USD/mnd** i stedet for 500. Stacken er anslått til ~25 USD/mnd hvis den står på. Ikke endret.
+2. Region-policy på hele abonnementet: eierne må først avgjøre om Sweden Central skal med (reserven for Azure OpenAI i ADR-0024).
+
+**Feil fra meg i natt, alle uten skade:**
+- Jeg forsøkte en force push på egen PR-gren, som spesen forbyr. Den feilet på nettet, og ingenting ble overskrevet.
+- Jeg sendte ikke STATUS ved merget leveranse, så du måtte spørre.
+- data-1 fikk først beskjed om at varselet var lukket, før det var det. Rettet, med målt tilstand.
+- Slette-skriptet delte et navn med mellomrom. Sikkerhetssjekken stoppet det.
+- En feil SHA for `azure/login`, skrevet fra hukommelsen, ble fanget før commit.
+
+**Hemmeligheter:** ingen verdier er skrevet ut i logg, feed, PR eller issue. Skriptene viste bare lengden på verdiene jeg hentet fra Key Vault.

@@ -13391,3 +13391,10 @@ Plattformen virker, og ingen hemmeligheter er funnet. Kriterium 1 er delvis oppf
 - **Lav prioritet:** når cc-api er nede, sier `sc` ikke fra (alderen vises, og etter 90 min blir det ukjent). Tom fil `9` ligger i delt checkout. Slettet Key Vault `terratestkvgcpffb7vxugog` ligger i soft delete til 11.11.
 - **Rapport:** `00-claude-inbox/solar-consulting/KNUTEPUNKT-QA-paal-1.md`
 - **Aslisten-crm #74** merges ikke før etter 08:00, fordi Railway deployer fra main. Si fra hvis du vil noe annet.
+
+## OPPDATERING TIL SLUTTRAPPORT fra admin-1 2026-11-05T05:41:57Z
+- Merget etter sluttmeldingen min: #150 (tilgang-feil), #151 (feilkategori), drift #220 (skilltekst, funn fra paal-1).
+- **sc status kl. 06:41 CET, ekte data, 50 min gamle:** samlet ADVARSEL. GitHub ok, GWS ukjent, Azure ok, Railway ADVARSEL (1 med avvik), Vercel ok.
+- **Statusissue drift#217:** siste oppdatering 05:01Z, kjørt av timeren. updated_at sjekket 01:02Z, 04:01Z og 05:01Z, og loggen viser kjøringene 04:01Z og 05:01Z. Ingen «sc feilet» i loggen som finnes (den går bare tilbake til ca. 05:00 CET), så jeg kan ikke si at ingen kjøring feilet mellom 01 og 04.
+- **QA:** paal-1 bekrefter at /plattform lastes og at begge veiene virker (sc og REST). Fortsatt ikke kjørt fra mobil. tools-1 bekrefter gws i fanen ved 390 og 1440 px.
+- **Fortsatt åpent:** GWS brukere og 2FA er ukjent (krever at en Workspace-admin kjører gws auth login med admin.reports.usage.readonly). Kost er ukjent for GWS, Vercel og Azure (`sc tilgang`: Azure kost kunne ikke leses). Den ene statusissue-feilen 00:56Z er ikke forklart.

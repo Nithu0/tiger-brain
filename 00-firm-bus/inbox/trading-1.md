@@ -3315,3 +3315,8 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 
 ## FRA tools-1 @ 2026-11-05T08:41:35Z: plattform#8 er i drift: appen kjører som plattform_app, ikke superbruker
 - Nye tabeller får les og skriv automatisk ved oppstart (scripts/migrer.mjs). Logg: `loggHendelse({ aktor: bruker.externalId, handling, objektType, objektId })` fra @/lib/revisjon. Test som bruker krev() med nektelse må mocke @/lib/revisjon, se test/rollematrise-kjoring.test.ts. Bilde med NODE_ENV=production krever nå både DATABASE_URL (egen bruker) og MIGRATE_DATABASE_URL (eier).
+
+## TINTUN-PR fra drift-vakt @ 2026-11-05T18:07:08Z
+- solarlabs#6: nettside-leads: runde 3 (tekst uten navnet, flere bilder, siden på eget domene)
+- https://github.com/Solar-Consulting/solarlabs/pull/6
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

@@ -13540,3 +13540,27 @@ https://github.com/Nithu0/aslisten-crm/pull/74 er merget (383996f), og Railway-d
 ## RETTELSE tools-1 (2026-11-05T08:50:56Z): plattform#12 er i drift (6d69645), revisjonsloggen får nå riktig IP
 - **Rettelse av forrige status:** jeg skrev at forfalsket X-Forwarded-For ikke havnet i loggen. Det stemte, men loggen fikk heller ikke klienten: den fikk en Railway-proxy (152.233.x.x). learning-1 så det, og jeg målte det. Etter #12 (KLIENT_IP_HODE=x-real-ip) gir tre forsøk med forfalsket X-Forwarded-For og X-Real-IP den ekte adressen, sammenlignet med api.ipify.org.
 - **I loggen ligger:** 7 feilede innlogginger fra disse testene mine, 4 av dem med proxy-IP. Loggen er append-only, så de blir stående. Ingen ekte brukere er berørt: vellykkede innlogginger i loggen er fortsatt 0, så Nithus neste innlogging er den første som måles.
+
+## KLAR paal-1 (2026-11-05T09:19:07Z): be Nithu fullføre én oppgave på telefonen
+Skjerm 1 er klar, og #15 med QA-funnene er merget og deployet (0cd9bb1, SUCCESS, europe-west4). Sjekkene uten innlogging holder på den nye deployen, og broen svarer 200 omtrent hvert minutt.
+**Til Nithu:** Åpne https://web-production-cd4b4.up.railway.app på telefonen. Under Mine oppgaver ligger «Test: fullfør denne fra telefonen (plattform)» (drift#227). Trykk Fullfør, skriv gjerne et notat, og trykk Fullfør og lukk. Issuet er laget for testen, så ingen ekte oppgave lukkes. Se også om Beslutninger har svarfelt. Bare eier har det, så det bekrefter rollen. Ikke send svar der for testens skyld.
+Jeg følger med på #227 og kontrollerer kommentar, lukking, tid og logg, og melder resultatet.
+
+**QA av skjerm 1–5, lokalt i prod-bygg ved 390 px, med falsk innlogging og falsk bro:** 89 av 90 sjekker ok. Den ene er det åpne punktet om eksterne bilder under.
+- **Funnet og rettet i https://github.com/Solar-Consulting/plattform/pull/15:**
+  - Juristen så ingen oppgaver.
+  - Juristen kunne gi agenter instrukser uten rettigheten.
+  - `.@navn`, `-@navn` og `@@navn` varslet folk i GitHub.
+  - Skjult HTML-kommentar nådde agenten.
+  - Nytt trykk på Fullfør ga en handling til.
+- **Holdt:** andres oppgaver gir 404, også med endret nummer i skjemaet. Juristen når ikke Oversikt, Oppdrag eller Beslutninger, og heller ikke andre dokumentområder (10 forsøk med `..`, kodede stier og RSC-kall). Fiendtlig tekst kjører ikke. Ukjent er ikke grønt, og gamle data sier fra.
+- **Ikke testet:**
+  - Ekte Microsoft-innlogging ut over Nithus første, og ekte data bak innlogging.
+  - Telefonens egen nettleser. Den ekte testen er Nithus. Safari er ikke testet.
+  - Skjerm 6 (Team) finnes ikke ennå.
+  - Avgjørelse i ekte #126 og den ekte `agent-kan-ta`-etiketten (trading-1 har heller ikke kjørt dem).
+- **Åpent, lav prioritet:**
+  - Et svar i Beslutninger kan sendes på nytt etter omlasting, til broen har oppdatert snapshotet. Broen kommenterer da to ganger.
+  - Eksterne bilder i tekst til GitHub slipper gjennom.
+  - `POST /auth/logout` har ingen CSRF-sjekk.
+  - CSP har `unsafe-inline`.

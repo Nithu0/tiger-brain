@@ -13436,3 +13436,11 @@ Plattformen virker, og ingen hemmeligheter er funnet. Kriterium 1 er delvis oppf
 - En feil SHA for `azure/login`, skrevet fra hukommelsen, ble fanget før commit.
 
 **Hemmeligheter:** ingen verdier er skrevet ut i logg, feed, PR eller issue. Skriptene viste bare lengden på verdiene jeg hentet fra Key Vault.
+- 2026-11-05T06:15:51Z admin-1: i gang med skjerm 1 og 2 (Mine oppgaver, Beslutninger). Bygger mot fixtures til tools-1 og trading-1 er klare.
+
+## BLOKKERING paal-1 (2026-11-05T06:17:33Z): siste steg i ferdig-kriteriet krever en ekte Microsoft-innlogging
+Spec sier at første versjon skal være «bevist av paal-1 ende til ende». Jeg har ingen Entra-bruker og skal ikke bruke Nithus. Roller og ruter kan jeg teste uten innlogging i Entra, med samme image lokalt og en falsk IdP, men ikke selve Microsoft-innloggingen på den ekte adressen. Jeg fortsetter med alt annet imens.
+- **Anbefalt:** Nithu logger inn og fullfører én oppgave på telefonen når skjerm 1 er klar. Jeg kontrollerer på forhånd alt uten innlogging og alle roller lokalt, og etterpå at issuet er lukket i `drift`, revisjonsloggen og tiden det tok. Det gir også testen på ekte telefon, som manglet i natt.
+- **Alternativ:** en testbruker i Entra med utviklerrollen. Da kan jeg gjenta testen uten Nithu, men spec krever at en ny bruker meldes, og passordet blir en ny hemmelighet. 2FA i tenanten kan også stoppe det.
+Si fra hvis du velger noe annet enn det anbefalte.
+2026-11-05T06:20:05Z FRA infra-1: nettmålingen er ferdig og loggeren stoppet, rapporten er oppdatert. DNS: 0 feil på 339 målinger. Ruten falt 147 ganger på 6 timer, også ved load 1-4, så lasten er ikke årsaken. Peker mot WSL mirrored (Windows 1 feilet ping, WSL 6). Ingenting endret. Tiltak venter på avtalt omstartsvindu.

@@ -32,3 +32,11 @@ Tiltak 1–3 krever `wsl --shutdown`, som stopper alle paner, så de bør tas sa
 
 Uten omstart:
 5. Vaktene bør prøve igjen etter 10–15 sekunder før de varsler om `000`, så korte brudd ikke gir falske alarmer.
+
+## Sluttmåling (00:47–06:16 UTC, 339 målinger etter DNS-endringen)
+
+- **DNS:** 0 feil. HTTPS: 0 feil, median 199 ms.
+- **Ruten:** Falt 147 ganger på 6 timer, omtrent hvert 2. minutt og aldri mer enn 12 minutter i strekk uten fall. Det fortsatte da load var 1–4, så lasten er ikke årsaken.
+- **Windows:** 1 av 339 ping feilet, mot 6 av 339 fra WSL. Det støtter at feilen ligger i WSL mirrored og ikke i wifi eller ruter, men utelukker det ikke, for utfallene er korte og måles bare én gang i minuttet.
+
+Forslagene over står ved lag. `UNKNOWN`: hva som utløser det. Kabeltesten er fortsatt ikke kjørt. Måleskriptet `~/.local/state/firm-nett/mal.sh` kan kjøres på nytt for å sammenligne før og etter.

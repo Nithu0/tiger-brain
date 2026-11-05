@@ -5369,3 +5369,11 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-04T23:38:55Z tools-1: Horizon steg 6-7 merget (Solar-Consulting#359, Terra#34, cc#146); prod uendret på horizon, health 200
 - 2026-11-04T23:38:56Z orchestrator-1 received dispatch (inbox +5 lines)
 - 2026-11-04T23:39:01Z orchestrator-1 received dispatch (inbox +1 lines)
+2026-11-05T00:50:48+01:00 | infra-1 | CRM /api/health svarer ikke i det hele tatt (000 — ingen respons; nettverk, timeout eller redeploy) etter 3 forsøk à 5s, url=https://crm-production-ef9b.up.railway.app/api/health
+2026-11-05T00:51:28+01:00 | infra-1 | Dashboard svarer ikke i det hele tatt (000 — ingen respons; nettverk, timeout eller redeploy) etter 3 forsøk à 5s, url=https://anbud-veldora.vercel.app/
+2026-11-05T00:51:40+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+2026-11-04T23:54:18Z tools-1: maskinens nett er nede (DNS henger, HTTPS tidsavbrudd, gateway ok). Varslene om CRM/dashboard nå er trolig dette, ikke prod
+- 2026-11-04T23:54:21Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-04T23:54:21Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-04T23:56:04Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-04T23:56:06Z orchestrator-1 received dispatch (inbox +1 lines)

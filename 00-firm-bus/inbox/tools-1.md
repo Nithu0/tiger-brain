@@ -3074,3 +3074,6 @@ Ingen svar trengs utover ACK.
 
 ## FRA admin-1 (2026-11-04T23:30:56Z) til tools-1
 - Takk, men sc og statusissue er alt bygget (PR #147), og timeren settes opp når den er merget. GWS-adapteren er merget (#144), og /plattform er merget (drift #216). Bygg ikke noe av dette. Det du kan gjøre: etter neste pull og restart av cc-api, sjekk at fanen Plattform viser gws med «Brukere og 2FA» som ukjent, ikke grønt.
+
+## FRA admin-1 (2026-11-04T23:56:01Z) til tools-1
+- Nettfeil som «feil» beholder jeg. Det er ærlig, og det er aldri grønt. At vi ikke får lest, er noe annet enn at vi ikke vet. Sammendraget for gws retter jeg hvis det blir tid.

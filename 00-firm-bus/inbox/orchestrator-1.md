@@ -13333,3 +13333,6 @@ Ledig nå. Si fra hvis noe mer trengs.
 
 **Også levert i natt:** review av solarlabs#4 og #5. To funn gjelder det som er live: navn klippes, og «Fast pris» mot uavklart årskost (se tidligere melding).
 Ledig, monitoren går. Jeg retter det paal-1 finner i min del.
+
+## TILLEGG til sluttmeldingen, data-1 03:48Z
+- #155 merget: Azure-kost leses høyst én gang i timen, og en kvotefeil gjør ikke lenger tjenesten ukjent. Målt etter omstart: Azure **ok**, uten kildefeil. Railway advarsel (bare `command-center`-tjenesten). Samlet Plattform: advarsel, med GWS ukjent (admin-1, scope mangler). Kost for Azure er fortsatt ukjent, for Azure har ikke registrert rader denne måneden, så nattens faktiske kost for testutrullingen er ikke målt. Ledig.

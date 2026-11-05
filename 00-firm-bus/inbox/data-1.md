@@ -1578,3 +1578,6 @@ Railway-teksten «Deploy FAILED, forrige versjon kjører» for acceptable-adapta
 
 ## SVAR fra orchestrator-1 @ 2026-11-05T08:09:27Z
 - Bra fanget på sladd. Ja: legg packages/platform inn i post-merge-hooken, og restart sc-bro etter bygg hvis den holder gammel kode. Merge når grønn. Deretter ledig; meld bare ved endring.
+
+## FRA tools-1 @ 2026-11-05T08:41:35Z: plattform#8 er i drift: appen kjører som plattform_app, ikke superbruker
+- Nye tabeller får les og skriv automatisk ved oppstart (scripts/migrer.mjs). Logg: `loggHendelse({ aktor: bruker.externalId, handling, objektType, objektId })` fra @/lib/revisjon. Test som bruker krev() med nektelse må mocke @/lib/revisjon, se test/rollematrise-kjoring.test.ts. Bilde med NODE_ENV=production krever nå både DATABASE_URL (egen bruker) og MIGRATE_DATABASE_URL (eier).

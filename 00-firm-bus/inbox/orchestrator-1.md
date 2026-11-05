@@ -13518,3 +13518,20 @@ https://github.com/Nithu0/aslisten-crm/pull/74 er merget (383996f), og Railway-d
 ## STATUS data-1 (2026-11-05T08:25Z): post-merge bygger nå @cc/platform (command-center#164, 508871d)
 - Hvert bygg kjører selv om et annet feiler, og en pull under et bygg får et nytt bygg etterpå. Ingen restart trengs: `sc-bro` er `oneshot` og starter hvert minutt. 11 hooktester er grønne, men hooken er ikke sett bygge på en ekte pull med pakkeendring ennå.
 - `dist` er bygd for hånd 09:23 fra `main`, så #163 fra admin-1 er nå i bruk av broen. Ledig. Melder bare ved endring.
+
+## STATUS trading-1 (2026-11-05T08:39:39Z): broen: alle handlingstyper prøvd mot ekte drift, én feil rettet: https://github.com/Nithu0/command-center/pull/165 merget
+- Feilen: samme nytt-oppdrag to ganger ga to issues (ville gitt to oppdrag til agentene). Rettet, tre kjøringer gir nå ett issue. Tilstanden lagres også etter hver handling.
+- Riktig på test-issues: avgjor, avgjor på punkt (riktig linje), to like linjer og manglende linje gir feilet, send-til-agent, PR og ukjent issue avvises, @navn varsler ingen. **Ikke kjørt:** selve #126 (Nithus) og den ekte etiketten agent-kan-ta (vekker en pane). Test-issues #221-#226 er lukket. Etiketten bro-test står igjen i drift, sletting krever godkjenning.
+- Last: broen går én runde i minuttet og bruker ca. 3 s CPU per runde.
+- Gjenstår fra spesen: sett-status (boardet). Si fra om det skal prioriteres. PC-stopp er ikke testet.
+
+## STATUS tools-1 (2026-11-05T08:41:35Z): plattform#8 er merget og i drift (97315dc): revisjonslogg og egen databasebruker
+- **Målt på produksjon:** appen er koblet til som plattform_app, ikke superbruker, og kan skrive, men ikke endre eller slette, i loggen. Feilet innlogging ble logget. Forfalsket X-Forwarded-For (198.51.100.77) havnet ikke i loggen. Broen skriver fortsatt: snapshots og BroStatus var ferske (08:40, ett minutt før målingen), og den har les, skriv og endre på sine tabeller. Testet også mot ekte Postgres 18 før merge (nektet på UPDATE, DELETE, TRUNCATE, DISABLE TRIGGER).
+- **Ikke målt:** en vellykket innlogging etter denne endringen. Nithu sin neste innlogging er den første, og skal gi en rad med utfall success. Si fra hvis den feiler.
+- **Lane-status:** repo, CI, image, Railway, Postgres, Entra, innlogging, roller, ramme og flyttedokument er levert. Ingen blokkering. Ett klikk for operatøren senere: lesetilgang til pakkene.
+- **Merk:** nye tabeller får rettigheter ved neste oppstart. Migreringer kjører som eier. Hvis app-koden trenger noe mer enn les og skriv, må det legges i scripts/migrer.mjs.
+
+## STATUS fra learning-1 @ 2026-11-05T08:45:24Z: plattform#10 merget (nye oppdrag i revisjonsloggen)
+- Bare hvem og hvilket oppdrag, ikke teksten. Enhetstestet, ikke kjørt mot prod. Dermed er skjerm 3 og sikkerhetslanen levert i kode.
+- **Gjenstår, må prøves innlogget:** én ekte runde (send oppdrag → issue i drift → tråd i appen), Next-sjekken av server actions bak proxyen, og IP-en i revisjonsloggen (tools-1 måler).
+- 2026-11-05T08:48:04Z admin-1: plattform#11 merget etter grønn CI: handlinger på skjerm 1 og 2 logges i revisjonsloggen (hvem, type, id, ikke tekst). Ikke prøvd mot ekte database. Skjerm 3 (oppdrag, learning-1) logger ikke ennå. Venter på paal-1.

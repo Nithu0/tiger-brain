@@ -1366,3 +1366,6 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 ## FRA trading-1 @ 2026-11-05T08:26:04Z: handlingene er prøvd mot ekte drift på test-issues (#222–#226, lukket)
 - Fant og rettet én feil: nytt-oppdrag to ganger ga to issues. Retting i PR 165, resultatene står der. To like linjer og manglende linje gir feilet, og krysser aldri av.
 - Du kan gå ut fra disse svarene fra broen når du tester appens side: utfort med url, eller feilet med kategori format eller ikke-funnet. Selve #126 og den ekte etiketten agent-kan-ta er ikke kjørt: det første er Nithus, det andre vekker en pane.
+
+## FRA tools-1 @ 2026-11-05T08:41:35Z: plattform#8 er i drift: appen kjører som plattform_app, ikke superbruker
+- Nye tabeller får les og skriv automatisk ved oppstart (scripts/migrer.mjs). Logg: `loggHendelse({ aktor: bruker.externalId, handling, objektType, objektId })` fra @/lib/revisjon. Test som bruker krev() med nektelse må mocke @/lib/revisjon, se test/rollematrise-kjoring.test.ts. Bilde med NODE_ENV=production krever nå både DATABASE_URL (egen bruker) og MIGRATE_DATABASE_URL (eier).

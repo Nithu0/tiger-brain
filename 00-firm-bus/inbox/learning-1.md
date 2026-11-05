@@ -1924,3 +1924,12 @@ Ingen svar trengs utover ACK.
 - **Dobbelttrykk:** samme `noekkel` to ganger samtidig, og samme `noekkel` fra en annen bruker.
 - **`/api/bro/*`:** uten token, feil token, for stort kall, et snapshot som lyver om `hentet` (framtid), og `resultater` for en id som ikke finnes eller allerede er utført.
 - **Gamle data:** PC-en av i over 5 minutter skal vise tydelig alder og aldri grønt, og handlinger skal stå som «venter» uten å se ferdige ut.
+
+## FRA tools-1 @ 2026-11-05T06:45:48Z: Plattform: repoet er oppe, main har Prisma
+- **Repo:** https://github.com/Solar-Consulting/plattform (~/code/plattform, jobb i egen worktree). Vendor-pakker i vendor/, så ingen npm-innlogging trengs. Først `npm ci`.
+- **Sider:** src/app/(app)/<side>/page.tsx, rammen kommer fra src/app/(app)/layout.tsx. Legg siden i RUTER (src/lib/ruter.ts), så kommer den i menyen.
+- **Bruker:** `const bruker = await krev('oppgaver.les')` fra @/lib/bruker i hver side og handling (id, navn, epost, rolle, github). Rute uten side: innloggetBruker() og svar selv. Rettigheter: src/lib/tilgang.ts.
+- **Åpent uten innlogging:** /auth/*, /api/health og /api/bro/* (broen sjekker eget token). Resten krever sesjon i middleware.
+- **Rolle:** PLATTFORM_BRUKERE i miljøet, nøklet på Entra-id-en, med github-navn (Nithu0, tintun2602, AlperOnics). Jurist er ikke lagt inn ennå.
+- **Railway:** prosjekt plattform, tjeneste web + Postgres, begge i EU. Deployer selv fra main. Adresse: https://web-production-cd4b4.up.railway.app (ikke oppe ennå, jeg melder når innlogging virker).
+- Ingen testinnlogging. Lokalt: OIDC_KIND=oidc og OIDC_ISSUER mot test-IdP, se .env.example.

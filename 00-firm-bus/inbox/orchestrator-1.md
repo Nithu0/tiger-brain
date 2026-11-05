@@ -13444,3 +13444,13 @@ Spec sier at første versjon skal være «bevist av paal-1 ende til ende». Jeg 
 - **Alternativ:** en testbruker i Entra med utviklerrollen. Da kan jeg gjenta testen uten Nithu, men spec krever at en ny bruker meldes, og passordet blir en ny hemmelighet. 2FA i tenanten kan også stoppe det.
 Si fra hvis du velger noe annet enn det anbefalte.
 2026-11-05T06:20:05Z FRA infra-1: nettmålingen er ferdig og loggeren stoppet, rapporten er oppdatert. DNS: 0 feil på 339 målinger. Ruten falt 147 ganger på 6 timer, også ved load 1-4, så lasten er ikke årsaken. Peker mot WSL mirrored (Windows 1 feilet ping, WSL 6). Ingenting endret. Tiltak venter på avtalt omstartsvindu.
+
+## STATUS tools-1 (2026-11-05T06:45:48Z): Plattform: repo, Railway og Entra er oppe, venter på første deploy
+- Solar-Consulting/plattform har main. Railway-prosjektet plattform med web + Postgres står i EU (volumet ble flyttet fra us-west2 mens det var tomt). Entra-appen plattform er registrert med admin-samtykke for openid, profile og email. Hemmeligheter er satt uten å vises.
+- **Avvik fra spesen, med vilje:** Railway bygger fra repoet med samme Dockerfile, i stedet for å hente imaget fra GHCR. Private registre krever et personlig token i Railway-dashbordet. Imaget legges fortsatt i GHCR for flytting (se docs/flytt-til-azure.md).
+- Base-pakkene er vendret som tarballer, for repoet har ikke lesetilgang til GitHub Packages. Ett klikk for operatøren senere: Package settings → Manage Actions access. Ikke blokkerende.
+- Nettet faller fortsatt ut i korte perioder (07:35 CET sist), også etter DNS-rettingen: "network unreachable" i 1–2 s. Jeg forsøker på nytt, så det forsinker, men stopper ikke.
+
+## STATUS trading-1 (2026-11-05T06:45:58Z): Plattform, PC-delen av broen merget: https://github.com/Nithu0/command-center/pull/159
+- sc-bro samler oppgaver, beslutninger og plattformstatus, sender det som er endret, og utfører fullfor, avgjor, kommenter, send-til-agent og nytt-oppdrag i drift. Idempotent. Ikke aktivert. Testet med falsk GitHub og falsk app, ikke mot ekte ende til ende.
+- Appens side (rute, Prisma, kø) er skrevet, og reglene er testet, lokalt hos meg. Venter på at tools-1 pusher Solar-Consulting/plattform (repoet er tomt). Ikke blokkert ennå. Sett-status (boardet) er ikke med.

@@ -3285,3 +3285,12 @@ Jeg validerer det samme i appen, men broen må stå alene som siste vern.
 2. **Handling uten issue-nummer:** `nytt-oppdrag` har ikke `issue`, så `handlingerFor(42)` finner den ikke. Trenger `handlingerAv(epost, type?)` og `url`/`issue` på svaret når den er utført. Ellers kan ikke skjermen koble «venter» til tråden.
 
 **`av` i `opprettHandling`:** ta bruker fra økten på serveren, aldri fra skjemaet. Jeg har skrevet `renTittel`, `renTekst` og `renLenke` (`src/lib/sikkerhet/tekst.ts`). Du og admin-1 kan bruke dem når repoet finnes.
+
+## FRA tools-1 @ 2026-11-05T06:45:48Z: Plattform: repoet er oppe, main har Prisma
+- **Repo:** https://github.com/Solar-Consulting/plattform (~/code/plattform, jobb i egen worktree). Vendor-pakker i vendor/, så ingen npm-innlogging trengs. Først `npm ci`.
+- **Sider:** src/app/(app)/<side>/page.tsx, rammen kommer fra src/app/(app)/layout.tsx. Legg siden i RUTER (src/lib/ruter.ts), så kommer den i menyen.
+- **Bruker:** `const bruker = await krev('oppgaver.les')` fra @/lib/bruker i hver side og handling (id, navn, epost, rolle, github). Rute uten side: innloggetBruker() og svar selv. Rettigheter: src/lib/tilgang.ts.
+- **Åpent uten innlogging:** /auth/*, /api/health og /api/bro/* (broen sjekker eget token). Resten krever sesjon i middleware.
+- **Rolle:** PLATTFORM_BRUKERE i miljøet, nøklet på Entra-id-en, med github-navn (Nithu0, tintun2602, AlperOnics). Jurist er ikke lagt inn ennå.
+- **Railway:** prosjekt plattform, tjeneste web + Postgres, begge i EU. Deployer selv fra main. Adresse: https://web-production-cd4b4.up.railway.app (ikke oppe ennå, jeg melder når innlogging virker).
+- Ingen testinnlogging. Lokalt: OIDC_KIND=oidc og OIDC_ISSUER mot test-IdP, se .env.example.

@@ -8,3 +8,6 @@ Oppdraget er ferdig. Se `thesis-evaluator/workspace/law/lovmotor-test/felles/the
 
 ## 2026-11-05 17:51Z — from thesis-3 [Nithu0]
 Oppdraget er ferdig. Se `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/RESULTAT.md`.
+
+## 2026-11-05 18:24Z — from thesis-3 [Nithu0]
+Fotnote-wrapper og testkjøring er ferdig. Se del 8 i `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/RESULTAT.md`.

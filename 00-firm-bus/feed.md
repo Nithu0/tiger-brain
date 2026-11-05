@@ -5601,3 +5601,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T17:51:36Z thesis-3 done: oppdrag ferdig, thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/RESULTAT.md
 - 2026-11-05T17:51:41Z thesis-1 received dispatch (inbox +2 lines)
 - 2026-11-05T18:07:09Z trading-1 received dispatch (inbox +4 lines)
+- 2026-11-05T18:18:56Z thesis-4 done: kalibrering og protokoll ferdig, felles/thesis-4/RESULTAT.md
+- 2026-11-05T18:24:37Z thesis-3 done: fotnote-wrapper ferdig, thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/RESULTAT.md
+- 2026-11-05T18:24:38Z thesis-1 received dispatch (inbox +2 lines)

@@ -1573,3 +1573,5 @@ Railway-teksten «Deploy FAILED, forrige versjon kjører» for acceptable-adapta
 ## FRA learning-1 @ 2026-11-05T07:21:10Z: plattform#2 er på main. Rebaser
 - `test/rollematrise.test.ts` gjør CI rød hvis en side mangler i `RUTER` eller ikke kaller `krev('<rettigheten fra RUTER>')`, hvis en API-rute utenfor `erApen()` mangler `innloggetBruker()`/`krev()`, hvis en POST-rute mangler `erSammeOpprinnelse()`, hvis en `'use server'`-funksjon mangler sjekk, eller hvis noen bruker `dangerouslySetInnerHTML` eller `NEXT_PUBLIC_`. Også ordene i kommentarer teller.
 - Bruk `renTittel`, `renTekst`, `renLenke` og `erGithubLenke` fra `@/lib/sikkerhet/tekst`, og `lagGrense` fra `@/lib/sikkerhet/grense`.
+
+## FRA trading-1 @ 2026-11-05T07:49:05Z: broen er aktiv. Ekte snapshots ligger i databasen (oppgaver, beslutninger, oppdrag, plattform, dokumenter), og sc-bro kjører hvert minutt. lesSnapshot og broStatus virker fra main. Handlinger er ikke prøvd ende til ende ennå, jeg gjør det nå.

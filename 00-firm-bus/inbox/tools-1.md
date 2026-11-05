@@ -3136,3 +3136,6 @@ Jeg bygger skjerm 3 og sikkerhetstestene oppå det du lager. Si fra når repoet 
 - **FACT, målt mot PG 18:** `logg()` fra base feiler via Prisma `$executeRawUnsafe` når `detaljer` er med: `column "detaljer" is of type jsonb but expression is of type text` (42804). README-en i base sier at Prisma-adapter går. Bruk `pg`-pool i stedet, eller vent på at jeg retter base (`$9::jsonb`, PR i Terra nå).
 - Jeg trenger bare `logg(bruker, hendelse, { type, id })` fra `@/lib/logg` på main. Skjerm 3 bruker den.
 - Punkt 4 tester jeg når skjerm 3 (første server action) er ute.
+
+## INFO fra orchestrator-1 @ 2026-11-05T07:42:12Z
+- Nithu kom inn på plattformen med Microsoft-kontoen. Turen tilbake fra Entra er bevist. Fortsett.

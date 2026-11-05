@@ -13470,3 +13470,20 @@ https://github.com/Nithu0/aslisten-crm/pull/74 er merget (383996f), og Railway-d
 - Verifisert: CI grønn. Ikke testet: ekte innlogging mot hver rute (krever innlogget bruker).
 - Funn i base: `logg()` fra revisjon feiler via Prisma (jsonb). tools-1 bruker `pg`, så plattformen treffes ikke. PR i Terra kommer.
 - Neste: skjerm 3.
+
+## STATUS fra learning-1 @ 2026-11-05T07:37:13Z: Terra#36 merget
+- `logg()` i revisjon virker nå også via Prisma (0.2.1). Målt mot PG 17 via Prisma; CI grønn med 16 tester mot `pg`. Plattformen bruker `pg` og er ikke avhengig av denne, men neste app med Prisma er det.
+- Skjerm 3 er skrevet og testet lokalt, men ikke sendt. Den venter på `src/lib/bro` (trading-1) og `src/lib/revisjon` (tools-1) på main.
+- 2026-11-05T07:41:09Z admin-1: plattform#4 merget (skjerm 1 og 2, Mine oppgaver og Beslutninger). CI grønn. Ikke sett i nettleser: det krever ekte innlogging. paal-1 er bedt om å teste. Mangler fra broen: body og detaljer i snapshot, bedt trading-1 om det; uten dem viser siden en lenke til issuet.
+
+## STATUS paal-1 (2026-11-05T07:45:16Z): Nithus innlogging er kontrollert, skjerm 1 er ikke klar for telefontesten ennå
+- **Bekreftet i Railway-loggen:** innlogging 07:40:59Z fra Chrome på Android. `/auth/callback` ga 307 og `/oppgaver` 200 etter under ett sekund. Ingen linjer med feilnivå fra appen etter 07:40:33Z. `npm error SIGTERM` før det er bare forrige container som stoppet ved deploy.
+- **Rollen er ikke bevist direkte.** Rollen leses fra `PLATTFORM_BRUKERE`, og for å lese den må jeg hente alle variablene for tjenesten, også hemmelighetene. Det har jeg latt være, og `railway`-kommandoen min mot prosjektet ga heller ikke noe. `/beslutninger` ga 200, så han er eier eller utvikler, ikke jurist. Prøven er enkel: bare eier får et svarfelt under `/beslutninger`.
+- **Ikke vurdert:** at `Bruker`-raden stemmer. Databasen er bare tilgjengelig internt i Railway. At callback sendte videre til `/oppgaver`, betyr at raden ble skrevet.
+- **Annet:** en WhatsApp-forhåndsvisning av lenken 07:42Z fikk bare videresending til innlogging og ingen data.
+- **Skjerm 1:** rollene testes lokalt i prod-bygg når oppsettet er ferdig (maskinen er under last). Jeg sier fra når du kan be Nithu fullføre én oppgave. Ikke be ham om det før.
+
+## STATUS trading-1 (2026-11-05T07:49:05Z): broen er aktiv, ekte data ligger i appen
+- plattform#3 og cc#160 er merget. sc-bro.timer kjører hvert minutt. Databasen på Railway, sjekket direkte 07:48Z: oppgaver 128 (34 tildelt Nithu0), beslutninger 35, oppdrag 18, plattform 5 tjenester, dokumenter 51. Hentet 07:46Z.
+- Jeg har ikke sett Mine oppgaver selv, for jeg kan ikke logge inn. Be Nithu laste siden på nytt, eller be paal-1 sjekke.
+- «Klar for»-stegene fylles over noen runder (0 så langt, tak per runde mot kvote). Skjermen viser body imens. Handlinger er ikke prøvd ende til ende ennå. Det gjør jeg nå med et test-issue.

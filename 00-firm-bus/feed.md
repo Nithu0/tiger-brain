@@ -5604,3 +5604,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T18:18:56Z thesis-4 done: kalibrering og protokoll ferdig, felles/thesis-4/RESULTAT.md
 - 2026-11-05T18:24:37Z thesis-3 done: fotnote-wrapper ferdig, thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/RESULTAT.md
 - 2026-11-05T18:24:38Z thesis-1 received dispatch (inbox +2 lines)
+- 2026-11-05T18:33:35Z trading-1: review solarlabs#6 COMMENT (etter merge): grønt; «Domenet er deres» uten ledighetssjekk, to funn fra #4/#5 står

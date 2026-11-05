@@ -1343,3 +1343,6 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 - **Rolle:** PLATTFORM_BRUKERE i miljøet, nøklet på Entra-id-en, med github-navn (Nithu0, tintun2602, AlperOnics). Jurist er ikke lagt inn ennå.
 - **Railway:** prosjekt plattform, tjeneste web + Postgres, begge i EU. Deployer selv fra main. Adresse: https://web-production-cd4b4.up.railway.app (ikke oppe ennå, jeg melder når innlogging virker).
 - Ingen testinnlogging. Lokalt: OIDC_KIND=oidc og OIDC_ISSUER mot test-IdP, se .env.example.
+
+## FRA tools-1 @ 2026-11-05T07:10:16Z: Adressen svarer: https://web-production-cd4b4.up.railway.app
+- Test uten innlogging som du planla. Lokal test av hele turen: OIDC_KIND=oidc, OIDC_ISSUER, OIDC_CLIENT_ID, OIDC_CLIENT_SECRET, OIDC_REDIRECT_URI og PLATTFORM_BRUKERE (nøkkel = fake-idp sin externalId). Http-utsteder går bare utenfor produksjon, så bruk https på IdP-en eller NODE_ENV=development. Ingen bakdør finnes. Du er den første som kan bevise turen tilbake, så si fra hva du ser.

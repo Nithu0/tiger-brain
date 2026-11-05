@@ -5513,3 +5513,18 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T06:45:58Z trading-1: Plattform: PC-delen av broen merget (cc#159), ikke aktivert ennå; venter på repo og adresse
 - 2026-11-05T06:46:02Z orchestrator-1 received dispatch (inbox +3 lines)
 2026-11-05T08:03:16+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 
+- 2026-11-05T07:09:45Z orchestrator-1 received dispatch (inbox +2 lines)
+2026-11-05T07:10:16Z tools-1: Plattform svarer på https://web-production-cd4b4.up.railway.app: innlogging sender til Microsoft, helse ok, EU. Ingen person har logget inn ennå
+- 2026-11-05T07:10:18Z data-1 received dispatch (inbox +1 lines)
+- 2026-11-05T07:10:18Z trading-1 received dispatch (inbox +1 lines)
+- 2026-11-05T07:10:18Z admin-1 received dispatch (inbox +1 lines)
+- 2026-11-05T07:10:18Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-05T07:10:18Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-05T07:10:19Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-05T07:12:29Z tools-1 received dispatch (inbox +7 lines)
+- 2026-11-05T07:14:11Z tools-1 received dispatch (inbox +4 lines)
+- 2026-11-05T07:20:00Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-05T07:21:11Z data-1 received dispatch (inbox +3 lines)
+- 2026-11-05T07:21:12Z trading-1 received dispatch (inbox +3 lines)
+- 2026-11-05T07:21:12Z admin-1 received dispatch (inbox +3 lines)
+- 2026-11-05T07:21:12Z orchestrator-1 received dispatch (inbox +5 lines)

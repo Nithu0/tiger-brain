@@ -13454,3 +13454,19 @@ Si fra hvis du velger noe annet enn det anbefalte.
 ## STATUS trading-1 (2026-11-05T06:45:58Z): Plattform, PC-delen av broen merget: https://github.com/Nithu0/command-center/pull/159
 - sc-bro samler oppgaver, beslutninger og plattformstatus, sender det som er endret, og utfører fullfor, avgjor, kommenter, send-til-agent og nytt-oppdrag i drift. Idempotent. Ikke aktivert. Testet med falsk GitHub og falsk app, ikke mot ekte ende til ende.
 - Appens side (rute, Prisma, kø) er skrevet, og reglene er testet, lokalt hos meg. Venter på at tools-1 pusher Solar-Consulting/plattform (repoet er tomt). Ikke blokkert ennå. Sett-status (boardet) er ikke med.
+
+## STATUS paal-1 (2026-11-05T07:09:43Z): aslisten #74 er merget og deployet
+https://github.com/Nithu0/aslisten-crm/pull/74 er merget (383996f), og Railway-deployen endte i SUCCESS 07:05Z. Saksiden er ikke klikket gjennom i nettleser. Dekning er enhetstester og `tsc`. Ingen migrering.
+
+## STATUS tools-1 (2026-11-05T07:10:16Z): innlogging på ekte adresse: alt jeg kan måle er grønt, men ingen person har logget inn ennå
+- **Adresse:** https://web-production-cd4b4.up.railway.app. Deployer selv fra main. Image i GHCR. plattform#1 og Terra#35 er merget.
+- **Målt:** /api/health 200 med databasen, Postgres og volum i EU, /oppgaver 307 til innlogging, /api/noe 401, /ingen-tilgang 200. Innlogging sender til riktig tenant med PKCE S256, state og nonce, og kaken er __Host-, Secure, HttpOnly, SameSite=lax. Microsoft viser innloggingssiden uten AADSTS-feil. Klienthemmeligheten er gyldig (200 fra Entra ved klient-innlogging, tokenet ble kastet). Brukerkartet har eier, utvikler, utvikler.
+- **Ikke målt:** selve turen tilbake (kode byttes mot token, sesjon, /oppgaver). Det krever en ekte bruker, og jeg logger ikke inn som noen. paal-1 tester samme vei mot falsk IdP. **Nithus første innlogging er det første ekte beviset**, og den kan tas når du vil. Hun/han ser foreløpig bare en tom Oppgaver-side.
+- **Fant og rettet på live:** en bruker i tenanten som ikke står i listen, ville gått i ring mellom appen og Microsoft (plattform#1).
+- Neste: innloggingslogg med revisjon og egen databasebruker, så layout. Sier fra hvis noe blokkerer.
+
+## STATUS fra learning-1 @ 2026-11-05T07:21:10Z: plattform#2 merget (sikkerhet, grunnmur)
+- Rensing av tekst og lenker, CSRF-sjekk, rate limit, og `test/rollematrise.test.ts`: CI blir rød hvis en side, API-rute eller handling mangler rettighetssjekk. Utlogging avviser kall fra andre sider.
+- Verifisert: CI grønn. Ikke testet: ekte innlogging mot hver rute (krever innlogget bruker).
+- Funn i base: `logg()` fra revisjon feiler via Prisma (jsonb). tools-1 bruker `pg`, så plattformen treffes ikke. PR i Terra kommer.
+- Neste: skjerm 3.

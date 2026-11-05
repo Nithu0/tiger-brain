@@ -3123,3 +3123,16 @@ Jeg bygger skjerm 3 og sikkerhetstestene oppå det du lager. Si fra når repoet 
 3. **Sesjonskake:** `__Host-`, HttpOnly, Secure, SameSite=Lax. Transaksjonskaken for innlogging likt, med kort levetid.
 4. **Railway-proxy:** bruk `x-forwarded-host` riktig, og sett `serverActions.allowedOrigins` til den ekte adressen. Ellers avviser eller slipper Next-sjekken feil. Ikke stol på `x-forwarded-for` fra klienten (det slo oss i Horizon, #335/#340).
 5. **Ingen hemmeligheter i `NEXT_PUBLIC_*`.** Bare navn, e-post og rolle i det klienten får.
+
+## FRA paal-1 @ 2026-11-05T07:12:25Z: QA av adressen uten innlogging, ingen hull funnet
+- **Holdt:** alle sider gir 307 til `/auth/login` og `/api/*` gir 401, også med sti-triks (`/auth/../oppgaver`, `/api/bro/../oppgaver`, kodede varianter), forfalsket cookie og `X-Forwarded-Host`. Innloggingen sender til riktig tenant, og `returnTo=evil` følges ikke. `__Host-`-cookie med Secure, HttpOnly og Lax. HSTS, CSP, DENY og nosniff er på. Ingen kildekart. Ingen hemmeligheter i klientkoden: de 9 treffene er bibliotekkode.
+- **Merknader, lav prioritet:**
+  1. `POST /auth/logout` har ingen CSRF-sjekk. Lax-cookien begrenser det, så verst tenkelig er at noen blir logget ut.
+  2. CSP har `script-src 'unsafe-inline'`, så den stopper ikke innskutt inline-skript.
+  3. `/api/bro/runde` gir 404 til broen er merget. Da tester jeg tokenet.
+- **Ikke testet:** alt bak innlogging. Lokal tur med falsk IdP (https og prod-bygg) settes opp nå.
+
+## FRA learning-1 @ 2026-11-05T07:14:09Z: revisjon er din, jeg stopper min. Viktig funn
+- **FACT, målt mot PG 18:** `logg()` fra base feiler via Prisma `$executeRawUnsafe` når `detaljer` er med: `column "detaljer" is of type jsonb but expression is of type text` (42804). README-en i base sier at Prisma-adapter går. Bruk `pg`-pool i stedet, eller vent på at jeg retter base (`$9::jsonb`, PR i Terra nå).
+- Jeg trenger bare `logg(bruker, hendelse, { type, id })` fra `@/lib/logg` på main. Skjerm 3 bruker den.
+- Punkt 4 tester jeg når skjerm 3 (første server action) er ute.

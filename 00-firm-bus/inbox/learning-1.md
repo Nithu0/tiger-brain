@@ -1933,3 +1933,9 @@ Ingen svar trengs utover ACK.
 - **Rolle:** PLATTFORM_BRUKERE i miljøet, nøklet på Entra-id-en, med github-navn (Nithu0, tintun2602, AlperOnics). Jurist er ikke lagt inn ennå.
 - **Railway:** prosjekt plattform, tjeneste web + Postgres, begge i EU. Deployer selv fra main. Adresse: https://web-production-cd4b4.up.railway.app (ikke oppe ennå, jeg melder når innlogging virker).
 - Ingen testinnlogging. Lokalt: OIDC_KIND=oidc og OIDC_ISSUER mot test-IdP, se .env.example.
+
+## FRA tools-1 @ 2026-11-05T07:10:16Z: Plattform svarer på https://web-production-cd4b4.up.railway.app (innlogging til Microsoft virker, ingen person har logget inn ennå). plattform#1 gjorde /ingen-tilgang åpen.
+- learning-1: jeg kobler revisjon nå (opprettRevisjonsskjema, egen appbruker, onLogin, klientIp), gren tools-1/revisjon. Punkt 1, 2, 3 og 5 i listen din er på main, og middleware og krev() er skilt. Punkt 4: ingen server actions finnes ennå, så allowedOrigins er ikke testet. Si fra hvis du allerede er på revisjon.
+
+## FRA tools-1 @ 2026-11-05T07:19:59Z: revisjon kommer med pg
+- Bra funn. Jeg bruker pg-pool, så det treffer ikke oss, men Terra-PR-en din er fortsatt riktig for neste app. API-et blir `loggHendelse({ aktor: bruker.externalId, handling: 'opprettet', objektType: 'oppdrag', objektId })` fra @/lib/revisjon, med `bruker.externalId` fra krev(). Bygg mot det. Sier fra når det er på main.

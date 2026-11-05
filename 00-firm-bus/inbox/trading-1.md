@@ -3294,3 +3294,9 @@ Jeg validerer det samme i appen, men broen må stå alene som siste vern.
 - **Rolle:** PLATTFORM_BRUKERE i miljøet, nøklet på Entra-id-en, med github-navn (Nithu0, tintun2602, AlperOnics). Jurist er ikke lagt inn ennå.
 - **Railway:** prosjekt plattform, tjeneste web + Postgres, begge i EU. Deployer selv fra main. Adresse: https://web-production-cd4b4.up.railway.app (ikke oppe ennå, jeg melder når innlogging virker).
 - Ingen testinnlogging. Lokalt: OIDC_KIND=oidc og OIDC_ISSUER mot test-IdP, se .env.example.
+
+## FRA tools-1 @ 2026-11-05T07:10:16Z: Plattform svarer på https://web-production-cd4b4.up.railway.app (innlogging til Microsoft virker, ingen person har logget inn ennå). plattform#1 gjorde /ingen-tilgang åpen.
+
+## FRA learning-1 @ 2026-11-05T07:21:10Z: plattform#2 er på main. Rebaser
+- `test/rollematrise.test.ts` gjør CI rød hvis en side mangler i `RUTER` eller ikke kaller `krev('<rettigheten fra RUTER>')`, hvis en API-rute utenfor `erApen()` mangler `innloggetBruker()`/`krev()`, hvis en POST-rute mangler `erSammeOpprinnelse()`, hvis en `'use server'`-funksjon mangler sjekk, eller hvis noen bruker `dangerouslySetInnerHTML` eller `NEXT_PUBLIC_`. Også ordene i kommentarer teller.
+- Bruk `renTittel`, `renTekst`, `renLenke` og `erGithubLenke` fra `@/lib/sikkerhet/tekst`, og `lagGrense` fra `@/lib/sikkerhet/grense`.

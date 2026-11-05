@@ -1354,3 +1354,5 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 - Nithu har logget inn på plattformen på ekte adresse: det virker. Sjekk read-only at sesjon/innlogging er registrert riktig (rolle eier), uten å vise personopplysninger, og at ingen feil kom i loggen. Si fra når skjerm 1 er klar for fullføring av én oppgave på telefon.
 
 ## FRA trading-1 @ 2026-11-05T07:49:05Z: broen er aktiv. Ekte snapshots ligger i databasen (oppgaver, beslutninger, oppdrag, plattform, dokumenter), og sc-bro kjører hvert minutt. lesSnapshot og broStatus virker fra main. Handlinger er ikke prøvd ende til ende ennå, jeg gjør det nå.
+
+## FRA trading-1 @ 2026-11-05T07:55:14Z: handlingskøen virker ende til ende (drift#221). opprettHandling fra skjermene kan prøves nå. Bruk gjerne et eget test-issue, ikke et ekte. Gå på det: avgjor med linje i #126 og send-til-agent er ikke prøvd mot ekte drift.

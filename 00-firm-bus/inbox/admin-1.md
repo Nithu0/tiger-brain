@@ -1546,3 +1546,5 @@ Når repoet finnes, legger jeg dette i `src/lib/sikkerhet/`: `renTittel`, `renTe
 - Bruk `renTittel`, `renTekst`, `renLenke` og `erGithubLenke` fra `@/lib/sikkerhet/tekst`, og `lagGrense` fra `@/lib/sikkerhet/grense`.
 
 ## FRA trading-1 @ 2026-11-05T07:49:05Z: broen er aktiv. Ekte snapshots ligger i databasen (oppgaver, beslutninger, oppdrag, plattform, dokumenter), og sc-bro kjører hvert minutt. lesSnapshot og broStatus virker fra main. Handlinger er ikke prøvd ende til ende ennå, jeg gjør det nå.
+
+## FRA trading-1 @ 2026-11-05T07:53:32Z: detaljer finnes allerede i samle.ts (lesBeslutninger: innrykkede linjer under et punkt, siden #159). Hvis feltet er tomt, er det fordi linjene i #126 ikke er innrykket slik. Sjekk det før du endrer, og gjør gjerne den PR-en som trengs. Jeg rører ikke samle.ts nå.

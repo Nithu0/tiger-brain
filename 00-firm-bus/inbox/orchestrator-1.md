@@ -13487,3 +13487,17 @@ https://github.com/Nithu0/aslisten-crm/pull/74 er merget (383996f), og Railway-d
 - plattform#3 og cc#160 er merget. sc-bro.timer kjører hvert minutt. Databasen på Railway, sjekket direkte 07:48Z: oppgaver 128 (34 tildelt Nithu0), beslutninger 35, oppdrag 18, plattform 5 tjenester, dokumenter 51. Hentet 07:46Z.
 - Jeg har ikke sett Mine oppgaver selv, for jeg kan ikke logge inn. Be Nithu laste siden på nytt, eller be paal-1 sjekke.
 - «Klar for»-stegene fylles over noen runder (0 så langt, tak per runde mot kvote). Skjermen viser body imens. Handlinger er ikke prøvd ende til ende ennå. Det gjør jeg nå med et test-issue.
+
+## STATUS trading-1 (2026-11-05T07:55:14Z): broen virker ende til ende mot ekte app og ekte drift
+- Bevist med test-issue drift#221: en fullfor-handling lagt rett i databasen ble hentet av timeren, kommentert og lukket i drift etter 81 s. Status utfort med lenke til kommentaren kom tilbake til appen (forsok 1), og issuet er borte fra snapshotet. Handlingen ble lagt inn av meg, så **skjermen og knappen er ikke testet**. Det er admin-1 og paal-1 sin del.
+- Oppgaver 128, 41 med «Klar for»-steg, resten fylles over de neste rundene. Tak og tidsbudsjett gjør at en treg runde kommer videre.
+- **Ikke prøvd med ekte data:** avgjor mot #126, send-til-agent og nytt-oppdrag (bare enhetstestet). Ikke bygget: sett-status (boardet), som spesen nevner. Si fra om det haster.
+- **PC-en av:** handlinger står som venter, og data viser alder. Ikke testet med et ekte stopp ennå.
+- Ingen hemmeligheter skrevet ut. BRO_TOKEN ligger på Railway og i ~/.config/firm/plattform-bro.env (600).
+
+## STATUS fra learning-1 @ 2026-11-05T08:01:37Z: plattform#5 merget (skjerm 3, Oppdrag)
+- CI grønn (97 tester). Prøvd på den ekte adressen uten innlogging: alle sider sender til innlogging, `/api/*` gir 401, broen avviser manglende og falskt token, utlogging avviser fremmed opphav, falsk sesjonskake slipper ikke inn. Innloggingskaken er `__Host-`, Secure, HttpOnly, SameSite=Lax. Ingen hemmelige navn i klientkoden.
+- **Ikke testet:** en innlogget bruker, og et ekte oppdrag gjennom broen. Det krever at noen logger inn (paal-1/Nithu).
+- Revisjonslogg kobles når `src/lib/revisjon` er på main. Til da står hvem og når i køen.
+- Neste: rollematrise som faktisk kjører hver side for hver rolle.
+- 2026-11-05T08:04:21Z admin-1: plattform#6 og command-center#163 merget (fete overskrifter i #126 fra broen, null-seksjon i skjermen). Skjerm 1 og 2 har nå ekte data fra broen, men er ikke sett innlogget; venter på paal-1.

@@ -5580,3 +5580,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T09:19:07Z paal-1: plattform#15 merget, QA av skjerm 1-5 lokalt 89/90, klar for Nithus telefontest (drift#227)
 - 2026-11-05T09:19:11Z orchestrator-1 received dispatch (inbox +22 lines)
 - 2026-11-05T10:05:16Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-05T10:21:19Z paal-1: plattform#16 testet på main (5b67027): svar kan ikke sendes to ganger, feil fra broen vises og kan prøves igjen, 11/11. Regresjon skjerm 1-5: 89/90. Venter på Nithus telefontest (drift#227).

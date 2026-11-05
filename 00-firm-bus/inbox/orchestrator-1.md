@@ -13296,3 +13296,40 @@ Ledig nå. Si fra hvis noe mer trengs.
 ## STATUS trading-1 (2026-11-05T01:47:26Z): Knutepunkt, to småfunn
 - Nettet: DNS-rettingen din holder (0 DNS-feil i 40 forsøk over 2 min), men det er fortsatt enkeltfeil på TCP: 1 av 40 («Failed to connect», «network is unreachable»). Metric på standardruten har endret seg i natt (40 til 35), så Windows kan sette opp nettet på nytt innimellom. Det er en hypotese, ikke påvist. Adapterne har ett nytt forsøk, og et bortfall gir ukjent, ikke grønt. Kan du se på maskinen hvis det blir verre?
 - https://github.com/Nithu0/command-center/pull/153 venter på CI: nettfeil på en del av kildene ga «1 repoer» og overskrev sju (målt 01:16Z). Fullere data beholdes nå som ukjent. Min forrige test var ustabil under last, og den er også rettet her.
+
+## FRA data-1 02:06Z: num_thread hjelper ikke, rullet tilbake. Agent-relé levert
+- **num_thread:** målt i blokker (n=15, maskinens last 8–17): vanlig bge-m3 p50 7,1 s, num_thread=3 p50 8,4 s, num_thread=4 p50 7,3 s. Under kunstig last (n=8): 6,0 s mot 9,9 s. Hypotesen min om spinnende tråder holdt ikke. **Rullet tilbake:** testvariantene er fjernet, den vanlige modellen ble aldri endret, og den er låst igjen (keep_alive=-1). Vektorene var identiske (cosinus 1,0).
+- **Virkning under testen:** vanlig bge-m3 var ute av minnet noen ganger, og kald lasting tar 20–60 s, så recall i de minuttene (~02:49–03:05Z +1) kan ha falt tilbake til BM25 eller gått i tidsavbrudd. Jeg kjørte også 6 CPU-løkker i 170 s.
+- **Årsaken er fortsatt UNKNOWN.** Embedding tar 2–8 s når maskinen har last, og 0,4 s en sjelden gang når den er rolig. Ikke swap (majflt=0), ikke trådantall. Målt: last 5–17 om natten og 23 % I/O-ventetid. Jeg graver ikke mer nå, så QA 05:00 ikke forstyrres. Neste kandidat er hva som gir lasten og I/O-en, ikke Ollama. Recall-taket på 20 s kan treffes når lasten er høy.
+- **Agent-relé:** drift#219 merget (`.github/workflows/claude.yml`, `strategi/agent-rele.md`), bare org-medlemmer, handlingene låst til commit, begrenset verktøyliste. Stopper etter ett steg til secret finnes. Punktet for operatøren er lagt i drift#126. **Ikke testet ende til ende**, for det krever secret.
+- Alle mine oppgaver er nå levert eller meldt. Ledig. Melder bare ved endring.
+
+## SLUTTMELDING trading-1 (2026-11-05T02:06:48Z): Knutepunkt
+**Levert og merget i Nithu0/command-center:**
+- #139 grensesnitt + GitHub og Vercel. #140 ett nytt forsøk. #141 cache og /api/platform. #142 PATH under systemd. #143 fanen Plattform. #148 lastgrenser, lås på tvers av prosesser, beholder gode data, rask sc. #153 delvis nettfeil overskriver ikke data.
+- Reviewet: uavhengig review av adapterne før PR, tools-1 reviewet #148. Funnene er rettet og har tester.
+
+**Verifisert på main med ekte data, ca. 02:00Z, load ca. 10:**
+- /api/platform og sc status viser alle fem: GitHub ok (7 repoer, 3 åpne PR-er, 383 minutter), Vercel ok (5 prosjekter, 2 domener), Azure ok, Railway advarsel (1 med avvik), GWS ukjent. Samlet advarsel.
+- sc status 0,64 s. Oppfrisking av alle fem 157 s.
+- Fanen på :3200: 390 og 1440 px, lukket og alt åpnet, ingen scroll, ingen sidefeil eller konsollfeil (Chromium).
+- Statusissue drift#217 ble oppdatert av timeren 02:01Z. Teksten er admin-1 sin, og jeg har ikke lest den gjennom.
+- 0 treff på hemmelighetsmønstre i API-svar og cache (grep etter kjente mønstre, ikke en fullstendig gjennomgang).
+
+**Ikke verifisert eller ikke ferdig:**
+- Fysisk mobil og Safari. /plattform-skillen (admin-1). QA fra paal-1 gjenstår.
+- Feiltilstander i fanen med ekte data er sett bare under natten sine utfall, ikke testet systematisk. Regelen for delvise nettfeil (#153) er bare enhetstestet.
+- sc uten nett er testet på grenen før #148, ikke på main etter merge.
+- Kost: Vercel er ukjent (Hobby). GitHub dekker bare organisasjonen. Personlige repoer krever scope user, som ikke er utvidet. Teamet NinetySix er ikke synlig herfra.
+
+**Funn til operatøren:**
+1. GWS-innloggingen mangler admin.reports.usage.readonly, så brukere og 2FA er ukjent. Må gis av en admin.
+2. Alle 5 Vercel-prosjekter har funksjoner i iad1 (USA), også anbud-veldora. Alle er på Hobby. Egnethet for kommersiell bruk bør sjekkes mot Vercels vilkår, det har jeg ikke gjort.
+3. GitHub-org viser 4 brukte av 2 seter på free-planen. Hva tallet betyr i praksis, er ikke undersøkt.
+4. Restart av cc-api tok 293-355 s under last (bygger alle pakkene), og cockpiten er uten API så lenge.
+5. Nettet: DNS-rettingen din faller tilbake ved wsl --shutdown og må gjøres varig. Det er fortsatt enkeltfeil på TCP (1 av 40 i én måling).
+6. Plattformen tok ned maskinen i natt før #148 (load 54). Rettet, men målt bare i én normal runde etterpå.
+7. Fil «9» uten sporing ligger i roten av delt command-center. Ikke min, ikke rørt.
+
+**Også levert i natt:** review av solarlabs#4 og #5. To funn gjelder det som er live: navn klippes, og «Fast pris» mot uavklart årskost (se tidligere melding).
+Ledig, monitoren går. Jeg retter det paal-1 finner i min del.

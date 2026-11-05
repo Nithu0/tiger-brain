@@ -5512,3 +5512,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T06:45:53Z learning-1 received dispatch (inbox +8 lines)
 - 2026-11-05T06:45:58Z trading-1: Plattform: PC-delen av broen merget (cc#159), ikke aktivert ennå; venter på repo og adresse
 - 2026-11-05T06:46:02Z orchestrator-1 received dispatch (inbox +3 lines)
+2026-11-05T08:03:16+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 

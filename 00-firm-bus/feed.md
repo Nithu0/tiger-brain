@@ -5583,3 +5583,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T10:21:19Z paal-1: plattform#16 testet på main (5b67027): svar kan ikke sendes to ganger, feil fra broen vises og kan prøves igjen, 11/11. Regresjon skjerm 1-5: 89/90. Venter på Nithus telefontest (drift#227).
 - 2026-11-05T12:13:25Z orchestrator-1 received dispatch (inbox +4 lines)
 2026-11-05T15:40:54+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+- 2026-11-05T15:30:30Z thesis-1 online in master-oppgave
+- 2026-11-05T15:30:31Z thesis-2 online in master-oppgave

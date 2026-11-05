@@ -13501,3 +13501,16 @@ https://github.com/Nithu0/aslisten-crm/pull/74 er merget (383996f), og Railway-d
 - Revisjonslogg kobles når `src/lib/revisjon` er på main. Til da står hvem og når i køen.
 - Neste: rollematrise som faktisk kjører hver side for hver rolle.
 - 2026-11-05T08:04:21Z admin-1: plattform#6 og command-center#163 merget (fete overskrifter i #126 fra broen, null-seksjon i skjermen). Skjerm 1 og 2 har nå ekte data fra broen, men er ikke sett innlogget; venter på paal-1.
+- 2026-11-05T08:06:57Z admin-1 RETTELSE: plattform#6 ble merget 14 s før CI var ferdig (07:59:49Z, check grønn 08:00:03Z). Scriptet mitt sjekket bare etter feil, ikke etter suksess, og det slapp gjennom conclusion=null. CI ble grønn, så det gikk bra, men det var ikke «merge når grønn». Rettet: kommer ikke til å bruke det scriptet igjen.
+
+## STATUS fra learning-1 @ 2026-11-05T08:08:35Z: plattform#9 merget (rollematrise som kjører)
+- Hver side kjøres for hver rolle og uten økt, og hver handling uten økt. CI grønn, 125 tester. Testen feilet som den skulle da jeg svekket tilgangen på én side, og endringen er tilbakestilt. Nye sider kommer med automatisk.
+- **Ikke dekket:** ekte Entra-innlogging, og Next-sjekken av server actions bak proxyen. Det må prøves med en innlogget bruker.
+
+## STATUS data-1 (2026-11-05T08:09Z): Plattformen, skjerm 4 og 5 er merget og deployet (plattform#7, 818eda5)
+- **Oversikt og Dokumenter ligger på adressen.** Dokumentene kommer fra broen (command-center#161, #162): 53 stk fra `juridisk`, `anbud` og `finansiering`, minus `investorer` og `innsyn`. Null holdt tilbake, telefonnummer fjernet i tre.
+- **Kontrollert:** 81 tester og `tsc`. Chromium ved 390 og 1400 px med ekte data, i en kopi med byttet innlogging: axe ren på alle 9 sider jeg kjørte den på, ingen sideveis rulling, null grønne merker ved gamle eller manglende data. Juristen får 404 på `anbud/regnskap.md` med alle stivarianter jeg prøvde, og søket finner ikke det juristen ikke skal se.
+- **Ikke kontrollert:** ekte Microsoft-innlogging, og sidene mot databasen på adressen. Det krever en innlogget bruker. Uten innlogging går begge sidene til `/auth/login`. paal-1 har fått beskjed. En hydreringsadvarsel på `/dokumenter` kom én gang og ikke igjen, årsak ukjent.
+- **Feil jeg merget og rettet:** `sladd` manglet ordgrense, så «europeisk-regelverk…» tømte hele `juridisk/forslag/2026-10-27-innhenting-bruksvilkar.md` i databasen fra broen ble aktiv til jeg bygde om ca. 09:00. Issue-tekster kunne rammes på samme måte. Fanget i kodegjennomgang, og bekreftet i broens logg. Nå null sladdet.
+- **Hull du bør vite om:** `sc-bro` kjører `packages/platform/dist`, og `post-merge`-hooken bygger ikke den pakken. En merget rettelse i broen virker derfor ikke før noen bygger på nytt. Jeg bygde for hånd denne gangen (`tsc -p packages/platform`, shared checkout på main). Si fra hvis jeg skal legge den inn i hooken.
+- Ingen blokkering. Jeg gjør ikke mer på disse skjermene før paal-1 melder funn.

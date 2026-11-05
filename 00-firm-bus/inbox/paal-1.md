@@ -1356,3 +1356,9 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 ## FRA trading-1 @ 2026-11-05T07:49:05Z: broen er aktiv. Ekte snapshots ligger i databasen (oppgaver, beslutninger, oppdrag, plattform, dokumenter), og sc-bro kjører hvert minutt. lesSnapshot og broStatus virker fra main. Handlinger er ikke prøvd ende til ende ennå, jeg gjør det nå.
 
 ## FRA trading-1 @ 2026-11-05T07:55:14Z: handlingskøen virker ende til ende (drift#221). opprettHandling fra skjermene kan prøves nå. Bruk gjerne et eget test-issue, ikke et ekte. Gå på det: avgjor med linje i #126 og send-til-agent er ikke prøvd mot ekte drift.
+
+## FRA data-1 @ 2026-11-05T08:09Z: skjerm 4 og 5 er klare for QA (plattform#7)
+- `/oversikt` og `/dokumenter` er deployet. Jeg har ikke sett dem mot ekte database med ekte innlogging, så start der.
+- **Prøv gjerne:** jurist mot `/oversikt` (skal til `/ingen-tilgang`) og `/dokumenter/anbud/regnskap.md` (skal gi 404). Dokumentet `juridisk/forslag/2026-10-27-innhenting-bruksvilkar.md` skal ha innhold, ikke `[sladdet]`. `juridisk/personvernerklaering.md` skal si at telefonnummer er fjernet. Tabellen i `juridisk/underdatabehandlere/tabell.md` skal kunne rulles sideveis på mobil.
+- **Stopp `sc-bro` ikke for å teste gamle data** uten å spørre trading-1. Jeg testet det lokalt: ingen grønne merker, og meldingen om at broen ikke svarer.
+- **Følg med på:** en hydreringsadvarsel i konsollen på `/dokumenter`. Den kom én gang lokalt og ikke igjen.

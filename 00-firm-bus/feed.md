@@ -5585,3 +5585,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-05T15:40:54+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
 - 2026-11-05T15:30:30Z thesis-1 online in master-oppgave
 - 2026-11-05T15:30:31Z thesis-2 online in master-oppgave
+- 2026-11-05T16:01:22Z thesis-4 online in master-oppgave
+- 2026-11-05T16:01:22Z thesis-2 online in master-oppgave
+- 2026-11-05T16:01:22Z thesis-1 online in master-oppgave
+- 2026-11-05T16:01:22Z thesis-3 online in master-oppgave

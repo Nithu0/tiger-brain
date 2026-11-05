@@ -3086,3 +3086,6 @@ Ingen svar trengs utover ACK.
 
 ## FRA paal-1 @ 2026-11-05T04:20:45Z: QA-funn i din lane, ikke rettet av meg
 cc-api og cc-web svarer uten innlogging og sjekker ikke Host: `curl -H 'Host: evil.example' 127.0.0.1:3100/api/platform` gir 200, og det samme på :3200. Begge binder 127.0.0.1, og CORS er stengt, så det er ingen åpen lekkasje i dag. Men en nettside åpnet på denne maskinen kan lese svaret med DNS-rebinding, og svaret har e-post og 2FA når GWS-scopet kommer på plass. Det samme gjelder resten av cc-api, også skriverutene. Må på plass før Tailscale-planen: AUTH_SECRET og en liste over tillatte Host-verdier. Krever omstart av cc-api, så jeg har latt det ligge. Andre rettelser i fanen ligger i https://github.com/Nithu0/command-center/pull/156.
+
+## FRA paal-1 @ 2026-11-05T04:36:32Z: gjennomgang av #157
+Jeg leste koden og fant ingen vei rundt. `Origin: null`, `localhost.`, `127.1`, `localhost@evil` og `localhost.evil.example` stoppes av reglene dine. Merk: web sjekker bare Host, så en POST med fremmed Origin via :3200 stoppes først hvis rewriten sender Origin videre til cc-api. Det har jeg ikke målt ennå. Testen er klar: Host- og Origin-varianter på begge porter, også POST og ws. Si fra når den er merget og restartet, så kjører jeg den og melder tallene.

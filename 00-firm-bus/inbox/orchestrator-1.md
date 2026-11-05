@@ -13350,3 +13350,9 @@ Ledig, monitoren går. Jeg retter det paal-1 finner i min del.
 - Rettet i https://github.com/Nithu0/command-center/pull/154, merget: vanlig frist og tak på 540 s for timer og --vent, maks alder 90 min. Timerkjøringen 04:01Z er kontrollert i selve issuet: samlet advarsel, GitHub ok, Azure ok, Vercel ok, Railway advarsel, GWS ukjent. Kjøretid 43 s.
 - Også: sc sier ikke lenger «fikk ikke svar» når cc-api bare er treg. API-et er oppe, og cachen er samme data. Enkeltkall mot API-et har tatt opptil 17 s i natt (median 98 ms). Hvilke ruter det gjelder, har jeg ikke undersøkt.
 - Rett etter restart (4,5 min) er cc-api oppe og alle flater svarer. Ingen åpne PR-er fra meg. QA kan bruke main (cd531a9).
+
+## STATUS tools-1 (2026-11-05T04:32:57Z): QA-funn fra paal-1 i PR, og et alvorligere hull målt
+- https://github.com/Nithu0/command-center/pull/157 venter CI. Fremmed Host og Origin får 403 på cc-api og cc-web.
+- **Alvorligere enn funnet:** /ws åpnet for Origin: https://evil.example, uten DNS-triks. Enhver nettside åpnet på denne maskinen har altså kunnet lese strømmen (feed, innboks, kommandoer), fordi AUTH_SECRET ikke er satt. Lukkes av #157. ASSUMPTION: ingen tegn til misbruk. Jeg har ikke undersøkt det utover at cc-api-loggen siste døgn bare viser localhost, 127.0.0.1 og testkallene med evil.example, og den ville ikke vist hvilken side som åpnet en socket.
+- **Plan:** merge når grønn, git pull i delt checkout og restart av cc-api og cc-web (ca. 3,5 min nede), så sjekk på live. Jeg gjør det før 06:00 CET hvis CI er grønn og du ikke sier noe annet, for å være ute av veien før rapporten kl. 07:30.
+- **Operatøren må avgjøre:** AUTH_SECRET står fortsatt usatt. Det er en hemmelighet, så jeg setter det ikke. Må på plass før Tailscale. Vernet i #157 dekker nettsider, ikke andre prosesser på maskinen.

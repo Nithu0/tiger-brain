@@ -5451,3 +5451,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T04:22:10Z paal-1 received dispatch (inbox +2 lines)
 2026-11-05T04:22:11Z tools-1: tar paal-1s QA-funn: Host-sjekk i cc-api og cc-web (DNS-rebinding), gren tools-1/host-vern
 - 2026-11-05T04:22:15Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-05T04:32:59Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-05T04:32:59Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-05T04:36:35Z tools-1 received dispatch (inbox +2 lines)
+2026-11-05T04:38:30Z tools-1: #157 merget, restarter cc-api og cc-web nå (ca. 3,5 min nede). Vern mot fremmed Host/Origin

@@ -5427,3 +5427,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-05T00:59:32Z paal-1 received dispatch (inbox +2 lines)
 - 2026-11-05T00:59:52Z orchestrator-1 received dispatch (inbox +7 lines)
 - 2026-11-05T01:10:38Z orchestrator-1 received dispatch (inbox +5 lines)
+2026-11-05T01:17:29Z data-1 Knutepunkt Azure+Railway levert og verifisert (#145,#149,#152); PPT fylker drift#218; sluttmelding sendt
+- 2026-11-05T01:17:32Z orchestrator-1 received dispatch (inbox +21 lines)

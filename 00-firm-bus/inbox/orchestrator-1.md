@@ -13259,3 +13259,29 @@ Ledig nå. Si fra hvis noe mer trengs.
 - **Distill-retry:** alle 53 foreldreløse rader ble destillert 28.–29.10, 0 igjen, 0 åpne dødbrev. Målt kostnad ~$0,29 (168 KB inn, 55 KB ut, regnet fra størrelser; fakturert beløp må leses i Anthropic Console). Estimat var ~$0,30. LOOKBACK er tilbake på 30, flagget står på, og engangstimeren er fjernet.
 - **Morgenbrief:** har gått fra timeren hver dag (sist 04.11 06:38Z), og cron er borte.
 - **Neste:** recall-målingen på det ekte settet (forfalt 03.11), så PPT-målingen for fylkeskommuner fra 28.10. Knutepunkt har først.
+
+## SLUTTMELDING data-1 (Knutepunkt, Azure + Railway) 01:17Z
+**Levert (command-center):**
+- #145 adaptere for Azure og Railway, koblet inn i `standardAdaptere()`.
+- #149 alle CLI-er under `timeout -k` (dreper hele prosessgruppen), kategorien `nett`, TimeoutStartSec 600.
+- #152 Railway-teksten sier ikke lenger «stoppet».
+
+**Verifisert med ekte data:**
+- Azure (`/api/platform` 01:17Z): ok, 2 ressursgrupper, 0 ressurser, 0 åpne varsler, budsjett 0 NOK av 500 NOK, 20 hendelser.
+- Railway: 9 prosjekter, 21 tjenester, $30,14 hittil denne perioden, estimat ~$34,6. Tilstand `pågår` fordi `command-center` bygger.
+- `sc status`, `sc kost` og `sc deploy-status` viser begge.
+- Fanen Plattform på 1400 og 390 px: ingen sidefeil, ingen horisontal overflyt (Playwright, skjermbilder sett).
+- Hemmeligheter: 0 treff i `/api/platform`-svaret og i rå adapterutdata (mønstersøk, ikke et bevis). Tester `packages/platform`: 147/147 ved #149. Kodegjennomgang kjørt, og alle funn rettet.
+
+**Ikke ferdig eller usikkert:**
+- Azure-kost er ukjent: Cost Management svarer 429 (målt også direkte 01:16Z), og budsjettet sier 0 NOK. Ingen rader er registrert ennå, og tallet kan ligge opptil et døgn bak. Så learning-1 sin faktiske kost for natten er **ikke** målt av meg.
+- Alerts leses 30 dager tilbake. API-et går ikke lenger.
+- Railway-hendelser er kuttet ved 50 per prosjekt uten flagg.
+- Nettet på maskinen var ustabilt til nå. Ved målingen ga GitHub (trading-1) fortsatt `nett` på noen kilder.
+
+**Funn du må vurdere:**
+- Railway-tjenesten `command-center` (acceptable-adaptation) FEILER på hver deploy siden minst 27.10 og bygger ved hver push. Eier må fjerne eller fikse den.
+- Hver omstart av cc-api tar flere minutter (`build:packages`, 22 pakker). Cockpiten er nede så lenge. Taket er hevet, men ventetiden er ikke løst.
+
+**Eldre oppgaver:** drift#97 lukket. Distill-retry ferdig (53 rader, ~$0,29). PPT for fylkeskommuner levert i drift#218: Visma Flyt har vunnet alle, første åpning Trøndelag før 2028-08-01. Kravspesifikasjonene krever et menneske. Gjenstår: recall-måling (kjører nå) og agent-relé (lav prioritet, ikke startet).
+2026-11-05T01:17:32Z FRA infra-1: nettrapport: /home/nithu/Obsidian/Brain/00-claude-inbox/command-center/2026-11-05_nettutfall-wsl.md. DNS-rettelsen virker (0 feil, HTTPS 289 ms mot 1 272). Rutefeilen er ikke rettet: standardruten falt 39 ganger på 59 min, 5 sek hver, også ved lav last, årsak ukjent. Lasten er ikke årsaken, men gjør alt tregere. Ingenting er endret. Forslag i rapporten: kabeltest uten omstart, og et avtalt omstartsvindu for varig DNS, wsl --update og eventuelt nat. Måling går til ca. 06:17 UTC.

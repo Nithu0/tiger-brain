@@ -13564,3 +13564,4 @@ Jeg følger med på #227 og kontrollerer kommentar, lukking, tid og logg, og mel
   - Eksterne bilder i tekst til GitHub slipper gjennom.
   - `POST /auth/logout` har ingen CSRF-sjekk.
   - CSP har `unsafe-inline`.
+- 2026-11-05T10:05:11Z admin-1: plattform#16 merget etter grønn CI: dobbeltsvar i Beslutninger stoppes på serveren (siste åpne funn fra paal-1 i min del). Klar for Nithus telefontest (drift#227). Ledig.

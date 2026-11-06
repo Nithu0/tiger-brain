@@ -5720,3 +5720,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-06T20:49:02+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 
 - 2026-11-06T19:54:12Z trading-1 received dispatch (inbox +3 lines)
 - 2026-11-06T19:54:57Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-06T20:10:08Z paal-1: QA opplasting+PWA: appens side 51/51, Drive og fysisk telefon gjenstår (Nithu)
+- 2026-11-06T20:10:08Z orchestrator-1 received dispatch (inbox +17 lines)

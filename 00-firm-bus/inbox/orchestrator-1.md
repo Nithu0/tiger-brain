@@ -13636,3 +13636,21 @@ To `bfs`-prosesser søker fra `/`, også gjennom `/mnt/c`: `-iname *7152*` har g
 - Ingen bfs eller find kjører lenger.
 ## 2026-11-06T19:31:39Z — fra thesis-4
 bfs-søket etter *7152* (min økt) er stoppet. *centenol*-søket hører til thesis-2 (claude-pid 1783487), ikke meg.
+
+## STATUS paal-1 (2026-11-06T20:10:08Z): QA av opplasting (plattform#17, #21, #24) og PWA (#20, #22). Appens side holder, men Drive er ikke testet
+- **Testet lokalt, prod-bygg ved 412 px med Android-agent, falsk innlogging og falsk bro:**
+  - **Hva som lastes opp:** liten pdf, 1, 10 og 25 MB, bilde fra kamera (jpg) og heic.
+  - **Hva som stoppes:** 25 MB + 1 byte, både i skjemaet og på serveren. exe, `.pdf.exe`, html, svg, tom fil, pdf som egentlig er html, og txt med nullbyte gir riktig feil.
+  - **Filnavn:** sti og retningstegn fjernes. 300 tegn avvises.
+  - **Roller:** 13 forsøk på kategori rollen ikke har, sendt rett til serveren (blant annet utvikler i 01 og 03, jurist utenfor 02 og 06, `__proto__`, store bokstaver), ga alle `kategori`. Utvikler og jurist ser bare sine egne opplastinger, eier ser alle.
+  - **Opphav og dobbeltsending:** fremmed Origin, `Origin: null` og manglende Origin avvises. Samme nøkkel to ganger gir én opplasting.
+  - **Broen:** får nøyaktig samme bytes. Feil md5 og lenke utenfor Drive gir `feilet`, og kopien blir. Riktig kvittering gir `arkivert` med lenke, og kopien er slettet (`innhold` er null, og broen får 404). Arkivert kan ikke bli feilet etterpå.
+  - **Resultat:** 51 av 51 sjekker som teller, er ok. Åtte røde i første runde var feil i testen min, og jeg kontrollerte dem i databasen.
+- **PWA i drift etter #22:** manifest, `sw.js`, `push.js`, `tema.js` og ikonene gir 200 uten innlogging. Ikonene er riktige PNG-er. De nye åpne stiene slipper ikke noe annet gjennom (13 forsøk). Rettelsen var tools-1s #22. Mitt duplikat #23 er lukket.
+- **Åpent:** en zip med navn `.docx` godtas (learning-1 herder dette). Opplasting av 10 og 25 MB tok rundt 90 s her under last.
+- **Ikke testet:**
+  - Ekte Drive: riktig mappe, delt disk, og md5 fra Drive mot appen.
+  - Ekte innlogging.
+  - Installering på fysisk Android, og om push faktisk kommer frem. Chromium startet ikke under last 40–50 i kveld, så Chromes egen sjekk av installerbarhet med service worker bak innlogging er heller ikke kjørt.
+  - Merk: det jeg starter lokalt i bakgrunnen, blir avsluttet når jobben er ferdig, så hver test må starte oppsettet selv.
+- **Trengs for ferdig:** når broen har lagt én ekte fil i Drive, ber du Nithu installere appen, laste opp ett dokument og fullføre drift#227 i samme økt. Jeg kontrollerer mappe, md5, at kopien er slettet, revisjonsloggen og push.

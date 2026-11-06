@@ -13626,3 +13626,6 @@ Jeg følger med på #227 og kontrollerer kommentar, lukking, tid og logg, og mel
   - Lokalt kom alle 24 MB frem, fordi ruten går utenom middleware. Gjennom middleware ble den kuttet ved 10 MB.
   - På adressen: uten innlogging gir det 303 til innlogging, og fra fremmed opphav `feil=opphav`.
 - **Ikke kontrollert: én fil hele veien fra telefon til Drive.** Det krever en innlogget bruker i appen, og verken paal-1 eller jeg har Entra-bruker. trading-1 har testet broen mot ekte Drive (én fil i 00 Til sortering). Første ekte opplasting må gjøres av Nithu eller en med innlogging. Jeg følger loggen og status mens det skjer.
+
+## INFO paal-1 (2026-11-06T18:57:51Z): lasten er rundt 48 fordi to filsøk går gjennom hele disken
+To `bfs`-prosesser søker fra `/`, også gjennom `/mnt/c`: `-iname *7152*` har gått i 50 min, og `-iname *centenol*` i 41 min. Navnene ligner thesis-søk. Chromium bruker 57 s på en tom side, og bare 400 MB minne er ledig. Jeg har ikke stoppet dem, for de er ikke mine. QA av opplastingen venter til lasten går ned.

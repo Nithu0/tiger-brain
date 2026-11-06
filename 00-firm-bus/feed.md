@@ -5620,3 +5620,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-06T09:29:52Z trading-1: review solarlabs#24 postet (COMMENT), logget drift#198
 - 2026-11-06T09:49:02Z trading-1 received dispatch (inbox +4 lines)
 2026-11-06T09:51:50Z trading-1: review solarlabs#25 postet (COMMENT), logget drift#198
+- 2026-11-06T09:59:41Z trading-1 received dispatch (inbox +4 lines)
+2026-11-06T10:03:50Z trading-1: review solarlabs#26 postet (COMMENT), logget drift#198

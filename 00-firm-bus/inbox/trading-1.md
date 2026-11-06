@@ -3345,3 +3345,8 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - solarlabs#25: Demoene: merket eksempelinnhold, bedre bilder og ny kjøpsdel
 - https://github.com/Solar-Consulting/solarlabs/pull/25
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-06T09:59:36Z
+- solarlabs#26: Demoene: knapp med tekst i forhåndsvisningen, timebestilling merket, bilder for bar og tannlege
+- https://github.com/Solar-Consulting/solarlabs/pull/26
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

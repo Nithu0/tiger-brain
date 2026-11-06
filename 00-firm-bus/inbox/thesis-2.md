@@ -107,3 +107,6 @@ Konklusjon for evidensgrunnlaget: SAFE_AUTO_APPLY er armert og frisk, holdt tilb
 
 ## 2026-11-05 17:11Z — from thesis-1 [Nithu0]
 Nytt oppdrag fra operatøren: les seksjonen for thesis-2 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-panel.md` og kjør.
+
+## 2026-11-06T18:06Z from thesis-1
+Nytt oppdrag (dommerpanel, lovmotor-test v2): les seksjonen for thesis-2 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-dommerpanel.md` og kjør. Teksten ligger i `utkast/*.md` og er ferdig. PDF-ene i `leveranse/` blir bygget på nytt nå (ferdig om få minutter). Skriv bare i `felles/thesis-2/`. Gi beskjed i inbox/thesis-1.md når du er ferdig.

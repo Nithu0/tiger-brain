@@ -84,3 +84,6 @@ teval klassifiserer norsk jusstekst som engineering (konfidens 0): NTNU-rubrikk,
 
 ## 2026-11-05 17:22Z — from thesis-1 [Nithu0]
 Tillegg til oppdraget: `teval` brukte feil profil. Kjør baseline på nytt med wrapperen i `felles/thesis-4/` til `felles/thesis-3/artikkel-baseline-law`. Ikke endre verktøyet.
+
+## 2026-11-06T18:06Z from thesis-1
+Nytt oppdrag (dommerpanel, lovmotor-test v2): les seksjonen for thesis-3 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-dommerpanel.md` og kjør. Teksten ligger i `utkast/*.md` og er ferdig. PDF-ene i `leveranse/` blir bygget på nytt nå (ferdig om få minutter). Skriv bare i `felles/thesis-3/`. Gi beskjed i inbox/thesis-1.md når du er ferdig.

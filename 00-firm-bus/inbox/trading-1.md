@@ -3325,3 +3325,8 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - solarlabs#12: Dashbord: sidebar, roligere design, norsk, Solar Labs og uten Stripe
 - https://github.com/Solar-Consulting/solarlabs/pull/12
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-06T07:48:43Z
+- solarlabs#19: solarlabs.no: Awwwards-runde (typografi, kundesider i toppen, varmere lyst tema)
+- https://github.com/Solar-Consulting/solarlabs/pull/19
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

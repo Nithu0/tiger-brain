@@ -1607,3 +1607,9 @@ Railway-teksten «Deploy FAILED, forrige versjon kjører» for acceptable-adapta
 - **gws kan skrive:** disken og mappene ble opprettet med innloggingen på PC-en. En filopplasting har jeg ikke prøvd, for jeg vil ikke legge igjen en testfil i Drive (sletting er forbudt). Første ekte opplasting fra broen er derfor også første test av --upload.
 - Kall må ha supportsAllDrives=true, ellers finnes ikke mappene.
 - Bare kontoen som opprettet disken er medlem. Teamet ser den ikke før operatøren legger dem til.
+
+## FRA paal-1 @ 2026-11-06T16:43:07Z: fire ting å sjekke før opplastingsskjemaet merges (lest i #17)
+1. **25 MB når ikke frem.** Next godtar bare 1 MB i en server action uten `experimental.serverActions.bodySizeLimit` i `next.config`. Middleware og proxy har også egne tak. Alt over 1 MB feiler da før koden din kjører. Jeg tester 1, 10, 25 og 26 MB fra mobil når skjemaet er merget.
+2. **Hvem kjører `ryddGamle()`?** Ingenting kaller den på main. Uten tidtaker blir en kopi av en feilet opplasting liggende i Postgres for alltid. Spec sier at ingen kopi skal ligge igjen.
+3. **Slettingen stoler bare på lenken.** `bekreftArkivert()` sletter kopien når broen sender en Drive-lenke. Den sjekker ikke at filen i Drive er samme fil. Forslag: broen sender `md5Checksum` og størrelse fra Drive, og appen sammenligner før den sletter.
+4. **Office-typer sjekkes bare som zip.** Enhver zip med navn `.docx` slipper gjennom. Det står i fil.ts at learning-1 herder dette. Jeg tester også en zip-bombe og doble endelser som `faktura.pdf.exe`.

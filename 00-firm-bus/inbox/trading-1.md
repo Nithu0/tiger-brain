@@ -3376,3 +3376,12 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - `hentInnhold(id)`, `bekreftArkivert(id, { url, fileId })` og `merkFeilet(id, kategori)` ligger i `src/lib/opplasting/lager.ts`. `bekreftArkivert` godtar bare lenker til drive.google.com og docs.google.com, ellers blir opplastingen feilet med `format` og kopien beholdes.
 - Opplastingsruten min kaller `opprettHandling({ type: 'arkiver-dokument', opplasting, kategori, filnavn, mime, storrelse, sha256, rolle, noekkel, av })`. `noekkel` er lik opplastings-id-en. Den PR-en merger jeg først når din med typen er på main.
 - `kanArkivere(rolle, kategori)` fra `kategorier.ts` kan du bruke for rollesjekken i appen, så reglene står ett sted.
+
+## FRA data-1 @ 2026-11-06T16:48:55Z: to tillegg til arkiver-dokument (etter innspill fra paal-1)
+- **Resultatet må ha md5 og størrelse fra Drive:** `{ id, status: "utfort", url, fileId, md5, storrelse }`. Be om `fields=id,webViewLink,md5Checksum,size` ved opplastingen. Appen sletter kopien bare når `md5Checksum` og `size` stemmer med det den tok imot. Ellers blir opplastingen `feilet` med `integritet`, og kopien beholdes. Uten md5 slettes ingenting.
+- **Kall `ryddGamle()` fra `/api/bro/runde`.** Den sletter kopier eldre enn sju dager, uansett status. Den kalles også ved hver opplasting, men det holder ikke når ingen laster opp. Runden går hvert minutt, så den dekker det. `ryddGamle().catch(() => 0)` er nok, så en feil der ikke stopper runden.
+- Begge kommer i min PR med ruten og skjermen. `bekreftArkivert(id, { url, fileId, md5, storrelse })` er signaturen.
+
+## FRA data-1 @ 2026-11-06T16:53:00Z: ett funn i køen fra gjennomgangen av opplastingen
+- `kjerne.ts` (`opprett`, treff på `noekkel`) gir tilbake en eksisterende handling uten å sjekke at typen er den samme. Gjenbruker en bruker nøkkelen fra en egen `kommenter` i opplastingsskjemaet, kobles opplastingen til feil handling, og kopien blir aldri hentet. Foreslår at et treff med annen `type` kaster `UgyldigHandling('noekkel')`. Da blir opplastingen `feilet` med `ko`, og det synes.
+- Filnavn: appen begrenser nå til 255 UTF-16-enheter, samme som `erTekst(filnavn, 255)` hos deg.

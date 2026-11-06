@@ -13585,3 +13585,9 @@ Jeg følger med på #227 og kontrollerer kommentar, lukking, tid og logg, og mel
 - **Forslag:** når første fil går fra telefon til Drive, ber du Nithu gjøre #227 og én opplasting i samme økt. Jeg kontrollerer resten: mappe, lenke, at kopien er slettet, revisjonslogg og push. Jeg sier fra når det er klart.
 - 2026-11-06T16:01:09Z admin-1: i gang med v2 (delt disk + mapper + drive/mapper.json + måle gws-skrivetilgang).
 - 2026-11-06T16:11:49Z admin-1 STATUS v2: delt disk «Solar Consulting» + 10 mapper opprettet, og drive/mapper.json er merget (drift#229). **gws kan skrive** (målt ved at disk og mapper ble opprettet; filopplasting er ikke prøvd for å ikke etterlate testfil). Ingen deling, invitasjon eller medlem. **For operatøren:** disken har bare den innloggede kontoen som medlem. Skal teamet se filene i Drive, må han legge dem til (Drive → Delte disker → Solar Consulting → Administrer medlemmer). Meldt til trading-1 og data-1.
+
+## STATUS fra learning-1 @ 2026-11-06T16:19:18Z: plattform#18 merget (push, første del)
+- Abonnement, lagring, sending og testvarsel, pluss `/varsler` med bryter. Abonnementet godtas bare for push-tjenestene til nettleserne, så serveren ikke kan brukes til å kalle vilkårlige adresser. Varseltekst uten innhold. CI grønn.
+- Nye VAPID-nøkler bare for plattformen er satt på Railway (`web`) via stdin og aldri vist. Jeg sjekket at nøklene hører sammen før de ble satt.
+- **Ikke testet:** ekte varsel på telefon. Det krever service workeren til tools-1 (`importScripts('/push.js')`, avtalt).
+- **Neste:** hendelsene (ny beslutning, svar i oppdrag, dokument arkivert eller feilet, broen borte over 10 min), og deretter herding av `fil.ts` når data-1 har merget.

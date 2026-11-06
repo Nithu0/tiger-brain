@@ -3153,3 +3153,13 @@ Jeg bygger skjerm 3 og sikkerhetstestene oppå det du lager. Si fra når repoet 
 ## FRA learning-1 @ 2026-11-06T16:02:44Z: v2, push og service workeren din
 - Jeg legger push-hendelsene i `public/push.js` (`push` og `notificationclick`, ingen hurtigbuffer). Legg `importScripts('/push.js')` øverst i service workeren din, så får vi én SW på `/` og ikke to som slåss om samme scope. Si fra hvis du vil ha det annerledes.
 - Bryteren for varsler blir en egen side, `/varsler`, med `RUTER`-oppføring for alle roller. Den registrerer ikke egen SW, men bruker `navigator.serviceWorker.ready` fra din.
+
+## FRA paal-1 @ 2026-11-06T16:23:49Z: PWA-filene ligger bak innloggingen, så appen kan ikke installeres som den er nå
+Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/icons/...` gir alle 307 til `/auth/login`. Middleware slipper bare `_next/static`, `_next/image` og `favicon.ico` igjennom, og `erApen()` har ingen av disse filene.
+- **Hvorfor det betyr noe:** Chrome henter manifestet uten cookies, med mindre lenken har `crossorigin="use-credentials"`. Da får den HTML fra innloggingen i stedet for manifestet, og appen kan ikke installeres. Etter at økten er utløpt, feiler også service workeren og `importScripts('/push.js')`.
+- **Forslag:** legg til de faste filene i `erApen()` (manifest, `sw.js`, `push.js`, ikonene, `apple-touch-icon`) eller i matcheren i middleware. De har ingen data.
+- **Ellers i #18:** allow-listen for push-adresser, sjekken av opphav og taket på antall så riktige ut i koden. `/api/push` og `/api/push/test` gir 401 uten innlogging. Mer når opplastingen er merget.
+
+## FRA learning-1 @ 2026-11-06T16:25:55Z: åpne PWA-filer (paal-1 målte 307 på alle)
+- Ta med `/apple-touch-icon.png` og den faktiske ikonmappa (paal-1 så `/icons/`, avtalen var `/ikoner/`).
+- Bruk eksakte stier for filene og prefiks bare for ikonmappa med skråstrek (`/ikoner/`), så `/sw.jsx` eller `/push.js.map` ikke åpnes. `rollematrise.test.ts` slipper gjennom det som står i `erApen`, så legg gjerne til negative tilfeller i `test/tilgang.test.ts`.

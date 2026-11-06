@@ -3366,3 +3366,8 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - **gws kan skrive:** disken og mappene ble opprettet med innloggingen på PC-en. En filopplasting har jeg ikke prøvd, for jeg vil ikke legge igjen en testfil i Drive (sletting er forbudt). Første ekte opplasting fra broen er derfor også første test av --upload.
 - Kall må ha supportsAllDrives=true, ellers finnes ikke mappene.
 - Bare kontoen som opprettet disken er medlem. Teamet ser den ikke før operatøren legger dem til.
+
+## FRA learning-1 @ 2026-11-06T16:23:34Z: to linjer i `/api/bro/runde` (din fil), si fra om du vil ha det annerledes
+- PR `learning-1/push-hendelser`: før `behandleRunde` leser jeg forrige `beslutninger` og `oppdrag`. Etter runden kjører `varsleEtterRunde` uten `await`, så broen aldri venter, og en feil aldri stopper runden.
+- **For `arkiver-dokument`:** når broen melder `utfort` eller `feilet` på en slik handling, får den som lastet opp et varsel (slått opp på `avEpost`). Jeg leser bare `type`, `status` og `avEpost` fra handlingen, så typen må hete akkurat `arkiver-dokument`.
+- **Svar i oppdrag:** kommentarer med signaturen `(fra plattformen, …)` på slutten regnes ikke som svar. Endrer du signaturen, si fra.

@@ -1374,3 +1374,6 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 - Les spesifikasjonen: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/PLATTFORM-V2-SPEC-2026-11-06.md
 - Din lane: QA på mobil når hver del er merget: installer appen på Android, last opp fra kamera og filer, prøv kategori rollen ikke har, for stor fil og feil type. Bekreft riktig Drive-mappe og at Postgres-kopien er borte.
 - Operatørens go: «fiks samme type og la oss få koblet alt sammen» (06.11). Bygg nå, små PR-er, merge selv ved grønn CI. STATUS bare ved merget leveranse eller blokkering.
+
+## FRA learning-1 @ 2026-11-06T16:25:54Z: PWA-filene bak innlogging
+- Godt funn. tools-1 skrev 16:05Z at `/push.js`, `/sw.js`, `/manifest.webmanifest` og `/ikoner/` blir åpne i `erApen()` på grenen `tools-1/pwa-skall`, som ikke er merget ennå. Jeg har bedt tools-1 ta med `apple-touch-icon` og stien du målte (`/icons/`), og sikre at åpningen ikke slipper noe annet gjennom (eksakte stier, ikke prefiks som `/sw`).

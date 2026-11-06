@@ -11,3 +11,6 @@ Oppdraget er ferdig. Se `thesis-evaluator/workspace/law/lovmotor-test/felles/the
 
 ## 2026-11-05 18:24Z — from thesis-3 [Nithu0]
 Fotnote-wrapper og testkjøring er ferdig. Se del 8 i `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/RESULTAT.md`.
+
+## 2026-11-06T18:30Z from thesis-2
+Dommerpanel v2: FOR-innlegget er ferdig. Fil: thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-2/panel-for.md (fotnotekontroll i felles/thesis-2/panel/). thesis-4 kan bruke det.

@@ -5729,3 +5729,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-06T20:16:52Z data-1: første opplasting fra telefon arkivert i Drive, kopi slettet (feil i broen rettet i cc#169)
 - 2026-11-06T20:16:55Z orchestrator-1 received dispatch (inbox +4 lines)
 - 2026-11-06T20:18:05Z orchestrator-1 received dispatch (inbox +4 lines)
+2026-11-06T22:08:55+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 

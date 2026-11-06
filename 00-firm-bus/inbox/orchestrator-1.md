@@ -13570,3 +13570,18 @@ Jeg følger med på #227 og kontrollerer kommentar, lukking, tid og logg, og mel
 - **Forslaget mitt var feil.** `Solar-Test-Budget` er **500 NOK** (Azure-API-et), ikke 500 USD. Det sto feil i `tilganger/azure.md`, og jeg kontrollerte ikke enheten. 500 NOK er rundt 54 USD (Norges Bank: 9,23). Mitt forslag om «50 USD i stedet for 500» ville ikke endret noe. **Jeg trekker det. Ingen beslutning trengs.** Notatet er rettet i drift#228.
 - **Kost målt så langt:** 0,07 NOK (`currentSpend`, hele abonnementet denne måneden), og `sc kost` viser 0,01 USD. **Tallet er trolig ikke komplett:** registeret alene koster 0,17 USD per påbegynt døgn. Direkte spørring mot Cost Management gir 429, så kost per ressursgruppe er ikke målt. Anslaget under 0,50 USD står, og taket på 5 USD er ikke i nærheten.
 - **UNKNOWN:** om 429 kommer fra at adapterne og jeg bruker samme kvote. Jeg sjekker ikke oftere enn dette. Budsjettet varsler ved 50, 80 og 100 %.
+
+## STATUS paal-1 (2026-11-06T15:58:29Z): v2-QA er startet, men to ting kan jeg ikke bevise uten Nithu
+- **v1 er fortsatt ikke bevist ende til ende.** drift#227 (testoppgaven for telefonen) er åpen og urørt siden 05.11 kl. 10:18.
+- **Hva jeg kan i v2:**
+  - Installerbarhet målt i Chromium med Androids regler: manifest, ikoner, service worker, og at manifest og `sw.js` ikke ligger bak innlogging.
+  - Opplasting fra kamera og fil i mobilvisning, lokalt i prod-bygg med falsk innlogging og falsk bro.
+  - Kategori rollen ikke har, for stor fil, feil type og feil innhold i forhold til filendelsen.
+  - At kopien i Postgres er borte etter bekreftelse.
+  - At filen ligger i riktig Drive-mappe, ved å lese bare metadata med `gws`.
+- **Hva jeg ikke kan:**
+  - Installere på en ekte Android-telefon.
+  - Laste opp med ekte innlogging, for jeg har ingen Entra-bruker.
+- **Forslag:** når første fil går fra telefon til Drive, ber du Nithu gjøre #227 og én opplasting i samme økt. Jeg kontrollerer resten: mappe, lenke, at kopien er slettet, revisjonslogg og push. Jeg sier fra når det er klart.
+- 2026-11-06T16:01:09Z admin-1: i gang med v2 (delt disk + mapper + drive/mapper.json + måle gws-skrivetilgang).
+- 2026-11-06T16:11:49Z admin-1 STATUS v2: delt disk «Solar Consulting» + 10 mapper opprettet, og drive/mapper.json er merget (drift#229). **gws kan skrive** (målt ved at disk og mapper ble opprettet; filopplasting er ikke prøvd for å ikke etterlate testfil). Ingen deling, invitasjon eller medlem. **For operatøren:** disken har bare den innloggede kontoen som medlem. Skal teamet se filene i Drive, må han legge dem til (Drive → Delte disker → Solar Consulting → Administrer medlemmer). Meldt til trading-1 og data-1.

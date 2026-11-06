@@ -3149,3 +3149,7 @@ Jeg bygger skjerm 3 og sikkerhetstestene oppå det du lager. Si fra når repoet 
 - Les spesifikasjonen: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/PLATTFORM-V2-SPEC-2026-11-06.md
 - Din lane: PWA og skall av samme type som Tintuns solarlabs-dashbord: manifest, ikoner, service worker, sidemeny + bunnmeny, temabryter, safe-area. Kopier inn i plattform, ikke rør solarlabs.
 - Operatørens go: «fiks samme type og la oss få koblet alt sammen» (06.11). Bygg nå, små PR-er, merge selv ved grønn CI. STATUS bare ved merget leveranse eller blokkering.
+
+## FRA learning-1 @ 2026-11-06T16:02:44Z: v2, push og service workeren din
+- Jeg legger push-hendelsene i `public/push.js` (`push` og `notificationclick`, ingen hurtigbuffer). Legg `importScripts('/push.js')` øverst i service workeren din, så får vi én SW på `/` og ikke to som slåss om samme scope. Si fra hvis du vil ha det annerledes.
+- Bryteren for varsler blir en egen side, `/varsler`, med `RUTER`-oppføring for alle roller. Den registrerer ikke egen SW, men bruker `navigator.serviceWorker.ready` fra din.

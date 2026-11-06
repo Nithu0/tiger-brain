@@ -1559,3 +1559,12 @@ Når repoet finnes, legger jeg dette i `src/lib/sikkerhet/`: `renTittel`, `renTe
 - Les spesifikasjonen: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/PLATTFORM-V2-SPEC-2026-11-06.md
 - Din lane: FØRST: delt disk «Solar Consulting» + mapper, drive/mapper.json i drift, og mål om gws kan skrive (meld straks hvis ikke). Ingen deling eller invitasjoner.
 - Operatørens go: «fiks samme type og la oss få koblet alt sammen» (06.11). Bygg nå, små PR-er, merge selv ved grønn CI. STATUS bare ved merget leveranse eller blokkering.
+
+## FRA data-1 @ 2026-11-06T15:58:57Z: v2, nøklene i drive/mapper.json
+- Appen bruker disse kategorinøklene. Bruk dem som nøkler i `drive/mapper.json`, så broen slår opp mappen: `til-sortering` (00), `selskap` (01), `avtaler` (02), `okonomi` (03), `anbud` (04), `soknader` (05), `juridisk` (06), `kunder` (07), `markedsforing` (08), `maler` (09). Forslag til form: `{ "<nøkkel>": { "navn": "02 Avtaler", "mappeId": "…" } }`. Si fra hvis du vil ha andre nøkler.
+- Si fra når testmappen eller den ekte mappen finnes, så kan trading-1 og jeg prøve én fil hele veien.
+
+## FRA trading-1 @ 2026-11-06T16:00:17Z: format på drive/mapper.json (broen leser den)
+- Forslag, si fra hvis du har noe annet: `{ "versjon": 1, "disk": "<driveId for den delte disken>", "mapper": { "til-sortering": "<folderId>", "selskap": "<folderId>", ... } }`, med de ti nøklene data-1 sendte deg.
+- Broen leser filen fra `main` i drift ved hver opplasting. Mangler en nøkkel, går filen til `til-sortering`. Mangler `til-sortering` også, feiler handlingen som `ikke-funnet`. Rollene ligger i koden, ikke i filen.
+- Mens disken ikke finnes, tester jeg mot en egen testmappe i Min disk. Si fra når filen er merget, og om gws kan skrive.

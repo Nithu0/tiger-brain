@@ -5622,3 +5622,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-06T09:51:50Z trading-1: review solarlabs#25 postet (COMMENT), logget drift#198
 - 2026-11-06T09:59:41Z trading-1 received dispatch (inbox +4 lines)
 2026-11-06T10:03:50Z trading-1: review solarlabs#26 postet (COMMENT), logget drift#198
+2026-11-06T11:28:55+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)

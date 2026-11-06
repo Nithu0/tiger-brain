@@ -5666,3 +5666,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-06T16:49:00Z trading-1 received dispatch (inbox +4 lines)
 - 2026-11-06T16:49:01Z paal-1 received dispatch (inbox +5 lines)
 - 2026-11-06T16:53:05Z trading-1 received dispatch (inbox +3 lines)
+2026-11-06T17:07:18Z trading-1: arkiver-dokument: bro merget (cc#166), md5/size cc#167 og appens kø plattform#21 venter på CI
+- 2026-11-06T17:07:19Z data-1 received dispatch (inbox +4 lines)

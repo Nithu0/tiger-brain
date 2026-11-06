@@ -13607,3 +13607,22 @@ Jeg følger med på #227 og kontrollerer kommentar, lukking, tid og logg, og mel
 ## STATUS fra trading-1 @ 2026-11-06T17:18:42Z: broen kjører ny kode (arkiver-dokument)
 - Sjekkouten står på 383ffad (#167). `packages/platform` er bygget, og `sc-bro-install.sh` er kjørt med TimeoutStartSec 900.
 - Første runde på ny kode: kontakt=true, ingen feil. Broen tar `arkiver-dokument` så snart data-1 sin opplastingsrute legger handlinger i køen.
+
+## STATUS tools-1 (2026-11-06T17:29:36Z): v2, PWA og skall er i drift (plattform#20 og #22, ad43e92)
+- **Levert:** installerbar app (manifest, ikoner for Solar Consulting, én service worker uten hurtigbuffer som laster push.js), sidemeny fra 1024 px, toppfelt og bunnmeny på telefon, safe-area og mørk stripe bak iOS-statuslinjen, lyst og mørkt tema, og lenke til Solar Labs-dashbordet for eier og utvikler. Bygger på Tintuns dashbord, solarlabs ikke rørt.
+- **Målt på live:** manifest, sw.js, push.js, tema.js, apple-touch-icon og ikonene gir 200 med riktig type uten innlogging. /oppgaver og /sw.jsx gir fortsatt 307 til innlogging. Manifestet har riktig navn, start_url /oppgaver og standalone.
+- **Feil fra meg, rettet:** Dockerfile tok aldri med public/, så #20 og push.js fra #18 ga 404 i drift til #22. Nå finnes en test for det. paal-1 målte det samme.
+- **Ikke målt av meg:** skallet innlogget, og installasjon på ekte telefon. paal-1 gjør det nå.
+
+## STATUS data-1 (2026-11-06T17:35:15Z): v2, opplasting i Dokumenter er merget og deployet (plattform#17, #24)
+- **I drift:** «Last opp» i menyen (`/opplasting`): fil eller kamera, kategori med forslag fra filnavnet, kopi i Postgres, `arkiver-dokument` i køen. Listen viser venter, sendt, arkivert med Drive-lenke, eller feilet med grunn.
+- **Grenser:**
+  - Rolle mot kategori sjekkes på serveren. Inntil 25 MB, og bare tillatte typer.
+  - Kopien slettes bare når md5 og størrelse fra Drive stemmer. Kopier eldre enn sju dager slettes uansett. Timeren som gjør det også når broen er borte, er #26, ved grønn CI.
+  - Revisjonsloggen får bare id-en, aldri filnavnet.
+- **Kontrollert:**
+  - 171 tester og `tsc`.
+  - En kritisk kodegjennomgang fant ingen vei rundt rolle eller kategori. Funnene derfra er rettet.
+  - Lokalt kom alle 24 MB frem, fordi ruten går utenom middleware. Gjennom middleware ble den kuttet ved 10 MB.
+  - På adressen: uten innlogging gir det 303 til innlogging, og fra fremmed opphav `feil=opphav`.
+- **Ikke kontrollert: én fil hele veien fra telefon til Drive.** Det krever en innlogget bruker i appen, og verken paal-1 eller jeg har Entra-bruker. trading-1 har testet broen mot ekte Drive (én fil i 00 Til sortering). Første ekte opplasting må gjøres av Nithu eller en med innlogging. Jeg følger loggen og status mens det skjer.

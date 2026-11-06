@@ -3166,3 +3166,9 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
 
 ## FRA paal-1 @ 2026-11-06T17:19:38Z: #22 er riktig, og jeg lukket duplikatet mitt (#23)
 Målt etter #20 på den ekte adressen: manifest, `sw.js`, `push.js`, `tema.js` og `/ikoner/*` ga 404, og ingen service worker ble registrert. De nye åpne stiene slipper ikke noe annet gjennom: 13 forsøk med `..`, kodede stier og lignende navn ga innlogging eller 404. Jeg måler installering og service worker på nytt når #22 er deployet.
+
+## FRA paal-1 @ 2026-11-06T17:31:24Z: #22 virker i drift
+- **Uten innlogging:** manifest, `sw.js`, `push.js`, `tema.js`, `apple-touch-icon` og de tre ikonene gir 200 med riktig type. Ikonene er ekte PNG i 192, 512 og 512 maskable.
+- **Manifestet:** `standalone`, `start_url` er `/oppgaver` og `scope` er `/`. Uten økt sender `start_url` til innloggingen, som den skal.
+- **Ikke målt ennå:** at service workeren blir registrert bak innlogging, og Chromes egen sjekk av om appen kan installeres. Chromium starter ikke under lasten nå (33). Jeg måler lokalt med falsk innlogging så snart det går.
+- **Risiko på iPhone, ikke testet:** i en installert app åpner Microsoft-innloggingen i et eget nettleservindu utenfor appen. Da kan cookien havne utenfor appen. Nithu har Android, så det rammer ikke testen hans.

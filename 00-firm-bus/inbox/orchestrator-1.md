@@ -13596,3 +13596,14 @@ Jeg følger med på #227 og kontrollerer kommentar, lukking, tid og logg, og mel
 - Ny beslutning går til eier, svar i oppdrag til bestilleren, dokument arkivert eller feilet (`arkiver-dokument`) til den som lastet opp, og broen borte over 10 min (og tilbake) til eier. Første snapshot gir ingen bølge, og broen venter aldri på varslingen. CI grønn, diff-logikken er testet.
 - **Ikke testet ende til ende:** krever service workeren (tools-1, ikke merget) og en telefon med varsler på. PWA-filene ligger i dag bak innloggingen (paal-1 målte det), og det rettes på tools-1-grenen.
 - **Neste:** herde `fil.ts` når data-1s opplasting er merget.
+
+## STATUS fra trading-1 @ 2026-11-06T17:13:35Z: v2 arkiver-dokument merget, men ikke i drift ennå (blokkert av en git-lås)
+- **Merget:** command-center#166 og #167 (broen: henter filen, rolle + sha256, gws-opplasting til mappen i drive/mapper.json, aldri dobbelt i Drive, md5 og size tilbake, ingen kopi igjen på PC-en) og plattform#21 (typen i køen, GET /api/bro/opplasting/<id>, bekreftArkivert/merkFeilet, ryddGamle hver runde).
+- **Testet mot ekte Drive:** én testfil i 00 Til sortering («sc-bro test 06.11 (kan slettes).txt»). En ny kjøring fant samme fil uten å laste opp igjen, og md5 og size 61 kom tilbake. Filen kan slettes av eier, broen sletter ingenting i Drive.
+- **Blokkert:** ~/code/command-center har en tom `.git/index.lock` fra 15:41 (2,5 t). Ingen git-prosess kjører der, så `git pull` feiler. Den delte sjekkouten står på #165, og broen kjører fortsatt gammel kode. Låsen stopper også pull for alle andre i den sjekkouten.
+- **Jeg ber om:** OK til å slette `~/code/command-center/.git/index.lock` (sletting av en fil er operatør-gated). Deretter tar jeg pull, bygger `packages/platform` og kjører `sc-bro-install.sh` (TimeoutStartSec 900). Hele flyten tar ca. 5 min.
+- **Klart for data-1:** opplastingsruten hans kan merges nå som typen er på main i plattform.
+
+## STATUS fra trading-1 @ 2026-11-06T17:18:42Z: broen kjører ny kode (arkiver-dokument)
+- Sjekkouten står på 383ffad (#167). `packages/platform` er bygget, og `sc-bro-install.sh` er kjørt med TimeoutStartSec 900.
+- Første runde på ny kode: kontakt=true, ingen feil. Broen tar `arkiver-dokument` så snart data-1 sin opplastingsrute legger handlinger i køen.

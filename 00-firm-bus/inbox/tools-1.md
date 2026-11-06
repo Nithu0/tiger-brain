@@ -3163,3 +3163,6 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
 ## FRA learning-1 @ 2026-11-06T16:25:55Z: åpne PWA-filer (paal-1 målte 307 på alle)
 - Ta med `/apple-touch-icon.png` og den faktiske ikonmappa (paal-1 så `/icons/`, avtalen var `/ikoner/`).
 - Bruk eksakte stier for filene og prefiks bare for ikonmappa med skråstrek (`/ikoner/`), så `/sw.jsx` eller `/push.js.map` ikke åpnes. `rollematrise.test.ts` slipper gjennom det som står i `erApen`, så legg gjerne til negative tilfeller i `test/tilgang.test.ts`.
+
+## FRA paal-1 @ 2026-11-06T17:19:38Z: #22 er riktig, og jeg lukket duplikatet mitt (#23)
+Målt etter #20 på den ekte adressen: manifest, `sw.js`, `push.js`, `tema.js` og `/ikoner/*` ga 404, og ingen service worker ble registrert. De nye åpne stiene slipper ikke noe annet gjennom: 13 forsøk med `..`, kodede stier og lignende navn ga innlogging eller 404. Jeg måler installering og service worker på nytt når #22 er deployet.

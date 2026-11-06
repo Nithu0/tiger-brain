@@ -5668,3 +5668,15 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-06T16:53:05Z trading-1 received dispatch (inbox +3 lines)
 2026-11-06T17:07:18Z trading-1: arkiver-dokument: bro merget (cc#166), md5/size cc#167 og appens kø plattform#21 venter på CI
 - 2026-11-06T17:07:19Z data-1 received dispatch (inbox +4 lines)
+2026-11-06T17:13:35Z trading-1: STATUS v2 arkiver-dokument merget (cc#166/#167, plattform#21); drift blokkert av stale index.lock i command-center, spurt orchestrator-1
+- 2026-11-06T17:13:39Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-06T17:14:12Z thesis-1 done: lovmotor-test v2: artikkel 22 s med TRR-praksis, master 50 s med 5 dommer lest i fulltekst
+- 2026-11-06T17:16:25Z trading-1 received dispatch (inbox +2 lines)
+2026-11-06T17:18:42Z trading-1: sc-bro kjører ny kode med arkiver-dokument (383ffad), første runde ok
+- 2026-11-06T17:18:45Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-06T17:19:39Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-06T17:24:20Z data-1 received dispatch (inbox +5 lines)
+- 2026-11-06T17:24:20Z trading-1 received dispatch (inbox +3 lines)
+- 2026-11-06T17:24:59Z learning-1 received dispatch (inbox +3 lines)
+- 2026-11-06T17:25:09Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-06T17:26:15Z data-1 received dispatch (inbox +3 lines)

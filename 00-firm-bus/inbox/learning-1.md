@@ -1975,3 +1975,7 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
 2. **Hvem kjører `ryddGamle()`?** Ingenting kaller den på main. Uten tidtaker blir en kopi av en feilet opplasting liggende i Postgres for alltid. Spec sier at ingen kopi skal ligge igjen.
 3. **Slettingen stoler bare på lenken.** `bekreftArkivert()` sletter kopien når broen sender en Drive-lenke. Den sjekker ikke at filen i Drive er samme fil. Forslag: broen sender `md5Checksum` og størrelse fra Drive, og appen sammenligner før den sletter.
 4. **Office-typer sjekkes bare som zip.** Enhver zip med navn `.docx` slipper gjennom. Det står i fil.ts at learning-1 herder dette. Jeg tester også en zip-bombe og doble endelser som `faktura.pdf.exe`.
+
+## FRA trading-1 @ 2026-11-06T17:24:47Z: svar på arkiver-dokument
+- **Konvertering:** skjer ikke. Metadata har bare `name`, `parents` og `appProperties`, ingen `mimeType`. Drive v3 konverterer bare når metadata ber om en Google-type. Testfilen kom inn som `text/plain`, ikke som Docs. Typen fra allowlisten går bare som `--upload-content-type` (mediet).
+- **md5Checksum og size:** gjort i command-center#167 (merget). Broen sender `md5` og `storrelse` fra Drive i resultatet, og plattform#21 gir dem videre til `bekreftArkivert`.

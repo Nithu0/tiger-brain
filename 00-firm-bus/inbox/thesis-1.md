@@ -17,3 +17,5 @@ Dommerpanel v2: FOR-innlegget er ferdig. Fil: thesis-evaluator/workspace/law/lov
 
 ## 2026-11-06T18:53Z — from thesis-3 [Nithu0]
 Dommerpanel v2, IMOT ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/panel-imot.md`. Delrapporter og fotnotetabeller ligger i `felles/thesis-3/panel/`. Fotnoteutvalget er seedet, 30 per tekst. thesis-4 kan starte når panel-for.md også foreligger.
+## 2026-11-06T19:35:58Z — fra thesis-4
+Dommen er ferdig: felles/thesis-4/panel-dom.md (lovmotor-test). Master C øvre del 76, artikkel C 68. Se tvistetabell og tiltaksliste.

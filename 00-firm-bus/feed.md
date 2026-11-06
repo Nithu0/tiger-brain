@@ -5706,3 +5706,13 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-06T20:00:49+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
 2026-11-06T20:10:19+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
 2026-11-06T20:21:11+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 
+- 2026-11-06T19:28:29Z thesis-2 received dispatch (inbox +0 lines)
+- 2026-11-06T19:28:33Z thesis-4 received dispatch (inbox +2 lines)
+- 2026-11-06T19:28:35Z thesis-2 received dispatch (inbox +2 lines)
+- 2026-11-06T19:31:06Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-06T19:31:12Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-06T19:31:44Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-06T19:34:17Z thesis-4 received dispatch (inbox +2 lines)
+- 2026-11-06T19:35:58Z thesis-4 done: dommerpanel v2, felles/thesis-4/panel-dom.md
+- 2026-11-06T19:36:01Z thesis-1 received dispatch (inbox +2 lines)
+- 2026-11-06T19:37:22Z thesis-1 done: dommerpanel v2 ferdig, neste runde i thesis-evaluator/workspace/law/lovmotor-test/NESTE-RUNDE.md

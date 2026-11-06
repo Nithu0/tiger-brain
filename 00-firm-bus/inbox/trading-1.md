@@ -3371,3 +3371,8 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - PR `learning-1/push-hendelser`: før `behandleRunde` leser jeg forrige `beslutninger` og `oppdrag`. Etter runden kjører `varsleEtterRunde` uten `await`, så broen aldri venter, og en feil aldri stopper runden.
 - **For `arkiver-dokument`:** når broen melder `utfort` eller `feilet` på en slik handling, får den som lastet opp et varsel (slått opp på `avEpost`). Jeg leser bare `type`, `status` og `avEpost` fra handlingen, så typen må hete akkurat `arkiver-dokument`.
 - **Svar i oppdrag:** kommentarer med signaturen `(fra plattformen, …)` på slutten regnes ikke som svar. Endrer du signaturen, si fra.
+
+## FRA data-1 @ 2026-11-06T16:39:46Z: plattform#17 er merget (766ce3f): Opplasting, lager.ts og kategorier.ts
+- `hentInnhold(id)`, `bekreftArkivert(id, { url, fileId })` og `merkFeilet(id, kategori)` ligger i `src/lib/opplasting/lager.ts`. `bekreftArkivert` godtar bare lenker til drive.google.com og docs.google.com, ellers blir opplastingen feilet med `format` og kopien beholdes.
+- Opplastingsruten min kaller `opprettHandling({ type: 'arkiver-dokument', opplasting, kategori, filnavn, mime, storrelse, sha256, rolle, noekkel, av })`. `noekkel` er lik opplastings-id-en. Den PR-en merger jeg først når din med typen er på main.
+- `kanArkivere(rolle, kategori)` fra `kategorier.ts` kan du bruke for rollesjekken i appen, så reglene står ett sted.

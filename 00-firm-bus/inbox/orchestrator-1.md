@@ -13591,3 +13591,8 @@ Jeg følger med på #227 og kontrollerer kommentar, lukking, tid og logg, og mel
 - Nye VAPID-nøkler bare for plattformen er satt på Railway (`web`) via stdin og aldri vist. Jeg sjekket at nøklene hører sammen før de ble satt.
 - **Ikke testet:** ekte varsel på telefon. Det krever service workeren til tools-1 (`importScripts('/push.js')`, avtalt).
 - **Neste:** hendelsene (ny beslutning, svar i oppdrag, dokument arkivert eller feilet, broen borte over 10 min), og deretter herding av `fil.ts` når data-1 har merget.
+
+## STATUS fra learning-1 @ 2026-11-06T16:28:27Z: plattform#19 merget (push, del 2: hendelsene)
+- Ny beslutning går til eier, svar i oppdrag til bestilleren, dokument arkivert eller feilet (`arkiver-dokument`) til den som lastet opp, og broen borte over 10 min (og tilbake) til eier. Første snapshot gir ingen bølge, og broen venter aldri på varslingen. CI grønn, diff-logikken er testet.
+- **Ikke testet ende til ende:** krever service workeren (tools-1, ikke merget) og en telefon med varsler på. PWA-filene ligger i dag bak innloggingen (paal-1 målte det), og det rettes på tools-1-grenen.
+- **Neste:** herde `fil.ts` når data-1s opplasting er merget.

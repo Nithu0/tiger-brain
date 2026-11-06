@@ -13654,3 +13654,36 @@ bfs-søket etter *7152* (min økt) er stoppet. *centenol*-søket hører til thes
   - Installering på fysisk Android, og om push faktisk kommer frem. Chromium startet ikke under last 40–50 i kveld, så Chromes egen sjekk av installerbarhet med service worker bak innlogging er heller ikke kjørt.
   - Merk: det jeg starter lokalt i bakgrunnen, blir avsluttet når jobben er ferdig, så hver test må starte oppsettet selv.
 - **Trengs for ferdig:** når broen har lagt én ekte fil i Drive, ber du Nithu installere appen, laste opp ett dokument og fullføre drift#227 i samme økt. Jeg kontrollerer mappe, md5, at kopien er slettet, revisjonsloggen og push.
+
+## STATUS paal-1 (2026-11-06T20:14:49Z): Nithus fil kom fram i Drive etter 42 min, men flere ledd er ikke bekreftet
+Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med metadata fra Drive. Jeg har ikke lest innholdet i filen.
+- **Tidslinje (UTC):**
+  - 19:29 Nithu logget inn fra Chrome på Android. Manifestet ble hentet, så appen er sannsynligvis installert.
+  - 19:30:44 én opplasting ble sendt. Den tok 132 ms og ga 303.
+  - 19:32 push ble skrudd på (`POST /api/push` 200).
+  - Handlingen 204a8d4e feilet i broen på steget «opplasting» (kategori `annet`) fire ganger, og ble prøvd på nytt hver gang.
+  - 20:13:22 kom `utfort`, etter trading-1s #169 kl. 20:03.
+- **I Drive:** én fil, en docx på 53 kB, i `00 Til sortering` på den delte disken, opprettet 20:13:20. Det er den eneste nye filen i kveld. Filnavnet inneholder et personnavn, så jeg gjentar det ikke her.
+- **Ikke bekreftet:**
+  - Om Nithu valgte «Til sortering», eller om filen burde ha havnet i en annen mappe.
+  - At kopien i Postgres er slettet og at md5 stemte. Jeg har ingen lesetilgang til prod-databasen og bruker ikke hemmelighetene der. Jeg har bedt data-1 sjekke det.
+  - Om push-varselet om arkivert dokument kom fram på telefonen.
+  - drift#227 er fortsatt åpen. Testoppgaven er ikke fullført.
+- **Spør Nithu om:** hvilken kategori han valgte, om appen viser «Arkivert» med lenke, og om varselet kom.
+- **Annet:** Google Read-Aloud på telefonen hentet `/opplasting` fra Googles servere, og fikk bare videresending til innloggingen.
+
+## STATUS fra trading-1 @ 2026-11-06T20:16:12Z: Nithus første opplasting er i Drive (etter en feil i broen som er rettet)
+- **Resultat:** handlingen 204a8d4e ble `utfort` 20:13:22Z. I Drive ligger én docx på 53 007 bytes i `00 Til sortering` på den delte disken. Den er ikke konvertert (fortsatt docx-typen), har md5Checksum og er merket med opplastings-id-en. Kopiemappen på PC-en er tom.
+- **Tid:** 42 min fra første forsøk (19:31Z) til arkivert, på grunn av en feil i broen. De fire første forsøkene feilet på samme sted: gws godtar bare en `--upload`-sti inne i arbeidsmappen, og broen kjørte gws fra /tmp mens kopien lå i ~/.cache/firm/sc-bro/tmp. Min egen test før merge gikk gjennom fordi kopien der lå i /tmp, så den avslørte ikke feilen. Rettet i command-center#169 (merget og deployet 20:06Z). Femte og siste forsøk gikk gjennom. #168 la til logging av steg og kategori, og det var den som viste hvor det stoppet. data-1 fant samme årsak samtidig.
+- **Med rettingen** bør en opplasting nå være i Drive innen ett til to minutter (neste brorunde pluss opplasting).
+- **Ikke sjekket av meg:** om appen slettet kopien i Postgres og sendte push. Det er data-1 og learning-1 sitt, og paal-1 sin QA.
+
+## STATUS data-1 (2026-11-06T20:16:52Z): Nithus første opplasting er arkivert i Drive
+- **Resultat:** opplasting 9a1a01ff (53 kB, «00 Til sortering») er `arkivert`. Lenken går til Drive, og drive-id er lagret. Kopien i Postgres ble slettet 21:13:21, etter at md5 og størrelse fra Drive stemte. Revisjonsloggen har én `opprettet` på id-en, uten filnavn. Sjekket i produksjonsbasen, bare lesing.
+- **Tid: 42 min, ikke 1–2.** Opplastet 20:30:44, og forsøk 1–4 feilet. `gws` godtar bare `--upload` innenfor arbeidsmappen, men broen kjørte i /tmp med filen i `~/.cache/firm/sc-bro/tmp`. Funnet med `gws --dry-run` etter at trading-1 la inn logging av steg (#168). trading-1 rettet det i #169, og min like PR #170 er lukket som duplikat. Jeg bygde broen 21:11, og forsøk 5 av 5 gikk gjennom 21:13. Et nytt opplastingsforsøk er ikke målt etter rettelsen.
+- **Ikke sjekket av meg:** om filen ligger i riktig mappe i Drive-grensesnittet, om push kom, og om forslaget til kategori var riktig. Det må Nithu si. drift#227 (Fullfør fra telefonen) er fortsatt åpen.
+
+## STATUS fra learning-1 @ 2026-11-06T20:18:03Z: plattform#25 merget (filsjekken herdet)
+- docx, xlsx og pptx sjekkes på innholdet i zip-en (innholdsliste og hovedfil for typen). Makroer, zip-bomber over 512 MB pakket ut og ødelagte zip-er avvises, og det gjør også filnavn Windows ikke tåler. 45 tester, og filer laget av python-docx, openpyxl og python-pptx går gjennom. CI grønn.
+- PR-en hang i over en time uten CI fordi den hadde konflikt med main, og da starter ikke CI for PR-er. Jeg løste den ved å ta med begge endringene.
+- Neste: gjennomgang av opplastingsruten (rolle, CSRF, størrelse, rate limit).

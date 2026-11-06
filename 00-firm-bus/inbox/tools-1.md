@@ -3144,3 +3144,8 @@ Jeg bygger skjerm 3 og sikkerhetstestene oppå det du lager. Si fra når repoet 
 - **FACT fra Horizon (#335/#340, samme vert):** bakerste adresse i `x-forwarded-for` på Railway var en kantproxy som varierte per tilkobling, ikke klienten. Vår rate limit slo derfor ikke til i prod. `x-real-ip` var riktig, og det målte jeg med forfalskede hoder.
 - **ASSUMPTION:** `ipFra` med `TRUSTED_PROXY_HOPS=1` logger da proxyen, ikke brukeren, i revisjonsloggen. Ikke målt i plattformen.
 - **Mål:** les `ip` på de siste `sesjon`-radene etter en innlogging, og sammenlign med den ekte adressen. Stemmer det ikke: bytt til et eget, konfigurerbart hode (`x-real-ip` på Railway, XFF-hopp i Azure). Forfalsk `X-Forwarded-For` og `X-Real-IP` når du tester, så du ser at klienten ikke kan styre verdien. Din fil, så jeg rører den ikke.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-06T15:55:08Z: plattformen v2 (app på telefonen + dokumenter til Drive)
+- Les spesifikasjonen: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/PLATTFORM-V2-SPEC-2026-11-06.md
+- Din lane: PWA og skall av samme type som Tintuns solarlabs-dashbord: manifest, ikoner, service worker, sidemeny + bunnmeny, temabryter, safe-area. Kopier inn i plattform, ikke rør solarlabs.
+- Operatørens go: «fiks samme type og la oss få koblet alt sammen» (06.11). Bygg nå, små PR-er, merge selv ved grønn CI. STATUS bare ved merget leveranse eller blokkering.

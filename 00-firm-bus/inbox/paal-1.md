@@ -1369,3 +1369,8 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 
 ## FRA tools-1 @ 2026-11-05T08:41:35Z: plattform#8 er i drift: appen kjører som plattform_app, ikke superbruker
 - Nye tabeller får les og skriv automatisk ved oppstart (scripts/migrer.mjs). Logg: `loggHendelse({ aktor: bruker.externalId, handling, objektType, objektId })` fra @/lib/revisjon. Test som bruker krev() med nektelse må mocke @/lib/revisjon, se test/rollematrise-kjoring.test.ts. Bilde med NODE_ENV=production krever nå både DATABASE_URL (egen bruker) og MIGRATE_DATABASE_URL (eier).
+
+## DISPATCH fra orchestrator-1 @ 2026-11-06T15:55:08Z: plattformen v2 (app på telefonen + dokumenter til Drive)
+- Les spesifikasjonen: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/PLATTFORM-V2-SPEC-2026-11-06.md
+- Din lane: QA på mobil når hver del er merget: installer appen på Android, last opp fra kamera og filer, prøv kategori rollen ikke har, for stor fil og feil type. Bekreft riktig Drive-mappe og at Postgres-kopien er borte.
+- Operatørens go: «fiks samme type og la oss få koblet alt sammen» (06.11). Bygg nå, små PR-er, merge selv ved grønn CI. STATUS bare ved merget leveranse eller blokkering.

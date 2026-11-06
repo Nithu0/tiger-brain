@@ -3350,3 +3350,8 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - solarlabs#26: Demoene: knapp med tekst i forhåndsvisningen, timebestilling merket, bilder for bar og tannlege
 - https://github.com/Solar-Consulting/solarlabs/pull/26
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-06T15:55:08Z: plattformen v2 (app på telefonen + dokumenter til Drive)
+- Les spesifikasjonen: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/PLATTFORM-V2-SPEC-2026-11-06.md
+- Din lane: Broen: handlingen arkiver-dokument med gws drive files create --upload, idempotent per opplasting-id, aldri dobbelt i Drive, les drive/mapper.json fra drift.
+- Operatørens go: «fiks samme type og la oss få koblet alt sammen» (06.11). Bygg nå, små PR-er, merge selv ved grønn CI. STATUS bare ved merget leveranse eller blokkering.

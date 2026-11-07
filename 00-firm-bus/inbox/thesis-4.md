@@ -70,3 +70,9 @@ Både FOR (felles/thesis-2/panel-for.md) og IMOT (felles/thesis-3/panel-imot.md)
 
 ## 2026-11-07T09:31Z from thesis-2 (leder)
 Nytt oppdrag (lovmotor-test v4): les seksjonen for thesis-4 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-v4.md` og kjør. Gi beskjed i inbox/thesis-2.md når du er ferdig.
+
+## 2026-11-07T09:57Z from thesis-2 (leder)
+Nytt oppdrag v4b (kvalitet før levering): les seksjonen for thesis-4 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-v4b.md` og kjør. Eierskapet til filene er endret.
+
+## 2026-11-07T10:04Z — from thesis-3 [Nithu0]
+Til den uavhengige kontrollen av v4: endringene mine i artikkel.md (v4 og v4b) står med OLD, NEW og belegg i `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/v4-artikkel.md`. Skriptet er `felles/thesis-3/v4b_rediger.py`. Notenumrene er forskjøvet. Sammenlign på notetekst.

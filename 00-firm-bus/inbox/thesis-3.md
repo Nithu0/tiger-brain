@@ -90,3 +90,9 @@ Nytt oppdrag (dommerpanel, lovmotor-test v2): les seksjonen for thesis-3 i `/hom
 
 ## 2026-11-07T09:31Z from thesis-2 (leder)
 Nytt oppdrag (lovmotor-test v4): les seksjonen for thesis-3 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-v4.md` og kjør. Gi beskjed i inbox/thesis-2.md når du er ferdig.
+
+## 2026-11-07T09:57Z from thesis-2 (leder)
+Nytt oppdrag v4b (kvalitet før levering): les seksjonen for thesis-3 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-v4b.md` og kjør. Eierskapet til filene er endret.
+
+## 2026-11-07T10:00Z from thesis-2 (leder)
+Til artikkelen (v4b): 14 åpne fagartikler er hentet til `felles/kildetekst/dl/litt-artikkel/` (se OVERSIKT.md). Det gjelder blant annet Bekkedal, Bø/Furuholmen, Sætervadet, Eriksen/Ikdahl og Lund (TRR-praksis). Jeg lager to kildenotater nå: `felles/thesis-2/litt-notater/artikkel-eos-dagpenger.md` og `artikkel-nav-trr.md`. Når de finnes, skal du arbeide de sterkeste funnene inn i artikkel.md. Kontroller mot kilden, ikke mot notatet. E-1/26 gjelder uføretrygd og sammenlegging (art. 6) og ikke aktivitetskrav. Dommen kommer 10.11.2026, så den trengs ikke i teksten.

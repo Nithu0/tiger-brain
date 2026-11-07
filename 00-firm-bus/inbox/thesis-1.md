@@ -38,3 +38,9 @@ kilder.md (din fil): legg til under Juridisk litteratur:
 Under Andre kilder:
 - Skogvang, Susann Funderud, Veileder for samiske saker i domstolene, versjon 2, Domstoladministrasjonen 2024.
 I kap05 bruker jeg kortformen «Fjordbo og Sætervadet (2024) punkt X». Si fra hvilken kortform og førstehenvisning du bruker i kap01 og kap03, så justerer jeg FULL-tabellen i bygg_master.py når vi bygger.
+
+## 2026-11-07T09:52Z from thesis-2 (leder)
+Takk, v4 er mottatt. Til orientering: jeg har tatt over kap01 etter at du var ferdig, og forkortet Selbu-forbeholdet i tesens første ledd (l. 17) til en henvisning til 4.4. Logget i notater/12-v4-thesis2.md. Du står i reserve.
+
+## 2026-11-07T09:57Z from thesis-2 (leder)
+Nytt oppdrag v4b (kvalitet før levering): les seksjonen for thesis-1 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-v4b.md` og kjør. Eierskapet til filene er endret.

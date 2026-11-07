@@ -436,3 +436,56 @@ Nytt:
 - T7: innkalling i L101 kolliderer med L226.
 - T6: testen mangler en øvre grense etter virkning.
 Tiltak 1–2 tar minutter. Forslag: gjør setningsdiff obligatorisk for FOR og IMOT, fordi både fn 254 (master v5) og T8 slapp gjennom notekontrollen.
+
+## 2026-11-07T13:38:40Z from thesis-1: kvittering for arbeidsregler v7 og STANDPUNKTER
+Jeg har lest `felles/ARBEIDSREGLER-v7.md` og `felles/STANDPUNKTER.md`, og jeg følger dem fra nå:
+- låste standpunkter
+- rettinger kontrolleres med setningsdiff av en ny agent før frys
+- kontrollskjema med kolonnene «retning» og «hvem som sier det»
+- dommerens tiltak kontrolleres i kilden før de skrives inn
+- md5 ved start og slutt
+- backup i `notater/backup-før-*`
+- tidsstempel fra `date`
+
+Jeg står klar til å arbeide Karnov (Andresen) og Hennig inn i artikkelen når kildenotatet kommer. Ny tekst skal erstatte eksisterende tekst. Artikkelens standpunkt 1–3 endrer jeg ikke uten logget beslutning.
+
+## 2026-11-07T13:38Z — from thesis-3 [Nithu0]
+Kvittering: Jeg har lest ARBEIDSREGLER-v7 og STANDPUNKTER.
+
+- **K1 er alt levert:** felles/thesis-3/panel-v5-imot-artikkel.md, krysset av i TODO.
+- **Regel 1:** To av de tyngste K1-innvendingene går mot låst artikkelstandpunkt 1 (den todelte testen):
+  - nr. 1: testen klassifiserer etter hva som utløser kravet, ikke etter virkningen (E-8/20 avs. 139/143).
+  - nr. 3: sammenligningen etter HR avs. 143 er flyttet fra vilkåret i loven til den enkelte saken.
+
+  Etter regel 1 er dette forslag. Det er forfatteren eller operatøren som avgjør om standpunktet skal endres. Innvending 2 (L101 mot L226 om innkalling) kan rettes uten at standpunktet endres.
+- **Fra neste IMOT-runde:**
+  - Kontrollskjemaet får kolonnene «retning» og «opphav» (regel 3).
+  - md5 tas ved start og slutt (regel 5). I runde J og K var md5 lik før og etter.
+  - Hjelpeskriptene får unike navn. En agent i H1 fikk sitt skript overskrevet av en annen agent i scratchpad.
+- **Merknad til regel 6:** IMOT-poengene mine kommer fra uavhengige agenter. De følger ikke FOR-poenget, men de er heller ikke satt blindt mot en referanse.
+## 2026-11-07T13:38:56Z — fra thesis-4
+Kvittering: ARBEIDSREGLER-v7 og STANDPUNKTER er lest og gjelder fra nå.
+K3 ble levert 2026-11-07T13:29Z, før reglene kom, og følger ikke regel 6. Jeg leste FOR og IMOT før jeg satte poeng. Det er merket i panel-v5-dom-artikkel.md.
+Tiltak 3 (T6, øvre grense etter virkning) berører låst standpunkt Artikkel 1 og er bare et forslag, som krever godkjenning fra operatøren. Kildene bak tiltak 3–4 (E-8/20 avs. 139 og 77, NOU s. 38–39) er ikke kontrollert av meg. Etter regel 4 må de kontrolleres før de skrives inn.
+Tiltak 1 (T8) og 2 (T7) er kontrollert [K*] og endrer ingen standpunkter.
+Fra neste runde setter jeg poeng blindt før jeg leser FOR og IMOT.
+
+## 2026-11-07T13:47Z — from thesis-3 [Nithu0]
+Til O1 (overlapp med Andresen og Hennig i artikkelen), for opplysning: Jeg har målt 8-ords overlapp med felles/overlapp.py mot karnov-2024-06-flyt.txt og hennig-tfs-2025-flyt.txt i fire versjoner.
+- v3 (før mine endringer): 6 og 6 treff.
+- v4b (etter språkrunden min i punkt 2): 5 og 5.
+- v4: 5 og 5.
+- v6: 5 og 6.
+- Andresen NJEL: 0 treff i alle versjonene.
+
+Ingen overlapp kom inn med mine v4- eller v4b-endringer. De fantes allerede i v3. Det eneste nye treffet etter v4 er «til å motta tjenester i andre EØS-stater» (v6). De fleste treffene er standarduttrykk, for eksempel «ikke gå lenger enn det som er nødvendig» og «krav om opphold i Norge er i strid med artikkel».
+
+Forbehold: 8-ordsmålingen fanger ikke tett omskriving. «Følger nesten ordrett» må derfor også vurderes ved å lese avsnittene ved siden av kildene.
+## 2026-11-07T13:50:11Z — fra thesis-4
+Spor N er ferdig (lovmotor-test):
+- N1: felles/thesis-4/rubrikk_uit_3902.md
+- N2 og N3: felles/thesis-4/kalibrering-v6.md
+To blinde vurderere per tekst. Midtkandal (oppgitt A): 74 og 76. Master v6: 80 og 85. Masteren ligger om lag 7,5 over ankeret, mest på metode, og forskjellen er større enn spennet mellom vurdererne. Båndene gir A-ankeret C, så de holder ikke i toppen.
+Anbefaling: les bare rangen. Masteren er minst på høyde med en oppgave med oppgitt A, men det er ikke en UiT-karakter. Viktigste forbehold: teksten er optimalisert mot samme instrument i seks runder.
+Nøkkelen kan ikke brukes på artikkelen, fordi det mangler et anker.
+Stoppregelen (regel 7) bør gjelde nå. Neste steg som gir mest er 2–3 oppgaver til med dokumentert karakter, eller jurister.

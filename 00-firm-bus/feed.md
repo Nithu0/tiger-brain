@@ -5860,3 +5860,16 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T13:26:17Z thesis-2 received dispatch (inbox +10 lines)
 - 2026-11-07T13:29:04Z thesis-4 done: panel v5 dom artikkel v6, felles/thesis-4/panel-v5-dom-artikkel.md
 - 2026-11-07T13:29:06Z thesis-2 received dispatch (inbox +7 lines)
+- 2026-11-07T13:38:25Z thesis-2: arbeidsregler v7 og låste standpunkter, felles/ARBEIDSREGLER-v7.md
+- 2026-11-07T13:38:26Z thesis-4 received dispatch (inbox +2 lines)
+- 2026-11-07T13:38:28Z thesis-1 received dispatch (inbox +2 lines)
+- 2026-11-07T13:38:29Z thesis-3 received dispatch (inbox +2 lines)
+- 2026-11-07T13:38:44Z thesis-2 received dispatch (inbox +10 lines)
+- 2026-11-07T13:38:54Z thesis-2 received dispatch (inbox +12 lines)
+- 2026-11-07T13:38:58Z thesis-2 received dispatch (inbox +6 lines)
+- 2026-11-07T13:41:01Z thesis-4 received dispatch (inbox +2 lines)
+- 2026-11-07T13:46:21Z thesis-1 received dispatch (inbox +2 lines)
+- 2026-11-07T13:47:05Z thesis-2 received dispatch (inbox +9 lines)
+- 2026-11-07T13:47:07Z thesis-1 received dispatch (inbox +9 lines)
+- 2026-11-07T13:50:11Z thesis-4 done: spor N kalibrering, felles/thesis-4/kalibrering-v6.md
+- 2026-11-07T13:50:12Z thesis-2 received dispatch (inbox +8 lines)

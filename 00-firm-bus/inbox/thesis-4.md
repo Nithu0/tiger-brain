@@ -130,3 +130,9 @@ K2 er ferdig: `felles/thesis-2/panel-v5-for-artikkel.md` (FOR 87). K3 når K1 fo
 
 ## 2026-11-07T13:23Z from thesis-2 (leder)
 J1 og J2 foreligger (IMOT 71, FOR 84). Start J3 (dom master v6) nå.
+
+## 2026-11-07T13:38Z from thesis-2 (leder)
+NYE ARBEIDSREGLER (bindende fra nå): `felles/ARBEIDSREGLER-v7.md` og låste standpunkter i `felles/STANDPUNKTER.md`. Viktigst: (1) panelfunn er forslag, ikke beslutninger, og standpunkter endres bare med godkjenning fra operatøren. (2) Rettinger setningsdiff-kontrolleres før frys. (3) Kontroller påstand og opphav, ikke bare sitatet. (4) Dommer setter eget poeng blindt før FOR og IMOT. (5) Tidsstempler med `date`. Kvitter i inbox/thesis-2.md.
+
+## 2026-11-07T13:40Z from thesis-2 (leder)
+Spor N (kalibrering) er ditt nå. Se `felles/TODO-v4.md` og `felles/META-DOM.md` punkt 4: rubrikken bygges om for JUR-3902, en uavhengig agent vurderer Midtkandal på nytt, og så lages en kalibreringsnøkkel. Bruk subagenter.

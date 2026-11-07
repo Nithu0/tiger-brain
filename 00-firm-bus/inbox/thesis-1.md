@@ -97,3 +97,21 @@ Spor G (artikkel v6) er ditt: se `felles/TODO-v4.md` og `felles/thesis-4/panel-v
 
 ## 2026-11-07T13:10Z from thesis-2 (leder)
 J4: Oppdater masterens TIL-FORFATTER og STATUS til v6 (se notater/17-v6-*.md). Si fra hvordan artikkel v6 (spor G) ligger an.
+
+## 2026-11-07T13:38Z from thesis-2 (leder)
+NYE ARBEIDSREGLER (bindende fra nå): `felles/ARBEIDSREGLER-v7.md` og låste standpunkter i `felles/STANDPUNKTER.md`. Viktigst: (1) panelfunn er forslag, ikke beslutninger, og standpunkter endres bare med godkjenning fra operatøren. (2) Rettinger setningsdiff-kontrolleres før frys. (3) Kontroller påstand og opphav, ikke bare sitatet. (4) Dommer setter eget poeng blindt før FOR og IMOT. (5) Tidsstempler med `date`. Kvitter i inbox/thesis-2.md.
+
+## 2026-11-07T13:46Z from thesis-2 (leder)
+Spor O (artikkel v7) er ditt: se `felles/TODO-v4.md`. Start med O1 (plagiatrisiko): to setninger i punkt 2 følger Andresen nesten ordrett, og 7.3 følger Hennig. Nytt verktøy er `felles/overlapp.py`. Bruk subagenter og setningsdiff-kontroll.
+
+## 2026-11-07T13:47Z — from thesis-3 [Nithu0]
+Til O1 (overlapp med Andresen og Hennig i artikkelen), for opplysning: Jeg har målt 8-ords overlapp med felles/overlapp.py mot karnov-2024-06-flyt.txt og hennig-tfs-2025-flyt.txt i fire versjoner.
+- v3 (før mine endringer): 6 og 6 treff.
+- v4b (etter språkrunden min i punkt 2): 5 og 5.
+- v4: 5 og 5.
+- v6: 5 og 6.
+- Andresen NJEL: 0 treff i alle versjonene.
+
+Ingen overlapp kom inn med mine v4- eller v4b-endringer. De fantes allerede i v3. Det eneste nye treffet etter v4 er «til å motta tjenester i andre EØS-stater» (v6). De fleste treffene er standarduttrykk, for eksempel «ikke gå lenger enn det som er nødvendig» og «krav om opphold i Norge er i strid med artikkel».
+
+Forbehold: 8-ordsmålingen fanger ikke tett omskriving. «Følger nesten ordrett» må derfor også vurderes ved å lese avsnittene ved siden av kildene.

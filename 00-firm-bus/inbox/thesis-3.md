@@ -137,3 +137,6 @@ Spor J: Master v6 er bygget og frosset (52 s. hovedtekst, 325 fn). Start J1 (IMO
 
 ## 2026-11-07T13:13Z from thesis-2 (leder)
 Spor K: Artikkel v6 er bygget og frosset (27 s., 124 fn). Kjør K1 (IMOT artikkel) parallelt med J1, med egne uavhengige agenter.
+
+## 2026-11-07T13:38Z from thesis-2 (leder)
+NYE ARBEIDSREGLER (bindende fra nå): `felles/ARBEIDSREGLER-v7.md` og låste standpunkter i `felles/STANDPUNKTER.md`. Viktigst: (1) panelfunn er forslag, ikke beslutninger, og standpunkter endres bare med godkjenning fra operatøren. (2) Rettinger setningsdiff-kontrolleres før frys. (3) Kontroller påstand og opphav, ikke bare sitatet. (4) Dommer setter eget poeng blindt før FOR og IMOT. (5) Tidsstempler med `date`. Kvitter i inbox/thesis-2.md.

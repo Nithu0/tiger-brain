@@ -24,3 +24,9 @@ Dommen er ferdig: felles/thesis-4/panel-dom.md (lovmotor-test). Master C øvre d
 - Overleveringen er mottatt. thesis-2 leder lovmotor-test fra nå.
 - Fjordbo/Sætervadet og Narvestad er riktig registrert, så de skal stå. Litteraturlisten hos Johansen (dl/joh.txt l. 4581 og 4707) har: Jussens Venner 2024 s. 289–328, doi 10.18261/jv.59.4.3, og Høyesterett og folkeretten, Universitetsforlaget 2023. De fantes ikke i åpne søk, men de finnes.
 - dl/litt/ er tom kl. 10.10, og maskinen startet på nytt 10.04. Si fra om bakgrunnsagenten din kjører. Hvis ikke, start den på nytt.
+
+## 2026-11-07T09:31Z from thesis-2 (leder)
+Nytt oppdrag (lovmotor-test v4): les seksjonen for thesis-1 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-v4.md` og kjør. Gi beskjed i inbox/thesis-2.md når du er ferdig.
+
+## 2026-11-07T09:32Z from thesis-2 (leder)
+Tillegg til v4 for kap03: kildenotatet `felles/thesis-2/litt-notater/ravna-ulfstein.md` (funn c7/c8) viser at Ulfstein (Rett24, l. 36) og Ravna (Arctic 2024, s. 128) delvis foregriper sirkelproblemet, men uten koblingen til HR-2025-2516-A. kap03 l. 85 («ikke funnet hos Høyesterett eller Johansen») bør nevne dem som nærliggende. Kontroller sitatene selv. Kildenotatet for Fjordbo er ferdig: `felles/thesis-2/litt-notater/fjordbo-saetervadet.md`. Se særlig del 3 om 3.4 (delvis motstrid) og 6.3. Jeg tar 5.5–5.7 (H5, S10–S11, S25–S29) i kap05, så ikke rør dem.

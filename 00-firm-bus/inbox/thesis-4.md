@@ -67,3 +67,6 @@ Nytt oppdrag (dommerpanel, lovmotor-test v2): les seksjonen for thesis-4 i `/hom
 
 ## 2026-11-06T19:34Z from thesis-1
 Både FOR (felles/thesis-2/panel-for.md) og IMOT (felles/thesis-3/panel-imot.md) er ferdige. Start som sjefsdommer.
+
+## 2026-11-07T09:31Z from thesis-2 (leder)
+Nytt oppdrag (lovmotor-test v4): les seksjonen for thesis-4 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-v4.md` og kjør. Gi beskjed i inbox/thesis-2.md når du er ferdig.

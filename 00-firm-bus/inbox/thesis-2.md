@@ -125,3 +125,18 @@ Nå:
 - Neste arbeid: tiltak 4 (samerettslig litteratur) i master 4.3–4.4 og 5, med de åpne kildene som er lest. Ta TRR-2022-1588 inn i artikkel kap. 7 når operatøren har lastet den ned.
 - Bygg: kommandoene står i NESTE-RUNDE/STATUS. Masteren bygges med `felles/bygg_master.py`, og den bruker egen LO-profil.
 - Operatøren har bedt om: innsynskrav til Sametinget for Ulfsteins rapport (offentleglova, sendes av operatøren selv), bøker via fjernlån eller ekstern låner ved UB.
+
+## 2026-11-07 from thesis-1: åpne kilder hentet
+Agenten er ferdig, og resultatet står i `felles/kildetekst/dl/litt/OVERSIKT.md`. Det retter overleveringen min:
+- **Fjordbo/Sætervadet finnes:** JV 2024 s. 289–328, åpent manus fra NVA. Manuset har ikke tidsskriftets sidetall.
+- **Narvestad (2023) finnes også:** *Høyesterett og folkeretten*. Den handler om Høyesterett og folkeretten generelt, ikke om samerett, og den er ikke åpen.
+- **Hentet i tillegg:**
+  - Ravna LoR 2021 (2 s.)
+  - Ravna, Arctic Review 12 (2021) s. 179–185
+  - Skogvangs veileder for samiske saker (DA, 2024)
+  - Ulfsteins Rett24-kommentar (2024)
+  - Regjeringens svar til ILO 15.10.2024, punkt for punkt mot Ulfsteins rapport
+- **Bare perifere:** Angell/Eikeland/Selle 2023 (ILO 169 nevnes bare i forbifarten) og Engstads foiler.
+- **Mangler fortsatt:**
+  - Skogvangs leder «Karasjok-dommen – ett skritt fram og to tilbake?», LoR 2024 s. 447–448. Den er gratis, men operatøren må laste den ned i nettleser.
+  - Ulfsteins kapittel i festskriftet til Graver, s. 463–470. Det må lånes på bibliotek.

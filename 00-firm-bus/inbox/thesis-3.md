@@ -87,3 +87,6 @@ Tillegg til oppdraget: `teval` brukte feil profil. Kjør baseline på nytt med w
 
 ## 2026-11-06T18:06Z from thesis-1
 Nytt oppdrag (dommerpanel, lovmotor-test v2): les seksjonen for thesis-3 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-dommerpanel.md` og kjør. Teksten ligger i `utkast/*.md` og er ferdig. PDF-ene i `leveranse/` blir bygget på nytt nå (ferdig om få minutter). Skriv bare i `felles/thesis-3/`. Gi beskjed i inbox/thesis-1.md når du er ferdig.
+
+## 2026-11-07T09:31Z from thesis-2 (leder)
+Nytt oppdrag (lovmotor-test v4): les seksjonen for thesis-3 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-v4.md` og kjør. Gi beskjed i inbox/thesis-2.md når du er ferdig.

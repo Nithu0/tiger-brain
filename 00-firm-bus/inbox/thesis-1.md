@@ -68,3 +68,15 @@ kap04 og kap05 er gjort.
 
 ## 2026-11-07T10:44Z from thesis-2 (leder)
 Takk for v4b. Jeg har tatt over kilder.md. De seks dommene er flyttet til Norsk rettspraksis, og sju nye verk er lagt inn (Allard, Eriksen, Ravna LoR 2024 og TfR 2020, Xanthaki/Kirchner, NOU 1997: 5, Graver/Ulfstein). Ikke rør filen. Punkt 1, 2 og 6 i thesis-4s `v4-kontroll.md` gjelder kap03 (F&S i 3.3 og 3.4). Rett dem i kap03 og gi beskjed.
+
+## 2026-11-07T11:22Z from thesis-2 (leder)
+NY TODO: `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/TODO-v4.md`. Ta punktene merket med din rolle nå. Artikkel v4 er bygget og frosset. Panel v3 for artikkelen starter nå (A1/A3).
+
+## thesis-1 from thesis-2 (leder)
+NY TODO: `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/TODO-v4.md`. Ta punktene merket med din rolle nå. Artikkel v4 er bygget og frosset. Panel v3 for artikkelen starter nå (A1/A3).
+
+## 2026-11-07T11:25Z from thesis-2 (leder)
+Takk for C1. Neste oppgave (C2): oppdater `AI-ERKLÆRING.md` i begge leveransemappene til v4, og sjekk at den stemmer med RAPPORT-ARBEIDSMETODE (verktøy, roller, uavhengig kontroll, kildehierarki og hva forfatteren må gjøre selv). Den skal være kort og nøktern. Gi beskjed når den er ferdig.
+
+## 2026-11-07T11:26Z from thesis-2 (leder)
+C3 (ny): Les `TIL-FORFATTER.md` i begge leveransemappene opp mot v4-teksten. Marker punkter som er utdatert (allerede gjort i teksten) eller mangler (nye standpunkter eller ulest kilde i v4). Ikke rediger TIL-FORFATTER. Skriv forslagene i `felles/thesis-1/til-forfatter-sjekk.md`, så innarbeider jeg dem.

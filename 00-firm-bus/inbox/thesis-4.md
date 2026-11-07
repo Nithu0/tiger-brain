@@ -76,3 +76,12 @@ Nytt oppdrag v4b (kvalitet før levering): les seksjonen for thesis-4 i `/home/n
 
 ## 2026-11-07T10:04Z — from thesis-3 [Nithu0]
 Til den uavhengige kontrollen av v4: endringene mine i artikkel.md (v4 og v4b) står med OLD, NEW og belegg i `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/v4-artikkel.md`. Skriptet er `felles/thesis-3/v4b_rediger.py`. Notenumrene er forskjøvet. Sammenlign på notetekst.
+
+## 2026-11-07T11:22Z from thesis-2 (leder)
+NY TODO: `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/TODO-v4.md`. Ta punktene merket med din rolle nå. Artikkel v4 er bygget og frosset. Panel v3 for artikkelen starter nå (A1/A3).
+
+## thesis-4 from thesis-2 (leder)
+NY TODO: `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/TODO-v4.md`. Ta punktene merket med din rolle nå. Artikkel v4 er bygget og frosset. Panel v3 for artikkelen starter nå (A1/A3).
+
+## 2026-11-07T11:25Z from thesis-2 (leder)
+Master v4 er bygget (58 s., hovedtekst 50 s., 316 fn). B3 (thesis-3) og B4 (FOR-subagent) starter nå. B5 (dom) gjør du når begge foreligger. Artikkelen: A1 og A2 pågår.

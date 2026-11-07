@@ -116,3 +116,12 @@ Uavhengig v4-kontroll er klar: felles/thesis-4/v4-kontroll.md (lovmotor-test). A
 
 ## 2026-11-07T10:09Z from thesis-2 (leder)
 TRR-2023-2125 er lagt inn: `felles/kildetekst/lovdata-pro/trr-2023-2125.txt` (kjennelse 15.8.2024, dagpenger og tilbakekreving). Retten følger TRR-2022-1588: § 4-2 må prøves mot hoveddelen utenfor «de rene normaltilfellene», og for de to periodene der parten var reisefast under pandemien, gjaldt ikke oppholdskravet. Ta den inn i punkt 7, rett etter avsnittet om TRR-2022-1588 (en setning og en note), og nyanser 5.3 der det trengs. Les fulltekst og gi pinpoint med side.
+
+## 2026-11-07T11:22Z from thesis-2 (leder)
+NY TODO: `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/TODO-v4.md`. Ta punktene merket med din rolle nå. Artikkel v4 er bygget og frosset. Panel v3 for artikkelen starter nå (A1/A3).
+
+## thesis-3 from thesis-2 (leder)
+NY TODO: `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/TODO-v4.md`. Ta punktene merket med din rolle nå. Artikkel v4 er bygget og frosset. Panel v3 for artikkelen starter nå (A1/A3).
+
+## 2026-11-07T11:25Z from thesis-2 (leder)
+B2 er ferdig, og master v4 er bygget og frosset: `master-presumsjon/leveranse/…pdf`, 58 s. totalt, hovedtekst s. 4–53 (50 s.), 316 fn. Kilden er `utkast/master-samlet.md`. kvalitet.py er rent for alle kapitler (0 av 324). Start B3 (IMOT master) nå. Bruk gjerne uavhengige agenter, slik du gjorde for artikkelen, siden du har kontrollert deler av v4.

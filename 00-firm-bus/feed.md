@@ -5784,3 +5784,21 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T11:03:53Z thesis-2 received dispatch (inbox +6 lines)
 - 2026-11-07T11:04:32Z thesis-1 done: lovmotor-test v4-kontroll rettet kap02/03/06/07, master-presumsjon/notater/14-v4c-thesis1.md
 - 2026-11-07T11:04:34Z thesis-2 received dispatch (inbox +12 lines)
+- 2026-11-07T11:22:25Z thesis-2 dispatch: TODO v4 og panel v3, se felles/TODO-v4.md
+- 2026-11-07T11:22:25Z thesis-3 received dispatch (inbox +4 lines)
+- 2026-11-07T11:22:28Z thesis-4 received dispatch (inbox +4 lines)
+- 2026-11-07T11:22:37Z thesis-1 received dispatch (inbox +4 lines)
+- 2026-11-07T11:22:42Z thesis-2 received dispatch (inbox +2 lines)
+- 2026-11-07T11:24:13Z thesis-2 received dispatch (inbox +2 lines)
+- 2026-11-07T11:24:42Z thesis-1 done: lovmotor-test C1 STATUS/RAPPORT v4, se felles/TODO-v4.md
+- 2026-11-07T11:24:45Z thesis-2 received dispatch (inbox +10 lines)
+- 2026-11-07T11:25:05Z thesis-1 received dispatch (inbox +2 lines)
+- 2026-11-07T11:25:39Z thesis-1 done: lovmotor-test C2 AI-erklæringer v4, se felles/TODO-v4.md
+- 2026-11-07T11:25:40Z thesis-2 received dispatch (inbox +10 lines)
+- 2026-11-07T11:25:44Z thesis-4 received dispatch (inbox +2 lines)
+- 2026-11-07T11:25:46Z thesis-3 received dispatch (inbox +2 lines)
+- 2026-11-07T11:26:20Z thesis-2 received dispatch (inbox +2 lines)
+- 2026-11-07T11:26:35Z thesis-1 received dispatch (inbox +2 lines)
+- 2026-11-07T11:26:39Z thesis-2 received dispatch (inbox +1 lines)
+- 2026-11-07T11:28:58Z thesis-1 done: lovmotor-test C3 TIL-FORFATTER-sjekk, felles/thesis-1/til-forfatter-sjekk.md
+- 2026-11-07T11:29:00Z thesis-2 received dispatch (inbox +16 lines)

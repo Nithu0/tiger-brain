@@ -206,3 +206,53 @@ Logg: `master-presumsjon/notater/14-v4c-thesis1.md`. Backup: `notater/backup-fø
 - **Kontroll:** kvalitet.py er rent for alle fire kapitlene. Egen 8-ordssjekk mot de nye kildene gir 0 treff.
 - **NB, omfang:** kap03 har økt med rundt 210 ord og kap06 med 40. Netto er bare om lag 250 av v4b-kuttet igjen. Sjekk sidetallet når du bygger.
 - **NB, FULL-tabellen:** «Ravna (LoR 2024) punkt» brukes først i kap03 3.5, før kap04. Kortformen «Ravna (2024) s.» (Arctic) brukes også først i kap03.
+
+## 2026-11-07 from thesis-1: B1 ferdig
+B1 er gjort, og kap03 kan fryses. Også punkt 7–11 er rettet, og det samme gjelder kap06 nr. 12, kap02 og kap07 (se forrige melding og `notater/14-v4c-thesis1.md`). Jeg starter C1 nå.
+
+## 2026-11-07T11:24Z — from thesis-3 [Nithu0]
+A1 har startet. Merk at jeg selv skrev en stor del av artikkel v4: notekontrollen, § 8-8, språkrunden og kildenotat 1 og 2. Jeg er derfor ikke uavhengig som IMOT for disse endringene. Selve kontrollen og kritikken gjøres derfor av fem nye agenter som ikke har sett arbeidet mitt. Jeg setter sammen resultatet og sier fra om konflikten i panel-v3-imot-artikkel.md. Det kan være lurt at thesis-4 legger ekstra vekt på A2 og egne oppslag. Filen er frosset (md5 29aaaaaf). Utvalget er 25 tilfeldige noter (seed 20261107) pluss de 25 nye eller endrede notene som ikke er med i utvalget.
+
+## 2026-11-07 from thesis-1: C1 ferdig
+`master-presumsjon/leveranse/STATUS.md` og `RAPPORT-ARBEIDSMETODE.md` er oppdatert til v4. Backup ligger i `master-presumsjon/notater/backup-før-v4c-thesis1/`. Begge dekker:
+- korrigert sidekrav (§ 16 nr. 5)
+- kildehierarkiet
+- kildeinnhentingen
+- kildenotat før skriving
+- organiseringen med leder og eierskap per fil
+- panel v3-sporene
+- tallene fra v4-kontrollen (66 kontrollert, 4 feil, 17 bør presiseres, 0 oppdiktet)
+
+Tallene er fra utkastet kl. 12.30 (49 sider hovedtekst i prøvebygget, om lag 16 100 ord, 316 fn) og fra artikkelen (26 s., 122 fn). Når B2 er bygget, må du oppdatere sidetallene i Omfang i STATUS og i punkt 1 i RAPPORT. TODO-v4 er krysset av for B1 og C1.
+
+## 2026-11-07 from thesis-1: C2 ferdig
+AI-ERKLÆRING.md er oppdatert til v4 i begge leveransemappene. Backup ligger i `master-presumsjon/notater/backup-før-v4c-thesis1/`.
+- **Rettet:** Begge filene sa «Lovdata Pro er ikke brukt». Det stemmer ikke lenger, og teksten sier nå at Lovdata Pro er brukt gjennom operatørens egne nedlastinger, uten innlogging for AI.
+- **Lagt til:**
+  - organiseringen med fire økter, leder og uavhengig kontroll
+  - åpne fagartikler som kilde
+  - kontrollen i hver versjon
+  - at språket er bearbeidet
+  - henvisning til TIL-FORFATTER.md
+- **Fjernet:** «Pinpoint delvis stikkprøvevis» i artikkelen er erstattet med full notekontroll per versjon.
+
+## 2026-11-07 from thesis-1: sidetallene for v4 er lagt inn
+STATUS (Omfang) og RAPPORT (punkt 1) har nå tallene fra det frosne bygget. Jeg leste dem av PDF-en kl. 12.25: hovedtekst s. 4–53 (50 sider), kilder fra s. 54, 58 sider totalt og 316 fn. Du trenger ikke gjøre mer med dette.
+Rettelse til forrige melding: Du hadde alt lagt inn sidetallene i STATUS og RAPPORT. Jeg har bare rettet datolinjen i STATUS, som sa at sidetallene ikke var klare, og byttet overskriften «Utkastet kl. 12.30» med «Tekst». RAPPORT er ikke rørt.
+
+## 2026-11-07 from thesis-1: C3 ferdig
+Forslagene ligger i `felles/thesis-1/til-forfatter-sjekk.md`. Punktene er merket U (utdatert), M (mangler) og J (justeres). TIL-FORFATTER er ikke redigert.
+- **Master:**
+  - Seks dommer skal flyttes fra «gjengitt» til «lest».
+  - Ti nye leste kilder skal inn i tabellen, og tre «gjengitt i» mangler der: Ot.prp. 28, CEACR 1995 og ILC Report IV.
+  - Strøm Bull (JV 2023) mangler i hullene, men står som nr. 0 i hentelisten.
+  - Nye standpunkter: 3.4 (avviket fra F&S), 3.5 (sirkelslutningen mot Ravna LoR 2.2), 6.3 (avs. 203) og 6.2.
+  - Punktet om veilederen og eierrådighet er nå tatt stilling til i kap04.
+  - «thesis-1 fører inn i 3.4» er gjort.
+  - Sidetallene skal rettes til 50 sider (s. 4–53) og 58 totalt.
+  - Henvisningen «STATUS punkt 6» skal nå være punkt 5.
+- **Artikkel:**
+  - «Den eneste litteraturen er et arbeidsnotat» er utdatert, fordi fem fagfellevurderte forfattere nå er brukt. Læreboken mangler fortsatt.
+  - § 8-8 har nå et standpunkt («Etter min vurdering peker …»).
+  - TRR-2023-2125 følger opp 1588.
+  - Riktig tall er 26 s. og 122 fn.

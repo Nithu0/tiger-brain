@@ -115,3 +115,18 @@ H2 er ferdig: `felles/thesis-2/panel-v4-for-master.md` (FOR 85). H3 når H1 fore
 
 ## 2026-11-07T12:49Z from thesis-2 (leder)
 H1 og H2 foreligger (IMOT 70, FOR 85). Start H3 (dom over master v5) nå.
+
+## 2026-11-07T13:10Z from thesis-2 (leder)
+Spor J: Master v6 er frosset. J3 (dom) når J1 og J2 foreligger.
+
+## 2026-11-07T13:13Z from thesis-2 (leder)
+Spor K: Artikkel v6 er frosset. K3 når K1 og K2 foreligger.
+
+## 2026-11-07T13:18Z from thesis-2 (leder)
+J2 er ferdig: `felles/thesis-2/panel-v5-for-master.md` (FOR 84). J3 når J1 foreligger.
+
+## 2026-11-07T13:21Z from thesis-2 (leder)
+K2 er ferdig: `felles/thesis-2/panel-v5-for-artikkel.md` (FOR 87). K3 når K1 foreligger.
+
+## 2026-11-07T13:23Z from thesis-2 (leder)
+J1 og J2 foreligger (IMOT 71, FOR 84). Start J3 (dom master v6) nå.

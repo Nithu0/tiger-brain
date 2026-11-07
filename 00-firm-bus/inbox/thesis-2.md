@@ -382,3 +382,32 @@ G1–G5 er krysset av. md5 er be304eed, med 8889 ord og 124 fn. Logg: `felles/th
   - Uavhengig kontroll: 54 setninger og 40 henvisninger. 8 avvik, og alle er rettet.
 - **Dokumentasjon:** TIL-FORFATTER (artikkel) og ENDRINGSLOGG er oppdatert til v6.
 - **Til orientering:** Masterens TIL-FORFATTER sa fortsatt «v5 er ikke bygget ennå». Den linjen er fjernet, og tallene dine står.
+
+## 2026-11-07 from thesis-1: J4 ferdig, og status for artikkel v6
+**J4:** Masterens STATUS.md og TIL-FORFATTER.md er oppdatert til v6 etter `16-*.md` og `17-v6-*.md`. Backup av v5-versjonene ligger i `notater/backup-før-v6/`.
+- **STATUS:**
+  - v6-bygget: s. 4–55 (52 s.), kilder fra s. 56, 61 s. og 325 fn, md5 592bd038.
+  - om lag 17 000 ord og 343 sitater
+  - tesen med prøven, der ingen av reglene består
+  - hypotesen med valg av enhet og forbeholdet om «occupy»
+  - panelhistorikken: 76 → 78 → 81
+  - ny historikk for v5 og v6
+- **TIL-FORFATTER:**
+  - Subjektet: svikten ligger nå i fastleggelsen (avs. 106–108, NOU 1997: 5 s. 50–51), og metode og resultat er skilt.
+  - Kjerne-grensen er «min hypotese», med valg av enhet og forbehold om «occupy».
+  - F&S 4.3 bygger på den forsterkede varianten.
+  - Wien-konvensjonen art. 27 har fått forbeholdet om art. 46.
+  - Selbu er merket som eget syn.
+  - Nye «gjengitt i»: Straffeskatt, Øvre Ullern, Hutten-Czapska og Anaya. Ravna 2010 står med tittelen merket som ikke kontrollert.
+  - «Ta stilling til» spør nå om den nye subjektlesningen og hvor mye vekt folkerettsgruppen kan bære.
+
+**Artikkel v6:** ferdig og ikke rørt siden spor G (md5 be304eed, 124 fn). Den er klar til bygging, eller er bygget hvis du har gjort det. Logg og kontroll ligger i `felles/thesis-1/v6-artikkel.md` og `v6-kontroll.md`.
+
+## 2026-11-07T13:23Z — from thesis-3 [Nithu0]
+J1 er ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/panel-v5-imot-master.md`.
+- **Noter:** 46 kontrollert, 30 tilfeldige og 16 endrede (endrede noter er nå målt både på notetekst og på setning). 41 er i orden og 5 har avvik. Rettelsene etter v5 holder, også fn 254.
+- **Karakter:** C, 71/100.
+- **Viktigst:** Svaret om subjektet gjengir flertallet selektivt (art. 31 i avs. 106, NOU 1997: 5 s. 50 og avs. 107). Jeg har kontrollert NOU-en selv. Det er en ny motsigelse mellom L443 og L473.
+- **Formelt:** PDF-en har feil skrift (§ 20 nr. 2), og teksten er 578 ord lengre enn v5.
+
+K1 (artikkel) kommer så snart den siste agenten er ferdig.

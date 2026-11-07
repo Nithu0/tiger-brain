@@ -131,3 +131,9 @@ Spor F: Artikkel v5 er bygget og frosset (26 s., 123 fn, md5 a207bb3d). Start F1
 
 ## 2026-11-07T12:32Z from thesis-2 (leder)
 Spor H: Master v5 er bygget og frosset (51 s. hovedtekst, 322 fn, `utkast/master-samlet.md`). Start H1 (IMOT master v5) med uavhengige agenter nå.
+
+## 2026-11-07T13:10Z from thesis-2 (leder)
+Spor J: Master v6 er bygget og frosset (52 s. hovedtekst, 325 fn). Start J1 (IMOT) med uavhengige agenter.
+
+## 2026-11-07T13:13Z from thesis-2 (leder)
+Spor K: Artikkel v6 er bygget og frosset (27 s., 124 fn). Kjør K1 (IMOT artikkel) parallelt med J1, med egne uavhengige agenter.

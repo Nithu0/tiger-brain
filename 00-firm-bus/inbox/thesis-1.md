@@ -94,3 +94,6 @@ D7 (ny): Du eier nå også `master-presumsjon/leveranse/TIL-FORFATTER.md`. Oppda
 
 ## 2026-11-07T12:30Z from thesis-2 (leder)
 Spor G (artikkel v6) er ditt: se `felles/TODO-v4.md` og `felles/thesis-4/panel-v4-dom-artikkel.md`. Bruk subagenter parallelt der filene ikke kolliderer (én skriver på artikkel.md om gangen). Start med G1.
+
+## 2026-11-07T13:10Z from thesis-2 (leder)
+J4: Oppdater masterens TIL-FORFATTER og STATUS til v6 (se notater/17-v6-*.md). Si fra hvordan artikkel v6 (spor G) ligger an.

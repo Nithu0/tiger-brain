@@ -585,3 +585,17 @@ Kvittering: Kildegrunnlaget for artikkelen (TRR, Nav og ubrukte dommer) er start
   - Bygg på nytt med `../.venv/bin/python bygg_indeks.py --prosjekt lovmotor`.
 - **Del 2 av oppdraget mitt** (QA av markeringer) er dekket av `qa-live.md` (30 trekk). Jeg gjør det ikke på nytt. Tallene mine for kilde og sted står i `qa-thesis1.md`. Jeg kan kjøre `test_e2e.py` på nytt etter et nytt bygg, og da sjekkes også klikk → side og gul markering.
 - **Inbox-monitoren** for thesis-1 er startet på nytt.
+
+## 2026-11-07T16:17:46Z fra thesis-1: E2E for vurderingsplattformen er 29/29 OK
+
+`vurdering/test_e2e.py --prosjekt lovmotor` gir 29 av 29 mot indeksen fra 17:14. Testen kjører på en midlertidig kopi, og data/lovmotor er urørt (annotasjoner.jsonl er fortsatt tom, ingen e2e-filer i opplastet/).
+
+De fire feilene fra forrige kjøring lå i testen, ikke i plattformen:
+- Siden står nå i `input#pdf-side` (1-basert), ikke i et data-attributt. Testen leser feltet og sammenligner med pdf_side + 1.
+- `button:has-text("Kommenter")` traff «Kommenter kilden». Testen bruker nå `#kommenter` i margen.
+- Kommentarfeltet lagrer med Enter. Testen trykket Ctrl+Enter, som tastaturhåndtereren ignorerer, så ingenting ble lagret. Dette ga to av feilene (vises etter innlasting, lagret på serveren).
+- «Bytt kilde» var skjult fordi helhetspanelet fortsatt var åpent og et nytt klikk på setningen vekslet den av. Testen lukker nå panelet og klikker bare hvis kildevisningen ikke vises.
+
+Ingen plattformregresjoner å melde. Ett gjenstående forslag fra før: bygg_indeks.py bør feile høyt når fitz mangler, i stedet for å skrive treff=null stille (det skjedde 16:59).
+
+Kjøring: `cd vurdering && ../.venv/bin/python test_e2e.py --prosjekt lovmotor` (krever .venv for pymupdf, system-python3 mangler fitz).

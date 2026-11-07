@@ -185,3 +185,24 @@ Kildenotat 1 er innarbeidet i artikkel.md, se delen «Kildenotat 1» i `thesis-e
 - ESA-saken mot Island er ikke funnet i EFTA-domstolens saksliste.
 - Sidetall i publisert versjon av de tre aksepterte manusene (pinpoint er gitt med punktnummer).
 Venter på kildenotat 2.
+
+## 2026-11-07T11:03Z — from thesis-3 [Nithu0]
+Kildenotat 2, TRR-2023-2125 og v4-kontroll nr. 26–29 er arbeidet inn i artikkel.md, se den siste delen av `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/v4-artikkel.md`. Alt er kontrollert i kilden. Tretten endringer i punkt 1, 2, 4.1, 5.1, 5.3, 6, 7, 8 og 8.3. Det er 122 noter og 8 725 ord brødtekst, og kvalitet.py er ren. Ikke bygget.
+
+Til TIL-FORFATTER:
+- 2014-rapporten: delene som er publisert, er ikke lest.
+- Petersen avs. 56–57 er bare kontrollert av thesis-4.
+- Lund: om tidsskriftet er 8 (2) eller 2025 (1).
+
+## 2026-11-07 from thesis-1: v4-kontrollen er rettet i kap02, kap03, kap06 og kap07
+Logg: `master-presumsjon/notater/14-v4c-thesis1.md`. Backup: `notater/backup-før-v4c-thesis1/`. kilder.md er ikke rørt.
+- **kap03:** Punkt 1, 2 og 6–11 er rettet. «Folkeretten alene» er strøket, fordi Fjordbo og Sætervadet begrunner internrettslig. Det står nå at de selv senker terskelen for Karasjok. Prinsippet heter nå traktatkonformitetsprinsippet, med «kan». Johansens avvisning viser til note 222 og 330. Ravna-sitatet er hentet fra LoR 3.2, og «tilpasses» fra LoR 2.2.
+- **Fra innboksen din:**
+  - Elopak avs. 29, Rådyrvegen avs. 48 og 51, og Grimstvedt avs. 51 er sitert direkte.
+  - Bårdsen har Finanger I s. 1829 som bærende kilde.
+- **kap06:** Punkt 12 er rettet: Fjordbo og Sætervadets egne grunner står for seg, karakteristikken er merket som min, og obiter er tatt med.
+- **kap02:** Rt. 2005 s. 833 avs. 45–46 og 88 er sitert direkte. SP art. 27 er sitert etter konvensjonsteksten.
+- **kap07:** Metodekritikken bæres av Fjordbo og Sætervadet 4.6.5 og Ravna LoR 3.2, med Ulfstein ved siden av. Det er kapitlets første fotnote.
+- **Kontroll:** kvalitet.py er rent for alle fire kapitlene. Egen 8-ordssjekk mot de nye kildene gir 0 treff.
+- **NB, omfang:** kap03 har økt med rundt 210 ord og kap06 med 40. Netto er bare om lag 250 av v4b-kuttet igjen. Sjekk sidetallet når du bygger.
+- **NB, FULL-tabellen:** «Ravna (LoR 2024) punkt» brukes først i kap03 3.5, før kap04. Kortformen «Ravna (2024) s.» (Arctic) brukes også først i kap03.

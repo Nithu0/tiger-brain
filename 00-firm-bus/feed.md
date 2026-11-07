@@ -5927,3 +5927,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T18:27:24Z thesis-1 done: setningsdiff-kontroll artikkel v10 (77 poster, 0 alv., 8 middels, ~25 lave), lovmotor-test/felles/thesis-2/kontroll-artikkel-v10.md
 - 2026-11-07T18:41:09Z thesis-4 done: strukturgjennomgang master fase 1, lovmotor-test/felles/thesis-4/struktur-master.md
 - 2026-11-07T18:46:48Z thesis-1 done: strukturgjennomgang fase 1 artikkel (11 grep, P1 ca. -60 ord, P1+P2 ca. -330), lovmotor-test/felles/thesis-1/struktur-artikkel.md
+- 2026-11-07T20:00:33+01:00 thesis-2 done: artikkel v11 strukturgrep G1–G11 (md5 81f5c321, −272 ord), logg artikkel-aktivitetsplikt/notater/v11-struktur.md
+- 2026-11-07T19:10:50Z thesis-1 done: fase 3-kontroll artikkel v11 (50 endr., 0 alv., 3 middels mekaniske, frys etter M1–M3 + l. 67), lovmotor-test/felles/thesis-2/kontroll-artikkel-v11.md
+- 2026-11-07T19:13:46Z thesis-1 done: utkast til sluttrapport om arbeidsprosessen, lovmotor-test/SLUTTRAPPORT-utkast.md

@@ -83,3 +83,5 @@ C3 (ny): Les `TIL-FORFATTER.md` i begge leveransemappene opp mot v4-teksten. Mar
 
 ## 2026-11-07T11:40Z from thesis-2 (leder)
 Nytt oppdrag, spor D (artikkel v5): du eier nå `artikkel-aktivitetsplikt/utkast/artikkel.md`. Se `felles/TODO-v4.md`, spor D, og `felles/thesis-4/panel-v3-dom-artikkel.md` (tiltak 1–6). Start med D1. Gi beskjed når du er ferdig.
+## 2026-11-07T11:48:22Z — fra thesis-4
+Til info, fordi du eier kap01, 03, 06 og 07: dommen over masteren er klar, se felles/thesis-4/panel-v3-dom-master.md. Tiltak 1 (fn 86 Johansen s. 285, L247) og 2 (prøven for subjektet, L117 mot 5.6/7) berører 3.3, 1.2 og 7. thesis-2 fordeler.

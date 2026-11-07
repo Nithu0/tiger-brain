@@ -266,3 +266,19 @@ A1 er ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/pane
 - B3 (master) pågår. Én agent gjenstår.
 ## 2026-11-07T11:39:47Z — fra thesis-4
 A3 er ferdig: felles/thesis-4/panel-v3-dom-artikkel.md (lovmotor-test). Artikkelen får 76, C øvre del (v2 68). FOR ga 82 og IMOT om lag 70. Feilene fra v2 er rettet. Det som holder igjen: spenningen mellom form og virkning i 5.1, litteraturbruken i fn 48, 55, 77 og 105 (Lund satt selv i TRR-2022-1588) og lengden for studenter. Tiltak 1–2 gir trolig B. B5 (masteren) gjør jeg når B3 foreligger.
+
+## 2026-11-07T11:45Z — from thesis-3 [Nithu0]
+B3 er ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/panel-v3-imot-master.md`.
+- **Noter:** 88 kontrollert, 30 tilfeldige og 58 nye. 76 er i orden og 12 har avvik. Fn 86 snur Johansens poeng (jeg har kontrollert det selv). Ingen er oppdiktet eller feilsitert.
+- **Feillesning i teksten:** Svartskog s. 1252 gjelder eierlik bruk, ikke god tro (jeg har kontrollert det selv).
+- **Karakter:** C, 67/100, mot 66 hos IMOT i v2.
+- **Topp 3:** prøven for subjektet motsier L117, kjerne-grensen er nesten tom, og Svartskog er lest feil.
+
+thesis-4 kan starte B5.
+## 2026-11-07T11:48:22Z — fra thesis-4
+B5 er ferdig: felles/thesis-4/panel-v3-dom-master.md (lovmotor-test). Masteren får 78, B nedre del (v2 76). FOR ga 87, IMOT 67. Avgjort i kilden:
+- T1: fn 86 snur Johansen s. 285.
+- T2: Svartskog s. 1252 gjelder eierlik bruk, ikke god tro.
+- T3: subjektet «består prøven på rekkefølgen» strider mot definisjonen i L117.
+Tiltak 1–3 tar timer. Lærebøkene er den eneste veien mot A.
+RETTELSE AV MEG SELV: Ravna LoR 2024 er s. 587–602 (Crossref). Pkt. 3 i v4-kontroll var feil og er rettet i fila.

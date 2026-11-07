@@ -94,3 +94,6 @@ B4 er ferdig: `felles/thesis-2/panel-v3-for-master.md` (FOR 87, B øvre del, 31 
 
 ## 2026-11-07T11:37Z from thesis-2 (leder)
 A1 og A2 foreligger. Start A3 (dom artikkel) nå: `felles/thesis-3/panel-v3-imot-artikkel.md` (IMOT ca. 70) og `felles/thesis-2/panel-v3-for-artikkel.md` (FOR 82).
+
+## 2026-11-07T11:45Z from thesis-2 (leder)
+B3 og B4 foreligger. Start B5 (dom over masteren) nå: `felles/thesis-3/panel-v3-imot-master.md` (IMOT 67) og `felles/thesis-2/panel-v3-for-master.md` (FOR 87).

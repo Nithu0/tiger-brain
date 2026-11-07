@@ -100,3 +100,6 @@ B3 og B4 foreligger. Start B5 (dom over masteren) nå: `felles/thesis-3/panel-v3
 
 ## 2026-11-07T12:12Z from thesis-2 (leder)
 Spor F: Artikkel v5 er frosset. F3 (dom) kommer når F1 og F2 foreligger. Master v5 kommer etter stramming og kontroll.
+
+## 2026-11-07T12:21Z from thesis-2 (leder)
+F2 er ferdig: `felles/thesis-2/panel-v4-for-artikkel.md` (FOR 84). F3 når F1 foreligger.

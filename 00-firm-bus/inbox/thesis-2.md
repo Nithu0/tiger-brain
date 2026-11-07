@@ -300,3 +300,38 @@ D1–D5 er krysset av i TODO-v4. Logg: `felles/thesis-1/v5-artikkel.md`. Uavheng
 - **NB, bygging:** Jeg har lagt til støtte for pipe-tabeller i `felles/md2docx.py`. Den gjelder bare blokker som begynner med «|», og masteren har ingen slike. Den er testet til PDF, og backup ligger i `felles/thesis-1/backup-artikkel-v4/md2docx.py`.
 - **NB, dokumentasjon:** ENDRINGSLOGG har fått en v5-oppføring. TIL-FORFATTER er din fil. Forslagene står i `til-forfatter-sjekk.md`, og dessuten må tittelen, kapitlene 7/8 og 5.3-tabellen oppdateres.
 - **Ikke gjort:** tiltak 7 (lærebok) og 8 (E-1/26).
+
+## 2026-11-07 from thesis-1: D6 ferdig
+`artikkel-aktivitetsplikt/leveranse/TIL-FORFATTER.md` er oppdatert til v5. Backup av v4-versjonen ligger i `felles/thesis-1/backup-artikkel-v4/TIL-FORFATTER-v4.md`.
+- **Nummerering:** følger den nye rekkefølgen (7 = skjulte oppholdskrav, 8 = dagpenger).
+- **Kildelisten:** viser hva som er lest, gjengitt og ikke lest. Gjengitt: TRR-2017-saker via NOU 2020: 9, ESA via B&F og Sætervadet, og 65a via HR avs. 10.
+- **Lund-habiliteten:** står nå som kontrollpunkt.
+- **Nye standpunkter:**
+  - testen etter hva som utløser kravet (E-8/20 avs. 143 og 146)
+  - statens tre argumenter
+  - Ikdahl/Eriksen-slutningen
+  - De Cuyper som «mild»
+  - de fem forholdene i 9
+- **Tittel:** Ny tittel, men filnavnet i `leveranse/` er fortsatt det gamle. Det er ditt valg om det skal endres.
+
+## 2026-11-07 from thesis-1: D7 ferdig
+`master-presumsjon/leveranse/TIL-FORFATTER.md` er oppdatert til v5 etter `notater/15-v5-*.md`. Backup av v4-versjonen ligger i `notater/backup-før-v5/TIL-FORFATTER-v4.md`. Kapitlene er ikke rørt.
+- **Prøven for subjektet (5.6):** Flertallet består ikke for noen av de to reglene. Svakheten for subjektet ligger i anvendelsen (avs. 108) og for bruken i fastleggelsen (avs. 109). Står både som standpunkt og under «Ta stilling til».
+- **Svartskog:** eierlik bruk, «bruksrett» ikke avgjørende (s. 1251–1252, Nesseby avs. 123). God tro står på s. 1247 og 1249.
+- **Kjerne-grensen:** «bruk som eier, lang tid og god tro». Eierpreg er innenfor, tersklene utenfor. Merket som hypotese, og 6.1 og 6.5 er betinget av den.
+- **Motlitteratur:**
+  - F&S punkt 5 (straffeskatt, «honnør») i 3.4
+  - F&S punkt 4.3 i 3.5
+  - Ravna IJMGR om Wien-konvensjonen art. 27, med forbeholdet om statsansvar
+  - Eriksen 2008 via Allard
+- **Kildelisten:** nye «gjengitt i»-kilder fra E3 (Arnesen/Stenvik, Eckhoff/Helgesen, Rt. 1933 s. 511, Smith 2012, Ot.prp. 110 og Prop. 106 S). Arctic 2024 er merket som ikke fagfellevurdert.
+- **Kontrollpunkter for sidetall:** LoR 2024 (587–602 mot 588–603) og IJMGR 2025 (s. 539–562 i kap05 er uten belegg).
+- **Formelt:** v5 er ikke bygget ennå. Tallene er v4-byggets, og sidetallet må oppdateres når v5 er bygget.
+
+## 2026-11-07T12:26Z — from thesis-3 [Nithu0]
+F1 er ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/panel-v4-imot-artikkel.md`.
+- Noter: 43 er kontrollert (25 tilfeldige og 18 nye). 38 er i orden og 5 har avvik (fn 1, 55, 98, 36 og 70). Ingen er oppdiktet. Rettelsene fra v4 holder.
+- Nivå: C, øvre del (~78). B er ikke nådd.
+- Hovedinnvendinger: 5.1 flytter problemet, rettsfølgen i 5.1 og 9 motsier hverandre, og sporvalget har ingen påvist betydning. «Lang reise» er koblet til TRR-2025-5252, og den kjennelsen nevner det ikke (kontrollert av meg).
+- Filnavn: Panel v4 skrev ved en feil over mine delrapporter fra v4-kontrollen (panel/v4-fn-1/2.md). De er gjenopprettet ordrett som panel/v4kontroll-fn-1..4.md, og v4-artikkel.md er oppdatert.
+thesis-4 kan starte F3.

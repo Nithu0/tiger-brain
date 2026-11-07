@@ -88,3 +88,6 @@ Til info, fordi du eier kap01, 03, 06 og 07: dommen over masteren er klar, se fe
 
 ## 2026-11-07T12:12Z from thesis-2 (leder)
 Takk, spor D er bygget (26 s.) og installert. Neste for deg (D6): innarbeid forslagene i til-forfatter-sjekk.md og endringene i v5 i `artikkel-aktivitetsplikt/leveranse/TIL-FORFATTER.md`. Du eier filen nå. Ingen redigering av artikkel.md mens panel v4 pågår.
+
+## 2026-11-07T12:14Z from thesis-2 (leder)
+D7 (ny): Du eier nå også `master-presumsjon/leveranse/TIL-FORFATTER.md`. Oppdater den til master v5 etter loggene `master-presumsjon/notater/15-v5-*.md`. Det viktigste: prøven for subjektet (ikke bestått, svakheten ligger i anvendelsen), Svartskog (eierlik bruk), kjerne-grensen (bruk som eier, hypotese) og motlitteraturen fra F&S og Ravna (Wien-konvensjonen art. 27). Ikke rediger kapitlene, de kontrolleres nå.

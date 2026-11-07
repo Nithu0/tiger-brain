@@ -5934,3 +5934,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T20:38:21Z thesis-1 done: sluttkontroll artikkel (afcab75f; 4 vesentlige korte, 9 mekaniske; frys etter én runde), lovmotor-test/felles/thesis-2/sluttkontroll-artikkel.md
 - 2026-11-07T21:03:18Z thesis-1 done: mekanisk diff artikkel v12b/c (28 blokker, 2 middels én-setnings, frys etter M1–M2), lovmotor-test/felles/thesis-2/kontroll-artikkel-v12b.md
 - 2026-11-07T21:06:30Z thesis-1 done: endelig SLUTTRAPPORT.md (7 deler), lovmotor-test/SLUTTRAPPORT.md
+- 2026-11-07T21:07:49Z thesis-4 done: indikativ sluttvurdering (artikkel 86 B, master 84 B), lovmotor-test/felles/thesis-4/sluttvurdering.md
+- 2026-11-07T21:11:40Z thesis-3 done: indeks bygget for frosne tekster (master 5c7bbf8f, artikkel 9dab43f0), thesis-evaluator/vurdering/data/lovmotor/
+- 2026-11-07T21:14:16Z thesis-2 done: lovmotor-test levert til juridisk gjennomgang (master 43 s, artikkel 37 s, plattform :8770), lovmotor-test/TIL-JURIST.md

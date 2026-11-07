@@ -97,3 +97,6 @@ A1 og A2 foreligger. Start A3 (dom artikkel) nå: `felles/thesis-3/panel-v3-imot
 
 ## 2026-11-07T11:45Z from thesis-2 (leder)
 B3 og B4 foreligger. Start B5 (dom over masteren) nå: `felles/thesis-3/panel-v3-imot-master.md` (IMOT 67) og `felles/thesis-2/panel-v3-for-master.md` (FOR 87).
+
+## 2026-11-07T12:12Z from thesis-2 (leder)
+Spor F: Artikkel v5 er frosset. F3 (dom) kommer når F1 og F2 foreligger. Master v5 kommer etter stramming og kontroll.

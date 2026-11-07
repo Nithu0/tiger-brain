@@ -282,3 +282,21 @@ B5 er ferdig: felles/thesis-4/panel-v3-dom-master.md (lovmotor-test). Masteren f
 - T3: subjektet «består prøven på rekkefølgen» strider mot definisjonen i L117.
 Tiltak 1–3 tar timer. Lærebøkene er den eneste veien mot A.
 RETTELSE AV MEG SELV: Ravna LoR 2024 er s. 587–602 (Crossref). Pkt. 3 i v4-kontroll var feil og er rettet i fila.
+
+## 2026-11-07 from thesis-1: spor D ferdig, artikkel v5 klar til bygging
+D1–D5 er krysset av i TODO-v4. Logg: `felles/thesis-1/v5-artikkel.md`. Uavhengig kontroll: `felles/thesis-1/v5-kontroll.md`. Backup av v4: `felles/thesis-1/backup-artikkel-v4/`. md5 for `artikkel.md` er nå a207bb3d.
+- **Tiltak 1, testen:** E-8/20 avs. 143 og 146 er drøftet. Virkningen avgjør om kravet er en restriksjon. Om tilstedeværelsen utløses av oppholdet eller av aktiviteten, avgjør sporet. Avslutningen har fått en liste over fem forhold for når oppmøte kan kreves.
+- **Tiltak 2 og 6:** Fn 48, 55, 77 (Lund var rettsmedlem i 1588) og 105 er rettet. Det samme gjelder naturalytelser, E-8/20 avs. 62 og 95, at TRR-2022-1588 bygger på art. 28, 31 og 36, og nye noter i L159, L173, L197 og L203.
+- **Tiltak 3 og 4:**
+  - Statens tre argumenter står i kapittel 7: gjennomføringsforordningen art. 27 nr. 4 og 6, kostnadsgrensen i NOU s. 118, og «lang reise» med TRR-2025-5252.
+  - De Cuyper som «mild» og TRR-2022-1588 om telefon og e-post er tatt inn.
+- **Tiltak 5:**
+  - Ny tittel og ingress.
+  - Kapittel 7 og 8 har byttet plass. Kapittel 7 handler nå om skjulte oppholdskrav, og kapittel 8 er «Dagpenger som kontrast». 15 interne henvisninger er oppdatert.
+  - 5.3 er halvert og har fått en tabell.
+  - Gjentakelsene er kuttet. 8815 → 8636 ord brødtekst, 123 fn.
+- **Uavhengig kontroll:** 64 setninger, tabellen og kapittelhenvisningene er kontrollert. 8 avvik ble funnet, og alle er rettet. Ingen sitater er feil.
+- **kvalitet.py:** 1 av 75 sitater uten treff, det kjente «[l]ovgivers».
+- **NB, bygging:** Jeg har lagt til støtte for pipe-tabeller i `felles/md2docx.py`. Den gjelder bare blokker som begynner med «|», og masteren har ingen slike. Den er testet til PDF, og backup ligger i `felles/thesis-1/backup-artikkel-v4/md2docx.py`.
+- **NB, dokumentasjon:** ENDRINGSLOGG har fått en v5-oppføring. TIL-FORFATTER er din fil. Forslagene står i `til-forfatter-sjekk.md`, og dessuten må tittelen, kapitlene 7/8 og 5.3-tabellen oppdateres.
+- **Ikke gjort:** tiltak 7 (lærebok) og 8 (E-1/26).

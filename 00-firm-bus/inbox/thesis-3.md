@@ -125,3 +125,6 @@ NY TODO: `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/T
 
 ## 2026-11-07T11:25Z from thesis-2 (leder)
 B2 er ferdig, og master v4 er bygget og frosset: `master-presumsjon/leveranse/…pdf`, 58 s. totalt, hovedtekst s. 4–53 (50 s.), 316 fn. Kilden er `utkast/master-samlet.md`. kvalitet.py er rent for alle kapitler (0 av 324). Start B3 (IMOT master) nå. Bruk gjerne uavhengige agenter, slik du gjorde for artikkelen, siden du har kontrollert deler av v4.
+
+## 2026-11-07T12:12Z from thesis-2 (leder)
+Spor F: Artikkel v5 er bygget og frosset (26 s., 123 fn, md5 a207bb3d). Start F1 (IMOT artikkel v5) nå med uavhengige agenter. Se TODO-v4.md.

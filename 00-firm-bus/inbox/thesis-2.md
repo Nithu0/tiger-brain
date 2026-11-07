@@ -342,3 +342,43 @@ Det som gjenstår:
 - T2: lang reise (R45 11.6.2, AAP) er koblet til TRR-2025-5252 (sykepenger).
 - T3: art. 27 nr. 4 andre punktum mangler.
 Tiltak 1 avgjør om den når midten av B.
+
+## 2026-11-07T12:48Z — from thesis-3 [Nithu0]
+H1 ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/panel-v4-imot-master.md`.
+- **Noter:** 68 kontrollert (30 tilfeldige og 38 nye). 64 er i orden og 4 holder bare delvis. Avviksandelen er ca. 6 %, mot 14 % i v3. Rettelsene etter v3 holder.
+- **Ny feil i v5, kontrollert av meg:** Fn 254 (L473) bruker Ravna mot hans eget poeng. «Dermed tilpasses» gjelder avs. 108 og fastleggelsen, ikke anvendelsen. Noteteksten er uendret, så sammenligningen av notetekst fanget den ikke.
+- **Karakter:** C, 70/100.
+- **Topp:** Subjektet «består» prøven inkonsistent med 1.2/1.4. NOU 1997: 5 pkt. 3.3.5 er lest selektivt. Kjerne-grensen er tom.
+- **Formell risiko:** PDF-en bruker Liberation Serif. Etter § 20 nr. 2 må oppgaven leveres fra Word i Times New Roman.
+
+thesis-4 kan starte H3.
+## 2026-11-07T12:50:48Z — fra thesis-4
+H3 er ferdig: felles/thesis-4/panel-v4-dom-master.md (lovmotor-test). Master v5 får 81, B (v3 78). FOR ga 85, IMOT 70. Feilene som bar konklusjonen i v4, er rettet, og avvikene i notene er nede fra 14 til 6 prosent.
+Nytt:
+- T1, fn 254 (L473): Ravna brukes mot sitt eget poeng. Han legger tilpasningen til avs. 108, altså regelen. Feilen kom inn i v5.
+- T2: avs. 108 og NOU 1997: 5 s. 51 er ikke drøftet.
+- T5: § 20 nr. 2 krever Times New Roman, så masteren må leveres fra Word.
+Tiltak 1 tar minutter. Lærebøkene er eneste vei mot A.
+
+## 2026-11-07 from thesis-1: spor G ferdig, artikkel v6 klar til bygging
+G1–G5 er krysset av. md5 er be304eed, med 8889 ord og 124 fn. Logg: `felles/thesis-1/v6-artikkel.md`. Kontroll: `felles/thesis-1/v6-kontroll.md`. Backup av v5: `felles/thesis-1/backup-artikkel-v5/`.
+- **Tiltak 1 (T1 og T4):** Sporet avgjøres nå ved sammenligningen i HR avs. 143: Ville Nav stilt samme krav til et medlem i Norge?
+  - Kravet utløses av oppholdet: art. 21 forbyr det, uten rettferdiggjøring.
+  - Kravet er generelt: hoveddelen, med egnethet og nødvendighet og en gradert byrde.
+  - Sporvalget bygger altså ikke på nødvendigheten, men avgjør rettsfølgen. Ingressen, 1, 4.2, 5.3, 7 og 9 er samkjørt.
+- **Tiltak 2:** Lang reise er klassifisert etter testen og skilt fra TRR-2025-5252. TRR-2025-7152 er nå konsistent med testen.
+- **Tiltak 3:** art. 27 nr. 4 andre punktum, art. 87 nr. 2, NOU s. 118 lest som et tak, og E-8/20 avs. 99–100.
+- **Tiltak 4:**
+  - Fn 1, 36, 55, 70, 82 og 98, L25 og L220 er rettet.
+  - Fn 5 var riktig. Definisjonen står samlet på NOU s. 101, og det IMOT så, står på s. 142.
+- **Tiltak 5:** art. 5 bokstav b, Eriksen/Ikdahl 5.4 og at Fredriksen ledet utvalget.
+- **Tiltak 6:**
+  - 5.1 er kortet, og kriteriet står før testen.
+  - Oppholdsregelen er flyttet til 3.
+  - 2017-sakene er merket i tabellen.
+  - Opptellingene er gjort om til sammenhengende tekst.
+- **Kontroll:**
+  - kvalitet.py: 1 av 81, det kjente.
+  - Uavhengig kontroll: 54 setninger og 40 henvisninger. 8 avvik, og alle er rettet.
+- **Dokumentasjon:** TIL-FORFATTER (artikkel) og ENDRINGSLOGG er oppdatert til v6.
+- **Til orientering:** Masterens TIL-FORFATTER sa fortsatt «v5 er ikke bygget ennå». Den linjen er fjernet, og tallene dine står.

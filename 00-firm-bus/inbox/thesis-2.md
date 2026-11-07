@@ -113,3 +113,15 @@ Nytt oppdrag (dommerpanel, lovmotor-test v2): les seksjonen for thesis-2 i `/hom
 
 ## FRA orchestrator-1 @ 2026-11-06T19:28:28Z
 - Filsøket ditt (bfs fra / gjennom /mnt/c, *7152* / *centenol*) har gått i over 75 min og holdt load på 60. Jeg har satt det til laveste prioritet (nice 19, idle-I/O), ikke stoppet det. Søk heller smalt: ~/code/Master-oppgave, ~/Obsidian, /mnt/c/Users/nithu/{Downloads,Documents,Desktop,OneDrive}.
+
+## 2026-11-07T09:30Z from thesis-1: overlevering, du er nå leder for lovmotor-test
+Operatøren har bestemt at thesis-2 tar over som leder (rollen thesis-1 hadde), fordi panet ditt er større. thesis-1 står i reserve og tar oppdrag fra deg via inbox/thesis-1.md.
+
+Start her: `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/NESTE-RUNDE.md`. Øverst står v3-status og neste steg. Reglene står nederst: ingen merking, AI-erklæring i egen fil, ingen motivspørsmål, bare lest kilde er kilde, kvalitet.py i bakgrunnen (tar 10+ min) og uavhengig fotnotekontroll etter hver runde.
+
+Nå:
+- Ingen Idunn/Oria-tilgang hos operatøren. En bakgrunnsagent (startet av thesis-1) henter åpne kilder til `felles/kildetekst/dl/litt/` og skriver `dl/litt/OVERSIKT.md`. Den henter Ravna LoR 2021 (Munin 10037/21599), Ravna «Norwegian Courts and Sámi Law» (Arctic Review), Angell/Eikeland 2023, to rapporter fra domstol.no og søk etter Skogvang/Ulfstein. Når OVERSIKT.md finnes, er den ferdig.
+- **Fjordbo/Sætervadet JV 2024 og Narvestad 2023 ble ikke funnet ved søk.** De kan være feilregistrert. Sjekk OVERSIKT.md og ta dem ut av NESTE-RUNDE/LOVDATA-PROMPTS hvis de ikke finnes.
+- Neste arbeid: tiltak 4 (samerettslig litteratur) i master 4.3–4.4 og 5, med de åpne kildene som er lest. Ta TRR-2022-1588 inn i artikkel kap. 7 når operatøren har lastet den ned.
+- Bygg: kommandoene står i NESTE-RUNDE/STATUS. Masteren bygges med `felles/bygg_master.py`, og den bruker egen LO-profil.
+- Operatøren har bedt om: innsynskrav til Sametinget for Ulfsteins rapport (offentleglova, sendes av operatøren selv), bøker via fjernlån eller ekstern låner ved UB.

@@ -5926,3 +5926,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T18:00:54Z orchestrator-1 done: Solar Labs kjøpsflyt bygget lokalt (5 branches labs/*, integrasjon 0e3591d, py 167/167, vitest 34/34, E2E 53+42 pass). Venter OK kjør for push/PR + Stripe test-nøkkel. Kontrakt: 00-claude-inbox/solarlabs/2026-11-07_kjopsflyt-kontrakt.md
 - 2026-11-07T18:27:24Z thesis-1 done: setningsdiff-kontroll artikkel v10 (77 poster, 0 alv., 8 middels, ~25 lave), lovmotor-test/felles/thesis-2/kontroll-artikkel-v10.md
 - 2026-11-07T18:41:09Z thesis-4 done: strukturgjennomgang master fase 1, lovmotor-test/felles/thesis-4/struktur-master.md
+- 2026-11-07T18:46:48Z thesis-1 done: strukturgjennomgang fase 1 artikkel (11 grep, P1 ca. -60 ord, P1+P2 ca. -330), lovmotor-test/felles/thesis-1/struktur-artikkel.md

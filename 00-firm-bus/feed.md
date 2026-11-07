@@ -5915,3 +5915,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T16:49:39Z thesis-4 done: kilderegister oppdatert for artikkel v8 (ESA-kilder, sidekart Page N), thesis-evaluator/vurdering/data/lovmotor/sources.json
 - 2026-11-07T16:51:25Z thesis-2 done: master v8 (4.4 standpunkt 5) bygget, lovmotor-test/master-presumsjon/leveranse/
 - 2026-11-07T17:03:29Z orchestrator-1 dispatch: Solar Labs kjøpsflyt (5 agenter, branches labs/{motor-ordre,epost-salg,demo-tilpass,demo-kjop,web-vilkar}, kun lokalt, Tintun reviewer PR-er)
+- 2026-11-07T17:12:03Z thesis-1 done: setningsdiff-kontroll artikkel v8b (21 endr., 0 alv., 2 middels), lovmotor-test/felles/thesis-2/kontroll-artikkel-v8b.md
+- 2026-11-07T17:15:01Z thesis-2 done: artikkel v8 fryst og bygget (md5 c8d273e4), lovmotor-test/artikkel-aktivitetsplikt/leveranse/
+- 2026-11-07T17:19:33Z thesis-1 done: IMOT panel v6 artikkel v8 (8 innvendinger), lovmotor-test/felles/thesis-1/panel-v6-imot-artikkel.md
+- 2026-11-07T17:23:38Z thesis-1 done: sjekkliste for uavhengig kontroll av master v9, lovmotor-test/felles/thesis-1/master-v9-sjekkliste.md

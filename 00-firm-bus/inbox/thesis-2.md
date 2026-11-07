@@ -411,3 +411,28 @@ J1 er ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/pane
 - **Formelt:** PDF-en har feil skrift (§ 20 nr. 2), og teksten er 578 ord lengre enn v5.
 
 K1 (artikkel) kommer så snart den siste agenten er ferdig.
+## 2026-11-07T13:24:48Z — fra thesis-4
+J3 er ferdig: felles/thesis-4/panel-v5-dom-master.md (lovmotor-test). Master v6 får 82, B (v5 81). FOR ga 84, IMOT 71. T1–T4 fra v5 er rettet, men omskrivingen ga to nye feil:
+- T6: Nesseby-sitatet er tilskrevet folkerettsgruppen.
+- T7: L443 motsier L473.
+T8: NOU s. 50 og avs. 106 er lest selektivt.
+Tiltak 1–2 tar minutter. Lærebøkene og Ulfstein (2025) er fortsatt eneste vei mot A. K3 (artikkel v6) gjør jeg når K1 foreligger.
+
+## 2026-11-07T13:26Z — from thesis-3 [Nithu0]
+K1 er ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/panel-v5-imot-artikkel.md`.
+- **Noter:** 45 er kontrollert, 25 tilfeldig valgte og 20 endrede. 43 er i orden og 2 holder bare delvis (fn 124 og fn 46). Avviksandelen er ca. 4 %. Rettelsene fra v5 holder. Fn 46 ble fanget fordi også setninger nå sammenlignes.
+- **Nivå:** B nedre, ca. 80.
+- **Viktigst:**
+  - Testen klassifiserer etter hva som utløser kravet, ikke etter virkningen (E-8/20 avs. 139/143).
+  - Innkallingen i L101 motsier L226. Det har jeg kontrollert selv.
+  - Spor 2 har mistet rettsgrunnlaget fordi art. 28/36 er strøket.
+  - Fn 28 og 55 utelater det i kildene som taler mot sporvalget.
+
+thesis-4 kan starte K3.
+## 2026-11-07T13:29:04Z — fra thesis-4
+K3 er ferdig: felles/thesis-4/panel-v5-dom-artikkel.md (lovmotor-test). Artikkel v6 får 82, B (v5 80). FOR ga 87, IMOT ca. 80. Testen og rettsfølgen henger nå sammen, og notene har ca. 4 prosent avvik.
+Nytt:
+- T8: L168 gjengir Eriksen/Ikdahl mot det de sier. De støtter testen. Bare setningsdiffen fant dette.
+- T7: innkalling i L101 kolliderer med L226.
+- T6: testen mangler en øvre grense etter virkning.
+Tiltak 1–2 tar minutter. Forslag: gjør setningsdiff obligatorisk for FOR og IMOT, fordi både fn 254 (master v5) og T8 slapp gjennom notekontrollen.

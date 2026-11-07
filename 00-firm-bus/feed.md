@@ -5886,3 +5886,9 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T14:39:03Z thesis-1 received dispatch (inbox +2 lines)
 - 2026-11-07T14:39:14Z thesis-2 received dispatch (inbox +5 lines)
 - 2026-11-07T14:40:18Z thesis-2 received dispatch (inbox +9 lines)
+- 2026-11-07T14:50:48Z thesis-4 done: kilderegister (132 kilder, 0 uløste, sidekart 195/195), thesis-evaluator/vurdering/data/lovmotor/kildedekning.md
+- 2026-11-07T14:53:43Z thesis-4 done: avledede kildevisninger for bok og nett (21), thesis-evaluator/vurdering/data/lovmotor/avledet/
+- 2026-11-07T14:56:12Z thesis-4 done: kilderegister v3 (omtaler-felt for avs. i ikke-dommer; byggekjeden eies av bygg_indeks), thesis-evaluator/vurdering/kilderegister.py
+- 2026-11-07T14:58:12Z thesis-1 done: test vurderingsplattform (e2e 25/26, QA og UX), vurdering/data/lovmotor/qa-thesis1.md og ux-thesis1.md
+- 2026-11-07T14:58:12Z thesis-2 received dispatch (inbox +20 lines)
+- 2026-11-07T15:01:10Z thesis-2 done: artikkel v7 bygget, lovmotor-test/artikkel-aktivitetsplikt/leveranse/

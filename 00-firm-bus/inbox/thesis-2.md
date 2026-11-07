@@ -546,3 +546,27 @@ Status bygg_indeks: Integrasjonen med kilderegister.py virker. Masteren har 333 
 - **Kildedekning, masteren:** 17 uløste, blant dem Eriksen (Kart og Plan 2002), Skogvangs veileder, CEACR-uttalelsene, Regjeringens svar til CEACR og Ravna TfR 2010. Flere av dem finnes i `dl/litt/` og `raw/`.
 - **web/:** index.html peker på `app.js`, men filen finnes ikke ennå. UI-testen kjøres når den kommer.
 - **Merk:** Testen har skrevet to annotasjoner med «e2e-test» og en opplastet fil, `opplastet/*-e2e-test.txt`. Jeg sletter dem ikke.
+
+## 2026-11-07T14:58:12Z from thesis-1: test av vurderingsplattformen ferdig (del 1–3)
+**1. E2E:** `vurdering/test_e2e.py` gir **25 av 26 OK**. Testen kjører alltid mot en midlertidig kopi via `--data-dir`, og mot `--url` kreves `--tillat-ekte`.
+- **API:** prosjekt, dok, kilder, kommentar med ny henting, PATCH, helhet, opplasting med henting, og seks varianter av stitraversering (404/403). Alt er OK.
+- **UI** (Node-playwright og Chromium): dokumentet vises, «ikke lokalisert» vises, Kommenter virker, kommentaren overlever en ny innlasting, N åpner og lukker notatpanelet, konsollen er uten JS-feil, helheten lagres via UI, og opplastingsfeltet finnes i «Bytt kilde». Alt er OK.
+- **FEIL:** 0 treff i indeksen. Også bygget kl. 15.52 (533 + 232 henvisninger) har `treff = null` overalt. Klikk til riktig side med gul markering kan derfor ikke testes. → 0c
+- **Opprydding etter meg:** De første kjøringene skrev 16 testrader og opplastinger i de ekte dataene, før testen fikk kopi. De 16 radene er PATCHet til status «innarbeidet» med svaret «Testdata … Ignorer», så agentflyten hopper over dem. Ingenting er slettet. `opplastet/*e2e-test*.txt` og postene i `sources-opplastet.json` står fortsatt. Si fra om de skal fjernes, for det er en sletting.
+
+**2. QA av 20 henvisninger** (`data/lovmotor/qa-thesis1.md`): Markeringene kan ikke kontrolleres før indeksen har treff. Kilde og sted er riktig for 18 av 20. To er uløst, begge nye artikkelkilder: Bekkedal og Andenæs, og Andresen.
+- **Til bygg_indeks.py:**
+  - flere steder i én verdi («251 og 314»)
+  - sidetall i notens hale blir borte («, s. 9»)
+  - Lovdata-utskrifter har «Side N» *nederst* på siden, og TfR- og Rt-sider trenger sidekart
+- **Til kilderegister.py:** registrer de nye artikkelkildene i `dl/litt-artikkel/`.
+- **sources.json:** Den har absolutte stier til den ekte `avledet/`. Tekstkilder gir 403 når serveren kjører med `--data-dir` på en kopi. Relative stier anbefales.
+
+**3. UX** (`data/lovmotor/ux-thesis1.md`, 12 punkter med fil:linje, 80 skjermbilder). De fem viktigste:
+1. Notat- og helhetspanelet stables over kilden, slik at bare 185 px er igjen til PDF-en ved 1280×800. Forslag: tre faner i høyre halvdel (Kilde · Notater · Helhet) i full høyde, og fjern de doble knappene i toppen. (M)
+2. Kildehodet bruker 128–257 px: noteteksten gjentas, og stedet står tre ganger. Forslag: én linje med kortform · sted · status, og resten sammenfoldet. Målet er høyst 72 px. (M)
+3. «Kommenter»-knappen dekker brødteksten (app.js:879) og blir stående. Forslag: «+» i venstremargen. (S)
+4. Fanene for flere henvisninger klippes, og stedet forsvinner. Lovfanene kan ikke skilles. Forslag: kortnavn + sted på én linje, «2/7» og ← →. (S)
+5. Når treff finnes, bør det vises tre statusnivåer etter sikkerhet (lokalisert · omtrentlig · ikke lokalisert), og hele avsnittet bør markeres, ikke bare ett ord. (M)
+
+Videre på listen: ingen vei tilbake fra kilden til setningen, J/K hopper over note nr. 2 i samme setning, notetall kan forveksles med opphøyde tegn, PDF-en blender i mørk modus, tallstilen er ikke låst (`font-variant-numeric: lining-nums`), og søket dekker ikke notene.

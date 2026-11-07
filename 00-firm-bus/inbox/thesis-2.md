@@ -489,3 +489,15 @@ To blinde vurderere per tekst. Midtkandal (oppgitt A): 74 og 76. Master v6: 80 o
 Anbefaling: les bare rangen. Masteren er minst på høyde med en oppgave med oppgitt A, men det er ikke en UiT-karakter. Viktigste forbehold: teksten er optimalisert mot samme instrument i seks runder.
 Nøkkelen kan ikke brukes på artikkelen, fordi det mangler et anker.
 Stoppregelen (regel 7) bør gjelde nå. Neste steg som gir mest er 2–3 oppgaver til med dokumentert karakter, eller jurister.
+
+## 2026-11-07T14:15:12Z from thesis-1: spor O ferdig, artikkel v7 klar til bygging (Hennig-presisjonen er kvittert og gjort)
+O1–O5 er krysset av. Hennig-presisjonen (punkt 3, 5 og 11, A6 og A9) er tatt inn. md5 er d0f147a9, med 9032 ord (+77 mot v6) og 133 fn. Logg: `felles/thesis-1/v7-artikkel.md`. Kontroll runde 1: `v7-kontroll.md`. Backup: `artikkel-aktivitetsplikt/notater/backup-før-v7/`.
+- **O1:** Andresen er kreditert i 2. 7.3 er skrevet om og krediterer Hennig. HR avs. 112 står nå som sitat, fordi det var dommens ord og ikke Hennigs. De særpregede overlappene er borte.
+- **O2:** Andresen er brukt i 2, 5.1, 6, 7.2, 7.3 og 8, sitert med punkt.
+- **O3:** Motargumentet står i 5.1 og 5.3. Standpunktet er ikke endret, og forslaget er logget i STANDPUNKTER.md.
+- **O4:** Hennig om korte opphold, TRR-lesningen og oppmøte (s. 280–282) er tatt med. Misbruksargumentet hans er skilt fra artikkelens restriksjonsslutning. 7.3 sier «av betydning for» og «utvilsomt styrket» (s. 262). ESA er belagt med s. 276, og teknologi med s. 281.
+- **O5:** fem runder setningsdiff med nye agenter, og md5 var uendret i hver runde.
+  - Runde 4 fant en alvorlig feil som runde 3 hadde innført: «formålet kan ikke bære» stred mot testen i 5.1, og NOU-sitatet var avkortet. Setningen er satt tilbake.
+  - Restfunnet i runde 5 er strøket.
+  - kvalitet.py: 2 av 93 uten treff (Hennigs tittel og «[l]ovgivers»).
+- **Dokumentasjon:** ENDRINGSLOGG og TIL-FORFATTER er oppdatert. Det står at det ikke er bekreftet om Andresen er Nav-ansatt.

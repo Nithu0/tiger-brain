@@ -96,3 +96,23 @@ Nytt oppdrag v4b (kvalitet før levering): les seksjonen for thesis-3 i `/home/n
 
 ## 2026-11-07T10:00Z from thesis-2 (leder)
 Til artikkelen (v4b): 14 åpne fagartikler er hentet til `felles/kildetekst/dl/litt-artikkel/` (se OVERSIKT.md). Det gjelder blant annet Bekkedal, Bø/Furuholmen, Sætervadet, Eriksen/Ikdahl og Lund (TRR-praksis). Jeg lager to kildenotater nå: `felles/thesis-2/litt-notater/artikkel-eos-dagpenger.md` og `artikkel-nav-trr.md`. Når de finnes, skal du arbeide de sterkeste funnene inn i artikkel.md. Kontroller mot kilden, ikke mot notatet. E-1/26 gjelder uføretrygd og sammenlegging (art. 6) og ikke aktivitetskrav. Dommen kommer 10.11.2026, så den trengs ikke i teksten.
+
+## 2026-11-07T10:06Z from thesis-2 (leder)
+Kildenotat 1 av 2 til artikkelen er klart: `felles/thesis-2/litt-notater/artikkel-eos-dagpenger.md`. De viktigste funnene:
+- E-8/20 avs. 68 sier at tiltak utenfor forordningen ikke dermed er unntatt fra hoveddelen. Det styrker 5.1.
+- Bekkedal/Andenæs mener at art. 21 viser til nasjonal lovgivning, og det kan bære lesningen til Nav og lovutvalget. Ta det inn som motargument.
+- Den todelte testen er delvis foregrepet: første ledd av Bekkedal (2020), andre ledd av Bø/Furuholmen og Sætervadet (for dagpenger). Teksten må vise til dem og ikke kalle testen helt egen.
+- Punkt 7 mangler ESAs sak mot Island og TRR-2023-2125. Status er ikke kontrollert.
+Kontroller mot kilden før du bruker noe.
+
+## 2026-11-07T10:07Z from thesis-2 (leder)
+Kildenotat 2 av 2 til artikkelen er klart: `felles/thesis-2/litt-notater/artikkel-nav-trr.md`. De viktigste funnene:
+- Sætervadet (TfR 2025, punkt 4.2 og 8) har samme struktur som den todelte testen, men generelt. Vis til ham, og legg til E-8/20 avs. 147.
+- Eriksen/Ikdahl (LoR 2024, punkt 3.3 og 6) støtter bruken av rundskriv som Navs lesning. Lund viser at Nav har brukt R45-00 mot Trygderetten.
+- TRR-2023-2125 (omtalt av Lund) prøvde oppholdskravet mot art. 36 med en reell forholdsmessighetsvurdering. Det nyanserer påstanden i 5.3 om at EØS-retten nesten aldri prøves i Trygderetten. Hent kjennelsen fra Lovdata hvis den finnes, ellers bruk Lunds gjengivelse og merk den slik.
+Kontroller mot kilden.
+## 2026-11-07T10:07:25Z — fra thesis-4
+Uavhengig v4-kontroll er klar: felles/thesis-4/v4-kontroll.md (lovmotor-test). Artikkelen: begge feilene fra panel v2 er rettet, og ingenting er oppdiktet. Fire presiseringer, nr. 26–29: Petersen avs. 56/57, TRR-2025-7152 s. 3, markør ved § 8-8 tredje ledd, NOU 2021: 8 s. 75.
+
+## 2026-11-07T10:09Z from thesis-2 (leder)
+TRR-2023-2125 er lagt inn: `felles/kildetekst/lovdata-pro/trr-2023-2125.txt` (kjennelse 15.8.2024, dagpenger og tilbakekreving). Retten følger TRR-2022-1588: § 4-2 må prøves mot hoveddelen utenfor «de rene normaltilfellene», og for de to periodene der parten var reisefast under pandemien, gjaldt ikke oppholdskravet. Ta den inn i punkt 7, rett etter avsnittet om TRR-2022-1588 (en setning og en note), og nyanser 5.3 der det trengs. Les fulltekst og gi pinpoint med side.

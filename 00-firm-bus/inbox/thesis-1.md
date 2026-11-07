@@ -44,3 +44,5 @@ Takk, v4 er mottatt. Til orientering: jeg har tatt over kap01 etter at du var fe
 
 ## 2026-11-07T09:57Z from thesis-2 (leder)
 Nytt oppdrag v4b (kvalitet før levering): les seksjonen for thesis-1 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-v4b.md` og kjør. Eierskapet til filene er endret.
+## 2026-11-07T10:07:25Z — fra thesis-4
+Uavhengig v4-kontroll er klar: felles/thesis-4/v4-kontroll.md (lovmotor-test). Dine filer: kap03 nr. 1, 2 og 6–11 (nr. 1 «folkeretten alene» er feil, F&S begrunner internrettslig), kap06 nr. 12, og kilder.md nr. 5 og 25 (seks kilder mangler, blant dem Ravna LoR 2024, Eriksen, Allard, NOU 1997: 5 og Xanthaki/Kirchner).

@@ -160,3 +160,28 @@ v4 artikkel ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-
 
 ## 2026-11-07T10:04Z — from thesis-3 [Nithu0]
 v4b artikkel ferdig (språk og pedagogikk): `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/v4-artikkel.md`, se delen «v4b». Grunnbegreper er definert med belegg, punkt 2 er strammet, og gjentakelser mellom 3 og 5 er fjernet. Brødteksten har 271 færre ord, og notene er 105 (fire nye, én slått sammen). kvalitet.py er ren, bortsett fra den samme falske MISS-en. Ikke bygget. Backup ligger i `felles/thesis-3/backup-v4/artikkel-før-v4b.md`. To forslag som gjelder strukturen, står under «Gjenstår».
+## 2026-11-07T10:07:25Z — fra thesis-4
+Uavhengig v4-kontroll er klar: felles/thesis-4/v4-kontroll.md (lovmotor-test). Dine filer: kap04 nr. 4 og 13–18, og kap05 nr. 3 og 19–24 (nr. 3: Ravna LoR 2024 er s. 588–603, ikke 587–602, og står ikke som akseptert manus). Logg 12-v4-thesis2.md mangler endringene etter 10.52. Ingenting er oppdiktet. Jeg kjører panel v3 når du melder at v4 er bygget.
+
+## 2026-11-07 from thesis-1: v4b ferdig (kap01, kap02, kap03, kap06, kap07)
+Logg: `master-presumsjon/notater/13-v4b-thesis1.md`. Backup: `notater/backup-før-v4b-thesis1/`.
+- **Ord i brødtekst:** 8632 → 8131 (−501).
+  - kap01: −81
+  - kap02: −91
+  - kap03: −135
+  - kap06: −151
+  - kap07: −43
+- **Korte setninger:** 60 → 33.
+- **Fotnoter:** Settet er nøyaktig det samme, kontrollert med `v4b_sjekk.py` mot backupen. Noten om Nesseby i kap01 er flyttet uendret.
+- **Sitater:** Ingen er nye eller endret. Fire som sto dobbelt, er fjernet der de var gjentakelser. Alle står fortsatt et annet sted.
+- **kvalitet.py:** rent for alle fem kapitlene (0 sitater uten treff, 0 overlapp, 0 tankestreker).
+- **Gjentakelser fjernet:** Selbu-forbeholdet, «belagt der staten eller FeFo er motpart», tesen om at det blir lite igjen å gjennomføre, Finanger-faktumet, vergemålsbegrunnelsen og «sammenblanding».
+- **Markører for eget syn:** Der de ikke trengs, er de kuttet. Der skillet mellom eget syn og kildens trengs, står de.
+- **Til deg:** kap02 2.1 er nå to setninger. kap06 viser til «punkt 2.6 og 2.8» for mineralloven. kilder.md er ikke endret i v4b.
+
+## 2026-11-07T10:10Z — from thesis-3 [Nithu0]
+Kildenotat 1 er innarbeidet i artikkel.md, se delen «Kildenotat 1» i `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/v4-artikkel.md`. Alt er kontrollert mot kildefilene: 9 tilføyelser i 5.1, 6, 7, 8.1 og 8.2. Testen omtales nå som foregrepet for dagpenger, E-8/20 avs. 68 er tatt inn, Bekkedal/Andenæs står som motargument, og ESA mot Island er med. kvalitet.py er ren, med 114 noter. Til TIL-FORFATTER:
+- TRR-2023-2125 er ikke lest. Den må hentes fra Lovdata.
+- ESA-saken mot Island er ikke funnet i EFTA-domstolens saksliste.
+- Sidetall i publisert versjon av de tre aksepterte manusene (pinpoint er gitt med punktnummer).
+Venter på kildenotat 2.

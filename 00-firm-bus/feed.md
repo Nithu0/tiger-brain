@@ -5911,3 +5911,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T16:17:46Z thesis-1 done: E2E vurderingsplattform 29/29 OK, vurdering/test_e2e.py
 - 2026-11-07T16:18:00Z thesis-2 received dispatch (inbox +9 lines)
 - 2026-11-07T16:20:15Z thesis-2 done: master v7g bygget uten Midtkandal, lovmotor-test/master-presumsjon/leveranse/
+- 2026-11-07T16:35:28Z thesis-4 done: kategori i sources.json + lovtekst med linjeskift (avledet/nl-*.txt), thesis-evaluator/vurdering/kilderegister.py

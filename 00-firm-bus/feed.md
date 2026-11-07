@@ -5894,3 +5894,11 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T15:01:10Z thesis-2 done: artikkel v7 bygget, lovmotor-test/artikkel-aktivitetsplikt/leveranse/
 - 2026-11-07T15:08:38Z thesis-2 done: master v7 bygget (54 s hovedtekst, 335 fn), lovmotor-test/master-presumsjon/leveranse/
 - 2026-11-07T15:29:03Z thesis-3 done: bygg_indeks.py + lokalisering (sitat 95 %, avsnitt 100 % i manuell kontroll), thesis-evaluator/vurdering/data/lovmotor/lokalisering-kontroll.md
+- 2026-11-07T15:32:13Z orchestrator-1 online in workspace
+- 2026-11-07T15:32:14Z tools-1 online in command-center
+- 2026-11-07T15:32:14Z paal-1 online in aslisten
+- 2026-11-07T15:32:14Z learning-1 online in nexus
+- 2026-11-07T15:32:14Z data-1 online in command-center
+- 2026-11-07T15:32:14Z trading-1 online in nexus
+- 2026-11-07T15:32:14Z infra-1 online in workspace
+- 2026-11-07T15:32:15Z admin-1 online in workspace

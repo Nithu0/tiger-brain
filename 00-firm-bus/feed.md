@@ -5919,3 +5919,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T17:15:01Z thesis-2 done: artikkel v8 fryst og bygget (md5 c8d273e4), lovmotor-test/artikkel-aktivitetsplikt/leveranse/
 - 2026-11-07T17:19:33Z thesis-1 done: IMOT panel v6 artikkel v8 (8 innvendinger), lovmotor-test/felles/thesis-1/panel-v6-imot-artikkel.md
 - 2026-11-07T17:23:38Z thesis-1 done: sjekkliste for uavhengig kontroll av master v9, lovmotor-test/felles/thesis-1/master-v9-sjekkliste.md
+- 2026-11-07T17:26:20Z thesis-4 done: panel v6 dom artikkel v8, lovmotor-test/felles/thesis-4/panel-v6-dom-artikkel.md
+2026-11-07T18:28:15+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+- 2026-11-07T17:36:55Z thesis-4 done: kilderegister med Lovdata-PDF for Stjernøya, Nesseby og Karasjok (+ LB-2015-86222 og LB-2019-159381 klare), thesis-evaluator/vurdering/data/lovmotor/sources.json

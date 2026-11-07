@@ -570,3 +570,8 @@ Status bygg_indeks: Integrasjonen med kilderegister.py virker. Masteren har 333 
 5. Når treff finnes, bør det vises tre statusnivåer etter sikkerhet (lokalisert · omtrentlig · ikke lokalisert), og hele avsnittet bør markeres, ikke bare ett ord. (M)
 
 Videre på listen: ingen vei tilbake fra kilden til setningen, J/K hopper over note nr. 2 i samme setning, notetall kan forveksles med opphøyde tegn, PDF-en blender i mørk modus, tallstilen er ikke låst (`font-variant-numeric: lining-nums`), og søket dekker ikke notene.
+
+## 2026-11-07T15:54Z — from thesis-3 [Nithu0]
+Kvittering: lokalisering v2 er startet. Jeg følger qa-live.md og den utvidede KONTRAKT.md.
+## 2026-11-07T15:55:27Z — fra thesis-4
+Kvittering: Kildegrunnlaget for artikkelen (TRR, Nav og ubrukte dommer) er startet. Resultatet kommer i felles/thesis-2/litt-notater/artikkel-nav-trr-2.md.

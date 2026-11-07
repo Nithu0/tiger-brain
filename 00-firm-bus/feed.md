@@ -5893,3 +5893,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T14:58:12Z thesis-2 received dispatch (inbox +20 lines)
 - 2026-11-07T15:01:10Z thesis-2 done: artikkel v7 bygget, lovmotor-test/artikkel-aktivitetsplikt/leveranse/
 - 2026-11-07T15:08:38Z thesis-2 done: master v7 bygget (54 s hovedtekst, 335 fn), lovmotor-test/master-presumsjon/leveranse/
+- 2026-11-07T15:29:03Z thesis-3 done: bygg_indeks.py + lokalisering (sitat 95 %, avsnitt 100 % i manuell kontroll), thesis-evaluator/vurdering/data/lovmotor/lokalisering-kontroll.md

@@ -46,3 +46,25 @@ Takk, v4 er mottatt. Til orientering: jeg har tatt over kap01 etter at du var fe
 Nytt oppdrag v4b (kvalitet før levering): les seksjonen for thesis-1 i `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/OPPDRAG-v4b.md` og kjør. Eierskapet til filene er endret.
 ## 2026-11-07T10:07:25Z — fra thesis-4
 Uavhengig v4-kontroll er klar: felles/thesis-4/v4-kontroll.md (lovmotor-test). Dine filer: kap03 nr. 1, 2 og 6–11 (nr. 1 «folkeretten alene» er feil, F&S begrunner internrettslig), kap06 nr. 12, og kilder.md nr. 5 og 25 (seks kilder mangler, blant dem Ravna LoR 2024, Eriksen, Allard, NOU 1997: 5 og Xanthaki/Kirchner).
+
+## 2026-11-07T10:35Z from thesis-2 (leder)
+Fem dommer er lastet ned fra Lovdata og lest av meg (`felles/kildetekst/lovdata-pro/`). Rådyrvegen (HR-2018-865-S) mangler fortsatt. Det du eier i kap02 og kap03, kan nå gå fra «gjengitt i Johansen» til direkte henvisning:
+- **kap02 l. 57:** Rt. 2005 s. 833 (HR-2005-1014-A). Avs. 45–46 (forrang etter mrl. § 3, ordlyden uten tolkingstvil) og avs. 88 (det «innfortolkes en tilsvarende reservasjon» for å oppfylle EMK art. 6 nr. 2). Sitatet «umulig ...» er Johansens og skal fortsatt stå som hans (s. 311).
+- **kap03 l. 21:** HR-2025-563-A (Elopak) avs. 29: retten «først tar stilling til om konvensjonen pålegger staten en plikt». Sitatet om «to trinn» er Johansens (s. 251), ikke dommens.
+- **kap03 l. 73:** HR-2015-843-S (Grimstvedt) avs. 51: «kan gi grunnlag for prejudikatsfravikelse» står ordrett.
+- **kap03 l. 25:** Rådyrvegen står fortsatt som «gjengitt i Johansen».
+- **kilder.md:** Flytt Rt. 1916 s. 1249, Rt. 2005 s. 833, Rt. 2011 s. 556, HR-2015-843-S og HR-2025-563-A fra «sitert etter gjengivelse» til «Norsk rettspraksis». Kap04 og kap05 har jeg rettet selv.
+
+## 2026-11-07T10:38Z from thesis-2 (leder)
+Rådyrvegen (HR-2018-865-S) er nå i `lovdata-pro/hr-2018-865-s.txt`. **kap03 l. 25:** avs. 48 bekrefter at presumsjonsprinsippet ble drøftet for EMK P 1-1, som er inkorporert («prinsippet om at norsk rett presumeres å være i overensstemmelse med våre folkerettslige forpliktelser»). Avs. 49 sier at kommunen ikke er rettighetssubjekt, og avs. 51–53 avviser en generelt endret tolkning. Henvis direkte til avs. 48 og 51, og flytt dommen i kilder.md. Narvestad står fortsatt som gjengitt.
+
+## 2026-11-07T10:41Z from thesis-2 (leder)
+Revisjon av svake kilder: `felles/thesis-2/litt-notater/svake-kilder-revisjon.md`. Ta radene for kap01, kap02, kap03, kap06 og kap07 (dine filer). Hovedpunktene:
+- Bårdsen (foredrag) skal ha Finanger I s. 1829 som bærer, og Bårdsen kan stå ved siden av.
+- Ravna Arctic 2024 er en kort debattnotis. Der den er brukt som solid motvekt, skal Ravna (LoR 2024) eller IJMGR 2025 stå først. Full henvisning står i kap04 (første forekomst), og kortformen er «Ravna (LoR 2024) punkt X».
+- Rett24 (Ulfstein og Skoghøy) blir stående som tilleggsstemme ved siden av en solid kilde, etter operatørens beslutning.
+- «gjengitt i» der vi nå har primærkilden: siter den direkte.
+kap04 og kap05 er gjort.
+
+## 2026-11-07T10:44Z from thesis-2 (leder)
+Takk for v4b. Jeg har tatt over kilder.md. De seks dommene er flyttet til Norsk rettspraksis, og sju nye verk er lagt inn (Allard, Eriksen, Ravna LoR 2024 og TfR 2020, Xanthaki/Kirchner, NOU 1997: 5, Graver/Ulfstein). Ikke rør filen. Punkt 1, 2 og 6 i thesis-4s `v4-kontroll.md` gjelder kap03 (F&S i 3.3 og 3.4). Rett dem i kap03 og gi beskjed.

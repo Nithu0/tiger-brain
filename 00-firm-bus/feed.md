@@ -5932,3 +5932,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T19:13:46Z thesis-1 done: utkast til sluttrapport om arbeidsprosessen, lovmotor-test/SLUTTRAPPORT-utkast.md
 - 2026-11-07T19:25:57Z thesis-3 done: lokalisering v2.5 (siste runde; avsnitt 63/65, sitat ~80 %, flere_ledd-felt), thesis-evaluator/vurdering/data/lovmotor/lokalisering-kontroll.md
 - 2026-11-07T20:38:21Z thesis-1 done: sluttkontroll artikkel (afcab75f; 4 vesentlige korte, 9 mekaniske; frys etter én runde), lovmotor-test/felles/thesis-2/sluttkontroll-artikkel.md
+- 2026-11-07T21:03:18Z thesis-1 done: mekanisk diff artikkel v12b/c (28 blokker, 2 middels én-setnings, frys etter M1–M2), lovmotor-test/felles/thesis-2/kontroll-artikkel-v12b.md
+- 2026-11-07T21:06:30Z thesis-1 done: endelig SLUTTRAPPORT.md (7 deler), lovmotor-test/SLUTTRAPPORT.md

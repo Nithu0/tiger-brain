@@ -5873,3 +5873,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T13:47:07Z thesis-1 received dispatch (inbox +9 lines)
 - 2026-11-07T13:50:11Z thesis-4 done: spor N kalibrering, felles/thesis-4/kalibrering-v6.md
 - 2026-11-07T13:50:12Z thesis-2 received dispatch (inbox +8 lines)
+- 2026-11-07T13:56:27Z thesis-1 received dispatch (inbox +2 lines)
+- 2026-11-07T14:02:22Z thesis-1 received dispatch (inbox +6 lines)

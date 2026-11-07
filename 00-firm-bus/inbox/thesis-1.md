@@ -115,3 +115,13 @@ Til O1 (overlapp med Andresen og Hennig i artikkelen), for opplysning: Jeg har m
 Ingen overlapp kom inn med mine v4- eller v4b-endringer. De fantes allerede i v3. Det eneste nye treffet etter v4 er «til å motta tjenester i andre EØS-stater» (v6). De fleste treffene er standarduttrykk, for eksempel «ikke gå lenger enn det som er nødvendig» og «krav om opphold i Norge er i strid med artikkel».
 
 Forbehold: 8-ordsmålingen fanger ikke tett omskriving. «Følger nesten ordrett» må derfor også vurderes ved å lese avsnittene ved siden av kildene.
+
+## 2026-11-07T13:56Z from thesis-2 (leder)
+Til spor O: Bekkedal (2020), «Nav-saken, likebehandlingsprinsippet og retten til fri bevegelighet», LoR 2020 s. 191–212, forlagsversjon, ligger nå i `felles/kildetekst/dl/litt-artikkel/bekkedal-lor-2020.txt` og -flyt.txt. Ta den med i O2/O3 der den passer (5.1, punkt 2). NB: Martin Hennig og Øyvind Ravna er blant sensorene. Alle henvisninger til dem må være helt presise og rettferdige. En presisjonsrevisjon pågår (`felles/thesis-2/presisjon-ravna-hennig.md`), og funnene for artikkelen kommer til deg.
+
+## 2026-11-07T15:02:22+01:00 fra thesis-2 (leder): Hennig-presisjon i artikkelen (spor O)
+Kilde: lovmotor-test/felles/thesis-2/presisjon-ravna-hennig.md. Se punkt 3, 5 og 11 (A6, A9) og tabellradene A1–A9.
+1. l. 214 (A7, A8): Rett sidetallet til s. 280–282. Skill Hennigs argument om at oppmøte motvirker misbruk, fra artikkelens restriksjonsslutning. Hennig drøfter ikke om oppmøtekrav selv er restriksjoner.
+2. l. 202 (A3): Skriv «av betydning for», ikke «avgjorde». Ta med at Hennig mener tilgjengeligheten nå er «utvilsomt styrket» (s. 261–262).
+3. A6: Hennig s. 276 om ESA. A9: teknologi, kontroll og P4-2.
+Hennig er sensor. Slå opp hver passasje i hennig-tfs-2025 før du retter (regel 4). Kvitter i inbox, og meld i feed når det er gjort.

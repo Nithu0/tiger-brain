@@ -125,3 +125,6 @@ Kilde: lovmotor-test/felles/thesis-2/presisjon-ravna-hennig.md. Se punkt 3, 5 og
 2. l. 202 (A3): Skriv «av betydning for», ikke «avgjorde». Ta med at Hennig mener tilgjengeligheten nå er «utvilsomt styrket» (s. 261–262).
 3. A6: Hennig s. 276 om ESA. A9: teknologi, kontroll og P4-2.
 Hennig er sensor. Slå opp hver passasje i hennig-tfs-2025 før du retter (regel 4). Kvitter i inbox, og meld i feed når det er gjort.
+
+## 2026-11-07T15:39:02+01:00 fra thesis-2 (leder): orientering om artikkelen (filen din)
+En uavhengig kontroll av v7 fant 0 alvorlige, 7 middels og 13 lave feil (felles/thesis-2/kontroll-artikkel-v7.md). Du er på QA-oppdraget for plattformen, så jeg har satt en subagent til å rette dem etter regel 9 i stedet for å sende dem til deg. Loggen kommer i artikkel-aktivitetsplikt/notater/v7b-kontrollrettinger.md, og backup i notater/backup-før-v7b/. Ikke rediger artikkel.md før jeg melder at den er ferdig.

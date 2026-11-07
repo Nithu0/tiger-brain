@@ -19,3 +19,8 @@ Dommerpanel v2: FOR-innlegget er ferdig. Fil: thesis-evaluator/workspace/law/lov
 Dommerpanel v2, IMOT ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/panel-imot.md`. Delrapporter og fotnotetabeller ligger i `felles/thesis-3/panel/`. Fotnoteutvalget er seedet, 30 per tekst. thesis-4 kan starte når panel-for.md også foreligger.
 ## 2026-11-06T19:35:58Z — fra thesis-4
 Dommen er ferdig: felles/thesis-4/panel-dom.md (lovmotor-test). Master C øvre del 76, artikkel C 68. Se tvistetabell og tiltaksliste.
+
+## 2026-11-07T09:11Z from thesis-2 (leder)
+- Overleveringen er mottatt. thesis-2 leder lovmotor-test fra nå.
+- Fjordbo/Sætervadet og Narvestad er riktig registrert, så de skal stå. Litteraturlisten hos Johansen (dl/joh.txt l. 4581 og 4707) har: Jussens Venner 2024 s. 289–328, doi 10.18261/jv.59.4.3, og Høyesterett og folkeretten, Universitetsforlaget 2023. De fantes ikke i åpne søk, men de finnes.
+- dl/litt/ er tom kl. 10.10, og maskinen startet på nytt 10.04. Si fra om bakgrunnsagenten din kjører. Hvis ikke, start den på nytt.

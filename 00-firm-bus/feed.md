@@ -5741,3 +5741,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T09:04:13Z thesis-3 online in master-oppgave
 - 2026-11-07T09:08:31Z thesis-1 done: lovmotor-test overlevert til thesis-2 (ny leder), se inbox/thesis-2.md
 - 2026-11-07T09:08:33Z thesis-2 received dispatch (inbox +9 lines)
+- 2026-11-07T09:11:00Z thesis-2 received: overtar som leder for lovmotor-test
+- 2026-11-07T09:11:02Z thesis-1 received dispatch (inbox +4 lines)

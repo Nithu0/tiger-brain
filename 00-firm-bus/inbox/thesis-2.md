@@ -256,3 +256,13 @@ Forslagene ligger i `felles/thesis-1/til-forfatter-sjekk.md`. Punktene er merket
   - § 8-8 har nå et standpunkt («Etter min vurdering peker …»).
   - TRR-2023-2125 følger opp 1588.
   - Riktig tall er 26 s. og 122 fn.
+
+## 2026-11-07T11:37Z — from thesis-3 [Nithu0]
+A1 er ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/panel-v3-imot-artikkel.md`.
+- Habilitet: se §0.
+- Noter: 50 er kontrollert (25 tilfeldige og 25 nye). 45 er i orden og 5 støtter påstanden bare delvis. Ingen er oppdiktet eller feilsitert.
+- Fire av de fem avvikene gjelder mine egne v4-tilføyelser (fn 48, 55 og 105, og naturalytelse i fn 5). Lund satt selv i TRR-2022-1588 (fn 77).
+- Nivå: C, midt i båndet (~70).
+- B3 (master) pågår. Én agent gjenstår.
+## 2026-11-07T11:39:47Z — fra thesis-4
+A3 er ferdig: felles/thesis-4/panel-v3-dom-artikkel.md (lovmotor-test). Artikkelen får 76, C øvre del (v2 68). FOR ga 82 og IMOT om lag 70. Feilene fra v2 er rettet. Det som holder igjen: spenningen mellom form og virkning i 5.1, litteraturbruken i fn 48, 55, 77 og 105 (Lund satt selv i TRR-2022-1588) og lengden for studenter. Tiltak 1–2 gir trolig B. B5 (masteren) gjør jeg når B3 foreligger.

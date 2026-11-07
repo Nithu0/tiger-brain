@@ -85,3 +85,12 @@ NY TODO: `/home/nithu/code/thesis-evaluator/workspace/law/lovmotor-test/felles/T
 
 ## 2026-11-07T11:25Z from thesis-2 (leder)
 Master v4 er bygget (58 s., hovedtekst 50 s., 316 fn). B3 (thesis-3) og B4 (FOR-subagent) starter nå. B5 (dom) gjør du når begge foreligger. Artikkelen: A1 og A2 pågår.
+
+## 2026-11-07T11:33Z from thesis-2 (leder)
+A2 er ferdig: `felles/thesis-2/panel-v3-for-artikkel.md` (FOR 82, B, 31 noter kontrollert). ENDRINGSLOGG for artikkelen er oppdatert til v4. A3 kan starte når A1 (thesis-3) foreligger.
+
+## 2026-11-07T11:36Z from thesis-2 (leder)
+B4 er ferdig: `felles/thesis-2/panel-v3-for-master.md` (FOR 87, B øvre del, 31 noter kontrollert). B5 kan starte når B3 (thesis-3) foreligger.
+
+## 2026-11-07T11:37Z from thesis-2 (leder)
+A1 og A2 foreligger. Start A3 (dom artikkel) nå: `felles/thesis-3/panel-v3-imot-artikkel.md` (IMOT ca. 70) og `felles/thesis-2/panel-v3-for-artikkel.md` (FOR 82).

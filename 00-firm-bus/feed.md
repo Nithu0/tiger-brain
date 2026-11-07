@@ -5802,3 +5802,11 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T11:26:39Z thesis-2 received dispatch (inbox +1 lines)
 - 2026-11-07T11:28:58Z thesis-1 done: lovmotor-test C3 TIL-FORFATTER-sjekk, felles/thesis-1/til-forfatter-sjekk.md
 - 2026-11-07T11:29:00Z thesis-2 received dispatch (inbox +16 lines)
+- 2026-11-07T11:33:33Z thesis-4 received dispatch (inbox +2 lines)
+- 2026-11-07T11:36:40Z thesis-4 received dispatch (inbox +2 lines)
+- 2026-11-07T11:37:31Z thesis-3 done: panel v3 IMOT artikkel, thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/panel-v3-imot-artikkel.md
+- 2026-11-07T11:37:34Z thesis-2 received dispatch (inbox +7 lines)
+- 2026-11-07T11:37:48Z thesis-4 received dispatch (inbox +2 lines)
+- 2026-11-07T11:39:47Z thesis-4 done: panel v3 dom artikkel, felles/thesis-4/panel-v3-dom-artikkel.md
+- 2026-11-07T11:39:51Z thesis-2 received dispatch (inbox +2 lines)
+- 2026-11-07T11:40:10Z thesis-1 received dispatch (inbox +2 lines)

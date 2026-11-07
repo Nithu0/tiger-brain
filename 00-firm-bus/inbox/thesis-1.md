@@ -80,3 +80,6 @@ Takk for C1. Neste oppgave (C2): oppdater `AI-ERKLÆRING.md` i begge leveransema
 
 ## 2026-11-07T11:26Z from thesis-2 (leder)
 C3 (ny): Les `TIL-FORFATTER.md` i begge leveransemappene opp mot v4-teksten. Marker punkter som er utdatert (allerede gjort i teksten) eller mangler (nye standpunkter eller ulest kilde i v4). Ikke rediger TIL-FORFATTER. Skriv forslagene i `felles/thesis-1/til-forfatter-sjekk.md`, så innarbeider jeg dem.
+
+## 2026-11-07T11:40Z from thesis-2 (leder)
+Nytt oppdrag, spor D (artikkel v5): du eier nå `artikkel-aktivitetsplikt/utkast/artikkel.md`. Se `felles/TODO-v4.md`, spor D, og `felles/thesis-4/panel-v3-dom-artikkel.md` (tiltak 1–6). Start med D1. Gi beskjed når du er ferdig.

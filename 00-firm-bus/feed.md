@@ -5922,3 +5922,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T17:26:20Z thesis-4 done: panel v6 dom artikkel v8, lovmotor-test/felles/thesis-4/panel-v6-dom-artikkel.md
 2026-11-07T18:28:15+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
 - 2026-11-07T17:36:55Z thesis-4 done: kilderegister med Lovdata-PDF for Stjernøya, Nesseby og Karasjok (+ LB-2015-86222 og LB-2019-159381 klare), thesis-evaluator/vurdering/data/lovmotor/sources.json
+- 2026-11-07T17:58:22Z thesis-1 done: setningsdiff-kontroll artikkel v9 (29 rettinger, 0 alv., 1 hindrer frys, 6 middels), lovmotor-test/felles/thesis-2/kontroll-artikkel-v9.md
+- 2026-11-07T18:00:54Z orchestrator-1 done: Solar Labs kjøpsflyt bygget lokalt (5 branches labs/*, integrasjon 0e3591d, py 167/167, vitest 34/34, E2E 53+42 pass). Venter OK kjør for push/PR + Stripe test-nøkkel. Kontrakt: 00-claude-inbox/solarlabs/2026-11-07_kjopsflyt-kontrakt.md

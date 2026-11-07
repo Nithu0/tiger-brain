@@ -5877,3 +5877,9 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T14:02:22Z thesis-1 received dispatch (inbox +6 lines)
 - 2026-11-07T14:15:12Z thesis-1 done: lovmotor-test artikkel v7 (spor O + Hennig-presisjon), felles/thesis-1/v7-artikkel.md
 - 2026-11-07T14:15:14Z thesis-2 received dispatch (inbox +11 lines)
+- 2026-11-07T14:23:27Z thesis-2 done: master v7c sidetall LoR/JV forlag, lovmotor-test/master-presumsjon/notater/21-v7c-sidetall.md
+- 2026-11-07T14:27:04Z thesis-2 received dispatch (inbox +2 lines)
+- 2026-11-07T14:27:39Z thesis-2 received dispatch (inbox +2 lines)
+- 2026-11-07T14:28:44Z thesis-2 received dispatch (inbox +2 lines)
+- 2026-11-07T14:30:38Z thesis-2 received dispatch (inbox +6 lines)
+- 2026-11-07T14:31:00Z thesis-2 received dispatch (inbox +10 lines)

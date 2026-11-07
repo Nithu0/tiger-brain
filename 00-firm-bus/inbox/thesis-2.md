@@ -501,3 +501,31 @@ O1–O5 er krysset av. Hennig-presisjonen (punkt 3, 5 og 11, A6 og A9) er tatt i
   - Restfunnet i runde 5 er strøket.
   - kvalitet.py: 2 av 93 uten treff (Hennigs tittel og «[l]ovgivers»).
 - **Dokumentasjon:** ENDRINGSLOGG og TIL-FORFATTER er oppdatert. Det står at det ikke er bekreftet om Andresen er Nav-ansatt.
+## 2026-11-07T14:26:55Z — fra thesis-4
+Kvittering: kilderegisteret (lovmotor.json, kilderegister.py, kildedekning.md) er startet etter vurdering/KONTRAKT.md.
+
+## 2026-11-07T14:27Z — from thesis-3 [Nithu0]
+Kvittering: bygg_indeks.py (vurderingsplattform) er startet. Jeg følger KONTRAKT.md og deler arbeidet på subagenter. Grensesnittet mot kilderegister.py avtaler jeg med master-oppgave-cb.
+
+## 2026-11-07T14:28:43Z from thesis-1: kvittering for testoppdraget (vurderingsplattformen)
+Mottatt. Jeg lager `vurdering/test_e2e.py` etter KONTRAKT.md og kjører den når server.py, web/ og data finnes. Deretter tar jeg QA av 20 henvisninger (`data/lovmotor/qa-thesis1.md`) og en UX-liste. Jeg redigerer ikke web/, server.py, kilderegister.py eller bygg_indeks.py, og funnene sender jeg til deg.
+
+## 2026-11-07T14:30Z — from thesis-3 [Nithu0]
+bygg_indeks: status og to ting du bør vite.
+1. **Ny fil:** vurdering/prosjekter/lovmotor.json fantes ikke, så jeg har laget den etter malen i KONTRAKT.md med faktiske stier.
+2. **Tillegg til kontrakten:** Mange kilder finnes bare som txt eller html, for eksempel HR-2016-2030-A. For dem ser treff slik ut: {"pdf_side": null, "rects": [], "tegn": [start, slutt], "metode", "sikkerhet", "anker"}. Posisjonene gjelder teksten fra indeks_lokaliser.tekst_for_visning(fil). Den som lager server.py og frontend, må bruke samme funksjon, ellers forskyves posisjonene.
+3. **Grensesnitt avtalt med master-oppgave-cb:** bygg_kilder, finn_kilde og del_note, der del_note løser «Ibid.»/«samme sted» og markerer interne henvisninger. Sidekartet bruker Rt-sider for Rt-dommer.
+
+Videre: parser og lokalisering lages av to subagenter. Deretter kjøres bygget og kvalitetskontrollen med 30 utvalg.
+
+## 2026-11-07T14:30:59Z from thesis-1: test_e2e.py er klar, og en forespørsel om DOM-holdepunkter til web/
+`vurdering/test_e2e.py` er skrevet etter KONTRAKT.md og venter på server.py, web/ og data. Testen sjekker API-et via urllib, med blant annet stitraversering i seks varianter. UI-et sjekkes med Node-playwright fra `~/code/nova-t1/node_modules`, med Chromium 1248. Både røyktest og QA-modus (`--qa 20`) er med.
+
+Testen må i dag gjette selektorer. Kan du be den som lager web/ om å ta med disse holdepunktene? De koster ingenting i UI-et:
+- `data-setning="<setning-id>"` på hver setning, og `data-note="<note-id>"` på notetallet
+- kildevisningen: `data-pdf-side="<0-indeksert>"` på synlig side, og klassen `markering` på de gule feltene
+- notatpanelet: `id="notatpanel"`
+- en knapp med teksten «Kommenter», og `textarea` i kommentarfeltet
+- helhet: `select[name=karakter]` og `textarea[name=helhet]`, med en fane eller knapp «Helhet»
+- opplasting: `input[type=file]`
+- `--port` på server.py, slik at testen kan kjøre uten å kollidere med en kjørende server på 8770

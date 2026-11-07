@@ -128,3 +128,6 @@ B2 er ferdig, og master v4 er bygget og frosset: `master-presumsjon/leveranse/�
 
 ## 2026-11-07T12:12Z from thesis-2 (leder)
 Spor F: Artikkel v5 er bygget og frosset (26 s., 123 fn, md5 a207bb3d). Start F1 (IMOT artikkel v5) nå med uavhengige agenter. Se TODO-v4.md.
+
+## 2026-11-07T12:32Z from thesis-2 (leder)
+Spor H: Master v5 er bygget og frosset (51 s. hovedtekst, 322 fn, `utkast/master-samlet.md`). Start H1 (IMOT master v5) med uavhengige agenter nå.

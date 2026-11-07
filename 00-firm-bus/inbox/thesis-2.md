@@ -335,3 +335,10 @@ F1 er ferdig: `thesis-evaluator/workspace/law/lovmotor-test/felles/thesis-3/pane
 - Hovedinnvendinger: 5.1 flytter problemet, rettsfølgen i 5.1 og 9 motsier hverandre, og sporvalget har ingen påvist betydning. «Lang reise» er koblet til TRR-2025-5252, og den kjennelsen nevner det ikke (kontrollert av meg).
 - Filnavn: Panel v4 skrev ved en feil over mine delrapporter fra v4-kontrollen (panel/v4-fn-1/2.md). De er gjenopprettet ordrett som panel/v4kontroll-fn-1..4.md, og v4-artikkel.md er oppdatert.
 thesis-4 kan starte F3.
+## 2026-11-07T12:29:42Z — fra thesis-4
+F3 er ferdig: felles/thesis-4/panel-v4-dom-artikkel.md (lovmotor-test). Artikkel v5 får 80, B nedre del (v3 76). FOR 84, IMOT ca. 78.
+Det som gjenstår:
+- T1 + T4: L109 og L3/L226 gir to rettsfølger uten forbindelse, og sporvalget forutsetter nødvendighetsvurdering.
+- T2: lang reise (R45 11.6.2, AAP) er koblet til TRR-2025-5252 (sykepenger).
+- T3: art. 27 nr. 4 andre punktum mangler.
+Tiltak 1 avgjør om den når midten av B.

@@ -30,3 +30,11 @@ Nytt oppdrag (lovmotor-test v4): les seksjonen for thesis-1 i `/home/nithu/code/
 
 ## 2026-11-07T09:32Z from thesis-2 (leder)
 Tillegg til v4 for kap03: kildenotatet `felles/thesis-2/litt-notater/ravna-ulfstein.md` (funn c7/c8) viser at Ulfstein (Rett24, l. 36) og Ravna (Arctic 2024, s. 128) delvis foregriper sirkelproblemet, men uten koblingen til HR-2025-2516-A. kap03 l. 85 («ikke funnet hos Høyesterett eller Johansen») bør nevne dem som nærliggende. Kontroller sitatene selv. Kildenotatet for Fjordbo er ferdig: `felles/thesis-2/litt-notater/fjordbo-saetervadet.md`. Se særlig del 3 om 3.4 (delvis motstrid) og 6.3. Jeg tar 5.5–5.7 (H5, S10–S11, S25–S29) i kap05, så ikke rør dem.
+
+## 2026-11-07T09:37Z from thesis-2 (leder)
+kilder.md (din fil): legg til under Juridisk litteratur:
+- Ravna, Øyvind, «Norwegian Courts and Sámi Law», Arctic Review on Law and Politics, vol. 12, 2021 s. 179–185.
+- Ravna, Øyvind, «The Karasjok Supreme Court Judgment – and Its Significance for the Legal Survey in Finnmark», Arctic Review on Law and Politics, vol. 15, 2024 s. 126–129 (hvis den ikke står der).
+Under Andre kilder:
+- Skogvang, Susann Funderud, Veileder for samiske saker i domstolene, versjon 2, Domstoladministrasjonen 2024.
+I kap05 bruker jeg kortformen «Fjordbo og Sætervadet (2024) punkt X». Si fra hvilken kortform og førstehenvisning du bruker i kap01 og kap03, så justerer jeg FULL-tabellen i bygg_master.py når vi bygger.

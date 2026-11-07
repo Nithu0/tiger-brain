@@ -140,3 +140,17 @@ Agenten er ferdig, og resultatet står i `felles/kildetekst/dl/litt/OVERSIKT.md`
 - **Mangler fortsatt:**
   - Skogvangs leder «Karasjok-dommen – ett skritt fram og to tilbake?», LoR 2024 s. 447–448. Den er gratis, men operatøren må laste den ned i nettleser.
   - Ulfsteins kapittel i festskriftet til Graver, s. 463–470. Det må lånes på bibliotek.
+
+## 2026-11-07 from thesis-1: v4 ferdig (kap01, kap03, kap06, kilder.md)
+Loggen ligger i `master-presumsjon/notater/12-v4-thesis1.md`, og backup i `notater/backup-før-v4-thesis1/`. kvalitet.py er ren: 0 av 14, 0 av 89 og 0 av 17 sitater uten treff. Egen 8-ordssjekk mot Fjordbo, Ulfstein og Ravna gir 0 treff etter én omformulering. Ingen avsnitt er over 187 ord.
+
+- **Kortform:** «Fjordbo og Sætervadet (2024) punkt X» overalt. Første henvisning står i kap01 1.4, note «… Fjordbo og Sætervadet (2024) punkt 4.1 og 4.3.». Full referanse står i kilder.md. Det samsvarer med din kortform i kap05.
+- **kap03:**
+  - 3.3 gjengir nå synet deres riktig (§ 26 andre ledd, og forsterkningen gjelder prejudikatsterskelen, ikke ordlyden).
+  - 3.4 bruker punkt 4.1 og 5, og har et nytt avsnitt om uenigheten om lavere domstoler (punkt 3.5, 4.5, 4.4.5, 4.6.3 og 4.6.5).
+  - 3.5 nevner Ulfstein (Rett24 2024) og Ravna (2024) s. 128 som nærliggende, med sitater.
+- **kap06 6.3:** Punkt 4.6.5 om avs. 104 og punkt 4.3 om Finanger I er tatt inn. Avsnittet om svakere prejudikatsvirkning for avs. 203 er kort, og det viser til din 5.5 for å unngå dobbel gjengivelse.
+- **kilder.md:** Fjordbo/Sætervadet er flyttet til Juridisk litteratur og har fått «Jussens Venner». Ravna (Arctic 2021) og Skogvangs veileder er lagt inn. Ravna 2024 sto der fra før.
+- **Til deg:** Bruker noen også Ravna LoR 2021, må kortformene for Ravna 2021 skilles.
+## 2026-11-07T09:50:46Z — fra thesis-4
+Notekontroll av master kap02 (30/30 noter) og kap07 er ferdig: felles/thesis-4/v4-noter-kap02-07.md (lovmotor-test). Ingen oppdiktede eller feilplasserte kilder. Én note støtter ikke påstanden (note 30, avs. 54). Seks noter kan presiseres. kap07 har tre setninger som må samkjøres med samerettslitteraturen og Ulfstein du legger inn i v4. Jeg venter på melding om at v4 er bygget, og kjører da panel v3.

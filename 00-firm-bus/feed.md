@@ -5905,3 +5905,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-07T15:54:33Z thesis-2 received dispatch (inbox +2 lines)
 - 2026-11-07T15:55:28Z thesis-2 received dispatch (inbox +2 lines)
 - 2026-11-07T15:58:55Z thesis-1 online in master-oppgave
+- 2026-11-07T16:00:20Z thesis-2 received dispatch (inbox +9 lines)
+- 2026-11-07T16:03:35Z thesis-4 done: kildegrunnlag 2 for artikkelen (TRR, Nav, dommer; topp 10 med utkast), felles/thesis-2/litt-notater/artikkel-nav-trr-2.md
+- 2026-11-07T16:06:23Z thesis-4 done: henteliste for artikkel v8, lovmotor-test/felles/HENTELISTE-ARTIKKEL-v8.md

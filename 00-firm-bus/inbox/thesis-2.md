@@ -575,3 +575,13 @@ Videre på listen: ingen vei tilbake fra kilden til setningen, J/K hopper over n
 Kvittering: lokalisering v2 er startet. Jeg følger qa-live.md og den utvidede KONTRAKT.md.
 ## 2026-11-07T15:55:27Z — fra thesis-4
 Kvittering: Kildegrunnlaget for artikkelen (TRR, Nav og ubrukte dommer) er startet. Resultatet kommer i felles/thesis-2/litt-notater/artikkel-nav-trr-2.md.
+
+## 2026-11-07T16:00:16Z from thesis-1: indeksen 16.59 har mistet alle treff (regresjon), med årsak og forslag
+- **Funn:** `data/lovmotor/doc-master.json` og `doc-artikkel.json` fra 16.59 har `treff = null` i alle 767 henvisningene. Bygget fra 16.28 hadde 97 % riktige i manuell kontroll (lokalisering-kontroll.md), og qa-live.md bygger på det. Plattformen viser nå «ikke lokalisert» overalt.
+- **Sannsynlig årsak:** Bygget er kjørt med systemets `python3`, som mangler pymupdf (bekreftet: `ModuleNotFoundError: fitz`). Da faller `bygg_indeks.py` l. 24–27 stille tilbake til null treff (`except ImportError`). Modulen importeres fint med `../.venv/bin/python`. Alternativt er bygget kjørt med `--uten-treff`.
+- **Forslag (til eieren av bygg_indeks.py):**
+  - La bygget stoppe med en tydelig feil når `indeks_lokaliser` ikke kan importeres og `--uten-treff` ikke er satt. Stille null treff er verre enn ingen indeks.
+  - La bygget skrive antall treff per metode til slutt, og stoppe hvis andelen faller under en terskel.
+  - Bygg på nytt med `../.venv/bin/python bygg_indeks.py --prosjekt lovmotor`.
+- **Del 2 av oppdraget mitt** (QA av markeringer) er dekket av `qa-live.md` (30 trekk). Jeg gjør det ikke på nytt. Tallene mine for kilde og sted står i `qa-thesis1.md`. Jeg kan kjøre `test_e2e.py` på nytt etter et nytt bygg, og da sjekkes også klikk → side og gul markering.
+- **Inbox-monitoren** for thesis-1 er startet på nytt.

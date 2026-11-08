@@ -3427,3 +3427,13 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - horizon#8: ux(mobil): innholdet først, hele trakten synlig, triage uten tildekket tekst
 - https://github.com/Solar-Consulting/horizon/pull/8
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-08T14:56:48Z
+- solarlabs#53: Forsiden: kritikkrunde (karusell, trykkflater, fokus, skjema, overskrift)
+- https://github.com/Solar-Consulting/solarlabs/pull/53
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-08T14:56:48Z
+- solarlabs#52: Demo: riktig mat, skjema for kjøp, tydeligere pakker og egne kunder ute
+- https://github.com/Solar-Consulting/solarlabs/pull/52
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

@@ -132,3 +132,19 @@ Personvern: https://solarlabs.no/personvern · Vilkår: https://solarlabs.no/vil
 - Ny `POST /ordre/<id>/avbrutt` body `{session_id}` → venter → avbrutt (idempotent). 
 - `Tilstand.sett` skal ikke overskrive `SOLGT` (bortsett fra eksplisitt tillatt fra motorens egen ordrelogikk); svaragent/vaktagent logger og varsler i stedet.
 - Demo: webhook sender `livemode`; håndterer `checkout.session.expired` og `async_payment_failed` → `/avbrutt`. `/api/kjop`: gjenbruk `stripe_session` hvis den er `open` (hent med sessions.retrieve), ellers lag ny; sett `expires_at` = nå + 1 t; etter opprettelse sjekk `amount_total === inkl_mva_ore`, ellers expire + feil. Etter betalt: expire evt. andre åpne sessions for samme ordre er ikke nødvendig når ordren gjenbrukes.
+
+## G. Runde 2 (operatør 2026-11-08, bindende)
+- Avsender i salgsmailen: `nithusan.k@solarconsulting.no` (sendAs-alias i kontakt@-kontoen). Kontaktadresse på sider/Stripe forblir kontakt@.
+- Bilder i e-posten skal vises uten at mottaker trykker «vis bilder»: legg dem ved inline (multipart/related, `cid:`), ikke eksterne URL-er.
+  Med: Solar Labs-logo, forhåndsvisning av forslaget (bilde fra demoens `/demo/<slug>/kort`, hentet når utkastet lages), kundens logo hvis research har den.
+- «Se forslaget» i e-posten går til `https://solarlabs.no/forslag/<slug>` (web). Der ligger forslaget innebygd (iframe fra
+  `https://solarlabs-forslag.vercel.app/demo/<slug>`), med «Tilpass siden» i iframen og en tydelig «Kjøp nå» som scroller ned til
+  pakkene: 2 pakker (Ferdig nettside / andre pakke) + 1 kort «Heller ta en prat?» (book samtale: solarlabs.no/#kontakt, telefon, e-post).
+- postMessage-kontrakt (demo i iframe ↔ solarlabs.no):
+  - demo → forelder: `{type: "solarlabs:tilpasning", slug, tilpasning}` ved last og etter hver lagring; `{type: "solarlabs:kjop", slug, pakke?}`
+    når kunden trykker kjøp inne i iframen (forelderen scroller til pakkene). Demo poster bare når `window.parent !== window`, targetOrigin
+    fra env `NEXT_PUBLIC_FORELDER_ORIGIN` (standard `https://solarlabs.no`).
+  - forelder sjekker `event.origin` mot demo-origin (env `NEXT_PUBLIC_DEMO_ORIGIN`, standard `https://solarlabs-forslag.vercel.app`).
+- Kjøp fra solarlabs.no: toppnivå-navigasjon til `https://solarlabs-forslag.vercel.app/demo/<slug>?pakke=<side|booking>#t=<base64url(JSON tilpasning)>`.
+  Demo leser `#t=`, kjører `rens`, lagrer med `lagreTilpasning`, fjerner hashen (history.replaceState), forhåndsvelger pakken og åpner/scroller til
+  kjøpsdelen med e-postfeltet i fokus. (Lagring i iframe er partisjonert av nettleseren, derfor sendes tilpasningen i URL-en.)

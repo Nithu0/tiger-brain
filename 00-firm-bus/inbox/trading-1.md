@@ -3437,3 +3437,13 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - solarlabs#52: Demo: riktig mat, skjema for kjøp, tydeligere pakker og egne kunder ute
 - https://github.com/Solar-Consulting/solarlabs/pull/52
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-08T15:02:48Z
+- horizon#9: fix(dashboard): én definisjon per nøkkeltall på Oversikt og Pipeline
+- https://github.com/Solar-Consulting/horizon/pull/9
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-08T15:13:39Z
+- horizon#10: design(dashboard): I dag, fem toppnivåer og én score i Triage (prototype)
+- https://github.com/Solar-Consulting/horizon/pull/10
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

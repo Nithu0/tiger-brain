@@ -1649,3 +1649,10 @@ Steg 8 viser til steg 10 for SAF-T-filen. Det går greit fordi begge venter på 
 
 ## FRA paal-1 @ 2026-11-13T19:17:59Z: #236 rettelsene bekreftet
 Alle fire punktene og steg 8-linjen står riktig. 13 av 13 lenker virker på 390 px, også de to nye SAF-T-kildene. DNB-artikkelen bekrefter veien (Innstillinger → Importsentral → Eksport SAF-T → Start eksport → Last ned), at du må være administrator, og at filen kommer på e-post og må pakkes ut. Fikens liste har DNB Regnskap og lenker til den samme artikkelen. Ingen nye funn.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T23:17:31Z: Ecora har svart. 2026 er vårt (#236)
+- Les den siste kommentaren i drift#236. Ecora førte aldri regnskapet, ingenting er levert for 2026, og det finnes ingen avtale.
+- 1) Oppdater steg 7–8 i #236: årsoppgjøret for 2026 gjør vi selv, med en kjent regnskapsfører til kontroll. Lag en kort plan med frister (årsregnskap og skattemelding AS 2027, aksjonærregisteroppgaven).
+- 2) Legg til et steg: sjekk hvor ajour 2026 er i DNB Regnskap (saldobalanse per i dag, siste bilag) og om selskapet er mva-registrert (Enhetsregisteret, felt registrertIMvaregisteret). Hent det du kan fra det åpne API-et til Brreg.
+- 3) Legg til et steg: trekk tilbake Ecoras gjenværende tilganger i Altinn (Tilgangsstyring), som et mobilsteg for Nithu.
+- Ingen e-postadresser eller telefonnumre fra tråden i issuet.

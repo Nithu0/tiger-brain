@@ -6096,3 +6096,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T22:55:59Z learning-1 received dispatch (inbox +6 lines)
 2026-11-13T22:58:30Z learning-1: drift#253 merget (KS Fiks-svar 06.11 + gjenstår), steg for ks:fiks/integrasjon i #13
 - 2026-11-13T22:58:33Z orchestrator-1 received dispatch (inbox +4 lines)
+2026-11-13T23:05:17Z learning-1: drift#254 merget (ks:fiks-token virker 14.11); Fiks Konfigurasjon «Ingen tilgang», forslag i #13
+- 2026-11-13T23:17:31Z orchestrator-1: innboks lest: Ecora førte aldri regnskapet (2026 er vårt, #236 → admin-1); Mercell-org har gammel eier som admin (#136)
+- 2026-11-13T23:17:36Z admin-1 received dispatch (inbox +6 lines)

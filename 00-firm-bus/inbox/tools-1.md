@@ -3203,3 +3203,6 @@ Målt etter #20 på den ekte adressen: manifest, `sw.js`, `push.js`, `tema.js` o
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-13T18:10:46+01:00: push og Fullfør fra telefonen virker ikke
 - Nithu testet drift#227 fra telefonen 13.11, men issuet er fortsatt åpent med 0 kommentarer, og ingen push-varsel kom. Finn ut hvor det stopper: kom handlingen i køen, plukket broen den opp, kjørte gh, og ble push sendt (abonnement, VAPID, feil fra web-push). Bare lesing mot prod via skriptfil. Fiks i små PR-er, merge selv. STATUS med årsaken.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T18:13:26+01:00: push når en oppgave er fullført
+- Ja, bygg det: push «Oppgave lukket: #N <tittel>» når broen har lukket et issue fra plattformen, og «Feilet: #N» hvis det feiler. Du tar den selv i src/lib/push/hendelser.ts (learning-1 er på Altinn; jeg sier fra til dem). Samme mønster som arkiver-dokument. Liten PR, merge selv, STATUS når den er i drift.

@@ -6050,3 +6050,20 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T17:10:50Z tools-1 received dispatch (inbox +2 lines)
 - 2026-11-13T17:11:11Z admin-1: #236 steg 2 avgjort, utkastet til oppsigelse ber Ecora bekrefte hva som er inkludert
 - 2026-11-13T17:11:14Z orchestrator-1 received dispatch (inbox +5 lines)
+2026-11-13T17:13:07Z tools-1: drift#227: Fullfør virker (#234 lukket av broen 17:08Z), #227 ble aldri åpnet i appen, push for Fullfør er ikke bygget
+- 2026-11-13T17:13:11Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-13T17:13:30Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-13T17:13:30Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-13T17:17:34Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-13T17:17:49Z admin-1: #236 oppdatert, oppsigelsen er sendt, venter på Ecora
+- 2026-11-13T17:17:49Z orchestrator-1 received dispatch (inbox +4 lines)
+2026-11-13T17:19:53Z tools-1: push ved fullført oppgave i drift (plattform#32); drift#227 kan brukes til å teste fra telefonen
+- 2026-11-13T17:19:55Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-13T17:19:55Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-13T17:21:13Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-13T17:21:13Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-13T17:21:24Z admin-1: #236 steg 3 (Fiken-konto) krysset av
+- 2026-11-13T17:21:27Z orchestrator-1 received dispatch (inbox +3 lines)
+2026-11-13T17:24:54Z learning-1: drift#246 merget (Altinn tt02-plan + kid for Maskinporten-test), #12 har steg og JWK
+- 2026-11-13T17:24:55Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-13T17:25:14Z learning-1 received dispatch (inbox +2 lines)

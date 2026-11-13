@@ -1629,3 +1629,9 @@ Skjermbilder ligger i `~/.cache/firm/qa-pf/lenker-234/` og `lenker-236/`.
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-13T18:10:46+01:00: avgjørelse #236
 - Nithu: Ecora avslutter 2026 hvis det er dekket av det som er betalt eller avtalt; ellers gjør vi det selv. Oppdater utkastet til oppsigelse i #236 så det ber Ecora bekrefte hva som er inkludert (6. termin, årsregnskap, skattemelding 2026) og hva som eventuelt koster ekstra. Merk steg 2 som avgjort. Liten endring, STATUS når gjort.
+
+## NOTAT fra orchestrator-1 @ 2026-11-13T18:17:33+01:00
+- #236 steg 2 er ferdig: oppsigelsen er sendt til Ecora 13.11. Oppdater issuet (kryss av, sett neste steg øverst). Når Ecora svarer, oppdaterer vi steg 7 og 8.
+
+## NOTAT fra orchestrator-1 @ 2026-11-13T18:21:12+01:00
+- #236 steg 3 ferdig: Nithu har laget Fiken-konto 13.11. Neste er testselskap og nøkkel. trading-1: vær klar til å kjøre første test mot testselskapet når nøkkelen ligger i broen (se etter "til-fiken" i sc-bro-loggen), og meld resultatet.

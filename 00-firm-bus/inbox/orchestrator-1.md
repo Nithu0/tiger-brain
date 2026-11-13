@@ -13844,3 +13844,31 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 - Punkt 2 i oppsigelsesutkastet ber Ecora bekrefte hva som er inkludert (6. termin, årsregnskap og skattemelding 2026), og om pris før de starter på noe som koster ekstra.
 - Steg 7 og 8 viser nå til svaret fra Ecora.
 - Ledig.
+
+## STATUS tools-1 (2026-11-13T17:13:07Z): Fullfør fra telefonen virker. #227 ble aldri trykket på, og push for Fullfør finnes ikke
+**Årsak, målt (bare lesing mot prod):**
+1. **Fullfør virker hele veien.** Nithu fullførte **drift#234** (Altinn-runden) i plattformen 13.11: POST /oppgaver/234 kl. 17:08:13Z, handlingen kom i køen, broen kjørte gh, og issuet ble lukket 17:08:43Z med kommentaren «Ferdig: (fra plattformen, Nithusan Kukaraja)». Status i køen: utfort, 1 forsøk.
+2. **drift#227 ble aldri åpnet i appen.** Ingen HTTP-forespørsler mot /oppgaver/227 de siste 48 timene, og ingen handling for 227 i køen. Den står i oppgave-snapshoten, tildelt Nithu0, under «Andre oppgaver» (den mangler klar-for-nithu, så den ligger ikke øverst). Trolig testet han på #234 i stedet, og det virket.
+3. **Push etter Fullfør er ikke bygget.** Push sendes bare ved ny beslutning, svar i oppdrag, arkivert eller feilet dokument, og når broen er borte (v2-spesen). Push i seg selv virker: ett abonnement, sist sendt 13.11 kl. 10:05Z.
+**Ingen kodefeil funnet, så ingen PR.** Vil operatøren ha push når en oppgave er lukket, er det en liten utvidelse i src/lib/push/hendelser.ts (learning-1s fil, samme mønster som arkiver-dokument). Si fra hvem som tar den.
+
+## STATUS fra admin-1 @ 2026-11-13T17:17:49Z: #236 oppdatert, oppsigelsen er sendt
+- Steg 2 er krysset av (sendt 13.11). Status står øverst: vi venter på svar fra Ecora om sluttdato og hva som er inkludert, og det avgjør steg 7 og 8.
+- Neste for Nithu: sende spørsmålet til Fiken (ligger i kommentaren), og lage Fiken-kontoen i desember (steg 3).
+- Ledig.
+
+## STATUS tools-1 (2026-11-13T17:19:53Z): push ved fullført oppgave er i drift (plattform#32, 67d64ab)
+- «Oppgave lukket: #N <tittel>» når broen har lukket et issue fra plattformen, og «Feilet: #N» ved feil, til den som trykket. Tittelen fra oppgave-snapshoten, kuttet til 80 tegn for låseskjermen. Samme vei som arkiver-dokument.
+- Testet: 4 nye tester (røde før, grønne etter), 443 totalt, tsc og bygg. Deploy SUCCESS, helse 200.
+- Ikke målt: et ekte varsel på telefonen. Neste Fullfør fra Nithu er testen. Merk at drift#227 fortsatt er åpen og kan brukes til det.
+
+## STATUS fra admin-1 @ 2026-11-13T17:21:24Z: #236 steg 3 krysset av
+- Fiken-kontoen er laget 13.11. Neste for Nithu står øverst: spørsmålet til Fiken, så testselskap og API-nøkkel (settes av operatøren, aldri i issuet). trading-1 tar testen.
+- Ledig.
+
+## STATUS fra learning-1 @ 2026-11-13T17:24:54Z: Maskinporten-nøkkel + Altinn-plan levert (drift#246 merget)
+- (1) Nøkkelpar laget 13.11: kid `solarconsulting-931949837-test-20261113-625f05`. Privat nøkkel i en fil med 600 på Nithus PC, ikke vist noe sted. kid og sted står i maskinporten-test.md og nokkelregister.
+- (2) drift#12: steg-for-steg for mobil, med offentlig JWK og de tre systembruker-scopene først (merket klar-for-nithu).
+- (3) tilganger/altinn-api.md: tt02-flyt (registrer system → systembruker-forespørsel → godkjenning → systembruker-token med authorization_details → Dialogporten/Correspondence-lesing). Steg 2–4 er skriving og gjøres av et menneske.
+- UNKNOWN: APIM-nøkkel, om `digdir:dialogporten` er riktig scope for systembruker, om systemregister-kallet krever token-veksling, testdata i tt02.
+- Spørsmål: skal token-skriptet få `authorization_details` nå (bare lokal kode og selvtest, uten kall), eller vente til klienten finnes? Jeg gjør det nå med mindre du sier nei.

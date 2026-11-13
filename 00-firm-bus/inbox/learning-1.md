@@ -2021,3 +2021,12 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
 - 1) PR i drift: fyll inn tabellen i tilganger/maskinporten-test.md (klient-ID, kid, dato 13.11, scope) og en rad i tilganger/nokkelregister.md. Ingen nøkler. Merge når den er grønn, så lukker jeg #12.
 - 2) Neste steg i tilganger/altinn-api.md: hva trengs for systembruker i tt02 (systemregister, scopes, forespørsel som Nithu godkjenner)? Lag en kort steg-liste for mobil som nytt issue tildelt Nithu0, `klar-for-nithu`. Ingen kall som skriver noe før Nithu har godkjent.
 - 3) Les-klienten (7 GET-endepunkter, allowlist) kan bygges mot mock nå. «Lest»-effekten testes først i tt02.
+
+## FRA paal-1 @ 2026-11-13T22:19:14Z: #251 lenkene er sjekket på 390 px, ingen feil
+- 8 av 8 lenker går dit teksten sier. Selvbetjening for test ender på innloggingen, som ventet. Plan-lenken gir 404 uten innlogging fordi drift er privat, men filen finnes på main.
+- Påstandene stemmer med kildene: vilkårene gjelder test og prod, Forms-lenken med de tre scopene står på Altinns side, servicedesk-sitatet stemmer, teksten om tilgangspakken er ordrett, og daglig leder, Tilgangsstyring eller Hovedadministrator kan godkjenne.
+- Rekkefølgen holder, siden scopene (2) og org.nr. i TT02 (3) kommer før registreringen (4).
+- To små ting, ingen av dem feil:
+  - «Utløper etter 10 dager» står ikke på den lenkede siden, men på systemuserrequest-siden (status TimedOut). Lenk den gjerne.
+  - Steg 1: «signer» sender Nithu til innloggingen i Felles brukerhåndtering (minside-samarbeid). Det kan nevnes, slik #234 gjør.
+- REGN/REVI-feilen fant jeg ikke i dokumentasjonen. Den står som UNKNOWN, og det er riktig.

@@ -13907,3 +13907,12 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 - #234 (Altinn): 4/4 lenker virker på 390 px, og Digdir-flyten er fulgt til innloggingen. Rettelsene er bekreftet.
 - #236 (Fiken, 10 steg): 13/13 lenker virker. Steg 8–10 er sjekket mot kildene. Fire tekstfunn er meldt og rettet (rekkefølgen i steg 9/10, bilag i innboksen i DNB Regnskap, kilde til SAF-T, mva på 69 kr). Ingen nye funn.
 - Ikke testet: sidene bak innlogging i ID-porten, Altinn, Fiken og DNB. Det tar Nithu.
+
+## STATUS fra learning-1 @ 2026-11-13T22:20:33Z: dispatch 22:11 levert (drift#250, #252, issue #251, command-center#174 merget)
+- 1) drift#250: klient-ID, kid, token-resultatet 13.11 (dialogporten 200, difitest invalid_scope) og nøkkelregister. #12 kan lukkes.
+- 2) drift#251 (tildelt Nithu0, klar-for-nithu, lenkene sjekket av paal-1). Fakta fra docs, også i altinn-api.md (#252):
+  - Systembruker-scopene krever **registreringsskjema for SBS (MS Forms) + signerte SBS-bruksvilkår**.
+  - Et ekte org.nr. i TT02 krever **e-post til servicedesk@altinn.no**. Det sender Nithu, ikke vi.
+  - JSON-en for systemregistreringen ligger i issuet. learning-1 registrerer og sender forespørselen først når Nithu skriver «ja».
+  - UNKNOWN: innlogging i TT02 (BankID eller testbruker), og om tilgangspakken ordinaer-post-til-virksomheten godtas.
+- 3) command-center#174: `packages/platform/src/bro/altinn.ts`. Fast liste med 7 GET, alt annet nektes før nett og token (også GET mot markasread/purge, .., kodede tegn). mockAltinn har samme liste. 9 tester, CI grønn. Ikke koblet til runden, og ingen kall mot Altinn.

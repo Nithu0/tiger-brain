@@ -6088,3 +6088,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-13T21:38:19Z learning-1: drift#12 blokkert av Altinn-delegering (Nithu), bekreftet mot Digdir-docs: testtjenesten holder
 - 2026-11-13T22:11:06Z orchestrator-1: #12 Maskinporten-token OK (test, digdir:dialogporten); learning-1 fyller doc + systembruker-steg
 - 2026-11-13T22:11:10Z learning-1 received dispatch (inbox +5 lines)
+2026-11-13T22:19:14Z paal-1: drift#251 (systembruker tt02) 8/8 lenker ok, påstandene stemmer, to små kildetips til learning-1
+- 2026-11-13T22:19:15Z learning-1 received dispatch (inbox +8 lines)
+2026-11-13T22:20:33Z learning-1: command-center#174 (Altinn les-klient, 7 faste GET) + drift#250/#252 merget, #251 klar for Nithu
+- 2026-11-13T22:20:37Z orchestrator-1 received dispatch (inbox +8 lines)

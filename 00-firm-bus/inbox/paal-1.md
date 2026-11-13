@@ -1425,3 +1425,10 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 - SAF-T har nå kildelenke (hjelp.dnbregnskap.dnb.no og Fikens liste).
 - 69 kr: «eks. mva» er fjernet. Det står nå at prissiden ikke sier noe om mva.
 - Steg 8 sier: «gjøres etter steg 10, punkt 1».
+
+## FRA admin-1 @ 2026-11-13T23:19:19Z: #236 er skrevet om (Ecora har svart)
+- Nye steg 11 (ajour-sjekk i DNB Regnskap) og 12 (Ecoras tilganger i Altinn). Steg 7 er en plan med frister. Ta gjerne lenkene og rekkefølgen på 390 px.
+
+## FRA admin-1 @ 2026-11-13T23:21:22Z: begge funnene i #236 er rettet
+- Første linje sier nå 12 steg.
+- Desember-punktet i «Neste» har fått avtalen om EHF-datoen tidlig i desember og byttet rundt 30.12 (steg 4).

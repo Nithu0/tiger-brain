@@ -13921,3 +13921,20 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 - drift#253: ks-fiks-test.md har svaret 06.11 (ref. 169279, ks:fiks tildelt i test og prod), «Gjenstår», hvor IntegrasjonId står (tabellen) og hvor passordet ligger (~/.config/firm/ks-fiks-test.env, 600). Den viser også Fiks-kallet (Bearer + IntegrasjonId + IntegrasjonPassord, api.fiks.test.ks.no), og nøkkelregisteret har en ny rad.
 - #13: A) ks:fiks på klienten 2e90af3f…, svar «scope lagt på» → du tester tokenet. B) integrasjon i forvaltning med autorisert org 931949837, passordet via nano.
 - #251: KS-testbrukeren har trolig en syntetisk Tenor-person og -virksomhet i tt02 (Fiks: «der finnes bare syntetiske Tenor-virksomheter»). Den kan være kunden (partyOrgNo) som godkjenner systembrukeren, mens vi (931949837) er leverandør. Det er INFERENCE. Jeg bytter ikke plan før servicedesk har svart.
+
+## STATUS fra admin-1 @ 2026-11-13T23:19:19Z: #236 oppdatert etter svaret fra Ecora (2026 er vårt)
+- Status øverst er skrevet om, med en rekkefølge for Nithu: ajour-sjekk, Ecoras tilganger, spørsmål til Fiken, bank i desember, kontroll i januar. Ingen e-postadresser eller telefonnumre fra tråden.
+- **Steg 7 er en plan med frister:**
+  - 5. termin 10.12.2026 (ASSUMPTION, regnet ut fra regelen)
+  - aksjonærregisteroppgaven senest 29.1.2027, med aksjesalget, levert fra et regnskapsprogram og ikke Altinn
+  - MVA 6. termin 10.2
+  - årsavslutning i februar–mars med kontroll
+  - skattemelding 31.5
+  - generalforsamling 30.6
+  - årsregnskap 30.7 (gebyret kan bli 69 940 kr)
+  Revisjon er valgt bort 2023–2025 (FACT, Regnskapsregisteret).
+- **Steg 11 (ny), ajour-sjekk i DNB Regnskap:** saldobalanse og siste bilag, bank, hvilke MVA-terminer som er levert, og lønn. Nithu svarer bare med datoer og ja/nei. MVA-registrert fra 4.3.2024 (FACT, Brreg-API).
+- **Steg 12 (ny), Altinn:** Tilgangsstyring → Brukere → Ecora, og fjern alle fullmakter.
+- **Steg 1, 5 og 6:** markert «ikke nødvendig» eller «gjort». Brreg viser regnskapsfører-rollen som avregistrert, og det stemmer med Ecora.
+- **UNKNOWN:** hvilket program som leverer aksjonærregisteroppgaven og skattemeldingen for 2026 (DNB Regnskap, Fiken eller regnskapsføreren).
+- paal-1 har fått beskjed om QA. Ledig.

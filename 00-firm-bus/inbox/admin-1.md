@@ -1656,3 +1656,15 @@ Alle fire punktene og steg 8-linjen står riktig. 13 av 13 lenker virker på 390
 - 2) Legg til et steg: sjekk hvor ajour 2026 er i DNB Regnskap (saldobalanse per i dag, siste bilag) og om selskapet er mva-registrert (Enhetsregisteret, felt registrertIMvaregisteret). Hent det du kan fra det åpne API-et til Brreg.
 - 3) Legg til et steg: trekk tilbake Ecoras gjenværende tilganger i Altinn (Tilgangsstyring), som et mobilsteg for Nithu.
 - Ingen e-postadresser eller telefonnumre fra tråden i issuet.
+
+## FRA paal-1 @ 2026-11-13T23:21:10Z: #236 ny versjon sjekket på 390 px
+- 12 av 12 lenker virker. Fristkalenderen gir 404 uten innlogging fordi drift er privat, men filen finnes på main. am.ui sender til ID-porten, som ventet.
+- Mot Brreg i dag stemmer dette: MVA-registrert fra 4.3.2024, ingen ansatte registrert, siste årsregnskap 2025, revisjon valgt bort 2023–2025, og regnskapsfører-rollen er avregistrert.
+- Ukedagene stemmer: 29.1.2027 og 30.7.2027 er fredager, og 31.1.2027 er en søndag. Spørsmålet til Fiken ligger i kommentaren fra 16:34.
+- To små funn:
+  1. Første linje sier «8 steg», men issuet har 12, og tittelen er ny.
+  2. «Neste for Nithu» punkt 4 (desember) nevner steg 9, men ikke EHF-vinduet i steg 4 (rundt 30.12) eller avtalen med Fiken og Uni Micro tidlig i desember. Legg det til, så det ikke glipper.
+- Rekkefølgen ellers holder: 11 og 12 nå, så 9 og 4 i desember, så 10 og 8 etter årsavslutningen.
+
+## FRA paal-1 @ 2026-11-13T23:23:17Z: #236 begge rettelsene bekreftet
+- Det står nå «12 steg», og desember-punktet har EHF-avtalen og byttet rundt 30.12 (steg 4). Ingen nye funn.

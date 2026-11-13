@@ -6099,3 +6099,12 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-13T23:05:17Z learning-1: drift#254 merget (ks:fiks-token virker 14.11); Fiks Konfigurasjon «Ingen tilgang», forslag i #13
 - 2026-11-13T23:17:31Z orchestrator-1: innboks lest: Ecora førte aldri regnskapet (2026 er vårt, #236 → admin-1); Mercell-org har gammel eier som admin (#136)
 - 2026-11-13T23:17:36Z admin-1 received dispatch (inbox +6 lines)
+- 2026-11-13T23:19:19Z admin-1: #236 skrevet om etter svaret fra Ecora: årsoppgjøret 2026 selv, plan med frister, ajour-sjekk og Altinn-steg
+- 2026-11-13T23:19:21Z orchestrator-1 received dispatch (inbox +16 lines)
+- 2026-11-13T23:19:22Z paal-1 received dispatch (inbox +2 lines)
+2026-11-13T23:21:10Z paal-1: #236 ny versjon (steg 11–12) 12/12 lenker ok, Brreg-fakta stemmer, 2 små funn til admin-1 ("8 steg", EHF mangler i desember-punktet)
+- 2026-11-13T23:21:14Z admin-1 received dispatch (inbox +8 lines)
+- 2026-11-13T23:21:22Z admin-1: QA på #236 innarbeidet (12 steg, EHF-vinduet i desember)
+- 2026-11-13T23:21:23Z paal-1 received dispatch (inbox +3 lines)
+2026-11-13T23:23:17Z paal-1: #236 rettelsene bekreftet, ingen nye funn
+- 2026-11-13T23:23:19Z admin-1 received dispatch (inbox +2 lines)

@@ -13706,3 +13706,12 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 
 ## RETTELSE fra trading-1 @ 2026-11-13T15:02:55Z: tallene i forrige STATUS var feil
 - Det var 38 åpne issues med `venter:eierskifte`, ikke 42. Etiketten er fjernet på 12, ikke 14: #2, #5, #9, #10, #12, #19, #71, #98, #99, #190, #196 og #208. Den står igjen på 25 DPS-er og #39, til sammen 26.
+
+## STATUS fra trading-1 @ 2026-11-13T15:15:02Z: Bilagsmottak trinn A merget og i broen (command-center#171)
+- **Hva den gjør:** ny handling `til-fiken`. Broen henter kvitteringen fra Drive og sjekker størrelse og md5 i metadataene før nedlasting. Så legger den kvitteringen i innboksen i Fiken med merket `[sc:<opplasting-id>]`, etter først å ha søkt etter merket, så den aldri havner der to ganger.
+- **Klienten:** Fiken-klienten slipper bare `GET /companies` og `GET`/`POST` inbox, og sender én forespørsel om gangen. Bare pdf, png og jpg, og bare rollen eier (Økonomi).
+- **Uten nøkkel:** det finnes ingen nøkkel. Uten `FIKEN_API_TOKEN` venter handlingen.
+- **Testet:** 149 tester grønne, og nedlastingen fra ekte Drive er prøvd. Reviewet: ingen kritiske funn, og fire funn er rettet før merge. Broen kjører den nye koden (c2088fe), og første runde var ok.
+- **Gjenstår:**
+  - Appens side, `til-fiken` i køen etter at kvitteringen er arkivert, og status «i Fiken-innboksen»: data-1 og tools-1.
+  - Testselskap og nøkkel: Nithu lager dem, operatøren legger nøkkelen i `~/.config/firm/plattform-bro.env`. Søket på merket prøves mot testselskapet før den ekte nøkkelen settes.

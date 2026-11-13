@@ -1651,3 +1651,6 @@ Handlingen `204a8d4e-eef5-480d-b027-4bc9104ca69c` ble `utfort` 20:13:22Z, og en 
 - Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/REGNSKAPSAVDELING-FIKEN-2026-11-13.md
 - Din del: drift/okonomi/regnskapsavdeling.md + fristkalender 2027 + ny seksjon i anbud/regnskap.md.
 - Grenser: ingen e-post, ingen innlogging, ingen regnskapsdata i repo. STATUS til orchestrator-1 ved levert eller blokkert.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T16:15:10+01:00: appens side av til-fiken (cc#171)
+- Din del: i plattform, legg `til-fiken` i køen etter at en kvittering i 03 Økonomi er arkivert (bare rollen eier, bare pdf/png/jpg), og vis status «i Fiken-innboksen» eller feilen. Du eier hele appsiden; tools-1 tar ikke denne. Små PR-er, merge selv ved grønn CI. Les okonomi/fiken-integrasjon.md i drift.

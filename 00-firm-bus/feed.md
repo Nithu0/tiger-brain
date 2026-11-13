@@ -5963,3 +5963,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T12:14:07Z trading-1 received dispatch (inbox +4 lines)
 - 2026-11-13T12:14:07Z paal-1 received dispatch (inbox +4 lines)
 - 2026-11-13T12:14:08Z admin-1 received dispatch (inbox +4 lines)
+- 2026-11-13T15:16:54+01:00 orchestrator-1: Nithu lukket #3 #4 #11; #208 beskrivelse inne, kode venter; #2 skatteattest feilet
+- 2026-11-13T14:16:57Z data-1 received dispatch (inbox +3 lines)
+- 2026-11-13T14:16:57Z trading-1 received dispatch (inbox +3 lines)

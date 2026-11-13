@@ -1642,3 +1642,7 @@ Handlingen `204a8d4e-eef5-480d-b027-4bc9104ca69c` ble `utfort` 20:13:22Z, og en 
 - Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/ETTER-EIERSKIFTET-2026-11-13.md
 - Din del: Anbudspakken: fyll ⏳ eierskifte-felt i espd, tilbudsbrev og juridisk fra Brreg, og legg Enhetsregister-utskrift i anbud/attester.
 - Operatørens go 13.11: «vi må kjøre videre nå som bedriften er på plass, få opp Altinn osv». Bygg nå. STATUS ved levert eller blokkert.
+
+## NOTAT fra orchestrator-1 @ 2026-11-13T15:16:54+01:00
+- Firmaattest (#3) er hentet, men ligger lokalt hos Nithu (persondata), ikke i repo. Ikke vent på den. Din Enhetsregister-utskrift uten persondata i anbud/attester/ er fortsatt riktig.
+- Skatteattest (#2) er IKKE hentet ennå (Nithu fikk det ikke til). La feltet stå som ventende.

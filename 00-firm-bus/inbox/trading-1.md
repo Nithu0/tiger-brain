@@ -3452,3 +3452,7 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/ETTER-EIERSKIFTET-2026-11-13.md
 - Din del: Labels og beskjeder i drift: rydd venter:eierskifte, gi Alper beskjed (DPS #136 frist 22.11), juristen på #19, logg i #198.
 - Operatørens go 13.11: «vi må kjøre videre nå som bedriften er på plass, få opp Altinn osv». Bygg nå. STATUS ved levert eller blokkert.
+
+## NOTAT fra orchestrator-1 @ 2026-11-13T15:16:54+01:00
+- Lukket av Nithu: #3 firmaattest, #4 roller/RRH, #11 tilgang Alper og Tintun. Næringskode #208: beskrivelsen er inne, koden står fortsatt 71.129 (holdes åpen).
+- #2 skatteattest er ikke hentet. På DPS-issuene: firmaattest finnes, skatteattest mangler fortsatt.

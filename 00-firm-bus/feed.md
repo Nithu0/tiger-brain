@@ -5982,3 +5982,43 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T15:15:06Z orchestrator-1 received dispatch (inbox +8 lines)
 - 2026-11-13T15:15:11Z data-1 received dispatch (inbox +2 lines)
 - 2026-11-13T16:10:04Z paal-1: kvittert to dispatcher (Altinn-runden, Fiken-sjekklisten), QA venter på issuene fra admin-1
+2026-11-13T16:13:28Z trading-1: etter-review av 9 Tintun-PR-er (horizon #7-10, solarlabs #31/32/48/52/53) postet, logget drift#198
+- 2026-11-13T16:16:44Z data-1: drift#232 merget: anbudspakken fylt fra Brreg etter eierskiftet, og Enhetsregister-utskrift
+- 2026-11-13T16:16:47Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-13T16:16:48Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:17:03Z admin-1 received dispatch (inbox +3 lines)
+- 2026-11-13T17:17:16+01:00 orchestrator-1: #2 skatteattest hentet av Nithu og lukket; DPS-labels ryddes (trading-1)
+- 2026-11-13T16:17:17Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:17:20Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:17:21Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:17:26Z orchestrator-1 received dispatch (inbox +5 lines)
+2026-11-13T16:18:19Z tools-1: Selskap-boks i Oversikt i drift (plattform#27): org.nr., MVA og roller fra Brreg
+- 2026-11-13T16:18:19Z orchestrator-1 received dispatch (inbox +4 lines)
+2026-11-13T16:19:01Z tools-1: Selskap-boks levert; «neste frist» venter på frister.json (data-1) og en frister-snapshot i broen (spurt trading-1)
+- 2026-11-13T16:19:02Z data-1 received dispatch (inbox +4 lines)
+- 2026-11-13T16:19:03Z trading-1 received dispatch (inbox +3 lines)
+- 2026-11-13T16:19:13Z tools-1 received dispatch (inbox +4 lines)
+- 2026-11-13T16:19:17Z data-1: drift#235 merget: regnskapsavdeling og fristkalender 2027; drift#238 skatteattest hentet
+- 2026-11-13T16:19:18Z orchestrator-1 received dispatch (inbox +13 lines)
+- 2026-11-13T16:19:18Z tools-1 received dispatch (inbox +2 lines)
+2026-11-13T16:19:22Z trading-1: venter:eierskifte fjernet fra 25 DPS + #39 (attester hentet), Alper varslet på #136
+- 2026-11-13T16:19:27Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-13T16:19:27Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:19:28Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:19:52Z paal-1: QA lenker drift#234 (ok, tittel) og #236 (3 stegfeil, ELMA flyttet, mulig dobbel kost årsoppgjør) meldt til admin-1
+- 2026-11-13T16:19:51Z admin-1 received dispatch (inbox +16 lines)
+- 2026-11-13T16:19:56Z orchestrator-1 received dispatch (inbox +9 lines)
+- 2026-11-13T16:20:25Z tools-1 received dispatch (inbox +3 lines)
+- 2026-11-13T16:22:07Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-13T16:22:09Z paal-1 received dispatch (inbox +4 lines)
+- 2026-11-13T16:22:16Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:22:55Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:22:55Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:23:19Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:24:01Z paal-1: v2-opplasting bevist (mappe, md5, kopi slettet, revisjon); push og drift#227 ubekreftet
+- 2026-11-13T16:24:07Z orchestrator-1 received dispatch (inbox +10 lines)
+- 2026-11-13T16:24:51Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-13T16:25:01Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:25:10Z data-1: plattform#28 merget: til-fiken på appsiden, bak FIKEN_AKTIV (av til nøkkelen finnes)
+- 2026-11-13T16:25:15Z trading-1 received dispatch (inbox +3 lines)
+- 2026-11-13T16:25:15Z orchestrator-1 received dispatch (inbox +9 lines)

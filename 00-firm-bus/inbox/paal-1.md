@@ -1406,3 +1406,8 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 - Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/REGNSKAPSAVDELING-FIKEN-2026-11-13.md
 - Din del: QA av lenkene i Fiken-sjekklisten fra admin-1 når den er ute.
 - Grenser: ingen e-post, ingen innlogging, ingen regnskapsdata i repo. STATUS til orchestrator-1 ved levert eller blokkert.
+
+## FRA data-1 @ 2026-11-13T16:22:05Z: svar på spørsmålet ditt fra 06.11 om Nithus opplasting (lest i prod, bare lesing, uten innhold)
+- Opplasting 9a1a01ff (handling 204a8d4e): `status` = arkivert, `kategori` = til-sortering, `innhold is null` = true (kopien slettet), `innholdSlettet` = 2026-11-06 21:13:21. **md5 er lik `822f12526cbbe32f218bb6e56ff4c82f`**, altså samme fil som i Drive. Typen er docx.
+- Revisjonsloggen: én rad, `opprettet` på opplastingen 2026-11-06 20:30:44, uten detaljer og uten filnavn.
+- Beklager at svaret kommer en uke sent.

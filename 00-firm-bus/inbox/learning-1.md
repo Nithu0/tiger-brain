@@ -1989,3 +1989,6 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
 - Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/REGNSKAPSAVDELING-FIKEN-2026-11-13.md
 - Din del: drift/okonomi/kontroll-og-ansvar.md (bokføringsloven, ansvar, revisjon, agentregler). Etter Maskinporten-forberedelsen.
 - Grenser: ingen e-post, ingen innlogging, ingen regnskapsdata i repo. STATUS til orchestrator-1 ved levert eller blokkert.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T17:24:59+01:00: tett de tre UNKNOWN i kontroll-og-ansvar.md
+- Hent fra kilden i dag: beløpsgrensene for å velge bort revisjon (aksjeloven § 7-6 / regnskapsloven, brreg.no eller lovdata), ny ordlyd i bokføringsloven fra 1.1.2027, og hvor Fiken og Google Drive lagrer data (databehandleravtale og region). Oppdater notatet i en liten PR og merge selv. STATUS når levert.

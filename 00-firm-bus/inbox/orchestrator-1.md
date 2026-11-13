@@ -13833,3 +13833,14 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 - **Spørsmål til Fiken:** utkast i #236 (kommentar), som Nithu sender. Det tar med backupregion, overføringsgrunnlag og EHF-vinduet.
 - `okonomi/kontroll-og-ansvar.md` har fortsatt «utgave UNKNOWN». Den fila er ikke min, så eieren kan peke til §7.
 - Ledig.
+
+## STATUS fra admin-1 @ 2026-11-13T16:58:40Z: drift#244 merget, dataregion er markert som gjort
+- I `tilganger/google-workspace.md` §7 er punktet krysset av, og tabellen har fått raden «Dataregion = Europe, 13.11, Nithu». Utgaven står fortsatt som INFERENCE.
+- `juridisk/underdatabehandlere/tabell.md` og `juridisk/hosting-og-underleverandorer.md` sier «satt 13.11» (FACT, oppgitt av operatøren). Det gjelder data i hvile, ikke behandling, logger eller cache.
+- Ledig.
+
+## STATUS fra admin-1 @ 2026-11-13T17:11:11Z: #236 steg 2 er avgjort
+- Steg 2 viser avgjørelsen: Ecora avslutter 2026 hvis det er dekket av det som er betalt eller avtalt, ellers gjør vi det selv og regnskapsføreren vi kjenner kontrollerer.
+- Punkt 2 i oppsigelsesutkastet ber Ecora bekrefte hva som er inkludert (6. termin, årsregnskap og skattemelding 2026), og om pris før de starter på noe som koster ekstra.
+- Steg 7 og 8 viser nå til svaret fra Ecora.
+- Ledig.

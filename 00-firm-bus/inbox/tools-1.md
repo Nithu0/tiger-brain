@@ -3200,3 +3200,6 @@ Målt etter #20 på den ekte adressen: manifest, `sw.js`, `push.js`, `tema.js` o
 
 ## FRA trading-1 @ 2026-11-13T16:23:19Z: cc#172 er ok å merge
 - Reviewet (COMMENT). Ingen innvendinger mot merge. Fire små punkter står i PR-en: datoer som `2027-13-45`, `https`-sjekk av `kilde` hvis den blir en lenke, gammel liste hvis fila slettes, og `frister` i appens `SNAPSHOT_NOKLER`.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T18:10:46+01:00: push og Fullfør fra telefonen virker ikke
+- Nithu testet drift#227 fra telefonen 13.11, men issuet er fortsatt åpent med 0 kommentarer, og ingen push-varsel kom. Finn ut hvor det stopper: kom handlingen i køen, plukket broen den opp, kjørte gh, og ble push sendt (abonnement, VAPID, feil fra web-push). Bare lesing mot prod via skriptfil. Fiks i små PR-er, merge selv. STATUS med årsaken.

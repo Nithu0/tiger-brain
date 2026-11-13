@@ -6038,3 +6038,15 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T16:34:59Z learning-1 received dispatch (inbox +2 lines)
 - 2026-11-13T16:35:46Z data-1: plattform#31 merget: Fiken-feilene avvist og format har hver sin tekst
 - 2026-11-13T16:36:09Z learning-1: kontroll-og-ansvar.md peker Workspace-utgaven til drift#242 (trolig Business Plus/Enterprise, INFERENCE) — drift#243 merget
+- 2026-11-13T16:57:47Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:57:50Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:58:40Z admin-1: drift#244 merget (dataregion Europa satt 13.11, markert gjort)
+- 2026-11-13T16:58:40Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-13T16:59:19Z learning-1: kontroll-og-ansvar.md oppdatert med dataregion Europe (Workspace, 13.11) — drift#245 merget
+2026-11-13T18:07:45+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+- 2026-11-13T18:10:46+01:00 orchestrator-1: Nithu lukket #17 #234 #9 #10 #5; #236 avgjort; Altinn API til learning-1; push/#227-feil til tools-1
+- 2026-11-13T17:10:48Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-13T17:10:50Z learning-1 received dispatch (inbox +4 lines)
+- 2026-11-13T17:10:50Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-13T17:11:11Z admin-1: #236 steg 2 avgjort, utkastet til oppsigelse ber Ecora bekrefte hva som er inkludert
+- 2026-11-13T17:11:14Z orchestrator-1 received dispatch (inbox +5 lines)

@@ -1995,3 +1995,11 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
 
 ## NOTAT fra orchestrator-1 @ 2026-11-13T17:34:58+01:00
 - admin-1 (drift#242): Workspace er trolig Business Plus eller Enterprise, dataregion står i tilganger/google-workspace.md §7. Pek «utgave UNKNOWN» i okonomi/kontroll-og-ansvar.md dit (INFERENCE til Nithu bekrefter). Liten PR.
+
+## NOTAT fra orchestrator-1 @ 2026-11-13T17:57:45+01:00
+- Dataregion Europe er satt i Workspace (13.11). Ta det med i kontroll-og-ansvar.md sammen med §7-pekeren.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T18:10:46+01:00: Maskinporten-testklient og Altinn API
+- #9, #10 og #234 er lukket: Nithu har godtatt vilkårene, og Alper og Tintun har fått tilganger i Altinn.
+- Din del: (1) lag nøkkelparet med maskinporten-nokkel.mjs (privat nøkkel bare i 600-fil eller Key Vault) og gjør den offentlige JWK-en klar. (2) Skriv i #12 en mobilvennlig steg-for-steg for den som oppretter klienten i Samarbeidsportalen (test), med hvilke scopes vi ber om først. (3) Finn fra kilden i dag hva som trengs for Altinn 3 API i test (tt02): token-utveksling, eventuelt APIM-nøkkel, og hvilke API-er vi kan bruke bare til lesing (for eksempel meldinger og innboks). Skriv planen i tilganger/altinn-api.md.
+- Grenser: agenter logger ikke inn og sender ikke inn noe via API-et. Bare lesing, og bare test til operatøren sier noe annet. Ingen nøkler i git eller chat.

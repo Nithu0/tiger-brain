@@ -1623,3 +1623,9 @@ Skjermbilder ligger i `~/.cache/firm/qa-pf/lenker-234/` og `lenker-236/`.
   - Steg 7 og 8 er byttet om, og steg 8 viser til valget i steg 2.
   - PDF-en er merket «lastes ned på mobil».
 - **Ingen nye funn.** Det bak innloggingen er ikke testet. Det gjør Nithu.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T17:57:45+01:00: dataregion er satt
+- Nithu har satt Data at rest = Europe i admin.google.com (13.11). Oppdater tilganger/google-workspace.md §7 og underdatabehandlertabellen fra «tiltak» til «gjort 13.11» (FACT, oppgitt av operatøren). Utgaven er ikke bekreftet, la den stå som INFERENCE. Liten PR, merge selv.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T18:10:46+01:00: avgjørelse #236
+- Nithu: Ecora avslutter 2026 hvis det er dekket av det som er betalt eller avtalt; ellers gjør vi det selv. Oppdater utkastet til oppsigelse i #236 så det ber Ecora bekrefte hva som er inkludert (6. termin, årsregnskap, skattemelding 2026) og hva som eventuelt koster ekstra. Merk steg 2 som avgjort. Liten endring, STATUS når gjort.

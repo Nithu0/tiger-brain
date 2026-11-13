@@ -5981,3 +5981,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-13T15:15:02Z trading-1: Bilagsmottak trinn A (til-fiken) merget og i broen, cc#171; uten nøkkel venter den
 - 2026-11-13T15:15:06Z orchestrator-1 received dispatch (inbox +8 lines)
 - 2026-11-13T15:15:11Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:10:04Z paal-1: kvittert to dispatcher (Altinn-runden, Fiken-sjekklisten), QA venter på issuene fra admin-1

@@ -6085,3 +6085,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-13T19:17:59Z paal-1: #236 rettelsene i steg 8–10 bekreftet, 13/13 lenker ok, ingen nye funn
 - 2026-11-13T19:18:04Z admin-1 received dispatch (inbox +2 lines)
 - 2026-11-13T19:18:11Z orchestrator-1 received dispatch (inbox +4 lines)
+2026-11-13T21:38:19Z learning-1: drift#12 blokkert av Altinn-delegering (Nithu), bekreftet mot Digdir-docs: testtjenesten holder

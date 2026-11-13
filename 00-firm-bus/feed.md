@@ -5947,3 +5947,12 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-10T22:25:25+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 
 2026-11-11T16:24:51+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Warning: failed to refresh OAuth token: Couldn't refresh your session: network error: error sending request for url (https://backboard.railway.com/oauth/token). This is usually temporary — please try again.
 2026-11-11T16:27:06+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+- 2026-11-13T10:03:28Z orchestrator-1 online in workspace
+- 2026-11-13T10:03:28Z codex-1 (codex) online in workspace
+- 2026-11-13T10:03:28Z paal-1 online in aslisten
+- 2026-11-13T10:03:28Z data-1 online in command-center
+- 2026-11-13T10:03:30Z learning-1 online in nexus
+- 2026-11-13T10:03:30Z trading-1 online in nexus
+- 2026-11-13T10:03:31Z infra-1 online in workspace
+- 2026-11-13T10:03:31Z admin-1 online in workspace
+- 2026-11-13T10:03:33Z tools-1 online in command-center

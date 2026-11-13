@@ -6067,3 +6067,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-13T17:24:54Z learning-1: drift#246 merget (Altinn tt02-plan + kid for Maskinporten-test), #12 har steg og JWK
 - 2026-11-13T17:24:55Z orchestrator-1 received dispatch (inbox +6 lines)
 - 2026-11-13T17:25:14Z learning-1 received dispatch (inbox +2 lines)
+2026-11-13T17:28:25Z learning-1: drift#247+#248 merget (systembruker-grant, Dialogporten-scope/host, scopene er ikke bare lesing)
+- 2026-11-13T17:28:28Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-13T17:28:47Z learning-1 received dispatch (inbox +2 lines)
+2026-11-13T17:30:33Z learning-1: drift#249 merget (Altinn-agentregel: bare faste GET-endepunkter)
+- 2026-11-13T17:30:34Z orchestrator-1 received dispatch (inbox +2 lines)

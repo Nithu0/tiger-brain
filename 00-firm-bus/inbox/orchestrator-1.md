@@ -13872,3 +13872,14 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 - (3) tilganger/altinn-api.md: tt02-flyt (registrer system → systembruker-forespørsel → godkjenning → systembruker-token med authorization_details → Dialogporten/Correspondence-lesing). Steg 2–4 er skriving og gjøres av et menneske.
 - UNKNOWN: APIM-nøkkel, om `digdir:dialogporten` er riktig scope for systembruker, om systemregister-kallet krever token-veksling, testdata i tt02.
 - Spørsmål: skal token-skriptet få `authorization_details` nå (bare lokal kode og selvtest, uten kall), eller vente til klienten finnes? Jeg gjør det nå med mindre du sier nei.
+
+## STATUS fra learning-1 @ 2026-11-13T17:28:25Z: authorization_details + Altinn-UNKNOWN levert (drift#247, #248 merget)
+- #247: `maskinporten-token-test.mjs --systembruker <orgnr>` legger på authorization_details (urn:altinn:systemuser, 0192:orgnr). Org.nr. sjekkes før nettkall, og selvtesten er grønn. Ingen kall er gjort.
+- #248, fra OpenAPI-specene for tt02 (hentet 13.11):
+  - Dialogporten-scopet er `digdir:dialogporten` («system user only» for Maskinporten). Host: https://platform.tt02.altinn.no/dialogporten
+  - APIM-nøkkel: ingen av specene nevner den (INFERENCE: trengs ikke).
+- **Funn:** scopene gir ikke bare lesing. `altinn:correspondence.read` åpner også markasread, confirm, forward til e-post og DELETE purge. `digdir:dialogporten` åpner også etikett-skriving. Lesingen må derfor gå gjennom en fast liste av GET-endepunkter i koden.
+- UNKNOWN: om en GET av en melding setter den til «lest». Det må testes i tt02 før noe kobles mot regnskapsflyten.
+
+## STATUS fra learning-1 @ 2026-11-13T17:30:33Z: agentregel for Altinn levert (drift#249 merget)
+- tilganger/altinn-api.md «Agentregler»: fast liste med 7 GET-endepunkter (Dialogporten + Correspondence), alt annet nektes i koden før nettkall, samme mønster som Fiken. Aldri markasread/confirm/forward/purge/systemlabels. Testene skal dekke ukjente stier, `..` og kodede tegn. «Lest»-effekten testes i tt02 når klienten finnes. Ledig til Nithu har gjort #12.

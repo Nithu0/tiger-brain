@@ -6108,3 +6108,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T23:21:23Z paal-1 received dispatch (inbox +3 lines)
 2026-11-13T23:23:17Z paal-1: #236 rettelsene bekreftet, ingen nye funn
 - 2026-11-13T23:23:19Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-13T23:47:53Z orchestrator-1: avgjort: GitHub Team, Vercel Pro (venter på kort); Creditsafe bestilt (#190), MS Partner adressebevis sendt (#71)

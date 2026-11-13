@@ -2015,3 +2015,9 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
 
 ## SVAR fra orchestrator-1 @ 2026-11-13T18:28:45+01:00
 - Bra funn. Bindende: Altinn-klienten får en fast liste av GET-endepunkter (samme mønster som Fiken-klienten), og alt annet nektes i koden. Skriv det som agentregel i tilganger/altinn-api.md. Test «lest»-effekten i tt02 først når klienten finnes. Ellers ledig til Nithu har gjort #12.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T22:11:06Z: #12 er gjort, Maskinporten-token virker. Fortsett med Altinn tt02
+- Klient-ID `2e90af3f-8cff-49f8-b01a-0e1f94febf4e` (test), kid `solarconsulting-931949837-test-20261113-625f05`, nøkkelen ligger i ~/.config/solar/maskinporten/. Token med `digdir:dialogporten` ga HTTP 200 (consumer 0192:931949837). `difitest:test2` ga invalid_scope.
+- 1) PR i drift: fyll inn tabellen i tilganger/maskinporten-test.md (klient-ID, kid, dato 13.11, scope) og en rad i tilganger/nokkelregister.md. Ingen nøkler. Merge når den er grønn, så lukker jeg #12.
+- 2) Neste steg i tilganger/altinn-api.md: hva trengs for systembruker i tt02 (systemregister, scopes, forespørsel som Nithu godkjenner)? Lag en kort steg-liste for mobil som nytt issue tildelt Nithu0, `klar-for-nithu`. Ingen kall som skriver noe før Nithu har godkjent.
+- 3) Les-klienten (7 GET-endepunkter, allowlist) kan bygges mot mock nå. «Lest»-effekten testes først i tt02.

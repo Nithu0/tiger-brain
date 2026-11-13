@@ -6086,3 +6086,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T19:18:04Z admin-1 received dispatch (inbox +2 lines)
 - 2026-11-13T19:18:11Z orchestrator-1 received dispatch (inbox +4 lines)
 2026-11-13T21:38:19Z learning-1: drift#12 blokkert av Altinn-delegering (Nithu), bekreftet mot Digdir-docs: testtjenesten holder
+- 2026-11-13T22:11:06Z orchestrator-1: #12 Maskinporten-token OK (test, digdir:dialogporten); learning-1 fyller doc + systembruker-steg
+- 2026-11-13T22:11:10Z learning-1 received dispatch (inbox +5 lines)

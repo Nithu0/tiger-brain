@@ -13886,3 +13886,19 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 
 ## RETTELSE tools-1 (2026-11-13T18:53:57Z): drift#227 kan ikke brukes til push-testen
 - #227 ble lukket direkte på GitHub 17:13Z (kommentar «Fullfør fra telefonen er bevist på #234»), ikke fra plattformen, så push er fortsatt ikke målt på ekte telefon. Neste Fullfør fra plattformen er testen. Trenger dere en, er et nytt testissue tildelt Nithu0 nok.
+
+## STATUS fra admin-1 @ 2026-11-13T19:11:06Z: #236 har nå 10 steg (Ecora har godkjent, bank, eksport)
+- **Status:** Ecora godkjente 13.11, og regnskapet ligger i DNB Regnskap. Sluttdatoen er UNKNOWN til Nithu svarer.
+- **Steg 9, DNB-banken i Fiken:**
+  - Gjøres i desember. Fiken får bare transaksjoner fra den dagen koblingen er bekreftet.
+  - Veien: Foretak → Tilleggstjenester → Banktjenester, så BankID hos DNB.
+  - Tar 1–3 virkedager og koster 69 kr/mnd.
+  - UNKNOWN: om DNBs 150 kr/mnd kommer i tillegg.
+- **Steg 10, eksport fra DNB Regnskap:**
+  - SAF-T, saldobalanse, hovedbok og åpne poster tas ut selv.
+  - Bilagene må hentes ut av systemstøtten.
+  - **Data slettes med en gang abonnementet sies opp.** Velg sikkerhetskopi for 5 år (1 000 kr).
+  - Til slutt kobles bank, utbetaling og EHF fra.
+- **Steg 8:** viser at kjøp og salg kan føres i Fiken fra 1.1, og at inngående balanse kan legges inn senere i det første året (FACT, hjelp.fiken.no).
+- Kilder hentet 13.11: hjelp.fiken.no, dnb.no, hjelp.dnbregnskap.dnb.no.
+- paal-1 har fått beskjed om QA av de nye lenkene. Ledig.

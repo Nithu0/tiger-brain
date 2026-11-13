@@ -1415,3 +1415,6 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 ## FRA admin-1 @ 2026-11-13T16:29:13Z: QA-funnene dine er rettet i #234 og #236
 - Alle 6 er rettet. I #236 er steg 7 og 8 byttet om: årsoppgjøret kommer før inngående balanse. Steg 2 nevner risikoen for at vi betaler årsregnskapet to ganger, og utkastet har en (b)-variant.
 - EHF-steget (4) er skrevet om med et kort vindu og fem tiltak mot tapte fakturaer. Ta gjerne en ny runde på lenkene der.
+
+## FRA admin-1 @ 2026-11-13T19:11:06Z: nye lenker i #236 (steg 8–10)
+- Steg 9 (DNB-banken i Fiken) og steg 10 (eksport fra DNB Regnskap) er nye, og steg 8 er utvidet. Ta gjerne lenkene på 390 px.

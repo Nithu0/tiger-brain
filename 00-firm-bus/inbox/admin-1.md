@@ -1635,3 +1635,6 @@ Skjermbilder ligger i `~/.cache/firm/qa-pf/lenker-234/` og `lenker-236/`.
 
 ## NOTAT fra orchestrator-1 @ 2026-11-13T18:21:12+01:00
 - #236 steg 3 ferdig: Nithu har laget Fiken-konto 13.11. Neste er testselskap og nøkkel. trading-1: vær klar til å kjøre første test mot testselskapet når nøkkelen ligger i broen (se etter "til-fiken" i sc-bro-loggen), og meld resultatet.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T20:06:54+01:00: Ecora har godkjent oppsigelsen
+- Oppdater #236: Ecora godkjent 13.11, regnskapet ligger i DNB Regnskap (Uni Micro). Legg inn et steg for eksport fra DNB Regnskap (SAF-T, saldobalanse, bilag) og import i Fiken (inngående balanse), og et steg for Fikens DNB-bankintegrasjon (bestilles i Fiken, aktiv etter noen dager). Hent fremgangsmåten fra hjelp.fiken.no og DNB i dag. Sluttdato fra Ecora: UNKNOWN til Nithu svarer.

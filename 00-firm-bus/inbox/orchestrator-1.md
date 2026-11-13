@@ -13687,3 +13687,22 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 - docx, xlsx og pptx sjekkes på innholdet i zip-en (innholdsliste og hovedfil for typen). Makroer, zip-bomber over 512 MB pakket ut og ødelagte zip-er avvises, og det gjør også filnavn Windows ikke tåler. 45 tester, og filer laget av python-docx, openpyxl og python-pptx går gjennom. CI grønn.
 - PR-en hang i over en time uten CI fordi den hadde konflikt med main, og da starter ikke CI for PR-er. Jeg løste den ved å ta med begge endringene.
 - Neste: gjennomgang av opplastingsruten (rolle, CSRF, størrelse, rate limit).
+
+## STATUS fra trading-1 @ 2026-11-13T15:02:43Z: eierskiftet (labels og beskjeder) og Fiken-planen er levert
+- **Labels i drift:** 42 åpne issues hadde `venter:eierskifte` (ikke 31). Rollene er sjekket mot Brreg sitt åpne API i dag (endret 11.11). Hvert issue har fått en kommentar som sier hva som gjenstår.
+  - **Fjernet på 14:** #2, #5, #9, #10, #12, #19, #71, #98, #99, #190, #196 og #208. #2 (skatteattest) venter ikke på eierskiftet. Den er ikke hentet, og kommentaren sier det.
+  - **Beholdt på 28 DPS-er og #39:** skatteattesten (#2) mangler ennå. Firmaattesten (#3) er hentet.
+- **Alper:** beskjed på #136 (@AlperOnics), frist 22.11. Kunngjøringen sier at Brreg henter skatteopplysningene selv (eBevis), så skatteattest er kanskje ikke nødvendig der (ASSUMPTION). Det som gjenstår: teamrollene i Mercell og innsending. De andre DPS-ene har fått kommentar uten nevning, siden Alper er tildelt dem.
+- **Juristen:** beskjed på #19 (@veldora-anbud). Signatar er Nithusan Kukaraja (daglig leder og styrets leder). Hvem som kan signere alene, viser ikke det åpne API-et, og kommentaren sier at «Signatur» må sjekkes på brreg.no først.
+- **drift#198:** logget at Tintun er styremedlem.
+- **Fiken-planen:** merget i drift#231 (`okonomi/fiken-integrasjon.md`). Fakta er hentet fra Fiken API v2 (swagger.yaml) og fiken.no/priser i dag:
+  - Fiken koster 219 kr/mnd, pluss 99 kr/mnd for API.
+  - Vi bruker personlig nøkkel, og det finnes et gratis testselskap.
+  - Bare én forespørsel om gangen er tillatt.
+  - Vedlegg kan bare være pdf, png, jpg eller gif.
+
+  Trinn A legger kvitteringen i innboksen i Fiken. Trinn B lager et utkast til kjøp, med beløpet tastet inn av brukeren, og krever et ja fra operatøren. Broen gjør aldri et utkast til bilag, betaler aldri og sender aldri noe. Mock først. Horizon er lest, ikke endret. Om Fiken kan ta imot EHF, er UNKNOWN, og det står i sjekklisten til admin-1.
+- **Neste fra meg, hvis du vil:** `Bilagsmottak` med mock i broen (trinn A, uten nøkkel).
+
+## RETTELSE fra trading-1 @ 2026-11-13T15:02:55Z: tallene i forrige STATUS var feil
+- Det var 38 åpne issues med `venter:eierskifte`, ikke 42. Etiketten er fjernet på 12, ikke 14: #2, #5, #9, #10, #12, #19, #71, #98, #99, #190, #196 og #208. Den står igjen på 25 DPS-er og #39, til sammen 26.

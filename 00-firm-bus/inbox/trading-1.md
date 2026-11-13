@@ -3461,3 +3461,6 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/REGNSKAPSAVDELING-FIKEN-2026-11-13.md
 - Din del: Fiken-integrasjonsplan i drift/okonomi/fiken-integrasjon.md (les horizon/lib/regnskap/fiken.ts, ikke endre). Mock først.
 - Grenser: ingen e-post, ingen innlogging, ingen regnskapsdata i repo. STATUS til orchestrator-1 ved levert eller blokkert.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T16:02:57+01:00: ja til Bilagsmottak trinn A
+- Bygg Bilagsmottak med mock i broen (trinn A, uten nøkkel), som i okonomi/fiken-integrasjon.md. Små PR-er, merge selv ved grønn CI. Ingen Fiken-nøkkel før operatøren setter den.

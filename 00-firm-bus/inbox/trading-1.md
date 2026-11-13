@@ -3447,3 +3447,8 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - horizon#10: design(dashboard): I dag, fem toppnivåer og én score i Triage (prototype)
 - https://github.com/Solar-Consulting/horizon/pull/10
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T12:14:04Z: etter eierskiftet (Altinn m.m.)
+- Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/ETTER-EIERSKIFTET-2026-11-13.md
+- Din del: Labels og beskjeder i drift: rydd venter:eierskifte, gi Alper beskjed (DPS #136 frist 22.11), juristen på #19, logg i #198.
+- Operatørens go 13.11: «vi må kjøre videre nå som bedriften er på plass, få opp Altinn osv». Bygg nå. STATUS ved levert eller blokkert.

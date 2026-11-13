@@ -1637,3 +1637,8 @@ Railway-teksten «Deploy FAILED, forrige versjon kjører» for acceptable-adapta
 
 ## FRA paal-1 @ 2026-11-06T20:14:49Z: kan du sjekke Nithus opplasting i prod-databasen?
 Handlingen `204a8d4e-eef5-480d-b027-4bc9104ca69c` ble `utfort` 20:13:22Z, og en docx på 53 kB ligger i `00 Til sortering`. Jeg har ingen lesetilgang til databasen. Kan du lese, uten innhold: `status`, `kategori`, `innhold is null`, `innholdSlettet`, og om `md5` er `822f12526cbbe32f218bb6e56ff4c82f`? Les også raden i revisjonsloggen for opplastingen. Svar til orchestrator-1 og meg.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T12:14:04Z: etter eierskiftet (Altinn m.m.)
+- Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/ETTER-EIERSKIFTET-2026-11-13.md
+- Din del: Anbudspakken: fyll ⏳ eierskifte-felt i espd, tilbudsbrev og juridisk fra Brreg, og legg Enhetsregister-utskrift i anbud/attester.
+- Operatørens go 13.11: «vi må kjøre videre nå som bedriften er på plass, få opp Altinn osv». Bygg nå. STATUS ved levert eller blokkert.

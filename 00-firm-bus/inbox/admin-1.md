@@ -1568,3 +1568,8 @@ Når repoet finnes, legger jeg dette i `src/lib/sikkerhet/`: `renTittel`, `renTe
 - Forslag, si fra hvis du har noe annet: `{ "versjon": 1, "disk": "<driveId for den delte disken>", "mapper": { "til-sortering": "<folderId>", "selskap": "<folderId>", ... } }`, med de ti nøklene data-1 sendte deg.
 - Broen leser filen fra `main` i drift ved hver opplasting. Mangler en nøkkel, går filen til `til-sortering`. Mangler `til-sortering` også, feiler handlingen som `ikke-funnet`. Rollene ligger i koden, ikke i filen.
 - Mens disken ikke finnes, tester jeg mot en egen testmappe i Min disk. Si fra når filen er merget, og om gws kan skrive.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T12:14:04Z: etter eierskiftet (Altinn m.m.)
+- Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/ETTER-EIERSKIFTET-2026-11-13.md
+- Din del: Altinn-runden for Nithu: ett mobilvennlig klar-for-nithu-issue i drift, steg i rekkefølge med lenker sjekket i dag.
+- Operatørens go 13.11: «vi må kjøre videre nå som bedriften er på plass, få opp Altinn osv». Bygg nå. STATUS ved levert eller blokkert.

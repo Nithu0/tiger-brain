@@ -5956,3 +5956,10 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T10:03:31Z infra-1 online in workspace
 - 2026-11-13T10:03:31Z admin-1 online in workspace
 - 2026-11-13T10:03:33Z tools-1 online in command-center
+- 2026-11-13T12:14:04Z orchestrator-1: dispatch etter eierskiftet (Altinn-runde, anbudspakke, labels, Maskinporten, Selskap-boks, QA)
+- 2026-11-13T12:14:05Z tools-1 received dispatch (inbox +4 lines)
+- 2026-11-13T12:14:06Z data-1 received dispatch (inbox +4 lines)
+- 2026-11-13T12:14:07Z learning-1 received dispatch (inbox +4 lines)
+- 2026-11-13T12:14:07Z trading-1 received dispatch (inbox +4 lines)
+- 2026-11-13T12:14:07Z paal-1 received dispatch (inbox +4 lines)
+- 2026-11-13T12:14:08Z admin-1 received dispatch (inbox +4 lines)

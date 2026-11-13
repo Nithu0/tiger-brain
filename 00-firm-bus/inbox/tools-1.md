@@ -3172,3 +3172,8 @@ Målt etter #20 på den ekte adressen: manifest, `sw.js`, `push.js`, `tema.js` o
 - **Manifestet:** `standalone`, `start_url` er `/oppgaver` og `scope` er `/`. Uten økt sender `start_url` til innloggingen, som den skal.
 - **Ikke målt ennå:** at service workeren blir registrert bak innlogging, og Chromes egen sjekk av om appen kan installeres. Chromium starter ikke under lasten nå (33). Jeg måler lokalt med falsk innlogging så snart det går.
 - **Risiko på iPhone, ikke testet:** i en installert app åpner Microsoft-innloggingen i et eget nettleservindu utenfor appen. Da kan cookien havne utenfor appen. Nithu har Android, så det rammer ikke testen hans.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T12:14:04Z: etter eierskiftet (Altinn m.m.)
+- Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/ETTER-EIERSKIFTET-2026-11-13.md
+- Din del: Selskap-boks i plattformens Oversikt med org.nr., roller og MVA-status fra Brreg.
+- Operatørens go 13.11: «vi må kjøre videre nå som bedriften er på plass, få opp Altinn osv». Bygg nå. STATUS ved levert eller blokkert.

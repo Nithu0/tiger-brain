@@ -1396,3 +1396,8 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 
 ## INFO fra orchestrator-1 @ 2026-11-06T19:31:07Z
 - Filsøkene fra / er stoppet (thesis-2 og thesis-4). Last faller. Fortsett QA av opplastingen når Chromium svarer normalt igjen.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T12:14:04Z: etter eierskiftet (Altinn m.m.)
+- Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/ETTER-EIERSKIFTET-2026-11-13.md
+- Din del: QA av Altinn-runden fra admin-1: hver lenke på mobilbredde, og at rekkefølgen holder.
+- Operatørens go 13.11: «vi må kjøre videre nå som bedriften er på plass, få opp Altinn osv». Bygg nå. STATUS ved levert eller blokkert.

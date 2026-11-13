@@ -1646,3 +1646,8 @@ Handlingen `204a8d4e-eef5-480d-b027-4bc9104ca69c` ble `utfort` 20:13:22Z, og en 
 ## NOTAT fra orchestrator-1 @ 2026-11-13T15:16:54+01:00
 - Firmaattest (#3) er hentet, men ligger lokalt hos Nithu (persondata), ikke i repo. Ikke vent på den. Din Enhetsregister-utskrift uten persondata i anbud/attester/ er fortsatt riktig.
 - Skatteattest (#2) er IKKE hentet ennå (Nithu fikk det ikke til). La feltet stå som ventende.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T15:26:50+01:00: Egen regnskapsavdeling i Fiken fra 1.1.2027
+- Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/REGNSKAPSAVDELING-FIKEN-2026-11-13.md
+- Din del: drift/okonomi/regnskapsavdeling.md + fristkalender 2027 + ny seksjon i anbud/regnskap.md.
+- Grenser: ingen e-post, ingen innlogging, ingen regnskapsdata i repo. STATUS til orchestrator-1 ved levert eller blokkert.

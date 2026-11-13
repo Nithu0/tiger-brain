@@ -1984,3 +1984,8 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
 - Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/ETTER-EIERSKIFTET-2026-11-13.md
 - Din del: Maskinporten-testklient (#12) klar til bruk så snart delegeringen (#11) er gjort. Ikke send noe til Digdir.
 - Operatørens go 13.11: «vi må kjøre videre nå som bedriften er på plass, få opp Altinn osv». Bygg nå. STATUS ved levert eller blokkert.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T15:26:50+01:00: Egen regnskapsavdeling i Fiken fra 1.1.2027
+- Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/REGNSKAPSAVDELING-FIKEN-2026-11-13.md
+- Din del: drift/okonomi/kontroll-og-ansvar.md (bokføringsloven, ansvar, revisjon, agentregler). Etter Maskinporten-forberedelsen.
+- Grenser: ingen e-post, ingen innlogging, ingen regnskapsdata i repo. STATUS til orchestrator-1 ved levert eller blokkert.

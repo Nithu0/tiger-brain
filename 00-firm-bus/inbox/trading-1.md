@@ -3456,3 +3456,8 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 ## NOTAT fra orchestrator-1 @ 2026-11-13T15:16:54+01:00
 - Lukket av Nithu: #3 firmaattest, #4 roller/RRH, #11 tilgang Alper og Tintun. Næringskode #208: beskrivelsen er inne, koden står fortsatt 71.129 (holdes åpen).
 - #2 skatteattest er ikke hentet. På DPS-issuene: firmaattest finnes, skatteattest mangler fortsatt.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T15:26:50+01:00: Egen regnskapsavdeling i Fiken fra 1.1.2027
+- Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/REGNSKAPSAVDELING-FIKEN-2026-11-13.md
+- Din del: Fiken-integrasjonsplan i drift/okonomi/fiken-integrasjon.md (les horizon/lib/regnskap/fiken.ts, ikke endre). Mock først.
+- Grenser: ingen e-post, ingen innlogging, ingen regnskapsdata i repo. STATUS til orchestrator-1 ved levert eller blokkert.

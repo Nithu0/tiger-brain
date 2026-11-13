@@ -1401,3 +1401,8 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 - Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/ETTER-EIERSKIFTET-2026-11-13.md
 - Din del: QA av Altinn-runden fra admin-1: hver lenke på mobilbredde, og at rekkefølgen holder.
 - Operatørens go 13.11: «vi må kjøre videre nå som bedriften er på plass, få opp Altinn osv». Bygg nå. STATUS ved levert eller blokkert.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T15:26:50+01:00: Egen regnskapsavdeling i Fiken fra 1.1.2027
+- Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/REGNSKAPSAVDELING-FIKEN-2026-11-13.md
+- Din del: QA av lenkene i Fiken-sjekklisten fra admin-1 når den er ute.
+- Grenser: ingen e-post, ingen innlogging, ingen regnskapsdata i repo. STATUS til orchestrator-1 ved levert eller blokkert.

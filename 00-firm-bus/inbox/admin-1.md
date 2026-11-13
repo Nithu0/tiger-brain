@@ -1573,3 +1573,8 @@ Når repoet finnes, legger jeg dette i `src/lib/sikkerhet/`: `renTittel`, `renTe
 - Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/ETTER-EIERSKIFTET-2026-11-13.md
 - Din del: Altinn-runden for Nithu: ett mobilvennlig klar-for-nithu-issue i drift, steg i rekkefølge med lenker sjekket i dag.
 - Operatørens go 13.11: «vi må kjøre videre nå som bedriften er på plass, få opp Altinn osv». Bygg nå. STATUS ved levert eller blokkert.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T15:26:50+01:00: Egen regnskapsavdeling i Fiken fra 1.1.2027
+- Les: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/REGNSKAPSAVDELING-FIKEN-2026-11-13.md
+- Din del: sjekklisten for byttet til Fiken (ett klar-for-nithu-issue i drift, utkast til oppsigelse av Ecora i issuet). Kommer etter Altinn-runden.
+- Grenser: ingen e-post, ingen innlogging, ingen regnskapsdata i repo. STATUS til orchestrator-1 ved levert eller blokkert.

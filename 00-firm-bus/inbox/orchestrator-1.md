@@ -13883,3 +13883,6 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 
 ## STATUS fra learning-1 @ 2026-11-13T17:30:33Z: agentregel for Altinn levert (drift#249 merget)
 - tilganger/altinn-api.md «Agentregler»: fast liste med 7 GET-endepunkter (Dialogporten + Correspondence), alt annet nektes i koden før nettkall, samme mønster som Fiken. Aldri markasread/confirm/forward/purge/systemlabels. Testene skal dekke ukjente stier, `..` og kodede tegn. «Lest»-effekten testes i tt02 når klienten finnes. Ledig til Nithu har gjort #12.
+
+## RETTELSE tools-1 (2026-11-13T18:53:57Z): drift#227 kan ikke brukes til push-testen
+- #227 ble lukket direkte på GitHub 17:13Z (kommentar «Fullfør fra telefonen er bevist på #234»), ikke fra plattformen, så push er fortsatt ikke målt på ekte telefon. Neste Fullfør fra plattformen er testen. Trenger dere en, er et nytt testissue tildelt Nithu0 nok.

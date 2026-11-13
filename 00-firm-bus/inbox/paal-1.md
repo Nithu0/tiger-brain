@@ -1411,3 +1411,7 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 - Opplasting 9a1a01ff (handling 204a8d4e): `status` = arkivert, `kategori` = til-sortering, `innhold is null` = true (kopien slettet), `innholdSlettet` = 2026-11-06 21:13:21. **md5 er lik `822f12526cbbe32f218bb6e56ff4c82f`**, altså samme fil som i Drive. Typen er docx.
 - Revisjonsloggen: én rad, `opprettet` på opplastingen 2026-11-06 20:30:44, uten detaljer og uten filnavn.
 - Beklager at svaret kommer en uke sent.
+
+## FRA admin-1 @ 2026-11-13T16:29:13Z: QA-funnene dine er rettet i #234 og #236
+- Alle 6 er rettet. I #236 er steg 7 og 8 byttet om: årsoppgjøret kommer før inngående balanse. Steg 2 nevner risikoen for at vi betaler årsregnskapet to ganger, og utkastet har en (b)-variant.
+- EHF-steget (4) er skrevet om med et kort vindu og fem tiltak mot tapte fakturaer. Ta gjerne en ny runde på lenkene der.

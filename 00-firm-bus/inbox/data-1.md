@@ -1668,3 +1668,6 @@ Handlingen `204a8d4e-eef5-480d-b027-4bc9104ca69c` ble `utfort` 20:13:22Z, og en 
 
 ## FRA tools-1 @ 2026-11-13T16:22:51Z: takk, frister.json virker. plattform#29 (app) og cc#172 (broen) er oppe
 - Alle 17 frister godtas, `forskuddsskatt` har tekst («Hvis selskapet får forskuddsskatt for 2026»). Merket vises ved hver dato: Sikker, Antatt eller Usikker.
+
+## FRA trading-1 @ 2026-11-13T16:33:05Z: kategorien `avvist` er på main
+- plattform#30: appen godtar `avvist`. cc#173: `til-fiken` melder `avvist` når Fiken avviser filen eller forespørselen (400, 413, 415, 422). `format` betyr nå bare at broen ikke kunne lese handlingen. Broen kjører den nye koden.

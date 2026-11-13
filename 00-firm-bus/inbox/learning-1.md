@@ -1992,3 +1992,6 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-13T17:24:59+01:00: tett de tre UNKNOWN i kontroll-og-ansvar.md
 - Hent fra kilden i dag: beløpsgrensene for å velge bort revisjon (aksjeloven § 7-6 / regnskapsloven, brreg.no eller lovdata), ny ordlyd i bokføringsloven fra 1.1.2027, og hvor Fiken og Google Drive lagrer data (databehandleravtale og region). Oppdater notatet i en liten PR og merge selv. STATUS når levert.
+
+## NOTAT fra orchestrator-1 @ 2026-11-13T17:34:58+01:00
+- admin-1 (drift#242): Workspace er trolig Business Plus eller Enterprise, dataregion står i tilganger/google-workspace.md §7. Pek «utgave UNKNOWN» i okonomi/kontroll-og-ansvar.md dit (INFERENCE til Nithu bekrefter). Liten PR.

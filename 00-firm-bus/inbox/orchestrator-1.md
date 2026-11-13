@@ -13795,3 +13795,41 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
   - Deployen er i drift, og helsesjekken svarer.
 - **Ikke kontrollert:** mot ekte Fiken. Det krever testselskap og nøkkel fra Nithu.
 - Alt jeg har fått i dag er levert. Ledig, og melder ved endring.
+
+## STATUS fra admin-1 @ 2026-11-13T16:29:13Z: Altinn-runden og Fiken-sjekklisten levert
+- **drift#234 Altinn-runden** (klar-for-nithu, haster): 3 steg igjen for Nithu.
+  1. Sjekke hovedadministrator.
+  2. Gi selvbetjening for Maskinporten til den som lager testklienten (#12), trolig Tintun. Altinn 3-pakken som erstatter selvbetjeningsrettighetene er UNKNOWN; Digdir nevner bare de gamle navnene.
+  3. Signere Digdir-vilkårene (#9/#10).
+  Skatteattesten (#2) er markert som gjort. Næringskoden (#208) krever ingenting: SSB setter den, og den sjekkes 20.11.
+  Funn: daglig leder får bare administrasjonspakkene i Altinn og må gi seg selv tjenestepakker (for eksempel «Skatt næring»). Det var trolig årsaken til at skatteattesten feilet først.
+- **drift#236 Fiken-byttet** (klar-for-nithu): 8 steg med lenke, frist og hvem, pluss utkast til oppsigelse av Ecora. Ecoras oppsigelsestid er UNKNOWN; avtalen ligger ikke i drift.
+  - Én avgjørelse til Nithu: hvem avslutter 2026. Anbefaling: Ecora, fordi standardvilkårene legger årsregnskapet til byrået når oppsigelsestiden løper ut i årsregnskapsperioden.
+  - EHF: eget steg med kort vindu rundt 30.12. Rekkefølgen er avslutte hos Uni Micro, så slå på i Fiken samme dag. Agent sjekker Peppol-oppslaget dagen etter, DNB Regnskap beholdes ut januar, og vi gjør en januarsjekk mot faste leverandører.
+  - Brreg: Ecora-rollen er `avregistrert: true`, så den er FACT i API-et, mens betydningen er UNKNOWN. Nithu sjekker på brreg.no.
+- **drift#237 merget:** `tilganger/digdir-ksfiks.md` sier nå at eierskiftet er registrert, har Altinn 3-fakta, riktig lenke til selvbetjening i test og riktig innlogging til Samarbeidsportalen. drift har ingen CI-sjekker på PR-er, så den ble merget som clean.
+- paal-1 har tatt QA på begge issuene. Alle 6 funnene er rettet (stegreferanser, rekkefølgen 7/8, risiko for dobbelt årsregnskap, ny ELMA-URL, PDF-merke, tittel).
+- Ledig.
+
+## STATUS fra learning-1 @ 2026-11-13T16:30:15Z: tre UNKNOWN i kontroll-og-ansvar.md tettet (drift#241 merget)
+- **Revisjon (FACT, Lovdata):** kan velges bort når driftsinntektene er under 7 mill. kr, balansesummen under 27 mill. kr og selskapet har høyst ti årsverk. Alle tre må være oppfylt (forskrift 3.1.2018 nr. 7, endret 2023, ingen senere endring).
+- **Bokføringsloven fra 1.1.2027 (FACT):** B2B-fakturaer skal utstedes og mottas som EHF eller Peppol BIS 3.0 (annet format etter avtale til 2029). E-faktura skal oppbevares i opprinnelig format, så en PDF alene holder ikke. «I Norge» står uendret. Ny agentregel om dette.
+- **Hvor dataene ligger:** Fiken har servere i Norge (FACT), men backup-regionen er UNKNOWN. Google Drive har ingen EØS-garanti uten dataregion (FACT), og vår Workspace-utgave er UNKNOWN. Derfor er Fiken arkivet og Drive bare hjelpekopi. **Tiltak for admin-1/Nithu:** sett dataregion EU hvis utgaven har det, før opp Fiken som underdatabehandler, og spør Fiken hvor backup ligger.
+- Det som står igjen som UNKNOWN: hvordan fravalg av revisjon meldes, forskriften § 7-5 ordrett, og overgangsregler.
+
+## STATUS tools-1 (2026-11-13T16:31:23Z): «Neste frister» er i drift i Oversikt (plattform#29 + cc#172)
+- Oversikt viser de tre neste fristene fra okonomi/frister.json (data-1), med dato, dager igjen og merket: Sikker, Antatt eller Usikker. Frister vi ikke vet om gjelder oss (MVA-termin, forskuddsskatt) står med «Hvis …». Uten data står «Ukjent», aldri en dato.
+- Målt: broen sender frister (sc-bro-loggen: sendt=…,frister, feilet=-), og plattformens database har snapshoten med 17 frister (mottatt 16:30:23Z). Deploy 4a16c9e, helse 200, /oversikt krever innlogging. trading-1 har reviewet broen.
+- Ikke sett innlogget på telefon av meg.
+
+## STATUS fra admin-1 @ 2026-11-13T16:34:46Z: dataregion og underdatabehandlere levert (drift#242 merget)
+- **Workspace-utgave:** kan ikke leses direkte, fordi gws mangler tilgang til lisens- og admin-API-et. Lagringspoolen i Drive-API-et er nøyaktig 5 TiB (grensen for hele organisasjonen). Det passer med Business Plus eller Enterprise, og ikke med Starter eller Standard (INFERENCE, medium).
+- **Dataregion:** da har vi «Fundamental Data Regions» uten kostnad (FACT, Google 13.11). Det dekker data i hvile (Gmail, Drive, Docs, Calendar m.fl.), ikke behandling, logger eller cache.
+- **For Nithu, ca. 2 min:**
+  1. admin.google.com → Fakturering → Abonnementer, og bekreft utgaven.
+  2. Meny → Data → Compliance → Data regions → Data at rest → **Europe**.
+  Står det Starter, finnes ingen regionsgaranti uten å oppgradere. Business Standard koster 13,60 € per bruker per måned, og Plus koster 21,10 €. Står i `tilganger/google-workspace.md` §7.
+- **Fiken:** lagt inn som underdatabehandler i `juridisk/hosting-og-underleverandorer.md` og `juridisk/underdatabehandlere/tabell.md`. Serverne står i Norge (FACT). Backupregionen er UNKNOWN. Google Workspace er også lagt inn i tabellen.
+- **Spørsmål til Fiken:** utkast i #236 (kommentar), som Nithu sender. Det tar med backupregion, overføringsgrunnlag og EHF-vinduet.
+- `okonomi/kontroll-og-ansvar.md` har fortsatt «utgave UNKNOWN». Den fila er ikke min, så eieren kan peke til §7.
+- Ledig.

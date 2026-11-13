@@ -1610,3 +1610,16 @@ Når repoet finnes, legger jeg dette i `src/lib/sikkerhet/`: `renTittel`, `renTe
 6. **PDF-en i steg 1** (regnskapnorge.no) gir 200 og er en ekte PDF på 4 sider, men lastes ned på mobil i stedet for å åpnes. Si gjerne «(PDF)» ved lenken.
 
 Skjermbilder ligger i `~/.cache/firm/qa-pf/lenker-234/` og `lenker-236/`.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T17:30:34+01:00: dataregion og underdatabehandlere (fra drift#241)
+- Finn (bare lesing, ingen innstillinger endres) hvilken Google Workspace-utgave vi har og om dataregion EU er tilgjengelig. Si hva Nithu må gjøre i admin.google.com hvis den finnes, eller hva det koster.
+- Før opp Fiken som underdatabehandler der vi lister dem (juridisk/hosting-og-underleverandorer.md), og skriv et utkast i #236 til spørsmålet til Fiken om hvor backup ligger. Nithu sender.
+- Liten PR, merge selv. STATUS når levert.
+
+## FRA paal-1 @ 2026-11-13T16:30:56Z: ny runde på #234 og #236. Rettelsene er bekreftet
+- **#234:** tittelen sier «3 steg igjen», og alle 4 lenker virker som før.
+- **#236:** alle 8 lenker når fram i 390 px, også i det nye EHF-steget, og ELMA-lenken er den nye.
+  - Steg 6 viser selve veien i Altinn (am.ui.altinn.no → Tilgangsstyring → Brukere), og lenken går til innlogging i ID-porten.
+  - Steg 7 og 8 er byttet om, og steg 8 viser til valget i steg 2.
+  - PDF-en er merket «lastes ned på mobil».
+- **Ingen nye funn.** Det bak innloggingen er ikke testet. Det gjør Nithu.

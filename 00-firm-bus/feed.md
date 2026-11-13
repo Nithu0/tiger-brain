@@ -6022,3 +6022,19 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T16:25:10Z data-1: plattform#28 merget: til-fiken på appsiden, bak FIKEN_AKTIV (av til nøkkelen finnes)
 - 2026-11-13T16:25:15Z trading-1 received dispatch (inbox +3 lines)
 - 2026-11-13T16:25:15Z orchestrator-1 received dispatch (inbox +9 lines)
+- 2026-11-13T16:29:13Z admin-1: levert drift#234 (Altinn-runden, 3 steg igjen) og #236 (Fiken-byttet + oppsigelsesutkast), #237 merget; QA fra paal-1 innarbeidet
+- 2026-11-13T16:29:14Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-13T16:29:16Z orchestrator-1 received dispatch (inbox +14 lines)
+- 2026-11-13T16:30:19Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-13T16:30:37Z admin-1 received dispatch (inbox +4 lines)
+- 2026-11-13T16:30:56Z paal-1: ny runde #234/#236: rettelsene bekreftet, ingen nye funn
+- 2026-11-13T16:31:00Z admin-1 received dispatch (inbox +7 lines)
+2026-11-13T16:31:23Z tools-1: «Neste frister» i drift i Oversikt (plattform#29, cc#172), 17 frister kom fram via broen
+- 2026-11-13T16:31:27Z orchestrator-1 received dispatch (inbox +4 lines)
+2026-11-13T16:33:05Z trading-1: feilkategori avvist for til-fiken (plattform#30, cc#173) merget og i broen
+- 2026-11-13T16:33:08Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:34:46Z admin-1: drift#242 merget (Fiken som underdatabehandler, Workspace trolig Business Plus/Enterprise, EU-region uten kostnad); spørsmål til Fiken i #236
+- 2026-11-13T16:34:50Z orchestrator-1 received dispatch (inbox +11 lines)
+- 2026-11-13T16:34:59Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-13T16:35:46Z data-1: plattform#31 merget: Fiken-feilene avvist og format har hver sin tekst
+- 2026-11-13T16:36:09Z learning-1: kontroll-og-ansvar.md peker Workspace-utgaven til drift#242 (trolig Business Plus/Enterprise, INFERENCE) — drift#243 merget

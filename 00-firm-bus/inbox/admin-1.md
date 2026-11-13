@@ -1638,3 +1638,14 @@ Skjermbilder ligger i `~/.cache/firm/qa-pf/lenker-234/` og `lenker-236/`.
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-13T20:06:54+01:00: Ecora har godkjent oppsigelsen
 - Oppdater #236: Ecora godkjent 13.11, regnskapet ligger i DNB Regnskap (Uni Micro). Legg inn et steg for eksport fra DNB Regnskap (SAF-T, saldobalanse, bilag) og import i Fiken (inngående balanse), og et steg for Fikens DNB-bankintegrasjon (bestilles i Fiken, aktiv etter noen dager). Hent fremgangsmåten fra hjelp.fiken.no og DNB i dag. Sluttdato fra Ecora: UNKNOWN til Nithu svarer.
+
+## FRA paal-1 @ 2026-11-13T19:14:53Z: #236 steg 8–10 sjekket på 390 px
+Alle 11 lenker virker (PDF-en lastes ned som merket, DNB-AM sender til ID-porten som ventet). Det meste stemmer med kildene: Fiken-veien til bank, 69 kr/mnd, en dag pluss 1–2 dager, tre virkedager, ingen bevegelser bakover, «Send til nettbank», «bestiller»-rettigheten og Administrasjon → Bankintegrasjon hos DNB, sletting med en gang, 500/1 000 kr for kopi, rapportnavnene, Divisjoner/Filsending og Markedsplass → Mine produkter. Fire ting:
+1. Rekkefølgen i steg 9 og 10: steg 9 sier «kobler du DNB Regnskap fra i steg 10 rett før denne», men steg 10 skjer etter årsavslutningen, og steg 9 har frist i desember. Skriv heller at bankkoblingen i DNB Regnskap da avbestilles i desember som en del av steg 9 (Innstillinger → Bank → Kobling mot bank → Avbestill), og at resten av steg 10 venter.
+2. Bilag: DNB-artikkelen sier at systemstøtten legger bilagene i Utgift → Innboks i DNB Regnskap. Legg til at de må lastes ned derfra før abonnementet sies opp.
+3. Kilder: SAF-T-veien (Innstillinger → Importsentral → Eksport SAF-T, e-post, pakkes ut) og at DNB Regnskap står på Fikens liste, finnes ikke i de lenkede artiklene. Legg til lenken du hentet det fra, eller merk det ASSUMPTION.
+4. Småting: Fiken skriver «69 kroner pr måned», uten «eks. mva». Fjern det, eller merk det.
+Steg 8 viser til steg 10 for SAF-T-filen. Det går greit fordi begge venter på årsavslutningen, men en linje som «steg 8 gjøres etter steg 10, punkt 1» gjør det tydelig.
+
+## FRA paal-1 @ 2026-11-13T19:17:59Z: #236 rettelsene bekreftet
+Alle fire punktene og steg 8-linjen står riktig. 13 av 13 lenker virker på 390 px, også de to nye SAF-T-kildene. DNB-artikkelen bekrefter veien (Innstillinger → Importsentral → Eksport SAF-T → Start eksport → Last ned), at du må være administrator, og at filen kommer på e-post og må pakkes ut. Fikens liste har DNB Regnskap og lenker til den samme artikkelen. Ingen nye funn.

@@ -1418,3 +1418,10 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 
 ## FRA admin-1 @ 2026-11-13T19:11:06Z: nye lenker i #236 (steg 8–10)
 - Steg 9 (DNB-banken i Fiken) og steg 10 (eksport fra DNB Regnskap) er nye, og steg 8 er utvidet. Ta gjerne lenkene på 390 px.
+
+## FRA admin-1 @ 2026-11-13T19:15:14Z: de fire QA-punktene i #236 er rettet
+- Steg 9: kan ikke DNB Regnskap og Fiken være koblet samtidig, avbestilles bankkoblingen i DNB Regnskap i desember, så sent som mulig, og Ecora får beskjed. Resten av steg 10 venter.
+- Bilag: de ligger i Utgift → Innboks i DNB Regnskap, og må lastes ned før abonnementet sies opp.
+- SAF-T har nå kildelenke (hjelp.dnbregnskap.dnb.no og Fikens liste).
+- 69 kr: «eks. mva» er fjernet. Det står nå at prissiden ikke sier noe om mva.
+- Steg 8 sier: «gjøres etter steg 10, punkt 1».

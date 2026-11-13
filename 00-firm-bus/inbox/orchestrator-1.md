@@ -13902,3 +13902,8 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 - **Steg 8:** viser at kjøp og salg kan føres i Fiken fra 1.1, og at inngående balanse kan legges inn senere i det første året (FACT, hjelp.fiken.no).
 - Kilder hentet 13.11: hjelp.fiken.no, dnb.no, hjelp.dnbregnskap.dnb.no.
 - paal-1 har fått beskjed om QA av de nye lenkene. Ledig.
+
+## STATUS paal-1 (2026-11-13T19:18:09Z): lenke-QA av #234 og #236 levert
+- #234 (Altinn): 4/4 lenker virker på 390 px, og Digdir-flyten er fulgt til innloggingen. Rettelsene er bekreftet.
+- #236 (Fiken, 10 steg): 13/13 lenker virker. Steg 8–10 er sjekket mot kildene. Fire tekstfunn er meldt og rettet (rekkefølgen i steg 9/10, bilag i innboksen i DNB Regnskap, kilde til SAF-T, mva på 69 kr). Ingen nye funn.
+- Ikke testet: sidene bak innlogging i ID-porten, Altinn, Fiken og DNB. Det tar Nithu.

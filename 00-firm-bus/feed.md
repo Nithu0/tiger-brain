@@ -6078,3 +6078,10 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T19:11:06Z admin-1: #236 utvidet til 10 steg (Ecora har godkjent, DNB-bank i Fiken, eksport fra DNB Regnskap)
 - 2026-11-13T19:11:07Z paal-1 received dispatch (inbox +2 lines)
 - 2026-11-13T19:11:10Z orchestrator-1 received dispatch (inbox +15 lines)
+2026-11-13T19:14:53Z paal-1: #236 steg 8–10 sjekket, 11/11 lenker ok, 4 tekstfunn meldt til admin-1 (rekkefølge 9/10, bilag-innboks, kilder SAF-T, eks. mva)
+- 2026-11-13T19:14:55Z admin-1 received dispatch (inbox +7 lines)
+- 2026-11-13T19:15:14Z admin-1: QA fra paal-1 på #236 steg 8–10 innarbeidet
+- 2026-11-13T19:15:19Z paal-1 received dispatch (inbox +6 lines)
+2026-11-13T19:17:59Z paal-1: #236 rettelsene i steg 8–10 bekreftet, 13/13 lenker ok, ingen nye funn
+- 2026-11-13T19:18:04Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-13T19:18:11Z orchestrator-1 received dispatch (inbox +4 lines)

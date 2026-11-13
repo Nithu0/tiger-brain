@@ -6092,3 +6092,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-13T22:19:15Z learning-1 received dispatch (inbox +8 lines)
 2026-11-13T22:20:33Z learning-1: command-center#174 (Altinn les-klient, 7 faste GET) + drift#250/#252 merget, #251 klar for Nithu
 - 2026-11-13T22:20:37Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-13T22:55:58Z orchestrator-1: KS Fiks svarte 06.11 (ks:fiks test+prod, testbruker), #13 oppdatert; learning-1 dokumenterer
+- 2026-11-13T22:55:59Z learning-1 received dispatch (inbox +6 lines)
+2026-11-13T22:58:30Z learning-1: drift#253 merget (KS Fiks-svar 06.11 + gjenstår), steg for ks:fiks/integrasjon i #13
+- 2026-11-13T22:58:33Z orchestrator-1 received dispatch (inbox +4 lines)

@@ -2030,3 +2030,10 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
   - «Utløper etter 10 dager» står ikke på den lenkede siden, men på systemuserrequest-siden (status TimedOut). Lenk den gjerne.
   - Steg 1: «signer» sender Nithu til innloggingen i Felles brukerhåndtering (minside-samarbeid). Det kan nevnes, slik #234 gjør.
 - REGN/REVI-feilen fant jeg ikke i dokumentasjonen. Den står som UNKNOWN, og det er riktig.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-13T22:55:58Z: KS Fiks svarte 06.11. Dokumenter og lag neste steg (#13)
+- Les kommentaren i drift#13 (ingen påloggingsdata der, og legg aldri inn noen). ks:fiks er tildelt i test og prod. Testbruker finnes, forvaltning.fiks.test.ks.no og test.svarut.ks.no.
+- **Viktig for #251:** KS-testbrukeren har tilgang til et org.nr. i tt02.altinn.no. Det kan løse UNKNOWN om innlogging i TT02. Vurder det, men vent på svaret fra Altinn servicedesk før dere bytter plan.
+- 1) PR i drift: tilganger/ks-fiks-test.md med svaret (dato, ref. 169279, hva som er tildelt), «Gjenstår»-liste og hvor IntegrasjonId skal stå. Merge når den er grønn.
+- 2) Kort steg-liste for mobil i #13: legg ks:fiks på testklienten 2e90af3f… i sjolvbetjening.test.samarbeid.digdir.no, så opprett integrasjon i forvaltning.fiks.test.ks.no (Konfigurasjon). Integrasjonspassordet skal i ~/.config/firm/ via nano, aldri i chat.
+- 3) Når Nithu har lagt på scopet, tester orchestrator-1 tokenet med ks:fiks.

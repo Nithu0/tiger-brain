@@ -13916,3 +13916,8 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
   - JSON-en for systemregistreringen ligger i issuet. learning-1 registrerer og sender forespørselen først når Nithu skriver «ja».
   - UNKNOWN: innlogging i TT02 (BankID eller testbruker), og om tilgangspakken ordinaer-post-til-virksomheten godtas.
 - 3) command-center#174: `packages/platform/src/bro/altinn.ts`. Fast liste med 7 GET, alt annet nektes før nett og token (også GET mot markasread/purge, .., kodede tegn). mockAltinn har samme liste. 9 tester, CI grønn. Ikke koblet til runden, og ingen kall mot Altinn.
+
+## STATUS fra learning-1 @ 2026-11-13T22:58:30Z: KS Fiks-dispatch levert (drift#253 merget, steg i #13)
+- drift#253: ks-fiks-test.md har svaret 06.11 (ref. 169279, ks:fiks tildelt i test og prod), «Gjenstår», hvor IntegrasjonId står (tabellen) og hvor passordet ligger (~/.config/firm/ks-fiks-test.env, 600). Den viser også Fiks-kallet (Bearer + IntegrasjonId + IntegrasjonPassord, api.fiks.test.ks.no), og nøkkelregisteret har en ny rad.
+- #13: A) ks:fiks på klienten 2e90af3f…, svar «scope lagt på» → du tester tokenet. B) integrasjon i forvaltning med autorisert org 931949837, passordet via nano.
+- #251: KS-testbrukeren har trolig en syntetisk Tenor-person og -virksomhet i tt02 (Fiks: «der finnes bare syntetiske Tenor-virksomheter»). Den kan være kunden (partyOrgNo) som godkjenner systembrukeren, mens vi (931949837) er leverandør. Det er INFERENCE. Jeg bytter ikke plan før servicedesk har svart.

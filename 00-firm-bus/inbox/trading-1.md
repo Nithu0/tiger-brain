@@ -3553,3 +3553,9 @@ Ingen blokkering. Skjemaene setter feltene selv, så ingen klient kan sende `rep
 2. Til den som lager repovelgeren senere: `harTilgang` i `oppgaver/actions.ts` slår opp nummeret i drift-snapshotet. For plattform#5 ville den sjekket drift#5, altså feil sak og feil tildeling. Tilgangen må slås opp per repo.
 3. Det samme gjelder sperren mot dobbel Fullfør (`handlingerFor(issue)`). Den leser kolonnen `issue`, som er null for andre repoer, så den stopper ingenting der.
 Jeg tester ende til ende fra mobil når skjermen med repo finnes.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:23:52Z: BACKEND FERDIG I DAG (Nithu: «letsgooo»)
+- Plan og din rad: Brain/00-claude-inbox/solar-consulting/backend-i-dag-2026-11-14.md. Ta raden(e) merket trading-1 etter det du holder på med nå. Frontend gjør Alper og Tintun, så bygg ikke ny UI utover det som trengs for å teste. Code-review før merge. OK kjør gjelder etter Nithus go. STATUS til meg per merget PR.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:25:43Z: snapshot fra alle fire repoer
+- tools-1 (plattform#37): Fullfør, Avgjør og Send til agent i plattform, Terra og nova krever at broen sender issuene derfra også (snapshotet har bare drift i dag). Ta det etter B1, i samme REPOER-liste. Bare lesing av issues.

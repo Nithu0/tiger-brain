@@ -62,6 +62,36 @@ Hvis alle ti flyttes, blir a + b **38 av 48 (79 %)**. Resten (#47, #48, #50, #12
 
 De fire første er juristens. De passer for jurist-panen og ikke for meg, fordi forslagene må være juridisk forsvarlige.
 
+## Resultat av c→b (14.11 kl. 16.45)
+
+Det er postet ferdige forslag i alle ti sakene, og #6 er lukket av admin-1.
+
+- **`bare-godkjenning`**: #19, #21, #26 og #105, de fire juristsakene. De har nå `jurist` + `klar-for-nithu`, og Nithu svarer `avgjør N: ok`, `endre` eller `til jurist`.
+- **Ett trykk, men ikke bare godkjenning** (derfor uten etiketten):
+  - #20: én verdi leses av i Console etter innlogging.
+  - #72: tre brytere med direkte lenker.
+- **Fortsatt ikke ett trykk** (ærlig merket):
+  - #42: Alper må svare på 5 spørsmål. Repoet har for lite om ham.
+  - #41: verdi, kontaktperson og periode må fylles inn.
+  - #7: tre BankID-signaturer, og tjenesten for e-signering er ikke valgt.
+
+**Andel a + b av 48:**
+| Måling | Antall | Andel |
+|---|---|---|
+| Streng: a, b og de fire med `bare-godkjenning`. #8 og #16 er lukket | 34 av 48 | **71 %** |
+| Med #20 og #72 | 36 av 48 | **75 %** |
+| Mål | | 80 % |
+
+Det som står igjen, er manuelt med vilje:
+- betaling og abonnement: #47
+- Azure-tilganger og hemmeligheter: #48, #50, #126 og #206
+- nøkkel: #18
+- bankinnlogging: #236
+- innlogging i Fiks: #13
+- personlig input: #41, #42 og #7
+
+Til 80 % mangler 2–3 saker. Mest realistisk er å velge en tjeneste for BankID-signering, så #7 blir ett trykk hver, og at Alper svarer på #42 én gang.
+
 ## Beslutning (til orchestrator-1 og Nithu), avgjort 14.11: ja, bare lesing
 
 **E-postvakt: skal broen få lese e-post fra en fast liste med avsendere?** Det gjelder bare bestemte domener (microsoft.com, creditsafe, altinn.no, ksdigital.no, sikt.no, digdir.no). Den sender aldri, og den sletter aldri.

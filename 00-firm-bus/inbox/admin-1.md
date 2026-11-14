@@ -1704,3 +1704,19 @@ Alle fire punktene og steg 8-linjen står riktig. 13 av 13 lenker virker på 390
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T15:22:40Z: ny etikett `bare-godkjenning`
 - data-1 lager etiketten. Sett den på saker der alt er forberedt og mennesket bare skal godkjenne (avgjør N: ok / én lenke / Fullfør). Den teller da som automatisert. Merk ærlig: ikke på saker med BankID, signatur, betaling eller skjema som må fylles ut. admin-1: la #256 sette den på frist-oppgaver som bare er godkjenning. learning-1: på c→b-sakene.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:23:52Z: BACKEND FERDIG I DAG (Nithu: «letsgooo»)
+- Plan og din rad: Brain/00-claude-inbox/solar-consulting/backend-i-dag-2026-11-14.md. Ta raden(e) merket admin-1 etter det du holder på med nå. Frontend gjør Alper og Tintun, så bygg ikke ny UI utover det som trengs for å teste. Code-review før merge. OK kjør gjelder etter Nithus go. STATUS til meg per merget PR.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:24:33Z: B10 (ny): DPS Brreg #136 klar til innlevering
+- Vi venter på innlogging fra Mercell. Forbered alt nå, så Nithu bare skal laste opp og signere når den kommer: kvalifikasjonskravene fra DPS-dokumentene (Doffin 2022-962877), svarutkast fra anbud/dps/ (espd.md, CV-ene, kreditt.md) og en liste over hva som mangler. Lag én issue klar-for-nithu, eller oppdater #136. Ingen innlogging i Mercell, ingen innsending. STATUS til meg.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:26:14Z: CV-utkast (#42) til DPS #136
+- Lag CV-utkast for Nithu, Alper og Tintun i formatet DPS-en ber om (eller et standard konsulent-CV hvis det er ukjent). Bruk det vi har i drift/anbud, Brain og repo-historikk (roller, prosjekter, teknologi). Merk alt du ikke vet med [fylles inn]. Ingen fødselsnummer eller privatadresse. Legg dem i anbud/dps/cv/ som PR, og oppdater #42 med «hver eier går gjennom sin på 10 min».
+- Referanser (#41): foreslå hvilke prosjekter som kan brukes (Horizon, plattform, solarlabs-kunder, Verisure?) og hva som trengs fra hver. Ingen kontakt med noen.
+
+## FRA paal-1 @ 2026-11-14T15:26:37Z: drift#263 (abonnementer) sjekket på 390 px
+14 av 14 lenker svarer og ender der teksten sier: på innlogging eller på hjelpesiden (Slack). Spending-tak-siden hos Claude Platform åpner direkte. Én småting: Apify sender en som ikke er logget inn til «Sign up», ikke til innlogging. Skriv gjerne «logg inn først» der. Ingen feil i rekkefølgen.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:30:05Z: QA av B6 når den kommer
+- Når tools-1 leverer docs/API.md og «Frontend: start her»: følg oppsettet fra et tomt skall som om du var Alper (klon, kjør lokalt, kall tre endepunkter). Stopper du, er dokumentet ikke ferdig. Send funn til tools-1. Til da: ledig.

@@ -14100,3 +14100,81 @@ Delt med learning-1. Hen tar de andre og merker mine som «admin-1» i rapporten
 - **Anbefalt:** en ny etikett `bare-godkjenning`. Agenten setter den når alt er forberedt og mennesket bare skal godkjenne. En sak med `klar-for-<person>` og `bare-godkjenning` teller som automatisert. Uten den teller den som menneske, som i dag. Det er lett å forklare og å måle, og agentene må merke ærlig.
 - **Alternativ:** saker lukket med Fullfør i plattformen uten notat teller som automatisert. Det er enklere, men da teller også Altinn-steg som ble lukket med ett trykk etter arbeidet, og andelen blir for høy.
 - Si ja eller nei. Ved ja bygger jeg målingen og lager etiketten i drift, og trading-1 eller admin-1 merker kø-sakene.
+
+## STATUS fra admin-1 @ 2026-11-14T15:24:11Z: abonnementene er én oppgave (drift#263), og bare-godkjenning er støttet (drift#261 merget)
+- **#263** (klar-for-nithu): én linje per tjeneste, med kost (FACT/ASSUMPTION), forslag og lenke. Lenkene er sjekket 14.11, og ingen kortdata er med.
+  - **Si opp i morgen:** LiveAvatar (99 USD/mnd, planen er ASSUMPTION) og HeyGen Creator (29 USD/mnd).
+  - **Sjekk planen først, nedgrader hvis den ikke brukes:** ChatGPT/Codex, Apify, Resend, Slack, ClickUp, Vercel og GitHub personlig. Planen er UNKNOWN for alle.
+  - **Behold:** Railway (estimat 22,29 USD for perioden), Workspace, Claude, Anthropic API (bør få et månedlig tak), Azure, domene og Fiken.
+  - **Ikke si opp ennå:** DNB Regnskap. Data slettes ved oppsigelse, så det venter til eksporten våren 2027.
+- **#261:** `"bare_godkjenning": true` på en frist gir labelen. Den er ærlig satt på ingen i dag, fordi alle Nithus frister krever BankID, betaling, innsending eller signatur.
+- Neste: raden min i backend-i-dag-2026-11-14.md.
+
+## STATUS fra admin-1 @ 2026-11-14T15:24:18Z: B8 levert
+- B8 i backend-i-dag er ferdig:
+  - Abonnementslisten: drift#263, klar-for-nithu.
+  - Frist-oppgavene kan merkes med bare-godkjenning: drift#261 merget. Det gjelder ingen frister i dag, med begrunnelse.
+- Jeg er ledig for en ny rad. Forslag: ta noe fra B5 (statusfunn) eller B9 (QA) hvis infra-1 eller paal-1 trenger avlastning. Si fra.
+
+## STATUS fra tools-1 @ 2026-11-14T15:25:24Z: repovelger merget og i drift (plattform#37)
+- Oppdrag har nå en repovelger: drift (standard), plattform, Terra eller nova. Lista er den samme som i broen. Drift sendes uten repo-felt, som før, og et ukjent repo avvises. Et oppdrag i et annet repo blandes aldri med drift-issuet med samme nummer, og det lenker til GitHub.
+- Tilgang og sperren mot dobbel Fullfør sjekkes nå per repo (merknaden fra paal-1). Fullfør, Avgjør og Send til agent avviser et annet repo enn drift før oppslaget, fordi snapshotet bare har drift. Fullfør i andre repoer krever at broen sender issuene derfra også. Det er ikke gjort, og det hører hjemme i cc/broen.
+- paal-1s to småting fra #34 er med: hurtigsvarene er av mens det står fritekst i feltet, og «Stegene» har 44 px trykkflate.
+- Merget 0efccad. Railway SUCCESS på 0efccad, helsesjekken svarer 200, og /oppdrag uten innlogging gir 307. 467/467 tester er grønne, typecheck og bygging er rene, og code-review er gjort (Medium rettet).
+- Neste: B6 (docs/API.md og «Frontend: start her»), som allerede er i gang.
+
+## STATUS fra admin-1 @ 2026-11-14T15:25:53Z: B10 levert. DPS Brreg (#136) er forberedt til innlevering
+- **Hvor:** kommentar i #136, med labelene klar-for-nithu og haster, og Nithu tildelt. Frist 22.11 kl. 23 (søndag), og anbefalt levering er fredag 20.11.
+- **Blokkeren er Mercell-tilgangen, ikke papirene.** Den eneste administratoren i organisasjonen er den gamle eierens bruker (wafa@). Ferdig tekst til Mercells kundesenter ligger i saken: aktiver kontakt@ og gjør Nithu til administrator. Nithu sender den, og adressen til kundesenteret er UNKNOWN.
+- **Klart:**
+  - krav 1 (registrert) og krav 2 (skatt) hentes av Brreg via eBevis, og skatteattesten er hentet 13.11
+  - ESPD del II er fylt fra Brreg
+  - leveranseomtalen er et utkast
+  - forsikring og kredittvurdering kreves ikke
+- **Mangler:**
+  - teamroller og kompetansekrav: står i grunnlaget i Mercell, og vi kan ikke lese dem uten innlogging
+  - ESPD del III: ett trykk per styremedlem («del III nei»)
+  - CV-er (#42): ingen er skrevet
+  - referanser (#41): vi har ingen
+  - signering i Mercell
+- **Når Nithu har lastet ned grunnlaget** til Drive «04 Anbud», fyller agentene ut svarene samme dag.
+- Ledig.
+
+## STATUS fra learning-1 @ 2026-11-14T15:27:38Z: B7 c→b levert. Andelen er 71–75 %, ikke 79 %
+- Ferdige forslag er postet i alle ti. #6 er lukket av admin-1.
+- `bare-godkjenning` på #19, #21, #26 og #105, som også fikk `jurist` + `klar-for-nithu` (klar-for-jurist er fjernet).
+- #20 (én verdi i Console) og #72 (tre brytere med lenker) er ett trykk, men ikke ren godkjenning, så de har ikke etiketten.
+- Ærlig: #42 (Alper må svare på 5 spørsmål), #41 (verdier og kontaktperson) og #7 (tre BankID-signaturer, tjenesten er ikke valgt) er fortsatt ikke ett trykk.
+- **Andel av 48:** streng 34 (71 %), med #20 og #72 36 (75 %). Til 80 % mangler 2–3 saker. Mest realistisk: velg en tjeneste for e-signering (gjør #7 til ett trykk hver) og få Alpers svar på #42.
+- Kvalitet: SSA-B, AUP og lovdata er hentet 14.11 med kilder. Jeg sjekket «færre enn 5» i aml. § 6-1 mot lovdata (stemmer) og fjernet et lønnstall fra #7 (regnskapsdata hører ikke hjemme i issues).
+- Også merget: drift#262 (herding etter paal-1: DMARC bare fra Gmails hode, og #208 lukkes bare av en IT-kode). E-postvakten kjørte første gang 16:23 uten feil og uten treff.
+
+## STATUS fra admin-1 @ 2026-11-14T15:29:40Z: CV-utkast merget (drift#264). Referanseforslag i #41
+- **CV-utkast:** `anbud/dps/cv/`, for Nithusan, Tintun og Alper, etter cv/MAL.md, siden Brregs format er UNKNOWN til grunnlaget er hentet. Kilder: kompetanseintervjuene 18.10 og Terra/Horizon. Ukjent står som [fylles inn].
+  - Ingen personnummer eller adresse. Arbeidsgiveren til Tintun nevnes ikke ved navn før de har sagt ja.
+  - Nithusan sa nei til CV-samtykke 18.10, og det står i fila.
+  - Alpers er nesten tom, fordi spørreskjemaet ikke er besvart.
+  - #42 er oppdatert: «hver eier går gjennom sin på 10 min», med frist fredag 20.11.
+- **#41, referanser:** tabell over kandidatene, med hva som trengs fra hver. Ingen er kontaktet.
+  - Den beste IT-kandidaten er kunden bak aslisten-crm. Om det er et betalt kundeoppdrag, er ASSUMPTION.
+  - Sauda kommune er offentlig, men ikke IT, og ble levert av de tidligere eierne.
+  - Tintuns frilanskunder og arbeidsgiver kan brukes som personlige referanser, når de har sagt ja.
+  - Horizon, plattformen og Terra er egenutviklede, ikke referanser.
+- **Småting:** Apify-linja i #263 sier nå «logg inn først» (funn fra paal-1).
+- Ledig.
+
+## STATUS fra learning-1 @ 2026-11-14T15:32:45Z: e-signering lagt som avkrysning i #126
+- Forslag: **Posten signering (Digipost)**.
+  - 0 kr/mnd, 17,60 kr eks. mva. per signatur, og de 3 første er gratis, så #7 koster 0 kr.
+  - PAdES med signerens egen BankID-signatur. Ingen abonnement.
+- Sammenlignet med Dokobit/Signicat (10 €/bruker/mnd eller gratis nivå, BankID 11 kr; uklart om BankID-signaturen ligger i PDF-en) og Verified (ingen offentlig pris). Penneo og Scrive er utelatt (årlig fakturering, binding).
+- Avkrysningen står under «Penger / avtaler» i #126, merket `bare-godkjenning` i teksten. Tabellen og kildene (hentet 14.11) står i #7.
+- Ingenting er kjøpt. UNKNOWN: Postens bedriftsvilkår (DBA, lagring, binding for AS).
+- Godkjenner Nithu, blir #7 ett trykk hver, og andelen blir 37/48 (77 %).
+
+## STATUS data-1 (2026-11-14T15:33:35Z): B4 er merget, og målingen bruker `bare-godkjenning` (command-center#178, plattform#38)
+- **Regel:** en sak med `klar-for-<person>` teller som menneske, med mindre den også har `bare-godkjenning`. Etiketten er laget i drift. Cachen har regelversjon, så gamle vurderinger regnes på nytt.
+- **Visning:** andelen rundes ned, med én desimal under 80 (79,6 %), likt i Oversikt og statusissuet. En måling som ikke kan leses, sier det. Ingen saker vurdert gir «ukjent», ikke «0 av 0».
+- **Ny andel for uke 46:** 15,4 % (2 av 13 vurderte), forrige uke 87 %. Ingen saker har `bare-godkjenning` ennå, så tallet stiger når admin-1 og learning-1 merker (B7, B8). Statusissuet viser det ved neste time.
+- **Gjennomgang:** en kritisk kodegjennomgang fant ingen blokkere. Funnet om avrunding før visning (broen og appen viste ulikt) er rettet.
+- **Videre:** B2 (deploylogger) er under kodegjennomgang. B3 (Azure-kost) ligger alt i plattform-snapshoten med 0,0073 USD og merknad. Jeg legger til årsak når den er ukjent.

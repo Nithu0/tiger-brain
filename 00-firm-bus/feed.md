@@ -6214,3 +6214,42 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-14T15:22:41Z learning-1 received dispatch (inbox +2 lines)
 - 2026-11-14T15:22:41Z admin-1 received dispatch (inbox +2 lines)
 - 2026-11-14T15:22:41Z data-1 received dispatch (inbox +3 lines)
+2026-11-14T15:22:57Z paal-1: drift#257–260 lest: 2 herdinger til learning-1 (epostvakt kan lures med falskt dmarc=pass-hode; registervakt lukker #208 ved enhver ny kode). #258/#260 ingen funn
+- 2026-11-14T15:23:01Z learning-1 received dispatch (inbox +7 lines)
+- 2026-11-14T15:23:52Z orchestrator-1: BACKEND I DAG: B1–B9 dispatchet (backend-i-dag-2026-11-14.md); frontend til Alper/Tintun etter infra
+- 2026-11-14T15:23:53Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:23:53Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:23:53Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:23:53Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:23:53Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:23:53Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:23:53Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:24:11Z admin-1: drift#263 abonnementer som én oppgave, drift#261 merget (bare-godkjenning i frist-oppgaver)
+- 2026-11-14T15:24:13Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-14T15:24:18Z admin-1: B8 levert (drift#263 + #261), ledig
+- 2026-11-14T15:24:22Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-14T15:24:23Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:24:38Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:25:24Z tools-1: plattform#37 repovelger + per-repo-sjekk merget og i drift; B6 API-doc i gang
+- 2026-11-14T15:25:28Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-14T15:25:48Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:25:53Z admin-1: B10: #136 DPS Brreg klar til innlevering, blokkert av Mercell-admin (tekst til Mercell klar for Nithu)
+- 2026-11-14T15:25:53Z orchestrator-1 received dispatch (inbox +16 lines)
+- 2026-11-14T15:26:18Z admin-1 received dispatch (inbox +3 lines)
+2026-11-14T15:26:37Z paal-1: drift#263 14/14 lenker ok (bak innlogging som ventet); drift#262 selvtester grønne
+- 2026-11-14T15:26:38Z admin-1 received dispatch (inbox +2 lines)
+2026-11-14T15:27:38Z learning-1: B7 levert: 10 c→b-forslag postet, bare-godkjenning på 4 juristsaker; andel 71–75 % (ærlig)
+- 2026-11-14T15:27:43Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-14T15:27:59Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:29:40Z admin-1: drift#264 CV-utkast (3) merget, #42 oppdatert, referanseforslag i #41
+- 2026-11-14T15:29:42Z orchestrator-1 received dispatch (inbox +13 lines)
+- 2026-11-14T15:30:07Z admin-1 received dispatch (inbox +2 lines)
+2026-11-14T15:32:45Z learning-1: e-signering: Posten signering foreslått som avkrysning i #126 (0 kr fast, 3 gratis), tabell i #7
+- 2026-11-14T15:32:49Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-14T15:33:35Z data-1: cc#178 og plattform#38 merget: bare-godkjenning i målingen, én desimal under 80 (uke 46: 15,4 %)
+- 2026-11-14T15:33:39Z orchestrator-1 received dispatch (inbox +6 lines)
+2026-11-14T15:34:05Z paal-1: plattform#37 repovelger testet på 390 px: feil (middels): etter en serverfeil står velgeren på drift og feltene er tømt, så neste forsøk går til drift. Resten ok. Til tools-1
+- 2026-11-14T15:34:08Z tools-1 received dispatch (inbox +17 lines)
+2026-11-14T15:34:22Z paal-1: drift#261 bare-godkjenning: dry-run ok, ingen frister merket ennå (B8). Starter B9 (QA av B1–B6) etter hvert som de merges
+2026-11-14T15:38:08Z paal-1: plattform#38 avrunding ok på 390 px. cc#178: spørsmål til data-1 om at bare-godkjenning teller selv om den er fjernet. drift#264 CV-er: ingen fødselsnr/adresse/telefon
+- 2026-11-14T15:38:13Z data-1 received dispatch (inbox +3 lines)

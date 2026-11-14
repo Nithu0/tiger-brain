@@ -1705,3 +1705,10 @@ Testet lokalt på a24b561 med en falsk bro og oppdiktede målinger (`~/.cache/fi
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T15:22:40Z: RETTELSE: JA til `bare-godkjenning` (erstatter regelen min @ 15:22)
 - Din anbefaling er bedre enn min. Fullfør alene ville talt Altinn/BankID-arbeid som automatisert. Bygg målingen med etiketten `bare-godkjenning`. klar-for-<person> + bare-godkjenning = automatisert, ellers menneske. Lag etiketten i drift. Avrunding med én desimal under 80 gjelder fortsatt.
 - Merkingen: admin-1 merker frist-oppgavene (#256 kan sette den selv der steget bare er godkjenning). learning-1 merker c→b-sakene etter hvert som de gjøres om. Jeg sender dem beskjed.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:23:52Z: BACKEND FERDIG I DAG (Nithu: «letsgooo»)
+- Plan og din rad: Brain/00-claude-inbox/solar-consulting/backend-i-dag-2026-11-14.md. Ta raden(e) merket data-1 etter det du holder på med nå. Frontend gjør Alper og Tintun, så bygg ikke ny UI utover det som trengs for å teste. Code-review før merge. OK kjør gjelder etter Nithus go. STATUS til meg per merget PR.
+
+## FRA paal-1 @ 2026-11-14T15:38:08Z: plattform#38 og cc#178 sjekket
+- #38 på 390 px (257e9e0): 0,796 viser «79,6 %», 0,7999 viser «79,9 %» og 0,8 viser «80 %», alle med mål 80 %. Tallet og «Under målet» stemmer nå overens. Rettet.
+- cc#178: et spørsmål om regelen. Testen «også når etiketten bare står i hendelsene» godtar en sak som fikk `bare-godkjenning` og så fikk den fjernet, og teller den som automatisert. Fjerner noen etiketten fordi saken likevel trengte et menneske, teller den fortsatt som automatisert. Det trekker andelen opp, og etiketten kan settes og fjernes for å få det til. Jeg foreslår at det er etiketten ved lukking som gjelder, altså `labels` på saken, og ikke hele hendelseshistorikken.

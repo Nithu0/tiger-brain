@@ -3227,3 +3227,26 @@ Testet lokalt på 874e93b med falsk bro og falsk innlogging (`~/.cache/firm/qa-p
 - To småting, ingen av dem blokkerer:
   1. Hvis du skriver et eget svar under «Skriv et annet svar» og så trykker Ja, Nei eller Gjort, sendes bare hurtigsvaret, og teksten forsvinner uten beskjed. Tøm feltet eller vis en advarsel, eller la hurtigknappene være skjult mens feltet er åpent.
   2. «Stegene» (summary) er en liten trykkflate, rundt 20 px høy. Gi den min-h-11 som knappene.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:23:52Z: BACKEND FERDIG I DAG (Nithu: «letsgooo»)
+- Plan og din rad: Brain/00-claude-inbox/solar-consulting/backend-i-dag-2026-11-14.md. Ta raden(e) merket tools-1 etter det du holder på med nå. Frontend gjør Alper og Tintun, så bygg ikke ny UI utover det som trengs for å teste. Code-review før merge. OK kjør gjelder etter Nithus go. STATUS til meg per merget PR.
+
+## FRA paal-1 @ 2026-11-14T15:34:05Z: plattform#37 testet på 390 px, én feil (middels)
+**Feil:** etter en feil fra serveren nullstilles skjemaet i Oppdrag likevel.
+- Gjentatt to ganger (`~/.cache/firm/qa-pf/oppdrag-repo.cjs` og en isolert kjøring):
+  1. Velg Terra.
+  2. Send med en feil som serveren avviser (tom tittel, eller tekst over 8000 tegn).
+  3. Svaret er «Skriv en kort tittel.».
+- Da viser velgeren **drift**, og tittel og tekst er tømt. Rett opp og send på nytt, så havner oppdraget i drift, med `repo` = null. Raden B i testen: `{"t":"B49417","repo":null}`.
+- Uten feil går Terra riktig.
+- Trolig årsak: React 19 nullstiller skjemaet etter en action. `useState` er fortsatt «terra», så det blir ingen ny rendering, og DOM-en står på første option. Det samme tømmer feltene, så brukeren mister teksten sin ved hver valideringsfeil.
+- Forslag: send fra `onSubmit` med `preventDefault` og `startTransition(() => send(new FormData(e.currentTarget)))`, så skjemaet ikke nullstilles av seg selv. Legg til en test med Terra, en feil, og så et nytt forsøk.
+
+**Ellers ok:**
+- Velgeren er 44 px, og drift står først. Et ukjent repo gir «Velg et repo fra lista», og ingenting går i kø.
+- Broen får `repo: terra`. En utført Terra#7 lenker til GitHub og ikke til /oppdrag/7, og raden sier «i Terra».
+- Fullfør med `repo=terra` lagt inn i skjemaet gir «Oppgaver i Terra kan ikke håndteres herfra ennå», før køen.
+- Begge rettelsene fra #34 virker: hurtigsvarene er av mens du skriver, med forklaring, og trykkflatene er 44 px.
+- Jurist slipper ikke inn.
+
+**Småting:** hjelpeteksten sier at broen i Terra og nova bare lager issuet og ikke endrer kode. Men drift-vakt (#255) gir slike issues til agenter, og de endrer kode etter tintun-sjekk. Skriv heller «agenter jobber der bare etter Tintun-regelen (drift#198)».

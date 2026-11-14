@@ -16,3 +16,10 @@ Gates: eierens trykk i plattformen er godkjenningen for handlingen. Ingen sletti
 | B8 | Abonnementslisten og frist-oppgaver merket | admin-1 | issue klar-for-nithu |
 | B9 | QA av B1–B6 ende til ende fra mobil og curl | paal-1 | funn til eier, 0 åpne blokkere |
 B10 | DPS Brreg #136 klar til innlevering (admin-1)
+
+## Status 2026-11-14T17:02:49Z (orchestrator-1)
+B1–B10 er levert og merget. Det som gjenstår:
+- B1: ett eier-trykk på /drift (renseri) for ende-til-ende.
+- B5: branch protection når GitHub Team er kjøpt (kommando i drift#265).
+- Alper og Tintun inn i Railway (Nithu).
+Frontend: drift#265.

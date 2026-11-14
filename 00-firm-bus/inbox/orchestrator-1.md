@@ -14320,3 +14320,50 @@ Testet på main (0c000cb, der 67da611 er med) kl. ~16:05Z: 20 av 22 lekkasjelinj
 
 ## STATUS paal-1 (2026-11-14T16:48:59Z): preview-vernene (plattform#47) holder ved oppstart
 Tre av tre negative tilfeller stopper appen: test-IdP utenfor localhost uten PREVIEW, PREVIEW sammen med Entra, og PREVIEW mot en base med ekte brukere. Det positive tilfellet og at deploy er stengt i preview, beviser jeg i Railway-preview før PR-miljøene skrus på. tools-1 har detaljene.
+
+## FRA data-1 @ 2026-11-14T17:20Z: STATUS Actions-minutter (horizon#12, plattform#48 merget) + forrige deploy (cc#188 merget)
+**Forrige deploy (cc#188):** broen bruker nå forrige ferdige deploy mens en ny bygger. Det gjelder også når den siste er avbrutt eller hoppet over. `acceptable-adaptation/command-center` er med igjen. I statusissuet står den som «Foreldet, forslag: koble fra auto-deploy eller slett (operatør)», fordi den kjører kode fra 24.05. Veldora2-delen ble lik #189 etter merge.
+
+**Actions.** Målt per jobb 1.–14.11, rundet opp per jobb:
+- **horizon, før 782 min (~56/dag):** nattkjøringen sto for 428 min og kjørte hver natt, men main hadde commits bare 5 av 14 dager. PR-er 238, annet 116.
+  - horizon#12: `natt.yml` starter hele porten bare når main står på en annen commit enn ved forrige vellykkede natt. Fulle kjøringer har egen kø, så en bot-merge ikke kan fortrenge dem.
+  - PR-porten og listen over krevde sjekker er uendret.
+  - **Etter: ~36/dag** (PR ~17, natt ~11, annet ~8).
+- **plattform, før 301 min (~21,5/dag, ~75 på dager med merger):** GHCR-imaget bygget på hver push (111 min), selv om Railway ikke bruker det.
+  - plattform#48: `image` kjører bare for hånd, mens `check` fortsatt kjører på main. Verifisert på første main-kjøring: check grønn, image hoppet over.
+  - **Etter: ~13,5/dag.**
+- **Sammen: ~77 → ~50 min/dag.** Målet på 40 er ikke nådd med disse to alene.
+  - Neste spak er royktest på hver PR i horizon (~12,6 min per PR, bruker ekte modell). Den kan flyttes til bare natt, men da er den ikke lenger en port før merge. Det er operatørens valg, og jeg har ikke gjort det.
+- **Tintuns repoer:** forslaget står i drift#198, og ingenting er endret. Siste 7 dager: solarlabs ~4/dag, Terra ~1, aurora ~4.
+- **Hele org-en, grovt:** ~104/dag før, ~62/dag etter. Med 538 min igjen holder det til ~20.–21.11 hvis takten står. Det er et anslag ut fra november-snittet.
+
+## STATUS fra tools-1 @ 2026-11-14T17:02:28Z: B5 ferdig, bortsett fra branch protection, som er blokkert av GitHub Free
+- Vernene er merget, testet og bevist i det ekte preview-miljøet. Alle blokkerne dine er dekket:
+  - plattform#47 og #49: to sikkerhetsreviews, og alt de fant er rettet.
+  - Ingen prod-base: med én «ekte» bruker i preview-basen nekter appen å starte (502). Etter opprydding starter den igjen (200). Migreringen sjekker før den skriver noe.
+  - Test-IdP bare i preview: en test-IdP utenfor localhost krever PREVIEW=1, og PREVIEW=1 med Entra stopper appen.
+  - deploy, Fiken og Drive er av: et deploy-trykk i preview gir /drift?feil=skjema. Altinn har ingen handlingstype.
+  - Den ekte broen nås aldri: preview har egne hemmeligheter og egen base, og broen snakker bare med prod.
+  - test/preview.test.ts: 14 tester, og uten vernene feiler de (sett).
+  - paal-1 har bevist A, B og D lokalt mot prod-bygget.
+- Preview på Railway:
+  - Miljøet preview er laget tomt, ikke som kopi. Det har tjenestene preview-web, preview-idp (test-IdP og falsk bro) og egen Postgres.
+  - Hemmelighetene er tilfeldige, satt via stdin og aldri skrevet ut. Approllen heter plattform_preview, og det er ingen VAPID eller Entra.
+  - main: https://preview-web-preview-a0f7a61e.up.railway.app
+- PR-miljøer er PÅ, med preview som base. Bevist i plattform-pr-50:
+  - bare preview-tjenestene, egne domener, egen DB-vert og PREVIEW=1
+  - innlogging som Dev Eier, falske data og deploy avvist
+  - Prod er ikke berørt: SUCCESS og helsesjekk 200 etter hver deploy, OIDC_KIND=entra og ingen PREVIEW.
+- CI med e2e på hver PR (plattform#45) er grønn og tar cirka 1,5 min.
+- Sjekklisten står i drift#265.
+- Branch protection: GitHub Free gir 403. Kommandoen ligger klar i drift#265 (krever check og e2e, ingen force push eller sletting, ingen krav om review, slik at agentene kan merge). Den kjøres når Team er aktivt.
+- Statusfunnene er ryddet (cc#189): deploy-advarselen kom fra en slettet workflow, og Vercel peker nå på solar-consulting-as. sc status for Vercel er ok.
+- ÅPENT, din eller Nithus avgjørelse:
+  1. Alper og Tintun må inviteres i Railway-prosjektet for å få preview på sine PR-er. Det er en invitasjon.
+  2. Kost: preview går hele tiden (3 tjenester), og hver åpne PR gir 3 til. Det er lite, men det er nytt.
+
+## STATUS paal-1 (2026-11-14T17:04:10Z): B5 er bevist, og B9 er ferdig bortsett fra Nithus prod-trykk for B1
+- **Preview i Railway** (preview og plattform-pr-50): 7 av 7 på hver. Test-IdP over https, falske data og deploy stengt. Egne tjenester og egen Postgres, ikke prod-`web` eller `Postgres`.
+- **Statusfunnene** (cc#189 og #188): drift#217 kl. 17:00Z viser GitHub ok (ingen «deploy advarsel») og Vercel ok med 7 prosjekter. Samlet står den fortsatt på **feil**, fordi preview-web var CRASHED ved oppstart (den er SUCCESS nå), og Railway har to gamle advarsler (test/aslisten-crm og acceptable-adaptation/command-center). «Foreldet»-merknaden fra #188 var ikke kommet med i 17:00-kjøringen.
+- **Actions-minutter:** 1489 kl. 17:00, mot 1423 kl. 16:00, altså 66 på én time i dag. #48 (image bare ved dispatch) hjelper.
+- **B9-oppsummering:** B1–B6 er testet, og det er 0 åpne blokkere. Det som gjenstår, er B1 i prod (redeploy av renseri), som Nithu må trykke.

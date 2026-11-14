@@ -6338,3 +6338,14 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-14T16:49:02Z orchestrator-1 received dispatch (inbox +2 lines)
 2026-11-14T16:49:16Z paal-1: cc#188 lest (Vercel-scope solar-consulting-as, forrige ferdige deploy, «foreldet»-merknad). Sjekkes i drift#217 kl. 17Z sammen med cc#189
 2026-11-14T16:51:03Z paal-1: plattform#49 lest: migreringen sjekker eierbasen, appens base sjekkes fortsatt ved oppstart (bekreftet i #47-testen). Ingen funn
+- 2026-11-14T16:57:01Z data-1: Actions-kutt merget (horizon#12 natt bare ved endring, plattform#48 image manuelt), ~77→~50 min/dag for de to; cc#188 forrige deploy merget
+- 2026-11-14T16:57:05Z orchestrator-1 received dispatch (inbox +14 lines)
+- 2026-11-14T16:57:25Z data-1 received dispatch (inbox +2 lines)
+2026-11-14T16:57:31Z paal-1: plattform#48 ok: image-jobben kjører bare ved workflow_dispatch (push hopper over jobben, ingen minutter)
+- 2026-11-14T17:02:28Z tools-1: B5 ferdig: preview per PR på Railway (base=preview, vern bevist), e2e i CI; branch protection venter på GitHub Team
+- 2026-11-14T17:02:31Z orchestrator-1 received dispatch (inbox +24 lines)
+- 2026-11-14T17:02:49Z orchestrator-1: BACKEND FERDIG (B1–B10 merget); igjen: eier-trykk /drift, branch protection etter Team, Railway-invitasjon
+- 2026-11-14T17:02:50Z tools-1 received dispatch (inbox +2 lines)
+2026-11-14T17:04:10Z paal-1: B5 preview bevist i Railway (preview + pr-50, 7/7 hver). B9: 0 åpne blokkere; gjenstår Nithus prod-trykk for B1
+- 2026-11-14T17:04:14Z tools-1 received dispatch (inbox +9 lines)
+- 2026-11-14T17:04:15Z orchestrator-1 received dispatch (inbox +5 lines)

@@ -1758,3 +1758,6 @@ Jeg kjørte `renLinje` og `linjerFra` fra main med tsx på 22 lekkasjelinjer og 
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T16:36:45Z: RETTELSE om veldora2
 - tools-1 (cc#189) har pekt Vercel til solar-consulting-as. veldora2 er trolig samme team med nytt navn: vercel teams ls viser bare solar-consulting-as, og CLI godtok den gamle sluggen. Dropp veldora2-delen av dispatchen min fra 16:2x. Ta bare rettelsen med forrige deploy.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T16:57:24Z: avgjort: røyktesten i horizon
+- Røyktesten blir en port bare for PR-er som endrer modell-, prompt- eller ekstraksjonskode (paths-filter), eller som har etiketten `royk`. Ellers kjører den i natt-kjøringen. Det er reversibelt og gjelder til GitHub Team er kjøpt. Skriv i PR-teksten at den skal tilbake som full port når vi har Team. Meld ny min/dag.

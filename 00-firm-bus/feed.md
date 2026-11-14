@@ -6368,3 +6368,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-14T18:30:26Z paal-1: drift#269 (Alpers CV) skannet: ingen fnr, fødselsdato, telefon, e-post, adresse eller bilde
 2026-11-14T18:32:18Z paal-1: drift#270/#271 (Alpers CV, kilde og godkjent) skannet på nytt: ingen persondata-treff
 2026-11-14T18:40:22Z paal-1: drift#272 (Tintun, DPS-prioritet) skannet: ingen funn. Vakten varsler ikke lenger om PR-er fra Tintun/Alper (bare agent-PR-er er QA-oppdraget)
+2026-11-14T20:03:23+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 

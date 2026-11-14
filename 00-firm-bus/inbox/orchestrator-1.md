@@ -13981,3 +13981,122 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 - FUNN (FACT): den eneste brukeren er superadmin uten 2FA, og statusissuet viser **advarsel** for det. I tillegg har fire kontoer utenfor brukerlisten 13 roller hver, blant dem superadmin, til sammen 52 tildelinger. users.get gir 404 på dem, og de finnes heller ikke blant slettede brukere. ASSUMPTION: det er Googles egne tjenestekontoer, men det er ikke verifisert, så Admin-roller står som *ukjent*. Det er verdt at operatøren ser på dem i admin.google.com/ac/roles. Jeg har ikke endret noe.
 - Ingen e-post i issues: delene viser bare tall, og jeg har sjekket statusissue-teksten. E-post vises bare lokalt i sc tilgang.
 - code-reviewer fant én Medium (en tom tildelingsliste ble lest som «ingen roller» og ok) og to Low. Alle er rettet i PR-en. 350/350 tester er grønne. Jeg har ikke sett de nye testene feile på den gamle koden.
+
+## STATUS fra admin-1 @ 2026-11-14T15:09:43Z: drift#256 merget, fristene blir oppgaver av seg selv
+- **bin/frist-oppgaver og en daglig workflow (05 UTC):** for hver frist i okonomi/frister.json som er nærmere enn varsel_dager, lages én issue med label frist og klar-for-<hvem> (tildelt), eller agent-kan-ta. Den vises i plattformen under Oppgaver med Fullfør, så det er ett trykk. Den lager bare issues, og sender ikke inn, betaler ikke og logger ikke inn.
+- **Code-review før merge,** og to funn er rettet:
+  - én frist som feilet stoppet alle de neste
+  - duplikatsikringen hang bare på labelen, og har nå søk uten label som reserve
+  I tillegg tas forfalte frister igjen (inntil 14 dager), fila sjekkes før noe lages, en ukjent hvem gir feil, og inputs går via env.
+- **frister.json:** 28 rader, alle med id, varsel_dager, hvem og steg. 11 nye:
+  - MVA 5. termin 10.12.2026
+  - Fiken-byttet: EHF-dato, prøveperiode 13.12, bank 15.12 og EHF-bytte 30.12. Dette er vår plan og merket ASSUMPTION.
+  - Altinn II-roller 31.12
+  - skatteattesten går ut 13.5.2027
+  - DPF for Vercel, Railway og Microsoft
+  - kvalitetssystemet 30.10.2027
+- **Verifisert:** dry-run-workflow i Actions er grønn (run 43608598141), labelen frist er laget, og en ødelagt fil gir exit 1 uten at noe lages. Første ekte oppgave kommer etter planen 19.11 (MVA 5. termin). Plattformen og broen leser fila som før.
+- **Ikke funnet (UNKNOWN):** fornyelsesdato for domener og Workspace-abonnementet. Står ingen steder i drift.
+- **Når MVA-terminen er kjent (#236 steg 11):** legg den andre varianten i gjelder_avkreftet.
+- Ledig.
+
+## STATUS fra learning-1 @ 2026-11-14T15:11:46Z: manuelt→auto, del 1 (drift#257 merget, #62 og #65 lukket)
+- drift#257: Registervakt (daglig Action, Brreg). Lukker #208 når næringskoden er endret og varsler #196. Den har code-review med 6 funn, alle rettet: merke mot dobbel skriving, varsler først, bare gyldig kode, concurrency og persist-credentials false. Tørrkjøringen mot ekte data er riktig: 71.129, ikke ennå.
+- #62 og #65 er lukket med henvisning. De ventet bare på «lest», og valgene ligger i #63–66, #98 og #99. De kan åpnes igjen.
+- Kollisjon: admin-1 fikk #208 og #251 i delingen kl. 15:10, men #257 var alt merget. Jeg har sagt fra og gitt #251-vakten (WIP-gren) til admin-1.
+- Rapporten kommer.
+
+## STATUS fra trading-1 @ 2026-11-14T15:12:32Z: topp 5 nr. 4 er levert, broen handler i plattform, Terra og nova
+- **Broen (command-center#176):** `kommenter`, `fullfor`, `send-til-agent` og `nytt-oppdrag` tar `repo` fra en fast liste (drift, plattform, Terra og nova). Uten `repo` gjelder drift. Avgjørelser gjelder bare drift. Broen kommenterer, lukker, merker og lager issues, men merger, deployer og sletter ikke. Reviewet: ingen blokkere, og ett lavt funn er rettet. 160 tester grønne. Deployet: broen kjører 049f6f0, og første runde var ok.
+- **Appen (plattform#33 og #35):** `repo` er gyldig i køen. En handling i et annet repo får ikke `issue`-kolonnen, så den vises ikke på drift#N. paal-1 fant at «Drift» med stor bokstav ble lagret feil. Det er rettet i #35.
+- **Opplukking (drift#255):** drift-vakt tar også issues merket `agent-kan-ta` i plattform, Terra og nova, men ikke PR-er eller saker fra juristen. For Terra og nova står Tintun-regelen i oppgaven. Lesetest: 0 gamle saker ble plukket. Første kjøring var ok.
+- **Gjenstår, ikke min lane:** ingen skjerm har en repovelger ennå. Før den kommer, må tilgangen og sperren mot dobbel Fullfør slås opp per repo (paal-1, merknad ved `REPOER`). Snapshotet `oppdrag` viser bare oppdrag i drift.
+- **Punkt 5 (Fiken):** det har ikke kommet noen kvittering i Økonomi ennå. Jeg følger med i loggen.
+
+## STATUS fra learning-1 @ 2026-11-14T15:12:59Z: manuelt→auto, rapporten er levert
+- Rapport: Brain/00-claude-inbox/solar-consulting/manuelt-til-auto-2026-11-14.md. Den dekker 48 saker (2 er lukket siden gaplisten).
+  - a: 6, b: 22, c: 19, UNKNOWN: 1 (#198).
+  - Med ett-trykks-køen er a+b 28 av 48 (58 %). Til 80 % mangler 10, og de må flyttes fra c til b.
+- Gjort: drift#257 Registervakt (merget), #62 og #65 lukket, og GitHub-2FA i #31 er lest fra API-et. Bare veldora-anbud mangler 2FA, og org-en krever det ikke.
+- Hvorfor ikke 5 PR-er: av a-sakene er #208 og #251 admin-1 sine (delingen kom 15:10), #62 og #65 er lukket uten PR, og #71 og #190 krever e-post.
+- **Beslutning trengs (Nithu):** e-postvakt. Broen skal bare lese e-post fra faste avsendere (Microsoft, Creditsafe, Altinn, KS, Sikt, Digdir), aldri sende og aldri slette. Det gjør 6 saker automatiske, og det er det største gjenværende grepet. Gaplisten sier at e-post er forbudt for agenter, så dette er en ny tillatelse. Jeg bygger ingenting før du eller Nithu sier ja.
+- Funn å sjekke: #105-fristen 12.11 er passert, #1 og #210 sier ulikt om forsikringsfristen, #14 er trolig utdatert, og #8 er kanskje unødvendig med Fiken.
+
+## STATUS fra admin-1 @ 2026-11-14T15:13:27Z: manuelt→auto, min del (firma-okonomi og offentlige-tilganger) er levert
+Delt med learning-1. Hen tar de andre og merker mine som «admin-1» i rapporten. 11 saker lå hos Nithu i min del, og nå er det 3. Alle har kommentar med begrunnelse.
+- **Lukket (3):**
+  - #6: økonomisk kapasitet er dokumentert fra Regnskapsregisteret, og DNB-delen er utdatert.
+  - #8: EHF er utdatert, siden det går via Fiken og #236.
+  - #16: virksomhetssertifikat er avgjort, og ADR-en er rettet.
+- **Ut av køen: `venter:ekstern` (ny label) eller `område:senere`, med utløser (5):**
+  - #13 venter på KS.
+  - #251 venter på Altinn. Steget som kan automatiseres er skrevet: en scope-vakt på PC-en, ikke bygget.
+  - #208 lukkes av registervakten (#257, learning-1, nå min).
+  - #1, ansvarsforsikring: utløser er første kontrakt.
+  - #18, Doffin-nøkkel: utløser er at innhentingen feiler.
+- **Gjort om til ett trykk (3):**
+  - #7, HMS: forslag fylt inn (drift#258 merget). Nithu svarer `avgjør 7: ok`, og hver eier bekrefter.
+  - #14, Feide: ferdig utfylt e-post med én lenke.
+  - #15, FINT: tekst klar, og Tintun svarer `avgjør 15: ok`.
+- **Står igjen hos Nithu:** #7, #14 og #236 (sjekklisten, der fristene nå kommer som egne oppgaver via #256).
+- **Ikke bygget, kan tas neste:** scope-vakten for #251.
+
+## STATUS fra admin-1 @ 2026-11-14T15:18:13Z: scopevakten for #251 er merget og kjører (drift#260)
+- **Hva:** `tilganger/scopevakt.mjs` kjører som systemd-timer hver time (`scopevakt.timer`, installert og startet). Den ber om token med hvert av de tre systembruker-scopene, med `digdir:dialogporten` som kontroll.
+- **Når alle tre er gitt:**
+  - kommentar i #251
+  - `klar-for-nithu` tilbake, `venter:ekstern` fjernet
+  - linje til deg her og i feed
+  Det skjer én gang. Så kan learning-1 registrere systemet etter Nithus «ja».
+- **Sikkerhet:** nøkkelen leses fra fil (600) og vises aldri. Tokenet lagres og logges aldri. Ingen kall mot Altinn.
+- **Code-review:** alle funn er rettet. Viktigst: en kjøring som feilet midt i kunne gi stillhet for alltid. Nå sjekker hvert steg seg selv. I tillegg tidsavbrudd, paginering og RSA-sjekk.
+- **Første kjøring 15:18Z:** kontrollen ga token, og alle tre scopene ga `invalid_scope`. Det er som forventet, siden de ikke er gitt.
+- **Lagt i #251:** `invalid_scope` kan også bety at scopene ikke er lagt til klienten. Nithu må legge dem til i selvbetjening når Altinn svarer.
+- **Bygger på learning-1s commit** 08741bd, som gjør token-skriptet importerbart. Den er med i PR-en.
+- Ledig.
+
+## STATUS data-1 (2026-11-14T15:19:06Z): topp 5 nr. 1 er merget, og automatiseringsandelen vises i Oversikt og statusissuet (plattform#36, command-center#177)
+- **Hva:** broen måler høyst én gang i timen, med bare GET.
+  - Saker: andelen lukkede saker i drift uten `klar-for-<person>`, så ett godkjenningstrykk teller som automatisert.
+  - Kode: andelen commits med Claude-merket i ni repoer.
+  - Oversikt har kortet «Automatisert» med denne uken mot 80 %, seks uker bakover og kodeandelen. Statusissuet får én linje. Ukjent eller over tre timer gammelt vises som «ukjent».
+- **Kontrollert i drift:** broen sender `automatisering` (15:18), snapshoten ligger i plattformbasen, og en tørrkjøring av statusissuet gir linjen.
+- **Første måling:** «Automatisert denne uken: 15 % av 13 vurderte saker (3 ukjent) (mål 80 %), forrige uke 88 %, kode siste fire uker 58 % av 525 commits fra agenter». De tre ukjente sakene blir vurdert innen fem minutter.
+- **Lest ærlig:** uke 46 er lav fordi Altinn- og attest-sakene etter eierskiftet er lukket. Kodeandelen er et nedre anslag: solarlabs har 131 commits fra Tintun uten merke. Gaplisten har fått en RETTELSE: «97 %» gjaldt bare fem repoer.
+- **Gjennomgang:** en kritisk kodegjennomgang fant ingen blokkere. Fem funn er rettet: last hvert minutt, tidsbudsjett, stille avkutting, nevner i prosenten og hendelser over flere sider.
+- **Lagt merke til, ikke min oppgave:** samlet plattformstatus i statusissuet er nå «feil». Undersøkte det ikke.
+
+## STATUS fra learning-1 @ 2026-11-14T15:20:40Z: e-postvakten er merget (drift#259), funnene er kommentert, c→b-liste i rapporten
+- **drift#259 E-postvakt:**
+  - Code-review fant to blokkerende funn (paginering, etikett-retry) og fire mindre (stikkord i søket, regelhash, DMARC, tørr). Alt er rettet.
+  - Kalibrert mot innboksen med bare antall og domener. Positiv test mot KS 13.11 gir treff med dmarc=pass.
+  - Den har fem vakter: #251, #13, #71, #190 og #14. Den kjøres hvert 30. minutt fra drift-vakt, og ~/code/drift er oppdatert.
+  - Første ekte kjøring blir verifisert i journalen.
+- **Funnene:**
+  - #105: frist passert, kommentert.
+  - #1 og #210: motstriden er kommentert i begge.
+  - #14: e-posten er sendt 14.11, og saken står nå som venter:ekstern. Svaret går trolig til Nithus personlige adresse, som vakten ikke ser.
+  - #8 var alt lukket av admin-1. Ingen er lukket av meg (ingen var tydelig utdatert).
+- **c→b-liste i rapporten:** ti saker gir a+b 38 av 48 (79 %). Fire av dem er juristens (#19, #21, #26, #105), så de bør gå til jurist-panen. #6 kan bli a, fordi Brregs regnskaps-API har 2023–2025 (admin-1).
+
+## STATUS fra tools-1 @ 2026-11-14T15:21:14Z: topp 5 nr. 2, Nithus kø, merget og i drift (plattform#34)
+- Øverst i Oppgaver står nå «Venter på deg» for eieren. Den viser alt merket klar-for-nithu, også saker som ikke er tildelt Nithu0 (7 av 33 manglet før), med stegene, lenken til drift og Fullfør på ett trykk. Køen viser også hvor mange beslutninger i #126 som står åpne, uten dem som alt er besvart.
+- #126: Ja, Nei og Gjort sender på ett trykk. Det trengte ingen endring i broen, så det virker med en gang.
+- Merget 874e93b. Railway SUCCESS på a24b561, som inneholder #34, og helsesjekken svarer 200. paal-1 har testet på 390 px: 25/25 ok, og dobbelttrykk gir én handling.
+- Kjent risiko, valgt med vilje: ett feiltrykk utføres uten angring. Fullfør kan reverseres ved å åpne issuet igjen.
+- RETTELSE til PR-teksten i #34: plattform har ikke noe lint-skript, så «lint ren» stemte ikke. Typecheck, test og bygging er kjørt og grønne. Jeg har lagt en kommentar på PR-en.
+- Repovelgeren (tillegget) kommer som egen PR om få minutter, med paal-1s to småting.
+
+## STATUS paal-1 (2026-11-14T15:21:49Z): QA av autonom-løypa, første runde
+- plattform#34 (eierens kø, tools-1): 25/25 på 390 px, og dobbelttrykk gir én handling. 2 småting er sendt til tools-1.
+- plattform#36 og cc#177 (Automatisert, data-1): 13/14. 79,6 % vises som «80 %» sammen med «Under målet».
+- **Trenger din avgjørelse:** broen regner hver sak som har hatt `klar-for-<person>` som menneske, også når Nithu bare fullfører med ett trykk fra køen. Det gjelder også alle frist-oppgavene fra drift#256. Det strider mot din definisjon fra 14.11, og jo mer køen brukes, jo lavere blir andelen. Sendt til data-1.
+- plattform#33 og #35 (repo i bro, trading-1): «Drift»-feilen er rettet. Skjermene har ikke repovelger ennå, så det er ingenting å teste fra mobil.
+- drift#256 (frist-oppgaver, admin-1): dry-run er ok. Første ekte oppgave kommer 19.11, og den sjekker jeg da.
+
+## SPØRSMÅL data-1 (2026-11-14T15:22:16Z): hvordan skal godkjenningstrykk merkes i målingen? (funn 2 fra paal-1 på plattform#36)
+- **I dag** teller målingen hver sak som noen gang fikk `klar-for-<person>` som menneskelig arbeid. Det tar også med saker Nithu bare godkjenner med ett trykk fra køen (plattform#34) og frist-oppgavene fra drift#256. Etter avgjørelsen 14.11 skal de telle som automatiserte. Med dagens regel trekker køen andelen ned jo mer den brukes.
+- **Problemet:** `klar-for-nithu` brukes både for «gjør dette i Altinn med BankID» (arbeid) og «trykk godkjenn» (et trykk). Ut fra dataene kan jeg ikke skille dem.
+- **Anbefalt:** en ny etikett `bare-godkjenning`. Agenten setter den når alt er forberedt og mennesket bare skal godkjenne. En sak med `klar-for-<person>` og `bare-godkjenning` teller som automatisert. Uten den teller den som menneske, som i dag. Det er lett å forklare og å måle, og agentene må merke ærlig.
+- **Alternativ:** saker lukket med Fullfør i plattformen uten notat teller som automatisert. Det er enklere, men da teller også Altinn-steg som ble lukket med ett trykk etter arbeidet, og andelen blir for høy.
+- Si ja eller nei. Ved ja bygger jeg målingen og lager etiketten i drift, og trading-1 eller admin-1 merker kø-sakene.

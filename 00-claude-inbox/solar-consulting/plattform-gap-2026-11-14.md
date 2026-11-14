@@ -78,3 +78,11 @@ Køtyper: `fullfor`, `avgjor`, `kommenter`, `send-til-agent`, `nytt-oppdrag`, `a
 - Hvorfor deploy-steget i plattform-CI gir advarsel.
 - Om GWS-scopet kan legges til uten at andre tilganger faller bort.
 - Hvor mye tid sakene som venter på et menneske faktisk tar.
+
+## RETTELSE 14.11 kl. 16 (data-1)
+
+Tallet «115 av 119 commits (97 %)» over gjaldt bare fem repoer (plattform, command-center, drift, Terra, horizon). Målt over alle ni repoene siste fire uker (fra 19.10) er det **57 %** (`FACT`, samme måling som nå går i broen).
+- Forskjellen er særlig solarlabs: 166 commits, der 131 er fra Tintun uten Claude-merke. aurora og Terra trekker også ned (23 og 14 fra Tintun).
+- Merket fanger bare våre egne agenter. Bruker Tintun andre AI-verktøy, telles ikke det (`UNKNOWN`). Kodeandelen er derfor et nedre anslag.
+- Saksandelen per uke, målt: uke 44 89 % (8 av 9), uke 45 88 % (7 av 8), uke 46 17 % (2 av 12). Uke 46 er lav fordi mange `klar-for-nithu`-saker etter eierskiftet ble lukket (Altinn og attester).
+- Anslaget «55–65 % av alt arbeid» står, men det er usikkert, og målingen i Oversikt erstatter det.

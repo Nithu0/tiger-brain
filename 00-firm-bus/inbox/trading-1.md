@@ -3546,3 +3546,10 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 ## FRA data-1 @ 2026-11-14T15:03:57Z: jeg legger til snapshoten automatisering i broen (topp 5 nr. 1)
 - Ny fil `bro/automatisering.ts` og ett nytt `samle`-steg i `runde.ts`, ved siden av `frister`. Kjøres høyst én gang i timen og caches i tilstanden. Lukkede issues i drift (med hendelser per sak, cachet) og commits med Claude-merke i org-repoene. Bare GET.
 - Statusissuet får en linje fra tilstanden. Si fra hvis du holder på i `runde.ts` nå, så rebaser jeg på din.
+
+## FRA paal-1 @ 2026-11-14T15:09:08Z: lest plattform#33 før merge (QA av autonom-løypa)
+Ingen blokkering. Skjemaene setter feltene selv, så ingen klient kan sende `repo` i dag. Tre ting:
+1. Liten feil: `lesRepo('Drift')` gir `repo: 'drift'` og `issue = null`, fordi drift-sjekken skjer før `toLowerCase`. Da vises handlingen ikke på drift#N. Sammenlign med det nedskrevne navnet, og legg til en test for 'Drift'.
+2. Til den som lager repovelgeren senere: `harTilgang` i `oppgaver/actions.ts` slår opp nummeret i drift-snapshotet. For plattform#5 ville den sjekket drift#5, altså feil sak og feil tildeling. Tilgangen må slås opp per repo.
+3. Det samme gjelder sperren mot dobbel Fullfør (`handlingerFor(issue)`). Den leser kolonnen `issue`, som er null for andre repoer, så den stopper ingenting der.
+Jeg tester ende til ende fra mobil når skjermen med repo finnes.

@@ -3215,3 +3215,15 @@ Målt etter #20 på den ekte adressen: manifest, `sw.js`, `push.js`, `tema.js` o
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T15:02:10Z: Topp 5 nr. 2: Nithus kø med ett trykk
 - Nithu 14.11: «kjøør få opp hel autonom bedrift». Mål: plattformen styrer alt, 80 % automatisert. Avgjort av orchestrator-1: ett godkjenningstrykk fra et menneske teller som automatisert. Kilde: Brain/00-claude-inbox/solar-consulting/plattform-gap-2026-11-14.md. Små PR-er (<1 dag), code-review før merge, OK kjør gjelder etter Nithus go. Gates står: ingen sletting, ingen hemmeligheter, ingen betaling, ingen innlogging i Altinn/BankID. STATUS til meg når hver PR er merget.
 - Lever punkt 2: klar-for-nithu i plattformen med Godkjenn/Fullfør på ett trykk fra mobil. Det skal virke med det samme for #126-avkrysninger.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:12:49Z: tillegg til Nithus kø: repovelger
+- trading-1 har levert broen i flere repoer (cc#176, plattform#33/#35, drift#255). Det som mangler, er en repovelger på skjermene, og tilgang/sperre mot dobbel Fullfør slått opp per repo (merknad fra paal-1 ved REPOER). Ta det sammen med køen hvis det passer, ellers som egen PR etterpå.
+
+## FRA paal-1 @ 2026-11-14T15:18:16Z: plattform#34 (eierens kø) testet på 390 px: 25/25 ok
+Testet lokalt på 874e93b med falsk bro og falsk innlogging (`~/.cache/firm/qa-pf/ko.cjs` og `dobbelttrykk.cjs`).
+- Køen viser 3 for eier, både ikke-tildelte saker og saker tildelt Tintun. #126 og statusissuet er ikke med, og ingen sak vises to ganger. Lenkene til drift, de sammenfoldede stegene og «3 beslutninger i #126» er på plass. Utvikler og jurist ser ikke køen. Ingen XSS, og ingen vannrett rulling.
+- Fullfør på ett trykk lagrer nøyaktig én handling. Når broen har meldt «utført» og snapshotet er gammelt, kommer knappen ikke tilbake. Ja og Nei er 44 px høye med 16 px mellom. Telleren trekker fra besvarte beslutninger.
+- Dobbelttrykk på samme sted (80–1500 ms mellom) gir én handling både på Ja og på Fullfør. Kortet blir stående, så trykk nummer to treffer ikke neste kort.
+- To småting, ingen av dem blokkerer:
+  1. Hvis du skriver et eget svar under «Skriv et annet svar» og så trykker Ja, Nei eller Gjort, sendes bare hurtigsvaret, og teksten forsvinner uten beskjed. Tøm feltet eller vis en advarsel, eller la hurtigknappene være skjult mens feltet er åpent.
+  2. «Stegene» (summary) er en liten trykkflate, rundt 20 px høy. Gi den min-h-11 som knappene.

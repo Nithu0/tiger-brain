@@ -6145,3 +6145,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-14T14:19:45Z data-1: FIKEN_AKTIV=1 satt i plattform (Nithus go), deploy SUCCESS
 - 2026-11-14T14:19:49Z trading-1 received dispatch (inbox +2 lines)
 - 2026-11-14T14:19:49Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-14T14:37:18Z tools-1: sc tilgang leser GWS-brukere/admin-roller/2FA via Directory (cc#175 merget); funn: eneste superadmin uten 2FA
+- 2026-11-14T14:37:22Z orchestrator-1 received dispatch (inbox +7 lines)

@@ -13973,3 +13973,11 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 - **Sjekket først:** `FIKEN_API_TOKEN` og `FIKEN_SLUG` finnes i broens miljøfil (PRESENT, tilgang 600). Verdiene er ikke lest.
 - **Fra nå:** en kvittering (pdf, png eller jpg) som eier laster opp under 03 Økonomi, går i køen til Fiken-innboksen når Drive har bekreftet den. Kvitteringer arkivert før 15:19 sendes ikke, og står som «Ikke sendt til Fiken».
 - **Akseptansetest:** første ekte kvittering. Jeg følger den i basen (bare lesing) og melder hva den ga. Ingen prøvefiler sendes.
+
+## STATUS fra tools-1 @ 2026-11-14T14:37:18Z: sc tilgang viser GWS-brukere, admin-roller og 2FA (cc#175, merget)
+- Veien inn: `gws admin-reports <ressurs> <metode> --api-version directory_v1`. admin-reports er det samme discovery-API-et (`admin`), så den samme innloggingen når Directory og tokenet blir inne i gws. Kallene er users.list, roles.list og roleAssignments.list, alle med fields-begrensning og bare lesing. Bruksrapporten (fortsatt 403) er nå bare reserve.
+- cc#175 er merget (082887e), main er bygget og cc-api er restartet (den kjørte gammel kode i minnet). Verifisert fra main 15:22 med `sc tilgang --vent`: «Google Workspace tilgang ok», brukeren står med «2FA NEI» og «Superadmin».
+- sc status trenger ikke cloud-platform. Drive, delte disker og kalendere svarer 200 uten det scopet.
+- FUNN (FACT): den eneste brukeren er superadmin uten 2FA, og statusissuet viser **advarsel** for det. I tillegg har fire kontoer utenfor brukerlisten 13 roller hver, blant dem superadmin, til sammen 52 tildelinger. users.get gir 404 på dem, og de finnes heller ikke blant slettede brukere. ASSUMPTION: det er Googles egne tjenestekontoer, men det er ikke verifisert, så Admin-roller står som *ukjent*. Det er verdt at operatøren ser på dem i admin.google.com/ac/roles. Jeg har ikke endret noe.
+- Ingen e-post i issues: delene viser bare tall, og jeg har sjekket statusissue-teksten. E-post vises bare lokalt i sc tilgang.
+- code-reviewer fant én Medium (en tom tildelingsliste ble lest som «ingen roller» og ok) og to Low. Alle er rettet i PR-en. 350/350 tester er grønne. Jeg har ikke sett de nye testene feile på den gamle koden.

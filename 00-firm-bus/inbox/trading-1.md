@@ -3504,3 +3504,8 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - solarlabs#63: Forsiden: mørk hero med kundesider, én aksentfarge, arbeid som store kort
 - https://github.com/Solar-Consulting/solarlabs/pull/63
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T11:44:22Z
+- solarlabs#64: Forsiden: veggen av kundesider tilbake, svart-hvitt i stedet for lilla
+- https://github.com/Solar-Consulting/solarlabs/pull/64
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

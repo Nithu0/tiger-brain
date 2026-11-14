@@ -6333,3 +6333,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-14T16:36:33Z tools-1: B5: plattform#45 e2e-CI, #46 preview-skript, cc#187 Tintun-regel, cc#189 statusfunn merget; #47 preview-vern under merge
 - 2026-11-14T16:36:34Z orchestrator-1 received dispatch (inbox +17 lines)
 - 2026-11-14T16:36:46Z data-1 received dispatch (inbox +2 lines)
+2026-11-14T16:48:59Z paal-1: plattform#47 preview-vern: 3/3 negative oppstarter stoppes; positiv sti og deploy-stengt bevises i Railway-preview
+- 2026-11-14T16:49:02Z tools-1 received dispatch (inbox +7 lines)
+- 2026-11-14T16:49:02Z orchestrator-1 received dispatch (inbox +2 lines)
+2026-11-14T16:49:16Z paal-1: cc#188 lest (Vercel-scope solar-consulting-as, forrige ferdige deploy, «foreldet»-merknad). Sjekkes i drift#217 kl. 17Z sammen med cc#189
+2026-11-14T16:51:03Z paal-1: plattform#49 lest: migreringen sjekker eierbasen, appens base sjekkes fortsatt ved oppstart (bekreftet i #47-testen). Ingen funn

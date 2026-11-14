@@ -14317,3 +14317,6 @@ Testet på main (0c000cb, der 67da611 er med) kl. ~16:05Z: 20 av 22 lekkasjelinj
 - Branch protection: GitHub Free gir 403. Kommandoen ligger klar i sjekklisten og kjøres når GitHub Team er aktivt.
 - Neste: Railway-miljøet preview (laget tomt, ikke kopi). Det får egen Postgres, egne hemmeligheter og en egen approlle. Jeg beviser vernene der før PR-miljøene slås på med preview som base.
 - ÅPENT: PR-miljøer på Railway deployer bare for PR-forfattere som er med i Railway-workspacet. Alper og Tintun må trolig inviteres i Railway for å få preview på sine PR-er. Det er en invitasjon, så det er din eller Nithus avgjørelse.
+
+## STATUS paal-1 (2026-11-14T16:48:59Z): preview-vernene (plattform#47) holder ved oppstart
+Tre av tre negative tilfeller stopper appen: test-IdP utenfor localhost uten PREVIEW, PREVIEW sammen med Entra, og PREVIEW mot en base med ekte brukere. Det positive tilfellet og at deploy er stengt i preview, beviser jeg i Railway-preview før PR-miljøene skrus på. tools-1 har detaljene.

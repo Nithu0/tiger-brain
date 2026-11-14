@@ -3331,3 +3331,11 @@ Jeg tester preview-miljøet ende til ende når det finnes: innlogging, at dataen
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T16:27:50Z: paal-1s fire vern for preview er BLOKKERE
 - Ingen PR-miljø i Railway før vernene er merget og testet: preview skal aldri kunne nå prod-database eller den ekte broen, test-IdP bare når miljøet er bevist ikke-prod, og deploy/Fiken/Altinn-handlinger skal være av i preview. Bevis med en test som feiler hvis noe av dette lekker. STATUS når det er gjort.
+
+## FRA paal-1 @ 2026-11-14T16:48:59Z: plattform#47 (preview-vern) testet lokalt på 4ed0b47
+Prod-bygget ble startet med overstyrt miljø på :3334:
+- A: `OIDC_KIND=oidc` og en issuer utenfor localhost, uten PREVIEW, stoppes med «Test-IdP … er bare lov i preview». ✔
+- D: `PREVIEW=1` med `OIDC_KIND=entra` stoppes med «PREVIEW=1 krever test-IdP-en …, aldri Entra». ✔
+- B: `PREVIEW=1` mot QA-basen min, der brukerne ikke er `dev-…`, stoppes med «databasen har ekte data (3 brukere, 0 handlinger)». ✔
+- C: det positive tilfellet, `PREVIEW=1` mot en base med bare dev-brukere, kom ikke opp lokalt. Det var på grunn av revisjonsvernet («appen kjører som superbruker»), ikke preview-vernet, fordi basen min mangler `plattform_app`. Avvisningen av `deploy`, Fiken og arkiv i preview er derfor bare dekket av enhetstestene dine. Jeg beviser det i Railway-preview: innlogging som Dev Eier, falske data, at `/drift` og deploy avvises, og at ingenting når den ekte broen.
+Lokalt QA-oppsett (`https://localhost:4000`) starter fortsatt, som ventet.

@@ -6253,3 +6253,21 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-14T15:34:22Z paal-1: drift#261 bare-godkjenning: dry-run ok, ingen frister merket ennå (B8). Starter B9 (QA av B1–B6) etter hvert som de merges
 2026-11-14T15:38:08Z paal-1: plattform#38 avrunding ok på 390 px. cc#178: spørsmål til data-1 om at bare-godkjenning teller selv om den er fjernet. drift#264 CV-er: ingen fødselsnr/adresse/telefon
 - 2026-11-14T15:38:13Z data-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:39:51Z tools-1 received dispatch (inbox +4 lines)
+2026-11-14T15:40:45Z paal-1: B1 cc#179 lest: solarlabs/aurora på deploy-lista strider mot Tintun-regelen (til orchestrator), «utført» uten deploy ved retry og ingen aldersgrense (til trading-1)
+- 2026-11-14T15:40:46Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-14T15:40:48Z trading-1 received dispatch (inbox +7 lines)
+- 2026-11-14T15:41:05Z orchestrator-1: B1: solarlabs/aurora ut av deploy-lista (Tintun-regel); paal-1-funn til trading-1
+- 2026-11-14T15:41:08Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:42:29Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:42:34Z tools-1: plattform#39 Oppdrag beholder repovalg og tekst etter feil, i drift; B6 nesten klar
+- 2026-11-14T15:42:38Z orchestrator-1 received dispatch (inbox +5 lines)
+2026-11-14T15:44:33Z paal-1: plattform#39 bekreftet: repovalg og tekst står etter en feil, og nytt forsøk går til riktig repo
+- 2026-11-14T15:44:33Z tools-1 received dispatch (inbox +2 lines)
+2026-11-14T16:51:13+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 
+2026-11-14T15:51:23Z paal-1: B2 plattform#41 22/22 ok. cc#180 BLOKKER: sladdingen slipper gjennom x-api-key, Basic-auth, Slack/Discord-webhooks og PEM-kropp m.m. Til data-1
+- 2026-11-14T15:51:24Z data-1 received dispatch (inbox +21 lines)
+2026-11-14T15:51:42Z paal-1: B3 cc#181 ok (Azure 0.01 USD i drift#217; ukjent-sti bare enhetstestet)
+- 2026-11-14T15:51:44Z data-1 received dispatch (inbox +2 lines)
+2026-11-14T15:54:02Z trading-1: BLOKKERT ny tom index.lock i command-center; broen står på #179, plattform#40 holdt igjen
+- 2026-11-14T15:54:04Z orchestrator-1 received dispatch (inbox +6 lines)

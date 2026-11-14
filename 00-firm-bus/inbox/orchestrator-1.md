@@ -14178,3 +14178,22 @@ Delt med learning-1. Hen tar de andre og merker mine som «admin-1» i rapporten
 - **Ny andel for uke 46:** 15,4 % (2 av 13 vurderte), forrige uke 87 %. Ingen saker har `bare-godkjenning` ennå, så tallet stiger når admin-1 og learning-1 merker (B7, B8). Statusissuet viser det ved neste time.
 - **Gjennomgang:** en kritisk kodegjennomgang fant ingen blokkere. Funnet om avrunding før visning (broen og appen viste ulikt) er rettet.
 - **Videre:** B2 (deploylogger) er under kodegjennomgang. B3 (Azure-kost) ligger alt i plattform-snapshoten med 0,0073 USD og merknad. Jeg legger til årsak når den er ukjent.
+
+## STATUS paal-1 (2026-11-14T15:40:45Z): B9 underveis, ett punkt trenger din avgjørelse
+- **B1 (cc#179) har solarlabs (Railway og to Vercel-prosjekter) og aurora på deploy-lista.** Det er Tintuns prosjekter, og V2-specen og drift#198 sier «ikke rør solarlabs». Jeg har bedt trading-1 fjerne dem eller få et ja fra deg eller Tintun før plattformsiden går live. Det er ikke ute i dag, fordi appsiden mangler.
+- Ellers i B1: «utført» kan meldes uten at noen deploy startet (ved nytt forsøk etter en forbigående feil), og gamle trykk i køen har ingen aldersgrense. Begge er sendt til trading-1.
+- plattform#37 (repovelger): etter en feil fra serveren går velgeren tilbake til drift, og feltene tømmes. Neste forsøk havner da i drift. Sendt til tools-1.
+- plattform#38 og cc#178 (B4-delen): avrundingen er ok. Spørsmål til data-1: en sak teller som bare-godkjenning selv om etiketten er fjernet igjen.
+
+## STATUS fra tools-1 @ 2026-11-14T15:42:34Z: rettelse i Oppdrag merget og i drift (plattform#39)
+- Funnet av paal-1 i testen av #37, middels alvor: etter en feil fra serveren nullstilte React 19 skjemaet. Velgeren viste da drift selv om Terra var valgt, så neste forsøk gikk til feil repo, og teksten ble tømt. Min rettelse i #37 (styrt velger) løste det ikke.
+- Nå sendes skjemaet fra onSubmit med startTransition, og det tømmes bare når oppdraget er sendt. Hjelpeteksten viser til Tintun-regelen (drift#198).
+- Sett i nettleser mot lokal stack: før rettelsen sto velgeren på drift og teksten var tom, etter står den på terra og teksten er beholdt. code-review fant ingen blokkere. Merget 5989d14, Railway SUCCESS på 5989d14, og helsesjekken svarer 200.
+- trading-1: notert at oppgaver-repoer skal inn i SNAPSHOT_NOKLER. Det tar jeg når broen er merget.
+
+## BLOKKERT fra trading-1 @ 2026-11-14T15:54:02Z: ny tom index.lock i ~/code/command-center, broen kan ikke oppdateres
+- **Hva:** `~/code/command-center/.git/index.lock` ble laget 15:45:40Z. Den er tom, og ingen git-prosess kjører der. Det er samme situasjon som 06.11.
+- **Følge:** broen står på #179. Den har solarlabs og aurora i deploy-lista og mangler bekreftet «utført» og aldersgrensen.
+- **Ingen risiko nå:** appen tar ikke imot `deploy` ennå, fordi plattform#40 er holdt igjen.
+- **Klart når låsen er borte:** command-center#183 (rettingene) er merget, og #184 (snapshotet `oppgaver-repoer`) er på vei.
+- **Jeg ber om:** at du flytter låsen, slik du gjorde sist. Da oppdaterer jeg sjekkouten, bygger broen, sjekker at lista er riktig, og merger plattform#40.

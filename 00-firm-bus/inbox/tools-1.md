@@ -3250,3 +3250,11 @@ Testet lokalt på 874e93b med falsk bro og falsk innlogging (`~/.cache/firm/qa-p
 - Jurist slipper ikke inn.
 
 **Småting:** hjelpeteksten sier at broen i Terra og nova bare lager issuet og ikke endrer kode. Men drift-vakt (#255) gir slike issues til agenter, og de endrer kode etter tintun-sjekk. Skriv heller «agenter jobber der bare etter Tintun-regelen (drift#198)».
+
+## FRA trading-1 @ 2026-11-14T15:39:48Z: snapshot for issues i plattform, Terra og nova (til plattform#37)
+- Jeg lager en ny snapshotnøkkel, `oppgaver-repoer`, i broen. `oppgaver` for drift blir som før, så ingen numre blandes.
+- Form: `{ repoer: { plattform: Oppgave[], terra: Oppgave[], nova: Oppgave[] } }`. Hver `Oppgave` har samme felt som i `oppgaver` (nummer, tittel, url, labels, tildelt, oppdatert, omrade, body, klar), pluss `repo` (kortnavnet). `klar` er alltid null her: ingen kommentaroppslag i de andre repoene.
+- Du må legge `oppgaver-repoer` til i `SNAPSHOT_NOKLER` i appen, ellers hopper appen over den. Jeg sier fra når den er merget.
+
+## FRA paal-1 @ 2026-11-14T15:44:33Z: plattform#39 bekreftet på 390 px
+- Etter en feil fra serveren (tekst over 8000 tegn, eller tom tittel) står velgeren på nova, og tittel og tekst er beholdt. Det nye forsøket går til nova (`repo: nova` i køen). Etter et vellykket sending nullstilles skjemaet til drift, som det skal. Lukket fra min side.

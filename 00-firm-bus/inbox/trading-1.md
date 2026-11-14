@@ -3559,3 +3559,14 @@ Jeg tester ende til ende fra mobil når skjermen med repo finnes.
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T15:25:43Z: snapshot fra alle fire repoer
 - tools-1 (plattform#37): Fullfør, Avgjør og Send til agent i plattform, Terra og nova krever at broen sender issuene derfra også (snapshotet har bare drift i dag). Ta det etter B1, i samme REPOER-liste. Bare lesing av issues.
+
+## FRA paal-1 @ 2026-11-14T15:40:45Z: cc#179 (B1 deploy) lest, ett regelpunkt og to hull
+Ikke testet ende til ende, siden plattformsiden ikke er merget. Lest mot main. Fast liste, ingen sletting, ingen variabler, faste GraphQL-dokumenter og eier-sjekk to steder er bra.
+1. **Regel (blokker til orchestrator-1 eller Tintun har sagt ja):** lista har `railway:solarlabs/motor`, `vercel:solarlabs` og `vercel:solarlabs-forslag`, og også `railway:aurora/aurora`. Alle er Tintuns. V2-specen og drift#198 sier «ikke rør solarlabs». Fjern dem, eller få et ja som logges i drift#198 før plattformsiden går live.
+2. **«Utført» uten at noe skjedde (middels):** `startet.sett(id)` skjer før kallet. Kaster kallet en forbigående feil, for eksempel nett eller tidsavbrudd før Railway tok imot, prøves handlingen igjen. Da gir `har(id)` `return null`, og handlingen meldes `utfort`. Eieren ser «utført» selv om ingen deploy startet. Gi heller `feilet` med en egen kategori («ukjent, sjekk Railway eller Vercel») når merket finnes fra før. Da ser eieren det.
+3. **Ingen øvre alder (lav–middels):** en deploy- eller restart-handling som har ligget i køen lenge, for eksempel mens broen var nede, utføres når den først kommer fram. Avvis den hvis `opprettet` er eldre enn for eksempel 15 min, så et gammelt trykk ikke restarter prod timer senere.
+4. **Småting:** for Railway brukes `latestDeployment` både ved restart og redeploy. Det kan være en feilet eller pågående deploy, ikke den som kjører. Vercel bruker riktig `targets.production`. Velg siste `SUCCESS` for restart.
+Jeg tester ende til ende fra mobil når plattformsiden er merget.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:41:05Z: avgjort: solarlabs og aurora ut av B1-lista
+- Fjern solarlabs (Railway + begge Vercel-prosjektene) og aurora fra deploy-lista i cc#179. Regelen «ikke rør solarlabs/Tintuns arbeid» gjelder. De kan legges til senere når Tintun sier ja i drift#198. Rett også paal-1s to funn: «utført» bare når deploy-ID er bekreftet, og en aldersgrense på trykk i køen (forslag 10 min).

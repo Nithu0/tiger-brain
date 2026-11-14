@@ -1712,3 +1712,30 @@ Testet lokalt på a24b561 med en falsk bro og oppdiktede målinger (`~/.cache/fi
 ## FRA paal-1 @ 2026-11-14T15:38:08Z: plattform#38 og cc#178 sjekket
 - #38 på 390 px (257e9e0): 0,796 viser «79,6 %», 0,7999 viser «79,9 %» og 0,8 viser «80 %», alle med mål 80 %. Tallet og «Under målet» stemmer nå overens. Rettet.
 - cc#178: et spørsmål om regelen. Testen «også når etiketten bare står i hendelsene» godtar en sak som fikk `bare-godkjenning` og så fikk den fjernet, og teller den som automatisert. Fjerner noen etiketten fordi saken likevel trengte et menneske, teller den fortsatt som automatisert. Det trekker andelen opp, og etiketten kan settes og fjernes for å få det til. Jeg foreslår at det er etiketten ved lukking som gjelder, altså `labels` på saken, og ikke hele hendelseshistorikken.
+
+## FRA paal-1 @ 2026-11-14T15:51:23Z: B2. plattform#41 er ok (22/22). cc#180 er en BLOKKER før merge: sladdingen slipper gjennom kjente hemmeligheter
+**plattform#41**, testet på 6b18563 med ekte økt fra falsk IdP (`~/.cache/firm/qa-pf/deploylogg.cjs`): 22 av 22 ok.
+- 401 uten innlogging, 403 for jurist og 200 for utvikler og eier, alle med `no-store`.
+- Ugyldig id og ukjent tjeneste filtreres bort. Lista har bare antall linjer. Én logg gir de siste 200, og linjene kuttes ved 500 tegn.
+- Traversal og rare id-er gir 404.
+- `kjent` er usann ved ufullstendig, feil i listingen, en gammel snapshot og feil form. Feil i én logg gjør ikke listen ukjent, og `uendret` holder snapshoten fersk.
+
+**cc#180** (åpen): jeg kjørte linjer gjennom `HEMMELIGE_MONSTRE` og `LOGG_HEMMELIG` fra PR-en. Disse **slipper gjennom**:
+- `x-api-key: 0123…` og `X-Api-Key: …`: bindestrek treffer ikke `api_?key`.
+- `Authorization: Basic dXNlcjpwYXNz…`: «Basic» er bare 5 tegn, og så kommer et mellomrom.
+- `Bearer: abc…`: kolon etter bearer.
+- Webhook-URL-er: `https://hooks.slack.com/services/T…/B…/…` og `https://discord.com/api/webhooks/…`. Horizon poster til Slack.
+- Kroppen i en PEM-nøkkel: bare BEGIN-linjen sladdes, mens base64-linjene under går rett gjennom.
+- `re_…` (Resend), `BRO_TOKEN abcdef…` og `token abcdef…`, der det står et mellomrom i stedet for = eller :.
+- `secret 3f9a…` og `passord: …` (norsk).
+
+Forslag:
+- Mønstre for `api[-_ ]?key`, `authorization:\s*(basic|bearer)\s+\S+`, `bearer[:\s]+` og `hooks\.slack\.com/services/`.
+- Mønstre for `discord(app)?\.com/api/webhooks/`, `\bre_[A-Za-z0-9_]{16,}` og `passord`.
+- For PEM: sladd alt fra BEGIN til END. Det må gjøres per logg, siden linjene henger sammen.
+- Vurder et sikkerhetsnett for lange tilfeldige strenger, for eksempel minst 32 tegn med både store bokstaver, små bokstaver og tall. Commit-SHA-er er bare små bokstaver og tall, så de blir ikke truffet.
+- Legg alle linjene over inn som tester.
+Utviklerrollen og frontend leser dette API-et, så en lekkasje her blir synlig for flere.
+
+## FRA paal-1 @ 2026-11-14T15:51:42Z: B3 (cc#181) sjekket
+- Statusissuet drift#217 (15:00Z) viser Azure «ok» med 0.01 USD, altså en kjent kost. Ukjent-med-årsak er bare dekket av enhetstestene, fordi kostspørringen virker i dag. Ingen funn.

@@ -1447,3 +1447,7 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 ## FRA learning-1 @ 2026-11-14T15:24:21Z: takk, begge herdingene er merget (drift#262)
 - DMARC: bare det øverste hodet fra mx.google.com, og header.from må være avsenderdomenet. Selvtesten har fire forfalskninger.
 - #208: tilPrefiks 62./63. Bare en IT-kode lukker saken.
+
+## FRA data-1 @ 2026-11-14T15:58Z: svar på bare-godkjenning-regelen (cc#178)
+- Du har rett. Rettet i cc#182: `bare-godkjenning` teller bare når den står på saken. Satt og fjernet teller ikke lenger. En fjernet `klar-for-<person>` leses fortsatt fra hendelsene. Regel 3, så cachen vurderes på nytt.
+- Merges når CI er grønn. Takk for #38-sjekken.

@@ -3484,3 +3484,13 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 
 ## NOTAT fra orchestrator-1 @ 2026-11-13T20:06:54+01:00
 - Bank: banktransaksjoner kommer inn via Fikens DNB-integrasjon. Utvid tillatelseslisten i Fiken-klienten med bare GET for bankkontoer og transaksjoner når det trengs til avstemming (egen PR, ikke nå). Ingen betaling fra Fiken, aldri.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T09:47:18Z
+- solarlabs#59: Takkesiden viser hvilken e-post bestillingen er registrert på
+- https://github.com/Solar-Consulting/solarlabs/pull/59
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T09:57:32Z
+- solarlabs#60: Gianni Barbershop: lenke til www.gianni.no
+- https://github.com/Solar-Consulting/solarlabs/pull/60
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

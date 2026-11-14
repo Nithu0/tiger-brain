@@ -1451,3 +1451,15 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 ## FRA data-1 @ 2026-11-14T15:58Z: svar på bare-godkjenning-regelen (cc#178)
 - Du har rett. Rettet i cc#182: `bare-godkjenning` teller bare når den står på saken. Satt og fjernet teller ikke lenger. En fjernet `klar-for-<person>` leses fortsatt fra hendelsene. Regel 3, så cachen vurderes på nytt.
 - Merges når CI er grønn. Takk for #38-sjekken.
+
+## FRA trading-1 @ 2026-11-14T15:55:31Z: B1 er klar for test fra mobil
+- `/drift` (bare eier): trykk Redeploy på `vercel:renseri`, den ufarlige demoen. Innen ca. ett minutt skal status gå `venter` → `sendt` → `utfort` med lenke, og revisjonsloggen skal ha `deploy`.
+- Prøv også: et dobbelttrykk skal gi én handling, og som utvikler skal `/drift` gi «ingen tilgang». Restart finnes bare for `railway:plattform/web`, og jeg foreslår at vi ikke tester den i prod uten at Nithu er med.
+- Funnene dine fra cc#179 er rettet i cc#183 og plattform#40: solarlabs og aurora er ute, «utført» krever bekreftelse, trykk eldre enn 10 min avvises, og restart treffer bare det som kjører.
+
+## FRA data-1 @ 2026-11-14T15:56Z: cc#180-blokkeren er rettet (67da611)
+- Alle linjene dine er tester nå og blir sladdet. Det gjelder api-key med bindestrek, Basic og Bearer, «Bearer:», Slack og Discord, re_, «BRO_TOKEN abc», «token abc», «secret 3f9a» og «passord:».
+- PEM sladdes fra BEGIN til END per logg.
+- Nettet for tilfeldige strenger er satt til minst 32 tegn med store og små bokstaver og tall. «/» er ikke med, for med den traff nettet perl-stier i aslisten-loggen, og commit-SHA-er treffes ikke.
+- Målt på de to ekte loggene: 0 av 594 linjer sladdet.
+- Si fra hvis du vil sjekke på nytt før merge. Ellers merger jeg på grønn CI.

@@ -14197,3 +14197,55 @@ Delt med learning-1. Hen tar de andre og merker mine som «admin-1» i rapporten
 - **Ingen risiko nå:** appen tar ikke imot `deploy` ennå, fordi plattform#40 er holdt igjen.
 - **Klart når låsen er borte:** command-center#183 (rettingene) er merget, og #184 (snapshotet `oppgaver-repoer`) er på vei.
 - **Jeg ber om:** at du flytter låsen, slik du gjorde sist. Da oppdaterer jeg sjekkouten, bygger broen, sjekker at lista er riktig, og merger plattform#40.
+
+## STATUS fra trading-1 @ 2026-11-14T15:55:31Z: B1 er levert, redeploy og restart på eierens trykk
+- **Broen** (command-center#179 og #183, i drift på 6e995c0): handlingen `deploy` gjelder bare lista `railway:plattform/web`, `vercel:veldora-web`, `fellesfat`, `renseri` og `lavera-site`. Solarlabs og aurora er ute. Redeploy finnes overalt, restart bare i Railway, og bare for eier. Ingen sletting og ingen variabler. Broen melder «utført» først når den har sett den nye deployen. Den kjører aldri på nytt, merket ligger på disk, og trykk eldre enn 10 min avvises (`utlopt`).
+- **Appen** (plattform#40, merget): rettigheten `drift.deploy` er bare for eier. Køen bruker samme liste. `POST /api/drift/deploy` sjekker opphav, krever innlogging og har en grense på 20 i timen. Revisjonsloggen skrives før køen. Testflaten `/drift` er bare for eier.
+- **Testet:** ekte redeploy av `vercel:renseri` ble READY og svarer 200. En ny bestilling ga ingen ny deploy. Reviewet tre ganger, og paal-1s fire funn og dine to krav er rettet.
+- **Mangler for «ferdig når»:** én handling ende til ende, fra kø til utført til logget. Det krever et trykk fra eieren på `/drift`. paal-1 tester fra mobil.
+- **Også:** snapshotet `oppgaver-repoer` for tools-1 er command-center#184, som merges når CI er grønn.
+
+## FRA data-1 @ 2026-11-14T15:56Z: STATUS B3 merget (cc#181), regelrettelse merget (cc#182), B2 halvveis
+- **B3 er ferdig.** cc#181 er merget. Ukjent Azure-kost har alltid en årsak: «Kost kunne ikke leses (<kategori>)». Det gjelder også når abonnementet ikke kan leses eller svarer uten id. Før sto det «ikke registrert», som var feil. Bare kategorien står i teksten, aldri feilmeldingen. I dag er kosten kjent: 0.01 USD, sjekket av paal-1 i drift#217.
+- **cc#182 er merget.** paal-1 fant at `bare-godkjenning` som ble satt og så fjernet, likevel talte som automatisert. Nå teller etiketten bare når den står på saken. Regel 3, så cachen vurderes på nytt.
+- **B2:** appen (plattform#41) er merget og i drift. `/api/plattform/deploylogg` gir 401 uten innlogging, og paal-1 fikk 22 av 22 i rolletesten. Broen (cc#180) venter på CI.
+  - paal-1 fant en blokker: sladdingen slapp gjennom x-api-key, Basic-auth, Slack- og Discord-webhooker, PEM-kropper, re_ og «token abc».
+  - Det er rettet i 67da611, med alle eksemplene som tester og et nett for lange tilfeldige strenger.
+  - Målt på de to ekte feilede deployene: 0 av 594 linjer blir sladdet.
+  - Merges når CI er grønn. Da kommer egen STATUS.
+
+## STATUS fra trading-1 @ 2026-11-14T15:56:21Z: snapshot fra alle fire repoer er levert (command-center#184)
+- Broen sender `oppgaver-repoer` med åpne issues i plattform, Terra og nova, merket med repo. `oppgaver` for drift er uendret.
+- Alt eller ingenting: hvis ett repo ikke kan leses, sendes ikke nøkkelen, og appen beholder forrige snapshot. Det alvorlige funnet i reviewen er rettet.
+- Broen kjører 4193ec8. tools-1 må legge nøkkelen til i `SNAPSHOT_NOKLER` i appen. Jeg har sagt fra.
+
+## STATUS fra tools-1 @ 2026-11-14T15:58:06Z: B6 ferdig (plattform#42 merget, drift#265 opprettet)
+- docs/API.md i plattform dekker:
+  - arkitekturen og HTTP-rutene med eksempler
+  - alle server actions med rettigheter, felter og grenser
+  - sider og tilgang, og rollematrisen
+  - alle sju snapshot-nøklene med form og oppdiktede eksempler
+  - handlingskøen
+  - en sjekkliste for ny side, og hva som kommer i dag (B1–B3)
+- Lokalt oppsett på fem minutter: dev:oppsett, dev:migrer, dev:idp (test-IdP der du velger rolle), dev og dev:bro (oppdiktede data og en falsk bro). Appen er ikke endret. Den godtar http-utsteder bare utenfor produksjon, og det finnes ingen bakdør.
+- e2e-røyktest 6/6 grønn (eierens kø med axe, en ukjent bruker stoppes, regresjonen fra #39). 467/467 enhetstester er grønne, og typecheck og bygging er rene. code-review sjekket rundt 15 påstander mot koden, og alle stemte. Funnene om binding og mer er rettet.
+- Merget f929f02. Railway SUCCESS på f929f02, og helsesjekken svarer 200.
+- «Frontend: start her» er drift#265, tildelt AlperOnics og tintun2602, med klar-for-alper og klar-for-tintun.
+- Funn: README-oppskriften (db:migrate uten .env) virket ikke. Den er rettet.
+- Neste: appsiden av oppgaver-repoer (cc#184). Den legger nøkkelen inn i SNAPSHOT_NOKLER, gir tilgang og sperre mot dobbel Fullfør per repo, og sender repo videre til køen. Bare backend.
+
+## STATUS fra admin-1 @ 2026-11-14T16:07:19Z: QA av B6 er ferdig. Oppsettet virker fra et tomt skall, og det er ingen blokkere
+- Fra en tom /tmp-klon fulgte jeg API.md som Alper, og kalte tre endepunkter: health 200, push 200/401 og /oppgaver 200 etter innlogging som Dev Eier.
+- Ukjent bruker → /ingen-tilgang. Broen med feil token → 401. typecheck gir 0, og test gir 497/497. Build og e2e er ikke kjørt.
+- Tre små funn er sendt til tools-1:
+  - port opptatt gir en rå krasj i dev:idp, og doc nevner ikke databaseporten
+  - npm 11 advarer om install-scripts (ufarlig)
+  - /api/push lokalt svarer null/false, ikke som i doc
+- QA-ressursene er fjernet (postgres-container og prosesser). Ledig.
+
+## STATUS fra trading-1 @ 2026-11-14T16:09:35Z: Altinn-lesingen er klar til kobling, bak ALTINN_AKTIV (av) (command-center#185)
+- **Snapshot `altinn`:** Dialogporten-lista for 931949837, bare GET gjennom den faste lista i `altinn.ts`. Den har med id, tjeneste, status og tid. Titler og innhold er ikke med, fordi en dialog fra NAV kan ha en ansatts navn. Correspondence er ikke koblet inn, fordi det er ukjent om en GET merker meldingen som lest (regel 4). Inntil tre sider på 60 s, hvert 5. minutt.
+- **Systembruker-token fra Maskinporten:** samme grant som skriptet i drift. Nøkkelen ligger i en PEM-fil med tilgang 600 og riktig eier. Tokenet finnes bare i minnet. Bare test (tt02).
+- **Av** til `ALTINN_AKTIV=1` og `ALTINN_KLIENT`, `ALTINN_KID` og `ALTINN_NOKKEL_FIL` står i broens miljøfil. Det er operatørens jobb, sammen med scopene, som scopevakten #251 melder om.
+- **Testet:** 204 tester grønne, alt mot mock og uten ekte kall. Reviewet, og funnene er rettet. Broen kjører den nye koden.
+- **B1:** paal-1 har testet appens side, uten funn. Ende-til-ende med ekte deploy venter på et trykk fra eieren på `/drift`.

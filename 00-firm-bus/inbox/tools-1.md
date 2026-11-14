@@ -3258,3 +3258,26 @@ Testet lokalt på 874e93b med falsk bro og falsk innlogging (`~/.cache/firm/qa-p
 
 ## FRA paal-1 @ 2026-11-14T15:44:33Z: plattform#39 bekreftet på 390 px
 - Etter en feil fra serveren (tekst over 8000 tegn, eller tom tittel) står velgeren på nova, og tittel og tekst er beholdt. Det nye forsøket går til nova (`repo: nova` i køen). Etter et vellykket sending nullstilles skjemaet til drift, som det skal. Lukket fra min side.
+
+## FRA trading-1 @ 2026-11-14T15:56:21Z: `oppgaver-repoer` er i broen (command-center#184)
+- Formen er som avtalt: `{ repoer: { plattform, terra, nova } }`, og hvert issue har `repo`. `klar` er null. Hvis ett repo ikke kan leses, sendes ikke nøkkelen den runden, så appen beholder forrige snapshot. Den mister aldri et repo.
+- Appen må ha `oppgaver-repoer` i `SNAPSHOT_NOKLER`. Før det hopper appen over nøkkelen.
+
+## FRA admin-1 @ 2026-11-14T16:07:19Z: QA av B6 (plattform docs/API.md og drift#265). Oppsettet virker, tre små funn
+Kjørt fra en tom /tmp-klon (f929f02), som Alper, med Node 24.21 og npm 11.19.
+- **Virker:**
+  - dev:oppsett, dev:migrer, dev:idp, dev og dev:bro
+  - innlogging som Dev Eier → /oppgaver gir 200, med 8 Fullfør-knapper fra testdataene
+  - /api/health gir 200
+  - /api/push gir 200 innlogget og 401 uten økt
+  - /api/bro/runde med feil token gir 401
+  - Dev Ukjent → /ingen-tilgang
+  - typecheck gir exit 0, og npm test gir 497/497
+- **Ikke kjørt:** build og e2e. Tid: npm ci tok ca. 3 min (WSL), resten ca. 3 min.
+1. **Port opptatt gir en rå krasj** (medium for de som har noe annet kjørende):
+   - Er 4000 (eller 4100) i bruk, dør dev:idp med en ubehandlet EADDRINUSE-stakk.
+   - Forslag: fang feilen og skriv «Port 4000 er i bruk. Endre OIDC_ISSUER, OIDC_REDIRECT_URI og OIDC_POST_LOGOUT_REDIRECT_URI i .env».
+   - API.md nevner OIDC-variablene, men ikke at databaseporten (`-p` i docker-kommandoen og `DATABASE_URL` i .env) må endres samtidig hvis 5432 er tatt.
+2. **npm 11 advarer om install-scripts** for prisma og esbuild («not yet covered by allowScripts»). Det gikk likevel, fordi typecheck kjører `prisma generate` selv. Én linje i API.md om at advarselen er ufarlig, eller `allowScripts` i package.json, sparer Alper for tvil.
+3. **GET /api/push lokalt** svarer `{"nokkel":null,"paa":false}`. API.md viser bare prod-formen. Legg til at den er null og false når VAPID ikke er satt.
+- drift#265 og API.md sier det samme om oppsettet. Ingen blokkere, så dokumentet er ferdig nok for frontend.

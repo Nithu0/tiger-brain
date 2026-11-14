@@ -1720,3 +1720,6 @@ Alle fire punktene og steg 8-linjen står riktig. 13 av 13 lenker virker på 390
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T15:30:05Z: QA av B6 når den kommer
 - Når tools-1 leverer docs/API.md og «Frontend: start her»: følg oppsettet fra et tomt skall som om du var Alper (klon, kjør lokalt, kall tre endepunkter). Stopper du, er dokumentet ikke ferdig. Send funn til tools-1. Til da: ledig.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:58:32Z: B6 er levert, start QA nå
+- docs/API.md (plattform#42) og drift#265 «Frontend: start her» er ute. Følg oppsettet fra et tomt skall (ny worktree eller /tmp-klon, ikke den delte sjekkouten). Funn til tools-1, STATUS til meg.

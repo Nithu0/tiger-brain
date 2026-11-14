@@ -6271,3 +6271,27 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-14T15:51:44Z data-1 received dispatch (inbox +2 lines)
 2026-11-14T15:54:02Z trading-1: BLOKKERT ny tom index.lock i command-center; broen står på #179, plattform#40 holdt igjen
 - 2026-11-14T15:54:04Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-14T15:54:39Z trading-1 received dispatch (inbox +3 lines)
+2026-11-14T15:55:23Z paal-1: cc#183 bekreftet: B1-funnene rettet (Tintuns tjenester ute, aldersgrense, ingen «utført» uten bekreftelse)
+- 2026-11-14T15:55:24Z trading-1 received dispatch (inbox +6 lines)
+2026-11-14T15:55:31Z trading-1: B1 levert (cc#179/#183 + plattform#40), klar for E2E på /drift
+- 2026-11-14T15:55:33Z paal-1 received dispatch (inbox +4 lines)
+- 2026-11-14T15:55:34Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-14T15:55:43Z data-1: cc#181 (B3 Azure-kost med årsak) og cc#182 (bare-godkjenning bare på saken) merget; plattform#41 i drift, cc#180 venter på CI
+- 2026-11-14T15:55:44Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-14T15:55:48Z paal-1 received dispatch (inbox +6 lines)
+2026-11-14T15:56:21Z trading-1: snapshot oppgaver-repoer (cc#184) i drift; tools-1 legger nøkkelen i appen
+- 2026-11-14T15:56:23Z tools-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:56:23Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-14T15:56:48Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-14T15:58:06Z tools-1: B6 ferdig: plattform#42 (docs/API.md + dev-oppsett) i drift, drift#265 Frontend: start her
+- 2026-11-14T15:58:06Z orchestrator-1 received dispatch (inbox +14 lines)
+- 2026-11-14T15:58:33Z admin-1 received dispatch (inbox +2 lines)
+2026-11-14T16:03:17Z paal-1: B1 plattform#40 testet 19/20 (den ene er min forventning: 401 uten innlogging er riktig). Ingen funn
+- 2026-11-14T16:03:22Z trading-1 received dispatch (inbox +7 lines)
+- 2026-11-14T16:07:19Z admin-1: QA B6 ok fra tomt skall (3 små funn til tools-1, ingen blokkere)
+- 2026-11-14T16:07:20Z tools-1 received dispatch (inbox +18 lines)
+- 2026-11-14T16:07:23Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-14T16:07:38Z infra-1 received dispatch (inbox +2 lines)
+2026-11-14T16:09:35Z trading-1: Altinn-lesing bak ALTINN_AKTIV (cc#185) merget og i broen, av
+- 2026-11-14T16:09:38Z orchestrator-1 received dispatch (inbox +6 lines)

@@ -2621,3 +2621,6 @@ Ingen svar trengs utover ACK.
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T15:23:52Z: BACKEND FERDIG I DAG (Nithu: «letsgooo»)
 - Plan og din rad: Brain/00-claude-inbox/solar-consulting/backend-i-dag-2026-11-14.md. Ta raden(e) merket infra-1 etter det du holder på med nå. Frontend gjør Alper og Tintun, så bygg ikke ny UI utover det som trengs for å teste. Code-review før merge. OK kjør gjelder etter Nithus go. STATUS til meg per merget PR.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T16:07:38Z: STATUS på B5, takk
+- Det er 45 min siden dispatchen. B5 er det siste som stopper frontend for Alper og Tintun (B6 er levert og QA-et). Send en kort STATUS: hva er gjort, hva gjenstår, og ETA. Hvis du sitter fast i noe annet (anbud-vakt/Railway-logg), si fra, så flytter jeg B5.

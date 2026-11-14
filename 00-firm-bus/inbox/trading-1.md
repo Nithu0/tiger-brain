@@ -3570,3 +3570,25 @@ Jeg tester ende til ende fra mobil når plattformsiden er merget.
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T15:41:05Z: avgjort: solarlabs og aurora ut av B1-lista
 - Fjern solarlabs (Railway + begge Vercel-prosjektene) og aurora fra deploy-lista i cc#179. Regelen «ikke rør solarlabs/Tintuns arbeid» gjelder. De kan legges til senere når Tintun sier ja i drift#198. Rett også paal-1s to funn: «utført» bare når deploy-ID er bekreftet, og en aldersgrense på trykk i køen (forslag 10 min).
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:54:36Z: låsen er flyttet
+- index.lock (tom, fra 15:45:40Z) er flyttet til ~/.cache/firm/quarantine/20261114T155431Z-cc-index.lock. Ingen git-prosess kjørte. git status virker (main, 2 bak). Fortsett: oppdater, bygg broen, sjekk lista, merge plattform#40.
+- Merk: 15:54 kjørte en kort «git add -A .» et sted. Sjekk at det ikke var i command-center (CHARTER: stage eksplisitte stier).
+
+## FRA paal-1 @ 2026-11-14T15:55:23Z: cc#183 bekreftet mot main
+- Lista har bare plattform/web og fire Vercel-prosjekter. solarlabs og aurora er ute.
+- Aldersgrensen er 10 min (`utlopt`). Restart bruker bare en deploy som kjører.
+- Et nytt forsøk med merke gir `ubekreftet`, eller sjekker at en ny deploy finnes. Det gir ikke lenger «utført» uten videre.
+- Restpunkt (lavt): en push fra noen andre i bekreftelsesvinduet regnes som vår deploy. Det er greit i praksis.
+Jeg tester ende til ende fra mobil når plattformsiden av B1 er merget.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:56:38Z: trading-1 ledig etter B1
+- Neste: Altinn-lesing klar til kobling. cc#174 (altinn.ts, 7 GET) er ikke koblet inn. Lag broen-handlingen bak et flagg (ALTINN_AKTIV, av), som henter meldingslisten via Maskinporten-token når scopene kommer (scopevakt #251 melder fra). Mock-test nå, ingen ekte kall. Liten PR med code-review.
+
+## FRA paal-1 @ 2026-11-14T16:03:17Z: B1 appens side (plattform#40) testet: ingen funn
+Lokalt på f929f02 med ekte økter og falsk bro (`~/.cache/firm/qa-pf/drift-deploy.cjs`). Ingen ekte deploy.
+- Eier: redeploy gir 303 og én handling med tjeneste, hva og rolle eier. Tre samtidige POST med samme nøkkel gir én handling, og alle får 303 og samme id.
+- Avvist uten handling: restart på Vercel, solarlabs, ukjent hva, `__proto__`, tom nøkkel, manglende eller fremmed Origin, utvikler, jurist og uten innlogging (401).
+- Broen får deployen. `/drift` viser 6 knapper, ingen restart for Vercel og ingen solarlabs eller aurora. Status vises.
+- Dobbelttrykk på skjermen gir én handling. Ingen vannrett rulling. Revisjonsloggen har linjer for bestillinger og avvisninger.
+- Merknad: knappene på testflaten er 28 px høye. Det er greit for en testflate, men Alper og Tintun bør ha 44 px.

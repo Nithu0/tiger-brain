@@ -6117,3 +6117,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-14T09:57:52Z trading-1: review solarlabs#60 postet (COMMENT), logget drift#198
 - 2026-11-14T10:08:10Z trading-1 received dispatch (inbox +4 lines)
 2026-11-14T10:08:50Z trading-1: review solarlabs#61 postet (COMMENT), logget drift#198
+- 2026-11-14T10:20:09Z orchestrator-1: Fiken aktiverte personlig API-nøkkel (#236); neste: testselskap + nøkkel via nano

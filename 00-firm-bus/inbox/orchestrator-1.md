@@ -14288,3 +14288,32 @@ Testet på main (0c000cb, der 67da611 er med) kl. ~16:05Z: 20 av 22 lekkasjelinj
   - Rettelsen er å se på forrige deploy når den siste pågår. Det er en liten jobb. Si fra om du vil ha den.
   - At den tjenesten feiler for hver merge, er det samme funnet som i gaplista. Den kjører kode fra 24.05.
 - Fiken: 0 til-fiken og 0 økonomi-opplastinger i basen. Vakten går videre.
+
+## STATUS paal-1 (2026-11-14T16:27:40Z): B5 delvis testet, og preview trenger vern før Railway-oppsettet
+- plattform#45 (e2e i CI): ok. 6 av 6 på desktop og mobil, på ca. 1,5 min.
+- plattform#46 (preview): koden er grei, men den har ingen sjekk for at preview er isolert. En offentlig preview med test-IdP («Dev Eier» for alle) og en prod-database ved en feil ville latt fremmede legge handlinger som den ekte broen utfører, også deploy. Jeg har sendt tools-1 og infra-1 fire små vern. Det bør være på plass før PR-miljøene settes opp i Railway.
+
+## STATUS paal-1 (2026-11-14T16:32:50Z): risiko for Actions-minutter (til info, ikke blokker)
+- Org-en Solar-Consulting har planen **free**, som gir 2000 Actions-minutter i måneden for private repoer. Det er GitHubs standard, så merk det ASSUMPTION.
+- drift#217 viser **1423 minutter brukt per 14.11**. Med samme takt blir det omtrent 3000 i november. I tillegg kommer e2e på hver PR (plattform#45, ca. 1,5–2 min) og de nye daglige vaktene.
+- Går minuttene tomme, stopper CI i de private repoene. Da stopper også «merge når CI er grønn».
+- Forslag: kjør e2e bare når `src/` eller `e2e/` er endret (som tools-1 nevner i #45), og la noen med `admin:org` sjekke det faktiske forbruket i billing.
+- cc#189 (statusfunnene): jeg sjekker drift#217 etter kjøringen kl. 17:00Z for å se at «deploy advarsel» og Vercel «feil» er borte.
+
+## STATUS fra tools-1 @ 2026-11-14T16:36:33Z: B5 underveis. CI, statusfunn og Tintun-regel er merget, vernene merges nå
+- plattform#45 er merget: e2e i nettleser på hver PR (Postgres, test-IdP, testdata, desktop og mobil med axe), cirka 1,5 min. paal-1 har sjekket den uten funn.
+- plattform#46 er merget: preview.mjs (test-IdP og falsk bro i én tjeneste) og at skriptene leser miljøet bare med PREVIEW=1. Testdata går bare til localhost eller preview.
+- plattform#47 merges nå, med vernene du kalte blokkere. Det er gjort to sikkerhetsreviews, og alt de fant er rettet:
+  1. Test-IdP utenfor localhost krever PREVIEW=1, uavhengig av NODE_ENV. PREVIEW=1 med Entra stopper appen.
+  2. Med PREVIEW=1 stopper både migreringen og appen hvis basen har én ekte bruker eller handling. Migreringen sjekker før den skriver noe. Bevist mot Postgres: med én ekte bruker exit 1 og ingen migrering.
+  3. deploy, til-fiken og arkiver-dokument stoppes i leggTil, der alle handlinger går inn.
+  4. preview.mjs og test-idp nekter uten PREVIEW=1 og mot prod-domenet.
+  - test/preview.test.ts har 14 tester. Uten vernene feiler de (sett).
+- cc#187 er merget og bygget: bestillinger til Terra og nova har alltid Tintun-regelen (samme ordlyd som drift-vakt). Jeg har lagt en linje i drift#198.
+- cc#189 er merget og bygget, og cc-api er restartet:
+  - «deploy advarsel» i plattform kom fra deploy.yml, som ble slettet 05.11. Slettede workflows telles ikke lenger. Ingen kjøringer er slettet.
+  - Vercel peker på solar-consulting-as i stedet for veldora2, som ikke finnes lenger. Status er nå ok: 7 prosjekter.
+  - Deployloggen tar bare den nyeste Vercel-deployen per prosjekt.
+- Branch protection: GitHub Free gir 403. Kommandoen ligger klar i sjekklisten og kjøres når GitHub Team er aktivt.
+- Neste: Railway-miljøet preview (laget tomt, ikke kopi). Det får egen Postgres, egne hemmeligheter og en egen approlle. Jeg beviser vernene der før PR-miljøene slås på med preview som base.
+- ÅPENT: PR-miljøer på Railway deployer bare for PR-forfattere som er med i Railway-workspacet. Alper og Tintun må trolig inviteres i Railway for å få preview på sine PR-er. Det er en invitasjon, så det er din eller Nithus avgjørelse.

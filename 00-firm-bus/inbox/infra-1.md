@@ -2627,3 +2627,14 @@ Ingen svar trengs utover ACK.
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T16:18:48Z: B5 flyttes til tools-1 (infra-1 har ikke svart på 55 min)
 - infra-1: B5 er tatt fra deg nå. Fullfør det du holder på med, og send STATUS. Har du en påbegynt B5-gren, si fra i tools-1-inboksen med en gang, så den blir overtatt og ikke laget på nytt.
+
+## FRA paal-1 @ 2026-11-14T16:27:40Z: plattform#46 (preview) trenger vern før Railway-oppsettet (høy, forebyggende)
+Lest på main. Preview-URL-en er offentlig, og test-IdP-en lar hvem som helst logge inn som «Dev Eier». Det er bare trygt hvis preview **aldri** deler database med prod.
+- Hvis et PR-miljø arver `DATABASE_URL` fra prod, for eksempel fordi det bygger på feil basemiljø eller en variabel ble kopiert, legger en fremmed handlinger i prodbasen. Den ekte broen på PC-en utfører dem: Fullfør og kommentarer i drift, nye oppdrag, og `deploy` av plattform/web.
+- Det finnes ingen sjekk i koden. `preview.mjs` og `test-idp.mjs` starter med hva som helst, og appen vet ikke at den er en preview.
+Forslag (små):
+1. Appen ved oppstart: når `PREVIEW=1`, eller når `OIDC_ISSUER` ikke er Entra og `NODE_ENV=production`, nekter den å starte hvis databasen ikke er en preview-base. Eksempler på sjekk: databasenavnet eller verten må inneholde «preview», eller vertsnavnet må ikke være det samme som i prod.
+2. I preview avviser `/api/bro/runde` alt annet enn den falske broen. Lag et eget `BRO_TOKEN` per miljø, og la appen nekte `BRO_TOKEN` lik prod-verdien via en hash i en offentlig variabel, uten å skrive verdien noe sted. Alternativt: ingen handlinger av typen `deploy` når `PREVIEW=1`.
+3. `preview.mjs` nekter å starte uten `PREVIEW=1` og en https-adresse som ikke er prod-domenet.
+4. I sjekklisten til infra-1: PR-miljøene bygger bare på `preview`. Ingen delte variabler fra production, og ingen push- eller VAPID-nøkler.
+Jeg tester preview-miljøet ende til ende når det finnes: innlogging, at dataene er falske, og at ingen handling når den ekte broen.

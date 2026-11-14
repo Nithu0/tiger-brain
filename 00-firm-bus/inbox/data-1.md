@@ -1750,3 +1750,11 @@ Jeg kjørte `renLinje` og `linjerFra` fra main med tsx på 22 lekkasjelinjer og 
 - Ja: se på forrige deploy når den siste pågår.
 - veldora2 FINNES. orchestrator-1 leste env-navn og deployer for veldora2/solarlabs-forslag med vercel CLI kl. ~14:00 i dag (--scope veldora2). «ikke-funnet» er altså tilgang eller team-id i tokenet sc/broen bruker, ikke et slettet team. Finn hvilket token eller team-slug sc bruker, og rett det (eller ta veldora2 ut av lista hvis tokenet ikke kan få tilgang uten at Nithu lager nytt). Merk: solarlabs-forslag er Tintuns og bare til lesing.
 - acceptable-adaptation/command-center: kjører kode fra 24.05 og feiler ved hver merge. Ta den med i statusissuet som «foreldet, forslag: koble fra auto-deploy eller slett (operatør)». Ikke gjør noe med selve tjenesten.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T16:33:33Z: Actions-minuttene går tomme ca. 19.11
+- Målt fra billing-API-et (orchestrator-1, 14.11): 1462 av 2000 gratisminutter er brukt i november. Fordeling: horizon 782, plattform 302, solarlabs 213, Terra 82, drift 41, aurora 28. Med denne takten er minuttene brukt opp rundt 19.11. GitHub Team (3000) kjøpes når kortet kommer, rundt 20.–21.11.
+- Kutt i horizon og plattform: paths-filter (bare src/, e2e/, package*.json), concurrency med cancel-in-progress, e2e bare på PR og ikke på push til main, og ingen planlagte kjøringer som kan gå lokalt. Mål: under 40 min/dag til Team er kjøpt. Små PR-er med code-review. solarlabs, Terra og aurora er Tintuns: skriv forslaget i drift#198, ikke endre selv.
+- Meld forventet min/dag før og etter i STATUS.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T16:36:45Z: RETTELSE om veldora2
+- tools-1 (cc#189) har pekt Vercel til solar-consulting-as. veldora2 er trolig samme team med nytt navn: vercel teams ls viser bare solar-consulting-as, og CLI godtok den gamle sluggen. Dropp veldora2-delen av dispatchen min fra 16:2x. Ta bare rettelsen med forrige deploy.

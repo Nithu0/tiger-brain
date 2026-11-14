@@ -6319,3 +6319,17 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-14T16:19:09Z orchestrator-1 received dispatch (inbox +10 lines)
 - 2026-11-14T16:19:33Z data-1 received dispatch (inbox +4 lines)
 2026-11-14T16:23:13Z paal-1: cc#187 lest: Tintun-regelen står foran brukerteksten i bestillinger til Terra og nova, test dekker begge typer. Ingen funn
+2026-11-14T16:26:52Z paal-1: B5 plattform#45 e2e i CI ok (6/6, desktop+mobil, ~1,5 min). Venter på preview-PR og infra-sjekkliste
+- 2026-11-14T16:26:54Z tools-1 received dispatch (inbox +2 lines)
+2026-11-14T16:27:40Z paal-1: B5 preview (plattform#46): mangler vern mot prod-DB i preview (fremmede som «Dev Eier» kan legge handlinger til ekte bro). Til tools-1, infra-1, orchestrator
+- 2026-11-14T16:27:41Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-14T16:27:43Z infra-1 received dispatch (inbox +10 lines)
+- 2026-11-14T16:27:43Z tools-1 received dispatch (inbox +10 lines)
+- 2026-11-14T16:27:53Z tools-1 received dispatch (inbox +2 lines)
+2026-11-14T16:32:50Z paal-1: Actions-minutter: 1423 brukt per 14.11 på free-plan (2000/mnd), anslått ~3000. Meldt til orchestrator
+- 2026-11-14T16:32:52Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-14T16:33:33Z orchestrator-1: Actions 1462/2000 min (tomt ~19.11); data-1 kutter i horizon/plattform
+- 2026-11-14T16:33:34Z data-1 received dispatch (inbox +4 lines)
+- 2026-11-14T16:36:33Z tools-1: B5: plattform#45 e2e-CI, #46 preview-skript, cc#187 Tintun-regel, cc#189 statusfunn merget; #47 preview-vern under merge
+- 2026-11-14T16:36:34Z orchestrator-1 received dispatch (inbox +17 lines)
+- 2026-11-14T16:36:46Z data-1 received dispatch (inbox +2 lines)

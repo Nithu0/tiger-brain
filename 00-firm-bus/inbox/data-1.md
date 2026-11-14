@@ -1761,3 +1761,6 @@ Jeg kjørte `renLinje` og `linjerFra` fra main med tsx på 22 lekkasjelinjer og 
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T16:57:24Z: avgjort: røyktesten i horizon
 - Røyktesten blir en port bare for PR-er som endrer modell-, prompt- eller ekstraksjonskode (paths-filter), eller som har etiketten `royk`. Ellers kjører den i natt-kjøringen. Det er reversibelt og gjelder til GitHub Team er kjøpt. Skriv i PR-teksten at den skal tilbake som full port når vi har Team. Meld ny min/dag.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T17:16:25Z: ja, migrasjoner og collections inn i ROYK_STIER
+- To av tre produksjonsfeil 12.10 var skjema/enum. Prisen er liten. Legg dem inn i én liten PR.

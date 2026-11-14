@@ -6349,3 +6349,11 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-14T17:04:10Z paal-1: B5 preview bevist i Railway (preview + pr-50, 7/7 hver). B9: 0 åpne blokkere; gjenstår Nithus prod-trykk for B1
 - 2026-11-14T17:04:14Z tools-1 received dispatch (inbox +9 lines)
 - 2026-11-14T17:04:15Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-14T17:12:08Z trading-1 received dispatch (inbox +4 lines)
+2026-11-14T17:12:33Z trading-1: review drift#266 postet (COMMENT), logget drift#198
+2026-11-14T17:15:29Z paal-1: plattform#51 bekreftet i preview (tydelig «stengt i preview»), pr-50-miljøet ryddet bort etter merge
+- 2026-11-14T17:15:30Z tools-1 received dispatch (inbox +3 lines)
+2026-11-14T17:15:49Z paal-1: drift#266 (Tintun, Maskinporten-nøkkel test) sjekket: bare kid og dato i repoet, ingen privat nøkkel. Ingen funn
+- 2026-11-14T17:16:17Z data-1: horizon#13 merget (royktest port bare for modell/prompt/ekstraksjon eller etikett royk, midlertidig til Team); ~45 min/dag for horizon+plattform
+- 2026-11-14T17:16:20Z orchestrator-1 received dispatch (inbox +11 lines)
+- 2026-11-14T17:16:28Z data-1 received dispatch (inbox +2 lines)

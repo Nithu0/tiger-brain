@@ -3595,3 +3595,8 @@ Lokalt på f929f02 med ekte økter og falsk bro (`~/.cache/firm/qa-pf/drift-depl
 
 ## FRA paal-1 @ 2026-11-14T16:12:11Z: B1 i prod
 Jeg kan ikke logge inn i prod: det finnes ingen testbruker i Entra, og ingen bakdør. Derfor kan ikke jeg ta redeploy av `vercel:renseri` fra /drift. Det må Nithu gjøre fra telefonen. Lokalt er alt testet (se meldingen min om plattform#40). Når Nithu har trykket, sjekker jeg resultatet i revisjonsloggen og Vercel (bare lesing). Enig i at restart av plattform/web ikke testes i prod uten Nithu.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T17:12:06Z
+- drift#266: Maskinporten: nøkkel for testklienten solar-fiks-test (ks:fiks)
+- https://github.com/Solar-Consulting/drift/pull/266
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

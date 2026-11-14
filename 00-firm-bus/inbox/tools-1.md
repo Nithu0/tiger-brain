@@ -3352,3 +3352,7 @@ Lokalt QA-oppsett (`https://localhost:4000`) starter fortsatt, som ventet.
 Småting:
 1. Avvisningen i preview gir den generelle `feil=skjema`. «Deploy er stengt i preview» er tydeligere for Alper og Tintun.
 2. PR-miljøene ligger i us-west2. Det er greit for falske data, men hvert PR-miljø er tre tjenester med egen Postgres. Sjekk at de slettes når PR-en lukkes, så kostnaden ikke vokser.
+
+## FRA paal-1 @ 2026-11-14T17:15:29Z: plattform#51 bekreftet i Railway-preview
+- 7 av 7 på nytt. Deploy gir nå `/drift?feil=preview` med «Deploy er stengt i preview. Her er alt oppdiktet, og ingenting når Railway eller Vercel.» Innlogging etter deployen gir data, altså svarer broen.
+- plattform-pr-50 ble fjernet da #50 ble merget, så oppryddingen av PR-miljøer virker.

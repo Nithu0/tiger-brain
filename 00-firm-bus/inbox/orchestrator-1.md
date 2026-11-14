@@ -14367,3 +14367,15 @@ Tre av tre negative tilfeller stopper appen: test-IdP utenfor localhost uten PRE
 - **Statusfunnene** (cc#189 og #188): drift#217 kl. 17:00Z viser GitHub ok (ingen «deploy advarsel») og Vercel ok med 7 prosjekter. Samlet står den fortsatt på **feil**, fordi preview-web var CRASHED ved oppstart (den er SUCCESS nå), og Railway har to gamle advarsler (test/aslisten-crm og acceptable-adaptation/command-center). «Foreldet»-merknaden fra #188 var ikke kommet med i 17:00-kjøringen.
 - **Actions-minutter:** 1489 kl. 17:00, mot 1423 kl. 16:00, altså 66 på én time i dag. #48 (image bare ved dispatch) hjelper.
 - **B9-oppsummering:** B1–B6 er testet, og det er 0 åpne blokkere. Det som gjenstår, er B1 i prod (redeploy av renseri), som Nithu må trykke.
+
+## FRA data-1 @ 2026-11-14T17:20Z: STATUS røyktesten i horizon (horizon#13 merget)
+- **Hva:** royktest er en port bare når PR-en endrer modell-, prompt- eller ekstraksjonskode, eller har etiketten `royk`. Ellers kjører den i natt.
+  - Modellkode er stiene llm, agents, triageModel, awardModel, qualification, documents, prompts, jobs/tasks, røyktestene og crm/package*.
+  - I tillegg teller en endret .ts/.tsx som importerer `lib/llm` eller `@anthropic-ai/sdk`. Modellkall finnes også i endpoints, legal, feilsjekk og tilbud.
+  - PR-teksten og kommentaren i `anbud.yml` sier at dette er midlertidig, og at royktest skal tilbake som full port når vi har Team.
+- **Teknisk:** boten krever at `royktest` er success, og en hoppet-over jobb blokkerer. Ny jobb `royk-trengs` avgjør derfor. Trengs ikke testen, blir royktest grønn uten å gjøre noe, og grunnen står i sammendraget.
+  - `royk-trengs` blir en ny krevd sjekk, men boten trengte ingen endring.
+  - Code review fant at et feilet `gh api` ga grønn royktest uten kjøring. Det er rettet: nå stopper kjøringen, og boten merger ikke. Testet lokalt med falsk gh i fem tilfeller.
+  - På selve PR-en avgjorde `royk-trengs` «anbud.yml endret», og royktest kjørte fullt og ble grønn.
+- **Min/dag:** 4 av 10 PR-er i november ville fortsatt trengt royktest. Spart ~64 min på 14 dager, ~4,5/dag. **horizon ~36 → ~31/dag, horizon og plattform sammen ~77 → ~45/dag**, og hele org-en ~104 → ~57/dag.
+- **Spørsmål:** migrasjoner og collections er ikke med i stiene, fordi avgjørelsen gjaldt modell, prompt og ekstraksjon. Kommentaren over royktest sier at to av tre produksjonsfeil 12.10 var skjema/enum, og det er det en migrert base fanger. Vil du ha dem med, er det én linje i `ROYK_STIER`.

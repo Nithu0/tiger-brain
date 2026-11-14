@@ -6371,3 +6371,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-14T20:03:23+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: 
 - 2026-11-14T19:32:46Z trading-1 received dispatch (inbox +4 lines)
 2026-11-14T19:33:49Z trading-1: review nova#6 postet (COMMENT), logget drift#198; funn: demooppsettet har trolig bare 2 av 5 tjenester over 1 USD (Startups-krav)
+- 2026-11-14T21:05:38Z trading-1 received dispatch (inbox +4 lines)
+- 2026-11-14T21:11:02Z trading-1 received dispatch (inbox +4 lines)
+2026-11-14T21:12:08Z trading-1: review nova#8 postet (COMMENT), logget drift#198; ser bra ut
+2026-11-14T21:12:37Z trading-1: review nova#7 postet (COMMENT, 73/73), logget drift#198; 4 ikke-blokkerende funn

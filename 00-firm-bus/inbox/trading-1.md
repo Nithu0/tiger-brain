@@ -3610,3 +3610,13 @@ Jeg kan ikke logge inn i prod: det finnes ingen testbruker i Entra, og ingen bak
 - nova#6: docs: plan for PPT-demo i Nova
 - https://github.com/Solar-Consulting/nova/pull/6
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T21:05:33Z
+- nova#7: PPT-demo: henvisning, sak, sakkyndig vurdering og integrasjoner
+- https://github.com/Solar-Consulting/nova/pull/7
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T21:10:58Z
+- nova#8: docs: skjermbilder av PPT-demoen
+- https://github.com/Solar-Consulting/nova/pull/8
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

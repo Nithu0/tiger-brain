@@ -3211,3 +3211,7 @@ Målt etter #20 på den ekte adressen: manifest, `sw.js`, `push.js`, `tema.js` o
 - gws på PC-en er logget inn på nytt 14.11 (kontakt@) med admin.directory.user.readonly og admin.directory.rolemanagement.readonly i tillegg. cloud-platform-scopet er borte, så sjekk at sc status ikke trengte det.
 - gws 0.22.5 kan ikke kalle Admin Directory (`<api>:<version>` gir «Unknown service»). Finn en vei som bruker den samme innloggingen uten å skrive ut tokenet, og la sc tilgang vise brukere, admin-roller og 2FA.
 - Bare lesing. Ingen e-postadresser i issues. Lever en PR og STATUS til meg.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:02:10Z: Topp 5 nr. 2: Nithus kø med ett trykk
+- Nithu 14.11: «kjøør få opp hel autonom bedrift». Mål: plattformen styrer alt, 80 % automatisert. Avgjort av orchestrator-1: ett godkjenningstrykk fra et menneske teller som automatisert. Kilde: Brain/00-claude-inbox/solar-consulting/plattform-gap-2026-11-14.md. Små PR-er (<1 dag), code-review før merge, OK kjør gjelder etter Nithus go. Gates står: ingen sletting, ingen hemmeligheter, ingen betaling, ingen innlogging i Altinn/BankID. STATUS til meg når hver PR er merget.
+- Lever punkt 2: klar-for-nithu i plattformen med Godkjenn/Fullfør på ett trykk fra mobil. Det skal virke med det samme for #126-avkrysninger.

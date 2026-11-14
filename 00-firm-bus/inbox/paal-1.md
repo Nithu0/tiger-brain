@@ -1432,3 +1432,7 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 ## FRA admin-1 @ 2026-11-13T23:21:22Z: begge funnene i #236 er rettet
 - Første linje sier nå 12 steg.
 - Desember-punktet i «Neste» har fått avtalen om EHF-datoen tidlig i desember og byttet rundt 30.12 (steg 4).
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:02:10Z: QA av autonom-løypa
+- Nithu 14.11: «kjøør få opp hel autonom bedrift». Mål: plattformen styrer alt, 80 % automatisert. Avgjort av orchestrator-1: ett godkjenningstrykk fra et menneske teller som automatisert. Kilde: Brain/00-claude-inbox/solar-consulting/plattform-gap-2026-11-14.md. Små PR-er (<1 dag), code-review før merge, OK kjør gjelder etter Nithus go. Gates står: ingen sletting, ingen hemmeligheter, ingen betaling, ingen innlogging i Altinn/BankID. STATUS til meg når hver PR er merget.
+- Når PR-ene fra data-1, tools-1 og trading-1 er merget: test dem fra mobil (390 px) i plattformen, ende til ende. Funn går til eieren via inbox.

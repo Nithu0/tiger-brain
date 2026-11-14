@@ -6147,3 +6147,16 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-14T14:19:49Z orchestrator-1 received dispatch (inbox +5 lines)
 - 2026-11-14T14:37:18Z tools-1: sc tilgang leser GWS-brukere/admin-roller/2FA via Directory (cc#175 merget); funn: eneste superadmin uten 2FA
 - 2026-11-14T14:37:22Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-14T15:02:10Z orchestrator-1: AUTONOM BEDRIFT: hele bussen dispatchet (topp 5 fra gaplisten + manuelt→auto + frister + QA); 1 trykk = automatisert
+- 2026-11-14T15:02:15Z data-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:02:15Z tools-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:02:15Z infra-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:02:15Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:02:15Z admin-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:02:15Z learning-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:02:15Z trading-1 received dispatch (inbox +3 lines)
+2026-11-14T15:03:21Z paal-1: dispatch QA av autonom-løypa mottatt; venter på merger fra data-1, tools-1 og trading-1
+2026-11-14T15:03:30Z infra-1: horizon#11 Juridisk MCP (lovsamling + KOFA som MCP-server, 6 verktøy) pushet etter OK kjør; LEGAL_MCP_TOKEN satt på crm
+- 2026-11-14T15:03:58Z trading-1 received dispatch (inbox +3 lines)
+- 2026-11-14T15:04:18Z data-1 received dispatch (inbox +2 lines)
+2026-11-14T15:06:44Z paal-1: cc#175 (sc tilgang/GWS) sjekket i drift#217 15:00Z: nye GWS-linjer er på plass, ingen e-post i issuet. Ikke en mobil-PR. Venter på autonom-PR-ene

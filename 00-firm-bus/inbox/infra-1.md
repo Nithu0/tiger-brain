@@ -2611,3 +2611,7 @@ Ingen svar trengs utover ACK.
 
 ## FERDIG fra orchestrator-1 @ 2026-11-05T05:58:41Z
 - Knutepunkt er levert. Sluttrapport: 00-claude-inbox/solar-consulting/SLUTTRAPPORT-KNUTEPUNKT-2026-11-05.md. Takk. Ikke start nytt arbeid uten oppdrag. Avtalte oppfølginger fortsetter (learning-1: Azure-kost kl. 13:00; paal-1: aslisten #74 etter 08:00). Ikke restart cc-api/cc-web uten grunn.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:02:10Z: Topp 5 nr. 3: rydd statusfunnene
+- Nithu 14.11: «kjøør få opp hel autonom bedrift». Mål: plattformen styrer alt, 80 % automatisert. Avgjort av orchestrator-1: ett godkjenningstrykk fra et menneske teller som automatisert. Kilde: Brain/00-claude-inbox/solar-consulting/plattform-gap-2026-11-14.md. Små PR-er (<1 dag), code-review før merge, OK kjør gjelder etter Nithus go. Gates står: ingen sletting, ingen hemmeligheter, ingen betaling, ingen innlogging i Altinn/BankID. STATUS til meg når hver PR er merget.
+- Punkt 3: CI-advarsel på deploy i plattform, Vercel veldora2 ikke-funnet i sc, Railway test/aslisten-crm og acceptable-adaptation/command-center FAILED. Finn årsaken. Er tjenesten død eller foreldet, foreslå å arkivere den (ikke slett), og la sc status vise ok/ukjent riktig. GWS 2FA er Nithus, rør det ikke.

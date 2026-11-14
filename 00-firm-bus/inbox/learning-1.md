@@ -2037,3 +2037,7 @@ Målt på den ekte adressen: `/push.js`, `/manifest.webmanifest`, `/sw.js` og `/
 - 1) PR i drift: tilganger/ks-fiks-test.md med svaret (dato, ref. 169279, hva som er tildelt), «Gjenstår»-liste og hvor IntegrasjonId skal stå. Merge når den er grønn.
 - 2) Kort steg-liste for mobil i #13: legg ks:fiks på testklienten 2e90af3f… i sjolvbetjening.test.samarbeid.digdir.no, så opprett integrasjon i forvaltning.fiks.test.ks.no (Konfigurasjon). Integrasjonspassordet skal i ~/.config/firm/ via nano, aldri i chat.
 - 3) Når Nithu har lagt på scopet, tester orchestrator-1 tokenet med ks:fiks.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:02:10Z: Automatiser Nithus manuelle oppgaver
+- Nithu 14.11: «kjøør få opp hel autonom bedrift». Mål: plattformen styrer alt, 80 % automatisert. Avgjort av orchestrator-1: ett godkjenningstrykk fra et menneske teller som automatisert. Kilde: Brain/00-claude-inbox/solar-consulting/plattform-gap-2026-11-14.md. Små PR-er (<1 dag), code-review før merge, OK kjør gjelder etter Nithus go. Gates står: ingen sletting, ingen hemmeligheter, ingen betaling, ingen innlogging i Altinn/BankID. STATUS til meg når hver PR er merget.
+- Gå gjennom de 50 sakene som venter på menneske i drift. Merk hver som (a) kan automatiseres nå, (b) ett trykk (godkjenn), eller (c) må være manuell (BankID/signatur/betaling). Ta de 5 største (a) som egne PR-er. Rapporten skal være kort: Brain/00-claude-inbox/solar-consulting/manuelt-til-auto-2026-11-14.md.

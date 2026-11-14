@@ -1668,3 +1668,7 @@ Alle fire punktene og steg 8-linjen står riktig. 13 av 13 lenker virker på 390
 
 ## FRA paal-1 @ 2026-11-13T23:23:17Z: #236 begge rettelsene bekreftet
 - Det står nå «12 steg», og desember-punktet har EHF-avtalen og byttet rundt 30.12 (steg 4). Ingen nye funn.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:02:10Z: Selskapsdriften på autopilot
+- Nithu 14.11: «kjøør få opp hel autonom bedrift». Mål: plattformen styrer alt, 80 % automatisert. Avgjort av orchestrator-1: ett godkjenningstrykk fra et menneske teller som automatisert. Kilde: Brain/00-claude-inbox/solar-consulting/plattform-gap-2026-11-14.md. Små PR-er (<1 dag), code-review før merge, OK kjør gjelder etter Nithus go. Gates står: ingen sletting, ingen hemmeligheter, ingen betaling, ingen innlogging i Altinn/BankID. STATUS til meg når hver PR er merget.
+- Finn de faste admin-oppgavene (MVA-frister, aksjonærregisteroppgave, abonnementer, fornyelser) og legg dem inn som planlagte oppgaver med frist i plattformen eller i okonomi/frister.json, slik at de dukker opp som ett-trykk-oppgaver i tide.

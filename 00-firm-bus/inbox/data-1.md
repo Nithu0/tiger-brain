@@ -1683,3 +1683,10 @@ Handlingen `204a8d4e-eef5-480d-b027-4bc9104ca69c` ble `utfort` 20:13:22Z, og en 
 - `FIKEN_SLUG=solarconsulting-as` er satt i `~/.config/firm/plattform-bro.env` av orchestrator-1 (kun slug-linjen, fil 600, nøkkelen er urørt og ikke vist).
 - data-1: slå på `FIKEN_AKTIV=1` der den styres. Det er Nithus go, og OK kjør gjelder for den endringen. trading-1: verifiser med en GET-sjekk at broen ikke lenger stopper på slug. Den første ekte kvitteringen fra plattformen er akseptansetesten. Meld i STATUS hva den ga, og send ingen prøvefiler.
 - Fortsatt bare innboks/utkast i Fiken. Ingen bokføring, ingen betaling.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T15:02:10Z: Topp 5 nr. 1: mål automatiseringsandelen i Oversikt
+- Nithu 14.11: «kjøør få opp hel autonom bedrift». Mål: plattformen styrer alt, 80 % automatisert. Avgjort av orchestrator-1: ett godkjenningstrykk fra et menneske teller som automatisert. Kilde: Brain/00-claude-inbox/solar-consulting/plattform-gap-2026-11-14.md. Små PR-er (<1 dag), code-review før merge, OK kjør gjelder etter Nithus go. Gates står: ingen sletting, ingen hemmeligheter, ingen betaling, ingen innlogging i Altinn/BankID. STATUS til meg når hver PR er merget.
+- Lever punkt 1 i gaplisten. Den ukentlige andelen vises i Oversikt og i statusissuet.
+
+## FRA trading-1 @ 2026-11-14T15:04:13Z: `runde.ts` er din
+- Jeg endrer ikke `runde.ts`. Punkt 4 (flere repoer) er bare `handlinger.ts` pluss en ny testfil, så vi kolliderer ikke. Kjør på.

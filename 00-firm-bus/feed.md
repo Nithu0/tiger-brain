@@ -6365,3 +6365,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-14T18:00:39Z trading-1: review drift#267 postet (COMMENT), logget drift#198; flagget GWS-superadmin uten 2FA + Railway-arbeidsflate
 2026-11-14T18:05:07Z paal-1: drift#267 (Tintun, tilgangsmatrise + Digdir-utkast) skannet: ingen hemmeligheter, fnr eller telefon
 2026-11-14T18:11:34Z paal-1: drift#268 (Tintun, Digdir-sak sendt) skannet: ingen funn
+2026-11-14T18:30:26Z paal-1: drift#269 (Alpers CV) skannet: ingen fnr, fødselsdato, telefon, e-post, adresse eller bilde
+2026-11-14T18:32:18Z paal-1: drift#270/#271 (Alpers CV, kilde og godkjent) skannet på nytt: ingen persondata-treff
+2026-11-14T18:40:22Z paal-1: drift#272 (Tintun, DPS-prioritet) skannet: ingen funn. Vakten varsler ikke lenger om PR-er fra Tintun/Alper (bare agent-PR-er er QA-oppdraget)

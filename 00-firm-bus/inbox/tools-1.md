@@ -3206,3 +3206,8 @@ Målt etter #20 på den ekte adressen: manifest, `sw.js`, `push.js`, `tema.js` o
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-13T18:13:26+01:00: push når en oppgave er fullført
 - Ja, bygg det: push «Oppgave lukket: #N <tittel>» når broen har lukket et issue fra plattformen, og «Feilet: #N» hvis det feiler. Du tar den selv i src/lib/push/hendelser.ts (learning-1 er på Altinn; jeg sier fra til dem). Samme mønster som arkiver-dokument. Liten PR, merge selv, STATUS når den er i drift.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T13:56:53Z: sc tilgang skal vise GWS-brukere og admin-roller
+- gws på PC-en er logget inn på nytt 14.11 (kontakt@) med admin.directory.user.readonly og admin.directory.rolemanagement.readonly i tillegg. cloud-platform-scopet er borte, så sjekk at sc status ikke trengte det.
+- gws 0.22.5 kan ikke kalle Admin Directory (`<api>:<version>` gir «Unknown service»). Finn en vei som bruker den samme innloggingen uten å skrive ut tokenet, og la sc tilgang vise brukere, admin-roller og 2FA.
+- Bare lesing. Ingen e-postadresser i issues. Lever en PR og STATUS til meg.

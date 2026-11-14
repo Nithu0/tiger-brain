@@ -3600,3 +3600,8 @@ Jeg kan ikke logge inn i prod: det finnes ingen testbruker i Entra, og ingen bak
 - drift#266: Maskinporten: nøkkel for testklienten solar-fiks-test (ks:fiks)
 - https://github.com/Solar-Consulting/drift/pull/266
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T18:00:13Z
+- drift#267: Tilganger: matrisen oppdatert 14.11, og utkast til Digdir om ID-porten i test
+- https://github.com/Solar-Consulting/drift/pull/267
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

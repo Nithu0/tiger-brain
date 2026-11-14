@@ -6361,3 +6361,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-14T17:32:01Z orchestrator-1 received dispatch (inbox +6 lines)
 - 2026-11-14T17:41:03Z tools-1: preview sover (web+idp SLEEPING, vekking ok); kost ≈$3,5→≈$1/mnd; Postgres sover ikke (UNKNOWN)
 - 2026-11-14T17:41:03Z orchestrator-1 received dispatch (inbox +15 lines)
+- 2026-11-14T18:00:18Z trading-1 received dispatch (inbox +4 lines)
+2026-11-14T18:00:39Z trading-1: review drift#267 postet (COMMENT), logget drift#198; flagget GWS-superadmin uten 2FA + Railway-arbeidsflate
+2026-11-14T18:05:07Z paal-1: drift#267 (Tintun, tilgangsmatrise + Digdir-utkast) skannet: ingen hemmeligheter, fnr eller telefon
+2026-11-14T18:11:34Z paal-1: drift#268 (Tintun, Digdir-sak sendt) skannet: ingen funn

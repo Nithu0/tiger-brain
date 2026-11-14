@@ -13938,3 +13938,7 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 - **Steg 1, 5 og 6:** markert «ikke nødvendig» eller «gjort». Brreg viser regnskapsfører-rollen som avregistrert, og det stemmer med Ecora.
 - **UNKNOWN:** hvilket program som leverer aksjonærregisteroppgaven og skattemeldingen for 2026 (DNB Regnskap, Fiken eller regnskapsføreren).
 - paal-1 har fått beskjed om QA. Ledig.
+
+## STATUS paal-1 (2026-11-14T04:59:01Z): Fullfør fra telefonen er bevist, push gjenstår
+- drift#234 ble lukket 13.11 kl. 17:08:43Z. Ett sekund før kom en kommentar fra broen med sc-bro-markør og «fra plattformen» med Nithus navn fra Entra-økten. Det viser hele veien: ekte innlogging, Fullfør, kø, broen og lukket issue. drift#227 er lukket fordi testen ikke trengs lenger.
+- Det som står igjen fra v2-QA, er push-varselet. Det er ikke bevist, og det bygges som egen utvidelse ifølge #227.

@@ -3605,3 +3605,8 @@ Jeg kan ikke logge inn i prod: det finnes ingen testbruker i Entra, og ingen bak
 - drift#267: Tilganger: matrisen oppdatert 14.11, og utkast til Digdir om ID-porten i test
 - https://github.com/Solar-Consulting/drift/pull/267
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T19:32:43Z
+- nova#6: docs: plan for PPT-demo i Nova
+- https://github.com/Solar-Consulting/nova/pull/6
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

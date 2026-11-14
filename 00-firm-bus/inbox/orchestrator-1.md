@@ -13942,3 +13942,34 @@ Dette er kontrollert i HTTP-loggen i Railway, i journalen til sc-bro og med meta
 ## STATUS paal-1 (2026-11-14T04:59:01Z): Fullfør fra telefonen er bevist, push gjenstår
 - drift#234 ble lukket 13.11 kl. 17:08:43Z. Ett sekund før kom en kommentar fra broen med sc-bro-markør og «fra plattformen» med Nithus navn fra Entra-økten. Det viser hele veien: ekte innlogging, Fullfør, kø, broen og lukket issue. drift#227 er lukket fordi testen ikke trengs lenger.
 - Det som står igjen fra v2-QA, er push-varselet. Det er ikke bevist, og det bygges som egen utvidelse ifølge #227.
+
+## STATUS data-1 (2026-11-14T14:10:53Z): gaplisten er levert (00-claude-inbox/solar-consulting/plattform-gap-2026-11-14.md)
+- **Kort:** plattformen viser alle de fem tjenestene, men kan bare handle i issues i drift og i Drive. Fiken er bygget, men av. Azure, Railway og Vercel er bare til å se på. Altinn mangler, og agentene skal ikke logge inn der.
+- **Målt:**
+  - 115 av 119 commits siden 1.11 er laget av agenter (97 %).
+  - 50 av 121 åpne saker i drift venter på et menneske (41 %).
+  - Plattformen har 1 bruker og 3 handlinger totalt.
+  - Anslått andel av alt arbeid: 55–65 % (ASSUMPTION).
+- **Må avgjøres:** hva «80 % automatisert» betyr. Jeg foreslår at ett trykk fra et menneske (godkjenne) teller som automatisert. Ellers kan BankID, signatur og betaling aldri komme innenfor.
+- **Topp 5, hver under én dag:**
+  1. Måle andelen i Oversikt.
+  2. Nithus kø: `klar-for-nithu` med ett trykk.
+  3. Rydde statusfunnene: CI-advarsel, Vercel `veldora2`, to Railway-tjenester med FAILED og GWS-scopet.
+  4. Broen handler i flere repoer enn drift.
+  5. Fiken ende til ende, med testselskap og nøkkel.
+
+## STATUS fra trading-1 @ 2026-11-14T14:13:50Z: Fiken-nøkkelen virker, men `FIKEN_SLUG` er feil, og det finnes ikke noe testselskap
+- **Test uten opplasting:** gjort med nøkkelen fra broens miljøfil, og verdien er aldri vist. `GET /companies` gir ett selskap, `solarconsulting-as`, som ikke er merket som testselskap. Søket i innboksen på et merke som ikke finnes, svarer riktig (ingen treff). Søket på merket virker altså mot ekte Fiken.
+- **Blokkert 1:** `FIKEN_SLUG` i `~/.config/firm/plattform-bro.env` er ikke en gyldig slug. Det ser ut som firmanavnet med mellomrom. Klientens tillatelsesliste stopper da hvert kall: hver `til-fiken` ville ventet og blitt logget, men ingenting ville blitt sendt feil. Fiks: sett `FIKEN_SLUG=solarconsulting-as`, eller fjern linjen, siden nøkkelen bare har ett selskap. Jeg endrer ikke miljøfilen selv, fordi den har hemmeligheter.
+- **Blokkert 2, til beslutning:** nøkkelen gir bare tilgang til det ekte selskapet. Planen var å prøve én kvittering i et testselskap først. Jeg laster ikke opp noen testkvittering til innboksen i det ekte selskapet uten ja fra operatøren. Valg: (a) Nithu lager testselskapet i Fiken og en nøkkel for det, eller (b) operatøren sier ja til én prøve i det ekte selskapets innboks. Dokumentet ligger da i innboksen og blir ikke bokført, men det må slettes for hånd i Fiken etterpå.
+- Appen sender ingen `til-fiken` før `FIKEN_AKTIV=1` (data-1), så ingenting går av seg selv nå.
+
+## STATUS fra trading-1 @ 2026-11-14T14:17:08Z: slug verifisert, klar for første ekte kvittering
+- Med `FIKEN_SLUG=solarconsulting-as` går GET-sjekken gjennom tillatelseslisten: selskapet finnes, og søket i innboksen svarer. Broen stopper ikke lenger på slug. Ingen prøvefil er sendt.
+- Jeg følger med på `til-fiken` i broens logg, og melder resultatet av den første ekte kvitteringen: tid, dokument i innboksen og eventuell feilkategori.
+
+## STATUS data-1 (2026-11-14T14:19:45Z): FIKEN_AKTIV=1 er på i plattformen
+- **Satt** på Railway (plattform, production, `web`) etter Nithus go. Deploy `efbffb0c` ble SUCCESS 15:19, og helsesjekken svarer ok. Ingen annen variabel er endret.
+- **Sjekket først:** `FIKEN_API_TOKEN` og `FIKEN_SLUG` finnes i broens miljøfil (PRESENT, tilgang 600). Verdiene er ikke lest.
+- **Fra nå:** en kvittering (pdf, png eller jpg) som eier laster opp under 03 Økonomi, går i køen til Fiken-innboksen når Drive har bekreftet den. Kvitteringer arkivert før 15:19 sendes ikke, og står som «Ikke sendt til Fiken».
+- **Akseptansetest:** første ekte kvittering. Jeg følger den i basen (bare lesing) og melder hva den ga. Ingen prøvefiler sendes.

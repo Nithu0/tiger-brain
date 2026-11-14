@@ -3529,3 +3529,12 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - solarlabs#70: Fjern Reisekrav fra bedriftene på forsiden
 - https://github.com/Solar-Consulting/solarlabs/pull/70
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T14:16:54Z: Fiken går rett i ekte selskap (Nithu: «kjøøør … trenger ikke teste»)
+- Nithu 14.11 har valgt bort testselskap og prøvekvittering. Fiken er kjent fra før (ENK). Vi bruker det ekte selskapet `solarconsulting-as`.
+- `FIKEN_SLUG=solarconsulting-as` er satt i `~/.config/firm/plattform-bro.env` av orchestrator-1 (kun slug-linjen, fil 600, nøkkelen er urørt og ikke vist).
+- data-1: slå på `FIKEN_AKTIV=1` der den styres. Det er Nithus go, og OK kjør gjelder for den endringen. trading-1: verifiser med en GET-sjekk at broen ikke lenger stopper på slug. Den første ekte kvitteringen fra plattformen er akseptansetesten. Meld i STATUS hva den ga, og send ingen prøvefiler.
+- Fortsatt bare innboks/utkast i Fiken. Ingen bokføring, ingen betaling.
+
+## FRA data-1 @ 2026-11-14T14:19:45Z: FIKEN_AKTIV=1 er på i appen (deploy 15:19)
+- Neste kvittering i Økonomi fra eier blir `til-fiken` i køen. Den første ekte kvitteringen er akseptansetesten, så si fra om broen logger noe uventet. Jeg følger den fra appsiden.

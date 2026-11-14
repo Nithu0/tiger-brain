@@ -14249,3 +14249,42 @@ Delt med learning-1. Hen tar de andre og merker mine som «admin-1» i rapporten
 - **Av** til `ALTINN_AKTIV=1` og `ALTINN_KLIENT`, `ALTINN_KID` og `ALTINN_NOKKEL_FIL` står i broens miljøfil. Det er operatørens jobb, sammen med scopene, som scopevakten #251 melder om.
 - **Testet:** 204 tester grønne, alt mot mock og uten ekte kall. Reviewet, og funnene er rettet. Broen kjører den nye koden.
 - **B1:** paal-1 har testet appens side, uten funn. Ende-til-ende med ekte deploy venter på et trykk fra eieren på `/drift`.
+
+## STATUS paal-1 (2026-11-14T16:11:24Z): B9, QA av B1–B6, der én blokker står åpen
+- **B1** (cc#179/#183, plattform#40): ok.
+  - Funnene mine er rettet: Tintuns tjenester er ute, aldersgrensen er 10 min, og «utført» meldes bare når det er bekreftet.
+  - Appens side er testet med ekte økter og falsk bro: 19/20, og den ene feilen var min egen forventning. Dobbelttrykk og samtidige trykk gir én handling. Ingen ekte deploy er kjørt.
+- **B2** (plattform#41): API-et er ok, 22/22.
+  - **BLOKKER: cc#180 (broen, åpen).** Sladdingen slipper gjennom `x-api-key`, Basic-auth, `Bearer:`, Slack- og Discord-webhooks, PEM-kroppen, `re_`-nøkler og «passord». Sendt til data-1. Den må ikke merges før det er rettet.
+- **B3** (cc#181): ok. Azure viser 0.01 USD i drift#217.
+- **B4** (cc#178/#182): regelen er rettet, og `bare-godkjenning` teller bare når etiketten står på saken. drift#217 kl. 16:00Z: «Automatisert denne uken: 12,5 % av 16 vurderte saker». Det er langt under målet, så B7 (merkingen) avgjør.
+- **B5** (infra-1): ikke merget ennå, så ikke testet.
+- **B6** (plattform#42, drift#265): oppsettet fra en ny klon virker på omtrent 6 min, de fire testbrukerne gir riktig tilgang, og 390 px er ok. **API.md og #265 mangler B1 og B2**, som er merget, og sier fortsatt «kommer i dag». Sendt til tools-1.
+
+## STATUS paal-1 (2026-11-14T16:12:11Z): B2-blokkeren er løst
+cc#180 er merget og sjekket på main: 20 av mine 22 lekkasjelinjer sladdes, og de to siste er konstruerte. PEM sladdes hele veien, og vanlige byggelinjer beholdes. B2 er grønn. B1 i prod (redeploy av renseri) krever Nithus innlogging på telefonen. Agentene har ingen prod-innlogging.
+
+## STATUS fra tools-1 @ 2026-11-14T16:14:26Z: oppgaver-repoer på appsiden merget og i drift (plattform#43)
+- Appsiden av cc#184. oppgaver-repoer er lagt til i SNAPSHOT_NOKLER.
+- Fullfør og Send til agent tar repo, og nummeret slås opp i snapshotet for det repoet. Sperren mot dobbel Fullfør gjelder per repo. Den er sjekket mot ekte Postgres: Terra#7 finner bare Terra#7. repo følger med til køen.
+- Avgjør gjelder fortsatt bare drift. #126 er spesiell bare i drift. Push sier «Terra#7».
+- Ingen ny skjerm. Frontend må sende repo.
+- 505/505 tester er grønne. code-review er gjort, og push-funnet (Medium) er rettet. Merget 6f64940, Railway SUCCESS på 6f64940, og helsesjekken svarer 200.
+- ÅPENT, din avgjørelse: eieren får Fullfør og Send til agent på issuene i Terra og nova. Broen (cc#176) tillater det allerede. Bør Tintun-regelen (drift#198) bekreftes før en skjerm tilbyr dette?
+- Fra admin-1 og paal-1 sin QA av B6: dev:idp sier fra om opptatt port, og API.md nevner databaseporten, npm 11 og push uten VAPID. B1–B3 legges inn i API.md i plattform#44, som er under merge.
+
+## STATUS paal-1 (2026-11-14T16:18:18Z): cc#180 er allerede testet på nytt, og klarsignalet er gitt
+Testet på main (0c000cb, der 67da611 er med) kl. ~16:05Z: 20 av 22 lekkasjelinjer sladdes, og de to siste er konstruerte. PEM sladdes fra BEGIN til END, og ufarlige linjer beholdes. data-1 fikk klarsignal 16:0xZ, og blokkeren er borte.
+- plattform#44 er sjekket: API.md har nå B1–B3 (`/api/drift/deploy`, deploylogg-rutene, `deploylogger`, `oppgaver-repoer`), og oppførselen stemmer med det jeg målte. Teksten i #265 sier fortsatt «Kommer i dag», men kommentaren fra 16:17 retter det.
+- B9 står igjen med B5 (infra-1), som ikke er merget, og B1 i prod, som Nithu må trykke.
+
+## FRA data-1 @ 2026-11-14T16:22Z: STATUS B2 merget (cc#180, cc#186, plattform#41). B2, B3 og B4 er ferdige
+- **B2 i drift.** Broen sender `deploylogger` én gang i timen. `GET /api/plattform/deploylogg` gir listen, og `/<deployId>` gir de siste 200 linjene, sladdet. Det gir 401 uten innlogging og 403 for jurist.
+  - I basen nå (lest 17:17): `test/aslisten-crm` FAILED med 199 byggelinjer, `fullstendig: true`, feil `vercel:veldora2 ikke-funnet`.
+  - API-et gir derfor `kjent: false` så lenge veldora2 står på listen. Det er riktig, og avgjørelsen om veldora2 står fortsatt i gaplista.
+- **Rettet i drift (cc#186):** veldora2 gjorde målingen «ikke fullstendig». Da ble den ikke lagret, og broen hentet alt på nytt hvert minutt. Nå teller bare tidsfristen. Sett i fire runder etter bygget: én henting, så uendret.
+- **Sladding:** paal-1 sjekket på main og fikk 20 av 22 lekkasjelinjer sladdet. De to som slipper, er konstruert og lite sannsynlige (tilde som skille, `sig=` uten `?`/`&`). På de ekte loggene blir 0 av 594 linjer sladdet.
+- **Kjent hull, ikke rettet:** `acceptable-adaptation/command-center` mangler i snapshoten. Hver merge til command-center starter en ny deploy der, og alle feiler: 15:55, 16:01, 16:09 og 16:13 UTC. Mens en deploy bygger, er den siste ikke FAILED ennå, og tjenesten faller ut til neste timesmåling.
+  - Rettelsen er å se på forrige deploy når den siste pågår. Det er en liten jobb. Si fra om du vil ha den.
+  - At den tjenesten feiler for hver merge, er det samme funnet som i gaplista. Den kjører kode fra 24.05.
+- Fiken: 0 til-fiken og 0 økonomi-opplastinger i basen. Vakten går videre.

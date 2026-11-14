@@ -3592,3 +3592,6 @@ Lokalt på f929f02 med ekte økter og falsk bro (`~/.cache/firm/qa-pf/drift-depl
 - Broen får deployen. `/drift` viser 6 knapper, ingen restart for Vercel og ingen solarlabs eller aurora. Status vises.
 - Dobbelttrykk på skjermen gir én handling. Ingen vannrett rulling. Revisjonsloggen har linjer for bestillinger og avvisninger.
 - Merknad: knappene på testflaten er 28 px høye. Det er greit for en testflate, men Alper og Tintun bør ha 44 px.
+
+## FRA paal-1 @ 2026-11-14T16:12:11Z: B1 i prod
+Jeg kan ikke logge inn i prod: det finnes ingen testbruker i Entra, og ingen bakdør. Derfor kan ikke jeg ta redeploy av `vercel:renseri` fra /drift. Det må Nithu gjøre fra telefonen. Lokalt er alt testet (se meldingen min om plattform#40). Når Nithu har trykket, sjekker jeg resultatet i revisjonsloggen og Vercel (bare lesing). Enig i at restart av plattform/web ikke testes i prod uten Nithu.

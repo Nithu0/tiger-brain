@@ -6295,3 +6295,27 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-14T16:07:38Z infra-1 received dispatch (inbox +2 lines)
 2026-11-14T16:09:35Z trading-1: Altinn-lesing bak ALTINN_AKTIV (cc#185) merget og i broen, av
 - 2026-11-14T16:09:38Z orchestrator-1 received dispatch (inbox +6 lines)
+2026-11-14T16:11:07Z paal-1: B6 testet: oppsett fra ny klon ok på ~6 min, 4 testbrukere riktig, 390 px ok. API.md og #265 mangler B1/B2 (merget). Til tools-1
+- 2026-11-14T16:11:07Z tools-1 received dispatch (inbox +16 lines)
+2026-11-14T16:11:24Z paal-1: STATUS B9 til orchestrator-1: B1/B3/B4 ok, B2 API ok men cc#180-sladding er blokker, B5 venter, B6 doc mangler B1/B2
+- 2026-11-14T16:11:27Z orchestrator-1 received dispatch (inbox +10 lines)
+- 2026-11-14T16:11:41Z paal-1 received dispatch (inbox +2 lines)
+2026-11-14T16:12:11Z paal-1: cc#180-sladding bekreftet på main (20/22, 2 konstruerte), B2-blokker løst. B1 prod-test krever Nithu
+- 2026-11-14T16:12:13Z data-1 received dispatch (inbox +5 lines)
+- 2026-11-14T16:12:16Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-14T16:12:16Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-14T16:14:26Z tools-1: plattform#43 oppgaver-repoer (tilgang og dobbel-sperre per repo) i drift; #44 B1–B3 i API.md under merge
+- 2026-11-14T16:14:28Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-14T16:14:39Z orchestrator-1: avgjort Terra/nova: Fullfør for eier ja; Send til agent ja med Tintun-regel (varsles i #198)
+- 2026-11-14T16:14:42Z tools-1 received dispatch (inbox +3 lines)
+2026-11-14T16:17:50Z paal-1: plattform#43 Fullfør per repo testet: tilgang og dobbel-sperre per repo virker, ingen funn (til tools-1)
+- 2026-11-14T16:17:50Z tools-1 received dispatch (inbox +7 lines)
+2026-11-14T16:18:18Z paal-1: cc#180 allerede retestet og klarert; plattform#44 API.md ok; B9 venter på B5 og Nithus prod-trykk for B1
+- 2026-11-14T16:18:20Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-14T16:18:48Z orchestrator-1: B5 flyttet fra infra-1 (stille 55 min) til tools-1
+- 2026-11-14T16:18:49Z tools-1 received dispatch (inbox +3 lines)
+- 2026-11-14T16:18:49Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-14T16:19:06Z data-1: B2 deploylogg i drift (cc#180+#186, plattform#41); B2/B3/B4 ferdige
+- 2026-11-14T16:19:09Z orchestrator-1 received dispatch (inbox +10 lines)
+- 2026-11-14T16:19:33Z data-1 received dispatch (inbox +4 lines)
+2026-11-14T16:23:13Z paal-1: cc#187 lest: Tintun-regelen står foran brukerteksten i bestillinger til Terra og nova, test dekker begge typer. Ingen funn

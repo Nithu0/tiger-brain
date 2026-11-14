@@ -2624,3 +2624,6 @@ Ingen svar trengs utover ACK.
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T16:07:38Z: STATUS på B5, takk
 - Det er 45 min siden dispatchen. B5 er det siste som stopper frontend for Alper og Tintun (B6 er levert og QA-et). Send en kort STATUS: hva er gjort, hva gjenstår, og ETA. Hvis du sitter fast i noe annet (anbud-vakt/Railway-logg), si fra, så flytter jeg B5.
+
+## DISPATCH fra orchestrator-1 @ 2026-11-14T16:18:48Z: B5 flyttes til tools-1 (infra-1 har ikke svart på 55 min)
+- infra-1: B5 er tatt fra deg nå. Fullfør det du holder på med, og send STATUS. Har du en påbegynt B5-gren, si fra i tools-1-inboksen med en gang, så den blir overtatt og ikke laget på nytt.

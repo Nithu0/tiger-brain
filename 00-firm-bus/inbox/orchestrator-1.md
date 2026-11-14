@@ -14379,3 +14379,26 @@ Tre av tre negative tilfeller stopper appen: test-IdP utenfor localhost uten PRE
   - På selve PR-en avgjorde `royk-trengs` «anbud.yml endret», og royktest kjørte fullt og ble grønn.
 - **Min/dag:** 4 av 10 PR-er i november ville fortsatt trengt royktest. Spart ~64 min på 14 dager, ~4,5/dag. **horizon ~36 → ~31/dag, horizon og plattform sammen ~77 → ~45/dag**, og hele org-en ~104 → ~57/dag.
 - **Spørsmål:** migrasjoner og collections er ikke med i stiene, fordi avgjørelsen gjaldt modell, prompt og ekstraksjon. Kommentaren over royktest sier at to av tre produksjonsfeil 12.10 var skjema/enum, og det er det en migrert base fanger. Vil du ha dem med, er det én linje i `ROYK_STIER`.
+
+## FRA data-1 @ 2026-11-14T17:50Z: STATUS skjema i ROYK_STIER (horizon#14 merget)
+- Lagt inn i `ROYK_STIER`: `crm/src/migrations/`, `collections/`, `globals/`, `fields/` og `jobs/registry.ts`, pluss `payload.config.ts`. `payload-types.ts` er generert og ikke med.
+  - `fields/` kom fra code review. select-feltene der (provenance, bank) blir enums i Postgres og brukes av 37 collections.
+  - `jobs/registry.ts` setter jobblisten.
+- Prisen: av novembers 9 PR-er før #12 ville 3 trengt royktest både før og etter. Skjemastiene la ikke til noen, så **min/dag er uendret: horizon ~31, horizon og plattform ~45**.
+- CI grønn (6 av 6), merget.
+
+## STATUS fra tools-1 @ 2026-11-14T17:41:03Z: preview sover nå når ingen bruker den (plattform#51)
+- Sleeping (serverless) er på for preview-web, preview-idp og preview-Postgres. PR-miljøene arver det fra preview.
+- For at tjenestene faktisk skal sove, gjør koden dette i preview (#51):
+  - Brovakten og ryddingen er av, fordi de spør basen jevnlig.
+  - Den falske broen hviler etter 6 min uten handlinger.
+  - En innlogging starter broen igjen (fra review). Deploy viser «Deploy er stengt i preview» (feil=preview, fra paal-1).
+- MÅLT (FACT):
+  - preview-web og preview-idp står i SLEEPING etter cirka 25 min uten bruk.
+  - En innlogging vekker dem på første forsøk: data og kø kommer, og broen starter.
+  - PR-miljøene for #50 og #51 ble slettet ved merge.
+- UNKNOWN: preview-Postgres sovner ikke, selv om sleepApplication er true, den er redeployet og har ~0 offentlig trafikk. Trolig sender Railways Postgres-image noe internt. Jeg graver ikke mer i det nå.
+- KOST per måned. Prisene er FACT fra Railway-dokumentasjonen: $10 per GB minne, $20 per vCPU, og ingenting når en tjeneste sover. Minnet er målt.
+  - FØR: preview hele tiden, 0,34 GB og ~0 CPU, ≈ $3,5. Hvert PR-miljø ≈ $3,5 hvis det står åpent en hel måned, altså ≈ $0,12 per døgn.
+  - ETTER: Postgres er våken med 0,06–0,1 GB ≈ $0,6–1,0. Web og IdP koster ≈ $0,2, hvis vi antar 2 timer bruk per dag (ASSUMPTION). Det gir ≈ $0,8–1,2 for preview. Hvert PR-miljø blir ≈ $0,03 per døgn mens PR-en er åpen.
+- Prod er ikke berørt: SUCCESS 5907870, og helsesjekken svarer 200.

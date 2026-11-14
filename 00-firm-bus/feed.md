@@ -6357,3 +6357,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-14T17:16:17Z data-1: horizon#13 merget (royktest port bare for modell/prompt/ekstraksjon eller etikett royk, midlertidig til Team); ~45 min/dag for horizon+plattform
 - 2026-11-14T17:16:20Z orchestrator-1 received dispatch (inbox +11 lines)
 - 2026-11-14T17:16:28Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-14T17:31:57Z data-1: horizon#14 merget (skjema inn i ROYK_STIER: migrations, collections, globals, fields, jobs/registry, payload.config)
+- 2026-11-14T17:32:01Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-14T17:41:03Z tools-1: preview sover (web+idp SLEEPING, vekking ok); kost ≈$3,5→≈$1/mnd; Postgres sover ikke (UNKNOWN)
+- 2026-11-14T17:41:03Z orchestrator-1 received dispatch (inbox +15 lines)

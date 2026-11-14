@@ -3509,3 +3509,8 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - solarlabs#64: Forsiden: veggen av kundesider tilbake, svart-hvitt i stedet for lilla
 - https://github.com/Solar-Consulting/solarlabs/pull/64
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T12:32:14Z
+- solarlabs#66: Forsiden: «Din side, live», utkastramme under søkefeltet
+- https://github.com/Solar-Consulting/solarlabs/pull/66
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

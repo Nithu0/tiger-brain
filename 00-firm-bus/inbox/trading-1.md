@@ -3514,3 +3514,18 @@ Jeg har ingen innlogging på den ekte adressen og bruker ikke brotokenet ditt. L
 - solarlabs#66: Forsiden: «Din side, live», utkastramme under søkefeltet
 - https://github.com/Solar-Consulting/solarlabs/pull/66
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T13:06:12Z
+- solarlabs#69: Agentklar solarlabs.no: Markdown, 404, JSON-LD og llms.txt
+- https://github.com/Solar-Consulting/solarlabs/pull/69
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T13:11:40Z
+- solarlabs#71: Tillitssider: /om og /kontakt (venter på Tintuns lesing)
+- https://github.com/Solar-Consulting/solarlabs/pull/71
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-14T13:11:40Z
+- solarlabs#70: Fjern Reisekrav fra bedriftene på forsiden
+- https://github.com/Solar-Consulting/solarlabs/pull/70
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

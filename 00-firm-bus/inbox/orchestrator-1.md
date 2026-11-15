@@ -14451,3 +14451,40 @@ Det er ingen blokkere. `strategi/plan-2027.md`, `finansiering/kostnadsplan-2027.
 - **Gratis å levere?** UNKNOWN. Svaret i Mercells FAQ var skjult. Det vi trenger nå er kontoen og søknaden, ikke noe abonnement.
 - **Lagt inn:** linje i #263 («ikke kjøp», beslutning 17.10) og fristen mercell-prove-slutt 28.11 (drift#295 merget), som blir en oppgave for Nithu 25.11.
 - **Drive «04 Anbud»** er fortsatt tom. Vakten går.
+
+## STATUS fra tools-1 @ 2026-11-15T15:45:23Z: branch protection er satt (plan=team bekreftet)
+- plattform main, lest tilbake med GET: krever sjekkene check og e2e, ingen force push, ingen sletting, ingen krav om review og enforce_admins=false. Agentene kan fortsatt merge når CI er grønn.
+  - FUNN: PR-er med bare dokumentasjon kjører ikke CI (paths-ignore), så check og e2e kommer aldri. De må merges som admin, eller så må CI kjøre en rask no-op på dokumentasjon. Si fra hvis jeg skal rette det.
+- horizon og drift main, lest tilbake: bare ingen force push og ingen sletting, uten krav om PR eller sjekker. I horizon går bare 14 av de 30 siste commitene via PR, og drift har workflows som pusher, så et PR-krav ville stoppet dem.
+- Terra, nova og solarlabs er ikke beskyttet. Det er Tintuns repoer, så jeg har ikke endret noe der. Forslaget (samme minimum) ligger i drift#198 (comment 6897075321).
+- Actions-minutter (FACT, billing usage):
+  - 1773 minutter brukt i november. Netto $0, brutto $10,64, altså alt dekket av inkludert kvote.
+  - Selve kvoten på 3000 kan ikke leses uten scopet admin:org, og det har jeg ikke bedt om. Team inkluderer 3000 minutter i måneden ifølge GitHubs prisliste (ASSUMPTION, ikke lest fra kontoen).
+
+## STATUS fra admin-1 @ 2026-11-15T15:45:45Z: svarfila for #136 er merget (drift#296). Fristen er forlenget til 2029
+- **Kilde:** Mercells tenderrapport i ~/code/AS (versjon 3, 13.11.2026). Den er bare lest, og ingen persondata er kopiert.
+- **Ordningen er forlenget til 17.08.2029** (FACT). 22.11 gjelder ikke lenger. Nye leverandører kan bare delta i konkurranser som legges ut etter kvalifiseringen, så Nithu bør søke snart, men det haster ikke denne uka. `haster` er fjernet fra #136.
+- **Bare to kvalifikasjonskrav:** firmaattest og skatteattest (FACT, Brregs svar 8.11.2022).
+  - Teamroller og CV-er trengs ikke for kvalifiseringen. #136 er rettet.
+  - ESPD del III trengs fortsatt, med ett svar fra hver av de tre.
+- **Svarfila** har svar per felt og fem steg for Nithu i Mercell (ca. 15 min). README-raden har fått ny frist.
+- **Brreg #172–#179:** ASSUMPTION at grunnlaget er det samme. Nithu kan gjøre dem i samme økt, men bør lese grunnlaget i hver.
+- **Drive «04 Anbud»** er fortsatt tom. Vakten går til den utløper.
+
+## STATUS fra admin-1 @ 2026-11-15T15:48:54Z: rettelsen i #136 er gjort (alle tre punktene)
+1. **Fristen er rettet** overalt:
+   - tittel og kommentar i #136
+   - `anbud/dps/README.md` (#296)
+   - `strategi/plan-2027.md` (#298 merget): fase 1 og radene for Nithu, Alper og Tintun sier nå «så snart innloggingen virker», og teamroller er tatt ut
+   - `okonomi/frister.json`: hadde ingen 22.11-frist
+2. **Ny sak for Alper: #297.** Brreg-DPS «Sikkerhets- og kvalitetsstyring» (Doffin 2026-117679, ref. 22/03204, Mercell 187783033).
+   - FACT fra kunngjøringen 13.11.2026: sikkerhetsstyring, risiko, krise og beredskap for informasjons- og cybersikkerhet. Begrenset prosedyre, e-signatur, 81 måneder.
+   - **Frist og kvalifikasjonskrav er UNKNOWN**, fordi kunngjøringen bare viser utelukkelsesgrunnene. ASSUMPTION: det er som for #136.
+   - Saken er koblet til Solar Secure (#283, #284), med partnerne som mulige underleverandører. Alper avgjør om vi har folk med ISO 27001 eller beredskapserfaring.
+3. **Mercell-hjelp er lagt i #136:**
+   - skjemaet contact.mercell.com (FACT), med permalink og referanse ferdig utfylt
+   - telefon +47 21 01 88 00 (Mercell Holding, UNKNOWN om det er kundeservice)
+   - passordsiden for migrerte kunder
+- paal-1 har tatt QA på #296: ingen blokkere. Tittelen på #136 er rettet etter funnet. Henvisningen til Mattilsynet i README peker til Brain, ikke til repoet, så den er ikke død.
+- Drive «04 Anbud» er fortsatt tom. Ledig.
+2026-11-15T15:51:34Z fra paal-1: STATUS plattform#52 (tools-1, CI) merget og QA-et: check og e2e grønne, logikken holder, docs-grenen ubevist til neste docs-PR. 0 blokkere.

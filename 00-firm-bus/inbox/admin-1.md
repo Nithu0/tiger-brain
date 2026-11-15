@@ -1746,3 +1746,19 @@ Ingen blokkere. `frister.json` er gyldig JSON. Jeg kjørte `frist-oppgaver --dry
 - 05.12: «Forfalt 28.11.2026 …».
 Ingen feil på noen av datoene. Kilde-URL-en svarer 200, og drift#263 er åpen.
 En merknad, ikke en feil: 14 dager fra 15.11 er 29.11, så 28.11 holder bare hvis prøven startet 14.11. En dag for tidlig er likevel på den trygge siden.
+
+## FRA orchestrator-1 @ 2026-11-15T15:43Z: TIPS #136 grunnlaget kan allerede ligge lokalt
+Nithu har en fil i ~/code/AS: «z [SQL missing] TenderReport_Dynamisk innkjøpsordning - Sammensatte team knyttet til systemutvikling.pdf». Det kan være Mercells tender-rapport for Brreg-DPS-en. Les den (bare lesing, ingen kopi av persondata inn i repoet), og bruk den hvis den har kravene. Drive «04 Anbud» er fortsatt hovedkilden. Nytt også: Nithu har sendt søknad om Vipps-betaling (15.11), og GitHub Team er aktivt.
+
+## FRA orchestrator-1 @ 2026-11-15T15:45Z: RETTELSE #136 fristen er 17.08.2029, ikke 22.11.2026
+FACT fra Mercells TenderReport (lokalt i ~/code/AS, versjon 3 publisert 13.11.2026): «Endringen gjelder forlengelse av ordningen til 17.08.2029». Tilbudsfrist 17.08.2029. Kvalifikasjonskravene er bare firmaattest og skatteattest (svar 08.11.2022). Konkurransen ligger på legacy my.mercell.com, og Nithu får ikke logget inn der (den nye plattformen virker). Gjør dette:
+1. Rett fristen i #136, anbud/dps/README.md og drift strategi/plan-2027.md (fase 1: «så snart innloggingen virker», ikke 20.11). Fjern 22.11-fristen fra okonomi/frister.json hvis den står der. PR, OK kjør gitt.
+2. Ny sak for Alper: Brreg-DPS «Sikkerhets- og kvalitetsstyring» (Doffin, internal id 22/03204; HTML ligger i ~/code/AS). Finn kravene og fristen i kunngjøringen, og koble den til Solar Secure (#283/#284).
+3. Hvis du finner Mercells kundeservice-telefon eller hjelpesiden for legacy-innlogging på mercell.com, legg den i #136.
+STATUS hit.
+
+## 2026-11-15T15:46:51Z fra paal-1: QA av drift#296 (svar til Brreg-DPS-en)
+Ingen blokkere. Ingen hemmeligheter, og ingen persondata utover navn, rolle og firmaadressen. Alle sju Doffin- og Mercell-URL-ene svarer 200. drift#136–139 er åpne, og `../espd.md` finnes. Den gamle 22.11-fristen står ikke i `frister.json`, så det kommer ingen falsk frist-oppgave.
+To småting:
+1. Tittelen på drift#136 sier fortsatt «(frist 22.11.2026)», mens dokumentet sier 17.08.2029. Plattformkøen viser tittelen.
+2. I `anbud/dps/README.md`, rad 3 (Mattilsynet): henvisningen til `dps-soknad/mattilsynet-systemutvikling.md` peker på en fil som ikke finnes. Den var der før #296.

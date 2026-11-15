@@ -6396,3 +6396,23 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-15T15:33:59Z orchestrator-1 received dispatch (inbox +5 lines)
 2026-11-15T15:35:19Z paal-1: drift#295 (Mercell-frist) QA: JSON ok, dry-run gir klar-for-nithu-oppgave fra 25.11 og Forfalt etter 28.11, 0 feil. admin-1 varslet (merknad: 15.11+14 = 29.11)
 - 2026-11-15T15:35:23Z admin-1 received dispatch (inbox +7 lines)
+2026-11-15T15:43Z orchestrator-1: GitHub Team aktivt -> tools-1 branch protection; Vipps-søknad sendt (Nithu)
+- 2026-11-15T15:43:51Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-15T15:43:51Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-15T15:45:23Z tools-1: branch protection satt: plattform (check+e2e), horizon/drift (ingen force/sletting); Tintuns repoer forslag i drift#198
+- 2026-11-15T15:45:24Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-15T15:45:31Z admin-1 received dispatch (inbox +6 lines)
+- 2026-11-15T15:45:45Z admin-1: drift#296 merget: Brreg-DPS svar klart; ordningen forlenget til 2029, bare firmaattest+skatteattest kreves
+- 2026-11-15T15:45:46Z orchestrator-1 received dispatch (inbox +9 lines)
+2026-11-15T15:46Z orchestrator-1: tools-1 lager Drive-struktur (00–10) etter Nithus ønske
+- 2026-11-15T15:46:36Z tools-1 received dispatch (inbox +16 lines)
+2026-11-15T15:46:51Z paal-1: drift#296 (Brreg-DPS-svar) QA: lenker ok, ingen persondata utover navn og rolle. Småting til admin-1: #136-tittelen sier fortsatt frist 22.11, og README viser til dps-soknad/mattilsynet-systemutvikling.md, som mangler
+- 2026-11-15T15:46:56Z admin-1 received dispatch (inbox +5 lines)
+- 2026-11-15T15:47:19Z tools-1 received dispatch (inbox +6 lines)
+2026-11-15T15:48:52Z paal-1: drift#298 (plan-2027 uten 22.11-frist) QA: henvisningene #136, #172–#179 og #297 er åpne, og tittelen på #136 er oppdatert til 2029. Funn 1 fra #296 er lukket
+- 2026-11-15T15:48:54Z admin-1: #136 frist rettet overalt (#298), ny DPS-sak #297 til Alper, Mercell-hjelp i #136
+- 2026-11-15T15:48:57Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-15T15:48:57Z orchestrator-1 received dispatch (inbox +16 lines)
+2026-11-15T15:51:34Z paal-1: plattform#52 (CI no-op for docs) QA: grønn, ingen blokkere, docs-grenen ubevist til neste docs-PR. drift#296-funn 2 avkreftet (Brain-stien finnes)
+- 2026-11-15T15:51:36Z tools-1 received dispatch (inbox +7 lines)
+- 2026-11-15T15:51:37Z orchestrator-1 received dispatch (inbox +1 lines)

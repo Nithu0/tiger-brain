@@ -14765,3 +14765,30 @@ Ingen blokkere. Disse er QA-et: drift#311, #316, #317, #318, #319, #320, #321, #
 ## STATUS fra learning-1 @ 2026-11-15T16:57:43Z: #333 og #334 koblet til måltavla (drift#336 merget)
 - Alle 13 milepælene har nå sak. #329 er oppdatert: 1 av 13 ferdig, 1 pågår, 11 ikke startet, 47 dager igjen.
 - Også merget: drift#335. QA følger videresending for hånd, så døde lenker bak 301 blir funnet (paal-1).
+
+## 2026-11-15T17:06:42Z fra paal-1: STATUS plattform#73 merget og QA-et
+plattform#73 (sorteringsvakt) QA fra mobil på 390 px mot lokal stack med falsk bro: 21/21 ok.
+- Ett trykk på et forslag gir én `flytt-dokument` med riktig fileId og til, uten filnavn.
+- Uten forslag er Flytt av til en mappe er valgt. Dobbelttrykk gir én handling. Nytt trykk etter omlasting gir «flyttes allerede».
+- Nytt snapshot oppdaterer lista, og en tom liste vises riktig.
+- Et forslag til en ukjent mappe faller bort. Filnavn med XSS og javascript:-URL gjør ingenting.
+- Et langt filnavn gir ingen vannrett rulling. Knappene er 44 px.
+- Utvikler og jurist ser verken seksjonen eller filnavnene.
+- 0 sidefeil og 0 blokkere.
+Broens side i command-center er ikke merget ennå. Til den er det, viser prod ingenting. Det er riktig. Jeg tester ende til ende igjen når bro-PR-en lander.
+
+## 2026-11-15T17:09:23Z fra paal-1: STATUS command-center#191, #192 og drift#336
+Ingen blokkere. #191 retter begge dagsrapport-funnene (verifisert). #192: broen flytter trygt (bare 00 → kart, aldri mapper, ingen sletting). Tre forslag går til feil mappe (skatteattest, forsikringsbevis, bankutskrift), sendt til tools-1. drift#336 er ok.
+
+## STATUS fra tools-1 @ 2026-11-15T17:11:40Z: alle tre oppgavene er levert
+1. **Dagsrapporten** (cc#190 og #191, merget og bygget):
+   - sc-dagsrapport.timer går kl. 20 hver kveld. Den skriver en kommentar i issuet «Dagsrapporter» i drift og legger samme tekst til i Google-dokumentet «Dagsrapporter» i 01 Selskap: https://docs.google.com/document/d/1CwUI83rEGZHuTtbwyG2c-SPGmpDdPs96Lqq1f1YSTeM/edit
+   - Stilen er som Nithus melding, og avsnittet «Måltavle 1.1.2027» (drift#329) er med.
+   - paal-1 har testet begge PR-ene uten blokkere. Første ekte rapport kommer i kveld kl. 20.
+2. **Sorteringsvakten** (plattform#73, cc#192 og cc#193):
+   - Broen sender filene i 00 Til sortering med forslag (FACT: siste runde «sendt=plattform,til-sortering», uten feil). Eieren ser dem under Last opp og trykker Flytt.
+   - Testet mot ekte Drive med broens egen kode: testfilen ble flyttet til «10 Produkter og FoU / Plattformen», et nytt forsøk gjorde ingenting ekstra, og den ble flyttet tilbake til 00. Ingen sletting og ingen deling.
+   - Alle 71 mappene i kartet ligger i den samme delte disken.
+   - paal-1: 21/21 på 390 px. Tre forslag fra paal-1 er rettet i #193 (skatteattest, forsikringsbevis og bankutskrift).
+3. **E-postvakten** (drift#306 og #309): Mercell, TendSign, Microsoft for Startups, Storebrand og Vipps er med, med stikkord der det ellers ville gitt falske treff. Den kjører fra drift-vakt.timer.
+- Prod er frisk: plattform SUCCESS b9707b0, og helsesjekken svarer 200.

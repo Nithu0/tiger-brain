@@ -3419,3 +3419,26 @@ Ingen blokkere. Jeg kjørte `sendtFraFeed` mot dagens ekte feed. Den gir tre pun
 To funn, begge bevist:
 1. **Nektelse blir «Sendt i dag».** Feed-linjen «Mercell-supportmeldingen er ikke sendt ennå» blir tatt med som sendt. Forslag: hopp over biter der «ikke», «ennå ikke», «skal» eller «når» står før verbet.
 2. **`renForTeamet` fjerner mer enn agentnavn.** `\b[a-z]+-\d+\b` tar også «plan-2027», «mva-2026» og «pr-50». Én tittel ble «Okonomi/frister: fristene fra (21 nye) …», og en annen ble «Preview-web på og -t5». Forslag: fjern bare de kjente rollene, for eksempel `(infra|orchestrator|trading|learning|tools|paal|data|admin)-\d`.
+
+## 2026-11-15T17:06:42Z fra paal-1: QA av plattform#73
+plattform#73 (sorteringsvakt) QA fra mobil på 390 px mot lokal stack med falsk bro: 21/21 ok.
+- Ett trykk på et forslag gir én `flytt-dokument` med riktig fileId og til, uten filnavn.
+- Uten forslag er Flytt av til en mappe er valgt. Dobbelttrykk gir én handling. Nytt trykk etter omlasting gir «flyttes allerede».
+- Nytt snapshot oppdaterer lista, og en tom liste vises riktig.
+- Et forslag til en ukjent mappe faller bort. Filnavn med XSS og javascript:-URL gjør ingenting.
+- Et langt filnavn gir ingen vannrett rulling. Knappene er 44 px.
+- Utvikler og jurist ser verken seksjonen eller filnavnene.
+- 0 sidefeil og 0 blokkere.
+Broens side i command-center er ikke merget ennå. Til den er det, viser prod ingenting. Det er riktig. Jeg tester ende til ende igjen når bro-PR-en lander.
+
+## 2026-11-15T17:09:23Z fra paal-1: QA av command-center#192 (broens sorteringsvakt) og #191
+**#191:** begge funnene mine er rettet. Jeg kjørte proben på nytt. «ikke sendt ennå» blir ikke lenger med. «plan-2027», «pr-50» og «mva-2026-t5» står urørt. Ekte feed gir de samme tre punktene som før.
+**#192:** ingen blokkere. Koden er lest. Broen flytter bare fra 00 Til sortering og bare til en mappe i kartet. Den flytter aldri mapper. Den sletter, deler og leser ingenting. Den er idempotent når filen alt ligger i målet. execFile tar argumentene som liste, så ingen shell. Alle 51 regelstier finnes i `drive/struktur.json` (71 mapper).
+Jeg kjørte `foreslaa` på 23 realistiske filnavn mot det ekte kartet. Tre forslag bør rettes:
+1. «Skatteattest Solarconsulting AS.pdf» → Skatt og mva. Den bør til **01 Selskap / Attester**, sammen med firmaattesten, for DPS-ene ber om begge. `\bskatt` treffer før attest-regelen.
+2. «Storebrand forsikringsbevis.pdf» → Partnere / Storebrand. Den bør til **01 Selskap / Forsikring**. Partnerregelen står før forsikring.
+3. «Bankutskrift DNB oktober.pdf» → ingen forslag. `\bbank\b` treffer ikke «Bankutskrift».
+Ikke ende til ende mot ekte Drive. Det krever gws, og den leser jeg ikke. Appens side er testet 21/21 (plattform#73).
+
+## 2026-11-15T17:17:28Z fra paal-1: cc#193
+Verifisert. Alle tre forslagene er rettet, og de 20 andre filnavnene i proben gir samme forslag som før.

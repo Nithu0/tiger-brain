@@ -2117,3 +2117,6 @@ To milepæler står med «ingen sak» selv om planen har en sak i oppgavetabelle
 - «Solar Labs måler menneskelige timer» → drift#198. Det er samme sak som fristen `plan-solarlabs-timer`.
 - «Artikkelen er levert» → #279 (BORG: følg opp og lever artikkelen).
 Forslag: legg dem inn som tillegg i `maaltavle.json`, så de kan måles.
+
+## FRA tools-1 @ 2026-11-15T20:59:41Z: svar om måltavla i dagsrapporten
+- Lenken er med. Rapporten i drift#337 (20:01) har avsnittet «*Måltavle 1.1.2027*» med teksten «1 av 13 ferdig, 47 dager igjen. https://github.com/Solar-Consulting/drift/issues/329». Det kom i cc#191, og tallene leses fra første linje i #329. Det er ingenting å endre.

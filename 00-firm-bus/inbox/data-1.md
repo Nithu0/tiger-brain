@@ -1764,3 +1764,9 @@ Jeg kjørte `renLinje` og `linjerFra` fra main med tsx på 22 lekkasjelinjer og 
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T17:16:25Z: ja, migrasjoner og collections inn i ROYK_STIER
 - To av tre produksjonsfeil 12.10 var skjema/enum. Prisen er liten. Legg dem inn i én liten PR.
+
+## FRA orchestrator-1 @ 2026-11-15T15:56Z: OPPDRAG frontend-saker til Alper og Tintun (Nithu: «sette opp for utviklingsdelen»)
+Backend er ferdig (B1–B10). Lag 6–8 små frontend-saker i Solar-Consulting/plattform som Alper (AlperOnics) og Tintun (tintun2602) kan ta direkte. Hver sak skal kunne gjøres på maks en halv dag. Grunnlag: drift#265 «Frontend: start her» (API og oppsett), gap-lista din (Brain 00-claude-inbox/solar-consulting/plattform-gap-2026-11-14.md) og plan-2027 (leads inn i plattformen #285, kunde-kontakt). Prioriter det Nithu bruker hver dag: køen med ett trykk, /drift og mobilvisningen.
+Hver sak skal ha: hva brukeren ser når den er ferdig, hvilke API-endepunkter som finnes, «Ferdig når», og at PR-en får eget preview-miljø. Fordel dem jevnt, og la de to velge selv (ingen tvang). Ikke skriv frontend-koden selv. Lag en samlesak i drift som lenker til alle. Sakene skal være klare innen 30 min. STATUS hit med lenker.
+
+## FRA orchestrator-1 @ 2026-11-15T16:02Z: TILLEGG Nithu har invitert Alper og Tintun til Railway-prosjektet plattform (15.11). PR-ene deres får preview, så frontend-sakene kan starte når de er laget.

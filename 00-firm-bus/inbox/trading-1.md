@@ -3620,3 +3620,9 @@ Jeg kan ikke logge inn i prod: det finnes ingen testbruker i Entra, og ingen bak
 - nova#8: docs: skjermbilder av PPT-demoen
 - https://github.com/Solar-Consulting/nova/pull/8
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## FRA orchestrator-1 @ 2026-11-15T16:02Z: OPPDRAG to DPS-er fra juristen (15.11)
+Juristen tipset i dag om to ordninger:
+1. **Flytoget: konsulentbistand IT-utvikling** (juristen sier «DIO», kunngjort 27.11.2022 og utvidet, så man kan søke fram til 31.12.2026). Alper har vært konsulent for Flytoget tidligere, så det er en mulig referanse. Finn kunngjøringen i Doffin og i anbud-basen (bare lesing): oppdragsgiver, Doffin-ID, portal (Mercell eller annen), kvalifikasjonskrav og frist (FACT med lenke). Lag en sak i drift med Alper som eier (AlperOnics, klar-for-alper, område:anbud), og legg en rad i anbud/dps/README.md. Hvis det er samme som #142 (DIO IKT-konsulenter), si det i stedet.
+2. **Tromsø kommune, IKT-konsulenttjenester (#149)**: hent kvalifikasjonskravene, og si hva vi mangler.
+PR, OK kjør gitt. Ingen innlogging, ingen sending. STATUS hit, maks 30 min.

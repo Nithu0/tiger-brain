@@ -14488,3 +14488,50 @@ Det er ingen blokkere. `strategi/plan-2027.md`, `finansiering/kostnadsplan-2027.
 - paal-1 har tatt QA på #296: ingen blokkere. Tittelen på #136 er rettet etter funnet. Henvisningen til Mattilsynet i README peker til Brain, ikke til repoet, så den er ikke død.
 - Drive «04 Anbud» er fortsatt tom. Ledig.
 2026-11-15T15:51:34Z fra paal-1: STATUS plattform#52 (tools-1, CI) merget og QA-et: check og e2e grønne, logikken holder, docs-grenen ubevist til neste docs-PR. 0 blokkere.
+
+## STATUS fra tools-1 @ 2026-11-15T15:54:03Z: Drive-strukturen er laget, filene er lastet opp og docs-noop i CI er merget
+- Roten: https://drive.google.com/drive/folders/0AKhBtg58BTliUk9PVA
+- «Les meg: mappestruktur»: https://docs.google.com/document/d/1UtlrnErUbeH-47nVg-tRhZHvE4HP-TspWtYAPlE26Lw/edit
+- 71 mapper etter lista di, hvorav 62 nye, inkludert NY «10 Produkter og FoU». 00–09 har beholdt sine ID-er. Ingen sletting, deling eller endring av medlemmer.
+- Alle mappe-ID-ene og lenkene til filene: Brain/00-claude-inbox/solar-consulting/2026-11-15_drive-struktur-mappe-ider.md
+- Lastet opp:
+  - 01 Selskap / Strategi og planer: begge strategi-PDF-ene (uendret), og plan-2027, kostnadsplan-2027 og stotteplan-2027 som Google-dokumenter.
+  - 04 Anbud / Dynamiske innkjøpsordninger / Brreg sammensatte team: TenderReport-PDF-en.
+  - 04 Anbud / Dynamiske innkjøpsordninger / Brreg sikkerhet og kvalitet: Doffin-HTML-en om sikkerhets- og kvalitetsstyring. Den nevner Brreg.
+  - Zone.Identifier-filene (Windows-metadata) er ikke tatt med.
+- 00 Til sortering: ingenting er flyttet. Den ene er sc-bros testfil (sletter ikke). Den andre er en PhD-skisse der det er uklart om den hører under FoU eller Søknader. Begge står i Brain-filen.
+- 03 Økonomi: ingen filer er flyttet, bare undermapper laget. Kvitteringer fra plattformen går fortsatt til roten av 03 (Fiken-flyten er uendret).
+- Sjekket etterpå: alle ti ID-ene i drift/drive/mapper.json peker på riktig mappe, og sc-bro går uten feil.
+  - ASSUMPTION: vakten til admin-1 på «04 Anbud» virker, fordi ID-en er uendret. Jeg fant ikke skriptet, så admin-1 bør bekrefte.
+- plattform#52 (no-op i CI for docs): paal-1 testet uten blokkere. Grenen med bare docs blir bevist av neste docs-PR.
+
+## STATUS fra trading-1 @ 2026-11-15T16:05Z — B1 verifisert i prod (første ekte deploy-trykk)
+- Broen: `deploy 4577e856-…: utfort` kl. 16:58:34 (CET). Merket ble skrevet 16:58:23 med forrige = `dpl_BFrEk…` (renseri i prod, laget 14.11).
+- Vercel: ny prod-deploy `dpl_5hbWQ…` i `solar-consulting-as/renseri` laget 16:58:30, Ready. `utfort` ble meldt først da den nye id-en var sett, slik det er laget (cc#179/#183).
+- Ingen dobbel kjøring: én redeploy, ett merke.
+- Ved siden av: `veldora-web` fikk en prod-deploy 16:56:08 som IKKE kom fra broen (ingen handling i den runden). Trolig en push eller Vercel direkte. Bare til info.
+- Nettet har hikket i ettermiddag: enkeltnøkler har feilet med `nett` i én runde om gangen, og kontakten med appen falt én runde kl. 16:54. Broen tok seg inn igjen selv hver gang. Ingen tiltak.
+- Fiken: venter fortsatt på det første ekte `til-fiken`.
+
+## FRA data-1 @ 2026-11-15T16:15Z: STATUS frontend-saker klare (8 i plattform + samlesak drift#299)
+Samlesak: https://github.com/Solar-Consulting/drift/issues/299. Alle har etiketten `frontend` (ny), ingen er satt som ansvarlig, og ingen er @-nevnt. De to velger selv. Forslaget fordeler fire på hver:
+
+| Sak | Hva | Forslag |
+|---|---|---|
+| plattform#53 | /drift: den ordentlige skjermen for redeploy og restart (bekreftelse, bestillinger med status) | Alper |
+| plattform#54 | Deploylogg: liste og logg for feilede deployer (B2-API-et, «ukjent» med årsak) | Tintun |
+| plattform#55 | Eierkøen på mobil: Fullfør på ett trykk, merke i fanelinjen | Alper |
+| plattform#56 | Beslutninger på mobil: Avgjør på ett trykk | Tintun |
+| plattform#57 | Mobilvisning: alle sider på 390 px, e2e-sjekk av scrollWidth | Alper |
+| plattform#58 | Oversikt: ukjent med årsak, foreldet tjeneste, aldri grønt | Tintun |
+| plattform#59 | Kvittering fra mobilkameraet på /opplasting (to trykk) | Alper |
+| plattform#60 | Leads: klikkbar skisse av /leads med oppdiktede data, grunnlag for drift#285 | Tintun |
+
+Hver sak har «hva brukeren ser», API og data (ruter og snapshots fra docs/API.md), «Ferdig når», preview per PR og reglene. Prioritet i samlesaken: #55, #57, #53 og #54.
+
+To ting å følge opp:
+- **Railway-tilgang:** PR-er fra personer som ikke er med i Railway-prosjektet, får ikke eget preview-miljø (står i API.md). Jeg vet ikke om Alper og Tintun er lagt til. Står det ikke, er det operatørens jobb. Sakene ber dem si fra i #299.
+- **Ingen varsling:** de vet ikke om sakene før noen sier fra, fordi ingen ble @-nevnt (regelen om ingen invitasjoner og e-post). Vil du at de skal få varsel, må du eller Nithu nevne dem i #299.
+
+## FRA data-1 @ 2026-11-15T16:20Z: RETTELSE til STATUS 16:15Z
+- Railway-punktet er ute av verden: tillegget ditt fra 16:02Z sier at Nithu inviterte Alper og Tintun 15.11. Linjen i sakene («si fra i #299 hvis det ikke kommer preview-lenke») står igjen som en reserve. Varslingspunktet gjelder fortsatt.

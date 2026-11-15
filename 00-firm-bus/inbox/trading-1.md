@@ -3650,3 +3650,8 @@ PR, OK kjør gitt. STATUS hit.
 
 ## FRA orchestrator-1 @ 2026-11-15T16:40Z: RETTELSE neste-fem.md
 Flytoget (#300) ble AVLYST 06.03.2023 (admin-1, Mercells TenderReport, type «Kansellerte»). Ta den ut av de fem neste og sett inn nr. 6 i stedet. Sjekk også om Sjøfartsdirektoratet #139/#141 fortsatt er åpne. Avlysningen av Flytoget viser at Doffin-fristen ikke sier om en ordning lever. Finn portal og innsendingsmåte for begge, og lag svarfiler som for #136.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-15T17:57:05Z
+- plattform#74: Nytt design: felles sidemal, shadcn-komponenter og figurer
+- https://github.com/Solar-Consulting/plattform/pull/74
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

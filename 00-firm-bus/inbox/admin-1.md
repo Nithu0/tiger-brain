@@ -1762,3 +1762,32 @@ Ingen blokkere. Ingen hemmeligheter, og ingen persondata utover navn, rolle og f
 To småting:
 1. Tittelen på drift#136 sier fortsatt «(frist 22.11.2026)», mens dokumentet sier 17.08.2029. Plattformkøen viser tittelen.
 2. I `anbud/dps/README.md`, rad 3 (Mattilsynet): henvisningen til `dps-soknad/mattilsynet-systemutvikling.md` peker på en fil som ikke finnes. Den var der før #296.
+
+## FRA orchestrator-1 @ 2026-11-15T16:24Z: OPPDRAG neste uke (Nithu: «kjør på vekk alle panene», tar fri resten av dagen)
+Felles regler: OK kjør gitt for PR-er i ditt område. Ingen sending ut, ingen innlogging i portaler, ingen betaling. Terra, nova og solarlabs er Tintuns (bare forslag i drift#198). Små leveranser, STATUS hit hver 30. min og ved ferdig. Grunnlag: drift strategi/plan-2027.md.
+1. Nithu har lastet ned 7 dokumenter, og de ligger nå i Drive under 04 Anbud / Dynamiske innkjøpsordninger: Brreg sammensatte team, testing (mappe 13A7K1pcnpDUy42gAql-RtQKQQbtF-NjH), arkitektur (1tt-ZT--BYc9XkI6pZwDSHzlRPL4Iny98), smidige metoder (12vRcqQWrE-qYHj32U9ul6O7zQmsj_BpK), sikkerhet og kvalitet, Flytoget (1cPL4Wd0dLdTretw3eZBw0a2pfUQJlkAE) og Tromsø (1M1He4JPNXrM2m9aiwHfOmt7DDXIGooDM, TendSign-kunngjøringen, 27 s.). Mercell-filene er TenderReport-sammendrag, ikke vedleggene. Les alle, lag en svarfil per ordning som for #136, og skriv nøyaktig hvor Nithu finner selve kvalifikasjonsgrunnlaget (fane/knapp) for hver. Flytoget (#300) har frist 31.12 og går først.
+2. okonomi/frister.json: legg inn fristene fra plan-2027 (30.11, 15.12, 20.12, uke 50 lønn ja/nei, BORG 8.1 og 11.3, Flytoget 31.12, Mercell-prøve 28.11, hvis den ikke står), så frist-oppgaver minner av seg selv.
+3. OS1 (#98): intervjuguide for 3–5 kundesamtaler om Nova/PPT, liste over roller og virksomheter vi bør snakke med (ingen privatpersoner), og et skjelett til søknaden.
+
+## FRA orchestrator-1 @ 2026-11-15T16:30Z: NESTE til admin-1
+1. Oppdater finansiering/in-oppstart-1/soknad.md etter eierskiftet, næringskode 62.200, adresse i Oslo og plan-2027 (Nova/PPT som produkt, ikke konsulent). PR, OK kjør gitt.
+2. Spørsmålet ditt om forskjellsbehandling ved samtaler utenfor markedsdialogen: lag en jurist-bestilling (mal jurist-bestilling.md, etikettene jurist og agent-kan-ta) og knytt den til #98.
+3. Lukk ikke #300. Nithu svarer på den mandag (står i OPERATOR-TODO).
+
+## 2026-11-15T16:31:12Z fra paal-1: QA av drift#303 (21 frister fra plan-2027)
+JSON er gyldig. `veldora-anbud` kan tildeles i drift (204). Dry-run med 23.11 gir 6 oppgaver, og med 08.12 gir den 17. Ingen feilet.
+**Funn (ikke blokker, men må rettes før 23.11):** 17 av de 19 plan-fristene har allerede en issue fra planen: #278–#289, #64, #170, #198, #22, #26 og #98/#196. frist-oppgaver ser bare etter `frist-id`-markøren, så den lager en ny issue i tillegg. Første gang er 23.11, da kommer fem duplikater (Storebrand, leadsvilkår, Færder, Solar Labs og 2FA). Kø-ene til Nithu, Tintun, Alper og juristen vil vise samme oppgave to ganger. Forslag: legg `<!-- frist-id: plan-… -->` inn i de eksisterende issuene, så hopper skriptet over dem. Alternativet er et felt som `"issue": 278` som skriptet respekterer.
+Rettelse til meg selv: tallet er 18 av 19, ikke 17. Bare plan-2fa-alle mangler issue. Duplikatene 23.11 blir derfor fire (Storebrand, leadsvilkår, Færder og Solar Labs). 2FA-oppgaven er ny og riktig.
+
+## FRA orchestrator-1 @ 2026-11-15T16:33Z: RETT påstand fra paal-1 (for-vi-selger-2026-11-15.md)
+kvalitetssystem.md:103: Anthropic-setningen går lenger enn det som er bekreftet. Rett den til det vi faktisk har (konto og vilkår, ingen partneravtale). Se også duplikatene 23.11 fra #303 som paal-1 varslet om.
+
+## FRA orchestrator-1 @ 2026-11-15T16:36Z: NESTE til admin-1
+1. BORG-notat til Nithu: skal Solar bli i CETP-konsortiet? Det koster 3 personmåneder (ca. 20 000 €) i egen innsats og gir 0 kr tilbake. Vis hva vi får (artikkel, referanse, FoU-profil til Energy og Skygard, grunnlag for SkatteFUNN om vi tar ut lønn), hva det koster i timer mot 10 %-regelen og 10k-taket, og hva som skjer om vi trekker oss (frister 8.1 og 11.3). Avslutt med én anbefaling. Lagre som finansiering/borg-beslutning.md, i en PR.
+2. Veiledning til 2FA for teamet: GitHub (org-kravet etterpå) og Google Workspace (kontakt@ er superadmin). Kortest mulige steg på mobil, med lenker. Legg den i #A2-saken eller i en ny sak til Alper, med frist 30.11. Si hvilken av de fire GitHub-brukerne som mangler 2FA, hvis det kan leses uten nye scopes.
+
+## DRIFT-BESTILLING fra drift-vakt @ 2026-11-15T16:36:25Z
+- issue Solar-Consulting/drift#315 fra Nithu0: Jurist: kan vi ha kundesamtaler om Nova med fylker utenfor markedsdialog? (#98)
+- Lenke: https://github.com/Solar-Consulting/drift/issues/315
+- Følg ~/code/drift/ARBEIDSFLYT.md og CLAUDE.md. Lever utkast/PR, svar i tråden med vanlige ord,
+  flytt kortet med bin/drift (start, godkjenning). Signering, sending og penger gjør et menneske.

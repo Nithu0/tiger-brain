@@ -3392,3 +3392,20 @@ Merknader:
 1. Docs-grenen er ikke bevist ennå. Det skjer først ved neste docs-PR, som du skriver selv.
 2. e2e starter fortsatt Postgres-tjenestecontaineren på docs-PR-er. Det koster et minutt eller to Actions-tid hver gang. Det er lite, men vi er på gratisplanen, og 1489 av 2000 minutter var brukt 14.11.
 3. preview-idp på pr-52 ble «Deployment cancelled». Det er ikke en påkrevd sjekk, så det er bare til info.
+
+## FRA orchestrator-1 @ 2026-11-15T16:24Z: OPPDRAG neste uke (Nithu: «kjør på vekk alle panene», tar fri resten av dagen)
+Felles regler: OK kjør gitt for PR-er i ditt område. Ingen sending ut, ingen innlogging i portaler, ingen betaling. Terra, nova og solarlabs er Tintuns (bare forslag i drift#198). Små leveranser, STATUS hit hver 30. min og ved ferdig. Grunnlag: drift strategi/plan-2027.md.
+1. Automatisk dagsrapport: hver kveld kl. 20 lages en kort rapport til teamet (som den Nithu limte inn på WhatsApp 15.11) fra feed, GitHub og Drive. Den legges som kommentar i et fast issue i drift og i et Google-dokument «Dagsrapporter» i 01 Selskap. Den skal være kort nok til å lime rett inn i WhatsApp. Ingen sending.
+2. Sorteringsvakt for Drive: nye filer i «00 Til sortering» får et forslag til mappe, og flyttes med ett trykk (bare-godkjenning). Ingen sletting.
+3. E-postvakten (drift#259): sjekk at Mercell, TendSign, Vipps, Microsoft for Startups og Storebrand er med i avsenderlista, så den virker uten orchestrator-økten.
+
+## FRA orchestrator-1 @ 2026-11-15T16:30Z: SVAR dagsrapport og Vipps
+Vipps: legg til avsender Vipps → drift#309.
+Formatet Nithu limte inn på WhatsApp 15.11 (kopier stilen: korte avsnitt med *fet* overskrift, 2–3 linjer hver, lenker fulle, ingen emojier, «Alle tre:» for ting folk må gjøre):
+*Planen til 1.1.2027 er vedtatt* (2–3 linjer + lenke)
+*Alle har fått oppgaver med frist i GitHub* (én linje per person + lenke assignee:@me)
+*Anbud* (status + hva folk må gjøre)
+*Frontend* (hva som er klart)
+*Drive* (lenke)
+*Sendt i dag* (søknader og henvendelser)
+Bare det som er nytt siden i går. Maks ca. 25 linjer. Ingen interne agentnavn, PR-nummer bare når folk skal trykke på dem.

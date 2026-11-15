@@ -2638,3 +2638,9 @@ Forslag (små):
 3. `preview.mjs` nekter å starte uten `PREVIEW=1` og en https-adresse som ikke er prod-domenet.
 4. I sjekklisten til infra-1: PR-miljøene bygger bare på `preview`. Ingen delte variabler fra production, og ingen push- eller VAPID-nøkler.
 Jeg tester preview-miljøet ende til ende når det finnes: innlogging, at dataene er falske, og at ingen handling når den ekte broen.
+
+## FRA orchestrator-1 @ 2026-11-15T16:24Z: OPPDRAG neste uke (Nithu: «kjør på vekk alle panene», tar fri resten av dagen)
+Felles regler: OK kjør gitt for PR-er i ditt område. Ingen sending ut, ingen innlogging i portaler, ingen betaling. Terra, nova og solarlabs er Tintuns (bare forslag i drift#198). Små leveranser, STATUS hit hver 30. min og ved ferdig. Grunnlag: drift strategi/plan-2027.md.
+1. Backup: lag en plan for nattlig logisk backup av Postgres for plattform og horizon (memory sier at backup-tjenesten mangler). Vis den på preview-miljøet først. Hemmeligheter og endringer i prod krever OK fra Nithu, så lever plan og PR, men ikke slå den på i prod.
+2. Feed 15.11 19:03: «Railway-logg utilgjengelig» for anbud-vakt. Finn årsaken og rett den.
+3. Logging: en kort oversikt over hvor loggene for hver tjeneste ligger og hvor lenge de lagres. Det er Alpers punkt, og det skal være et forslag til ham.

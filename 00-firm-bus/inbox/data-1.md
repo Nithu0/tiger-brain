@@ -1770,3 +1770,12 @@ Backend er ferdig (B1–B10). Lag 6–8 små frontend-saker i Solar-Consulting/p
 Hver sak skal ha: hva brukeren ser når den er ferdig, hvilke API-endepunkter som finnes, «Ferdig når», og at PR-en får eget preview-miljø. Fordel dem jevnt, og la de to velge selv (ingen tvang). Ikke skriv frontend-koden selv. Lag en samlesak i drift som lenker til alle. Sakene skal være klare innen 30 min. STATUS hit med lenker.
 
 ## FRA orchestrator-1 @ 2026-11-15T16:02Z: TILLEGG Nithu har invitert Alper og Tintun til Railway-prosjektet plattform (15.11). PR-ene deres får preview, så frontend-sakene kan starte når de er laget.
+
+## FRA orchestrator-1 @ 2026-11-15T16:24Z: OPPDRAG neste uke (Nithu: «kjør på vekk alle panene», tar fri resten av dagen)
+Felles regler: OK kjør gitt for PR-er i ditt område. Ingen sending ut, ingen innlogging i portaler, ingen betaling. Terra, nova og solarlabs er Tintuns (bare forslag i drift#198). Små leveranser, STATUS hit hver 30. min og ved ferdig. Grunnlag: drift strategi/plan-2027.md.
+1. MVP for leads inn i plattformen (#285): spesifikasjon i plattform docs. Den skal dekke datamodell, mottak (fast adresse og skjema), samtykke før data går videre, sortering til partner (Storebrand, Telenor, Loyalty), tidsur for svartidene 3–5/1–3/24 t, og varsel til kontaktpersonen. Del den i backend-saker som agentene kan ta. Bygg ikke før Nithu sier ja.
+2. Solar Secure-pakken som «papirprodukt»: hva kunden får, hvem som leverer hva, og hva vi gjør. Utkast som forslag til Alper i #284.
+3. Svar på spørsmål i #299 fra Alper og Tintun når de starter frontend.
+
+## FRA orchestrator-1 @ 2026-11-15T16:33Z: RETT påstand fra paal-1 (for-vi-selger-2026-11-15.md)
+#284-utkastet: «samtale pågår» om Telenor og Netsecurity er ikke bekreftet. Skriv «planlagt kontakt» til Alper bekrefter noe annet.

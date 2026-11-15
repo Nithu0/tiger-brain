@@ -159,3 +159,30 @@ Til 80 % mangler 2–3 saker. Mest realistisk er å velge en tjeneste for BankID
 | #7 | HMS-egenerklæring | Nithu + alle tre | Fylle fire felt, alle tre signerer verneombudsavtalen | c (admin-1) | Signatur fra alle tre |
 | #6 | Regnskap og øk. dok. | Nithu | Laste ned årsregnskap 2025 som PDF fra DNB Regnskap | c (admin-1) | Krever innlogging i DNB Regnskap |
 | #1 | Ansvarsforsikring | Nithu | Sende tilbudsforespørsel til 2–3 selskaper, eller «vent» | b (admin-1) | Teksten er klar, bare send eller velg |
+
+## Oppdatering 15.11: det som ble gjort for hånd i dag, og de 5 som gir mest
+
+Kilde: feed.md 15.11 og sakene den viser til. Målt med regelen om `bare-godkjenning`: bare et godkjenningstrykk er igjen for mennesket.
+
+**Gjort for hånd i dag (agenter og mennesker)**
+| Hva | Hvem | Saker |
+|---|---|---|
+| DPS-er undersøkt én og én: Brreg, Flytoget og Tromsø (krav, frister, plattform) | trading-1, admin-1 | #136, #149, #297, #300, #301 |
+| Mercell: tilgang ordnet og frist lagt inn | Nithu (innlogging), admin-1 | #136, #295 |
+| Drive-strukturen bygd (71 mapper), filer lastet opp og sortert | tools-1 | — |
+| QA av hver PR: eksterne lenker, åpne saker, persondata | paal-1 | #295, #296, #301 |
+| Registervakten kjørt for hånd, fordi GitHubs tidsplan var 7 timer forsinket | admin-1 | #208 |
+| Vipps-søknad, Railway-invitasjon, GitHub Team | Nithu | c (betaling og innlogging) |
+
+**De 5 som gir mest**
+| # | Automatisering | Fjerner | Trykket som gjenstår | Avhenger av | Omfang |
+|---|---|---|---|---|---|
+| 1 | **DPS-vakt:** finner nye kunngjøringer som passer oss (CPV og stikkord), lager en sak med krav og frist, og fyller ut svarutkast fra svarbiblioteket (`anbud/dps/`) | Manuell undersøkelse av hver DPS (3 i dag) | Nithu: «søk» (innsendingen i Mercell eller TendSign er c) | Doffin-nøkkel (#18, c), eller lesing fra offentlige sider | 1 dag |
+| 2 | **QA-sjekk i drift-CI:** eksterne lenker (200), `#N`-referanser finnes, mønstre for persondata (fnr, telefon, privat e-post), og regnskapstall i issues og filer | paal-1 sin faste manuelle sjekk på hver PR | Ingen. PR-en er grønn eller rød | Actions-minutter (lite) | 0,5 dag |
+| 3 | **Drive-sortering:** broen foreslår mappe i 00–09-strukturen for nye filer (etter navn og type) og flytter når noen trykker. Aldri sletting | Manuell sortering og opplasting | «Flytt» i plattformen | Mappe-ID-lista til tools-1 | 1 dag |
+| 4 | **Vakter som ikke er avhengige av GitHubs tidsplan:** registervakten og fristvakten kjøres også fra drift-vakt-timeren på PC-en én gang i døgnet, med samme merke mot dobbel skriving | Manuelle kjøringer når tidsplanen er forsinket | Ingen | — | 1–2 t |
+| 5 | **Mercell- og innkjøpsoppfølging:** frister for fornyelse og opptak, og «ny melding i Mercell» via e-postvakten (avsender mercell.com) | At noen må huske å sjekke Mercell | Nithu åpner meldingen | E-postvakten (#259) | 1 t |
+
+Dagsrapporten er utelatt med vilje. Den er alt fordelt i oppdraget for neste uke (16.11).
+
+Anbefalt rekkefølge: 4 og 5 først (små, og bruker det som alt finnes), så 2, så 1 og 3. learning-1 kan ta 4, 5 og 2 med det samme hvis orchestrator-1 sier ja.

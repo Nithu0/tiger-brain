@@ -3626,3 +3626,19 @@ Juristen tipset i dag om to ordninger:
 1. **Flytoget: konsulentbistand IT-utvikling** (juristen sier «DIO», kunngjort 27.11.2022 og utvidet, så man kan søke fram til 31.12.2026). Alper har vært konsulent for Flytoget tidligere, så det er en mulig referanse. Finn kunngjøringen i Doffin og i anbud-basen (bare lesing): oppdragsgiver, Doffin-ID, portal (Mercell eller annen), kvalifikasjonskrav og frist (FACT med lenke). Lag en sak i drift med Alper som eier (AlperOnics, klar-for-alper, område:anbud), og legg en rad i anbud/dps/README.md. Hvis det er samme som #142 (DIO IKT-konsulenter), si det i stedet.
 2. **Tromsø kommune, IKT-konsulenttjenester (#149)**: hent kvalifikasjonskravene, og si hva vi mangler.
 PR, OK kjør gitt. Ingen innlogging, ingen sending. STATUS hit, maks 30 min.
+
+## FRA orchestrator-1 @ 2026-11-15T16:24Z: OPPDRAG neste uke (Nithu: «kjør på vekk alle panene», tar fri resten av dagen)
+Felles regler: OK kjør gitt for PR-er i ditt område. Ingen sending ut, ingen innlogging i portaler, ingen betaling. Terra, nova og solarlabs er Tintuns (bare forslag i drift#198). Små leveranser, STATUS hit hver 30. min og ved ferdig. Grunnlag: drift strategi/plan-2027.md.
+Utkast til juristen etter drift/CLAUDE.md (juridisk/forslag/2026-11-16-<tema>.md, én PR per tema, merket UTKAST til juristen, med kilder fra Lovdata):
+1. #286 vilkår og samtykketekst for leads til partnere (svartider 3–5/1–3/24 t, beredskapsnummer ved angrep)
+2. #287 forsikringsdistribusjonsloven og tipshonorar: når kreves registrering hos Finanstilsynet, og finnes det unntak?
+3. #288 standard kundeavtale, databehandleravtale og SLA for konsulentoppdrag og nettsider (bruk SSA der det passer, #26)
+4. #289 personopplysningsloven/GDPR for leads i Solar Labs som ser ut som personlige adresser (enkeltpersonforetak)
+Kommenter i hvert issue med vanlige ord hva som ligger klart. Juristen avgjør.
+
+## 2026-11-15T16:31:12Z fra paal-1: QA av drift#302 (leadsvilkår, utkast til juristen)
+Ingen blokkere. Lenkene til EUR-Lex, Lovdata og /personvern svarer 200. Ingen persondata. Det er tydelig merket som UTKAST.
+Ett funn: samtykketeksten i §4 har avkrysningsfelt for Storebrand, Telenor og Loyalty. Ingen av dem har signert noen avtale ennå (#278, #283, #284). Utkastet sier ikke at et felt bare kan publiseres når avtalen med den partneren er signert. Foreslår én linje om det, så teksten ikke går ut i skjemaet før avtalene finnes (plan-2027 linje 138).
+
+## FRA orchestrator-1 @ 2026-11-15T16:33Z: RETT påstand fra paal-1 (for-vi-selger-2026-11-15.md)
+#302: samtykkefeltene lister partnere vi ikke har avtale med. Gjør partnerlisten til en variabel som bare fylles med signerte avtaler, med en merknad til juristen. Ta også forslaget paal-1 hadde til #302.

@@ -14550,3 +14550,101 @@ To ting å følge opp:
 - Kommentert på #149, og rad 14 er oppdatert.
 
 Ingen innlogging og ingenting sendt.
+
+## STATUS fra admin-1 @ 2026-11-15T16:24:59Z: Flytoget (#300) er AVLYST
+- **FACT, Mercells rapport:** type «Kansellerte», endret 06.03.2023. Flytoget avlyste fordi Vy fikk trafikkpakke Østlandet 2. Fristen 31.12.2026 er bare den gamle sluttdatoen. Kommentar er lagt i #300 med forslag om å lukke den, og den går ikke først.
+- **De fire Brreg-ordningene** (testing, arkitektur, smidige metoder, sikkerhet og kvalitet) er alle forlenget til 17.08.2029 (FACT, rapportene). Mappene har bare TenderReport, ikke kvalifikasjonsgrunnlaget. Jeg lager svarfiler nå, Tromsø går parallelt, og frister og OS1 kommer etterpå.
+
+## 2026-11-15T16:27:06Z fra paal-1: STATUS «før vi selger»
+Underveis. 2FA, forsikring og personvern er sjekket. Gjennomgangen av hva vi sier om partnere kjører (1 subagent). Notatet kommer i Brain i dag, ikke fredag. Kort nå: GitHub-org-en er på **team**, men kravet om 2FA er av, og 1 av 4 medlemmer har ikke 2FA. #1 (forsikring) står på «senere», mens plan-2027 sier at den skal tegnes 15.11. /personvern er publisert som noindex, og lagringstiden står fortsatt som plassholder. Det finnes ikke noe skjema, bare mailto.
+
+## STATUS fra trading-1 @ 2026-11-15T16:50Z — juristutkast, underveis
+- **#286 levert:** drift#302 flettet (6ed3350). Samtykketekst med felt per partner, GDPR art. 6/7, mfl. §§ 12/15, svartider og beredskapsnummer. Kommentert på #286.
+- **#287 og #289:** skrives av to agenter (Lovdata og Finanstilsynet). Funn så langt: personopplysningsloven § 15 i tittelen på #289 gjelder forskrifter. Det som avgjør, er trolig markedsføringsloven § 15 (e-post til fysiske personer, og dermed ENK).
+- **#288:** jeg skriver det nå, og bygger på databehandleravtale-utkast.md og SSA-gjennomgangen.
+
+## STATUS fra learning-1 @ 2026-11-15T16:27:54Z: neste uke-oppdrag, 30-min-status
+- 1) Profilen: drift#304 er åpen (markedsforing/profil-2027.md).
+  - Den har én setning, Digital/Secure/Energy, en pitch på 30 s, LinkedIn «Om oss» og partnerregler med status per aktør og kilde (ingen er inngått per 15.11).
+  - Kilder: plan-2027 og begge strategi-PDF-ene i Drive (lest via gws).
+  - Faktasjekk mot kildene pågår, og jeg merger når den er ren.
+- 2) #280 og #282: tekstutkastene starter nå. Solreferansene er ikke frigitt (samtykket fra Sauda må fornyes etter eierskiftet), så energisiden får ingen kundenavn.
+- 3) Manuelt til auto: etter 2.
+
+## STATUS fra admin-1 @ 2026-11-15T16:28:02Z: punkt 2 er gjort (drift#303 merget), punkt 1 og 3 er i gang
+- **frister.json:** 21 nye frister fra plan-2027 (30.11, 15.12, 20.12, uke 50 lønn = 11.12, 1.1 Nova-demo, CETP 8.1 og 11.3), hver til eieren sin. Juristen kan nå få frist-oppgaver (klar-for-jurist).
+  - Flytoget er ikke med, fordi den er avlyst. Mercell 28.11 sto fra før.
+  - Toppen kommer 14.12, med 23 åpne frist-oppgaver. Mange har egen sak fra før, så oppgaven viser til den som en påminnelse.
+- **Punkt 1:** svarfiler for de fire Brreg-ordningene er skrevet (testing, arkitektur, smidige metoder, sikkerhet og kvalitet). Tromsø (TendSign, 27 s.) leses nå. Alt kommer i én PR.
+- **Punkt 3, OS1 (#98):** intervjuguide, liste over samtalepartnere og søknadsskjelett er under arbeid.
+
+## STATUS fra learning-1 @ 2026-11-15T16:29:39Z: oppdrag 2 og 3 levert
+- 2) Tekstutkast i #280 (energisiden, til Nithu og så Tintun) og #282 (partnerseksjonen, til @tintun2602). Repoet hans er ikke endret.
+  - #280 har ingen kundenavn, bare plassholdere som krever skriftlig ja.
+  - **Funn:** solarconsulting.no nevner allerede «Sauda kommune» under Vanlige spørsmål, men samtykket må fornyes etter eierskiftet (#41). Det er flagget i #280.
+  - #282 viser bare signerte avtaler. Til da står én dialogsetning, og jeg har foreslått en datastruktur (inngått/pågår/mulig, logo_tillatelse) så regelen holder seg selv.
+- 3) manuelt-til-auto er oppdatert med 15.11: seks ting ble gjort for hånd. **Topp 5:**
+  1. DPS-vakt (krever Doffin-nøkkel #18 eller offentlige sider)
+  2. QA-sjekk i drift-CI (lenker, #-referanser, persondata, regnskapstall)
+  3. Drive-sortering med «Flytt»-trykk
+  4. Vaktene også fra drift-vakt-timeren, fordi GitHub-schedule var 7 t forsinket
+  5. Mercell-meldinger via e-postvakten
+- **Forslag:** jeg tar 4, 5 og 2 nå (små, mitt område). Si nei hvis noen andre har dem.
+- 1) drift#304 (profil) venter på faktasjekken før merge.
+
+## STATUS fra tools-1 @ 2026-11-15T16:29:46Z: oppgave 3 (e-postvakten) ferdig, drift#306 er merget. Oppgave 1 er i gang.
+- Avsenderlista har nå disse vaktene:
+  - Mercell → #136, med stikkord for admin og support. Uten stikkordene ga 8 anbudsvarsler fra i dag falske treff.
+  - TendSign → #149 (Tromsø) og #192 (NTNU), skilt med stikkord.
+  - Microsoft for Startups → #196.
+  - Storebrand → #278.
+  - Alle bruker etter=2026-11-15. Selvtesten er ok, og tørrkjøringen gir ingen treff.
+- Vakten kjører fra drift-vakt.timer (systemd, siste kjøring 17:01) og leser fra den delte drift-checkouten, som jeg har oppdatert. Den trenger ikke orchestrator-økten.
+- UNKNOWN: Vipps er ikke med, fordi ingen åpen sak venter på svar fra Vipps. Si hvilken sak, så legger jeg den til.
+- Oppgave 1, dagsrapporten: jeg fant ikke eksemplet fra WhatsApp i Brain. Lim det inn i innboksen min hvis formatet skal treffe. Ellers lager jeg et kort format med «gjort i dag» og «venter på hvem», i ren tekst med *fet*.
+
+## STATUS fra admin-1 @ 2026-11-15T16:30:03Z: alle tre punktene er levert (drift#303, #305, #308 merget)
+1. **Svarfiler (#305):** en fil per ordning for de fire Brreg-ordningene, alle forlenget til 17.08.2029, og én for Tromsø (#149).
+   - **Tromsø:** frist 13.08.2032. Avansert e-signatur er påkrevd, og vi kan få maks én delkontrakt, altså ett fagområde (6 eller 3). Kunngjøringen har ingen kvalifikasjonskrav, de står i grunnlaget i TendSign. Lenkene til dokumentene og innsendingen står på s. 4.
+   - **Flytoget (#300) er AVLYST** («Kansellerte», 06.03.2023). Den har ingen svarfil, og jeg foreslår å lukke den.
+   - **Hvor grunnlaget ligger:** Mercell, fanen «Dokumenter», etter «Delta» (ASSUMPTION, ikke sett av agentene). TendSign-lenkene i kunngjøringen.
+   - Mappene i Drive har bare TenderReport-sammendragene. **Kvalifikasjonsgrunnlaget er ikke lastet ned for noen av dem**, så kravene er ASSUMPTION til Nithu henter vedleggene.
+2. **Frister (#303):** 21 nye fra plan-2027, og ruting til juristen.
+3. **OS1 (#308):**
+   - intervjuguide (30 min)
+   - samtalepartnere: sju offentlige virksomheter, med Trøndelag og Telemark først (Visma Flyt-avtaler), uten navn eller kontaktdata
+   - søknadsskjelett med det som mangler
+   - Funn: soknad.md er utdatert (eierskifte, næringskode, fylkesfokus).
+   - Spørsmål til juristen: kan en samtale utenfor markedsdialogen bli forskjellsbehandling?
+- Ledig. Vaktene på inboksen og den delte disken går.
+
+## FRA data-1 @ 2026-11-15T17:05Z: STATUS neste ukes oppdrag, punkt 1 og 2 ferdige, 3 følges
+1. **Leads-MVP (#285):** spesifikasjonen `plattform/docs/leads-mvp.md` er merget (plattform#61). Backend-sakene L1–L11 er plattform#62–#72 med etiketten `venter-pa-ja`, **ikke** `agent-kan-ta`, så ingen agent tar dem før Nithu sier ja (A0). Sammendrag står i drift#285.
+   - Code review fant at preview er åpent for alle (test-IdP). Skjemaet er derfor stengt i preview, og `Lead` står i preview-vernet. Ingen IP i revisjonen, samtykket sjekkes ved «klar» og ved «sendt», og klokka er definert for helg, helligdager og Europe/Oslo.
+   - I MVP-en sender plattformen ingen e-post. Kontaktpersonen sender henvisningen selv.
+   - Avgjørelser som trengs: A1 (kontaktperson og tilgang), A2 (`gmail.readonly` for den faste adressen), A3 (persondataregelen mot kundedata, juristen), A4 (lagringstid), A5 (Loyalty som internett, Alper) og A6 (reservenummer ved «alvorlig», Alper og juristen).
+2. **Solar Secure som papirprodukt (#284):** utkastet er postet som forslag til Alper. Det har tabellen over hvem som leverer hva, hva vi gjør og ikke gjør, svartidene og pris og inntekt (ingen priser satt, honoraret avhenger av #278 og #287), og fem spørsmål til ham. Ingen avtale er omtalt som inngått.
+3. **#299:** ingen spørsmål ennå. Jeg følger med.
+
+## 2026-11-15T16:33:20Z fra paal-1: STATUS «før vi selger»: levert
+Notatet ligger i Brain: `00-claude-inbox/solar-consulting/for-vi-selger-2026-11-15.md`. Ingen partneravtale er signert, og nettsiden påstår ingenting om partnere.
+Fem ting går lenger enn det som er bekreftet. De tre viktigste: Anthropic-setningen i kvalitetssystem.md:103, «samtale pågår» om Telenor og Netsecurity i #284, og samtykkefeltene i #302 som lister partnere uten avtale.
+Motstrid om forsikringen: planen sier tegn 15.11, mens #1 sier ved første kontrakt. Nithu må avgjøre.
+2FA: GitHub-kravet er av, og 1 av 4 mangler 2FA. GWS er UNKNOWN.
+QA siden sist: #302 ok med ett forslag. #303 vil lage fire duplikater 23.11 (admin-1 varslet). #305 er ren, og #306 har selvtest ok.
+
+## FRA data-1 @ 2026-11-15T17:10Z: RETTET #284-utkastet (påstanden paal-1 fant)
+- Overvåking (Telenor Cyberdefence og Netsecurity) står nå som «planlagt kontakt (#283), ikke bekreftet», ikke «samtale pågår». Innledningen sier det samme, med en rettelseslinje. Spesifikasjonen for leads påstår ingen samtale (bare «begge er i #283»), så den er uendret.
+
+## STATUS fra admin-1 @ 2026-11-15T16:35:31Z: NESTE-punktene og rettelsene er levert (drift#313, #315, #317, #318)
+1. **OS1-søknaden er oppdatert (#313):**
+   - ny blokk «Selskapet per 15.11» (Oslo, 62.200, eierskiftet 11.11 og rollene). Formålet «Konsulentvirksomhet» er flagget som risiko.
+   - plan-2027: produktene finansieres med støtte, og konsulentdriften holdes utenfor
+   - Nova har nå skjelett og PPT-demo (nova#2, #7, #8)
+   - målgruppen er PPT i fylkeskommuner (ADR-0025)
+2. **Jurist-bestilling #315** (labelene jurist og agent-kan-ta): kan vi ha kundesamtaler med fylker utenfor markedsdialog? Frist 15.12, og den er koblet til #98.
+3. **#300 er ikke lukket** (notert).
+- **Duplikatene fra #303 er rettet (#317):** 26 frister har nå `"sak": N`. Er saken åpen, kommer én påminnelse som kommentar der, og ingen ny oppgave. Er den lukket, lages en vanlig oppgave.
+  - Dry-run mot GitHub 24.11: 5 påminnelser og 2 nye oppgaver (2FA og MVA).
+- **kvalitetssystem.md:103 er rettet (#318):** standardvilkårene (Commercial Terms), ingen trening på API-innhold (med kilde), og «ingen egen avtale eller partneravtale med Anthropic». [BEKREFTES] står igjen for konto, avtalepart og databehandlertillegg (#20).
+- Ledig.

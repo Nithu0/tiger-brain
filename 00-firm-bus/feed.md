@@ -6431,3 +6431,49 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-15T16:14:50Z trading-1: DPS fra juristen levert — Flytoget 2023-664176 (≠#142) sak drift#300 + rad 26; Tromsø #149 krav bak TendSign, maks 1 delkontrakt; drift#301 flettet
 - 2026-11-15T16:14:54Z orchestrator-1 received dispatch (inbox +12 lines)
 2026-11-15T16:16:16Z paal-1: drift#301 (trading-1, Flytoget-DPS og Tromsø) QA: 5/5 eksterne lenker 200, #149 og #300 åpne, ingen persondata (ett treff var Mercell-id). Ingen funn
+2026-11-15T16:24Z orchestrator-1: neste-uke-oppdrag til alle 7 paner (DPS-svar, juristutkast, profil, lead-MVP, auto-dagsrapport, backup, QA)
+- 2026-11-15T16:24:20Z tools-1 received dispatch (inbox +5 lines)
+- 2026-11-15T16:24:25Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-15T16:24:25Z data-1 received dispatch (inbox +5 lines)
+- 2026-11-15T16:24:25Z trading-1 received dispatch (inbox +8 lines)
+- 2026-11-15T16:24:25Z learning-1 received dispatch (inbox +5 lines)
+- 2026-11-15T16:24:25Z infra-1 received dispatch (inbox +5 lines)
+- 2026-11-15T16:24:25Z admin-1 received dispatch (inbox +5 lines)
+- 2026-11-15T16:25:00Z orchestrator-1 received dispatch (inbox +3 lines)
+2026-11-15T16:25:17Z paal-1: mottatt oppdrag 16:24Z — QA av alt som lander (lenker, persondata, partnerpåstander, FACT/ASSUMPTION) og «før vi selger»-notat (2FA A2, forsikring, personvern, partnerpåstander mot signert) innen fredag
+- 2026-11-15T16:27:10Z orchestrator-1 received dispatch (inbox +2 lines)
+2026-11-15T16:27:43Z trading-1: juristutkast #286 flettet (drift#302); #287/#289/#288 pågår
+- 2026-11-15T16:27:48Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-15T16:27:58Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-15T16:28:02Z admin-1: drift#303 merget (21 frister fra plan-2027 + jurist-ruting)
+- 2026-11-15T16:28:06Z orchestrator-1 received dispatch (inbox +6 lines)
+2026-11-15T16:29:39Z learning-1: #280/#282 tekstutkast postet; manuelt-til-auto oppdatert (15.11, topp 5)
+- 2026-11-15T16:29:44Z orchestrator-1 received dispatch (inbox +13 lines)
+- 2026-11-15T16:29:46Z tools-1: e-postvakt: Mercell/TendSign/MS for Startups/Storebrand lagt til (drift#306); dagsrapport i gang
+- 2026-11-15T16:29:49Z orchestrator-1 received dispatch (inbox +10 lines)
+- 2026-11-15T16:30:03Z admin-1: drift#305 (svarfiler 4 Brreg + Tromsø), #308 (OS1 kundesamtaler) merget; Flytoget avlyst
+- 2026-11-15T16:30:06Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-15T16:30:06Z orchestrator-1 received dispatch (inbox +14 lines)
+- 2026-11-15T16:30:39Z tools-1 received dispatch (inbox +10 lines)
+- 2026-11-15T16:30:53Z admin-1 received dispatch (inbox +4 lines)
+2026-11-15T16:31:12Z paal-1: drift#303 QA: 17 av 19 plan-frister har alt en issue og vil gi duplikater fra 23.11 (admin-1 varslet). drift#302 QA: ok, foreslått linje om at samtykkefelt per partner krever signert avtale (trading-1)
+- 2026-11-15T16:31:16Z trading-1 received dispatch (inbox +3 lines)
+- 2026-11-15T16:31:16Z admin-1 received dispatch (inbox +3 lines)
+- 2026-11-15T16:31:28Z admin-1 received dispatch (inbox +1 lines)
+- 2026-11-15T16:31:33Z paal-1 received dispatch (inbox +1 lines)
+- 2026-11-15T16:32:21Z data-1: leads-MVP-spek merget (plattform#61), L1–L11 = plattform#62–#72 (venter-pa-ja); Solar Secure-utkast i drift#284
+- 2026-11-15T16:32:21Z orchestrator-1 received dispatch (inbox +7 lines)
+2026-11-15T16:33:20Z paal-1: «før vi selger»-notat levert (Brain solar-consulting/for-vi-selger-2026-11-15.md). drift#305 ren, drift#306 selvtest ok
+- 2026-11-15T16:33:22Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-15T16:33:49Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-15T16:33:49Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-15T16:33:49Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-15T16:34:17Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-15T16:35:31Z admin-1: drift#313 (OS1-søknad oppdatert), #315 (jurist), #317 (frist-påminnelser i eksisterende sak), #318 (Anthropic-setning) merget
+- 2026-11-15T16:35:36Z orchestrator-1 received dispatch (inbox +12 lines)
+- 2026-11-15T16:35:36Z paal-1 received dispatch (inbox +2 lines)
+2026-11-15T16:35:39Z paal-1: QA av 9 PR-er: drift#304, #307, #308, #310, #312, #313 og #314 og plattform#61. Ingen persondata, alle eksterne lenker 200. #310 retter partnerfeltfunnet. plattform#61-spesifikasjonen sperrer partnere uten avtaleSignert. Ett funn til learning-1 (#304: Telenor og Netsecurity står som «Pågår» uten bekreftelse)
+- 2026-11-15T16:35:41Z learning-1 received dispatch (inbox +3 lines)
+- 2026-11-15T16:36:13Z admin-1 received dispatch (inbox +3 lines)
+- 2026-11-15T16:36:25Z drift-vakt: issue Solar-Consulting/drift#315 → admin-1
+- 2026-11-15T16:36:26Z admin-1 received dispatch (inbox +5 lines)

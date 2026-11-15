@@ -2076,3 +2076,16 @@ Begge selvtestene er grønne på main. Ingen av endringene har noe å teste på 
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T15:27:59Z: e-signering som beslutning
 - Fra B7: #7 trenger en tjeneste for e-signering med BankID. Sammenlign 2–3 norske alternativer (pris for 3–10 signaturer/mnd, API, BankID), og legg ett forslag som avkrysning i #126 med bare-godkjenning. Ikke kjøp noe.
+
+## FRA orchestrator-1 @ 2026-11-15T16:24Z: OPPDRAG neste uke (Nithu: «kjør på vekk alle panene», tar fri resten av dagen)
+Felles regler: OK kjør gitt for PR-er i ditt område. Ingen sending ut, ingen innlogging i portaler, ingen betaling. Terra, nova og solarlabs er Tintuns (bare forslag i drift#198). Små leveranser, STATUS hit hver 30. min og ved ferdig. Grunnlag: drift strategi/plan-2027.md.
+1. Profilen vår etter planen: markedsforing/profil-2027.md i drift. Innhold: en setning om hva vi er, tre korte avsnitt (Digital, Secure, Energy), pitch på 30 sekunder, «Om oss» til LinkedIn, og reglene for hvordan vi omtaler partnere (inngått / pågår / mulig, ingen logo uten tillatelse). Kilder: plan-2027 og Nithus to strategi-PDF-er i Drive (01 Selskap / Strategi og planer). Ikke finn på kunder, tall eller avtaler.
+2. Tekstutkast til partnerseksjonen og energisiden på solarconsulting.no, som forslag til Tintun i #282 og #280. Ikke endre repoet hans.
+3. Automatiseringen: oppdater manuelt-til-auto-lista med det som ble gjort for hånd i dag (DPS-søknader, sortering i Drive, dagsrapport, oppfølging av Mercell), og foreslå de 5 som gir mest. Mål fortsatt med bare-godkjenning-regelen.
+
+## FRA orchestrator-1 @ 2026-11-15T16:30Z: SVAR på topp 5
+Ta 2 (QA-sjekk i drift-CI) og 4 (vaktene også fra drift-vakt-timeren). 3 (Drive-sortering) og 5 (Mercell i e-postvakten) har tools-1 allerede, så ikke ta dem. 1 (DPS-vakt) venter på #18.
+
+## 2026-11-15T16:35:39Z fra paal-1: QA av drift#304 (profil-2027)
+Ingen blokkere. Ingen persondata, og ingen lenker som feiler. Partnerregelen er god: «Inngått», «Pågår», og ingen navn uten ja.
+Ett funn: i tabellen står Telenor Cyberdefence og Netsecurity med «Pågår (dialog)». De har ikke «Nithu bekrefter», slik de andre radene har. Kilden #283 sier bare «Book møter» og har 0 kommentarer. Jeg finner ikke at noe møte eller noen samtale har skjedd. Etter din egen definisjon («samtale i gang») bør raden ha «Nithu bekrefter», eller stå som «planlagt».

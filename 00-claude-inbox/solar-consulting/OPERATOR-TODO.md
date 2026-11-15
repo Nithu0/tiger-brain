@@ -3,7 +3,30 @@
 > **Teamets oppgaver (Tintun, Alper, deg) ligger nå i repoet: `TEAM-OPPGAVER.md` (PR #304, merget 21.10).** Denne fila har bare det som er ditt personlig.
 
 Én fil, oppdatert av orchestrator-1. Kryss av eller skriv svar rett i fila, så plukker jeg det opp.
-Sist oppdatert: 2026-10-19 ~18:55 (Oslo).
+Sist oppdatert: 2026-11-15 kveld (Oslo).
+
+## Mandag 16.11 (orchestrator-1, oppdatert 15.11 kveld)
+
+Plan: https://github.com/Solar-Consulting/drift/blob/main/strategi/plan-2027.md · Drive: https://drive.google.com/drive/folders/0AKhBtg58BTliUk9PVA
+
+- [ ] **Ansvarsforsikring** hos Storebrand, hvis den ikke ble tegnet i kveld. #1 står fortsatt som «senere». Legg beviset i Drive under 01 Selskap / Forsikring.
+- [ ] **Mercell:** når kundeservice svarer, send søknaden til Brreg sammensatte team (#136) og til testing, arkitektur og smidige metoder (#172–#174), pluss sikkerhet og kvalitet (#297). Svarfilene ligger i drift anbud/dps/. admin-1 skriver hvor vedleggene ligger i hver ordning.
+- [ ] **TendSign, Tromsø (#149):** last ned kvalifikasjonsgrunnlaget (vedleggene, ikke kunngjøringen) til Drive under 04 Anbud / Dynamiske innkjøpsordninger / Tromsø.
+- [ ] **ESPD del III:** du, Alper og Tintun skriver `avgjør 136: del III nei` i #136.
+- [ ] **2FA:** ett av fire GitHub-medlemmer har ikke 2FA. Når alle har det, slår vi på kravet i org-en. kontakt@ i Google Workspace (superadmin) har heller ikke 2FA.
+- [ ] **Sauda:** samtykket til å bruke dem som referanse må fornyes etter eierskiftet (energisiden #280).
+- [ ] **Flytoget (#300)** er avlyst (2023). Svar `ferdig 300` eller lukk den.
+- [ ] **Se over:** profilen drift#304 og juristutkastene (#286, så #287–#289). Juristen avgjør utkastene.
+- [ ] **veldora-web** fikk en prod-deploy 15.11 kl. 16:56 som ikke kom fra plattformen. Var det en av dere?
+- [ ] **00 Til sortering:** hvor skal doktorgradsskissen ligge, i 10 Produkter og FoU eller i 05 Søknader?
+- [ ] **Leads-MVP (#285):** Spesifikasjonen ligger i plattform/docs/leads-mvp.md, og backend-sakene er plattform#62–#72. Si ja (A0), så bygger agentene. I tillegg trengs fire avgjørelser fra deg:
+  - A1: hvem som er kontaktperson, og hvem som har tilgang
+  - A2: gmail.readonly for den faste adressen
+  - A4: lagringstid
+  - A3: om regelen for persondata også gjelder kundedata. Den avgjør juristen.
+  A5 og A6 avgjør Alper og juristen.
+- [ ] **Uke 50 (11.12):** lønn ja eller nei. Det avgjør SkatteFUNN og OS2.
+- [ ] **Små ting:** første kvittering til Fiken, si opp LiveAvatar og HeyGen (#263), Posten signering (#126), #7. Lagringstiden på /personvern er fortsatt en plassholder (juristen, #96).
 
 ## Hva skjedde i natt (18.–19.10), kort
 

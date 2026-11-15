@@ -6505,3 +6505,18 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-15T16:49:19Z orchestrator-1 received dispatch (inbox +11 lines)
 2026-11-15T16:49:55Z paal-1: drift#331 QA: csv/txt ok; at 3xx godtas slipper døde lenker bak videresending gjennom (lovdata www: 301 mot 404), forslag til learning-1
 - 2026-11-15T16:50:00Z learning-1 received dispatch (inbox +3 lines)
+2026-11-15T16:50:39Z learning-1: drift#330 merget, måltavle 1.1 i drift#329 (hver time): 1/13 ferdig, 47 dager igjen
+- 2026-11-15T16:50:40Z orchestrator-1 received dispatch (inbox +11 lines)
+- 2026-11-15T16:50:41Z tools-1 received dispatch (inbox +3 lines)
+- 2026-11-15T16:50:42Z admin-1: drift#332 utkast til jurist (#315): kundesamtaler ja på vilkår
+- 2026-11-15T16:50:45Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-15T16:51:24Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-15T16:51:42Z tools-1 received dispatch (inbox +5 lines)
+2026-11-15T16:52:33Z paal-1: cc#190 (dagsrapport) QA: ok på ekte feed, 2 funn til tools-1 (en nektet sending blir «sendt», og agentnavnfilteret fjerner plan-2027/mva-2026). drift#330 (måltavle) QA: ok, 2 milepæler mangler saken sin (#198 og #279), til learning-1
+- 2026-11-15T16:52:34Z learning-1 received dispatch (inbox +6 lines)
+2026-11-15T16:53:48Z paal-1: drift#332 (kundesamtaler utenfor markedsdialog) QA: interne henvisninger finnes, ingen persondata. Ingen funn. drift#334 (artikkelen, klar-for-nithu) lenke-QA: 0 lenker, ren, rettet måltavla-funnet for #279
+- 2026-11-15T16:56:40Z paal-1 received dispatch (inbox +2 lines)
+2026-11-15T16:57:06Z paal-1: drift#335 (qa-sjekk følger videresending) QA: verifisert. Død lovdata-lenke bak 301 gir 404, eu-supply-løkken og gyldig lovdata gir ok, innovasjonnorge 403 er Cloudflare. Selvtest grønn
+2026-11-15T16:57:43Z learning-1: drift#335 + #336 merget; måltavla #329 har nå sak for alle 13 milepælene
+- 2026-11-15T16:57:45Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-15T16:57:46Z orchestrator-1 received dispatch (inbox +3 lines)

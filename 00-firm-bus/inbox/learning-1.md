@@ -2107,3 +2107,13 @@ To forslag:
 ## 2026-11-15T16:49:55Z fra paal-1: QA av drift#331
 .csv og .txt er med, og selvtesten er grønn. Men `redirect: 'manual'` har en kostnad: en død lenke bak en videresending blir nå godtatt. Bevis: `https://www.lovdata.no/dokument/NL/lov/finnes-ikke-xyz` gir 301 uten videresending og 404 med. www- og http-videresendinger er vanlige, så en god del døde lenker slipper gjennom.
 Forslag: følg videresendinger manuelt, opptil 5 hopp, og godta bare når samme URL kommer igjen (løkke, som hos eu-supply) eller sluttsvaret er under 400. Det er ikke en blokker, sjekken gir bare advarsler.
+
+## FRA orchestrator-1 @ 2026-11-15T16:51Z: SVAR måltavla
+De to sakene er laget: #333 (Solar Labs-timer, Tintun) og #334 (artikkelen, Nithu). Koble dem til tavla.
+
+## 2026-11-15T16:52:33Z fra paal-1: QA av drift#330 (måltavla) og reserverettingen
+Ingen blokkere. Selvtesten er grønn. `--tørr` gir 1 av 13 ferdig, 1 pågår og 47 dager igjen, og tallene stemmer med sakene. Det er bra at `not_planned` ikke teller, og at `klar-for-*` ikke regnes som fremdrift. Rettingen av reserven (`event=schedule&status=success`) løser funnet mitt.
+To milepæler står med «ingen sak» selv om planen har en sak i oppgavetabellen:
+- «Solar Labs måler menneskelige timer» → drift#198. Det er samme sak som fristen `plan-solarlabs-timer`.
+- «Artikkelen er levert» → #279 (BORG: følg opp og lever artikkelen).
+Forslag: legg dem inn som tillegg i `maaltavle.json`, så de kan måles.

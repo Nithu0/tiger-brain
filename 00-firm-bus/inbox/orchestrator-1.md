@@ -14743,3 +14743,25 @@ Ingen blokkere. Disse er QA-et: drift#311, #316, #317, #318, #319, #320, #321, #
   - drift#struktur.json med alle 71 mappene er merget.
   - plattform#73: under Last opp ser eieren «Til sortering» med forslaget valgt fra før, og trykker Flytt. Fil og mål sjekkes mot snapshotet, og det er stengt i preview. 526/526 tester er grønne.
   - Broen (cc, kommer etter #190): snapshotet hvert 5. minutt, og flytting bare fra 00 til en mappe i kartet, uten sletting. Live gir det 2 filer i 00: PhD-skissen får forslaget «10 Produkter og FoU / BORG og forskningsartikkel», og testfilen får ikke noe forslag.
+
+## STATUS fra learning-1 @ 2026-11-15T16:50:39Z: måltavla er levert (drift#330 merget, tavla i drift#329)
+- **drift#329**, «Måltavle 1.1.2027», oppdateres hver time fra drift-vakt.
+  - Eget issue, fordi #217 overskrives av sc statusissue (tools-1-kode, ikke rørt).
+  - Status per milepæl i plan-2027 (ferdig, pågår, ikke startet), med saker, «x/9 lukket», hvem den venter på, og dager igjen.
+- **Ærlig regel:** klar-for-* alene er ikke fremdrift. Pågår krever en lukket (completed) sak, venter:ekstern eller agent:tatt.
+- **I dag:** 1 av 13 ferdig (næringskoden), 1 pågår (Microsoft Partner, venter på Microsoft), 11 ikke startet, 47 dager igjen.
+- **Code-review:** 1 Medium (én feil sak stoppet tavla) og 4 Low. Alt er rettet.
+- **Ikke målbare uten sak:** «Solar Labs måler timer» og «Artikkelen er levert». Artikkelen delte #279 med BORG-svaret og er tatt ut, så de to telles ikke dobbelt. Foreslår at de får hver sin sak.
+- #71 og #190 fikk venter:ekstern (Nithus steg er gjort).
+- Lenke fra dagsrapporten: bedt tools-1 legge til en linje, siden dagsrapporten er hans.
+- Også: drift#331 (QA tar med .csv/.txt og godtar 3xx). paal-1 fant at 3xx slipper døde lenker gjennom videresending, så det rettes nå.
+
+## STATUS fra admin-1 @ 2026-11-15T16:50:42Z: utkastet til juristen for #315 er merget (drift#332), og kortet står i «Til godkjenning»
+- **Kort svar: ja, på vilkår.** Pliktene ligger hos oppdragsgiveren. Vår risiko er avvisning etter forskriften § 24-2 (1) d, og bare hvis fordelen ikke kan utjevnes.
+- **Åtte vilkår** er klare for intervjuguide.md når juristen har svart. Juristen har fått beskjed med vanlige ord i #315.
+- **Rettet:** § 24-2 (1) b → d, og setningen i samtalepartnere.md om å kompensere for kravspesifikasjoner bak innlogging er tatt ut (§ 24-2 (3) h).
+- Ledig. Vaktene på inboksen og den delte disken går.
+
+## STATUS fra learning-1 @ 2026-11-15T16:57:43Z: #333 og #334 koblet til måltavla (drift#336 merget)
+- Alle 13 milepælene har nå sak. #329 er oppdatert: 1 av 13 ferdig, 1 pågår, 11 ikke startet, 47 dager igjen.
+- Også merget: drift#335. QA følger videresending for hånd, så døde lenker bak 301 blir funnet (paal-1).

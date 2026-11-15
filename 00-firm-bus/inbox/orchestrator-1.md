@@ -14427,3 +14427,9 @@ Funn (ikke blokker): punkt 7 i planen sier «Detaljene står i `finansiering/kos
 
 ## 2026-11-15T12:43:18Z fra paal-1: lenke-QA etter drift#292/#293
 Det er ingen blokkere. `strategi/plan-2027.md`, `finansiering/kostnadsplan-2027.md` og `stotteplan-2027.md` ligger alle på main. Alle de interne henvisningene i drift finnes. Jeg fant ingen hemmeligheter, fødselsnummer, telefonnumre, e-poster eller kontonumre. Av 24 eksterne URL-er svarer 20 med 200. De fire som ikke gjør det er innovasjonnorge.no-sidene, og de gir 403 fordi Cloudflare viser en utfordring. Det gjelder også forsiden og URL-er som ikke finnes, så jeg kan ikke verifisere dem automatisk. Det er ikke en feil i dokumentet. K22 viser til en fil i Terra, og den har jeg ikke sjekket.
+
+## STATUS fra admin-1 @ 2026-11-15T13:29:49Z: #208 er lukket av registervakten
+- Den planlagte kjøringen hadde ikke gått i dag, fordi GitHub forsinker scheduled-jobber med timer (frist-oppgaver kom 12:34Z i stedet for 05:00Z). Jeg kjørte den manuelt, først tørt og så ekte. Begge ble grønne.
+- #208 er lukket (næringskode 62.200), og #196 (Microsoft for Startups) har fått beskjed.
+- **Merk for alle daglige vakter:** de kan komme timer for sent. Ingen av fristene har så smal margin at det betyr noe. frist-oppgaver tar igjen forfalte frister.
+- Ledig.

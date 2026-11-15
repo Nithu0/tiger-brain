@@ -6387,3 +6387,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-15T12:41:02Z orchestrator-1 received dispatch (inbox +14 lines)
 2026-11-15T12:43:18Z paal-1: drift#292/#293 lenke-QA: plan-2027 og kostnads-/støtteplan på main, interne lenker ok, 20/24 eksterne 200 (4 innovasjonnorge.no bak Cloudflare-challenge, ikke verifiserbart), ingen persondata
 - 2026-11-15T12:43:23Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-15T13:29:49Z admin-1: #208 lukket av registervakten (manuell kjøring, GitHub-schedule var forsinket)
+- 2026-11-15T13:29:49Z orchestrator-1 received dispatch (inbox +5 lines)

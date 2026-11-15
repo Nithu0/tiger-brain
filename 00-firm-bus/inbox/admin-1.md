@@ -1730,3 +1730,19 @@ Lever to filer i én PR i drift (egen worktree, OK kjør gitt):
 1. finansiering/kostnadsplan-2027.md: hver fast kostnad per måned des 2026–okt 2027 (abonnementer per person: Claude, Codex/ChatGPT, GitHub Team, Vercel Pro, GWS, Fiken, Railway, Azure, Posten signering, ansvarsforsikring Storebrand, revisor/regnskap). Merk hver rad FACT (faktura i Gmail eller sc kost) eller ASSUMPTION. Les fakturaer i Gmail (bare lesing, ingen e-postadresser eller beløp per privatperson i repoet). Vis kontantstrøm med innskuddene og når pengene går tomme.
 2. finansiering/stotteplan-2027.md: ordningene (IN oppstart 1, SkatteFUNN, FORREGION Østfold, næringsfond, Microsoft for Startups, BORG, investorer) med beløp, egenandel, frist og behandlingstid (FACT med kilde-URL, ellers UNKNOWN), og hva hver krever av oss først (f.eks. næringskode IT #208, revisor #64, kundesamtaler #98). Gi en rekkefølge med datoer, og la januar 2027 være søknadsmåneden.
 Ingen sending, ingen innlogging i portaler. STATUS hit når PR er merget, maks 45 min.
+
+## FRA orchestrator-1 @ 2026-11-15T15:29Z: OPPDRAG #136 søknaden til Brreg-DPS-en nå (Nithu har Mercell-tilgang og prøveperiode)
+Nithu er inne i Mercell (15.11 ~16:30). Han laster ned kvalifikasjonsgrunnlaget til Drive «04 Anbud» (eller kommenterer 136).
+1. Overvåk Drive «04 Anbud» (gws drive, bare lesing) for nye filer fra Mercell. Når de kommer: les teamkrav, kompetansekrav og skjema, og fyll ut ferdige svar per felt i drift anbud/dps/brreg-sammensatte-team-svar.md (PR, OK kjør gitt). Merk FACT/ASSUMPTION/UNKNOWN, og list alt Nithu må gjøre i portalen som nummererte steg med ferdig tekst å lime inn.
+2. Gjør det samme for Brreg 18–20 (#172–#174) hvis grunnlaget er likt.
+3. Si fra i #136 hva hver av de tre må svare (ESPD del III, CV-er #42), med frist 19.11.
+4. Sjekk hva Mercell-prøveperioden koster etter at den går ut, hvis vilkårene står i Drive eller i e-posten fra Mercell (bare lesing). Vi skal ikke betale for KGV (beslutning 17.10).
+Ingen innlogging i Mercell, ingen sending. STATUS hit når svarfila er merget, og ellers hver 30. min.
+
+## 2026-11-15T15:35:19Z fra paal-1: QA av drift#295 (Mercell-frist)
+Ingen blokkere. `frister.json` er gyldig JSON. Jeg kjørte `frist-oppgaver --dry-run` offline med fire datoer:
+- 24.11: ingen Mercell-oppgave.
+- 25.11 til 28.11: «Frist 28.11.2026: Mercell …» med [klar-for-nithu, Nithu0].
+- 05.12: «Forfalt 28.11.2026 …».
+Ingen feil på noen av datoene. Kilde-URL-en svarer 200, og drift#263 er åpen.
+En merknad, ikke en feil: 14 dager fra 15.11 er 29.11, så 28.11 holder bare hvis prøven startet 14.11. En dag for tidlig er likevel på den trygge siden.

@@ -14433,3 +14433,21 @@ Det er ingen blokkere. `strategi/plan-2027.md`, `finansiering/kostnadsplan-2027.
 - #208 er lukket (næringskode 62.200), og #196 (Microsoft for Startups) har fått beskjed.
 - **Merk for alle daglige vakter:** de kan komme timer for sent. Ingen av fristene har så smal margin at det betyr noe. frist-oppgaver tar igjen forfalte frister.
 - Ledig.
+
+## STATUS fra admin-1 @ 2026-11-15T15:30:21Z: #136 i gang (underveis)
+- **Drive «04 Anbud» er tom.** Jeg sjekker den hvert minutt (bare lesing), og fyller ut svarfila når filene kommer.
+- **Punkt 3 er gjort:** #136 sier hva hver av de tre svarer innen 19.11.
+  - ESPD del III: `avgjør 136: del III nei`
+  - sin egen CV (#42)
+  - rolle i teamet
+  - Nithu laster ned grunnlaget og signerer senest 20.11
+- **Punkt 4, Mercell-e-postene (bare lest):**
+  - 13.11: «Bruker Nithusan Kukaraja ba om et abonnement for tilgang til Market Intelligence».
+  - 15.11: «Lisensene dine ble nylig oppdatert».
+  - Ingen e-post nevner pris eller sluttdato for prøveperioden (UNKNOWN). Jeg henter vilkårene fra mercell.com nå.
+
+## STATUS fra admin-1 @ 2026-11-15T15:33:58Z: punkt 4 i #136 (Mercell-prøven) er ferdig
+- **Fornyelse:** prøven er 14 dager, uten kredittkort og **uten automatisk fornyelse** (FACT, info.mercell.com, for «Bidding Business Plus»). Om Market Intelligence er med, og prisen etterpå, er UNKNOWN («kontakt salg»).
+- **Gratis å levere?** UNKNOWN. Svaret i Mercells FAQ var skjult. Det vi trenger nå er kontoen og søknaden, ikke noe abonnement.
+- **Lagt inn:** linje i #263 («ikke kjøp», beslutning 17.10) og fristen mercell-prove-slutt 28.11 (drift#295 merget), som blir en oppgave for Nithu 25.11.
+- **Drive «04 Anbud»** er fortsatt tom. Vakten går.

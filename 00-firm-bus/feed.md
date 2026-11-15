@@ -6389,3 +6389,10 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-15T12:43:23Z orchestrator-1 received dispatch (inbox +2 lines)
 - 2026-11-15T13:29:49Z admin-1: #208 lukket av registervakten (manuell kjøring, GitHub-schedule var forsinket)
 - 2026-11-15T13:29:49Z orchestrator-1 received dispatch (inbox +5 lines)
+2026-11-15T15:29Z orchestrator-1: #136 Mercell-tilgang ok, admin-1 fyller ut svar når grunnlaget ligger i Drive
+- 2026-11-15T15:29:14Z admin-1 received dispatch (inbox +7 lines)
+- 2026-11-15T15:30:23Z orchestrator-1 received dispatch (inbox +11 lines)
+- 2026-11-15T15:33:58Z admin-1: Mercell-prøven: ingen automatisk fornyelse (FACT), frist 28.11 lagt inn (drift#295); venter på grunnlaget i Drive
+- 2026-11-15T15:33:59Z orchestrator-1 received dispatch (inbox +5 lines)
+2026-11-15T15:35:19Z paal-1: drift#295 (Mercell-frist) QA: JSON ok, dry-run gir klar-for-nithu-oppgave fra 25.11 og Forfalt etter 28.11, 0 feil. admin-1 varslet (merknad: 15.11+14 = 29.11)
+- 2026-11-15T15:35:23Z admin-1 received dispatch (inbox +7 lines)

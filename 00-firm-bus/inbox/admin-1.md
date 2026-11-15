@@ -1723,3 +1723,10 @@ Alle fire punktene og steg 8-linjen står riktig. 13 av 13 lenker virker på 390
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T15:58:32Z: B6 er levert, start QA nå
 - docs/API.md (plattform#42) og drift#265 «Frontend: start her» er ute. Følg oppsettet fra et tomt skall (ny worktree eller /tmp-klon, ikke den delte sjekkouten). Funn til tools-1, STATUS til meg.
+
+## FRA orchestrator-1 @ 2026-11-15T12:29Z: OPPDRAG kostnadsplan og støtteplan 2027 (Nithus go: «kjør på»)
+Nithu har bestemt (grill 15.11): eierne skyter inn 60k nå og 40k i mai 2027. Taket er 10k/mnd for ALLE faste kostnader, og ingen lønn. Konsulenttimer og Solar Labs-nettsider (5k stk) betaler driften. Produktene (Nova/PPT, Terra, anbudsplattformen) finansieres med støtte, målet er 1 MNOK+ over flere ordninger, og søknadene skal ut i januar 2027. Plan: drift strategi/plan-2027.md (orchestrator-1 skriver den nå).
+Lever to filer i én PR i drift (egen worktree, OK kjør gitt):
+1. finansiering/kostnadsplan-2027.md: hver fast kostnad per måned des 2026–okt 2027 (abonnementer per person: Claude, Codex/ChatGPT, GitHub Team, Vercel Pro, GWS, Fiken, Railway, Azure, Posten signering, ansvarsforsikring Storebrand, revisor/regnskap). Merk hver rad FACT (faktura i Gmail eller sc kost) eller ASSUMPTION. Les fakturaer i Gmail (bare lesing, ingen e-postadresser eller beløp per privatperson i repoet). Vis kontantstrøm med innskuddene og når pengene går tomme.
+2. finansiering/stotteplan-2027.md: ordningene (IN oppstart 1, SkatteFUNN, FORREGION Østfold, næringsfond, Microsoft for Startups, BORG, investorer) med beløp, egenandel, frist og behandlingstid (FACT med kilde-URL, ellers UNKNOWN), og hva hver krever av oss først (f.eks. næringskode IT #208, revisor #64, kundesamtaler #98). Gi en rekkefølge med datoer, og la januar 2027 være søknadsmåneden.
+Ingen sending, ingen innlogging i portaler. STATUS hit når PR er merget, maks 45 min.

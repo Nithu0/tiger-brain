@@ -14402,3 +14402,28 @@ Tre av tre negative tilfeller stopper appen: test-IdP utenfor localhost uten PRE
   - FØR: preview hele tiden, 0,34 GB og ~0 CPU, ≈ $3,5. Hvert PR-miljø ≈ $3,5 hvis det står åpent en hel måned, altså ≈ $0,12 per døgn.
   - ETTER: Postgres er våken med 0,06–0,1 GB ≈ $0,6–1,0. Web og IdP koster ≈ $0,2, hvis vi antar 2 timer bruk per dag (ASSUMPTION). Det gir ≈ $0,8–1,2 for preview. Hvert PR-miljø blir ≈ $0,03 per døgn mens PR-en er åpen.
 - Prod er ikke berørt: SUCCESS 5907870, og helsesjekken svarer 200.
+
+## 2026-11-15T12:34:33Z fra paal-1: lenke-QA drift#278–280
+Ingen lenker å følge, og ingen hemmeligheter eller persondata i noen av dem. Ett funn, ikke blokker: alle tre viser til `strategi/plan-2027.md` «vedtatt av Nithu 15.11». Den filen finnes bare på grenen i drift#291, som fortsatt er åpen (mergeable clean). Inntil #291 er merget, viser issuene til en fil som ikke ligger på main. Det løser seg ved merge, og da sjekker jeg på nytt.
+
+## 2026-11-15T12:37:27Z fra paal-1: drift#291 merget, lenke-QA av plan-2027
+`strategi/plan-2027.md` ligger nå på main, så henvisningen i drift#278–290 virker. Jeg skannet planen og alle de 13 issuene: ingen hemmeligheter eller persondata.
+Funn (ikke blokker): punkt 7 i planen sier «Detaljene står i `finansiering/kostnadsplan-2027.md` og `finansiering/stotteplan-2027.md`». Ingen av filene finnes på main, og ingen åpen PR legger dem til. Enten må de skrives, eller så må setningen endres. Eier: den som skrev planen.
+
+## STATUS fra admin-1 @ 2026-11-15T12:41:02Z: drift#292 merget. Kostnadsplan og støtteplan 2027
+- **finansiering/kostnadsplan-2027.md:** de faste kostnadene er ca. **5 100 kr/mnd i snitt** (høyst 5 306), altså under taket på 10 000.
+  - Største post er Claude Max (ca. 1 900 kr).
+  - Uten inntekter holder innskuddene ut oktober 2027 med ca. 37 000 kr igjen. Med samme tempo er pengene tomme rundt mai 2028.
+  - FACT: Workspace-fakturaene i Gmail (50 € og 1,42 €, som passer med Business Standard), `sc kost` (Railway 23,69 USD, Vercel og GitHub 0) og Fikens priser.
+  - Resten er ASSUMPTION: Claude, ChatGPT og Vercel faktureres ikke til selskapets e-post. Posten signering betales per bruk (FACT), men prisen er UNKNOWN. Prisen fra Storebrand er UNKNOWN, fordi den bare gis som tilbud.
+- **finansiering/stotteplan-2027.md:**
+  - Realistisk første halvår er **OS1 (150 000 kr) og Microsoft for Startups**.
+  - **1 MNOK+ krever lønn og egenfinansiering (OS2, SkatteFUNN) eller investorer.** SkatteFUNN gir ikke fradrag for ulønnet arbeid, og revisorattest kreves uansett beløp.
+  - **Adressen i Brreg er Oslo**, så FORREGION Østfold og fondene i Fredrikstad og Sarpsborg faller bort.
+  - **BORG er EU-konsortiet CETP**, ikke et fond. Stage 2 åpner 8.1, fullsøknad 11.3.
+  - Rekkefølgen går fra uke 50 til mai. I uke 50 avgjør eierne lønn ja/nei, og søknadene sendes i januar.
+- **Nytt funn:** næringskoden i Brreg er nå **62.200** (FACT, 15.11), så #208 er løst. Registervakten bør lukke den, og #196 (Microsoft) er låst opp. Vedtektsformålet sier fortsatt «Konsulentvirksomhet».
+- Ledig.
+
+## 2026-11-15T12:43:18Z fra paal-1: lenke-QA etter drift#292/#293
+Det er ingen blokkere. `strategi/plan-2027.md`, `finansiering/kostnadsplan-2027.md` og `stotteplan-2027.md` ligger alle på main. Alle de interne henvisningene i drift finnes. Jeg fant ingen hemmeligheter, fødselsnummer, telefonnumre, e-poster eller kontonumre. Av 24 eksterne URL-er svarer 20 med 200. De fire som ikke gjør det er innovasjonnorge.no-sidene, og de gir 403 fordi Cloudflare viser en utfordring. Det gjelder også forsiden og URL-er som ikke finnes, så jeg kan ikke verifisere dem automatisk. Det er ikke en feil i dokumentet. K22 viser til en fil i Terra, og den har jeg ikke sjekket.

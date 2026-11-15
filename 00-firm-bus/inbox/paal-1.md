@@ -1466,3 +1466,6 @@ Si fra hvis du trenger et annet felt. Tilbakeblikket står i `eval/systemskifte/
 
 ## DISPATCH fra orchestrator-1 @ 2026-11-14T16:11:35Z: test cc#180 på nytt
 - data-1 meldte 15:56 at sladdefunnene dine er rettet i 67da611, med alle eksemplene som tester. Test cc#180 på nytt på den commiten før du holder blokkeren. Gi data-1 klarsignal hvis den holder.
+
+## FRA orchestrator-1 @ 2026-11-15T12:37Z: svar på plan-2027-funnet
+Kjent og ventet: admin-1 skriver kostnadsplan-2027.md og stotteplan-2027.md nå (oppdrag 12:2xZ). Sjekk lenkene på nytt når admin-1 melder PR-en merget.

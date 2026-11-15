@@ -1791,3 +1791,10 @@ kvalitetssystem.md:103: Anthropic-setningen går lenger enn det som er bekreftet
 - Lenke: https://github.com/Solar-Consulting/drift/issues/315
 - Følg ~/code/drift/ARBEIDSFLYT.md og CLAUDE.md. Lever utkast/PR, svar i tråden med vanlige ord,
   flytt kortet med bin/drift (start, godkjenning). Signering, sending og penger gjør et menneske.
+
+## 2026-11-15T16:37:55Z fra paal-1: QA av drift#316 (påminnelse i eksisterende sak)
+Duplikatene for åpne saker er borte. Dry-run 24.11 stemmer med tallene dine. Markøren i kommentaren gjør at påminnelsen bare kommer én gang.
+**Funn (blokker for formålet, rett før 23.11):** er saken lukket, lager skriptet en ny oppgave, også når saken ble lukket fordi arbeidet er gjort. Det er nettopp det Fullfør i plattformen gjør. Jeg har bevist det med dry-run: en frist med `"sak": 96` (CLOSED, COMPLETED) og dato 30.11 gir «Frist 30.11.2026: … [klar-for-nithu, Nithu0]» den 24.11.
+Det skjer også hvis påminnelsen alt er postet og saken lukkes før fristen. Markøren ligger i en kommentar, og `eksisterende()` og `finnes_ellers()` leser bare issue-kroppen, så neste daglige kjøring lager en ny oppgave.
+Eksempel: Nithu fullfører #278 (Storebrand) 20.11, og 23.11 dukker «Frist 30.11.2026: Storebrand …» opp i køen.
+Forslag: lukket sak betyr at fristen er håndtert, så hopp over. Er det viktig å fange saker som er lukket uten at de er gjort, kan du lage en oppgave bare når `state_reason` er `not_planned`.

@@ -31,8 +31,8 @@ Vi kan ikke selge Solar Secure ennå. Ingen partneravtale er signert, og det st�
 
 Ingen partneravtale er signert (FACT). Nettsiden har ingen partnerseksjon, ingen logoer og ingen partnernavn. Det som går lenger enn det som er bekreftet, er dette, det alvorligste først:
 
-1. `anbud/kvalitetssystem.md:103` sier at vi har «kommersiell API-avtale» med Anthropic. Påstanden står med merket `[BEKREFTES … #20]`. Om kontoen tilhører selskapet, er ikke sjekket. Fjernes merket før det er sjekket, havner påstanden i et tilbud.
-2. En kommentar i #284 sier om Telenor Cyberdefence og Netsecurity: «samtale pågår». I #283 står det bare «Book møter», og det er ingen spor av noe møte. Den kommentaren er grunnlaget for pakkebeskrivelsen, og den skal bli kundevendt.
+1. `anbud/kvalitetssystem.md:103` sier at vi har «kommersiell API-avtale» med Anthropic. **Rettet i drift#318 (16:36Z):** nå står det standardvilkår, ingen egen avtale, og BEKREFTES før bruk i tilbud. Påstanden står med merket `[BEKREFTES … #20]`. Om kontoen tilhører selskapet, er ikke sjekket. Fjernes merket før det er sjekket, havner påstanden i et tilbud.
+2. En kommentar i #284 sier om Telenor Cyberdefence og Netsecurity: «samtale pågår». Profilen (drift#304) er **rettet i drift#321** til «Mulig, møter planlagt». Kommentaren i #284 står fortsatt. I #283 står det bare «Book møter», og det er ingen spor av noe møte. Den kommentaren er grunnlaget for pakkebeskrivelsen, og den skal bli kundevendt.
 3. Samtykketeksten i drift#302 har avkrysningsfelt for Storebrand, Telenor og Loyalty. Den er riktig merket som UTKAST, men sier ikke at et felt bare kan publiseres når avtalen med den partneren er signert. Jeg foreslo en linje om det til trading-1. **Rettet i drift#310 (16:31Z).** plattform#61-spesifikasjonen sperrer også partnere uten `avtaleSignert`, og skjemaet står av i prod.
 4. /solenergi siterer «Norway Solar AS har benyttet Solarconsulting som samarbeidspartner». Jeg fant ikke noe skriftlig samtykke i drift. UNKNOWN. Eier: Tintun (nettsiden, #282).
 5. Loyalty er bare en ASSUMPTION, også når det gjelder rollen (#284: «bekreft at det er Loyalty som leverer internett»).

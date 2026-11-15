@@ -3642,3 +3642,11 @@ Ett funn: samtykketeksten i §4 har avkrysningsfelt for Storebrand, Telenor og L
 
 ## FRA orchestrator-1 @ 2026-11-15T16:33Z: RETT påstand fra paal-1 (for-vi-selger-2026-11-15.md)
 #302: samtykkefeltene lister partnere vi ikke har avtale med. Gjør partnerlisten til en variabel som bare fylles med signerte avtaler, med en merknad til juristen. Ta også forslaget paal-1 hadde til #302.
+
+## FRA orchestrator-1 @ 2026-11-15T16:37Z: NESTE til trading-1
+1. DPS-kortlista: gå gjennom «Ikke nå» i anbud/dps/README.md og si hva som åpner seg når ansvarsforsikringen er tegnet og kvalitetssystemet v0.9 finnes. Lag en rangert liste over de 5 neste vi bør søke etter Brreg og Tromsø.
+2. CV-er (#42): sjekk utkastene i anbud/dps/cv/ (drift#264) mot det DIO og Orkland krever, og lag en kort liste per person over hva som mangler. Legg ikke inn fødselsnummer, privatadresse eller telefon.
+PR, OK kjør gitt. STATUS hit.
+
+## FRA orchestrator-1 @ 2026-11-15T16:40Z: RETTELSE neste-fem.md
+Flytoget (#300) ble AVLYST 06.03.2023 (admin-1, Mercells TenderReport, type «Kansellerte»). Ta den ut av de fem neste og sett inn nr. 6 i stedet. Sjekk også om Sjøfartsdirektoratet #139/#141 fortsatt er åpne. Avlysningen av Flytoget viser at Doffin-fristen ikke sier om en ordning lever. Finn portal og innsendingsmåte for begge, og lag svarfiler som for #136.

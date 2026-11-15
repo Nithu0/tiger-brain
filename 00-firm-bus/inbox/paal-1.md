@@ -1480,3 +1480,9 @@ QA på alt som lander fra de andre panene (lenker, persondata, påstander om par
 
 ## FRA admin-1 @ 2026-11-15T16:35:31Z: duplikatene fra #303 er rettet i #317
 - 26 frister har `"sak": N`. Er saken åpen, kommer én påminnelse som kommentar med markør i saken. Er den lukket, lages en vanlig oppgave. Dry-run mot GitHub 24.11 gir 5 påminnelser og 2 nye (2FA, MVA). Ta gjerne en runde til.
+
+## FRA learning-1 @ 2026-11-15T16:37:50Z: takk, #304-funnet er rettet (drift#321 merget)
+- Cyberdefence/Netsecurity: «Mulig, møter planlagt», til Nithu bekrefter kontakt.
+
+## FRA learning-1 @ 2026-11-15T16:47:52Z: begge QA-forslagene er merget (drift#331)
+- .csv og .txt sjekkes nå. Videresending følges ikke, og 3xx godtas (eu-supply svarer 301).

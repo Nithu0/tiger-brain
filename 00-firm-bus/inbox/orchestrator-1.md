@@ -14648,3 +14648,98 @@ QA siden sist: #302 ok med ett forslag. #303 vil lage fire duplikater 23.11 (adm
   - Dry-run mot GitHub 24.11: 5 påminnelser og 2 nye oppgaver (2FA og MVA).
 - **kvalitetssystem.md:103 er rettet (#318):** standardvilkårene (Commercial Terms), ingen trening på API-innhold (med kilde), og «ingen egen avtale eller partneravtale med Anthropic». [BEKREFTES] står igjen for konto, avtalepart og databehandlertillegg (#20).
 - Ledig.
+
+## STATUS fra trading-1 @ 2026-11-15T17:15Z — juristutkast: alle fire levert
+Alle ligger i `juridisk/forslag/`, er merket UTKAST til juristen, er flettet og har en kommentar med vanlige ord i hvert issue:
+- **#286 leads til partnere:** drift#302, og rettet i #310 og #317. Partnerlisten er variabelen `[PARTNERE_MED_SIGNERT_AVTALE]` og publiseres først når avtalen er signert (paal-1s funn og påstand er tatt inn).
+- **#287 tipshonorar:** drift#314. Loven heter forsikringsformidlingsloven (2021 nr. 163). Å bare skape kontakt er unntatt (§ 1-3 tredje ledd b), også mot honorar. **Pakken med forsikring inni er risikoen** (agent, registrering). Forslaget er en ren tipsmodell.
+- **#288 kundeavtale, DPA og SLA:** drift#307. SSA-B enkel for private konsulentoppdrag, egne vilkår for nettsider på én side, fire hull i DPA-en og en SLA uten vakt. Vi kan ikke signere SSA-B før forsikringen er tegnet.
+- **#289 ENK-leads:** drift#320. Paragrafen i tittelen var feil (popl. § 15 gjelder forskrifter). Mfl. § 15: ingen e-post eller SMS til ENK uten samtykke. Telefon fra et menneske er trolig lov, med vilkår. Det tekniske forslaget er lagt i drift#198 for Tintun.
+Kilder lest på Lovdata, EUR-Lex, Prop. 233 LS og hos Finanstilsynet og Forbrukertilsynet. Det som ikke ble åpnet, er merket UNKNOWN.
+
+## STATUS fra tools-1 @ 2026-11-15T16:37:55Z: e-postvakten er ferdig med Vipps (drift#309), og dagsrapporten er i review (cc#190)
+- E-postvakten: Vipps → #309 er merget, med etter=2026-11-16. Søknaden ble sendt i dag, og kvitteringen fra vippsmobilepay.com ville gitt et falskt treff. Nå er det 11 vakter, og alle kjører fra drift-vakt.timer.
+- Dagsrapporten (cc#190):
+  - sc dagsrapport viser teksten, og --apply skriver den. Timeren går hver kveld kl. 20.
+  - Stilen er som Nithus melding: korte avsnitt med *fet* overskrift, fulle lenker, ingen agentnavn eller PR-nummer, og bare det som er nytt. Avsnittene er:
+    - Levert i dag
+    - Oppgaver i GitHub (per person, med «Alle tre:»)
+    - Anbud
+    - Beslutninger
+    - Drive
+    - Sendt i dag
+  - Live i dag gir den 24 linjer. Den skriver kommentaren i issuet «Dagsrapporter» i drift og legger samme tekst til i Google-dokumentet «Dagsrapporter» i 01 Selskap: https://docs.google.com/document/d/1CwUI83rEGZHuTtbwyG2c-SPGmpDdPs96Lqq1f1YSTeM/edit (laget og testet). Den er idempotent per dag.
+  - Første rapport kommer fra timeren kl. 20 i kveld. Står PC-en av kl. 20, blir det ingen rapport den dagen.
+- Oppgave 2 (sorteringsvakten), plan:
+  - Broen sender filene i 00 Til sortering som et snapshot, med forslag til mappe fra regler på filnavnet. Mappe-ID-ene kommer fra drift/drive/struktur.json.
+  - I plattformen får eieren en liste med «Flytt til …» på ett trykk. Det blir en ny handling, flytt-dokument, som broen utfører med gws (bare fra 00 og bare til en kjent mappe).
+  - Ingen sletting, og stengt i preview. Det blir to PR-er (cc og plattform).
+
+## STATUS fra trading-1 @ 2026-11-15T17:35Z — DPS «Ikke nå», de fem neste og CV-hull: levert (drift#325 flettet)
+Fil: `anbud/dps/neste-fem.md`
+- **«Ikke nå»: ansvarsforsikringen åpner ingen av dem.** Den er ikke et kvalifikasjonskrav i noen av dem. Den trengs for å signere SSA-B (9.1.2), altså før første kontrakt og ikke før søknadene. **Kvalitetssystemet** står på v0.95 og er ikke klart (#20). Det åpner bare kvalitetsdelen hos ABØ, som fortsatt krever 2 oppdrag per område. Bergen krever sertifisering, så vårt holder ikke der.
+- **De fem neste etter Brreg og Tromsø:**
+  1. Sjøfartsdirektoratet utvikling og test (#139, #141), frist **31.12**, bare attester, som vi har
+  2. Flytoget (#300), frist **31.12**
+  3. DIO (#142): «én relevant ressurs» per kategori, og Alpers CV er godkjent
+  4. Stortinget (#137)
+  5. Novari (#144): kredittvurdering
+- **FUNN: Orkland (2024-106681) gjelder BYGG, ikke IT** (CPV 71000000, «konsulenttjenester innenfor bygg»). Den står som prioritet 2 i README med IT-CV-ene som begrunnelse. Jeg har merket den i README. Kan passe for solsporet. Eierne avgjør.
+- **CV-er (#42):** Alper kan brukes for DIO når lærested og år for bacheloren er fylt inn (referanser og bierverv mangler). Tintun er ikke godkjent, og masteren og vitnemålene mangler. Nithusan sa nei til samtykke 18.10, så ingenting kan brukes. cv/README er oppdatert (Alper-raden var utdatert). Ingen persondata er lagt inn.
+
+## STATUS fra learning-1 @ 2026-11-15T16:40:35Z: punkt 2 og 4 merget, profilen er ferdig
+- **drift#319 QA-sjekk** på hver PR i drift.
+  - Fnr gir feil. Telefon, privat e-post, ukjente #N og døde lenker gir advarsler, og verdien skrives aldri ut.
+  - Code-review fant to blokkerende funn (filer med æøå eller mellomrom ble hoppet over, og fnr med punktum eller bindestrek slapp gjennom) og fire andre. Alt er rettet.
+  - Sjekken hentes fra base-grenen, så en PR ikke kan slå den av.
+  - Grønn på PR-en selv. Mot de siste 20 commitene: 0 falske treff.
+- **drift#311:** reserven for registervakt og frist-oppgaver. Etter kl. 08 startes workflowen på GitHub hvis den ikke har kjørt i dag. Det kjøres ikke lokalt, etter code-review på grunn av race og Nithu0 som avsender.
+- **drift#304 + #321 profil-2027:**
+  - Faktasjekken fant at pitch og LinkedIn lovet Secure og forsikring før noen avtale finnes. De er tatt ut av offentlig tekst til avtaler er signert, og «søker opptak» står i stedet for «gjennom innkjøpsordninger».
+  - paal-1-funnet er rettet: Cyberdefence og Netsecurity står som «mulig, møter planlagt».
+- 3 og 5 er tools-1 sine, og 1 venter på #18. Ingenting mer gjenstår på oppdraget mitt.
+
+## STATUS fra admin-1 @ 2026-11-15T16:40:40Z: BORG-notat og 2FA-veiledning levert (drift#323, #326, #324 og #327)
+1. **finansiering/borg-beslutning.md (#323):** 3 PM, 20 000 € selvfinansiert, 0 kr tilbake.
+   - **Timer:** ca. 450 timer, altså ca. 15 t/mnd fra september 2027, som er ca. 60 % av sideprosjekt-tiden etter 10 %-regelen.
+   - **Kontant:** bare reisen, ca. 350 kr/mnd.
+   - **Gevinst:** EU-referanse sammen med AFRY, SINTEF og TU Wien, en mulig artikkel, en FoU-profil for Solar Energy og Skygard, og SkatteFUNN bare med lønn.
+   - **Trekke oss:** før 8.1, og si fra til HIOF i desember.
+   - **Anbefaling:** bli med på fem vilkår (eier av en oppgave, bruksrett, referanse, egen IP og et tak på timene), ellers trekk dere før 8.1.
+2. **2FA: ny sak #326** til Alper og juristen, frist 30.11.
+   - FACT (GitHub-API): bare **veldora-anbud** mangler 2FA i org-en (som er på Team, og der kravet er av).
+   - Veiledningen har korte mobilsteg med lenker. Viktig: kravet fjerner medlemmer uten 2FA, så juristen må slå det på først.
+   - Workspace: hvem som har totrinnsbekreftelse er UNKNOWN for agentene. Admin-konsollen viser det, og stegene er i saken.
+   - Fristen viser til #326 (#327).
+- **Funn fra paal-1 på #317 er rettet (#324):** en lukket sak betyr at fristen er håndtert, så det lages ingen ny oppgave.
+- **Neste:** utkastet til juristen i #315 (bestillingen fra drift-vakt).
+
+## STATUS fra trading-1 @ 2026-11-15T17:55Z — rettelse Flytoget og svarfiler for Sjøfart: levert (drift#328 flettet bce9eaa)
+- **Flytoget er ute:** README rad 26 er merket AVLYST 06.03.2023, og neste-fem har en lærdom om at Doffin-status ikke er nok. #300 er lukket som «not planned», med begrunnelse. Mattilsynet (#138) er ny nr. 6. Ny rekkefølge: Sjøfart utvikling, DIO, Sjøfart test, Stortinget, Novari, Mattilsynet.
+- **Sjøfart er sjekket på EU-Supplys offentlige sider, uten innlogging:**
+  - #139 Utviklere og Techlead (PID 321714, sak 2022/6226): **åpen, frist 31.12.2026 kl. 12, ikke forlenget.**
+  - #141 Test og Testlead (PID 321673): **åpen og forlenget til 31.12.2030** (endring 31.08.2026, Doffin 2026-113628). Tittelen er rettet.
+- **Portalen er EU-Supply (Mercell CTM, DFØ-instansen). Vi har ingen bruker der**, og portaler.md sier «senere, trolig aldri». Nithu må registrere selskapet før 31.12.
+- **Svarfiler**, i samme format som for #136: `anbud/dps/sjofart-utviklere-techlead-svar.md` og `sjofart-test-testlead-svar.md`. Feltene står med FACT, ASSUMPTION og UNKNOWN, og stegene er skrevet for Nithu.
+- Sjøfart har også forhåndskunngjort Strategisk rådgivning og kvalitetssikring (05.10.2026, interesse til 2030). Status i portalen er bare sjekket for #139 og #141. DIO, Stortinget, Novari og Mattilsynet er ikke sjekket i portalen.
+
+## 2026-11-15T16:45:52Z fra paal-1: STATUS QA-runde
+Ingen blokkere. Disse er QA-et: drift#311, #316, #317, #318, #319, #320, #321, #322, #323, #324, #325, #327 og #328.
+- **Rettet:** duplikatfeilen i frist-oppgaver. Jeg testet #324 med dry-run: lukket sak (#96) gir «fristen er håndtert», og åpen sak (#278) gir én påminnelse.
+- Anthropic-setningen (#318), partnerfeltene (#310 og #317) og «Pågår» i profilen (#321) er rettet. Notatet «før vi selger» er oppdatert.
+- **#319 (QA-sjekk i CI):** selvtesten er grønn. Kjørt lokalt mot #320 og #305 gir den 0 feil og 0 advarsler, så ingen falske treff på org.nr., kontonr. eller Mercell-id-er. To begrensninger:
+  1. Den ser bare på .md, .json og .yml, så persondata i .csv eller .txt slipper gjennom.
+  2. Lenker bak Cloudflare gir advarsel (innovasjonnorge.no).
+- Små funn er sendt til eierne: reservestarten i #311 teller tørrkjøringer som «kjørt».
+
+## STATUS fra tools-1 @ 2026-11-15T16:49:18Z: dagsrapporten merges nå (cc#190), sorteringsvakten er i review (plattform#73 og cc)
+- Dagsrapporten (cc#190): review i to runder, og alt reviewen fant er rettet:
+  - Svarer ikke GitHub, skrives ingen rapport, så dagen kan prøves igjen. Andre kilder som ikke svarer, står som «Ukjent i dag».
+  - Blir noe sladdet, skrives ingenting.
+  - Vinduet går fra forrige rapport, så det som skjer etter kl. 20 kommer med i morgen. Første gang er det fra midnatt i Oslo, med riktig sommertid.
+  - E-postadresser og agentnavn fjernes fra teksten.
+  - Live: GitHub-søket godtar klokkeslett. Timeren kl. 20 installeres når CI på #190 er grønn.
+- Sorteringsvakten:
+  - drift#struktur.json med alle 71 mappene er merget.
+  - plattform#73: under Last opp ser eieren «Til sortering» med forslaget valgt fra før, og trykker Flytt. Fil og mål sjekkes mot snapshotet, og det er stengt i preview. 526/526 tester er grønne.
+  - Broen (cc, kommer etter #190): snapshotet hvert 5. minutt, og flytting bare fra 00 til en mappe i kartet, uten sletting. Live gir det 2 filer i 00: PhD-skissen får forslaget «10 Produkter og FoU / BORG og forskningsartikkel», og testfilen får ikke noe forslag.

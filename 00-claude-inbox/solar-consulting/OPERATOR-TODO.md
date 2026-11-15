@@ -15,7 +15,7 @@ Plan: https://github.com/Solar-Consulting/drift/blob/main/strategi/plan-2027.md 
 - [ ] **ESPD del III:** du, Alper og Tintun skriver `avgjør 136: del III nei` i #136.
 - [ ] **2FA:** ett av fire GitHub-medlemmer har ikke 2FA. Når alle har det, slår vi på kravet i org-en. kontakt@ i Google Workspace (superadmin) har heller ikke 2FA.
 - [ ] **Sauda:** samtykket til å bruke dem som referanse må fornyes etter eierskiftet (energisiden #280).
-- [ ] **Flytoget (#300)** er avlyst (2023). Svar `ferdig 300` eller lukk den.
+- [x] Flytoget (#300) er avlyst (2023), og saken er lukket av agentene.
 - [ ] **Se over:** profilen drift#304 og juristutkastene (#286, så #287–#289). Juristen avgjør utkastene.
 - [ ] **veldora-web** fikk en prod-deploy 15.11 kl. 16:56 som ikke kom fra plattformen. Var det en av dere?
 - [ ] **00 Til sortering:** hvor skal doktorgradsskissen ligge, i 10 Produkter og FoU eller i 05 Søknader?
@@ -25,6 +25,11 @@ Plan: https://github.com/Solar-Consulting/drift/blob/main/strategi/plan-2027.md 
   - A4: lagringstid
   - A3: om regelen for persondata også gjelder kundedata. Den avgjør juristen.
   A5 og A6 avgjør Alper og juristen.
+- [ ] **Solar Labs og e-post til ENK (viktig for nettsidesalget):** Etter markedsføringsloven § 15 kan vi ikke sende e-post eller SMS til enkeltpersonforetak uten samtykke. Mange av leadsene uten nettside er ENK. Telefon fra et menneske er trolig lov, med vilkår. Utkastet ligger i drift#320 (juristen avgjør), og det tekniske forslaget til Tintun i drift#198. Inntil juristen har sagt noe, sender vi bare e-post til AS og andre som ikke er ENK.
+- [ ] **Sjøfartsdirektoratet:** utviklere og techlead (#139) har frist **31.12.2026 kl. 12**. Test (#141) er forlenget til 2030. Begge krever bare attestene. Portalen er EU-Supply, og der har vi ingen bruker, så du må registrere Solarconsulting AS før 31.12. Svarfilene ligger i anbud/dps/sjofart-*-svar.md.
+- [ ] **CV-samtykke:** du sa nei 18.10, så CV-en din kan ikke brukes i noen ordning. Alpers CV kan brukes hos DIO når lærested og år for bacheloren er fylt inn. Tintun mangler master og vitnemål. Vil du endre svaret?
+- [ ] **BORG: bli med eller trekke oss før 8.1?** Notatet ligger i finansiering/borg-beslutning.md. Det koster rundt 450 timer fra september 2027 og 0 kr tilbake. Anbefalingen er å bli med på fem vilkår, og ellers trekke oss. Gi beskjed til HIOF i desember.
+- [ ] **2FA:** juristen er den eneste i GitHub-org-en som mangler 2FA (#326). Han må slå det på før vi skrur på kravet, ellers blir han fjernet automatisk.
 - [ ] **Uke 50 (11.12):** lønn ja eller nei. Det avgjør SkatteFUNN og OS2.
 - [ ] **Små ting:** første kvittering til Fiken, si opp LiveAvatar og HeyGen (#263), Posten signering (#126), #7. Lagringstiden på /personvern er fortsatt en plassholder (juristen, #96).
 

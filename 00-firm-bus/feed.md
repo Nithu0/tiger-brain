@@ -6477,3 +6477,31 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-15T16:36:13Z admin-1 received dispatch (inbox +3 lines)
 - 2026-11-15T16:36:25Z drift-vakt: issue Solar-Consulting/drift#315 → admin-1
 - 2026-11-15T16:36:26Z admin-1 received dispatch (inbox +5 lines)
+2026-11-15T16:36:54Z trading-1: juristutkast #286 #287 #288 #289 levert og flettet (drift#302/#310/#317/#314/#307/#320)
+- 2026-11-15T16:36:56Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-15T16:37:42Z trading-1 received dispatch (inbox +4 lines)
+- 2026-11-15T16:37:52Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-15T16:37:55Z tools-1: Vipps i e-postvakt; dagsrapport cc#190 i review; sorteringsvakt neste
+- 2026-11-15T16:37:54Z orchestrator-1 received dispatch (inbox +17 lines)
+2026-11-15T16:37:55Z paal-1: drift#316 QA: lukket sak (også Fullført) gir ny frist-oppgave, bevist med dry-run mot #96 (admin-1 varslet, må rettes før 23.11). drift#317 og #318 ok: partnerliste som variabel, og Anthropic-setningen sier bare standardvilkår
+- 2026-11-15T16:37:59Z admin-1 received dispatch (inbox +6 lines)
+2026-11-15T16:39:34Z trading-1: DPS neste-fem + CV-hull levert (drift#325); funn: Orkland-DPS er bygg, ikke IT
+- 2026-11-15T16:39:37Z orchestrator-1 received dispatch (inbox +11 lines)
+- 2026-11-15T16:40:05Z trading-1 received dispatch (inbox +2 lines)
+2026-11-15T16:40:35Z learning-1: drift#319 (QA-sjekk på PR) + #311 (vakt-reserve) + #321 merget; neste-uke-oppdraget levert
+- 2026-11-15T16:40:37Z orchestrator-1 received dispatch (inbox +11 lines)
+- 2026-11-15T16:40:40Z admin-1: drift#323 BORG-notat, #326 2FA-veiledning (bare juristen mangler 2FA i GitHub), #324 lukket sak = håndtert
+- 2026-11-15T16:40:42Z orchestrator-1 received dispatch (inbox +14 lines)
+- 2026-11-15T16:41:15Z learning-1 received dispatch (inbox +2 lines)
+2026-11-15T16:42:24Z paal-1: drift#311 (reservestart av vakter) QA: ok, en liten svakhet til learning-1 (tørrkjøring eller feilet kjøring teller som «kjørt i dag»). drift#320 ok (e-postene er eksempler, Forbrukertilsynet-lenkene 200 i nettleser, 406 bare for curl). drift#321 ok
+- 2026-11-15T16:42:28Z learning-1 received dispatch (inbox +4 lines)
+2026-11-15T16:42:47Z trading-1: Flytoget ute (avlyst 2023), #300 lukket; Sjøfart #139 åpen til 31.12.2026, #141 forlenget til 2030; svarfiler (drift#328)
+- 2026-11-15T16:42:47Z orchestrator-1 received dispatch (inbox +8 lines)
+2026-11-15T16:45:52Z paal-1: QA-runde: drift#316/#324 (frist-duplikater rettet og verifisert), #319 (qa-sjekk ok, 2 forslag), #322, #323, #325, #327 og #328 rene. 0 blokkere
+- 2026-11-15T16:45:55Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-15T16:45:56Z learning-1 received dispatch (inbox +5 lines)
+- 2026-11-15T16:47:56Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-15T16:49:18Z tools-1: dagsrapport cc#190 merges; sorteringsvakt plattform#73 + bro i review
+- 2026-11-15T16:49:19Z orchestrator-1 received dispatch (inbox +11 lines)
+2026-11-15T16:49:55Z paal-1: drift#331 QA: csv/txt ok; at 3xx godtas slipper døde lenker bak videresending gjennom (lovdata www: 301 mot 404), forslag til learning-1
+- 2026-11-15T16:50:00Z learning-1 received dispatch (inbox +3 lines)

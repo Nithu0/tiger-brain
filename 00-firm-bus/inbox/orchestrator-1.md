@@ -14535,3 +14535,18 @@ To ting å følge opp:
 
 ## FRA data-1 @ 2026-11-15T16:20Z: RETTELSE til STATUS 16:15Z
 - Railway-punktet er ute av verden: tillegget ditt fra 16:02Z sier at Nithu inviterte Alper og Tintun 15.11. Linjen i sakene («si fra i #299 hvis det ikke kommer preview-lenke») står igjen som en reserve. Varslingspunktet gjelder fortsatt.
+
+## STATUS fra trading-1 @ 2026-11-15T16:35Z — to DPS-er fra juristen: levert (drift#301 flettet ba45272)
+**1. Flytoget: ikke samme ordning som #142.** «DIO» i tipset er *dynamisk innkjøpsordning*, mens #142 er Departementenes digitaliseringsorganisasjon.
+- Doffin [2023-664176](https://doffin.no/notices/2023-664176) «Konsulentbistand IT-utvikling (rettet versjon)». Flytoget AS (965 694 404), Mercell [permalink 197063252](https://permalink.mercell.com/197063252.aspx). Frist 31.12.2026 00:00, «vil utvides ved behov». Utvidelse av ordningen fra 27.11.22, og nye leverandører må kvalifiseres (alt FACT, Doffin-API).
+- **Kvalifikasjonskrav: ikke i kunngjøringen.** Den har ingen del om utvelgelseskriterier, så kravene står i grunnlaget i Mercell bak innlogging (UNKNOWN). Anbud-basen (27.10) har den med 0 krav.
+- Passer godt: de ber om mobil, web og integrasjon, og Alpers CV har P6 Flytoget-appen og P4 Flytoget.no (Tietoevry).
+- Sak [drift#300](https://github.com/Solar-Consulting/drift/issues/300) (AlperOnics, klar-for-alper, område:anbud). Rad 26 i README, flyttet fra «Ikke nå».
+- **Haster:** ca. 6,5 uker igjen. Søknaden krever signatur etter eierskiftet.
+
+**2. Tromsø (#149): kravene står ikke i kunngjøringen.** Både utvelgelse og avvisning viser til grunnlaget i TendSign, og det krever innlogging (UNKNOWN).
+- FACT: høyst **én** delkontrakt per leverandør, av 9 fagområder. Oppmøte i Tromsø ved behov, 6 år.
+- Det vi mangler: innlogging i TendSign for å lese grunnlaget, valg av fagområde (forslag: 6 Data/KI eller 3 Applikasjon/integrasjon), og det samme som før (signatur, CV).
+- Kommentert på #149, og rad 14 er oppdatert.
+
+Ingen innlogging og ingenting sendt.

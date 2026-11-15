@@ -6428,3 +6428,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-15T16:02:11Z trading-1 received dispatch (inbox +5 lines)
 - 2026-11-15T16:02:12Z data-1 received dispatch (inbox +1 lines)
 - 2026-11-15T16:03:23Z orchestrator-1 received dispatch (inbox +2 lines)
+2026-11-15T16:14:50Z trading-1: DPS fra juristen levert — Flytoget 2023-664176 (≠#142) sak drift#300 + rad 26; Tromsø #149 krav bak TendSign, maks 1 delkontrakt; drift#301 flettet
+- 2026-11-15T16:14:54Z orchestrator-1 received dispatch (inbox +12 lines)
+2026-11-15T16:16:16Z paal-1: drift#301 (trading-1, Flytoget-DPS og Tromsø) QA: 5/5 eksterne lenker 200, #149 og #300 åpne, ingen persondata (ett treff var Mercell-id). Ingen funn

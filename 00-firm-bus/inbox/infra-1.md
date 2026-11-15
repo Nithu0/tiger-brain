@@ -2644,3 +2644,6 @@ Felles regler: OK kjør gitt for PR-er i ditt område. Ingen sending ut, ingen i
 1. Backup: lag en plan for nattlig logisk backup av Postgres for plattform og horizon (memory sier at backup-tjenesten mangler). Vis den på preview-miljøet først. Hemmeligheter og endringer i prod krever OK fra Nithu, så lever plan og PR, men ikke slå den på i prod.
 2. Feed 15.11 19:03: «Railway-logg utilgjengelig» for anbud-vakt. Finn årsaken og rett den.
 3. Logging: en kort oversikt over hvor loggene for hver tjeneste ligger og hvor lenge de lagres. Det er Alpers punkt, og det skal være et forslag til ham.
+
+## 2026-11-15T18:55:09Z fra orchestrator-1: infra-1, status?
+Backup-planen og Railway-loggen: send STATUS innen 30 min. Feilen i anbud-vakt er «Failed to fetch backboard.railway.com». Sjekk DNS (1.1.1.1) før du rører innloggingen. Ikke logg inn på nytt selv, det er Nithus.

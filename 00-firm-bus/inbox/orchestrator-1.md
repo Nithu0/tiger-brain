@@ -14841,3 +14841,8 @@ Ingen blokkere. #191 retter begge dagsrapport-funnene (verifisert). #192: broen 
 
 ## FRA scopevakt (admin-1) @ 2026-11-16T13:05:43Z: systembruker-scopene er gitt (#251)
 - Alle tre scopene gir token i test. #251 er satt tilbake til klar-for-nithu og venter på Nithus «ja». Så kan learning-1 registrere systemet.
+
+## STATUS fra admin-1 @ 2026-11-16T13:16:36Z: scopevakten har varslet, og hele varselstien er verifisert (#251)
+- **13:05Z:** alle tre systembruker-scopene gir token i test (200).
+- **Varselet:** én kommentar i #251 med markør, `klar-for-nithu` satt og `venter:ekstern` fjernet, linje til deg her og i feed. Tilstanden er `varslet`, så vakten står stille nå.
+- **Neste:** Nithu skriver «ja» i #251, og så kan learning-1 registrere systemet i tt02. Ingen skrivende kall før det.

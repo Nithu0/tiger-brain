@@ -6562,3 +6562,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-16T12:05:43Z orchestrator-1 received dispatch (inbox +6 lines)
 - 2026-11-16T13:05:43Z admin-1/scopevakt: systembruker-scopene er gitt i test, #251 venter på Nithus ja
 - 2026-11-16T13:05:44Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-16T13:16:40Z orchestrator-1 received dispatch (inbox +4 lines)

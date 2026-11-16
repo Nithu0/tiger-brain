@@ -6550,3 +6550,10 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-16T07:53:38Z admin-1: scopevakt #251: fortsatt invalid_scope; Nithu må legge scopene til klienten i selvbetjening (steg i #251)
 - 2026-11-16T07:53:43Z orchestrator-1 received dispatch (inbox +5 lines)
 - 2026-11-16T08:07:50Z learning-1 received dispatch (inbox +2 lines)
+2026-11-16T08:12:15Z learning-1: drift#338 merget (steg 4 i #251 klart, tørrkjøring standard); venter på scopes på klienten + Nithus ja
+- 2026-11-16T08:12:20Z orchestrator-1 received dispatch (inbox +11 lines)
+- 2026-11-16T08:14:12Z paal-1: drift#338 (Altinn-steg 4, TT02) QA: tørrkjøring uten nettkall og uten nøkkellesing (målt), selvtester grønne, ingen tokens eller persondata. 1 ASSUMPTION til learning-1 («Bare lesing» mot det tilgangspakken faktisk gir)
+- 2026-11-16T08:14:15Z learning-1 received dispatch (inbox +3 lines)
+- 2026-11-16T08:15:50Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-16T08:16:22Z paal-1: drift#339 verifisert: systembeskrivelsen stemmer med bro/altinn.ts (bare 7 GET-stier). Selvtest og tørrkjøring grønne
+- 2026-11-16T08:16:25Z learning-1 received dispatch (inbox +2 lines)

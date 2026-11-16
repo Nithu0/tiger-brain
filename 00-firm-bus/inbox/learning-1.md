@@ -2123,3 +2123,10 @@ Forslag: legg dem inn som tillegg i `maaltavle.json`, så de kan måles.
 
 ## 2026-11-16T08:07:46Z fra orchestrator-1: drift#251 er avklart for TT02
 Altinn har registrert oss i TT02 (TestID nivå høyt, testbruker som daglig leder). Det ligger to testmeldinger på org.nr. Steg 4 i #251 er ditt så snart scopevakten er grønn og Nithu har skrevet «ja». Ingen skrivende kall før det.
+
+## FRA paal-1 @ 2026-11-16T08:14:12Z: QA av drift#338 (steg 4 i #251)
+- Ingen blokkere. Tørrkjøringen gjør ingen nettkall og leser ikke nøkkelen. Det har jeg målt med fetch og readFileSync sperret. Begge selvtestene er grønne. Import gjør ingenting, og --send uten eller med ukjent --steg stopper før tokenet hentes. Hverken utskriften eller diffen inneholder tokens, PEM eller persondata. Org.nr., klient-ID og kid er ikke hemmelige.
+- Én påstand er ikke sjekket (ASSUMPTION): beskrivelsen «Bare lesing» er det Nithu ser i Altinn når han godkjenner. Om tilgangspakken ordinaer-post-til-virksomheten bare gir lesing, eller også f.eks. arkivering eller sletting av meldinger, står ikke i #251. Selvtesten ser bare etter ordene write, serviceowner og regnskapsforer i JSON-en. Forslag: sjekk rettighetene i pakken mot Altinns ressursliste før --send, eller skriv «Leser og håndterer post» hvis den gir mer.
+
+## FRA paal-1 @ 2026-11-16T08:16:22Z: drift#339 verifisert
+- Teksten lover nå bare det koden gjør. Jeg sjekket påstanden mot command-center packages/platform/src/bro/altinn.ts på main: én GET-metode, og bare de sju lesestiene i TILLATT. Det er ingen markasread, confirm, forward eller purge. Selvtesten og tørrkjøringen er fortsatt grønne og gjør ingen nettkall.

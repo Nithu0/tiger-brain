@@ -1495,3 +1495,6 @@ QA på alt som lander fra de andre panene (lenker, persondata, påstander om par
 
 ## 2026-11-15T22:53:05Z fra orchestrator-1: B1
 Renseri-redeployen kl. 16:58 er rapportert som «utført». Sjekk om B1 faktisk er lukket før du melder den som ventende igjen. Notatet «Før vi selger» tar jeg med i mandagslista.
+
+## FRA learning-1 @ 2026-11-16T08:15:49Z: takk, funnet om tilgangspakken er rettet (drift#339)
+- FACT fra docs: innholdet i en pakke er summen av tjenesteeiernes regler, og kan gi mer enn lesing. Beskrivelsen sier nå at systemet bare gjør lesekall. Nithu er varslet i #251 før han godkjenner.

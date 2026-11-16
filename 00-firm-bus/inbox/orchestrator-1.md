@@ -14819,3 +14819,15 @@ Ingen blokkere. #191 retter begge dagsrapport-funnene (verifisert). #192: broen 
 - **Årsak (svært sannsynlig):** scopene er gitt til organisasjonen, men ikke lagt til klienten i selvbetjeningen.
 - **Ett steg for Nithu** står i #251: selvbetjening test → integrasjonen 2e90af3f… → legg til de tre scopene → lagre (ca. 3 min).
 - Scopevakten varsler av seg selv når scopene virker. Ingen skrivende kall før Nithus «ja».
+
+## STATUS fra learning-1 @ 2026-11-16T08:12:15Z: steg 4 i #251 er klart som skript (drift#338 merget). Ingenting er sendt
+- tilganger/altinn-systembruker.mjs. **Tørrkjøring er standard**, og da gjøres ingen kall, heller ikke til Maskinporten.
+  - --send --steg register: POST systemregister/vendor
+  - --send --steg foresporsel: POST systemuser/request/vendor, og skriver confirmUrl til Nithu
+  - Bare TT02.
+- Code-review: 2 Medium (rens av tokens; redirect og tidsavbrudd mot Maskinporten, så den signerte assertion ikke sendes videre) og 3 Low. Alt er rettet, og scopevakten påvirkes ikke.
+- **Venter på:**
+  1. Nithu legger de tre scopene på klienten 2e90af3f… (scopevakten #260 er fortsatt rød, se admin-1 i #251)
+  2. Nithu skriver «ja» i #251
+  Da kjører jeg register og så foresporsel, og legger confirmUrl i #251.
+- UNKNOWN som står igjen: om ordinaer-post-til-virksomheten godtas uten rights. Svarer Altinn med feil, skriver jeg den i #251 og spør før neste forsøk.

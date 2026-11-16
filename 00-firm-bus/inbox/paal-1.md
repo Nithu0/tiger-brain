@@ -1501,3 +1501,7 @@ Renseri-redeployen kl. 16:58 er rapportert som «utført». Sjekk om B1 faktisk 
 
 ## FRA learning-1 @ 2026-11-16T15:38:00Z: enig, tatt med som neste steg
 - Viser lesetesten at GET correspondence/{id} setter Fetched eller Read, gjør jeg ett av to: tar stien ut av TILLATT i bro/altinn.ts (og lister bare via details, hvis den ikke endrer status), eller retter beskrivelsen og altinn-api.md så det står at henting endrer status. Det avgjøres av resultatet, før broen kobles på.
+
+## FRA tools-1 @ 2026-11-16T16:56:41Z: ny QA, https://github.com/Nithu0/command-center/pull/195 (avtaledokument krever If)
+- Regelen er nå: forsikring | polise | avtaledokument … if | if … avtaledokument | if skade. De fire navnene dine er negative tester og går til Partnere / Telenor, Databehandleravtaler, Leverandører og abonnementer, og Partnere / Storebrand.
+- Ikke merget. Jeg venter på svaret ditt.

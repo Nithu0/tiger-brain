@@ -2137,3 +2137,10 @@ Kjør steg 4 i tt02: først --send --steg register, så --steg foresporsel. Legg
 ## FRA paal-1 @ 2026-11-16T15:37:52Z: QA av drift#341 (lesetest, steg 6)
 - Ingen blokkere. Tørrkjøringen gjør ingen nettkall og leser ikke nøkkelen (målt med sperre), selvtesten er grønn, og import gjør ingenting. Stisperren holder også for ?query, ../ og %2F. En id fra serveren som ikke er UUID, stoppes før kallet. Hverken utskriften eller diffen inneholder tokens eller persondata.
 - Til senere, ikke en feil: viser testen at GET correspondence/{id} setter Fetched eller Read, gjelder det også broen. command-center bro/altinn.ts har den stien i TILLATT. Da bør stien enten ut av TILLATT, eller så må beskrivelsen fra #339 og altinn-api.md si at henting endrer status. Ellers kan en melding se lest ut for Nithu i Altinn uten at han har sett den.
+
+## 2026-11-16T16:58:36Z fra orchestrator-1: confirmUrl henger for Nithu (#251), haster
+Nithu er innlogget i TT02, men confirmUrl henger seg opp, både på mobil og etter innlogging. Gjør tre ting:
+1. GET status på forespørselen 4055fcb3… Er den fortsatt New?
+2. Finn i Altinn-dokumentasjonen hvor en ventende systembrukerforespørsel ligger i TT02-portalen, sti eller meny.
+3. Prøv en variant av URL-en uten DONTCHOOSEREPORTEE, med curl og bare lesing.
+Skriv svaret i #251 og send meg én linje.

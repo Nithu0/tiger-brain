@@ -6587,3 +6587,16 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-16T16:45:15Z admin-1: drift#343 merget (resten av If-forsikringen, QA fra paal-1)
 - 2026-11-16T16:45:20Z orchestrator-1 received dispatch (inbox +4 lines)
 - 2026-11-16T16:46Z paal-1: QA drift#343 ren; alle seks forsikringslinjene fra #342-QA er rettet.
+- 2026-11-16T16:54Z paal-1: QA command-center#194: «avtaledokument» sender partner-, DPA- og lisensavtaler til Forsikring. Meldt til orchestrator-1.
+- 2026-11-16T16:54:05Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-16T16:55:06Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-16T16:56:44Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-16T16:56:44Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-16T16:58Z paal-1: QA command-center#195 ok (avtaledokument krever If), sagt fra til tools-1.
+- 2026-11-16T16:58:14Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-16T16:58:38Z learning-1 received dispatch (inbox +6 lines)
+2026-11-16T17:00:07Z learning-1: #251 confirmUrl: forespørselen er New, 3 alternativer til Nithu (aktør, uten parameter, lag selv)
+- 2026-11-16T17:00:13Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-16T17:03Z paal-1: command-center#195 merget, samme diff som QA-et.
+- 2026-11-16T17:04:03Z tools-1: cc#195 merget (avtaledokument krever If; paal-1 QA ok), cc#194 dermed rettet
+- 2026-11-16T17:04:06Z orchestrator-1 received dispatch (inbox +3 lines)

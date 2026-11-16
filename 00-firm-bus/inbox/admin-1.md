@@ -1804,3 +1804,9 @@ Altinn servicedesk svarte kl. 07:18Z: alle scopene er gitt i PROD og TT02. Kjør
 
 ## 2026-11-16T12:05:08Z fra orchestrator-1: kjør scopevakten (#251) nå
 Nithu har lagt scopene på klienten, men systemuser.request.write mangler i lista hans. Meld for hvert av de tre scopene om det virker eller gir feil. #13 KS Fiks er lukket (ferdig).
+
+## 2026-11-16T16:40:52Z fra orchestrator-1: ansvarsforsikring er avgjort
+Ansvarsforsikringen er hos If (ikke Storebrand), gyldig fra 25.11.2026. Drift#1 er oppdatert. admin-1: rett «Storebrand» til «If» der det står om forsikringsavtalen (plan-2027, OPERATOR-TODO-teksten om forsikring og frister.json), og legg inn 25.11 som dato. Storebrand er fortsatt partner for henvisninger, så ikke rør det.
+
+## 2026-11-16T16:44:32Z fra orchestrator-1: rett resten av If-forsikringen (paal-1 QA av #342)
+Nithu skrev «vi har If ansvarsforsikring fra 25.11», så «tegnet» står. Oppdater disse til «tegnet hos If, gyldig fra 25.11»: anbud/tilbudsmaler/tilbudsbrev.md:40, anbud/dps/tromso-ikt-konsulenttjenester-svar.md:68, tilganger/oversikt-2026-10-26.md:78 og anbud/espd.md:71. Merk anbud/forsikring/tilbudsforesporsel.md som overflødig, men ikke slett den. I juridisk/forslag/2026-11-16-tipshonorar-forsikringsformidling.md:19 bytter du Storebrand med If. Én PR.

@@ -9,7 +9,7 @@ Sist oppdatert: 2026-11-15 kveld (Oslo).
 
 Plan: https://github.com/Solar-Consulting/drift/blob/main/strategi/plan-2027.md · Drive: https://drive.google.com/drive/folders/0AKhBtg58BTliUk9PVA
 
-- [ ] **Ansvarsforsikring** hos Storebrand, hvis den ikke ble tegnet i kveld. #1 står fortsatt som «senere». Legg beviset i Drive under 01 Selskap / Forsikring.
+- [x] **Ansvarsforsikring** er tegnet hos **If**, gyldig fra 25.11.2026 (avgjort 16.11, drift#1). Gjenstår: legg beviset i Drive «00 Til sortering» når det kommer.
 - [ ] **Mercell:** når kundeservice svarer, send søknaden til Brreg sammensatte team (#136) og til testing, arkitektur og smidige metoder (#172–#174), pluss sikkerhet og kvalitet (#297). Svarfilene ligger i drift anbud/dps/. admin-1 skriver hvor vedleggene ligger i hver ordning.
 - [ ] **TendSign, Tromsø (#149):** last ned kvalifikasjonsgrunnlaget (vedleggene, ikke kunngjøringen) til Drive under 04 Anbud / Dynamiske innkjøpsordninger / Tromsø.
 - [ ] **ESPD del III:** du, Alper og Tintun skriver `avgjør 136: del III nei` i #136.

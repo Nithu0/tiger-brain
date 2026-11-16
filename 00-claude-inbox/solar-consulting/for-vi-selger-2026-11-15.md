@@ -4,7 +4,7 @@ paal-1, på oppdrag fra orchestrator-1 16:24Z. Bare lesing. Kilder: drift på ma
 
 ## Kort
 
-Vi kan ikke selge Solar Secure ennå. Ingen partneravtale er signert, og det står heller ingen steder på nettsiden at vi har partnere. Konsulenttimer og nettsider kan selges, men fire ting bør ordnes før første kontrakt: 2FA, forsikringen, personvernerklæringen og én setning om Anthropic i kvalitetssystemet.
+Vi kan ikke selge Solar Secure ennå. Ingen partneravtale er signert, og det står heller ingen steder på nettsiden at vi har partnere. Konsulenttimer og nettsider kan selges, men fire ting bør ordnes før første kontrakt: 2FA, forsikringsbeviset (If fra 25.11), personvernerklæringen og én setning om Anthropic i kvalitetssystemet.
 
 ## 1. 2FA (A2)
 
@@ -15,10 +15,9 @@ Vi kan ikke selge Solar Secure ennå. Ingen partneravtale er signert, og det st�
 
 ## 2. Forsikring
 
-- FACT: ansvarsforsikringen er ikke tegnet. `anbud/espd.md` sier «Nei».
-- **Motstrid:** plan-2027 (vedtatt 15.11) sier «Tegn ansvarsforsikring hos Storebrand» 15.11. #1 ble 14.11 flyttet til «senere», med første kontrakt som utløser. #1 viser dessuten til Gjensidige og If, ikke Storebrand. Eier: Nithu. Den ene av dem må rettes.
-- Storebrand er også partner i Solar Secure (tipshonorar, #278 og #287). Om forsikringsdistribusjonsloven gjelder, er ikke avklart. Juristen svarer innen 30.11.
-- Det haster ikke for DPS-opptak. Ifølge #1 og #126 krever SSA-B forsikringen ved første kontrakt. Ledetiden er 1–2 uker.
+- FACT (oppdatert 16.11, drift#342): Nithu valgte If 16.11, gyldig fra 25.11.2026. Motstriden mellom plan-2027 (Storebrand nå) og #1 (ved første kontrakt) er dermed løst. ESPD sier «Nei» før 25.11 og «Ja, hos If» fra 25.11.
+- Gjenstår: forsikringsbeviset (sum og vilkår) er ikke lagret. Fristen 25.11 kommer som påminnelse i #1. Prisen er UNKNOWN.
+- Storebrand er fortsatt partner i Solar Secure (tipshonorar, #278 og #287). Om forsikringsdistribusjonsloven gjelder, er ikke avklart. Juristen svarer innen 30.11.
 
 ## 3. Personvernerklæringen
 
@@ -44,7 +43,7 @@ Dette er OK: ESPD sier ingen underleverandører og ikke sertifisert. Microsoft P
 | Hva | Eier | Frist |
 |---|---|---|
 | Alle skrur på 2FA, deretter settes kravet i GitHub og GWS | Alper | 30.11 |
-| Bestem forsikringen: Storebrand nå (planen) eller ved første kontrakt (#1) | Nithu | 20.11 |
+| Lagre forsikringsbeviset fra If i Drive (avgjort 16.11, drift#342) | Nithu | 25.11 |
 | Lagringstid og DPA-avsnitt på /personvern, og avklar Vercel-planen | jurist og Nithu | 15.12 |
 | Behold `[BEKREFTES]` på Anthropic-setningen til #20 er sjekket | admin-1 | før neste tilbud |
 | Endre «samtale pågår» i #284 til det som faktisk er gjort | Alper | 20.12 |

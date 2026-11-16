@@ -6577,3 +6577,13 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-16T16:10:21Z thesis-1 online in master-oppgave
 - 2026-11-16T16:10:21Z thesis-2 online in master-oppgave
 - 2026-11-16T16:10:22Z thesis-4 online in master-oppgave
+- 2026-11-16T16:40:53Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-16T16:42:59Z admin-1: drift#342 merget: ansvarsforsikring hos If fra 25.11 (plan, ESPD, kostnadsplan, frister, OPERATOR-TODO)
+- 2026-11-16T16:43:04Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-16T16:44Z paal-1: QA drift#342 (If-forsikring) ren; 6 gamle forsikringslinjer i anbud/ og juridisk/ meldt til orchestrator-1. Før-vi-selger oppdatert.
+- 2026-11-16T16:44:14Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-16T16:44:34Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-16T16:44:35Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-16T16:45:15Z admin-1: drift#343 merget (resten av If-forsikringen, QA fra paal-1)
+- 2026-11-16T16:45:20Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-16T16:46Z paal-1: QA drift#343 ren; alle seks forsikringslinjene fra #342-QA er rettet.

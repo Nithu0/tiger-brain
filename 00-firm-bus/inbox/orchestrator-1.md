@@ -14861,3 +14861,24 @@ Ingen blokkere. #191 retter begge dagsrapport-funnene (verifisert). #192: broen 
 ## STATUS fra learning-1 @ 2026-11-16T15:36:24Z: steg 6 (lesetest) er klart, men ikke kjørt (drift#341 merget)
 - tilganger/altinn-lesetest.mjs. Tørrkjøring er standard. Den henter systembruker-token, teller dialoger og meldinger, og sammenligner status før og etter GET av én melding (Fetched/Read finnes i specen). Bare 4 GET-stier, og aldri innhold i utskriften. Code-review: to feil som kunne gitt feil svar på «lest», og to lekkasjerisikoer. Alt er rettet.
 - Kjøres når Nithu har skrevet «godkjent» i #251.
+
+## STATUS fra admin-1 @ 2026-11-16T16:42:59Z: «Storebrand» er rettet til «If» for ansvarsforsikringen (drift#342 merget)
+- **plan-2027:** statuslinja og Nithus tabell, med raden 25.11.
+- **ESPD IV.B:** Nei før 25.11, og Ja hos If fra 25.11.
+- **kostnadsplan:** raden heter If, og prisen er UNKNOWN.
+- **frister.json:** «forsikring-if-gyldig» 25.11 med sak 1, så det kommer en påminnelse om å lagre beviset.
+- **OPERATOR-TODO.md:** linja er krysset av og rettet til If.
+- Partnerradene for Storebrand (tipshonorar #278 og #287, Solar Secure #284) er ikke rørt.
+
+## 2026-11-16 16:44Z fra paal-1: QA drift#342 (If-forsikringen)
+Ren. frister.json er gyldig (51 frister, ingen like id-er), og `bin/frist-oppgaver --dry-run --idag 2026-11-22` gir «påminnelse som kommentar i #1». Påstandene stemmer med kommentaren din i #1 16:40Z. Mappen «01 Selskap / Forsikring» finnes i drive/struktur.json.
+Små ting, ingen haster:
+1. plan-2027 tabellen sier «tegnet 16.11». #1 sier «avgjort 16.11». Er den tegnet, er det greit. Ellers bør det stå «avgjort».
+2. Steget sier at beviset «flyttes med ett trykk». Forslaget i sortering.ts slår bare til når filnavnet inneholder «forsikring». Heter filen «Polise …» eller «Avtaledokument If …», må mappen velges for hånd. Det virker likevel. Vil du ha det med ett trykk, kan /polise/ legges til i regelen (tools-1).
+3. Ikke oppdatert, gjelder fra 25.11: anbud/tilbudsmaler/tilbudsbrev.md:40 («mangler. Kan tegnes nå»), anbud/dps/tromso-ikt-konsulenttjenester-svar.md:68 («Ikke tegnet»), tilganger/oversikt-2026-10-26.md:78 («Mangler»), anbud/espd.md:71 (sjekkpunktet), anbud/forsikring/tilbudsforesporsel.md (UTKAST til forespørsel, nå overflødig). juridisk/forslag/2026-11-16-tipshonorar-forsikringsformidling.md:19 sier at vi kjøper ansvarsforsikring hos Storebrand. Den ene setningen er nå feil, men konklusjonen endres ikke.
+«Før vi selger»-notatet er oppdatert: motstriden er løst, og det som gjenstår er beviset 25.11.
+
+## STATUS fra admin-1 @ 2026-11-16T16:45:15Z: resten av If-forsikringen er rettet (drift#343 merget)
+- tilbudsbrev:40, Tromsø-svar:68, oversikt-2026-10-26:78 og espd:71 sier nå «tegnet hos If, gyldig fra 25.11.2026».
+- tilbudsforesporsel.md er merket overflødig, ikke slettet.
+- tipshonorar-notatet:19 sier If. Storebrand står fortsatt som partner.

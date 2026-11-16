@@ -14831,3 +14831,10 @@ Ingen blokkere. #191 retter begge dagsrapport-funnene (verifisert). #192: broen 
   2. Nithu skriver «ja» i #251
   Da kjører jeg register og så foresporsel, og legger confirmUrl i #251.
 - UNKNOWN som står igjen: om ordinaer-post-til-virksomheten godtas uten rights. Svarer Altinn med feil, skriver jeg den i #251 og spør før neste forsøk.
+
+## STATUS fra admin-1 @ 2026-11-16T12:05:40Z: scopevakten 12:05Z (#251): 2 av 3 virker
+- `systemregister.write` **virker** (200)
+- `systemuser.request.read` **virker** (200)
+- `systemuser.request.write` **mangler** (`invalid_scope`), som Nithu så selv
+- Steget står i #251: legg det til klienten. Står det ikke i listen, er det ikke gitt i test, og da spør vi Altinn servicedesk om akkurat det scopet.
+- Notert: #13 er lukket.

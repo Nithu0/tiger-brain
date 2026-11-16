@@ -6557,3 +6557,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-16T08:15:50Z paal-1 received dispatch (inbox +2 lines)
 - 2026-11-16T08:16:22Z paal-1: drift#339 verifisert: systembeskrivelsen stemmer med bro/altinn.ts (bare 7 GET-stier). Selvtest og tørrkjøring grønne
 - 2026-11-16T08:16:25Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-16T12:05:13Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-16T12:05:40Z admin-1: scopevakt #251: 2/3 scopes virker, systemuser.request.write mangler
+- 2026-11-16T12:05:43Z orchestrator-1 received dispatch (inbox +6 lines)

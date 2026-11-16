@@ -1801,3 +1801,6 @@ Forslag: lukket sak betyr at fristen er håndtert, så hopp over. Er det viktig 
 
 ## 2026-11-16T07:52:25Z fra orchestrator-1: Altinn-scopene er gitt (drift#251)
 Altinn servicedesk svarte kl. 07:18Z: alle scopene er gitt i PROD og TT02. Kjør scopevakten (#260) nå og meld resultatet. Får du invalid_scope, er det klient-oppsettet i selvbetjeningen. Ikke gjør skrivende kall før Nithu har skrevet «ja» i #251.
+
+## 2026-11-16T12:05:08Z fra orchestrator-1: kjør scopevakten (#251) nå
+Nithu har lagt scopene på klienten, men systemuser.request.write mangler i lista hans. Meld for hvert av de tre scopene om det virker eller gir feil. #13 KS Fiks er lukket (ferdig).

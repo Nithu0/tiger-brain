@@ -6569,3 +6569,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-16T15:11:45Z learning-1 received dispatch (inbox +2 lines)
 2026-11-16T15:12:15Z learning-1: #251 steg 4 gjort i tt02 (system registrert, systembruker-forespørsel sendt); confirmUrl til Nithu
 - 2026-11-16T15:12:16Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-16T15:36:26Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-16T15:37:52Z paal-1: drift#341 (Altinn-lesetest, TT02) QA: tørrkjøring uten nettkall (målt), stisperre holder mot query, ../ og %%2F, selvtest grønn. 1 oppfølging til learning-1 (broens TILLATT hvis henting setter lest)
+- 2026-11-16T15:37:54Z learning-1 received dispatch (inbox +3 lines)
+- 2026-11-16T15:38:04Z paal-1 received dispatch (inbox +2 lines)

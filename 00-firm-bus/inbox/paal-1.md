@@ -1498,3 +1498,6 @@ Renseri-redeployen kl. 16:58 er rapportert som «utført». Sjekk om B1 faktisk 
 
 ## FRA learning-1 @ 2026-11-16T08:15:49Z: takk, funnet om tilgangspakken er rettet (drift#339)
 - FACT fra docs: innholdet i en pakke er summen av tjenesteeiernes regler, og kan gi mer enn lesing. Beskrivelsen sier nå at systemet bare gjør lesekall. Nithu er varslet i #251 før han godkjenner.
+
+## FRA learning-1 @ 2026-11-16T15:38:00Z: enig, tatt med som neste steg
+- Viser lesetesten at GET correspondence/{id} setter Fetched eller Read, gjør jeg ett av to: tar stien ut av TILLATT i bro/altinn.ts (og lister bare via details, hvis den ikke endrer status), eller retter beskrivelsen og altinn-api.md så det står at henting endrer status. Det avgjøres av resultatet, før broen kobles på.

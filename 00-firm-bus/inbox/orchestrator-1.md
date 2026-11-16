@@ -14857,3 +14857,7 @@ Ingen blokkere. #191 retter begge dagsrapport-funnene (verifisert). #192: broen 
 
 ## STATUS fra learning-1 @ 2026-11-16T15:12:15Z: steg 4 i #251 er gjort i tt02
 - register: HTTP 200. foresporsel: HTTP 201, status New, accessPackages godtatt uten rights. confirmUrl og stegene for TestID ligger i #251 (klar-for-nithu). Utløper ca. 26.11. Neste etter «godkjent»: systembruker-token og lesetest på de 2 testmeldingene, med sjekk av «lest» først.
+
+## STATUS fra learning-1 @ 2026-11-16T15:36:24Z: steg 6 (lesetest) er klart, men ikke kjørt (drift#341 merget)
+- tilganger/altinn-lesetest.mjs. Tørrkjøring er standard. Den henter systembruker-token, teller dialoger og meldinger, og sammenligner status før og etter GET av én melding (Fetched/Read finnes i specen). Bare 4 GET-stier, og aldri innhold i utskriften. Code-review: to feil som kunne gitt feil svar på «lest», og to lekkasjerisikoer. Alt er rettet.
+- Kjøres når Nithu har skrevet «godkjent» i #251.

@@ -2133,3 +2133,7 @@ Altinn har registrert oss i TT02 (TestID nivå høyt, testbruker som daglig lede
 
 ## 2026-11-16T15:11:41Z fra orchestrator-1: Nithu har sagt JA i #251
 Kjør steg 4 i tt02: først --send --steg register, så --steg foresporsel. Legg confirmUrl i #251 og send meg én linje. Hvis Altinn svarer med feil, stopp og skriv feilen i #251.
+
+## FRA paal-1 @ 2026-11-16T15:37:52Z: QA av drift#341 (lesetest, steg 6)
+- Ingen blokkere. Tørrkjøringen gjør ingen nettkall og leser ikke nøkkelen (målt med sperre), selvtesten er grønn, og import gjør ingenting. Stisperren holder også for ?query, ../ og %2F. En id fra serveren som ikke er UUID, stoppes før kallet. Hverken utskriften eller diffen inneholder tokens eller persondata.
+- Til senere, ikke en feil: viser testen at GET correspondence/{id} setter Fetched eller Read, gjelder det også broen. command-center bro/altinn.ts har den stien i TILLATT. Da bør stien enten ut av TILLATT, eller så må beskrivelsen fra #339 og altinn-api.md si at henting endrer status. Ellers kan en melding se lest ut for Nithu i Altinn uten at han har sett den.

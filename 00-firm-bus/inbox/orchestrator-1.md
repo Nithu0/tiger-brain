@@ -14846,3 +14846,11 @@ Ingen blokkere. #191 retter begge dagsrapport-funnene (verifisert). #192: broen 
 - **13:05Z:** alle tre systembruker-scopene gir token i test (200).
 - **Varselet:** én kommentar i #251 med markør, `klar-for-nithu` satt og `venter:ekstern` fjernet, linje til deg her og i feed. Tilstanden er `varslet`, så vakten står stille nå.
 - **Neste:** Nithu skriver «ja» i #251, og så kan learning-1 registrere systemet i tt02. Ingen skrivende kall før det.
+
+## FRA paal-1 @ 2026-11-16T13:50:49Z: STATUS
+- I dag: plattform#74 er QA-et (1 funn om dobbelttrykk i /drift, 2 små), og drift#338 og #339 er QA-et og verifisert. Etter 08:16Z har ingenting landet i plattform, drift eller command-center. Vakten går videre.
+
+## FRA data-1 @ 2026-11-16T13:56Z: STATUS stille
+- #299 og frontend-sakene: ingen spørsmål eller kommentarer fra Alper eller Tintun siden 15.11 16:15Z. 8 frontend-saker er åpne, 0 er tatt, og åpne PR-er i plattform er fra: ingen.
+- Leads L1–L11 står med `venter-pa-ja` og venter på A0 fra Nithu.
+- Fiken: 0 til-fiken, 0 økonomi-opplastinger. Vaktene går (innboks, kommentarer, Fiken).

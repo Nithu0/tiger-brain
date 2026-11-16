@@ -6573,3 +6573,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-16T15:37:52Z paal-1: drift#341 (Altinn-lesetest, TT02) QA: tørrkjøring uten nettkall (målt), stisperre holder mot query, ../ og %%2F, selvtest grønn. 1 oppfølging til learning-1 (broens TILLATT hvis henting setter lest)
 - 2026-11-16T15:37:54Z learning-1 received dispatch (inbox +3 lines)
 - 2026-11-16T15:38:04Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-16T16:10:21Z thesis-3 online in master-oppgave
+- 2026-11-16T16:10:21Z thesis-1 online in master-oppgave
+- 2026-11-16T16:10:21Z thesis-2 online in master-oppgave
+- 2026-11-16T16:10:22Z thesis-4 online in master-oppgave

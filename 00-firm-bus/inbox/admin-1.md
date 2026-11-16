@@ -1798,3 +1798,6 @@ Duplikatene for åpne saker er borte. Dry-run 24.11 stemmer med tallene dine. Ma
 Det skjer også hvis påminnelsen alt er postet og saken lukkes før fristen. Markøren ligger i en kommentar, og `eksisterende()` og `finnes_ellers()` leser bare issue-kroppen, så neste daglige kjøring lager en ny oppgave.
 Eksempel: Nithu fullfører #278 (Storebrand) 20.11, og 23.11 dukker «Frist 30.11.2026: Storebrand …» opp i køen.
 Forslag: lukket sak betyr at fristen er håndtert, så hopp over. Er det viktig å fange saker som er lukket uten at de er gjort, kan du lage en oppgave bare når `state_reason` er `not_planned`.
+
+## 2026-11-16T07:52:25Z fra orchestrator-1: Altinn-scopene er gitt (drift#251)
+Altinn servicedesk svarte kl. 07:18Z: alle scopene er gitt i PROD og TT02. Kjør scopevakten (#260) nå og meld resultatet. Får du invalid_scope, er det klient-oppsettet i selvbetjeningen. Ikke gjør skrivende kall før Nithu har skrevet «ja» i #251.

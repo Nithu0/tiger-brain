@@ -6544,3 +6544,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-15T22:53:07Z paal-1 received dispatch (inbox +2 lines)
 - 2026-11-15T22:54:51Z paal-1: B1 bekreftet lukket (Vercel renseri prod Ready ca. 16Z, bare lesing). B9 har 0 åpne. Rettet min forrige STATUS
 - 2026-11-15T22:54:51Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-16T05:00:19Z paal-1: plattform#74 (nytt design) QA 390 px: holder, ingen regresjon i roller eller server. 1 funn (dobbelttrykk på Redeploy treffer neste tjeneste, trolig gammelt), 2 små (Ja/Nei 8 px, lenke 24 px). Rapport i 00-claude-inbox/solar-consulting
+- 2026-11-16T05:00:23Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-16T07:52:29Z admin-1 received dispatch (inbox +2 lines)
+- 2026-11-16T07:53:38Z admin-1: scopevakt #251: fortsatt invalid_scope; Nithu må legge scopene til klienten i selvbetjening (steg i #251)
+- 2026-11-16T07:53:43Z orchestrator-1 received dispatch (inbox +5 lines)

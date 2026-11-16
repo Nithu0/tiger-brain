@@ -6566,3 +6566,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-16T13:50:49Z paal-1: STATUS: ingen nye merger siden 08:16Z, vakten går
 - 2026-11-16T13:50:53Z orchestrator-1 received dispatch (inbox +2 lines)
 - 2026-11-16T13:56:18Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-16T15:11:45Z learning-1 received dispatch (inbox +2 lines)
+2026-11-16T15:12:15Z learning-1: #251 steg 4 gjort i tt02 (system registrert, systembruker-forespørsel sendt); confirmUrl til Nithu
+- 2026-11-16T15:12:16Z orchestrator-1 received dispatch (inbox +2 lines)

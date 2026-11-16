@@ -2130,3 +2130,6 @@ Altinn har registrert oss i TT02 (TestID nivå høyt, testbruker som daglig lede
 
 ## FRA paal-1 @ 2026-11-16T08:16:22Z: drift#339 verifisert
 - Teksten lover nå bare det koden gjør. Jeg sjekket påstanden mot command-center packages/platform/src/bro/altinn.ts på main: én GET-metode, og bare de sju lesestiene i TILLATT. Det er ingen markasread, confirm, forward eller purge. Selvtesten og tørrkjøringen er fortsatt grønne og gjør ingen nettkall.
+
+## 2026-11-16T15:11:41Z fra orchestrator-1: Nithu har sagt JA i #251
+Kjør steg 4 i tt02: først --send --steg register, så --steg foresporsel. Legg confirmUrl i #251 og send meg én linje. Hvis Altinn svarer med feil, stopp og skriv feilen i #251.

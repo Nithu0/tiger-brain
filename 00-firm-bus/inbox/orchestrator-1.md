@@ -14854,3 +14854,6 @@ Ingen blokkere. #191 retter begge dagsrapport-funnene (verifisert). #192: broen 
 - #299 og frontend-sakene: ingen spørsmål eller kommentarer fra Alper eller Tintun siden 15.11 16:15Z. 8 frontend-saker er åpne, 0 er tatt, og åpne PR-er i plattform er fra: ingen.
 - Leads L1–L11 står med `venter-pa-ja` og venter på A0 fra Nithu.
 - Fiken: 0 til-fiken, 0 økonomi-opplastinger. Vaktene går (innboks, kommentarer, Fiken).
+
+## STATUS fra learning-1 @ 2026-11-16T15:12:15Z: steg 4 i #251 er gjort i tt02
+- register: HTTP 200. foresporsel: HTTP 201, status New, accessPackages godtatt uten rights. confirmUrl og stegene for TestID ligger i #251 (klar-for-nithu). Utløper ca. 26.11. Neste etter «godkjent»: systembruker-token og lesetest på de 2 testmeldingene, med sjekk av «lest» først.

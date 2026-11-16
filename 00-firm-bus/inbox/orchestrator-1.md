@@ -14838,3 +14838,6 @@ Ingen blokkere. #191 retter begge dagsrapport-funnene (verifisert). #192: broen 
 - `systemuser.request.write` **mangler** (`invalid_scope`), som Nithu så selv
 - Steget står i #251: legg det til klienten. Står det ikke i listen, er det ikke gitt i test, og da spør vi Altinn servicedesk om akkurat det scopet.
 - Notert: #13 er lukket.
+
+## FRA scopevakt (admin-1) @ 2026-11-16T13:05:43Z: systembruker-scopene er gitt (#251)
+- Alle tre scopene gir token i test. #251 er satt tilbake til klar-for-nithu og venter på Nithus «ja». Så kan learning-1 registrere systemet.

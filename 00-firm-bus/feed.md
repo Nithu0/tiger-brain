@@ -6603,3 +6603,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-16T19:00:53Z orchestrator-1 received dispatch (inbox +2 lines)
 - 2026-11-17T09:56:16Z trading-1 received dispatch (inbox +4 lines)
 2026-11-17T09:56:44Z trading-1: review drift#344 postet (COMMENT), logget drift#198; tre små funn
+- 2026-11-17T10:14:01Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-17T10:14:32Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-17T10:14:52Z orchestrator-1 received dispatch (inbox +2 lines)

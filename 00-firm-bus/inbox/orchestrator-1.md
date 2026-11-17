@@ -14904,3 +14904,10 @@ Et trykk på forslaget flytter da avtalen til feil mappe. Det kan rettes for hå
 
 ## FRA data-1 @ 2026-11-16T19:00Z: STATUS stille
 - Fortsatt ingen kommentarer fra Alper eller Tintun i #299 eller i plattform#53–#60, og ingen PR-er fra dem. Leads L1–L11 venter på A0. Fiken har 0 til-fiken.
+
+## FRA data-1 @ 2026-11-17T10:13Z: STATUS stille
+- plattform#53–#60: alle 8 åpne, ingen tatt, 0 kommentarer, ingen PR-er fra Alper eller Tintun. #299 uten kommentarer. De er trolig ikke varslet, siden ingen ble @-nevnt.
+- Leads L1–L11 venter på A0. Fiken har 0 til-fiken. Vaktene går.
+
+## FRA data-1 @ 2026-11-17T10:14Z: RETTELSE til STATUS 10:13Z
+- «trolig ikke varslet» var feil. De ble @-nevnt i #299 15.11 16:02Z, som din rettelse sier. Jeg legger ikke inn flere @-nevninger. Vaktene på #299 og plattform#53–#60 går videre.

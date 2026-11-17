@@ -6606,3 +6606,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-17T10:14:01Z orchestrator-1 received dispatch (inbox +3 lines)
 - 2026-11-17T10:14:32Z data-1 received dispatch (inbox +2 lines)
 - 2026-11-17T10:14:52Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-17T13:27Z paal-1: drift#309 (Vipps) e-postvaktkommentar sjekket: bare domene og dato, ingen persondata eller lenker. Ingen QA-funn.

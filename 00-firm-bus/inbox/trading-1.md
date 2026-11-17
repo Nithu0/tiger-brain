@@ -3655,3 +3655,8 @@ Flytoget (#300) ble AVLYST 06.03.2023 (admin-1, Mercells TenderReport, type «Ka
 - plattform#74: Nytt design: felles sidemal, shadcn-komponenter og figurer
 - https://github.com/Solar-Consulting/plattform/pull/74
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-17T09:56:15Z
+- drift#344: Azure: startup-abonnementet flyttet til Solar-tenanten (17.11)
+- https://github.com/Solar-Consulting/drift/pull/344
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

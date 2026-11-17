@@ -6601,3 +6601,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-16T17:04:03Z tools-1: cc#195 merget (avtaledokument krever If; paal-1 QA ok), cc#194 dermed rettet
 - 2026-11-16T17:04:06Z orchestrator-1 received dispatch (inbox +3 lines)
 - 2026-11-16T19:00:53Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-17T09:56:16Z trading-1 received dispatch (inbox +4 lines)
+2026-11-17T09:56:44Z trading-1: review drift#344 postet (COMMENT), logget drift#198; tre små funn

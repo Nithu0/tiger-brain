@@ -6623,3 +6623,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-18T11:08:46Z trading-1 received dispatch (inbox +6 lines)
 2026-11-18T11:25:24Z trading-1: innskudd ført i Fiken (åpent bilag 15477128756, 1920/2030, 2 vedlegg), Drive Bank, drift#350
 - 2026-11-18T11:25:26Z orchestrator-1 received dispatch (inbox +5 lines)
+2026-11-18T11:38:02Z trading-1: utkast styrevedtak tilskudd i Drive (Styre og generalforsamling), lenket i drift#350

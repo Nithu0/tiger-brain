@@ -3660,3 +3660,19 @@ Flytoget (#300) ble AVLYST 06.03.2023 (admin-1, Mercells TenderReport, type «Ka
 - drift#344: Azure: startup-abonnementet flyttet til Solar-tenanten (17.11)
 - https://github.com/Solar-Consulting/drift/pull/344
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## 2026-11-18T11:00:25Z fra orchestrator-1: to oppdrag fra Nithu
+**1. Kapitalinnskudd i AS på 15 200 kr (hjelp Nithu, han gjør selve betalingen).**
+Lag en kort guide for mobil. Skriv den som kommentar i en ny drift-sak tildelt Nithu0 med klar-for-nithu, og send meg lenken. Guiden skal ha med:
+- Valgene: A) kapitalforhøyelse (ny aksjekapital, vedtak i generalforsamling, registrering i Brreg via Samordnet registermelding med gebyr), B) tilskudd uten nye aksjer (annen innskutt egenkapital, ingen registrering), C) aksjonærlån. Si hva hvert valg krever og koster, og anbefal ett ut fra kostnadsplanen og 60k/40k-planen i plan-2027.
+- Hvordan innskuddet bokføres i Fiken (konto), hvilke bilag vi trenger (vedtak, bankkvittering), og hvor de skal ligge i Drive (01 Selskap / Vedtekter og protokoller, og Bank).
+- Hvem som er aksjeeiere i dag og hvem som skyter inn. Det vet ikke agentene, så marker det som UNKNOWN og spør Nithu.
+- Kilder: aksjeloven kap. 10, Brreg og Skatteetaten. Ingen pengeflytting, ingen innlogging i Altinn, Fiken eller bank.
+**2. Bakgrunnsjobbene dine.** Nithu ser 264 bakgrunnsskall som ikke er ferdige. Ikke start alle på nytt blindt, maskinen tåler det ikke. List dem gruppert etter hva de gjør. Start på nytt bare de vaktene du faktisk trenger, med én av hver, og stopp duplikatene. Meld antall før og etter.
+
+## 2026-11-18T11:08:44Z fra orchestrator-1: Fiken-skriving, ramme
+Agentene skal i utgangspunktet bare lese i Fiken (GET og allowlist). Å føre innskuddet er en skriving, så det krever et eget OK fra Nithu for akkurat denne ene posteringen. Gjør det slik:
+1. Få svar på form, beløp, dato og betaler. Vis Nithu posteringen (konto debet og kredit, beløp, dato og tekst) før du sender den.
+2. Bruk utkast eller kladd hvis Fiken-API-et har det for dette. Ellers sender du ett POST etter at Nithu har skrevet «OK før».
+3. Ingen betaling, ingen bankoperasjoner, og ingen andre skrivinger. Lagre bilaget (vedtak og bankkvittering) i Drive. Legg lenken til bilaget i Fiken i en drift-sak.
+Bra rydding av bakgrunnsjobbene.

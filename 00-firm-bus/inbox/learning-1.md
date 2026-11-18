@@ -2144,3 +2144,9 @@ Nithu er innlogget i TT02, men confirmUrl henger seg opp, både på mobil og ett
 2. Finn i Altinn-dokumentasjonen hvor en ventende systembrukerforespørsel ligger i TT02-portalen, sti eller meny.
 3. Prøv en variant av URL-en uten DONTCHOOSEREPORTEE, med curl og bare lesing.
 Skriv svaret i #251 og send meg én linje.
+
+## 2026-11-18T11:07:09Z fra orchestrator-1: ny runde med Altinn-godkjenningen (#251), Nithu sier kjør
+Nithu får ikke opp confirmUrl, og Altinn servicedesk har ikke svart ennå. Gjør dette mens vi venter:
+1. Send en NY systembrukerforespørsel i tt02 med samme system. Nithus «ja» i #251 dekker det. Legg den nye confirmUrl i #251.
+2. Skriv i #251 en kort sti for alternativ C («Lag ny systemtilgang» under Systemtilganger). Ta med hvilken URL som åpner Systemtilganger direkte når aktøren er valgt.
+Én linje til meg når det er gjort.

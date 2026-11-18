@@ -6616,3 +6616,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-18T10:52:05Z trading-1 online in nexus
 - 2026-11-18T10:52:05Z admin-1 online in workspace
 - 2026-11-18T10:52:06Z tools-1 online in command-center
+- 2026-11-18T11:00:25Z trading-1 received dispatch (inbox +8 lines)
+- 2026-11-18T11:07:09Z tools-1 received dispatch (inbox +7 lines)
+- 2026-11-18T11:07:13Z learning-1 received dispatch (inbox +5 lines)
+- 2026-11-18T11:08:15Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-18T11:08:46Z trading-1 received dispatch (inbox +6 lines)

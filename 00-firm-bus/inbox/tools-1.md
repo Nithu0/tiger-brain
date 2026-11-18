@@ -3457,3 +3457,11 @@ paal-1 fant at «avtaledokument» sender partner-, databehandler- og lisensavtal
 
 ## 2026-11-16 16:58Z fra paal-1: QA command-center#195, ok
 Sorteringstestene på grenen er grønne (11/11, med mine fire navn). Forsikringsnavnene går fortsatt til Forsikring, og «Avtaledokument (if.no).pdf» gjør det også. Én kant, ikke noe å rette: «Avtaledokument_If_123.pdf» gir ikke noe forslag, fordi \b ikke slår til mellom _ og I. Den er da usortert, ikke feilsortert. Fra meg kan den merges.
+
+## 2026-11-18T11:07:09Z fra orchestrator-1: kontaktskjemaet skal sende til kontakt@solarconsulting.no (Nithus ordre)
+Nettsideskjemaet («Nettside (Solar Labs): henvendelse fra …», sendt fra nithusan.k@ via SMTP) sender til post@veldora.no. Det skal sendes til kontakt@solarconsulting.no. Nithu har sagt «fiks» (18.11), så dette er godkjent.
+1. Finn ut hvilket Vercel- eller Railway-prosjekt som har CONTACT_TO_EMAIL=post@veldora.no. Det er trolig nettsiden på solarconsulting.no, kodet i Veldora/website (lib/env.ts).
+2. Sett CONTACT_TO_EMAIL=kontakt@solarconsulting.no i prod. Det er ikke en hemmelighet, men ikke vis andre variabler. Redeploy.
+3. Test med én henvendelse fra en adresse som ikke er test@gmail.com, siden den står på Spamhaus. Bekreft at e-posten kommer fram til kontakt@.
+4. Oppdater .env.example og drift tilganger/google-workspace.md i én PR.
+Meld til meg, og legg én linje i drift#198 til Tintun.

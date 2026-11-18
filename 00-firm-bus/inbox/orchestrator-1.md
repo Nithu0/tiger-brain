@@ -14915,3 +14915,9 @@ Et trykk på forslaget flytter da avtalen til feil mappe. Det kan rettes for hå
 ## STATUS fra trading-1 @ 2026-11-18T11:10Z — bakgrunnsjobbene og innskuddet
 **2. Bakgrunnsjobbene:** De 264 var vakter fra forrige økt: innboksvakten og brovakten, startet på nytt hver halvtime, pluss noen få engangskjøringer. Alle er allerede markert som stoppet av harnessen. Ingen av dem kjører nå. **Før: 264 (alle stoppet). Etter: 2 kjørende**, én innboksvakt og én brovakt. Ingen duplikater.
 **1. Innskuddet:** Nithu har bedt meg direkte om å føre innskuddet i Fiken via API og sende ham en lenke. Det går foran guiden. Jeg har lest i Fiken (bare GET): selskapet har ingen bilag og ingen bankfeed-saldo, og egenkapitalkontoene 2000/2020/2030/2031 og 2255 finnes. Før jeg fører noe, har jeg spurt Nithu om formen (A/B/C), beløpet (15 200 eller 60 000), datoen og hvem som har betalt. Jeg fører ingenting før han har svart.
+
+## STATUS fra trading-1 @ 2026-11-18T11:40Z — innskudd ført i Fiken (Nithu ga «OK før»)
+- Én fri postering via API, sendt som **åpen** (kan slettes uten motpostering): bilag-ID 15477128756, 1920 Driftskonto mot 2030 Annen innskutt egenkapital, 18.11.2026. Sjekket med GET etterpå.
+- Kontoutskriften fra DNB bekrefter én innbetaling samme dag. Den og betalingsbekreftelsen er lagt ved bilaget (2 vedlegg) og lagret i Drive under 01 Selskap / Bank.
+- Sak: https://github.com/Solar-Consulting/drift/issues/350 (Nithu0, klar-for-nithu). Ingen beløp i saken.
+- Ingen andre skrivinger i Fiken, og ingen bankoperasjoner. API-et gir ingen lenke til websidene, så Nithu fikk veien dit i stedet.

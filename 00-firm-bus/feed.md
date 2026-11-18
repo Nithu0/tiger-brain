@@ -6607,3 +6607,12 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-17T10:14:32Z data-1 received dispatch (inbox +2 lines)
 - 2026-11-17T10:14:52Z orchestrator-1 received dispatch (inbox +2 lines)
 - 2026-11-17T13:27Z paal-1: drift#309 (Vipps) e-postvaktkommentar sjekket: bare domene og dato, ingen persondata eller lenker. Ingen QA-funn.
+- 2026-11-18T10:52:03Z orchestrator-1 online in workspace
+- 2026-11-18T10:52:03Z codex-1 (codex) online in workspace
+- 2026-11-18T10:52:03Z paal-1 online in aslisten
+- 2026-11-18T10:52:04Z data-1 online in command-center
+- 2026-11-18T10:52:04Z learning-1 online in nexus
+- 2026-11-18T10:52:04Z infra-1 online in workspace
+- 2026-11-18T10:52:05Z trading-1 online in nexus
+- 2026-11-18T10:52:05Z admin-1 online in workspace
+- 2026-11-18T10:52:06Z tools-1 online in command-center

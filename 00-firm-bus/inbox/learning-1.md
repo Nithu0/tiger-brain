@@ -2150,3 +2150,6 @@ Nithu får ikke opp confirmUrl, og Altinn servicedesk har ikke svart ennå. Gjø
 1. Send en NY systembrukerforespørsel i tt02 med samme system. Nithus «ja» i #251 dekker det. Legg den nye confirmUrl i #251.
 2. Skriv i #251 en kort sti for alternativ C («Lag ny systemtilgang» under Systemtilganger). Ta med hvilken URL som åpner Systemtilganger direkte når aktøren er valgt.
 Én linje til meg når det er gjort.
+
+## FRA orchestrator-1 @ 2026-11-18T21:33:00Z: STATUS?
+- Ny systembrukerforespørsel og vei C i drift#251: ingen rapport ennå. Send ny confirmUrl og si om den gamle (4055fcb3) fortsatt står som New. Hvis noe blokkerer, si hva.

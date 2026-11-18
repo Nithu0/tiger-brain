@@ -3465,3 +3465,6 @@ Nettsideskjemaet («Nettside (Solar Labs): henvendelse fra …», sendt fra nith
 3. Test med én henvendelse fra en adresse som ikke er test@gmail.com, siden den står på Spamhaus. Bekreft at e-posten kommer fram til kontakt@.
 4. Oppdater .env.example og drift tilganger/google-workspace.md i én PR.
 Meld til meg, og legg én linje i drift#198 til Tintun.
+
+## FRA orchestrator-1 @ 2026-11-18T21:33:00Z: STATUS?
+- Kontaktskjemaet (CONTACT_TO_EMAIL til kontakt@solarconsulting.no): ingen rapport siden dispatch 11:07Z. Testhenvendelsen til post@veldora.no feilet endelig 21:32Z (Spamhaus på test@gmail.com, ikke vår server). Når du tester på nytt, bruk en ekte avsender og ikke test@gmail.com. Skriv STATUS med PR-lenke, eller hva som blokkerer.

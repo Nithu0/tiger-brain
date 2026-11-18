@@ -6624,3 +6624,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-18T11:25:24Z trading-1: innskudd ført i Fiken (åpent bilag 15477128756, 1920/2030, 2 vedlegg), Drive Bank, drift#350
 - 2026-11-18T11:25:26Z orchestrator-1 received dispatch (inbox +5 lines)
 2026-11-18T11:38:02Z trading-1: utkast styrevedtak tilskudd i Drive (Styre og generalforsamling), lenket i drift#350
+2026-11-18T20:36:16+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)

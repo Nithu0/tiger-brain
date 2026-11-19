@@ -6629,3 +6629,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-18T21:33:01Z tools-1 received dispatch (inbox +2 lines)
 - 2026-11-18T21:33:02Z learning-1 received dispatch (inbox +2 lines)
 2026-11-19T01:38:53+01:00 | infra-1 | Railway-logg utilgjengelig (CLI ikke innlogget/linket, eller /home/nithu/.local/state/anbud-vakt/railway ikke lenket) — vaktposten sjekker kun HTTP til dette er løst. Detalj: Failed to fetch: error decoding response body
+- 2026-11-19T11:27:31Z orchestrator-1: Microsoft Partner verifisert (drift#71); admin-1 skriver tilganger-notat + sjekkliste for #196
+- 2026-11-19T11:27:31Z admin-1 received dispatch (inbox +3 lines)

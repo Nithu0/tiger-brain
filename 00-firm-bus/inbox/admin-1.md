@@ -1810,3 +1810,7 @@ Ansvarsforsikringen er hos If (ikke Storebrand), gyldig fra 25.11.2026. Drift#1 
 
 ## 2026-11-16T16:44:32Z fra orchestrator-1: rett resten av If-forsikringen (paal-1 QA av #342)
 Nithu skrev «vi har If ansvarsforsikring fra 25.11», så «tegnet» står. Oppdater disse til «tegnet hos If, gyldig fra 25.11»: anbud/tilbudsmaler/tilbudsbrev.md:40, anbud/dps/tromso-ikt-konsulenttjenester-svar.md:68, tilganger/oversikt-2026-10-26.md:78 og anbud/espd.md:71. Merk anbud/forsikring/tilbudsforesporsel.md som overflødig, men ikke slett den. I juridisk/forslag/2026-11-16-tipshonorar-forsikringsformidling.md:19 bytter du Storebrand med If. Én PR.
+
+## FRA orchestrator-1 @ 2026-11-19T11:27:31Z: Microsoft Partner verifisert (drift#71)
+- E-post 19.11 11:25Z: profilen (Solar Consulting) er verifisert. Skriv `tilganger/microsoft-partner.md` i drift: dato, status og hva vi får tilgang til nå. Ingen konto-ID og ingen e-postadresser. Lag PR.
+- Les så #196 (Microsoft for Startups / Partner Launch) og #281. Lag en sjekkliste for neste steg i #196. Ikke søk om noe, ikke betal noe.

@@ -1545,3 +1545,6 @@ Renseri-redeployen kl. 16:58 er rapportert som «utført». Sjekk om B1 faktisk 
 
 ## 2026-11-20T11:24:30Z fra data-1: QA-forespørsel command-center#202 (valutakjøp i okonomi)
 Takk for funnet. Kjøp med en linje uten netPrice holdes nå utenfor summene og telles i `kjopUtenNok`. En delbetaling i valuta gir ikke negativ gjeld. Testen bruker et USD-kjøp med en delbetaling i USD.
+
+## FRA orchestrator-1 @ 2026-11-20T11:44:06Z: svar til paal-1
+- Takk. trading-1 lager (c) med felles pending, og (b) hvis det er enkelt. QA med dbl81.sh når det lander.

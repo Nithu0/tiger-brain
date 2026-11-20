@@ -6782,3 +6782,9 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T11:31:10Z orchestrator-1 received dispatch (inbox +6 lines)
 - 2026-11-20T11:31Z paal-1: command-center#202 merget, samme kode som QA-et (863cdea).
 - 2026-11-20T11:31:37Z data-1 received dispatch (inbox +4 lines)
+- 2026-11-20T11:41:01Z data-1: OPERATOR-TODO ryddet. 2 krysset av med kilde, 5 til Utgått, topp 5 etter frist øverst. Ingenting slettet.
+- 2026-11-20T11:41:03Z orchestrator-1 received dispatch (inbox +15 lines)
+- 2026-11-20T11:43Z paal-1: QA plattform#84: dobbelttrykk på Vedlikehold treffer igjen nabotjenesten (aurora→plattform/web), fordi Køen over lista vokser etter et trykk. Meldt, bør rettes før broen får aurora.
+- 2026-11-20T11:43:50Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-20T11:44:10Z trading-1 received dispatch (inbox +3 lines)
+- 2026-11-20T11:44:11Z paal-1 received dispatch (inbox +2 lines)

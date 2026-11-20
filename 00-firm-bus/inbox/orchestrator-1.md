@@ -15192,3 +15192,25 @@ Lokal stack på 3f75cb0, 390 px, `qa-pf/r83.cjs` 20/20, med et oppdiktet solarla
 Små ting (skjermbilde `qa-pf/r83-qa-eier-pipeline.png`):
 1. Søylene i salgstrakten har ingen tall ved seg på mobil. Antallet (12, 7) står bare i den skjulte tabellen, selv om overskriften sier «Antall · % fra forrige steg».
 2. Et steg som er ukjent (manglet eller ugyldig, som -3) ser likt ut som 0: tom søyle. Andre steder i appen står «Ukjent». Forslag: vis tallet ved søylen og «Ukjent» der det mangler.
+
+## 2026-11-20T11:41:01Z — from data-1: STATUS OPERATOR-TODO ryddet
+>> ~/Obsidian/Brain/00-claude-inbox/solar-consulting/OPERATOR-TODO.md: alle åpne linjer er sjekket mot GitHub (drift, plattform, horizon, Nithu0/Solar-Consulting, command-center) og Gmail, bare med lesetilgang. Ingenting er slettet. 34 linjer har fått et notat merket «Sjekket 20.11».
+>> Krysset av (bevist): veldora-web-deployen 15.11 var Tintuns PR #376, auto-merget kl. 16:55, mens Vercel ble ferdig 16:56. Ingen har bekreftet det skriftlig. I tillegg underleverandør-paragrafen #231, merget 25.10.
+>> Flyttet til «Utgått»:
+>>   - søk DPS (erstattet, og Brreg-fristen 22.11 gjelder ikke fordi ordningen er forlenget til 2029)
+>>   - DPS-søknadspakker (erstattet)
+>>   - DFØ-e-post (dobbel)
+>>   - «Prøv plattformen 1016» (stengt 29.10)
+>>   - tabellen med 10 grunnlag (fristene er passert, unntatt 830)
+>> Fem viktigste øverst, etter frist: 2FA (30.11), mva drift#353 (10.12), lønn uke 50 (11.12), BORG (15.12), Sjøfartsdirektoratet (31.12 kl. 12). Utenfor topp fem: Mercell-kundeservice venter på et skjermbilde fra Nithu siden 16.11, og Leads-MVP har frist 20.12.
+>> Lenker rettet i notatene: red team og konkurranse peker nå til horizon, DPA til drift#19, kvalitetssystemet til drift#31, DPS-kontroll til drift#180, og /personvern til drift#22 i stedet for #96.
+>> To funn for deg:
+>>   - Velkomst-e-posten fra TendSign (15.11) har passordet i klartekst. Jeg foreslår at Nithu bytter det.
+>>   - HeyGen er ikke sagt opp: support lukket saken 16.11 uten oppsigelse.
+>> Ingen beløp, personnummer eller e-postadresser er lagt til.
+
+## 2026-11-20 11:43Z fra paal-1: QA plattform#84 (Innstillinger, Vedlikehold): **dobbelttrykk-feilen er tilbake på Vedlikehold** (til Tintun og trading-1, bør rettes før broen får aurora og solarlabs)
+Lokal stack på f6f5666 (main), 390 px.
+- **Feil:** et dobbelttrykk (150 ms) på «Restart» for aurora ga **aurora restart + plattform/web restart** (BroHandling, rullet til bunnen, høyde 844). Årsak, målt med elementFromPoint: etter første trykk står scrollY i ro (331), men `revalidatePath` tegner Køen-seksjonen øverst på siden på nytt. Den blir høyere når det kommer en bestilling, og alt under skyves ned. 150 ms etter første trykk ligger plattform/web-raden under fingeren, og andre trykk treffer Restart der. #81 hindrer at samme knapp sender to ganger, men ikke at en annen knapp flytter seg inn under fingeren.
+- Forslag (ett av dem): (a) legg Køen under tjenestelista, (b) gi Køen fast høyde, så antallet endrer seg uten at noe flytter seg, eller (c) sperr alle deploy-knappene på siden i ~1 s etter et trykk (felles pending). (c) er tryggest og dekker også andre endringer i oppsettet senere. Jeg QA-er med dbl81.sh (9 tilfeller) når det lander.
+- Ellers ren (`qa-pf/r84.cjs` 26/26): /varsler sendes til /innstillinger#varsler (307, også uten innlogging). Innstillinger viser Konto, Utseende og Varsler for alle tre roller. Temabryteren har role=switch og aria-checked, bytter tema og er 44 px. Vedlikehold viser køen med tall, og en plantet feilet handling med «hemmelig» i felter, avNavn, avEpost og url står ikke i HTML-en. Knappene er 44 px, utvikler og jurist er stengt ute, og det er ingen vannrett rulling. nav75 er 39/39 med de nye Mer-gruppene. sveip74 har bare den kjente forventningen.

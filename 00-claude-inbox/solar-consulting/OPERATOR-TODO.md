@@ -5,33 +5,47 @@
 Én fil, oppdatert av orchestrator-1. Kryss av eller skriv svar rett i fila, så plukker jeg det opp.
 Sist oppdatert: 2026-11-15 kveld (Oslo).
 
+## Fem viktigste åpne, sortert etter frist (sjekket 20.11 av data-1)
+
+1. **2FA i GitHub-org-en, frist 30.11.** Juristen er den eneste uten 2FA. Purr på ham, slå på kravet og sjekk superadmin-kontoen i Google Workspace. https://github.com/Solar-Consulting/drift/issues/326 · ca. 15 min
+2. **Mva og brevene fra Innkrevingsmyndigheten, frist 10.12 hvis mva er annenhver måned.** Les de to brevene i Altinn og sjekk Min side hos Skatteetaten. https://github.com/Solar-Consulting/drift/issues/353 · ca. 10 min
+3. **Lønn ja eller nei (uke 50), frist 11.12.** Svaret avgjør SkatteFUNN og OS2. https://github.com/Solar-Consulting/drift/issues/64 · ca. 10 min med Alper og Tintun
+4. **BORG: bli med eller trekke oss, frist 15.12.** HIOF skal ha beskjed i desember. https://github.com/Solar-Consulting/drift/issues/279 · ca. 20 min, pluss en melding
+5. **Sjøfartsdirektoratet, frist 31.12 kl. 12.** Registrer selskapet i EU-Supply og søk #139 og #141 i samme økt. https://github.com/Solar-Consulting/drift/issues/139 · ca. 45 min
+
+Disse har ingen hard frist, men venter på deg:
+- Mercell-kundeservice har ventet på et skjermbilde fra deg siden 16.11 (sak MNO-169100). Det holder igjen søknadene #136, #172–#174 og #297.
+- Leads-MVP (#285) har frist 20.12.
+
+Ellers i fila: hver åpen linje har fått et notat om hva som er sjekket 20.11, mot GitHub og Gmail (bare lesing). To linjer er krysset av fordi det er bevist at de er gjort. Utgåtte linjer er flyttet til «Utgått» nederst, og ingenting er slettet.
+
 ## Mandag 16.11 (orchestrator-1, oppdatert 15.11 kveld)
 
 Plan: https://github.com/Solar-Consulting/drift/blob/main/strategi/plan-2027.md · Drive: https://drive.google.com/drive/folders/0AKhBtg58BTliUk9PVA
 
 - [x] **Ansvarsforsikring** er tegnet hos **If**, gyldig fra 25.11.2026 (avgjort 16.11, drift#1). Gjenstår: legg beviset i Drive «00 Til sortering» når det kommer.
-- [ ] **Mercell:** når kundeservice svarer, send søknaden til Brreg sammensatte team (#136) og til testing, arkitektur og smidige metoder (#172–#174), pluss sikkerhet og kvalitet (#297). Svarfilene ligger i drift anbud/dps/. admin-1 skriver hvor vedleggene ligger i hver ordning.
-- [ ] **TendSign, Tromsø (#149):** last ned kvalifikasjonsgrunnlaget (vedleggene, ikke kunngjøringen) til Drive under 04 Anbud / Dynamiske innkjøpsordninger / Tromsø.
-- [ ] **ESPD del III:** du, Alper og Tintun skriver `avgjør 136: del III nei` i #136.
-- [ ] **2FA:** ett av fire GitHub-medlemmer har ikke 2FA. Når alle har det, slår vi på kravet i org-en. kontakt@ i Google Workspace (superadmin) har heller ikke 2FA.
-- [ ] **Sauda:** samtykket til å bruke dem som referanse må fornyes etter eierskiftet (energisiden #280).
+- [ ] **Mercell:** når kundeservice svarer, send søknaden til Brreg sammensatte team (#136) og til testing, arkitektur og smidige metoder (#172–#174), pluss sikkerhet og kvalitet (#297). Svarfilene ligger i drift anbud/dps/. admin-1 skriver hvor vedleggene ligger i hver ordning. → *Sjekket 20.11 (data-1):* ÅPEN. Kundeservice har svart (sak MNO-169100, 16.11) og ber om et skjermbilde av portalen du ser. Ingen svar fra oss i Gmail ennå. Mercell sendte også en velkomst-e-post 16.11 der du må sette passord. Ingen hard frist: ordningen er forlenget til 17.08.2029 (drift#136, kommentar 15.11). Ca. 30–45 min for #136, deretter ca. 15 min per ordning.
+- [ ] **TendSign, Tromsø (#149):** last ned kvalifikasjonsgrunnlaget (vedleggene, ikke kunngjøringen) til Drive under 04 Anbud / Dynamiske innkjøpsordninger / Tromsø. → *Sjekket 20.11 (data-1):* ÅPEN. Siste kommentar i #149 er fra 15.11, og det er ukjent om grunnlaget ligger i Drive. Ordningen løper til 13.08.2032. Ca. 15 min. Bytt også TendSign-passordet: det står i klartekst i velkomst-e-posten fra 15.11.
+- [ ] **ESPD del III:** du, Alper og Tintun skriver `avgjør 136: del III nei` i #136. → *Sjekket 20.11 (data-1):* ÅPEN. Ingen av dere tre har skrevet `avgjør 136: del III nei` i drift ennå. Ca. 2 min per person.
+- [ ] **2FA:** ett av fire GitHub-medlemmer har ikke 2FA. Når alle har det, slår vi på kravet i org-en. kontakt@ i Google Workspace (superadmin) har heller ikke 2FA. → *Sjekket 20.11 (data-1):* ÅPEN. Juristen er fortsatt den eneste i org-en uten 2FA (GitHub-API 20.11), og kravet er av. Superadmin-kontoen i Google Workspace kan agentene ikke sjekke. Samme sak som 2FA-linjen lenger ned (#326, frist 30.11).
+- [ ] **Sauda:** samtykket til å bruke dem som referanse må fornyes etter eierskiftet (energisiden #280). → *Sjekket 20.11 (data-1):* ÅPEN. #280 nevner ikke Sauda. Tintun skrev i drift#41 (14.11) at overførte referanser må bekreftes skriftlig, og ingenting tyder på at Sauda er spurt. Ca. 10 min.
 - [x] Flytoget (#300) er avlyst (2023), og saken er lukket av agentene.
-- [ ] **Se over:** profilen drift#304 og juristutkastene (#286, så #287–#289). Juristen avgjør utkastene.
-- [ ] **veldora-web** fikk en prod-deploy 15.11 kl. 16:56 som ikke kom fra plattformen. Var det en av dere?
-- [ ] **00 Til sortering:** hvor skal doktorgradsskissen ligge, i 10 Produkter og FoU eller i 05 Søknader?
-- [ ] **Leads-MVP (#285):** Spesifikasjonen ligger i plattform/docs/leads-mvp.md, og backend-sakene er plattform#62–#72. Si ja (A0), så bygger agentene. I tillegg trengs fire avgjørelser fra deg:
+- [ ] **Se over:** profilen drift#304 og juristutkastene (#286, så #287–#289). Juristen avgjør utkastene. → *Sjekket 20.11 (data-1):* ÅPEN. #304 ble merget 15.11, men ingenting viser at du har lest den. #286–#289 har bare agentens «utkastet ligger klart» (15.11), ingenting fra juristen. Ca. 30–40 min.
+- [x] **veldora-web** fikk en prod-deploy 15.11 kl. 16:56 som ikke kom fra plattformen. Var det en av dere? → *Besvart 20.11 (data-1) fra GitHub:* deployen var Tintuns PR Nithu0/Solar-Consulting#376 (kontaktskjemaet), som ble auto-merget 15.11 kl. 16:55. Vercel-sjekken på samme commit ble ferdig 16:56. Ingen har bekreftet det skriftlig.
+- [ ] **00 Til sortering:** hvor skal doktorgradsskissen ligge, i 10 Produkter og FoU eller i 05 Søknader? → *Sjekket 20.11 (data-1):* ÅPEN. Ingen avgjørelse funnet i drift eller på firm-bussen. Ca. 2 min.
+- [ ] **Leads-MVP (#285):** Spesifikasjonen ligger i plattform/docs/leads-mvp.md, og backend-sakene er plattform#62–#72. Si ja (A0), så bygger agentene. I tillegg trengs fire avgjørelser fra deg: → *Sjekket 20.11 (data-1):* ÅPEN. Frist 20.12 (drift#285). plattform#62–#72 står fortsatt med `venter-pa-ja`, uendret siden 15.11. Ca. 15 min.
   - A1: hvem som er kontaktperson, og hvem som har tilgang
   - A2: gmail.readonly for den faste adressen
   - A4: lagringstid
   - A3: om regelen for persondata også gjelder kundedata. Den avgjør juristen.
   A5 og A6 avgjør Alper og juristen.
-- [ ] **Solar Labs og e-post til ENK (viktig for nettsidesalget):** Etter markedsføringsloven § 15 kan vi ikke sende e-post eller SMS til enkeltpersonforetak uten samtykke. Mange av leadsene uten nettside er ENK. Telefon fra et menneske er trolig lov, med vilkår. Utkastet ligger i drift#320 (juristen avgjør), og det tekniske forslaget til Tintun i drift#198. Inntil juristen har sagt noe, sender vi bare e-post til AS og andre som ikke er ENK.
-- [ ] **Sjøfartsdirektoratet:** utviklere og techlead (#139) har frist **31.12.2026 kl. 12**. Test (#141) er forlenget til 2030. Begge krever bare attestene. Portalen er EU-Supply, og der har vi ingen bruker, så du må registrere Solarconsulting AS før 31.12. Svarfilene ligger i anbud/dps/sjofart-*-svar.md.
-- [ ] **CV-samtykke:** du sa nei 18.10, så CV-en din kan ikke brukes i noen ordning. Alpers CV kan brukes hos DIO når lærested og år for bacheloren er fylt inn. Tintun mangler master og vitnemål. Vil du endre svaret?
-- [ ] **BORG: bli med eller trekke oss før 8.1?** Notatet ligger i finansiering/borg-beslutning.md. Det koster rundt 450 timer fra september 2027 og 0 kr tilbake. Anbefalingen er å bli med på fem vilkår, og ellers trekke oss. Gi beskjed til HIOF i desember.
-- [ ] **2FA:** juristen er den eneste i GitHub-org-en som mangler 2FA (#326). Han må slå det på før vi skrur på kravet, ellers blir han fjernet automatisk.
-- [ ] **Uke 50 (11.12):** lønn ja eller nei. Det avgjør SkatteFUNN og OS2.
-- [ ] **Små ting:** første kvittering til Fiken, si opp LiveAvatar og HeyGen (#263), Posten signering (#126), #7. Lagringstiden på /personvern er fortsatt en plassholder (juristen, #96).
+- [ ] **Solar Labs og e-post til ENK (viktig for nettsidesalget):** Etter markedsføringsloven § 15 kan vi ikke sende e-post eller SMS til enkeltpersonforetak uten samtykke. Mange av leadsene uten nettside er ENK. Telefon fra et menneske er trolig lov, med vilkår. Utkastet ligger i drift#320 (juristen avgjør), og det tekniske forslaget til Tintun i drift#198. Inntil juristen har sagt noe, sender vi bare e-post til AS og andre som ikke er ENK. → *Sjekket 20.11 (data-1):* ÅPEN, venter på juristen. Utkastet (drift#320) er merget, men saken det svarer på (drift#289) har ikke fått svar fra juristen. Tintun har ikke svart i #198. Ca. 2 min å purre.
+- [ ] **Sjøfartsdirektoratet:** utviklere og techlead (#139) har frist **31.12.2026 kl. 12**. Test (#141) er forlenget til 2030. Begge krever bare attestene. Portalen er EU-Supply, og der har vi ingen bruker, så du må registrere Solarconsulting AS før 31.12. Svarfilene ligger i anbud/dps/sjofart-*-svar.md. → *Sjekket 20.11 (data-1):* ÅPEN. Fristen 31.12.2026 kl. 12 gjelder (#139), mens #141 er forlenget til 31.12.2030. Begge attestene ble hentet 13.11. Ingenting tyder på at selskapet er registrert i EU-Supply. Ca. 45 min for registreringen og begge søknadene.
+- [ ] **CV-samtykke:** du sa nei 18.10, så CV-en din kan ikke brukes i noen ordning. Alpers CV kan brukes hos DIO når lærested og år for bacheloren er fylt inn. Tintun mangler master og vitnemål. Vil du endre svaret? → *Sjekket 20.11 (data-1):* ÅPEN. drift#42 (15.11) står uendret. Ca. 2 min å svare.
+- [ ] **BORG: bli med eller trekke oss før 8.1?** Notatet ligger i finansiering/borg-beslutning.md. Det koster rundt 450 timer fra september 2027 og 0 kr tilbake. Anbefalingen er å bli med på fem vilkår, og ellers trekke oss. Gi beskjed til HIOF i desember. → *Sjekket 20.11 (data-1):* ÅPEN. Frist 15.12 (drift#279). HIOF skal ha beskjed i desember, og trinn 2 åpner 8.1.2027. Ca. 20 min, pluss en melding til HIOF.
+- [ ] **2FA:** juristen er den eneste i GitHub-org-en som mangler 2FA (#326). Han må slå det på før vi skrur på kravet, ellers blir han fjernet automatisk. → *Sjekket 20.11 (data-1):* ÅPEN. Juristen er fortsatt den eneste uten 2FA (GitHub-API 20.11). Frist 30.11 (#326). Ca. 2 min å purre og 1 min å slå på kravet.
+- [ ] **Uke 50 (11.12):** lønn ja eller nei. Det avgjør SkatteFUNN og OS2. → *Sjekket 20.11 (data-1):* ÅPEN. Det finnes ingen egen sak for dette. Det hører til drift#64 (SkatteFUNN), der ingenting har skjedd siden 29.10. Frist 11.12. Ca. 10 min med Alper og Tintun.
+- [ ] **Små ting:** første kvittering til Fiken, si opp LiveAvatar og HeyGen (#263), Posten signering (#126), #7. Lagringstiden på /personvern er fortsatt en plassholder (juristen, #96). → *Sjekket 20.11 (data-1):* Alt er ÅPENT. **Fiken:** ingen ekte kvittering via til-fiken ennå (innskuddet 18.11 i drift#350 ble ført for hånd). **HeyGen:** du ba om oppsigelse 16.11, men support fant bare gratisplanen på denne kontoen og lukket saken uten å si opp. Betalingen feilet 15.11, og planen er satt på pause. **LiveAvatar:** ingenting i Gmail. **Posten (#126) og #7:** ingenting siden 14.11. **Lagringstiden på /personvern** følges nå i drift#22, ikke i #96 (lukket 27.10). learning-1 la et utkast til juristen 20.11. Ca. 30 min til sammen.
 
 ## Hva skjedde i natt (18.–19.10), kort
 
@@ -68,47 +82,76 @@ Plan: https://github.com/Solar-Consulting/drift/blob/main/strategi/plan-2027.md 
 
 ## Strategi (19.10): les og ta stilling (~10 min)
 
-- [ ] Les `~/Obsidian/Brain/00-claude-inbox/solar-consulting/strategi-2026-10-19/STRATEGISK-VURDERING.md` (topp 5, rangert; raske forbedringer er alt i gang).
-- [ ] **Søk opptak i dynamiske innkjøpsordninger** når forsikringen er på plass (uke 43): Brønnøysundregistrene «Sammensatte team» (frist **22.11**), Sjøfartsdirektoratet «Analytics/ML» + «Utviklere/techlead» (31.12). DPS-motoren viser snart hva vi mangler per ordning.
-- [ ] **Det som låser opp flest DPS-er** (målt på 50 åpne ordninger i feltet vårt: 0 kan søkes i dag, 34 mangler noe). Billigst først: (1) **org.nr. i leverandørprofilen** (25 ordninger, settes etter eierskiftet), (2) **skatteattest** (29), (3) **kort firmabeskrivelse og leveranseomtale** (31), (4) kredittvurdering (23), (5) miljø- og kvalitetsdokumentasjon (22). Legg dem inn i kompetansebanken eller leverandørprofilen, så vurderer motoren alt på nytt.
-- [ ] **Sjekk 10 DPS-vurderinger** (~15 min) før DPS-motoren slås på: https://github.com/Nithu0/Solar-Consulting/blob/main/projects/anbud/crm/eval/DPS-VURDERINGER-2026-10-19.md (etter merge av #271)
-- [ ] **DPS-søknadspakker er klare** i `~/Obsidian/Brain/00-claude-inbox/solar-consulting/dps-soknad/` (Brønnøysundregistrene «Sammensatte team», frist 22.11, og Sjøfartsdirektoratet). Kunngjøringene krever bare to ting: registrert foretak og skatteattest. Org.nr. 931949837 er verifisert. **Men kompetanse- og teamkravene står i kvalifikasjonsgrunnlaget, som ligger i Mercell og hos Sjøfartsdirektoratet.** Last det ned og legg det i `~/Solar-Consulting-dokumenter/dps-<navn>/`, så fyller vi ut resten.
-- [ ] **(Lav prioritet, ikke nødvendig nå)** **Doffin Public API-nøkkel:** innhentingen virker i dag uten. Nøkkelen er bare en forsikring hvis Doffin endrer sitt udokumenterte API. lag en nøkkel på DFØs utviklerportal (gratis, ingen godkjenning) og sett `DOFFIN_API_KEY` på Railway worker. Send helst DFØ-e-posten om vilkår først. Plan: `2026-10-19_infra-1-doffin-public-api-plan.md`.
-- [ ] **(Ikke nødvendig nå, bruken er intern)** **E-post til DFØ om Doffin-API-et**: blir aktuelt først hvis vi skal selge innsikt (for eksempel systemskifte-radaren) til kunder. ligger ferdig i `dps-soknad/`. Riktig mottaker må finnes (Notices-kontakten er neppe rett).
+- [ ] Les `~/Obsidian/Brain/00-claude-inbox/solar-consulting/strategi-2026-10-19/STRATEGISK-VURDERING.md` (topp 5, rangert; raske forbedringer er alt i gang). → *Sjekket 20.11 (data-1):* ÅPEN. Ingenting viser at den er lest. Ca. 10 min.
+- [ ] **Det som låser opp flest DPS-er** (målt på 50 åpne ordninger i feltet vårt: 0 kan søkes i dag, 34 mangler noe). Billigst først: (1) **org.nr. i leverandørprofilen** (25 ordninger, settes etter eierskiftet), (2) **skatteattest** (29), (3) **kort firmabeskrivelse og leveranseomtale** (31), (4) kredittvurdering (23), (5) miljø- og kvalitetsdokumentasjon (22). Legg dem inn i kompetansebanken eller leverandørprofilen, så vurderer motoren alt på nytt. → *Sjekket 20.11 (data-1):* Delvis gjort. Eierskiftet er registrert (drift#4 lukket 13.11). Skatte- og firmaattest ble hentet 13.11 (#2, #3), men det er ukjent om de er lagt inn i kompetansebanken. Kredittvurderingen ble bestilt 14.11 (drift#190). Firmabeskrivelsen finnes i profilen drift#304, merget 15.11. Miljø og kvalitet finnes bare som utkast. Ca. 20 min å legge inn resten.
+- [ ] **Sjekk 10 DPS-vurderinger** (~15 min) før DPS-motoren slås på: https://github.com/Nithu0/Solar-Consulting/blob/main/projects/anbud/crm/eval/DPS-VURDERINGER-2026-10-19.md (etter merge av #271) → *Sjekket 20.11 (data-1):* ÅPEN, ny versjon. Lista er erstattet av versjon 2 i drift `anbud/dps/kontroll-10.md` (https://github.com/Solar-Consulting/drift/issues/180), og resultatfeltet der er tomt. Sjekk den, ikke lenken over. Ca. 30 min.
+- [ ] **(Lav prioritet, ikke nødvendig nå)** **Doffin Public API-nøkkel:** innhentingen virker i dag uten. Nøkkelen er bare en forsikring hvis Doffin endrer sitt udokumenterte API. lag en nøkkel på DFØs utviklerportal (gratis, ingen godkjenning) og sett `DOFFIN_API_KEY` på Railway worker. Send helst DFØ-e-posten om vilkår først. Plan: `2026-10-19_infra-1-doffin-public-api-plan.md`. → *Sjekket 20.11 (data-1):* ÅPEN, lav prioritet. Ukjent om nøkkelen er satt. Ca. 10 min.
+- [ ] **(Ikke nødvendig nå, bruken er intern)** **E-post til DFØ om Doffin-API-et**: blir aktuelt først hvis vi skal selge innsikt (for eksempel systemskifte-radaren) til kunder. ligger ferdig i `dps-soknad/`. Riktig mottaker må finnes (Notices-kontakten er neppe rett). → *Sjekket 20.11 (data-1):* ÅPEN, ikke nødvendig nå. Jeg fant ingen sendt e-post til DFØ.
 - [x] (GJORT, «OK kjør») kunnskapsgraf-migrering (§4.1).
-- [ ] Se gjennom dashbordet i nettleseren etter Horizon (Tintun bør også se det).
-- [ ] Godkjenn eller avslå:, retningen «systemskifte-radar» (§2.3).
-- [ ] (Ikke nødvendig nå) E-post til DFØ: bare hvis vi skal selge data-innsikt videre.
+- [ ] Se gjennom dashbordet i nettleseren etter Horizon (Tintun bør også se det). → *Sjekket 20.11 (data-1):* ÅPEN. Horizon tok over 03.11, og dashbordet på anbud-veldora.vercel.app er oppe. Prøv også «Lag utkast» på en åpen mulighet. Ca. 15 min.
+- [ ] Godkjenn eller avslå:, retningen «systemskifte-radar» (§2.3). → *Sjekket 20.11 (data-1):* ÅPEN. Funksjonen har vært på siden 19.10, men selve retningen (å selge innsikten) er ikke godkjent. Den henger sammen med DFØ-linjen over. Ca. 2 min.
 
 ## Les og godkjenn (sortert etter hvor mye det låser opp)
 
-- [ ] **Red team, godkjenning** (låser opp bølge 2.2, red team som scorer tilbudsutkast). NB: når du godkjenner, godkjenner du også at eval A kjøres for ~2,5 USD (Opus, nytt anslag fra riggen, tak 5 USD)
+- [ ] **Red team, godkjenning** (låser opp bølge 2.2, red team som scorer tilbudsutkast). NB: når du godkjenner, godkjenner du også at eval A kjøres for ~2,5 USD (Opus, nytt anslag fra riggen, tak 5 USD) → *Sjekket 20.11 (data-1):* ÅPEN. Alle 20 feltene er tomme. Fila er flyttet, og lenken under er død. Ny lenke: https://github.com/Solar-Consulting/horizon/blob/main/crm/eval/redteam/nivaa-a/GODKJENNING.md. Ca. 20–30 min.
   https://github.com/Nithu0/Solar-Consulting/blob/main/projects/anbud/crm/eval/redteam/nivaa-a/GODKJENNING.md
-- [ ] **Konkurranseagenten, stikkprøve 5 av 43** (~5 min): åpne 5 av linjene merket `TIL_MENNESKE` og se at verdien står i kilden
+- [ ] **Konkurranseagenten, stikkprøve 5 av 43** (~5 min): åpne 5 av linjene merket `TIL_MENNESKE` og se at verdien står i kilden → *Sjekket 20.11 (data-1):* ÅPEN. Ingen av linjene er merket. Ny lenke: https://github.com/Solar-Consulting/horizon/blob/main/crm/eval/konkurranse-kilde-v1-2026-10-18.txt. Ca. 5 min.
   https://github.com/Nithu0/Solar-Consulting/blob/main/projects/anbud/crm/eval/konkurranse-kilde-v1-2026-10-18.txt
-- [ ] **Fasit for kravuttrekk (gullsett 1.5)** (KLAR, ~20 min, 84 Sauda-krav, alle sitater sjekket 84/84, du vurderer bare merkelappene; 2 er markert «se ekstra nøye»: sauda-030 og sauda-080). Låser opp en ekte måling av kravagenten på dokumenter
+- [ ] **Fasit for kravuttrekk (gullsett 1.5)** (KLAR, ~20 min, 84 Sauda-krav, alle sitater sjekket 84/84, du vurderer bare merkelappene; 2 er markert «se ekstra nøye»: sauda-030 og sauda-080). Låser opp en ekte måling av kravagenten på dokumenter → *Sjekket 20.11 (data-1):* ÅPEN. Ingen av de 84 radene er krysset av. data-1 har vurdert de 16 avvikende radene i `GULLSETT-1-5-16-RADER-VURDERING.md`. En kopi ligger i horizon under `team/gullsett-1-5/godkjenning.md`.
   `~/Obsidian/Brain/00-claude-inbox/solar-consulting/GULLSETT-1-5-GODKJENNING.md`
-- [ ] **Overvåkeren, merkeark** (~20 min, 30 rader, ja/nei + kort grunn)
+- [ ] **Overvåkeren, merkeark** (~20 min, 30 rader, ja/nei + kort grunn) → *Sjekket 20.11 (data-1):* ÅPEN. Ingen rader er fylt ut. Strøm A er ikke lagt bort; det er bare C. Ca. 20 min.
   `~/Obsidian/Brain/00-claude-inbox/solar-consulting/OVERVAKER-A-MERKEARK.md`
-- [ ] **Underleverandør-paragraf** (FOA § 19-3 → § 19-2/§ 24-4, vises til brukere). Står på hold til du eller en jurist sier ok
+- [x] **Underleverandør-paragraf** (FOA § 19-3 → § 19-2/§ 24-4, vises til brukere). Står på hold til du eller en jurist sier ok → *GJORT (sjekket 20.11, data-1):* hold-etiketten ble fjernet 21.10, og PR-en ble merget 25.10. Endringen er med i horizon. Ukjent om en jurist har sagt ok.
   https://github.com/Nithu0/Solar-Consulting/pull/231
-- [ ] **Databehandleravtale-utkast** (to konflikter mot Anthropics DPA: 48 t mot 24 t avviksvarsel, 15 mot 30 dager underleverandørvarsel)
+- [ ] **Databehandleravtale-utkast** (to konflikter mot Anthropics DPA: 48 t mot 24 t avviksvarsel, 15 mot 30 dager underleverandørvarsel) → *Sjekket 20.11 (data-1):* ÅPEN, i ny form. Erstattet av drift `juridisk/databehandleravtale-utkast.md` og åtte ja/nei-spørsmål i https://github.com/Solar-Consulting/drift/issues/19. De to konfliktene står fortsatt. Ca. 10 min.
   `~/Obsidian/Brain/00-claude-inbox/solar-consulting/UTKAST-DATABEHANDLERAVTALE.md`
-- [ ] **Kvalitetssystem-utkast** (kodegjennomgang og testing må bekreftes av Tintun og Alper)
+- [ ] **Kvalitetssystem-utkast** (kodegjennomgang og testing må bekreftes av Tintun og Alper) → *Sjekket 20.11 (data-1):* ÅPEN, i ny form. Erstattet av drift `anbud/kvalitetssystem.md` v0.95. «Åpne punkter» gjenstår før v1.0 (https://github.com/Solar-Consulting/drift/issues/31). Venter på Tintun og Alper.
   `~/Obsidian/Brain/00-claude-inbox/solar-consulting/UTKAST-KVALITETSSYSTEM.md`
-- [ ] **Brief med Haiku 5.5 kontra 4.5** (bytte modell for briefen hvis Haiku 5.5-teksten er god nok)
+- [ ] **Brief med Haiku 5.5 kontra 4.5** (bytte modell for briefen hvis Haiku 5.5-teksten er god nok) → *Sjekket 20.11 (data-1):* ÅPEN. Briefen bruker fortsatt Haiku 4.5 (horizon `crm/src/config/models.ts`). Ca. 10 min.
   `~/Obsidian/Brain/00-claude-inbox/solar-consulting/HAIKU-55-brief-side-om-side.md`
-- [ ] **Tilbudsskriver, blind A/B** (10 seksjoner, gammel mot ny; nøkkelen ligger ved siden av)
+- [ ] **Tilbudsskriver, blind A/B** (10 seksjoner, gammel mot ny; nøkkelen ligger ved siden av) → *Sjekket 20.11 (data-1):* ÅPEN. Uendret siden 18.10. Ca. 20 min.
   `~/Solar-Consulting-kompetanse/tilbudsskriver-ab/side-om-side.md`
 
-- [ ] **Kompetansebanken: rett «stresstestes» i dine fakta** (CRM-admin, dine intervjufakta). Det betyr ende-til-ende-testing med Playwright, ikke lasttest.
-- [ ] **Tintuns intervju-utkast venter på at Tintun godkjenner**: `~/Solar-Consulting-kompetanse/intervju/tintun-2026-10-18.yaml`. Avklar også om konkurranseklausulen hans (kringkasting og media) omfatter medieovervåking, og om Nevion kan oppgis som referanse.
+- [ ] **Kompetansebanken: rett «stresstestes» i dine fakta** (CRM-admin, dine intervjufakta). Det betyr ende-til-ende-testing med Playwright, ikke lasttest. → *Sjekket 20.11 (data-1):* ÅPEN. Ordet står fortsatt i intervjufila. Ca. 2 min.
+- [ ] **Tintuns intervju-utkast venter på at Tintun godkjenner**: `~/Solar-Consulting-kompetanse/intervju/tintun-2026-10-18.yaml`. Avklar også om konkurranseklausulen hans (kringkasting og media) omfatter medieovervåking, og om Nevion kan oppgis som referanse. → *Sjekket 20.11 (data-1):* ÅPEN, venter på Tintun. Fila står fortsatt med `godkjent: nei` og er uendret siden 18.10. Din del er å spørre ham, ca. 5 min.
 
-## Prøv plattformen (10 min)
+## Avgjørelser du har tatt (logg)
+
+- 2026-10-18: Tilbudsskriver og konkurranseagent PÅ i prod.
+- 2026-10-18: Ingen timepris. Målet er én vunnet kontrakt i år, realistisk størrelse, i et felt der det kommer flere (referanseliste).
+- 2026-10-18: AI SKAL foreslå tilbudspris og vinnsjanse (ny prisagent, bølge 2.5, learning-1).
+- 2026-10-18: Kunngjøringer og sammendrag holder for nå. 10 grunnlag lastes ned for innsikt.
+- 2026-10-18: #227 Horizon går fritt. Den som merges sist, fikser konflikten.
+
+## Senere
+
+- Omnigent-cockpit: én fane der oppgavene dine, filer å lese og alle agentene vises. Denne fila er en midlertidig erstatning.
+
+## Kommer snart
+
+- Brreg-kontrollkøen (`/api/anbud/suppliers/brreg-queue`) fylles med anslagsvis ~450 leverandører som må kontrolleres for hånd de neste ~5 nettene (navn som ikke ga et sikkert treff i Brreg). Noen i teamet bør ta den.
+
+- [ ] HASTER (20.11, drift#353): Les to brev fra Innkrevingsmyndigheten i Altinn-innboksen til Solarconsulting AS (28.09 og påminnelse 05.10). Sjekk på Skatteetaten Min side under Merverdiavgift hva som er levert for 2026, av hvem, og hvilken termintype. Svar i #353. Lenker: https://www.altinn.no/ui/messagebox og https://skatt.skatteetaten.no/web/minside → *Sjekket 20.11 (data-1):* ÅPEN. Frist 10.12.2026 hvis mva er annenhver måned (10.3.2027 hvis årlig). Ca. 10 min med BankID.
+
+- [ ] Velg lagringssted for Postgres-backup (horizon og plattform). A: Azure Blob Norway East, som venter på drift#47 (Azure-abonnementet). B: en S3-leverandør i EU med DPA. Plan: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/backup-plan-postgres-2026-11-20.md §2. Kost ca. 2–5 USD/mnd. Svar «backup A» eller «backup B». → *Sjekket 20.11 (data-1):* ÅPEN. Planen anbefaler B hvis drift#47 ikke er løst innen en uke. #47 har stått uendret siden 29.10. Ca. 2 min å velge.
+
+## Utgått (flyttet hit 20.11 av data-1, ingenting slettet)
+
+- [ ] **Søk opptak i dynamiske innkjøpsordninger** når forsikringen er på plass (uke 43): Brønnøysundregistrene «Sammensatte team» (frist **22.11**), Sjøfartsdirektoratet «Analytics/ML» + «Utviklere/techlead» (31.12). DPS-motoren viser snart hva vi mangler per ordning. → *Utgått:* Erstattet av Mercell- og Sjøfartsdirektoratet-linjene under «Mandag 16.11». Fristen 22.11 hos Brønnøysundregistrene gjelder ikke lenger, fordi ordningen er forlenget til 17.08.2029 (drift#136, 15.11).
+- [ ] **DPS-søknadspakker er klare** i `~/Obsidian/Brain/00-claude-inbox/solar-consulting/dps-soknad/` (Brønnøysundregistrene «Sammensatte team», frist 22.11, og Sjøfartsdirektoratet). Kunngjøringene krever bare to ting: registrert foretak og skatteattest. Org.nr. 931949837 er verifisert. **Men kompetanse- og teamkravene står i kvalifikasjonsgrunnlaget, som ligger i Mercell og hos Sjøfartsdirektoratet.** Last det ned og legg det i `~/Solar-Consulting-dokumenter/dps-<navn>/`, så fyller vi ut resten. → *Utgått:* Erstattet av Mercell- og TendSign-linjene under «Mandag 16.11». Svarfilene ligger nå i drift `anbud/dps/`, og `~/Solar-Consulting-dokumenter/` ble aldri laget.
+- [ ] (Ikke nødvendig nå) E-post til DFØ: bare hvis vi skal selge data-innsikt videre. → *Utgått:* Dobbel. Det er samme oppgave som DFØ-linjen over.
+
+### Fra «Prøv plattformen»
+
+*Utgått:* SMS Gateway (1016) stengte 29.10. Prøv heller «Lag utkast» på en åpen mulighet når du ser over dashbordet (Strategi-lista).
+
 
 - [ ] Åpne https://anbud-veldora.vercel.app/opportunities/1016 (SMS Gateway). Se at krav (12 fra kravagenten), brief og konkurransegrunnlag vises. Trykk «Lag utkast»: tilbudsskriveren er nå på. Skriv her hva som mangler eller ser rart ut.
 
-## Last ned konkurransegrunnlag (fra hyyr), 10 konkurranser
+### Fra «Last ned konkurransegrunnlag (fra hyyr), 10 konkurranser»
+
+*Utgått:* fristene 27.10–13.11 er passert, og ingenting ble lastet opp (`~/Solar-Consulting-dokumenter/` ble aldri laget). Unntaket er 830 (Energidepartementet), som ikke har frist og kan fortsatt være åpen: https://doffin.no/notices/2026-115810, ca. 10 min å sjekke.
+
 
 Legg filene i `~/Solar-Consulting-dokumenter/<mulighet-id>/` (lag mappen, ZIP går fint). Last dem så opp selv, med din egen innlogging, fra `~/code/Veldora/projects/anbud/crm` (etter at PR #259 er merget):
 
@@ -135,23 +178,3 @@ Kravagenten starter av seg selv for hver mulighet som får filer. .doc og .xls m
 
 Valgt fordi de er åpne, i vårt felt (fagsystem, KI, konsulent), og flere er små nok til å være realistiske som første kontrakt.
 SMS Gateway og Hypergene-konsulent er de mest realistiske å vinne.
-
-## Avgjørelser du har tatt (logg)
-
-- 2026-10-18: Tilbudsskriver og konkurranseagent PÅ i prod.
-- 2026-10-18: Ingen timepris. Målet er én vunnet kontrakt i år, realistisk størrelse, i et felt der det kommer flere (referanseliste).
-- 2026-10-18: AI SKAL foreslå tilbudspris og vinnsjanse (ny prisagent, bølge 2.5, learning-1).
-- 2026-10-18: Kunngjøringer og sammendrag holder for nå. 10 grunnlag lastes ned for innsikt.
-- 2026-10-18: #227 Horizon går fritt. Den som merges sist, fikser konflikten.
-
-## Senere
-
-- Omnigent-cockpit: én fane der oppgavene dine, filer å lese og alle agentene vises. Denne fila er en midlertidig erstatning.
-
-## Kommer snart
-
-- Brreg-kontrollkøen (`/api/anbud/suppliers/brreg-queue`) fylles med anslagsvis ~450 leverandører som må kontrolleres for hånd de neste ~5 nettene (navn som ikke ga et sikkert treff i Brreg). Noen i teamet bør ta den.
-
-- [ ] HASTER (20.11, drift#353): Les to brev fra Innkrevingsmyndigheten i Altinn-innboksen til Solarconsulting AS (28.09 og påminnelse 05.10). Sjekk på Skatteetaten Min side under Merverdiavgift hva som er levert for 2026, av hvem, og hvilken termintype. Svar i #353. Lenker: https://www.altinn.no/ui/messagebox og https://skatt.skatteetaten.no/web/minside
-
-- [ ] Velg lagringssted for Postgres-backup (horizon og plattform). A: Azure Blob Norway East, som venter på drift#47 (Azure-abonnementet). B: en S3-leverandør i EU med DPA. Plan: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/backup-plan-postgres-2026-11-20.md §2. Kost ca. 2–5 USD/mnd. Svar «backup A» eller «backup B».

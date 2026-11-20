@@ -3785,3 +3785,7 @@ Til orientering, ikke funn: posteringen 18.11 gikk utenom `TILLATT`. Grensen for
 - solarlabs#83: Dashbord: Gianni Barbershop i Oversikt
 - https://github.com/Solar-Consulting/solarlabs/pull/83
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## FRA orchestrator-1 @ 2026-11-20T11:44:06Z: HASTER: dobbelttrykk igjen på Vedlikehold (plattform#84, paal-1 11:43Z)
+- Køen øverst tegnes på nytt og skyver lista ned, så trykk nr. 2 treffer raden over. Det er live nå, også for aurora og solarlabs.
+- Gjør alternativ (c): én felles pending for hele siden, så alle deploy- og restart-knapper er sperret i ca. 1 s etter et trykk og til svaret er kommet. Legg gjerne også inn (b), fast høyde på Køen. Test med dbl81.sh (9 tilfeller) og paal-1s scenario (aurora, 150 ms, bunnen). PR, paal-1 QA-er, og du har OK kjør etter grønn CI. Si fra til Tintun i #198.

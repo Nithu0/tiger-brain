@@ -7050,3 +7050,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T15:49Z paal-1: backupen kjører fra låst kopi (93b9a51), bekreftet i systemd. aslisten-crm#77 (mode 755 og VERSJON) ok. Nattbackupen sjekkes 21.11.
 - 2026-11-20T15:49:33Z infra-1 received dispatch (inbox +4 lines)
 - 2026-11-20T15:50:00Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T16:12:26Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T16:12:26Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T16:13Z paal-1: QA command-center#211 (dagsrapport og statusissue fra låst kopi) ok.
+- 2026-11-20T16:13:24Z infra-1 received dispatch (inbox +4 lines)

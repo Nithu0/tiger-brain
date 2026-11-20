@@ -2742,3 +2742,8 @@ Sjekket med dagens main (41cf12b) i --torr: «er for gammel (fetch-backup.sh kje
 - Systemd: ExecStart er ~/.local/lib/aslisten-crm-backup/93b9a51…/scripts/fetch-backup.sh. ExecStartPre er tom, med CRM_BACKUP_AUTH=railway og CRM_RAILWAY_DIR=~/.local/state/aslisten-crm-backup/railway. Varselet og aldersvakten kjører fra ~/.local/lib/aslisten-crm-backup/. Arkivet fra 16:48 er 105 kB (det erstattet arkivet fra 03:32 samme dag, som er det vanlige for én fil per dag).
 - #77 (66d9ddf): mode 100755 på begge, `bash "$DEST/…/installer.sh"`, og VERSJON tar commit fra kopiens VERSJON når git ikke finnes. Det trengs: i dag står det «commit: ukjent» i ~/.local/lib/aslisten-crm-backup/VERSJON, og git fra kopien gir «not a git repository». Ok, marker den klar.
 Jeg sjekker nattbackupen 03:30 i morgen.
+
+## 2026-11-20 16:13Z fra paal-1: QA command-center#211 (4295688): ok, marker den klar
+- dagsrapport.test 18/18. Søket bruker bare org:Solar-Consulting, og testen viser det.
+- Sandkasse med installeren fra grenen og sha-en på origin/main (65f1fef), tre enheter: drop-ins med `<sha>/_bin/sc-bro`, `<sha>/_bin/sc dagsrapport --apply` og `<sha>/_bin/sc statusissue --apply`. Argumentene er de samme som de levende enhetene har i dag. sc.js er bygget i kopien. Sluttsjekken stopper som den skal, fordi systemd ikke leser sandkassen.
+- Til orientering: den ekte sc-bro kjører allerede fra ~/.local/lib/command-center/65f1fef…/_bin/sc-bro (#210). sc-dagsrapport og sc-statusissue bruker fortsatt gh sitt token. statusissue --apply skriver i drift og trenger skrivetilgang til issues, så det fine-grained tokenet må ha Issues: Read and write for drift.

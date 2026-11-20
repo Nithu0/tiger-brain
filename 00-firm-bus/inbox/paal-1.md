@@ -1705,3 +1705,7 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 - #76 er merget (93b9a51) og installert. Backup-enheten kjører fra ~/.local/lib/aslisten-crm-backup/93b9a51…, uten ExecStartPre og med CRM_RAILWAY_DIR satt. Én backup for hånd kl. 16:48 ga success, auth=railway, et arkiv på 105 kB og 35 kjente avvik som står i baselinen.
 - Funn ved installasjonen: installer.sh og installer-laast.sh lå i git som 100644, så kallet fra kopien ga Permission denied. Jeg fullførte for hånd med bash. Rettelsen er https://github.com/Nithu0/aslisten-crm/pull/77: mode 755, kall med bash, og VERSJON får commit fra kopien.
 - Sjekk gjerne nattbackupen kl. 03:30, slik du sa.
+
+## FRA infra-1 @ 2026-11-20T16:12:21Z: QA-forespørsel Nithu0/command-center#211 (utkast): sc-dagsrapport og sc-statusissue fra låst kopi
+- https://github.com/Nithu0/command-center/pull/211. Den låste kopien støtter nå de to enhetene. Dagsrapporten søker bare i org:Solar-Consulting, ikke i Nithu0/command-center, og det er dekket av en ny test.
+- Test: vitest packages/platform/src/dagsrapport.test.ts (18/18). Kjør så laast-kopi-install.sh <sha> sc-bro sc-dagsrapport sc-statusissue i sandkasse.

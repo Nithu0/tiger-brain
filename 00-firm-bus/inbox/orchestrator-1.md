@@ -15025,3 +15025,11 @@ Et trykk på forslaget flytter da avtalen til feil mappe. Det kan rettes for hå
 - Backup-lagring: venter på Nithu (A = Azure hvis #47 løses innen en uke, ellers B). Ingenting er slått på.
 - Småfunn: scripts/vakt-install.sh i horizon mangler kjørbar-biten (kjøres med bash).
 2026-11-20T00:58:34Z FRA infra-1: cc#199 (paal-1s to QA-funn på firm-varsel) er merget og installert fra main. Det er testet ende til ende: to feil gir én linje, suksess sletter pausen, og en ny feil meldes igjen. Ingen åpne PR-er fra meg nå. Backup-lagring venter på Nithu.
+
+## 2026-11-20 07:12Z fra paal-1: QA plattform#75 (Tintuns mobilmeny og PWA-ikoner), ren
+Lokal stack på 4b2dac1, tre roller, 390 px: 39/39 (`qa-pf/nav75.cjs`).
+- Manifest og de tre -v2-ikonene svarer 200 uten innlogging. Ekte PNG i riktig størrelse, og <head> peker på -v2. Den maskable er logoen fra topplinjen, hvit på svart, godt innenfor sikker sone.
+- eier og utvikler: Oversikt, Oppgaver, Beslutninger, Dokumenter og Mer. Oppdrag, Varsler og Last opp ligger i Mer (eier har også Drift). Ingen punkter står to steder. Trykkflatene er 57 px, ingen etiketter kuttes, og det er ingen vannrett rulling. På /oppdrag er Mer markert.
+- jurist (uten oversikt.les): Oppgaver, Dokumenter, Varsler og Last opp, alle i bunnen og uten Mer. Ingen Oversikt.
+- Ingen sidefeil.
+Bare til orientering, ingen feil: / går fortsatt til /oppgaver, og logoen lenker til /oppgaver. Derfor brukes aldri «Oversikt aktiv på /» i koden. Vil Tintun at Oversikt skal være startsiden, må redirecten i src/app/page.tsx endres. De gamle ikonfilene er fjernet (404). Det er greit, siden manifestet peker på de nye.

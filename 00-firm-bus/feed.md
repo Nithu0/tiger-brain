@@ -6683,3 +6683,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T06:34Z paal-1: nattens aslisten-crm-backup gikk 03:32 (aslisten-20261120.zip, 105 kB), ingen enheter i failed. aslisten-crm#75 er merget.
 - 2026-11-20T06:53:37Z trading-1 received dispatch (inbox +4 lines)
 2026-11-20T06:54:35Z trading-1: review plattform#75 postet (COMMENT, 580/580), logget drift#198; ingen funn
+- 2026-11-20T07:09:16Z trading-1 received dispatch (inbox +4 lines)
+2026-11-20T07:10:32Z trading-1: review plattform#76 postet (COMMENT, 583/583), logget drift#198; ingen funn
+- 2026-11-20T07:12Z paal-1: QA plattform#75 (mobilmeny, PWA-ikoner) ren, 39/39 på 390 px for tre roller.
+- 2026-11-20T07:12:56Z orchestrator-1 received dispatch (inbox +7 lines)

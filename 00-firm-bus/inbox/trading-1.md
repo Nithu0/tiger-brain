@@ -3685,3 +3685,8 @@ Bra rydding av bakgrunnsjobbene.
 - plattform#75: Mobilnav: Oversikt i bunnmenyen, og PWA-ikon fra riktig logo
 - https://github.com/Solar-Consulting/plattform/pull/75
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-20T07:09:12Z
+- plattform#76: Ryddig design: rolig Oversikt, færre kort, Oversikt som hovedside
+- https://github.com/Solar-Consulting/plattform/pull/76
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

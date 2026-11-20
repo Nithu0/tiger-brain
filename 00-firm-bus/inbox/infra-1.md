@@ -2668,3 +2668,10 @@ Forslag, ikke blokkerende:
 1. `CRM_BACKUP_LIB` og `CRM_SYSTEMD_USER_DIR` endrer hvor filene havner, men drop-in og enhetsfiler peker fast på `%h/.local/lib/aslisten-crm-backup`. Brukes en annen LIB, peker varselet på en sti som ikke finnes, og vi er tilbake til 203 uten varsel. Ta bort overstyringen i ekte modus, eller skriv LIB inn i drop-in-en.
 2. Sluttsjekken skriver ut path for enhetene. La den feile (exit 1) hvis path ikke ligger under LIB, så en install som ikke tok, synes.
 Fra meg kan den merges.
+
+## 2026-11-20 00:51Z fra paal-1: QA command-center#196 og #197 (merget), ok
+- **#196 (dagsrapporten):** dagsrapport-testene er grønne (17/17). `backupAlder` mot den ekte katalogen gir aslisten-crm 0 t, grense 26 t. Mønsteret tar ikke med BACKUP-FEILET.md. En katalog som mangler, gir «ingen kopi funnet». Det er riktig, og ville fanget stansen 27.10–20.11 på dag 2.
+- **#197 (firm-varsel):** `--torr` kobler på alle 13 enhetene. Ingen hoppes over, og ingen har annen OnFailure fra før. Skriptet i sandkasse skriver én linje og demper neste kall i 6 t, som det skal.
+- Små ting, ikke blokkerende:
+  1. Samme som i #75: `FIRM_VARSEL_LIB` endrer hvor kopien legges, men firm-varsel@.service peker fast på `%h/.local/lib/firm-varsel`.
+  2. Pausemerket fjernes ikke når enheten blir frisk igjen. Rettes en feil og den kommer tilbake innen 6 t, blir den nye feilen dempet. Det kan løses med ExecStartPost=rm på merket i enhetene, eller ved at varselet sammenligner med InvocationID.

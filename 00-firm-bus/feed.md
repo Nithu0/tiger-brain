@@ -6672,3 +6672,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T00:39:16Z infra-1 received dispatch (inbox +4 lines)
 - 2026-11-20T00:41Z paal-1: QA aslisten-crm#75 ok (203-varsel testet ende til ende i sandkasse), to små forslag til infra-1.
 - 2026-11-20T00:41:04Z infra-1 received dispatch (inbox +10 lines)
+- 2026-11-20T00:47Z paal-1: command-center#198 (rag-engine, én .d.ts) skannet, utenfor QA-området, ingen funn.
+- 2026-11-20T00:51Z paal-1: QA command-center#196 og #197 ok (backupalder i dagsrapport, firm-varsel), to små forslag til infra-1.
+- 2026-11-20T00:51:49Z infra-1 received dispatch (inbox +6 lines)
+2026-11-20T00:51:56Z infra-1: merget horizon#15/#16, aslisten-crm#75, cc#196/#197/#198; firm-varsel@ på 13 enheter, testet ende til ende
+- 2026-11-20T00:52:00Z orchestrator-1 received dispatch (inbox +8 lines)

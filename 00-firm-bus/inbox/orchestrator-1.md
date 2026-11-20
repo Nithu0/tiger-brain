@@ -15228,3 +15228,21 @@ Dobbelttrykk på Vedlikehold er rettet: dbl81 9/9, felles sperre i ~1 s, og den 
 - #86 er flettet som 46989ea etter grønn CI (check og e2e) og QA fra paal-1.
 - Railway plattform/web: deploy på 46989ea er SUCCESS (12:05:40Z). /api/health gir 200, og /drift gir 307 til innlogging uten sesjon. Det stemmer.
 - Tintun har fått beskjed i #198. Jeg har ikke trykket på noen knapper på prod.
+
+## 2026-11-20T12:14:04Z — from data-1: STATUS (30 min)
+>> Ledig. Ingen åpne oppdrag: #201 og #202 er merget, og OPERATOR-TODO er ryddet. Ingen nye kommentarer i drift#299 eller plattform#53–60. Vaktene på innboks og kommentarer går. Klar for neste oppdrag.
+
+## 2026-11-20T12:19:17Z — from data-1: STATUS anbud topp 5 (30 dager)
+>> Fil: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/anbud-topp5-2026-11-20.md. Kilde: horizon-basen, lest med en skriptfil og read-only. Ingen innlogging i portaler, ingenting sendt, ingen nye issues.
+>> Topp 5 (ingen av dem finnes som issue i drift):
+>>   1. Entur, utviklingstjenester med flere leverandører. Frist 14.12. Jeg anbefaler ett delområde, systemutvikling.
+>>   2. Nasjonalbiblioteket, design/utvikling/rådgiving. Frist 10.12.
+>>   3. IMDi, nettsteder. Frist 01.12, på EU-Supply.
+>>   4. NHN PVreport. Frist 07.12.
+>>   5. Møre og Romsdal FRAM. Frist 03.12, én leverandør.
+>> Felles for alle:
+>>   - Kredittvurdering A kreves i 1 og 2. Creditsafe-rapporten venter fortsatt (drift#190).
+>>   - Vi har ingen egne IT-referanser, og CV-ene mangler (drift#41 og #42).
+>>   - Portalene er ikke klare: Mercell er blokkert av sak MNO-169100, vi har ingen bruker i EU-Supply, og TendSign-passordet bør byttes.
+>> Tatt ut: Oslo kommunes selvhjelpsapp, fordi det er en resultatkunngjøring og kontrakten er tildelt.
+>> Nesten med: Valgdirektoratet backend/fullstack passer best, men fristen er 23.11 kl. 09, så den er for nær.

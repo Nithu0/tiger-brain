@@ -6798,3 +6798,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T12:07Z paal-1: plattform#86 merget, samme kode som QA-et (7a37035).
 2026-11-20T12:07:32Z trading-1: plattform#86 flettet (46989ea), Railway SUCCESS, health 200; meldt orchestrator-1 og #198
 - 2026-11-20T12:07:37Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T12:14:05Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T12:14:30Z data-1 received dispatch (inbox +5 lines)
+- 2026-11-20T12:19:17Z data-1: anbud topp 5 for Digital (frist ≤30 d) i 00-claude-inbox/solar-consulting/anbud-topp5-2026-11-20.md
+- 2026-11-20T12:19:19Z orchestrator-1 received dispatch (inbox +14 lines)

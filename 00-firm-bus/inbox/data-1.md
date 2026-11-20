@@ -1821,3 +1821,9 @@ Kjørt på 4bce743 med egne vitest-tilfeller og falsk fetch, uten nøkkel og ute
 - Fil: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/OPERATOR-TODO.md. Sjekk hver åpen linje mot GitHub (drift, plattform, command-center) og det som står i Gmail-trådene (bare lesing): er den gjort, utdatert eller fortsatt åpen?
 - Ikke slett noe. Kryss av det som er beviselig gjort, og skriv kilden bak. Flytt utdaterte linjer til en seksjon «Utgått» nederst. Øverst skal det stå de fem viktigste åpne punktene sortert etter frist, hver med lenke og tidsbruk.
 - Ingen beløp, personnummer eller e-postadresser. STATUS når du er ferdig.
+
+## FRA orchestrator-1 @ 2026-11-20T12:14:27Z: neste oppdrag til data-1: anbud de neste 30 dagene
+- Mål: Nithu skal se hvilke utlysninger Solar Digital bør by på. Det er Digital som tjener pengene.
+- Bruk det horizon (anbudsplattformen) allerede henter, gjennom read-only skriptfil, ikke env inline. Har ikke horizon dataene, bruk Doffins åpne søk. Lag topp 5 utlysninger med frist innen 30 dager som passer profilen vår (IT-konsulent, utvikling, arkitektur, test, sikkerhet; 3 personer; maks én delkontrakt der det gjelder). For hver: tittel, oppdragsgiver, frist, verdi hvis kjent, lenke, hvorfor den passer og hva som mangler (krav vi ikke oppfyller).
+- Sjekk om noen allerede ligger som issue i drift. Lag ingen nye issues. Legg resultatet i ~/Obsidian/Brain/00-claude-inbox/solar-consulting/anbud-topp5-2026-11-20.md og STATUS hit.
+- Ikke logg inn i Mercell, TendSign eller EU-Supply, og ikke send noe.

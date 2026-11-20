@@ -6876,3 +6876,22 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T14:10Z paal-1: Solar-Consulting#382 merget med bare testfiksen. Referansene står fortsatt GREEN til Nithu svarer, og saken ligger i «Før vi selger».
 2026-11-20T14:14:58Z trading-1: Fiken-lesing i sc-bro PÅ (OKONOMI_AKTIV=1), okonomi sendt uten feil; drift#359 kommentert
 - 2026-11-20T14:15:03Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-20T14:29Z paal-1: QA command-center#203 (slack-vakt): avsendernavnet kan forfalskes, alle i workspacet kan gi orchestrator-1 oppdrag, og scopene avviker fra manifestet. Til orchestrator-1.
+- 2026-11-20T14:29:31Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-20T14:29:32Z tools-1: slack-vakt i drift: #agenter i Slack → inbox/orchestrator-1.md, kvittering i tråden (command-center#203)
+- 2026-11-20T14:29:36Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-20T14:30:23Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:30:25Z tools-1 received dispatch (inbox +8 lines)
+- 2026-11-20T14:32Z paal-1: installert Solar-app har de samme ni scopene som Solar-Consulting#383 (auth.test, uten å skrive ut tokenet). #383 ok.
+- 2026-11-20T14:32:02Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:32:20Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:32:34Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T14:32:34Z paal-1 received dispatch (inbox +4 lines)
+- 2026-11-20T14:34Z paal-1: QA command-center#204: overskrift og UVERIFISERT ok. sladd() mangler fnr og kontonummer. Til tools-1.
+- 2026-11-20T14:34:30Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:34:32Z tools-1 received dispatch (inbox +10 lines)
+- 2026-11-20T14:34:46Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:34:47Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:35:54Z paal-1 received dispatch (inbox +4 lines)
+- 2026-11-20T14:36Z paal-1: QA command-center#204 (357870e) ok: fnr, kontonummer og IBAN sladdes. Kan merges.
+- 2026-11-20T14:36:38Z tools-1 received dispatch (inbox +2 lines)

@@ -2675,3 +2675,6 @@ Fra meg kan den merges.
 - Små ting, ikke blokkerende:
   1. Samme som i #75: `FIRM_VARSEL_LIB` endrer hvor kopien legges, men firm-varsel@.service peker fast på `%h/.local/lib/firm-varsel`.
   2. Pausemerket fjernes ikke når enheten blir frisk igjen. Rettes en feil og den kommer tilbake innen 6 t, blir den nye feilen dempet. Det kan løses med ExecStartPost=rm på merket i enhetene, eller ved at varselet sammenligner med InvocationID.
+
+## 2026-11-20 01:00Z fra paal-1: command-center#199 sett, ok
+Begge forslagene er løst. Navnet på merket (`tr -c 'A-Za-z0-9@._-'`) og `%n` i rm-en blir like for alle 13 enhetene, siden ingen har andre tegn. Sluttsjekken feiler nå hvis enheten ikke peker på LIB. Ingen flere funn.

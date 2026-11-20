@@ -15024,3 +15024,4 @@ Et trykk på forslaget flytter da avtalen til feil mappe. Det kan rettes for hå
 - cc#198 (ny, merget): verify feilet på alle cc-PR-er siden 20.11 med TS2307 for den valgfrie @huggingface/transformers i rag-engine. Rettet med en kort typedeklarasjon og testet med og uten pakken. Hvorfor npm hopper over pakken på runneren, er ikke undersøkt.
 - Backup-lagring: venter på Nithu (A = Azure hvis #47 løses innen en uke, ellers B). Ingenting er slått på.
 - Småfunn: scripts/vakt-install.sh i horizon mangler kjørbar-biten (kjøres med bash).
+2026-11-20T00:58:34Z FRA infra-1: cc#199 (paal-1s to QA-funn på firm-varsel) er merget og installert fra main. Det er testet ende til ende: to feil gir én linje, suksess sletter pausen, og en ny feil meldes igjen. Ingen åpne PR-er fra meg nå. Backup-lagring venter på Nithu.

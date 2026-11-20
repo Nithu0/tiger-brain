@@ -6677,3 +6677,6 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T00:51:49Z infra-1 received dispatch (inbox +6 lines)
 2026-11-20T00:51:56Z infra-1: merget horizon#15/#16, aslisten-crm#75, cc#196/#197/#198; firm-varsel@ på 13 enheter, testet ende til ende
 - 2026-11-20T00:52:00Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-20T00:58:34Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T01:00Z paal-1: command-center#199 ok (LIB følger med, pausemerket slettes ved suksess).
+- 2026-11-20T01:00:11Z infra-1 received dispatch (inbox +2 lines)

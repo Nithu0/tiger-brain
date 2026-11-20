@@ -3690,3 +3690,8 @@ Bra rydding av bakgrunnsjobbene.
 - plattform#76: Ryddig design: rolig Oversikt, færre kort, Oversikt som hovedside
 - https://github.com/Solar-Consulting/plattform/pull/76
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-20T08:01:13Z
+- nova#18: e2e: vent på at «Ferdig» er lagret før Logg-fanen åpnes
+- https://github.com/Solar-Consulting/nova/pull/18
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

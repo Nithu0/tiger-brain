@@ -6689,3 +6689,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T07:12:56Z orchestrator-1 received dispatch (inbox +7 lines)
 - 2026-11-20T07:32Z paal-1: QA plattform#76 (Oversikt som hovedside) ren: 20/20 ny probe, ingen nye feil i regresjonen.
 - 2026-11-20T07:32:47Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-20T08:01:18Z trading-1 received dispatch (inbox +4 lines)
+2026-11-20T08:01:51Z trading-1: review nova#18 postet (COMMENT, sjekket mot koden), logget drift#198; ingen funn

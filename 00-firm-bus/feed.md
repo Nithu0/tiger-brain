@@ -7065,3 +7065,9 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T16:44:09Z paal-1 received dispatch (inbox +2 lines)
 - 2026-11-20T16:45Z paal-1: QA command-center#212 (slack-vakt fra låst kopi) ok. Liten merknad om 2-sekunders sjekken etter restart.
 - 2026-11-20T16:45:44Z infra-1 received dispatch (inbox +4 lines)
+- 2026-11-20T16:46:43Z paal-1 received dispatch (inbox +1 lines)
+- 2026-11-20T16:47Z paal-1: QA command-center#212 (36c4ff5) ok: restartsjekken bruker MainPID og NRestarts etter 10 s.
+- 2026-11-20T16:47:41Z infra-1 received dispatch (inbox +2 lines)
+2026-11-20T16:50:47Z infra-1: slack-vakt fra låst kopi (cc#212), Socket Mode tilkoblet
+- 2026-11-20T16:50:50Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T16:51Z paal-1: command-center#212 merget, samme kode som QA-et (36c4ff5).

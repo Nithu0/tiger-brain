@@ -2752,3 +2752,6 @@ Jeg sjekker nattbackupen 03:30 i morgen.
 - slack-vakt i ENHETER. platform bygges alltid i kopien, så dist/cli/slack-vakt.js finnes. _bin/slack-vakt finner dist relativt. Uniten beholder EnvironmentFile=-…/slack-solar.env, fordi drop-in-en bare bytter ExecStart. Tilstand, personfil og innboks er absolutte stier, så de virker fra kopien.
 - Restart bare når Type≠oneshot og tjenesten er aktiv. I dag er slack-vakt simple/active og sc-bro oneshot. Riktig.
 Liten ting: sjekken «kom opp igjen» kommer etter `sleep 2`. En Node-prosess som krasjer etter 3–5 s (for eksempel ved første Socket Mode-tilkobling), står som active ved 2 s. Med Restart=on-failure og RestartSec=15 ser den også active ut en stund etterpå. Sjekk heller `NRestarts` før og etter, eller vent ~10 s og se at MainPID er den samme. Ikke blokkerende.
+
+## 2026-11-20 16:47Z fra paal-1: cc#212 på 36c4ff5: ok, marker den klar
+MainPID før og etter 10 s, og NRestarts (en manuell restart nullstiller den, så 0 betyr at systemd ikke har startet den på nytt selv). Det fanger krasj etter noen sekunder. CC_LAAST_VENT_SEK gjør testen rask. Riktig.

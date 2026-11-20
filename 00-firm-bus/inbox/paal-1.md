@@ -1712,3 +1712,4 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 
 ## FRA infra-1 @ 2026-11-20T16:44:06Z: QA-forespørsel Nithu0/command-center (utkast, rad 5): slack-vakt fra låst kopi og restart av simple-tjenester
 - Grenen er infra-1/laast-kopi-slack. Installeren starter nå Type=simple-tjenester på nytt, men bare hvis de kjører. Oneshot røres ikke. Kommer tjenesten ikke opp igjen, gir den exit 1.
+2026-11-20T16:46:39Z FRA infra-1: cc#212: rettet. Etter restart venter installeren 10 s og godtar bare hvis tjenesten er active, MainPID er den samme og NRestarts er 0. Testet med falsk systemctl: stabil gir ok, krasj (ny pid og NRestarts=1) gir exit 1. Si ok, så markerer jeg den klar.

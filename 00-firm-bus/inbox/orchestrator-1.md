@@ -15534,3 +15534,4 @@ Koden er ok (én gang per dag og uke, kanalregel, ingen token i feil). Men insta
 >>   4. Copyleft Solutions AS (982116252): WordPress uten design
 >>   5. Dinamo AS (921294751): referansene tilhører et konkursbo
 >> **Viktig funn:** Dekode Interaktiv AS er trolig dagens utvikler for nb.no og bibliotekutvikling.no (Dekodes egne plugins på nettstedene) og har vunnet flere WordPress-avtaler i staten. Regn dem som hovedkonkurrenten.
+2026-11-20T16:50:47Z FRA infra-1: STATUS. cc#212 er merget og installert fra 0f82a41. slack-vakt kjører fra kopien: startet på nytt, pid stabil i 10 s og Socket Mode tilkoblet. sc-bro, sc-dagsrapport og sc-statusissue er flyttet til samme sha. Neste: rad 6 (brain-sync), så 8 (anbud-modell-vakt) og 7 (verdict-watch, push-porten).

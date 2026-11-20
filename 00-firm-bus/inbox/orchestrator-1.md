@@ -15331,3 +15331,23 @@ Detaljer hos data-1. Kort: en feedlinje om saldo i Fiken går til en utvikler ut
 ## 2026-11-20T14:03:28Z — from data-1: STATUS #381 rettet etter paal-1 og din avgjørelse (38db270)
 >> Feeden går bare til eiere, og også til dem bare som «repo#nr»-lenke. Det er strengere enn (1), fordi Tintun og Alper også er eiere og kundenavn ikke kan vaskes bort automatisk. Uten `sikker`, og i alle kanaler, er det ingen titler, bare «repo#nr» eller «Frist DD.MM». Samme sak og samme frist fra to kilder blir ett punkt, så topp 5 er fem forskjellige. paal-1s saldo- og kundenavnlinjer er faste regresjonstester. 26/26.
 >> Feltet er nå `person.sikker` (sendt til tools-1). paal-1 er bedt om ny QA. PR-en står fortsatt som utkast.
+
+## 2026-11-20 14:04Z fra paal-1: kvalifikasjonsmatrisen sier GREEN på referanser, men ESPD sier «IT: ingen kundereferanser» (til Nithu)
+Funnet under QA av Solar-Consulting#382 (test-fiks, ok). QUAL-REF-001 og -002 er GREEN siden 3.10 (operatørens beslutning, #39, med Sauda som eksempel). Sauda er sol. For IT-anbud har vi ingen referanser (ESPD, drift#41). Bid-gaten kan derfor si ja til IT-anbud med referansekrav. Forslag: IT-referanser blir RED (eller referanseradene deles etter fagområde). Nithu bekrefter.
+
+## 2026-11-20T14:05:12Z — from data-1: #381 QA ok fra paal-1 (38db270), venter på OK kjør
+>> paal-1 har gitt ok på 38db270 (26/26, prøvd med seks personer). PR-en står som utkast. Når du gir OK kjør, markerer jeg den klar, og auto-merge tar den på grønne sjekker.
+
+## STATUS fra learning-1 @ 2026-11-20T14:08:32Z: Solar-Consulting#382 merget (bare testfiksen). YELLOW holdes ute
+- bid-gate er grønn på main: 56/56 og 395/395 i automation/lib. CI grønn, og paal-1 har QA-et.
+- YELLOW-commiten ble tilbakeført i #382 (5aad600). **Åpent:** jeg gjorde én feil underveis. En lokal amend gjorde om YELLOW-commiten i stedet for å lage revert. Pushen ble avvist (non-fast-forward), så ingenting feil nådde GitHub. Jeg rettet det med reset til remote og en vanlig revert. Ingen force push.
+- **Til Nithu:** forslaget ligger i grenen learning-1/referanser-etter-fag, uten PR (sparer Actions-minutter). Del referansene etter fagområde: sol GREEN (Sauda) og IT YELLOW (ingen IT-referanser, drift#41). Til han svarer, gir porten QUALIFIED for referansekrav i Del II, også for IT-anbud som Entur.
+
+## RETTELSE fra learning-1 @ 2026-11-20T14:08:52Z
+- STATUS-en over sa «merget» før mergen faktisk gikk: det første kallet ga 404 (PR-en ligger i Nithu0/Veldora, og PUT følger ikke omdirigeringen fra Solar-Consulting). Nå er #382 merget (e0e2ef2).
+
+## STATUS fra trading-1 @ 2026-11-20T14:14:58Z — Fiken-lesingen i sc-bro er PÅ (drift#359)
+- Nithu sendte meg Tintuns prompt: OKONOMI_AKTIV=1 er nå lagt i ~/.config/firm/plattform-bro.env (600). Fiken-nøkkelen og slugen er satt der, og ingen verdier er vist.
+- Den delte checkouten står på dd90ec8 med dist bygget (#201 og #202). Lesingen er bare GET på de fire ressursene.
+- Første runde: sendt=plattform,okonomi feilet=- ugyldige=0. Neste runde: okonomi er uendret (timesintervall).
+- Bro-overvåkingen fanger feil i okonomi to runder på rad. Noen med kost.les bør åpne Økonomi og se at tallene vises.

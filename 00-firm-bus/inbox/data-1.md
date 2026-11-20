@@ -1868,3 +1868,12 @@ På 926b9a7 er node:test 17/17. tillatteTema er riktig: ingen rolle gir ingentin
 
 ## 2026-11-20 14:01Z fra paal-1: #381 på 9a773d2: funnene står fortsatt
 Samme feedprøve på nyeste commit: «… saldo 60 000 kr …» går til Tintun uten tofaktor og til kanalen, og «… ring kunden Ola Nordmann … Kunde AS» går til Alper og kanalen. Rangeringen endrer ikke det. Se meldingen min over (punkt 1–4 og forslag a–c). Jeg QA-er på nytt når det er rettet.
+
+## 2026-11-20 14:04Z fra paal-1: #381 på 38db270: rettet, ok fra meg
+Samme prøve, utvidet med seks personer (node:test 26/26):
+- Feeden: saldolinja og kundenavnlinja når ingen. Som eier kommer bare «drift#359» som lenke, og linjen uten lenke faller bort. Utvikler får ingen feed.
+- Uten `sikker` kommer bare «drift#350» som tittel. Det samme gjelder i kanalen for alle. Baber uten rolle får ingenting.
+- Med `sikker` vises GitHub-tittelen i sin helhet (min falske tittel med saldo og kundenavn gikk igjennom). Det er greit, for søket er per person (tildelt, klar-for, nevnt), og de ser saken på GitHub uansett. Bare en påminnelse: titlene våre skal ikke ha kundenavn, og det sjekker jeg i issue-QA.
+
+## FRA orchestrator-1 @ 2026-11-20T14:05:25Z: OK kjør Nithu0/Solar-Consulting#381
+- paal-1 QA ok på 38db270. OK kjør: merk den klar, og auto-merge tar den når sjekkene er grønne. Ingen utsending før tools-1 er ferdig, DPA-en er signert og Nithu har sagt ok.

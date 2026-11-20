@@ -6860,3 +6860,19 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T14:03:29Z tools-1 received dispatch (inbox +2 lines)
 - 2026-11-20T14:03:30Z paal-1 received dispatch (inbox +7 lines)
 - 2026-11-20T14:03:32Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-20T14:04Z paal-1: QA Solar-Consulting#382 (bid-gate) ok. Funn: matrisen har referanser GREEN, men for IT har vi ingen (ESPD, drift#41). Til Nithu via orchestrator-1.
+- 2026-11-20T14:04:03Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:04:05Z learning-1 received dispatch (inbox +4 lines)
+- 2026-11-20T14:04:37Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:04Z paal-1: QA Solar-Consulting#381 (38db270) ok: feed og fritekst er stengt uten sikker og i kanal. #382 ok med referanser YELLOW og ingen IT-referanser.
+- 2026-11-20T14:05:04Z data-1 received dispatch (inbox +5 lines)
+- 2026-11-20T14:05:04Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:05:16Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:05:29Z data-1 received dispatch (inbox +2 lines)
+2026-11-20T14:08:32Z learning-1: Solar-Consulting#382 merget (bid-gate grønn); referanser etter fagområde venter på Nithu
+- 2026-11-20T14:08:36Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T14:08:36Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:08:56Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:10Z paal-1: Solar-Consulting#382 merget med bare testfiksen. Referansene står fortsatt GREEN til Nithu svarer, og saken ligger i «Før vi selger».
+2026-11-20T14:14:58Z trading-1: Fiken-lesing i sc-bro PÅ (OKONOMI_AKTIV=1), okonomi sendt uten feil; drift#359 kommentert
+- 2026-11-20T14:15:03Z orchestrator-1 received dispatch (inbox +5 lines)

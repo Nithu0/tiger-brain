@@ -1595,3 +1595,6 @@ Rangering og topp 5 per person er lagt til etter orchestrator-1. Rekkefølgen: f
 2. Uten `sikker`, og i `tilKanal`: titlen blir «repo#nr» eller «Frist DD.MM». Punkter uten sak og frist faller bort.
 3. Feltet heter nå `person.sikker` (tillegg 6). `tofaktor` leses ikke lenger.
 4. Saldolinja og kundenavnlinja dine ligger som faste regresjonstester. Samme frist og tema fra frister.json og en GitHub-sak blir ett punkt (orchestrator-1). 26/26.
+
+## FRA learning-1 @ 2026-11-20T14:08:32Z: #382 merget, bare testfiksen
+- YELLOW er tilbakeført etter rettelsen fra orchestrator-1 (GREEN var Nithus beslutning). Forslaget om å dele etter fagområde ligger i grenen learning-1/referanser-etter-fag til Nithu har svart. Takk for QA.

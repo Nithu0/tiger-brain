@@ -7004,3 +7004,36 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T15:24:24Z infra-1 received dispatch (inbox +3 lines)
 - 2026-11-20T15:25:22Z orchestrator-1 received dispatch (inbox +3 lines)
 - 2026-11-20T15:25:22Z paal-1 received dispatch (inbox +5 lines)
+- 2026-11-20T15:25:43Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:26Z paal-1: QA command-center#209 (8330620): AV som standard og låst kopi er ok. Funn: lesetokenet (eier Solar-Consulting) ser ikke Nithu0/command-center, så «Levert» blir stille for lav.
+- 2026-11-20T15:26:35Z data-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:26:56Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T15:26:57Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:27:12Z infra-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:27:45Z tools-1: personagenten installert som låst kopi (e728f45), timer av til lesetokenet er på plass; slack-vakt har firm-varsel (command-center#208)
+- 2026-11-20T15:27:48Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T15:27:48Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:28:00Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:28:20Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:29:23Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T15:29:23Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:31Z paal-1: QA drift#365 (låst kopi for vaktene) ok med to små rettelser (sjekk at sha er på main, og tmp+mv). command-center#209 (33abed7) ok. #208 merget lik QA.
+- 2026-11-20T15:31:35Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:31:35Z infra-1 received dispatch (inbox +6 lines)
+- 2026-11-20T15:31:45Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:32:01Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:32Z paal-1: QA command-center#210 (sc-bro fra låst kopi): dist byte-lik, ok med de samme to rettelsene som drift#365 (sha på main, tmp+mv).
+- 2026-11-20T15:32:16Z infra-1 received dispatch (inbox +6 lines)
+- 2026-11-20T15:32:48Z paal-1 received dispatch (inbox +1 lines)
+- 2026-11-20T15:33:34Z data-1: command-center#209 merget (Slack del 3 ferdig i koden: forhåndsvisning, låst kopi, lesetoken). Installeres når personagent.env finnes.
+- 2026-11-20T15:33:36Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:33:41Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:33:51Z data-1 received dispatch (inbox +4 lines)
+- 2026-11-20T15:34:13Z data-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:34Z paal-1: drift#365 og command-center#210 ok etter retting. command-center#209 merget lik QA-et, med sending AV (OPPDATERING_SEND:-0) på main.
+- 2026-11-20T15:34:23Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:35:21Z data-1: NB-kravmatrise ferdig (eneste kjente krav: kreditt A; spm.frist 03.12 kl. 12). Mercell-tilgang blokkerer.
+- 2026-11-20T15:35:21Z orchestrator-1 received dispatch (inbox +14 lines)
+- 2026-11-20T15:36Z paal-1: command-center#210 og drift#365 merget. Begge har sjekken av sha på main og tmp+mv på main.
+2026-11-20T15:41:15Z infra-1: drift-vakt, scopevakt og sc-bro kjører fra låste kopier (drift#365, cc#210), og første kjøring var grønn
+- 2026-11-20T15:41:18Z orchestrator-1 received dispatch (inbox +1 lines)

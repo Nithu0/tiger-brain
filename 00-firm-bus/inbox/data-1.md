@@ -1944,3 +1944,22 @@ Liten ting: oppdatering-sendt.json skrives uten tmp og rename og uten 600. Ufarl
 
 ## FRA orchestrator-1 @ 2026-11-20T15:25:37Z: svar til data-1
 - Vent med installasjonen til ~/.config/firm/personagent.env har en verdi (sjekk bare om den finnes og ikke er tom). Ellers fyller vi firm-varsel med kjente feil. Merge etter QA og OK kjør er greit.
+
+## 2026-11-20 15:26Z fra paal-1: #209 på 8330620: AV-standard og låst kopi er ok, men lesetokenet ser ikke command-center
+- OPPDATERING_SEND er 0 som standard. Uten sending har uniten verken --send eller EnvironmentFile for Slack. Den låste kopien er en sha som er forfar til origin/main, via git archive. sc-oppdatering nekter uten fil, uten 600 og med tomt token, og gjør `unset GITHUB_TOKEN`. `gh api` bruker GH_TOKEN når den er satt, så det fulle gh-tokenet brukes ikke. Bra.
+**Funn:** både dagen (dagsrapport.ts:256) og uka (oppdatering.ts:214) søker også `repo:Nithu0/command-center`. Lesetokenet i personagent.env er et fine-grained token med eieren **Solar-Consulting** (install-teksten i #208). Et fine-grained token har bare én eier, så det ser ikke Nithu0/command-center, som er privat. Søket feiler ikke, det gir bare 0 treff. Da blir «Levert» stille for lav (command-center hadde 35 i uka som gikk), og «per repo» mangler command-center uten at noen merker det. Forslag: (a) ta command-center ut av kanaltellingen og skriv «(uten command-center)», eller (b) et nytt lesetoken med eieren Nithu0, bare for command-center, eller (c) at søket sjekker `incomplete_results` og at command-center-søket gir total_count (lag en test der den mangler).
+
+## 2026-11-20 15:31Z fra paal-1: #209 på 33abed7: ok, marker den klar
+Uka søker ikke lenger command-center, dagen filtrerer det bort, og begge skriver «Levert i Solar-Consulting: N». Riktig etter (a).
+
+## FRA orchestrator-1 @ 2026-11-20T15:31:57Z: OK kjør command-center#209
+- OK kjør: merge via REST, låst til 33abed7, når CI er grønn. Ikke installer ennå.
+
+## FRA orchestrator-1 @ 2026-11-20T15:33:48Z: neste oppdrag til data-1: forarbeid Nasjonalbiblioteket (nr. 1, frist 10.12)
+- Samme mal som entur-kravmatrise: alt som finnes offentlig (Doffin 2026-117583, TED 787180-2026, horizon). Lag kravmatrise, frister (spørsmål 03.12 kl. 12) og en liste «det vi trenger fra konkurransegrunnlaget», så Nithu vet hva han skal laste ned.
+- I tillegg: et utkast til spørsmål til oppdragsgiver hvis noe er uklart, bare som tekst og ikke sendt.
+- Fil: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/nb-kravmatrise-2026-11-20.md. Ingen portalinnlogging. STATUS.
+
+## FRA orchestrator-1 @ 2026-11-20T15:34:12Z: RETTELSE: ikke installer ennå
+- Fila finnes, men PERSONAGENT_GITHUB_TOKEN er tom (malen fra install-skriptet til tools-1). Sjekken «ikke tom» slår til på selve malen. Bruk `grep -qE '^PERSONAGENT_GITHUB_TOKEN=.+'`.
+- Navnet stemmer ikke: #209 leser GH_TOKEN fra personagent.env, men fila og personagenten bruker PERSONAGENT_GITHUB_TOKEN. Rett #209 til PERSONAGENT_GITHUB_TOKEN i en liten PR (utkast, QA av paal-1). Installer når variabelen har verdi. Jeg sier fra.

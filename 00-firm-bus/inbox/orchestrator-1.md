@@ -15473,3 +15473,39 @@ Koden er ok (én gang per dag og uke, kanalregel, ingen token i feil). Men insta
 ## 2026-11-20T15:25:16Z — from data-1: #209 oppdatert (8330620): sending AV, låst kopi og lesetoken
 >> Lagt inn: OPPDATERING_SEND=0 som standard (bare forhåndsvisning til #20 er signert), låst kopi i ~/.local/lib/sc-oppdatering/<sha> og GH_TOKEN fra personagent.env (600). Tørrkjørt. paal-1 er bedt om ny QA.
 >> Når den er merget, installerer jeg med <merge-sha> og standarden (bare forhåndsvisning). Det krever at ~/.config/firm/personagent.env finnes (Nithu). Til da feiler timerne og melder det i firm-varsel@. Vil du heller at jeg venter med installasjonen til fila finnes?
+2026-11-20T15:26:54Z FRA infra-1: STATUS. Plan og tokentabell: /home/nithu/Obsidian/Brain/00-claude-inbox/solar-consulting/laaste-kopier-plan-2026-11-20.md (8 rader, rekkefølge som du bestemte). PR 1: drift#365 (utkast, venter på QA fra paal-1) gir drift-vakt og scopevakt en låst kopi. Tokentabellen dekker 9 tjenester, alle med minste rettighet. To ting å merke: aslisten-backup og modell-vakt trenger Railway-prosjekt-token, ikke GitHub, og brain-sync trenger en deploy key. Én ting Nithu må vite: et fine-grained token har én eier, så dagsrapporten trenger to token eller at søket mot Nithu0/command-center tas bort. Command-center-radene venter på at stoppen på pull og bygg oppheves, siden sc-bro må bygge dist i kopien.
+
+## STATUS fra tools-1 @ 2026-11-20T15:27:45Z: command-center#208 er merget, og personagenten er installert. Timeren er AV til Nithu har lagt inn tokenet
+- paal-1 sa ok (080ab2b), og CI var grønn. Merget som 56f5cfc. Den låste kopien er installert fra e728f45 (#389) i ~/.local/lib/personagent/. personagent.env finnes med 600 og tomt token. Timeren slås på når Nithu har lagt inn tokenet og install-skriptet er kjørt på nytt (`_bin/personagent-install.sh e728f45`). Det kan jeg gjøre når du sier fra.
+- firm-varsel er installert på nytt: slack-vakt har nå OnFailure=firm-varsel@.
+- Når data-1s #386 (juristen og beslutninger i punkter.mjs) er merget og QA-et, må personagenten installeres på nytt med den sha-en. Ellers kjører kopien den gamle regelen.
+
+## STATUS fra tools-1 @ 2026-11-20T15:28:17Z: #386 er med i den installerte kopien
+- `git merge-base --is-ancestor 7fe3a49 e728f45` er sann. Den installerte punkter.mjs har juristregelen: drift, dev og beslutninger tas bort. Ingen ny installasjon trengs. Jeg slår på timeren når du sier fra om tokenet.
+2026-11-20T15:29:23Z FRA infra-1: STATUS. cc#210 (utkast, QA hos paal-1): sc-bro fra en låst kopi, med ny generell _bin/laast-kopi-install.sh. Dist i kopien er byte-likt med den delte checkouten. drift#365 venter fortsatt på QA. Dagsrapporten: søket mot Nithu0/command-center tas ut, så ett token holder. Valget står i planen og kommer i PR-en for rad 4.
+
+## 2026-11-20T15:31:43Z — from data-1: #209 QA ok fra paal-1 (33abed7), venter på OK kjør
+>> Sending er AV, kopien er låst, og lesetokenet brukes. Tellingen gjelder bare Solar-Consulting. Når OK kjør er gitt og CI er grønn, merger jeg via REST låst til 33abed7. Installasjonen venter til personagent.env finnes og ikke er tom.
+
+## 2026-11-20T15:33:34Z — from data-1: STATUS #209 merget (4c6bb78), ikke installert
+>> Merget med squash, låst til 33abed7, etter QA, grønn CI og OK kjør. Slack del 3 er nå ferdig i koden: dag, uke og frister, forhåndsvisning som standard, låst kopi og lesetoken.
+>> Ikke installert, som du ba om. Jeg sjekker bare om ~/.config/firm/personagent.env finnes og ikke er tom (ikke innholdet). Når den gjør det, kjører jeg `_bin/sc-oppdatering-install.sh 4c6bb78` (bare forhåndsvisning). Sending slås på med OPPDATERING_SEND=1 først når #20 er signert.
+
+## 2026-11-20T15:33:40Z — from data-1: personagent.env finnes nå og er ikke tom (bare sjekket at den finnes og har innhold)
+>> Du skrev «Ikke installer ennå» kl. 15:31, så jeg venter på et klart ja før jeg kjører `_bin/sc-oppdatering-install.sh 4c6bb78`. Installasjonen gir bare forhåndsvisning og ingen sending.
+
+## 2026-11-20T15:35:21Z — from data-1: STATUS NB-kravmatrise ferdig
+>> Fil: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/nb-kravmatrise-2026-11-20.md. Kilder: Doffin, TED (eForms-XML) og horizon. Ingen innlogging.
+>> Eneste krav kunngjøringen nevner, er **kredittverdig A** (≤ 6 mnd, drift#190). Det er ikke krav om omsetning eller referanser i kunngjøringen. Referanser, tildelingskriterier og antall leverandører står bare i konkurransegrunnlaget (UNKNOWN).
+>> Viktig fra kunngjøringen:
+>>   - tilbudet skal **signeres elektronisk**
+>>   - **manglende dokumentasjon kan ikke ettersendes**
+>>   - EHF kreves
+>>   - utførelsessted er Oslo og Nordland (trolig Mo i Rana)
+>>   - WordPress-nettsteder og integrasjoner, i samarbeid med NBs egne utviklere
+>>   - design er en egen del, og der har vi ingen
+>> Frister: spørsmål **03.12 kl. 12**, tilbud **10.12 kl. 12**. Avtalen er 2+1+1 år, og vedståelsesfristen er 100 dager.
+>> Fila har lista over hva Nithu må laste ned fra Mercell (7 punkter) og fem spørsmål til oppdragsgiver som tekst, ikke sendt. Spørsmålene gjelder én eller flere leverandører, fjernarbeid, design som underleverandør, kredittalternativ og referanser fra tidligere arbeidsgiver.
+>> Datafeil i horizon: «sittende leverandør» på opportunity 2542 er en grossist for kontorrekvisita (feil kobling). Den er ikke brukt.
+>> Blokkerer alt: Mercell-tilgangen (MNO-169100, venter på et skjermbilde fra Nithu siden 16.11).
+2026-11-20T15:41:15Z FRA infra-1: STATUS. drift#365 og cc#210 er merget og installert fra merge-sha-ene. drift-vakt og scopevakt kjører nå fra ~/.local/lib/drift/5a40326…, og sc-bro fra ~/.local/lib/command-center/65f1fef…. Første kjøring fra kopiene (16:40) ga success og exit 0, uten varsel. Neste: rad 2, aslisten-backupen (utkast-PR).

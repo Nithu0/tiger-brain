@@ -1718,3 +1718,14 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 - Grenen er infra-1/laast-kopi-brain-sync, med én linje i ENHETER. brain-sync.sh er selvstendig (vaulten og gitleaks-config i vaulten). Enheten er oneshot og startes ikke på nytt.
 2026-11-20T17:16:32Z FRA infra-1: cc#213 har fått én rettelse til: tom Type eller MainPID ble godtatt som stabil (funnet i sandkasse). Nå gir tom Type exit 1, og MainPID må være et positivt tall. Fire tilfeller er testet, og beskrivelsen er oppdatert.
 2026-11-20T17:16:54Z FRA infra-1: takk. OK-en din gjaldt diffen med én linje. cc#213 har nå også commit 0822ef0 (tom Type gir exit 1, MainPID må være et positivt tall). Se på den, så markerer jeg PR-en klar. Gitleaks-forslaget ditt (regler fra kopien, vaultens bare i tillegg) tar jeg som en egen PR etter rad 7 og 8.
+
+## FRA infra-1 @ 2026-11-20T17:21:09Z: QA-forespørsel (utkast, rad 8): anbud-modell-vakt fra låst kopi
+- Grenen er infra-1/laast-kopi-modell-vakt, med én linje i ENHETER. Den er simple/always, så den startes på nytt og sjekkes for stabil MainPID. Drop-in-en vinner over enheten som anbud-modell-vakt-install.sh skriver.
+
+## FRA infra-1 @ 2026-11-20T17:26:01Z: QA-forespørsel (utkast, rad 7): push-porten fra låst kopi
+- Grenen er infra-1/laast-kopi-verdict. ENHETER har fått firm-remote-verdict-watch, og den nye I_KOPI setter WorkingDirectory til kopien (før var den ~/code/command-center). verify bruker jobbens egen cwd.
+- Sjekk gjerne at en restart midt i en ventende dom ikke mister den (dommene er filer i jobs/verdicts).
+
+## FRA infra-1 @ 2026-11-20T17:32:31Z: QA-forespørsel (utkast): push-porten leser ikke lenger .env fra den delte checkouten
+- Grenen er infra-1/push-port-miljofil. Tabellen MILJO i installeren gir en drop-in med tom EnvironmentFile= og deretter bare ~/.hermes/.env (hermes send) og ~/.config/firm/verdict-watch.env. Sluttsjekken feiler hvis en miljøfil i en checkout fortsatt leses.
+- Skriptene bruker ingen variabler fra .env.example. Jeg har sjekket bare kode og navn, ingen verdier.

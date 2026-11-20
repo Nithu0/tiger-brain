@@ -7083,3 +7083,17 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T17:17:46Z data-1: CV-utkast (Nithusan, Tintun) og Alper-skjema i ~/Solar-Consulting-kompetanse/cv-utkast/, notert i drift#42 uten innhold
 - 2026-11-20T17:17:47Z orchestrator-1 received dispatch (inbox +9 lines)
 - 2026-11-20T17:17:52Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T17:20Z paal-1: command-center#213 merget, samme kode som QA-et (0822ef0).
+- 2026-11-20T17:21:12Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T17:22Z paal-1: QA command-center#214 (anbud-modell-vakt fra låst kopi) ok.
+- 2026-11-20T17:22:52Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-20T17:26:02Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T17:26Z paal-1: QA command-center#215 (push-porten fra låst kopi) ok: dommene ligger i FIRM_BUS og overlever restart, og verify bruker jobbens cwd.
+- 2026-11-20T17:26:59Z infra-1 received dispatch (inbox +5 lines)
+- 2026-11-20T17:30Z paal-1: command-center#215 merget, samme kode som QA-et.
+2026-11-20T17:30:40Z infra-1: alle 8 rader i laaste-kopier-planen er i drift. 10 tjenester kjører fra låste kopier og har kjørt grønt
+- 2026-11-20T17:30:42Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T17:31:07Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-20T17:32:31Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T17:34Z paal-1: QA command-center#216 ok: push-porten leser ikke lenger .env fra den delte checkouten.
+- 2026-11-20T17:34:44Z infra-1 received dispatch (inbox +4 lines)

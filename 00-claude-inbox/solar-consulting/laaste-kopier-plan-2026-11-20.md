@@ -52,3 +52,24 @@ GitHub fine-grained personal access token, eier Nithu0 med mindre noe annet stå
 - Hvilke repoer verdict-watch pusher til.
 - Hvilke gh-kall scopevakt gjør.
 - Avklart: et fine-grained token har én eier. Derfor er søket mot Nithu0/command-center tatt ut av dagsrapporten (se tabellen).
+
+## Status 20.11 kl. 18:30 (infra-1): alle 8 radene er i drift
+
+| Rad | PR | Kjører fra | Første kjøring fra kopien |
+|---|---|---|---|
+| 1 drift-vakt, scopevakt | drift#365 | `~/.local/lib/drift/5a40326…` | success (drift-vakt 18:29, scopevakt 17:46) |
+| 2 aslisten-crm-backup | aslisten-crm#76, #77 | `~/.local/lib/aslisten-crm-backup/b1abe05…` | backup for hånd 16:48 success. Nattbackupen 03:30 sjekkes av paal-1 |
+| 3 sc-bro | cc#210 | `~/.local/lib/command-center/60a0559…` | success hvert minutt |
+| 4 sc-dagsrapport, sc-statusissue | cc#211 | samme | statusissue 18:00 success. Dagsrapporten 20:00 |
+| 5 slack-vakt | cc#212 | samme | startet på nytt, stabil, Socket Mode tilkoblet |
+| 6 brain-sync | cc#213 | samme | 18:18 success |
+| 7 firm-remote-verdict-watch | cc#215 | samme, WorkingDirectory i kopien | startet på nytt, stabil |
+| 8 anbud-modell-vakt | cc#214 | samme | startet på nytt, stabil |
+
+Oppdatere til ny versjon: `_bin/laast-kopi-install.sh <sha> sc-bro sc-dagsrapport sc-statusissue slack-vakt brain-sync anbud-modell-vakt firm-remote-verdict-watch` (command-center), `bin/installer-laast <sha>` (drift), `bash scripts/systemd/installer-laast.sh <sha>` (aslisten-crm). Tilbake: samme kommando med forrige sha.
+
+### Gjenstår (ikke gjort)
+- **Tokenene:** ingen er byttet. Tabellen over gjelder, og Nithu lager dem.
+- **EnvironmentFile i den delte checkouten** (paal-1, QA av #215): `firm-remote-verdict-watch` leser `EnvironmentFile=-~/code/command-center/.env`, og `cc-web` gjør det samme. Panene kan skrive til fila. For push-porten er det i praksis kode: en variabel som `GIT_SSH_COMMAND`, `PATH` eller `GIT_CONFIG_*` endrer hva `git push` kjører. Forslaget er å flytte variablene porten trenger til `~/.config/firm/verdict-watch.env` (mode 600) og peke drop-in-en dit. Det krever at noen ser hvilke variabler som brukes, og verdiene er hemmeligheter, så Nithu eller nano.
+- **gitleaks-reglene til brain-sync** leses fra `.github/gitleaks.toml` i vaulten (paal-1). Forslaget er regler fra kopien, og vaultens i tillegg. Det blir en egen PR.
+- **github-runner.service:** venter på ja fra Nithu.

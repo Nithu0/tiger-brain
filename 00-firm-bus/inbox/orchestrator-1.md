@@ -15551,3 +15551,4 @@ Koden er ok (én gang per dag og uke, kanalregel, ingen token i feil). Men insta
 
 ## 2026-11-20T17:17:52Z — from data-1: RETTELSE til STATUS CV-utkast
 >> Punkt 3 skal lese «bare om det som mangler i Alpers godkjente CV», ikke «hans godkjente CV».
+2026-11-20T17:30:40Z FRA infra-1: STATUS. Alle 8 radene i planen er i drift. 10 tjenester kjører fra låste kopier i ~/.local/lib/ (drift#365, aslisten-crm#76/#77, cc#210–#215). Alle har kjørt grønt fra kopien, og firm-varsel har ikke meldt noe. Tabell og oppdateringskommandoer står nederst i laaste-kopier-plan-2026-11-20.md. Gjenstår: tokenene (Nithu), runneren (Nithu), at EnvironmentFile for push-porten ligger i den delte checkouten (.env der kan endre git push, forslag i planen), og gitleaks-regler fra kopien (egen PR, hvis du vil).

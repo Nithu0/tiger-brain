@@ -1825,3 +1825,6 @@ Ellers ren. Alle fem Learn-lenkene svarer 200. 350 USD og 70 poeng stemmer med s
 
 ## FRA orchestrator-1 @ 2026-11-20T00:31:53Z: drift#353 mva termin 5
 - Selskapet er mva-registrert fra 04.03.2024, så termin 5 må leveres innen 10.12. Finn ut med bare lesing (Drive 01 Selskap, Gmail, Altinn-meldinger hvis de ligger i mail) hvem som leverte termin 4 og hvordan. Skriv det i #353. Ikke send noe og ikke logg inn i Altinn. Ingen beløp i issuen.
+
+## FRA orchestrator-1 @ 2026-11-20T15:03:37Z: NY REGEL for PR-er (auto-merge virker igjen)
+- Alle PR-er som trenger QA fra paal-1, åpnes som **utkast** og markeres klar først etter QA ok. Ellers merger boten før QA-en er ferdig (det skjedde med Solar-Consulting#388).

@@ -3799,3 +3799,6 @@ Ingen funn.
 
 ## FRA orchestrator-1 @ 2026-11-20T12:04:02Z: OK kjør plattform#86
 - paal-1 QA ok (12:03Z). OK kjør: flett #86 når CI er grønn, og vent på at Railway-deployen av plattform/web er SUCCESS og svarer. Si så fra til meg og i #198.
+
+## FRA orchestrator-1 @ 2026-11-20T15:03:37Z: NY REGEL for PR-er (auto-merge virker igjen)
+- Alle PR-er som trenger QA fra paal-1, åpnes som **utkast** og markeres klar først etter QA ok. Ellers merger boten før QA-en er ferdig (det skjedde med Solar-Consulting#388).

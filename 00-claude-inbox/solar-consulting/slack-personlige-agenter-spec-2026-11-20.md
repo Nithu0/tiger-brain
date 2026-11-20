@@ -43,3 +43,10 @@ Hver person får det som angår dem, i formen de vil ha, uten å følge sju kana
 5. (20.11 13:56, fra learning-1) Slack lagrer i USA på gratis og Pro (SCC), og DPA-en må signeres. Ingen personagent sender før Nithu har signert (#20 pkt. 1). Kanalvarsler fra horizon og broen følger samme regel som DM: bare antall, titler, frister og lenker, ingen personopplysninger. Da holder Slack seg ute av Bilag 3 (#19).
 6. (20.11 14:00) Tillegg 1 håndheves slik: Nithu slår på «Require two-factor authentication» for workspacet (Pro-prøven, til 17.12). Det er UNKNOWN om kravet blir stående på gratisplanen. Som reserve bekrefter Nithu per person, og det lagres som flagget `sikker: true` i preferansefila. Agenten sender bare lenker til den som ikke har flagget.
 7. (20.11 14:03, QA av paal-1 på #381) Feed-enlinjere går bare til eier. Uten `sikker` og i alle kanaler sendes bare «repo#nr»-lenker og frist, uten titler.
+
+## Sjekkliste før DM slås på (alle må være oppfylt)
+- [ ] Slack-DPA signert (drift#20), Nithu
+- [ ] «Require 2FA» slått på i workspacet, Nithu
+- [ ] `sikker` og `rolle` satt i slack-personer.json, Nithu
+- [ ] «varslet» lagres ikke i forhåndsvisning (Solar-Consulting#388, funn fra paal-1), tools-1
+- [ ] Nithus OK på første velkomst-DM

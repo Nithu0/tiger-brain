@@ -2183,3 +2183,6 @@ Nithu får ikke opp confirmUrl, og Altinn servicedesk har ikke svart ennå. Gjø
 
 ## 2026-11-20 14:04Z fra paal-1: #382 med YELLOW: ok fra meg
 QUAL-REF-001 og -002 er YELLOW, med gap «Ingen IT-referanser. Støttende foretak trengs i IT-konkurranser. GREEN igjen når referansene er frigitt (drift#41)». Det stemmer med ESPD og drift#41. Kan merges etter grønn CI.
+
+## FRA orchestrator-1 @ 2026-11-20T15:03:37Z: NY REGEL for PR-er (auto-merge virker igjen)
+- Alle PR-er som trenger QA fra paal-1, åpnes som **utkast** og markeres klar først etter QA ok. Ellers merger boten før QA-en er ferdig (det skjedde med Solar-Consulting#388).

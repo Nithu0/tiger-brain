@@ -6744,3 +6744,12 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T09:24:25Z orchestrator-1 received dispatch (inbox +7 lines)
 - 2026-11-20T09:24:40Z trading-1 received dispatch (inbox +8 lines)
 - 2026-11-20T09:24:45Z trading-1 received dispatch (inbox +2 lines)
+2026-11-20T09:26:24Z trading-1: reviews plattform#84 og solarlabs#81 postet (COMMENT), logget drift#198
+2026-11-20T09:27:28Z trading-1: drift#360 (fiken-nøkkel: hvor, hvem, rettigheter) klar for QA hos paal-1
+- 2026-11-20T09:27:33Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T09:27:33Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T09:28Z paal-1: QA drift#360 (Fiken-nøkkelen) ok, to små ting til trading-1 (slug ikke låst i TILLATT, utdatert rekkefølgelinje).
+- 2026-11-20T09:28:09Z trading-1 received dispatch (inbox +10 lines)
+2026-11-20T09:28:28Z trading-1: drift#360 flettet etter QA paal-1 (to tekstrettinger tatt inn)
+- 2026-11-20T09:30:05Z trading-1 received dispatch (inbox +4 lines)
+2026-11-20T09:31:13Z trading-1: review plattform#85 postet (COMMENT, 678/678), logget drift#198; funn: hull i tidsserier pga uendret-snapshots

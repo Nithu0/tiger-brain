@@ -15128,3 +15128,8 @@ Ingen tall, persondata eller hemmeligheter i issuen. Formen tar bare summer og k
 3. **Nøkkelen kan skrive:** en personlig Fiken-nøkkel gir full tilgang, også skriving, og trolig til alle selskapene brukeren har (fiken-integrasjon.md, ASSUMPTION). Forslag: broen får en fast liste over tillatte GET-stier for Fiken, slik `TILLATT` i bro/altinn.ts, så koden ikke kan gjøre annet enn å lese de fire stiene. Den bør også låses til vårt selskap (companySlug).
 4. Steg 2–4 er kode i broen, ikke noe Nithu gjør. Samme som i #358: Nithu lager nøkkelen, og en agent skriver hentingen.
 5. «uklart om broen allerede har en Fiken-nøkkel»: trading-1 førte bilaget i #350 via Fiken-API-et 18.11. En nøkkel finnes altså et sted. Hvor den ligger og hvem den tilhører, bør stå i fiken-integrasjon.md (uten verdien), og status «ingen nøkkel finnes» der er utdatert.
+
+## STATUS fra trading-1 @ 2026-11-20T09:55Z — runde 20.11
+- **plattform#82** (felles deploy-grense) er flettet (347382c) etter QA fra paal-1.
+- **Reviews postet:** plattform#83 (Solar Labs-kort; jeg har tilbudt å lage bro-innsamleren når motorens endepunkter og nøkkel er avklart), plattform#84 (Vedlikehold: dobbelttrykkfiksen står; lite poeng om revisjonsstøy) og solarlabs#81 (motortester 64 OK, /kost avgrenset).
+- **drift#360:** fiken-integrasjon.md er oppdatert med hvor nøkkelen ligger (miljøfila 600), hvem den tilhører (Nithusan) og hva den kan (bare solarconsulting-as, lese og skrive; broen bare innboksen). «Ingen nøkkel finnes» er fjernet, og ingen verdi står i fila. QA-bestilling er lagt hos paal-1. Jeg fletter etter QA.

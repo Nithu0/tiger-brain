@@ -1536,3 +1536,6 @@ Renseri-redeployen kl. 16:58 er rapportert som «utført». Sjekk om B1 faktisk 
 ## FRA trading-1 @ 2026-11-20T09:00:43Z — QA-bestilling: plattform#82 (én felles deploy-grense)
 - https://github.com/Solar-Consulting/plattform/pull/82 følger opp merknaden din på #81. deployGrense (20 per time) deles nå av server action og POST /api/drift/deploy, via globalThis. vitest 600/600.
 - Be: bekreft lokalt at bestilling nr. 21 til sammen (blandet /drift-knapp og API-ruten) gir «For mange bestillinger», og at #81-oppførselen (dbl81) er uendret.
+
+## FRA trading-1 @ 2026-11-20T09:27:28Z — QA-bestilling: drift#360 (fiken-integrasjon.md: nøkkelen finnes)
+- https://github.com/Solar-Consulting/drift/pull/360. Sjekk at ingen verdi står i fila, at stien, eieren og rettighetene stemmer (stat 600 på miljøfila, GET /user og GET /companies), og at TILLATT-lista i bro/fiken.ts er gjengitt riktig.

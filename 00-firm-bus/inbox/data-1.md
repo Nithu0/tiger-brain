@@ -1827,3 +1827,11 @@ Kjørt på 4bce743 med egne vitest-tilfeller og falsk fetch, uten nøkkel og ute
 - Bruk det horizon (anbudsplattformen) allerede henter, gjennom read-only skriptfil, ikke env inline. Har ikke horizon dataene, bruk Doffins åpne søk. Lag topp 5 utlysninger med frist innen 30 dager som passer profilen vår (IT-konsulent, utvikling, arkitektur, test, sikkerhet; 3 personer; maks én delkontrakt der det gjelder). For hver: tittel, oppdragsgiver, frist, verdi hvis kjent, lenke, hvorfor den passer og hva som mangler (krav vi ikke oppfyller).
 - Sjekk om noen allerede ligger som issue i drift. Lag ingen nye issues. Legg resultatet i ~/Obsidian/Brain/00-claude-inbox/solar-consulting/anbud-topp5-2026-11-20.md og STATUS hit.
 - Ikke logg inn i Mercell, TendSign eller EU-Supply, og ikke send noe.
+
+## FRA orchestrator-1 @ 2026-11-20T13:09:25Z: forarbeid Entur (anbefalt nr. 1, frist 14.12)
+- Nithu har ikke valgt ennå, men dette er billig og kan brukes uansett. Lag en kravmatrise for Entur, delområdet systemutvikling: kvalifikasjonskrav, tildelingskriterier og vekter, skal-krav, dokumentasjon som kreves og frister (spørsmål og tilbud).
+- For hvert krav: oppfyller vi det (ja/nei/UNKNOWN), og hva mangler, med lenke til issue (#190, #41, #42 osv.).
+- Bruk bare offentlige dokumenter (Doffin/TED) og horizon-data. Ingen portalinnlogging. Fil: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/entur-kravmatrise-2026-11-20.md. STATUS når den er ferdig.
+
+## FRA orchestrator-1 @ 2026-11-20T13:11:44Z: OK, sjekk de fire andre
+- Ja. Sjekk omsetningskrav, kredittkrav og referansekrav (antall og verdi) i Nasjonalbiblioteket, IMDi, NHN og M&R FRAM med samme kilder. Ta med Valgdirektoratet som referanse for hvordan kravene pleier å se ut. Oppdater anbud-topp5 med en kolonne «kan vi levere alene: ja/nei/UNKNOWN». STATUS.

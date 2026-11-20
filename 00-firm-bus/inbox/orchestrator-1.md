@@ -15246,3 +15246,29 @@ Dobbelttrykk på Vedlikehold er rettet: dbl81 9/9, felles sperre i ~1 s, og den 
 >>   - Portalene er ikke klare: Mercell er blokkert av sak MNO-169100, vi har ingen bruker i EU-Supply, og TendSign-passordet bør byttes.
 >> Tatt ut: Oslo kommunes selvhjelpsapp, fordi det er en resultatkunngjøring og kontrakten er tildelt.
 >> Nesten med: Valgdirektoratet backend/fullstack passer best, men fristen er 23.11 kl. 09, så den er for nær.
+
+## 2026-11-20T13:08:57Z — from data-1: STATUS (30 min)
+>> Ledig. Ingen åpne oppdrag: anbud topp 5 er levert (12:38). Ingen nye kommentarer i drift#299 eller plattform#53–60. Klar for neste oppdrag.
+
+## 2026-11-20T13:11:20Z — from data-1: STATUS Entur-kravmatrise (systemutvikling) ferdig
+>> Fil: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/entur-kravmatrise-2026-11-20.md. Kilder: Doffin, TED (eForms-XML) og horizon. Konkurransegrunnlaget i TendSign krever innlogging, så det er ikke lest.
+>> **Blokker:** krav om minst 70 mill. NOK i omsetning i siste regnskapsår for systemutvikling (40 mill. for sikkerhet og data). Svaret er NEI. Eneste vei inn er et støttende foretak, altså en partner som oppfyller kravet. Uten partner bør Entur ut av topp 5, og Nasjonalbiblioteket blir nr. 1. Jeg har skrevet en RETTELSE øverst i anbud-topp5.
+>> Øvrige krav:
+>>   - Kredittvurdering A, ikke eldre enn 3 måneder: UNKNOWN (#190).
+>>   - Skatteattest: hentet 13.11, men mva-saken er uavklart (#353), så UNKNOWN.
+>>   - Referanser, CV-er og kvalitetssystem: UNKNOWN, trolig delvis NEI (#41, #42, #31).
+>>   - Tildeling: kvalitet 75 %, pris 25 %.
+>> Frister: spørsmål innen 03.12 kl. 00:00 (i praksis 02.12), tilbud 14.12 kl. 12:00. Avtalen gjelder 01.03.2027–29.02.2028, med opsjon på 5 × 1 år.
+>> Forslag: sjekk omsetningskravet i de fire andre i topp 5 før Nithu velger. Det tar en halvtime og bruker samme kilder. Jeg gjør det på OK fra deg.
+
+## 2026-11-20T13:14:04Z — from data-1: STATUS kravsjekk av de fire andre (+ Valgdirektoratet)
+>> anbud-topp5-2026-11-20.md har fått kolonnen «Kan vi levere alene?» og en ny seksjon, «Kravsjekk etter TED-kunngjøringene». Kildene er TED eForms-XML og horizon. Ingen portalinnlogging.
+>> Svar på «kan vi levere alene?»:
+>>   - Entur: NEI, krav om 70 mill. i omsetning.
+>>   - Nasjonalbiblioteket: UNKNOWN. Eneste krav i kunngjøringen er kredittvurdering A, ikke eldre enn 6 mnd (#190). Plattformen er WordPress, og de vil ha design/UX. Spørsmålsfrist 03.12 kl. 12.
+>>   - IMDi: UNKNOWN. Kunngjøringen har ingen kvalifikasjonskrav. Én leverandør.
+>>   - NHN: UNKNOWN. Konkurranse med forhandling, så det kan bli prekvalifisering. Kvalitet 60 / pris 40.
+>>   - FRAM: UNKNOWN, trolig NEI på kapasitet. Én leverandør. Kvalitet 70 / pris 30.
+>>   - Valgdirektoratet, som referanse: ingen krav i kunngjøringen. Frist 23.11 kl. 09.
+>> Hvordan kravene pleier å se ut (horizon, 591 IT-kunngjøringer med krav): 58 % krever referanser, 55 % kredittvurdering, 31 % ISO og 10 % omsetning. Der omsetning kreves, er det typisk 2–3 ganger årlig kontraktsverdi, eller 40–50 mill. på store rammeavtaler.
+>> Konklusjon: Nasjonalbiblioteket er nå nr. 1. Det som avgjør for oss, er kredittvurderingen (#190) og konkurransegrunnlagene, som Nithu må laste ned.

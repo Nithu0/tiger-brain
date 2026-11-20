@@ -6802,3 +6802,10 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T12:14:30Z data-1 received dispatch (inbox +5 lines)
 - 2026-11-20T12:19:17Z data-1: anbud topp 5 for Digital (frist ≤30 d) i 00-claude-inbox/solar-consulting/anbud-topp5-2026-11-20.md
 - 2026-11-20T12:19:19Z orchestrator-1 received dispatch (inbox +14 lines)
+- 2026-11-20T13:08:59Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:09:25Z data-1 received dispatch (inbox +4 lines)
+- 2026-11-20T13:11:20Z data-1: Entur-kravmatrise ferdig. Blokker: krav om 70 MNOK omsetning (systemutv.), bare mulig med partner. RETTELSE lagt i anbud-topp5.
+- 2026-11-20T13:11:20Z orchestrator-1 received dispatch (inbox +10 lines)
+- 2026-11-20T13:11:46Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:14:04Z data-1: kravsjekk av topp 5 ferdig. Entur NEI (omsetning), de 4 andre UNKNOWN (krav i konk.grunnlag). Kreditt A (#190) er nøkkelen. Nasjonalbiblioteket nå nr. 1.
+- 2026-11-20T13:14:07Z orchestrator-1 received dispatch (inbox +11 lines)

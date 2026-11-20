@@ -15158,3 +15158,37 @@ Ingen tall, persondata eller hemmeligheter i issuen. Formen tar bare summer og k
 ## 2026-11-20T11:19:43Z — from data-1: STATUS (30 min)
 >> command-center#201 (Fiken-leser for okonomi) har grønn CI. Ingen QA fra paal-1 ennå. Ikke merget, og flagget står AV.
 >> Ingen nye kommentarer i drift#299 eller plattform#53–60, og ingen nye oppdrag i innboksen. Jeg venter på QA og OK kjør.
+
+## 2026-11-20 11:21Z fra paal-1: QA command-center#201 ferdig
+Sperren holder (ingen omgåelse med encoding, ../, metoder, parametre eller slug), det er ingen motparter i snapshotet, og flagget er AV som standard. Ett funn til data-1: valutakjøp med bare netPriceInCurrency telles som 0 kr i kostnader og leverandørgjeld. Bør rettes før flagget slås på. Detaljer står hos data-1. plattform#85 (Økonomi-siden) er merget. Den QA-er jeg nå, særlig hvem som ser den.
+
+## 2026-11-20T11:24:30Z — from data-1: STATUS #201 merget, valutarettingen er #202
+>> command-center#201 er merget som squash 322f96f, med flagget AV.
+>> command-center#202: kjøp der en linje bare har netPriceInCurrency, holdes utenfor kostnader og leverandørgjeld og telles i det nye feltet `kjopUtenNok`. Over 0 betyr at tallene er for lave. En delbetaling i valuta gir ikke negativ gjeld. 489 tester er grønne, og tsc er rent.
+>> Venter: paal-1 QA-er #202, deretter OK kjør fra deg. Flagget står AV til Nithu har svart om #359.
+
+## 2026-11-20 11:25Z fra paal-1: QA plattform#85 (Økonomi og Trender): teknisk ren, men utvikler ser banksaldo
+Lokal stack på 792ec4b, migrasjonen `Tidspunkt` er kjørt, 390 px, `qa-pf/r85.cjs` med et oppdiktet okonomi-snapshot med fremmede felt (25/27, de to feilene er bare at regex-en min ventet øre, mens siden runder til hele kroner):
+- Kundenavn, e-post, kontonummer og IBAN fra ekstra felt står ikke i HTML-en. En konto som heter «1234.56.78903» vises som «Ukjent konto». En XSS-tekst i kontonavn vises som tekst og kjøres ikke. 1e400 og -5 gir «Ukjent», ikke tall. Det er ingen vannrett rulling og ingen sidefeil.
+- Juristen er stengt ute fra /okonomi, /trender og /oversikt.
+- **Til Nithu, som sagt i #359 punkt 2: utvikler-rollen ser i dag Beholdning på Oversikt og hele Økonomi-siden** (banksaldo, utestående og skyldig), fordi Økonomi krever `kost.les`, og den har utvikler. I tillegg lagres beholdningen per dag i den nye tabellen `Tidspunkt` (#49 om Railway-DPA gjelder fortsatt). Ingen ekte tall flyter ennå, for broen har OKONOMI_AKTIV av (cc#201). Skal bare eieren se økonomien, trengs en egen rettighet (for eksempel `okonomi.les`, bare eier) før flagget slås på.
+
+## 2026-11-20 11:26Z fra paal-1: cc#202 ok. Plattformen må vise kjopUtenNok (til Tintun)
+Broen teller nå valutakjøp uten NOK-beløp i `kjopUtenNok` i stedet for å gi 0. Validatoren i plattform#85 (lib/okonomi/vis.ts) tar bort ukjente felt, så siden viser fortsatt for lave kostnader uten å si fra. Forslag til Tintun: les feltet og vis «N kjøp i valuta er ikke med» ved kostnader og leverandørgjeld. Bør være på plass før OKONOMI_AKTIV slås på.
+
+## 2026-11-20T11:26:37Z — from data-1: STATUS #202 QA-et av paal-1
+>> paal-1: #202 kan merges. Funn: plattformen (lib/okonomi/vis.ts, som er Tintuns kode) slipper bare kjente felt gjennom, så `kjopUtenNok` blir tatt bort og Økonomi-siden viser for lave kostnader uten å si det.
+>> Jeg rører ikke plattform-koden. Forslag: skal jeg skrive en kort beskrivelse av feltet i drift#359 til Tintun (uten @), eller tar du det? Flagget står AV uansett til plattformen viser feltet.
+>> Venter: OK kjør for #202 (CI kjører).
+
+## 2026-11-20T11:30:54Z — from data-1: STATUS #202 merget (drift#359 ferdig på broen)
+>> command-center#202 er merget etter grønn CI. Beskrivelsen av `kjopUtenNok` står i drift#359 (kommentar 7038361829): typen, hva over 0 betyr og forslag til visning.
+>> Broen har nå alt den trenger for okonomi. Flagget `OKONOMI_AKTIV` står AV og slås ikke på før plattformen viser `kjopUtenNok` og Nithu har svart om lagring og tilgang.
+>> Jeg er ledig for neste oppdrag.
+
+## 2026-11-20 11:31Z fra paal-1: QA plattform#83 (Pipeline og Solar Labs-kortet): ren, to små visningsting til Tintun
+Lokal stack på 3f75cb0, 390 px, `qa-pf/r83.cjs` 20/20, med et oppdiktet solarlabs-snapshot med kundenavn, e-post, orgnr, utkasttekst med XSS og et ukjent steg «hacket»:
+- Ingenting av kundefeltene står i HTML-en, det ukjente steget vises ikke, og XSS kjøres ikke. -3 for «betalt» blir ikke vist som tall. Det er ingen vannrett rulling og ingen sidefeil. Juristen er stengt ute fra /pipeline. Eier og utvikler ser siden og kortet, også «Kost i dag» (1,23 USD). Det følger kost.les, som før.
+Små ting (skjermbilde `qa-pf/r83-qa-eier-pipeline.png`):
+1. Søylene i salgstrakten har ingen tall ved seg på mobil. Antallet (12, 7) står bare i den skjulte tabellen, selv om overskriften sier «Antall · % fra forrige steg».
+2. Et steg som er ukjent (manglet eller ugyldig, som -3) ser likt ut som 0: tom søyle. Andre steder i appen står «Ukjent». Forslag: vis tallet ved søylen og «Ukjent» der det mangler.

@@ -6761,3 +6761,24 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T10:31:33Z orchestrator-1 received dispatch (inbox +8 lines)
 - 2026-11-20T10:37:08Z data-1: command-center#201 CI grønn (verify + smoke-test). Venter på QA fra paal-1 og OK kjør.
 - 2026-11-20T11:19:47Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-20T11:20:13Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T11:21Z paal-1: QA command-center#201 (Fiken-leser): sperren holder, ingen motparter, flagget er AV. Ett funn: valutakjøp telles som 0 kr.
+- 2026-11-20T11:22:03Z data-1 received dispatch (inbox +12 lines)
+- 2026-11-20T11:22:03Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T11:22:13Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T11:24:30Z data-1: command-center#201 merget (Fiken-leser, flagget AV). Valutarettingen er #202, til QA hos paal-1.
+- 2026-11-20T11:24:32Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T11:24:35Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T11:25Z paal-1: QA plattform#85 (Økonomi, Trender) teknisk ren. Utvikler ser banksaldo via kost.les. Lagt fram for Nithu før Fiken-flagget slås på.
+- 2026-11-20T11:25:45Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-20T11:26Z paal-1: QA command-center#202 ok (valutakjøp telles i kjopUtenNok). Plattformen må vise feltet, sendt til Tintun via orchestrator-1.
+- 2026-11-20T11:26:26Z data-1 received dispatch (inbox +3 lines)
+- 2026-11-20T11:26:26Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T11:26:41Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T11:26:53Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T11:30:54Z data-1: command-center#202 merget (valutakjøp i okonomi). drift#359 er ferdig på broen, flagget AV.
+- 2026-11-20T11:30:55Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T11:31Z paal-1: QA plattform#83 (Pipeline) ren, 20/20. To små ting: trakten viser ikke tall på mobil, og ukjent ser ut som 0.
+- 2026-11-20T11:31:10Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-20T11:31Z paal-1: command-center#202 merget, samme kode som QA-et (863cdea).
+- 2026-11-20T11:31:37Z data-1 received dispatch (inbox +4 lines)

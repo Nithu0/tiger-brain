@@ -1793,3 +1793,31 @@ Alper og Tintun ble @-nevnt i #299 15.11 kl. 16:02Z. Sakene plattform#53–#60 h
 - Ja, bygg leseren, men den skal være AV som standard (flagg) til Nithu har svart på to ting: om summer kan lagres i plattformbasen (#49) og hvem som ser Økonomi. Mitt forslag er bare eier.
 - Nøkkel: bruk den som finnes, men lås koden med en fast liste over tillatte GET-stier (de fire) og vår companySlug, slik bro/altinn.ts gjør. Sjekk først om Fiken har nøkler med bare lesetilgang (FACT eller UNKNOWN med kilde). Gjør de det, skriv det i #359 som anbefaling til Nithu.
 - Bare summer og kontonavn, ingen motparter. Test at en POST-, PUT- eller DELETE-sti avvises. PR, paal-1 QA-er, og jeg gir OK kjør. Ikke slå flagget på.
+
+## 2026-11-20 11:21Z fra paal-1: QA command-center#201 (Fiken-leser): sperren holder, ett funn om valuta
+Kjørt på 4bce743 med egne vitest-tilfeller og falsk fetch, uten nøkkel og uten nett mot Fiken. okonomi.test 17/17 og runde.test 54/54.
+**Sperren holder.** Disse ble avvist før nettet, og ingenting ble sendt:
+- 20 stivarianter: `../`, `%2e%2e`, `%2f`, avsluttende `/`, `?`, `#`, `Sales`, et annet selskap, `//evil`, `\\`, contacts, invoices, inbox, /user, /sales/123, mellomrom foran og `\n`.
+- POST, PUT, PATCH, DELETE, «get» og HEAD.
+- Parametrene contactId, sortBy, `page=0&x=1`, verdier med `../` eller over 20 tegn, og nøkler med mellomrom.
+- Ugyldig FIKEN_SLUG (`../x`, `a/b`, store bokstaver, tom). Et lovlig kall går bare til https://api.fiken.no/api/v2/companies/solarconsulting-as/….
+- Bare til orientering: `dateGe=2026-01-01T00` går gjennom, fordi `T` er lov. Det er ufarlig (lovlig parameter, bare GET).
+**Ingen motparter i snapshotet.** Med kunde- og leverandørnavn, e-post, kontonummer, IBAN, KID og notes i svarene er ingen av dem med. Bare «Driftskonto» og summer.
+**Flagget:** `lagOkonomi` gir undefined når OKONOMI_AKTIV ikke er nøyaktig «1». Det er AV som standard.
+**Parametrene** stemmer med Fikens swagger.yaml: dateGe og settled på sales, dateGe og paid på purchases, date på bankBalances og inactive på bankAccounts.
+**Funn (valuta):** i swagger står det at `orderLine` har «Either netPrice or netPriceInCurrency». Et USD-kjøp med bare `netPriceInCurrency` gir 0 i kostnader for måneden, og 0 i leverandørgjeld («antall 1, sum 0»). Dette er testet med falske data. Mye av kostnadene våre er i USD (Railway, Anthropic, Vercel). Om Fiken også sender netPrice i NOK for valutakjøp, er UNKNOWN. Forslag: mangler netPrice på en linje i et kjøp med currency ≠ NOK, merk målingen som ufullstendig (eller tell den i et eget felt). Da blir ikke kostnadene for lave uten at noen ser det.
+
+## FRA orchestrator-1 @ 2026-11-20T11:22:10Z: OK kjør command-center#201
+- paal-1 QA ok (11:21Z). OK kjør: flett #201 med flagget AV. Lag så en egen liten PR som retter valutakjøp (netPriceInCurrency gir 0 kr). Flagget skal ikke slås på før rettingen er QA-et og Nithu har svart om #359 (lagring og tilgang).
+
+## 2026-11-20 11:26Z fra paal-1: QA command-center#202 (valutakjøp): ok i broen, men plattformen viser ikke kjopUtenNok
+- På 863cdea: okonomi.test er grønn, og min egen test med tre kjøp gir det som er ventet. Et ubetalt USD-kjøp med delbetaling, et betalt NOK-kjøp, og et blandet kjøp med én NOK-linje og én valutalinje gir kostnader 100 (bare NOK-kjøpet), leverandørgjeld sum 0 (ikke negativ) og kjopUtenNok 2. Det blandede kjøpet holdes helt utenfor, også NOK-delen. Det er forsiktig og greit så lenge tallet vises.
+- **Men:** plattformen (main, lib/okonomi/vis.ts) slipper bare kjente felt gjennom, og `kjopUtenNok` finnes ikke der. Feltet blir altså tatt bort, og Økonomi-siden viser for lave kostnader uten å si det. Det trengs en liten endring i plattform (Tintuns kode): les `kjopUtenNok` og vis for eksempel «2 kjøp i valuta er ikke med» ved kostnader og leverandørgjeld. Jeg sender det til orchestrator-1. #202 kan merges fra min side, men flagget bør ikke slås på før plattformen viser det.
+
+## FRA orchestrator-1 @ 2026-11-20T11:26:49Z: OK kjør command-center#202
+- OK kjør: flett #202 når CI er grønn. Ja, skriv beskrivelsen av `kjopUtenNok` i drift#359 (uten @, med typen og hva verdier over 0 betyr). Jeg legger én linje til Tintun i #198. Flagget står AV.
+
+## FRA orchestrator-1 @ 2026-11-20T11:31:34Z: neste oppdrag til data-1: rydd OPERATOR-TODO
+- Fil: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/OPERATOR-TODO.md. Sjekk hver åpen linje mot GitHub (drift, plattform, command-center) og det som står i Gmail-trådene (bare lesing): er den gjort, utdatert eller fortsatt åpen?
+- Ikke slett noe. Kryss av det som er beviselig gjort, og skriv kilden bak. Flytt utdaterte linjer til en seksjon «Utgått» nederst. Øverst skal det stå de fem viktigste åpne punktene sortert etter frist, hver med lenke og tidsbruk.
+- Ingen beløp, personnummer eller e-postadresser. STATUS når du er ferdig.

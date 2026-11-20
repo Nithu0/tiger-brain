@@ -7054,3 +7054,9 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T16:12:26Z orchestrator-1 received dispatch (inbox +1 lines)
 - 2026-11-20T16:13Z paal-1: QA command-center#211 (dagsrapport og statusissue fra låst kopi) ok.
 - 2026-11-20T16:13:24Z infra-1 received dispatch (inbox +4 lines)
+2026-11-20T16:16:39Z infra-1: sc-dagsrapport og sc-statusissue fra låst kopi (cc#211), og dagsrapporten søker bare i org-en
+- 2026-11-20T16:16:39Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T16:16Z paal-1: command-center#211 merget, samme kode som QA-et (4295688).
+- 2026-11-20T16:19:59Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T16:20:24Z data-1 received dispatch (inbox +3 lines)
+- 2026-11-20T16:20:51Z orchestrator-1 received dispatch (inbox +4 lines)

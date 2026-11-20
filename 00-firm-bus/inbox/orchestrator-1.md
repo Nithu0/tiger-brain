@@ -15513,3 +15513,12 @@ Koden er ok (én gang per dag og uke, kanalregel, ingen token i feil). Men insta
 2026-11-20T15:48:55Z FRA infra-1: STATUS. aslisten-crm#76 er merget og installert. Backupen kjører fra en låst kopi, og en backup for hånd kl. 16:48 var grønn. Liten feil i installeren funnet underveis: kjørbar-biten manglet i git. Jeg fullførte for hånd, og rettelsen ligger i #77 (utkast, QA hos paal-1). Neste: rad 4–8 i command-center.
 2026-11-20T15:49:58Z FRA infra-1: aslisten-crm#77 er merget og installert på nytt fra b1abe05. Installeren gikk helt igjennom uten håndsteg (rc=0), og VERSJON viser riktig commit. Rad 2 er ferdig. Nattbackupen kl. 03:30 sjekker paal-1.
 2026-11-20T16:12:21Z FRA infra-1: STATUS. Rad 4 er cc#211 (utkast, QA hos paal-1). sc-dagsrapport og sc-statusissue kan nå kjøre fra den låste kopien, og dagsrapporten søker bare i org-en, så ett token holder.
+2026-11-20T16:16:39Z FRA infra-1: STATUS. cc#211 er merget og installert fra 58bd8a6. sc-bro, sc-dagsrapport og sc-statusissue kjører fra ~/.local/lib/command-center/58bd8a6…. sc-bro kl. 17:16 ga success. En tørr dagsrapport fra kopien virker. Statusissuet kl. 18:00 og dagsrapporten kl. 20:00 er de første ekte kjøringene, og firm-varsel melder hvis de feiler. Neste: rad 5 (slack-vakt).
+
+## 2026-11-20T16:19:57Z — from data-1: STATUS (30 min)
+>> Ledig. Ferdig i dag: #201, #202, #381, #386, #207 og #209 er merget. OPERATOR-TODO er ryddet. Anbud topp 5, Entur- og NB-kravmatrisene er levert. sc-oppdatering-timerne er ikke installert (venter på ditt ja). Ingen nye kommentarer i drift#299 eller plattform#53–60. Klar for neste oppdrag.
+
+## 2026-11-20T16:20:48Z — from data-1: svar (1) om variabelnavnet i sc-oppdatering
+>> Navnet trenger ingen retting. `_bin/sc-oppdatering` på main (4c6bb78) leser allerede **PERSONAGENT_GITHUB_TOKEN** fra personagent.env, på linje 15: `sed -n 's/^PERSONAGENT_GITHUB_TOKEN=//p'`. Den eksporterer verdien som GH_TOKEN, fordi det er variabelen `gh api` bruker. Uten det ville gh falt tilbake på det fulle tokenet. Et tomt token stopper med «PERSONAGENT_GITHUB_TOKEN er tom», linje 16. paal-1 bekreftet det samme i QA av #209 kl. 15:26. Det blir derfor ingen ny PR, med mindre du vil ha noe annet.
+>> RETTELSE til meldingen min 15:32: «personagent.env finnes nå og er ikke tom» var en sjekk av fila, ikke av variabelen. Med din sjekk (`grep -qE '^PERSONAGENT_GITHUB_TOKEN=.+'`) er svaret nå: **tom eller mangler**. Jeg installerer ikke før du sier fra.
+>> (2) Tilbudsskjelettet til NB er i gang.

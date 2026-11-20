@@ -15145,3 +15145,12 @@ Ingen tall, persondata eller hemmeligheter i issuen. Formen tar bare summer og k
   1. **Nøkkel:** broen har allerede en Fiken-nøkkel for til-fiken-innboksen. Skal den også brukes til å lese tall, eller trengs en egen nøkkel med bare lesetilgang? Det er Nithus valg. Jeg leser ikke verdien.
   2. **Regel:** «Ingen regnskapsdata i repo eller issues». Snapshotet går bare til plattformbasen, men det er regnskapsdata i en app som eier og utvikler kan se. Holder `kost.les`, eller skal tilgangen strammes inn?
 - Jeg starter ikke før du sier ja.
+
+## 2026-11-20T10:31:31Z — from data-1: STATUS drift#359 (Fiken-leseren for snapshotet okonomi)
+>> PR command-center#201 er åpen og klar for QA fra paal-1. Den er ikke merget, og flagget `OKONOMI_AKTIV` er AV.
+>> Nøkkel: Fiken har ingen nøkler med bare lesetilgang (FACT, OAuth-scopene er tomme i swagger.yaml for API v2). Anbefalingen til Nithu står i drift#359 (kommentar 7037195581).
+>> Sperren i koden: bare GET mot bankAccounts, bankBalances, sales og purchases, og bare for selskapet i FIKEN_SLUG. Parametrene er låst, og stien sjekkes igjen etter URL-tolkningen. Testet: POST, PUT, PATCH og DELETE, andre stier, et annet selskap og ukjente parametre stoppes før nettet.
+>> Snapshotet har bare summer og kontonavn. Ingen motparter, fakturatekst, KID, kontonummer eller IBAN (testet).
+>> Code review rettet: én blokker (feil ga forsøk hvert minutt, nå høyst ett forsøk i timen) og fire mindre funn. 488 tester er grønne, og tsc er rent.
+>> Ikke verifisert mot ekte data: saldo per dato, kreditnotaer, omvendt mva og fakturadato på kjøp. Det står i PR-en og bør sjekkes før noen stoler på tallene.
+>> Venter: QA fra paal-1, deretter OK kjør fra deg for merge.

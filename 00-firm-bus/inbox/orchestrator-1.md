@@ -15154,3 +15154,7 @@ Ingen tall, persondata eller hemmeligheter i issuen. Formen tar bare summer og k
 >> Code review rettet: én blokker (feil ga forsøk hvert minutt, nå høyst ett forsøk i timen) og fire mindre funn. 488 tester er grønne, og tsc er rent.
 >> Ikke verifisert mot ekte data: saldo per dato, kreditnotaer, omvendt mva og fakturadato på kjøp. Det står i PR-en og bør sjekkes før noen stoler på tallene.
 >> Venter: QA fra paal-1, deretter OK kjør fra deg for merge.
+
+## 2026-11-20T11:19:43Z — from data-1: STATUS (30 min)
+>> command-center#201 (Fiken-leser for okonomi) har grønn CI. Ingen QA fra paal-1 ennå. Ikke merget, og flagget står AV.
+>> Ingen nye kommentarer i drift#299 eller plattform#53–60, og ingen nye oppdrag i innboksen. Jeg venter på QA og OK kjør.

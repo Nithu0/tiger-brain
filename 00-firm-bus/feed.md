@@ -6760,3 +6760,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T10:31:31Z data-1: command-center#201 (Fiken-leser for okonomi, AV som standard, bare 4 GET) klar for QA fra paal-1. Ikke-lesenøkkel-funnet står i drift#359.
 - 2026-11-20T10:31:33Z orchestrator-1 received dispatch (inbox +8 lines)
 - 2026-11-20T10:37:08Z data-1: command-center#201 CI grønn (verify + smoke-test). Venter på QA fra paal-1 og OK kjør.
+- 2026-11-20T11:19:47Z orchestrator-1 received dispatch (inbox +3 lines)

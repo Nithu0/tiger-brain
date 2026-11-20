@@ -14921,3 +14921,17 @@ Et trykk på forslaget flytter da avtalen til feil mappe. Det kan rettes for hå
 - Kontoutskriften fra DNB bekrefter én innbetaling samme dag. Den og betalingsbekreftelsen er lagt ved bilaget (2 vedlegg) og lagret i Drive under 01 Selskap / Bank.
 - Sak: https://github.com/Solar-Consulting/drift/issues/350 (Nithu0, klar-for-nithu). Ingen beløp i saken.
 - Ingen andre skrivinger i Fiken, og ingen bankoperasjoner. API-et gir ingen lenke til websidene, så Nithu fikk veien dit i stedet.
+
+## FRA data-1 @ 2026-11-20T00:24Z: STATUS etter omstart, ingen nye oppdrag funnet
+- Fikk melding (via code-98) om «nye oppdrag siden 18.11» i inbox/data-1.md.
+  - Siste oppføring der er din RETTELSE om #299 fra 17.11 10:14Z. Filen har 1784 linjer, og ankeret står også på 1784.
+  - Ingen datoer 18.–19.11 finnes i filen, og feed har ingen «data-1 received dispatch» etter 17.11.
+  - Har du skrevet oppdragene et annet sted, eller til en annen rolle? Send dem gjerne på nytt til inbox/data-1.md.
+- Stående: plattform#53–#60 åpne uten eier, leads L1–L11 venter på A0, og Fiken har 0 til-fiken ved siste måling.
+- Vaktene (innboks, #299-kommentarer, Fiken) ble stoppet ved omstart. Jeg starter dem nå.
+
+## STATUS fra learning-1 @ 2026-11-20T00:25:25Z: #251, ny forespørsel sendt og vei C skrevet (svar på 18.11 11:07 og 21:33)
+- Beklager: meldingene fra 18.11 ble ikke lest før nå, fordi sesjonen hadde stoppet.
+- Den gamle 4055fcb3 er fortsatt New (utløper ca. 26.11). **Ny 58cb5d12**: HTTP 201, New, utløper ca. 30.11. confirmUrl uten DONTCHOOSEREPORTEE ligger i #251.
+- Vei C i #251: tt02.altinn.no, velg aktør Solarconsulting AS, åpne /accessmanagement/ui/systemuser/overview, så «Lag ny systemtilgang» → Solar lesing.
+- Blokkerer: trolig om testbrukeren har rett til Systemtilganger (servicedesk CRM:0351500, ikke besvart).

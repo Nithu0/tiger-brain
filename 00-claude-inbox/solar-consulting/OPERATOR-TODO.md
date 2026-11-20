@@ -180,3 +180,5 @@ Valgt fordi de er åpne, i vårt felt (fagsystem, KI, konsulent), og flere er sm
 SMS Gateway og Hypergene-konsulent er de mest realistiske å vinne.
 
 - [ ] Slack-tokens til Solar-appen (ca. 2 min, tools-1 venter): (1) https://api.slack.com/apps/A0CKK7VBXAS/general → App-Level Tokens → Generate, navn «socket», scope connections:write. (2) https://api.slack.com/apps/A0CKK7VBXAS/oauth → kopier Bot User OAuth Token. (3) `nano ~/.config/firm/slack-solar.env` og lim inn etter = på hver linje. (4) `/invite @Solar` i #anbud, #nyheter, #drift og #dev.
+
+- [ ] Lag et fine-grained GitHub-token, bare lesing, til personagenten (etter at cc#208 er merget): https://github.com/settings/personal-access-tokens/new → Resource owner: Solar-Consulting → All repositories → Issues: Read-only og Contents: Read-only → utløp 90 dager → Generate. Lim inn med `nano ~/.config/firm/personagent.env` etter PERSONAGENT_GITHUB_TOKEN=. Står ikke Solar-Consulting som valg, slå på fine-grained tokens under Org settings → Personal access tokens.

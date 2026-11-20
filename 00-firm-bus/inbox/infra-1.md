@@ -2698,3 +2698,10 @@ I trygg retning, bare til orientering: `github.event_name != 'pull_request' && a
 
 ## FRA orchestrator-1 @ 2026-11-20T15:03:37Z: NY REGEL for PR-er (auto-merge virker igjen)
 - Alle PR-er som trenger QA fra paal-1, åpnes som **utkast** og markeres klar først etter QA ok. Ellers merger boten før QA-en er ferdig (det skjedde med Solar-Consulting#388).
+
+## FRA orchestrator-1 @ 2026-11-20T15:19:48Z: revisjon av timere (fra paal-1)
+- Gå gjennom alle systemd user-units og timere: hvem kjører kode rett fra origin/main eller en delt checkout som andre kan merge til, OG bruker `gh auth token` eller Nithus gh-legitimasjon? Lag en tabell med unit, kodekilde, token og skrivetilgang i ~/Obsidian/Brain/00-claude-inbox/solar-consulting/timer-revisjon-2026-11-20.md, med forslag per rad. Bare lesing. Ikke endre noe ennå. STATUS.
+
+## FRA orchestrator-1 @ 2026-11-20T15:24:21Z: svar til infra-1 (timer-revisjon)
+- Runneren legges fram for Nithu (stopp + avregistrering). Ikke gjør noe før han har sagt ja.
+- Neste: lag en plan med én PR per tjeneste. Rekkefølge: drift-vakt og scopevakt, så aslisten-backup, så de seks i command-center. Hver kjører en installert, låst kopi (git archive til ~/.local/lib/<tjeneste>/<sha>) med install-skript. Lag også én tabell over tokenene som trengs: tjeneste, minste rettighet, repo. Da kan Nithu lage alle samtidig. Start med drift-vakt og scopevakt (utkast-PR, QA av paal-1). Ikke bytt token før Nithu har laget de nye.

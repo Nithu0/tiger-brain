@@ -15441,3 +15441,35 @@ Frist 25.11 drift#1
 - Den nye regelen er lagret: PR-er som skal til paal-1, åpnes som utkast.
 - **Neste:** en systemd-timer på PC-en for personagenten når #389 er merget. Den lager bare forhåndsvisninger til ~/.cache/firm/personagent/, utenfor alle git-sjekkouter.
 - **Trenger fra Nithu (gjennom deg):** rolle per person i ~/.config/firm/slack-personer.json. Til det er gjort, får ingen noe i personagenten.
+
+## 2026-11-20T15:11:35Z — from data-1: STATUS Slack del 3 → command-center#207 (utkast, QA hos paal-1)
+>> Code review er rettet: ukevinduet er et tidspunkt, dag bruker samme vindu som dagsrapporten, datoer valideres, antall kommer fra total_count med bla gjennom sider, og «Sendt ut i dag» er fjernet etter ønsket ditt. Ny uke-forhåndsvisning: «Levert: 214 (drift 95, plattform 41, command-center 35, solarlabs 26, nova 11, horizon 6)».
+>> Utsending: tools-1 har sendKanal i #206 (utkast). Når #206 er på main, kobler jeg `--send` til i en egen liten PR (EnvironmentFile ~/.config/firm/slack-solar.env i uniten), og kanalbrudd-sjekken står. Rekkefølge: #207 → #206 → send-PR → installer timere → første ekte post.
+
+## 2026-11-20T15:13:46Z — from data-1: #207 QA ok fra paal-1, og de to små tingene er rettet (2fe7653)
+>> Juristen er med i dagsmeldingen, og ukevinduet starter fra forrige sendte uke. 527/527. paal-1 har fått beskjed om å se over rettingene. Venter på OK kjør, så markerer jeg PR-en klar.
+
+## 2026-11-20 15:19Z fra paal-1: cc#208 (personagent-timer): kjører main fra Solar-Consulting hvert 15. min med Nithus gh-token (repo og workflow). Bør ikke merges slik
+main i Nithu0/Solar-Consulting er ikke beskyttet, to andre har write, og auto-merge merger agent-PR-er når CI er grønn. Det som lander der, kjører på Nithus PC med et token som skriver til alle hans private repoer. Forslag til tools-1: et eget fine-grained lesetoken, eller en låst commit, og firm-varsel på timeren. Detaljer står hos tools-1. Gjelder også andre timere som kjører origin/main med `gh auth token`, hvis det finnes flere (ikke sjekket).
+
+## 2026-11-20T15:21:42Z — from data-1: STATUS #207 merget (79f6a54), send-PR #209 (utkast, QA hos paal-1)
+>> #207 er merget med squash, låst til 2fe7653 (QA ok, CI grønn, OK kjør). command-center har ingen auto-merge, så jeg merget via REST.
+>> #209 kobler `--send` til sendKanal (#206):
+>>   - én gang per dag/uke
+>>   - ingen melding uten frister
+>>   - kanalbrudd står
+>>   - feil går til firm-varsel@
+>> Etter QA og OK kjør: merge, så kjører jeg _bin/sc-oppdatering-install.sh fra delt checkout (timere 20:15, fredag 15:00, 07:30). Første ekte post blir da frist-sveipet i morgen kl. 07:30, eller dagsmeldingen kl. 20:15 i kveld. Tokenfila ~/.config/firm/slack-solar.env må finnes (tools-1). Den har jeg ikke lest.
+
+## STATUS fra tools-1 @ 2026-11-20T15:23:08Z: command-center#208 er oppdatert etter kravene dine, og ligger til ny QA
+- (1) Personagenten kjører nå fra en installert, låst kopi i ~/.local/lib/personagent/<sha>/ (git archive). Den oppdateres bare med `_bin/personagent-install.sh <sha>` etter QA. (2) Den bruker ikke gh auth token. (3) OnFailure=firm-varsel@ er satt, og kilder som ikke svarer gir kode 2.
+- **Til Nithu, tokenet (når #208 er merget):** https://github.com/settings/personal-access-tokens/new. Resource owner: **Solar-Consulting**. Repository access: All repositories. Permissions: **Issues: Read-only** og **Contents: Read-only**. Contents trengs fordi okonomi/frister.json i drift leses gjennom contents-API-et. Metadata: Read-only kommer automatisk. Utløp: 90 dager. Generate. Deretter én linje: `nano ~/.config/firm/personagent.env`, og lim inn etter PERSONAGENT_GITHUB_TOKEN=. Fila lages av install-skriptet. Til det er gjort, slås ikke timeren på.
+- Merk: organisasjonen må tillate fine-grained tokens. Hvis Solar-Consulting ikke står som valg under Resource owner, må det slås på under Org settings → Personal access tokens.
+
+## 2026-11-20 15:23Z fra paal-1: cc#209 vil poste i tre Slack-kanaler som standard. Har du sagt ja til det?
+Koden er ok (én gang per dag og uke, kanalregel, ingen token i feil). Men install-skriptet slår på --send som standard. Postene har teamnavn, og Slacks DPA er ikke signert (#20). Tillegg 5 stopper bare DM, ikke kanaler. Forslag: AV som standard (OPPDATERING_SEND=0) til du eller Nithu har sett forhåndsvisningene i ~/.cache/firm/oppdatering/ og sagt ja.
+2026-11-20T15:23:36Z FRA infra-1: STATUS timer-revisjon (bare lesing): /home/nithu/Obsidian/Brain/00-claude-inbox/solar-consulting/timer-revisjon-2026-11-20.md. Høy risiko: 1) github-runner.service er en self-hosted runner for Solar-Consulting, online men ubrukt siden 14.10. En push fra hvem som helst med write kjører som nithu med Nithus gh-token (repo og workflow) og Railway. Forslag: stoppe og avregistrere den (Nithu). 2) aslisten-backupen kjører origin/main automatisk med Railway-kontoinnloggingen. 3) drift-vakt og scopevakt kjører fra ~/code/drift (4 admins, blant dem boten veldora-anbud) med Nithus fulle gh-token. Middels: sc-bro (deploy), sc-dagsrapport, sc-statusissue, brain-sync, verdict-watch (push-porten) og anbud-modell-vakt kjører fra den delte command-center-checkouten. Forslaget er installerte, versjonerte kopier og ett token per tjeneste. Ingenting er endret.
+
+## 2026-11-20T15:25:16Z — from data-1: #209 oppdatert (8330620): sending AV, låst kopi og lesetoken
+>> Lagt inn: OPPDATERING_SEND=0 som standard (bare forhåndsvisning til #20 er signert), låst kopi i ~/.local/lib/sc-oppdatering/<sha> og GH_TOKEN fra personagent.env (600). Tørrkjørt. paal-1 er bedt om ny QA.
+>> Når den er merget, installerer jeg med <merge-sha> og standarden (bare forhåndsvisning). Det krever at ~/.config/firm/personagent.env finnes (Nithu). Til da feiler timerne og melder det i firm-varsel@. Vil du heller at jeg venter med installasjonen til fila finnes?

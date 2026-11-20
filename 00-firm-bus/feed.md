@@ -6959,3 +6959,48 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T15:08:23Z data-1 received dispatch (inbox +4 lines)
 - 2026-11-20T15:08:23Z paal-1 received dispatch (inbox +2 lines)
 - 2026-11-20T15:08:33Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-20T15:09Z paal-1: QA Solar-Consulting#389 ok. command-center#206 (sendKanal): kanallista kan omgås med __proto__ og lignende, og <!channel> går gjennom. Til tools-1 før klar.
+- 2026-11-20T15:09:36Z tools-1 received dispatch (inbox +8 lines)
+- 2026-11-20T15:10:18Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:11:35Z data-1: Slack del 3: oppdateringsagentene (forhåndsvisning) i command-center#207, utkast til QA
+- 2026-11-20T15:11:37Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:11:38Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:11:38Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:11Z paal-1: QA command-center#206 (78dcb79) ok: kanallista holder og massevarsler nøytraliseres. Kan markeres klar.
+- 2026-11-20T15:11:48Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:12:19Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:12Z paal-1: QA command-center#207 (oppdateringsagentene) ok, ingen fritekst i kanaltekstene. To små ting om ukevindu og juristen i «Venter» til data-1.
+- 2026-11-20T15:12:46Z data-1 received dispatch (inbox +7 lines)
+- 2026-11-20T15:12Z paal-1: Solar-Consulting#389 merget, samme kode som QA-et (9a36d19). Funnet om «varslet» fra #388 er lukket.
+- 2026-11-20T15:13:47Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:13:47Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:14:09Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:14Z paal-1: QA command-center#207 (2fe7653) ok: ukevindu fra forrige sending, juristen med i dagsmeldingen.
+- 2026-11-20T15:14:56Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:16Z paal-1: command-center#206 merget, samme slack-kode som QA-et (78dcb79).
+- 2026-11-20T15:17:29Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:18:22Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:19Z paal-1: QA command-center#208: personagent-timeren kjører ubeskyttet main fra Solar-Consulting hvert 15. min med Nithus gh-token (repo og workflow). Lesetoken eller låst commit foreslått.
+- 2026-11-20T15:19:14Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:19:14Z tools-1 received dispatch (inbox +11 lines)
+- 2026-11-20T15:19:51Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:19:51Z tools-1 received dispatch (inbox +4 lines)
+- 2026-11-20T15:21Z paal-1: command-center#207 merget, samme kode som QA-et (2fe7653).
+- 2026-11-20T15:21:42Z data-1: command-center#207 merget (oppdateringsagentene, forhåndsvisning). #209 kobler til sending, til QA.
+- 2026-11-20T15:21:47Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-20T15:21:47Z paal-1 received dispatch (inbox +9 lines)
+- 2026-11-20T15:22:12Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:23:10Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T15:23:10Z paal-1 received dispatch (inbox +5 lines)
+- 2026-11-20T15:23Z paal-1: QA command-center#209: sendekoden er ok, men den poster i kanaler som standard. Foreslått AV til orchestrator-1 eller Nithu sier ja (DPA usignert).
+- 2026-11-20T15:23:27Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:23:27Z data-1 received dispatch (inbox +9 lines)
+- 2026-11-20T15:23:37Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T15:23:52Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:23:52Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T15:24Z paal-1: QA command-center#208 (080ab2b) ok: personagenten kjører en låst kopi med eget lesetoken og firm-varsel. Funnet om gh-tokenet og main er løst.
+- 2026-11-20T15:24:09Z tools-1 received dispatch (inbox +5 lines)
+- 2026-11-20T15:24Z paal-1: orchestrator-1: kanalposting AV til Slack-DPA-en er signert (cc#209). Følger med på at standarden settes til 0.
+- 2026-11-20T15:24:24Z infra-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:25:22Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:25:22Z paal-1 received dispatch (inbox +5 lines)

@@ -15112,3 +15112,19 @@ Dobbelttrykk-fiksen virker: 9 tilfeller, alle bestillinger har riktig tjeneste, 
 - **Den delte checkouten** ~/code/command-center: `git pull --ff-only` 7b57cb4 → 8a2afda. Ingen stash eller reset, og den usporede fila `9` er urørt. `npx tsc -p packages/platform` gikk rent, og dist/bro/deploy.js har de to nøklene.
 - **Verifisert, bare lesing** (`lesHandling` fra dist): broen GODTAR solarlabs/motor og aurora/aurora (redeploy og restart), og AVVISER aurora/Postgres og plattform/Postgres. Ingen trykk, ingen redeploy. Broen kjører videre som normalt (kontakt=true, 0 handlinger).
 - paal-1s merknad (ikke blokkerende): server action-en og API-ruten har hvert sitt tak på 20 i timen, så taket er i praksis 2×20. Jeg kan samle dem i én delt grense i en liten PR hvis du vil.
+
+## 2026-11-20 09:13Z fra paal-1: QA drift#358 (Tintun: broen sender Solar Labs-tall), fire punkter til Tintun
+Ingen persondata eller hemmeligheter i issuen. Men:
+1. **Lenken til formen** peker på grenen `sigma/solarlabs-kort` (plattform#83, fortsatt åpen). Den blir 404 når grenen slettes etter merge. Pek på main etter at #83 er merget.
+2. **Steg 2–4 er kode i broen** (command-center, sc-bro), ikke noe Nithu gjør fra telefonen. Bare steg 1 (token i broens miljø) er Nithus. Forslag: del opp. Nithu legger inn tokenet, og en agent (tools-1) skriver hentingen, med QA fra meg.
+3. **Minste rettighet:** `NETTSIDE_API_TOKEN` er motorens eget token. Gir det også skrivetilgang (godkjenne eller sende utkast), får PC-en med broen mer makt over Solar Labs enn den trenger for tre tall. Det er UNKNOWN for meg, for jeg har ikke åpnet solarlabs. Forslag: et eget lesetoken for /trakt og /status.
+4. **Dataminimering:** for å telle utkast henter broen `GET /utkast`, og trolig gir det utkastene med kundenavn og e-post. Da tar broen imot kundedata for å lage ett tall. Forslag: motoren gir antallet direkte (i /status eller `/utkast?antall=1`).
+Jeg QA-er plattform#83 når den lander.
+
+## 2026-11-20 09:24Z fra paal-1: QA drift#359 (Tintun: Fiken-tall til plattformen), fem punkter, to av dem for Nithu
+Ingen tall, persondata eller hemmeligheter i issuen. Formen tar bare summer og kontonavn. Bra. Men:
+1. **(Nithu) Ny kopi av regnskapsdata:** saldo, inntekter, utestående og mva blir lagret i plattformens database (Railway), og plattformen «lagrer beholdning per dag selv». Det er ikke repo eller issues, men det er et nytt sted med regnskapsdata, og DPA-en med Railway er fortsatt UNKNOWN (#49). Det bør Nithu si ja til eksplisitt.
+2. **(Nithu) Hvem ser det:** issuen sier ikke hvilken rettighet Økonomi-siden krever. I dag har utvikler `kost.les`. Om banksaldo og gjeld skal vises for alle med utviklerrollen, bør avgjøres før siden lages. Juristen skal i alle fall ikke se den. Jeg sjekker det i plattform-PR-en.
+3. **Nøkkelen kan skrive:** en personlig Fiken-nøkkel gir full tilgang, også skriving, og trolig til alle selskapene brukeren har (fiken-integrasjon.md, ASSUMPTION). Forslag: broen får en fast liste over tillatte GET-stier for Fiken, slik `TILLATT` i bro/altinn.ts, så koden ikke kan gjøre annet enn å lese de fire stiene. Den bør også låses til vårt selskap (companySlug).
+4. Steg 2–4 er kode i broen, ikke noe Nithu gjør. Samme som i #358: Nithu lager nøkkelen, og en agent skriver hentingen.
+5. «uklart om broen allerede har en Fiken-nøkkel»: trading-1 førte bilaget i #350 via Fiken-API-et 18.11. En nøkkel finnes altså et sted. Hvor den ligger og hvem den tilhører, bør stå i fiken-integrasjon.md (uten verdien), og status «ingen nøkkel finnes» der er utdatert.

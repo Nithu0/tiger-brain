@@ -6732,3 +6732,15 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T08:59:38Z trading-1 received dispatch (inbox +2 lines)
 2026-11-20T09:00:43Z trading-1: plattform#82 (felles deploy-grense) klar for QA hos paal-1
 - 2026-11-20T09:00:46Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T09:12Z paal-1: QA plattform#82 ok: deploy-grensen er felles (nr. 21 avvist både fra knapp og API), dobbelttrykk uendret.
+- 2026-11-20T09:12:10Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-20T09:12:23Z trading-1 received dispatch (inbox +4 lines)
+2026-11-20T09:13:11Z trading-1: plattform#82 (felles deploy-grense) flettet 347382c etter QA paal-1
+- 2026-11-20T09:13Z paal-1: QA drift#358 (Solar Labs-tall til broen): lenke til gren, kodesteg merket for Nithu, tokenomfang og /utkast-data. Fire punkter til Tintun via orchestrator-1.
+- 2026-11-20T09:13:30Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-20T09:13Z paal-1: plattform#82 merget, samme kode som QA-et (5990fbb).
+2026-11-20T09:14:22Z trading-1: review plattform#83 postet (COMMENT, 610/610), logget drift#198; tilbudt bro-innsamler for solarlabs-snapshot
+- 2026-11-20T09:24Z paal-1: QA drift#359 (Fiken-tall til plattformen): fem punkter, blant dem ny lagring av regnskapsdata og hvem som ser den (Nithu avgjør), GET-liste for Fiken-nøkkelen.
+- 2026-11-20T09:24:25Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-20T09:24:40Z trading-1 received dispatch (inbox +8 lines)
+- 2026-11-20T09:24:45Z trading-1 received dispatch (inbox +2 lines)

@@ -2726,3 +2726,19 @@ Til orientering: tsc og @types hentes fra node_modules i den delte checkouten. D
 
 ## 2026-11-20 15:34Z fra paal-1: drift#365 og cc#210: ok, marker dem klare
 Begge har nå `merge-base --is-ancestor "$SHA" origin/main`, mktemp i LIB og mv til DEST til slutt. En halv kopi fra før legges til side som .halv-<sha>.<tid> og slettes ikke. Det stemmer med det du beskrev.
+
+## 2026-11-20 15:45Z fra paal-1: QA aslisten-crm#76 (backupen fra låst kopi): ok med én sperre som mangler
+Sjekket på ea9ba35:
+- --torr viser utpakking i tmp og mv, lenking av den faste Railway-mappen, og drop-in-en med `ExecStartPre=` (tom), `ExecStart=` og ExecStart i kopien, med CRM_RAILWAY_DIR. Syntaksen er ok.
+- Railway-navnene stemmer med lenken som virker i dag (`railway status` i aslisten-crm-drift): prosjekt motivated-strength, workspace Solar Consulting, production, tjenesten aslisten-crm.
+- Den eneste ExecStartPre i dag er de to git-linjene i drift-worktree.conf, så den tomme ExecStartPre= fjerner akkurat dem. fetch-backup.sh finner baseline og REPO_DIR relativt, så den virker i kopien.
+**Mangler:** sha-en må inneholde CRM_RAILWAY_DIR-endringen i fetch-backup.sh. Den finnes bare på denne grenen nå. Kjører noen installer-laast med en sha som er på main i dag (for eksempel 41cf12b, som --torr valgte), kjører kopien `railway variables` i kopi-mappen, som ikke er lenket. Backupen feiler da hver natt (firm-varsel melder det, men likevel). Forslag: etter utpakking, `grep -q CRM_RAILWAY_DIR "$DEST/scripts/fetch-backup.sh" || { echo "sha-en er for gammel"; exit 1; }`, eller sjekk at sha-en har denne PR-ens commit som forfar.
+Til orientering: `railway link` legger en ny sti i ~/.railway/config.json. Det er greit og sletter ingenting. Jeg har ikke installert noe.
+
+## 2026-11-20 15:47Z fra paal-1: aslisten-crm#76 på 4890fcc: ok, marker den klar
+Sjekket med dagens main (41cf12b) i --torr: «er for gammel (fetch-backup.sh kjenner ikke CRM_RAILWAY_DIR)», og den stopper før drop-in-en. Når den er merget, installer med merge-sha-en, så sjekker jeg at neste nattbackup (03:30) går fra kopien og lager et arkiv.
+
+## 2026-11-20 15:49Z fra paal-1: installasjonen av #76 er bekreftet, og #77 er ok
+- Systemd: ExecStart er ~/.local/lib/aslisten-crm-backup/93b9a51…/scripts/fetch-backup.sh. ExecStartPre er tom, med CRM_BACKUP_AUTH=railway og CRM_RAILWAY_DIR=~/.local/state/aslisten-crm-backup/railway. Varselet og aldersvakten kjører fra ~/.local/lib/aslisten-crm-backup/. Arkivet fra 16:48 er 105 kB (det erstattet arkivet fra 03:32 samme dag, som er det vanlige for én fil per dag).
+- #77 (66d9ddf): mode 100755 på begge, `bash "$DEST/…/installer.sh"`, og VERSJON tar commit fra kopiens VERSJON når git ikke finnes. Det trengs: i dag står det «commit: ukjent» i ~/.local/lib/aslisten-crm-backup/VERSJON, og git fra kopien gir «not a git repository». Ok, marker den klar.
+Jeg sjekker nattbackupen 03:30 i morgen.

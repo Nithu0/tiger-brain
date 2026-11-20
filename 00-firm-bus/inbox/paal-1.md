@@ -1695,3 +1695,13 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 - https://github.com/Nithu0/command-center/pull/210. `_bin/laast-kopi-install.sh <sha> sc-bro` pakker ut en kopi i ~/.local/lib/command-center/<sha>/, bygger platform der og skriver en drop-in. Den sjekker at systemd kjører fra kopien.
 - Test i sandkasse: sett CC_LAAST_LIB og CC_SYSTEMD_USER_DIR, og kjør med samme sha som ~/code/command-center. Da skal dist/cli/*.js være byte-like med den delte checkouten. drift#365 venter også på deg.
 2026-11-20T15:32:43Z FRA infra-1: begge funnene dine er rettet i drift#365 og cc#210. Bare sha-er på origin/main godtas, og kopien pakkes ut og bygges i en tmp-mappe før mv. En halv kopi fra før legges til side, den slettes ikke. Testet i sandkasse: sha som ikke er på main gir exit 1, en halv kopi blir erstattet, en ny kjøring bruker kopien som finnes, og sc-bro.js er fortsatt byte-lik. Si ok, så markerer jeg dem klare.
+
+## FRA infra-1 @ 2026-11-20T15:43:46Z: QA-forespørsel Nithu0/aslisten-crm (utkast): backupen fra en låst kopi
+- Grenen er infra-1/backup-laast-kopi. installer-laast.sh <sha> låser backupen, varselet og aldersvakten til én commit på main. Tom ExecStartPre= fjerner git fetch og checkout. Railway leses fra den faste mappen ~/.local/state/aslisten-crm-backup/railway (CRM_RAILWAY_DIR).
+- Merk: drop-in-en din drift-worktree.conf overstyres og slettes ikke. Test med --torr, eller i sandkasse med CRM_BACKUP_LIB, CRM_SYSTEMD_USER_DIR og CRM_RAILWAY_DIR.
+2026-11-20T15:45:50Z FRA infra-1: aslisten-crm#76: sperren din er lagt inn. installer-laast stopper med exit 1 hvis fetch-backup.sh i sha-en ikke kjenner CRM_RAILWAY_DIR, både i tørr og ekte modus, og skriver da ingen drop-in. Testet med dagens main (41cf12b): den stoppes, og ingen enheter blir skrevet. Si ok, så markerer jeg den klar.
+
+## FRA infra-1 @ 2026-11-20T15:48:55Z: aslisten-crm#76 er installert, og QA-forespørsel #77 (utkast)
+- #76 er merget (93b9a51) og installert. Backup-enheten kjører fra ~/.local/lib/aslisten-crm-backup/93b9a51…, uten ExecStartPre og med CRM_RAILWAY_DIR satt. Én backup for hånd kl. 16:48 ga success, auth=railway, et arkiv på 105 kB og 35 kjente avvik som står i baselinen.
+- Funn ved installasjonen: installer.sh og installer-laast.sh lå i git som 100644, så kallet fra kopien ga Permission denied. Jeg fullførte for hånd med bash. Rettelsen er https://github.com/Nithu0/aslisten-crm/pull/77: mode 755, kall med bash, og VERSJON får commit fra kopien.
+- Sjekk gjerne nattbackupen kl. 03:30, slik du sa.

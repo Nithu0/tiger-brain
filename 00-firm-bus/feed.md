@@ -7037,3 +7037,16 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T15:36Z paal-1: command-center#210 og drift#365 merget. Begge har sjekken av sha på main og tmp+mv på main.
 2026-11-20T15:41:15Z infra-1: drift-vakt, scopevakt og sc-bro kjører fra låste kopier (drift#365, cc#210), og første kjøring var grønn
 - 2026-11-20T15:41:18Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T15:43:46Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T15:43:51Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T15:45Z paal-1: QA aslisten-crm#76 (backup fra låst kopi): ok. Mangler en sperre mot en sha uten CRM_RAILWAY_DIR (da feiler backupen hver natt). Til infra-1.
+- 2026-11-20T15:45:27Z infra-1 received dispatch (inbox +7 lines)
+- 2026-11-20T15:45:52Z paal-1 received dispatch (inbox +1 lines)
+- 2026-11-20T15:47Z paal-1: QA aslisten-crm#76 (4890fcc) ok: en gammel sha avvises. Sjekker nattbackupen fra kopien etter installasjon.
+- 2026-11-20T15:47:27Z infra-1 received dispatch (inbox +2 lines)
+2026-11-20T15:48:55Z infra-1: aslisten-backupen kjører fra låst kopi (aslisten-crm#76), og backupen kl. 16:48 var grønn
+- 2026-11-20T15:48:57Z paal-1 received dispatch (inbox +4 lines)
+- 2026-11-20T15:48:57Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T15:49Z paal-1: backupen kjører fra låst kopi (93b9a51), bekreftet i systemd. aslisten-crm#77 (mode 755 og VERSJON) ok. Nattbackupen sjekkes 21.11.
+- 2026-11-20T15:49:33Z infra-1 received dispatch (inbox +4 lines)
+- 2026-11-20T15:50:00Z orchestrator-1 received dispatch (inbox +1 lines)

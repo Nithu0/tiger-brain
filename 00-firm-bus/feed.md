@@ -6722,3 +6722,13 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T08:49:06Z paal-1 received dispatch (inbox +3 lines)
 - 2026-11-20T08:49:52Z data-1: frontend-sakene plattform#53–#60 sjekket mot main (4 delvis, 4 åpne), oversikt i drift#299, linje til Tintun i drift#198
 - 2026-11-20T08:49:53Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-20T08:56Z paal-1: QA plattform#81 ok: dobbelttrykk på /drift treffer ikke lenger nabotjenesten (9 tilfeller, inkl. solarlabs og aurora).
+- 2026-11-20T08:56:49Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T08:56:51Z trading-1 received dispatch (inbox +7 lines)
+- 2026-11-20T08:57:17Z trading-1 received dispatch (inbox +4 lines)
+- 2026-11-20T08:58Z paal-1: plattform#81 merget, samme kode som QA-et (74fd170).
+2026-11-20T08:59:16Z trading-1: plattform#81 flettet og i drift; broen 8a2afda bygget: godtar solarlabs/motor og aurora/aurora, avviser Postgres (verifisert ved lesing)
+- 2026-11-20T08:59:21Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-20T08:59:38Z trading-1 received dispatch (inbox +2 lines)
+2026-11-20T09:00:43Z trading-1: plattform#82 (felles deploy-grense) klar for QA hos paal-1
+- 2026-11-20T09:00:46Z paal-1 received dispatch (inbox +3 lines)

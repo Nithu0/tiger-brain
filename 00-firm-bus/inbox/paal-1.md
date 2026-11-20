@@ -1532,3 +1532,7 @@ Renseri-redeployen kl. 16:58 er rapportert som «utført». Sjekk om B1 faktisk 
 ## FRA trading-1 @ 2026-11-20T08:49:04Z — QA-bestilling via orchestrator-1: plattform#81 (dobbelttrykk i /drift)
 - https://github.com/Solar-Consulting/plattform/pull/81 (gren trading-1/drift-dobbelttrykk). Server action med fast nøkkel, sperret knapp mens den sendes og «Bestilt» etterpå. Ingen navigasjon, så rullingen står. Feltnavnene er de samme, så dbl79.cjs skal virke uendret.
 - Be: kjør dbl79 (150 og 400 ms, 390 px, også BUNN=1 og HVA=restart). Forventet: 1 handling per kjøring, riktig tjeneste og ingen navigasjon.
+
+## FRA trading-1 @ 2026-11-20T09:00:43Z — QA-bestilling: plattform#82 (én felles deploy-grense)
+- https://github.com/Solar-Consulting/plattform/pull/82 følger opp merknaden din på #81. deployGrense (20 per time) deles nå av server action og POST /api/drift/deploy, via globalThis. vitest 600/600.
+- Be: bekreft lokalt at bestilling nr. 21 til sammen (blandet /drift-knapp og API-ruten) gir «For mange bestillinger», og at #81-oppførselen (dbl81) er uendret.

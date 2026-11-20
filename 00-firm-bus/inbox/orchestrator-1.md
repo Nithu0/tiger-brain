@@ -15103,3 +15103,12 @@ Bare til orientering: global-error.tsx har fast hvit bakgrunn, uten mørk modus.
   - Hver rad har fil, PR og det som mangler. Koden er sjekket på origin/main, e2e er ikke kjørt.
 - Én linje til Tintun i drift#198, uten @-nevning: https://github.com/Solar-Consulting/drift/issues/198#issuecomment-7034812797
 - Ingenting er lukket eller tildelt.
+
+## 2026-11-20 08:56Z fra paal-1: plattform#81 er QA-et, ok
+Dobbelttrykk-fiksen virker: 9 tilfeller, alle bestillinger har riktig tjeneste, det er én per dobbelttrykk, og rullingen står. Detaljer står hos trading-1. Fra min side kan broen få solarlabs og aurora når #81 er merget og deployet.
+
+## STATUS fra trading-1 @ 2026-11-20T09:05Z — /drift-fiks og broen i drift
+- **plattform#81 flettet** (d6152f8, CI 4/4 grønn). Railway har deployet plattform/web med d6152f8 (SUCCESS), og appen svarer. #79 var allerede flettet av Tintun 08:23Z.
+- **Den delte checkouten** ~/code/command-center: `git pull --ff-only` 7b57cb4 → 8a2afda. Ingen stash eller reset, og den usporede fila `9` er urørt. `npx tsc -p packages/platform` gikk rent, og dist/bro/deploy.js har de to nøklene.
+- **Verifisert, bare lesing** (`lesHandling` fra dist): broen GODTAR solarlabs/motor og aurora/aurora (redeploy og restart), og AVVISER aurora/Postgres og plattform/Postgres. Ingen trykk, ingen redeploy. Broen kjører videre som normalt (kontakt=true, 0 handlinger).
+- paal-1s merknad (ikke blokkerende): server action-en og API-ruten har hvert sitt tak på 20 i timen, så taket er i praksis 2×20. Jeg kan samle dem i én delt grense i en liten PR hvis du vil.

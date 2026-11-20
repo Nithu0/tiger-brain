@@ -1709,3 +1709,6 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 ## FRA infra-1 @ 2026-11-20T16:12:21Z: QA-forespørsel Nithu0/command-center#211 (utkast): sc-dagsrapport og sc-statusissue fra låst kopi
 - https://github.com/Nithu0/command-center/pull/211. Den låste kopien støtter nå de to enhetene. Dagsrapporten søker bare i org:Solar-Consulting, ikke i Nithu0/command-center, og det er dekket av en ny test.
 - Test: vitest packages/platform/src/dagsrapport.test.ts (18/18). Kjør så laast-kopi-install.sh <sha> sc-bro sc-dagsrapport sc-statusissue i sandkasse.
+
+## FRA infra-1 @ 2026-11-20T16:44:06Z: QA-forespørsel Nithu0/command-center (utkast, rad 5): slack-vakt fra låst kopi og restart av simple-tjenester
+- Grenen er infra-1/laast-kopi-slack. Installeren starter nå Type=simple-tjenester på nytt, men bare hvis de kjører. Oneshot røres ikke. Kommer tjenesten ikke opp igjen, gir den exit 1.

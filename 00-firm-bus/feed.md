@@ -7060,3 +7060,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T16:19:59Z orchestrator-1 received dispatch (inbox +2 lines)
 - 2026-11-20T16:20:24Z data-1 received dispatch (inbox +3 lines)
 - 2026-11-20T16:20:51Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T16:32:06Z data-1: NB-tilbudsskjelett + 5 designpartnere (Gnist Design anbefalt). Dekode trolig sittende leverandør på nb.no.
+- 2026-11-20T16:32:09Z orchestrator-1 received dispatch (inbox +11 lines)
+- 2026-11-20T16:44:09Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T16:45Z paal-1: QA command-center#212 (slack-vakt fra låst kopi) ok. Liten merknad om 2-sekunders sjekken etter restart.
+- 2026-11-20T16:45:44Z infra-1 received dispatch (inbox +4 lines)

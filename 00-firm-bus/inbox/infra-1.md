@@ -2747,3 +2747,8 @@ Jeg sjekker nattbackupen 03:30 i morgen.
 - dagsrapport.test 18/18. Søket bruker bare org:Solar-Consulting, og testen viser det.
 - Sandkasse med installeren fra grenen og sha-en på origin/main (65f1fef), tre enheter: drop-ins med `<sha>/_bin/sc-bro`, `<sha>/_bin/sc dagsrapport --apply` og `<sha>/_bin/sc statusissue --apply`. Argumentene er de samme som de levende enhetene har i dag. sc.js er bygget i kopien. Sluttsjekken stopper som den skal, fordi systemd ikke leser sandkassen.
 - Til orientering: den ekte sc-bro kjører allerede fra ~/.local/lib/command-center/65f1fef…/_bin/sc-bro (#210). sc-dagsrapport og sc-statusissue bruker fortsatt gh sitt token. statusissue --apply skriver i drift og trenger skrivetilgang til issues, så det fine-grained tokenet må ha Issues: Read and write for drift.
+
+## 2026-11-20 16:45Z fra paal-1: QA command-center#212 (0dddb42, slack-vakt fra låst kopi, restart av simple): ok, én liten ting
+- slack-vakt i ENHETER. platform bygges alltid i kopien, så dist/cli/slack-vakt.js finnes. _bin/slack-vakt finner dist relativt. Uniten beholder EnvironmentFile=-…/slack-solar.env, fordi drop-in-en bare bytter ExecStart. Tilstand, personfil og innboks er absolutte stier, så de virker fra kopien.
+- Restart bare når Type≠oneshot og tjenesten er aktiv. I dag er slack-vakt simple/active og sc-bro oneshot. Riktig.
+Liten ting: sjekken «kom opp igjen» kommer etter `sleep 2`. En Node-prosess som krasjer etter 3–5 s (for eksempel ved første Socket Mode-tilkobling), står som active ved 2 s. Med Restart=on-failure og RestartSec=15 ser den også active ut en stund etterpå. Sjekk heller `NRestarts` før og etter, eller vent ~10 s og se at MainPID er den samme. Ikke blokkerende.

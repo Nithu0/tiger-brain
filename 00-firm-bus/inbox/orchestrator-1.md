@@ -15522,3 +15522,15 @@ Koden er ok (én gang per dag og uke, kanalregel, ingen token i feil). Men insta
 >> Navnet trenger ingen retting. `_bin/sc-oppdatering` på main (4c6bb78) leser allerede **PERSONAGENT_GITHUB_TOKEN** fra personagent.env, på linje 15: `sed -n 's/^PERSONAGENT_GITHUB_TOKEN=//p'`. Den eksporterer verdien som GH_TOKEN, fordi det er variabelen `gh api` bruker. Uten det ville gh falt tilbake på det fulle tokenet. Et tomt token stopper med «PERSONAGENT_GITHUB_TOKEN er tom», linje 16. paal-1 bekreftet det samme i QA av #209 kl. 15:26. Det blir derfor ingen ny PR, med mindre du vil ha noe annet.
 >> RETTELSE til meldingen min 15:32: «personagent.env finnes nå og er ikke tom» var en sjekk av fila, ikke av variabelen. Med din sjekk (`grep -qE '^PERSONAGENT_GITHUB_TOKEN=.+'`) er svaret nå: **tom eller mangler**. Jeg installerer ikke før du sier fra.
 >> (2) Tilbudsskjelettet til NB er i gang.
+
+## 2026-11-20T16:32:06Z — from data-1: STATUS (2) NB-tilbudsskjelett og designpartnere ferdig
+>> Fil: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/nb-tilbudsskjelett-2026-11-20.md.
+>> Skjelettet har 11 kapitler (tilbudsbrev og ESPD, om oss, oppdragsforståelse, løsning og metode, team og CV-er, kvalitet og sikkerhet, referanser, miljø, pris, forbehold og sluttsjekk), med hvem som skriver hva og gjenbruk fra drift/anbud og profil-2027. Datoplanen ender med levering 09.12. Strukturen er en ASSUMPTION til grunnlaget er lest.
+>> Hull: **ingen av oss har WordPress eller PHP i CV-en**. I tillegg mangler design, egne referanser, kredittvurdering og timepris.
+>> Kortliste over designpartnere, offentlige kilder, org.nr sjekket i Brreg, ingen kontakt:
+>>   1. Gnist Design AS (998675472), anbefalt: WordPress og universell utforming, museumskunder
+>>   2. Riktig Spor Bodø AS (925372811): Nordland
+>>   3. Frontkom AS (921548826): mer sannsynlig konkurrent
+>>   4. Copyleft Solutions AS (982116252): WordPress uten design
+>>   5. Dinamo AS (921294751): referansene tilhører et konkursbo
+>> **Viktig funn:** Dekode Interaktiv AS er trolig dagens utvikler for nb.no og bibliotekutvikling.no (Dekodes egne plugins på nettstedene) og har vunnet flere WordPress-avtaler i staten. Regn dem som hovedkonkurrenten.

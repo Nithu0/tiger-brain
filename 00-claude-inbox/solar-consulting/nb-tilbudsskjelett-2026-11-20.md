@@ -49,7 +49,29 @@ data-1, 20.11.2026, bestilt av orchestrator-1. Grunnlaget er `nb-kravmatrise-202
 
 Bare offentlige kilder. Ingen er kontaktet. Organisasjonsnumrene er sjekket mot Enhetsregisteret.
 
-*(Fylles inn fra research-søket. Se nedenfor når det er ferdig.)*
+Kildene er Doffins åpne API, data.brreg.no og byråenes og kundenes egne nettsider. Alle organisasjonsnumre er aktive, uten konkurs eller avvikling, og adressen stemmer med byråets egen side. Antall ansatte er `antallAnsatte` i Brønnøysund og kan være gammelt.
+
+| # | Byrå | Nettside | Org.nr | Ansatte | Hvorfor de passer | Risiko |
+|---|---|---|---|---|---|---|
+| 1 | **Gnist Design AS** (Tromsø) | gnistdesign.no | 998675472 | 8 | WordPress-spesialist med egen tjeneste for universell utforming og tilgjengelighetserklæring. Har laget nettstedet til Perspektivet Museum med UX, design og profil (https://gnistdesign.no/referanse/perspektivet-museum/) og vant Holbergprisens nettsted for UiB (Doffin 2022-605466). | Utvikler WordPress selv og kan derfor by alene. Langt fra Oslo, men NB er også i Mo i Rana. |
+| 2 | **Riktig Spor Bodø AS** (Bodø) | riktigspor.no | 925372811 | 12 | Design- og kommunikasjonsbyrå som bygger i WordPress. Har laget nettstedet til Helgeland Museum (https://riktigspor.no/arbeid/helgeland-museum/) og en kunnskapsbase for Salten-kommunene. Holder til i Nordland. | Få detaljer i referansene, og universell utforming er ikke dokumentert. Det finnes tre selskaper i konsernet (holding 992248661, Narvik 921828306), så det må avklares hvilket som signerer. |
+| 3 | **Frontkom AS** (Fredrikstad) | frontkom.com | 921548826 | 39 | Vant Forbrukertilsynets nettsted (Doffin 2021-303689), som fortsatt går på WordPress med Frontkoms Gutenberg-blokker. Har flere offentlige kunder (https://frontkom.com/cases/distriktssenteret-byggeklosser-som-gir-redaksjonen-kontroll). | Øverst i størrelsesspennet og leverer alt selv, så de er en sannsynlig konkurrent. Nyere oppdrag bruker Sanity/Next.js. |
+| 4 | **Copyleft Solutions AS** (Oslo) | copyleft.no | 982116252 | 14 | Vant kunstkultursenteret.no for Nord universitet (Doffin 2022-307374), som går på WordPress. Org.nr står på deres egen side. | Mest et utviklerhus uten dokumentert UX eller universell utforming. De dekker WordPress, men ikke design. |
+| 5 | **Dinamo AS** (Oslo) | dinamo.no | 921294751 | 27 | Har hatt designavtaler med Norad, IMDi, Jernbanedirektoratet og Valgdirektoratet, og har laget klimaoslo.no i WordPress (Doffin 2023-642595). | Avtalene ble vunnet av forgjengeren DINAMO AS (976965043), som gikk konkurs 20.09.2023. Det er usikkert om referansene kan brukes. Merkevarebyrå uten dokumentert universell utforming. |
+
+**Anbefaling (data-1):** Gnist Design (1) er den beste matchen. De har både WordPress og universell utforming, er små og har offentlige kulturkunder. Riktig Spor (2) er nummer to og har nærhet til Mo i Rana. Frontkom (3) er mer sannsynlig en konkurrent enn en partner. Copyleft (4) dekker WordPress, men ikke design.
+
+**Konkurrenter og konflikter, viktig:**
+- **Dekode Interaktiv AS** (894928662, 29 ansatte) er trolig dagens utvikler for NB. Det tyder tekniske spor på nb.no og bibliotekutvikling.no på: Dekodes `dekode-gtm-plugin` og T2-blokkbiblioteket. Dekode har også vunnet WordPress-avtalene for DSS, Riksantikvaren, LDO og Lotteritilsynet. **Regn dem som hovedkonkurrenten.**
+- **NewsLab AS** vant NBs avtale om design og markedsføring i 2024 (Doffin 2024-113566). **Melkeveien designkontor** var med i samme konkurranse og kan by igjen.
+- **Superultraplus Designstudio AS** vant NBs avtale om design av utgivelser i 2025 (Doffin 2025-112359).
+
+**Ikke sjekket:**
+- om WordPress-nettstedene over faktisk oppfyller WCAG
+- om noen av byråene planlegger å by på 2026-117583 selv
+- Doffin-tildelingene for Gnists andre offentlige referanser (UNIS, NILU, Framsenteret)
+
+Ingen er kontaktet. Kontakt tas først når Nithu har sagt ja.
 
 ## Forbehold
 

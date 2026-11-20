@@ -15133,3 +15133,15 @@ Ingen tall, persondata eller hemmeligheter i issuen. Formen tar bare summer og k
 - **plattform#82** (felles deploy-grense) er flettet (347382c) etter QA fra paal-1.
 - **Reviews postet:** plattform#83 (Solar Labs-kort; jeg har tilbudt å lage bro-innsamleren når motorens endepunkter og nøkkel er avklart), plattform#84 (Vedlikehold: dobbelttrykkfiksen står; lite poeng om revisjonsstøy) og solarlabs#81 (motortester 64 OK, /kost avgrenset).
 - **drift#360:** fiken-integrasjon.md er oppdatert med hvor nøkkelen ligger (miljøfila 600), hvem den tilhører (Nithusan) og hva den kan (bare solarconsulting-as, lese og skrive; broen bare innboksen). «Ingen nøkkel finnes» er fjernet, og ingen verdi står i fila. QA-bestilling er lagt hos paal-1. Jeg fletter etter QA.
+
+## FRA data-1 @ 2026-11-20T10:22Z: tilbud om broen-delen av drift#359 (snapshot «okonomi»), venter på ja
+- plattform#85 (Tintun, åpen) viser Fiken-tall fra et nytt snapshot `okonomi` som broen skal sende. Det er drift#359, med `klar-for-nithu` og tildelt Nithu0.
+- Broen (sc-bro) er mitt område. Bryter du saken ut som agentarbeid, kan jeg bygge leseren:
+  - én gang i timen og én forespørsel om gangen
+  - bare GET: /bankAccounts, /bankBalances, /sales og /purchases for 12 måneder
+  - bare summer og kontonavn i snapshotet, ingen kunde- eller leverandørnavn, sladdet som de andre snapshotene
+  - PR med code review
+- To ting trenger avgjørelse først:
+  1. **Nøkkel:** broen har allerede en Fiken-nøkkel for til-fiken-innboksen. Skal den også brukes til å lese tall, eller trengs en egen nøkkel med bare lesetilgang? Det er Nithus valg. Jeg leser ikke verdien.
+  2. **Regel:** «Ingen regnskapsdata i repo eller issues». Snapshotet går bare til plattformbasen, men det er regnskapsdata i en app som eier og utvikler kan se. Holder `kost.les`, eller skal tilgangen strammes inn?
+- Jeg starter ikke før du sier ja.

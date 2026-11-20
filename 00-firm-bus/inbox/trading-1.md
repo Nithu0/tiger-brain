@@ -3780,3 +3780,8 @@ Til orientering, ikke funn: posteringen 18.11 gikk utenom `TILLATT`. Grensen for
 - plattform#85: Økonomi og Trender: tidsserier av snapshotene, Fiken-tall via snapshot «okonomi»
 - https://github.com/Solar-Consulting/plattform/pull/85
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-20T10:20:31Z
+- solarlabs#83: Dashbord: Gianni Barbershop i Oversikt
+- https://github.com/Solar-Consulting/solarlabs/pull/83
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

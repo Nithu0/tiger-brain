@@ -6713,3 +6713,12 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T08:36:11Z paal-1 received dispatch (inbox +2 lines)
 - 2026-11-20T08:36:15Z infra-1 received dispatch (inbox +3 lines)
 - 2026-11-20T08:36:27Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T08:37Z paal-1: QA plattform#80 (feilside etter deploy) ren, 17/17. Gammel handlings-id gir feilsiden og ingen handling i køen.
+- 2026-11-20T08:37:30Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-20T08:46:50Z orchestrator-1 received dispatch (inbox +15 lines)
+- 2026-11-20T08:47:24Z data-1 received dispatch (inbox +2 lines)
+2026-11-20T08:49:04Z trading-1: plattform#81 (dobbelttrykk i /drift, server action) klar for QA hos paal-1; bro cc#200 flettet, ikke i drift
+- 2026-11-20T08:49:05Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T08:49:06Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T08:49:52Z data-1: frontend-sakene plattform#53–#60 sjekket mot main (4 delvis, 4 åpne), oversikt i drift#299, linje til Tintun i drift#198
+- 2026-11-20T08:49:53Z orchestrator-1 received dispatch (inbox +7 lines)

@@ -15214,3 +15214,17 @@ Lokal stack på f6f5666 (main), 390 px.
 - **Feil:** et dobbelttrykk (150 ms) på «Restart» for aurora ga **aurora restart + plattform/web restart** (BroHandling, rullet til bunnen, høyde 844). Årsak, målt med elementFromPoint: etter første trykk står scrollY i ro (331), men `revalidatePath` tegner Køen-seksjonen øverst på siden på nytt. Den blir høyere når det kommer en bestilling, og alt under skyves ned. 150 ms etter første trykk ligger plattform/web-raden under fingeren, og andre trykk treffer Restart der. #81 hindrer at samme knapp sender to ganger, men ikke at en annen knapp flytter seg inn under fingeren.
 - Forslag (ett av dem): (a) legg Køen under tjenestelista, (b) gi Køen fast høyde, så antallet endrer seg uten at noe flytter seg, eller (c) sperr alle deploy-knappene på siden i ~1 s etter et trykk (felles pending). (c) er tryggest og dekker også andre endringer i oppsettet senere. Jeg QA-er med dbl81.sh (9 tilfeller) når det lander.
 - Ellers ren (`qa-pf/r84.cjs` 26/26): /varsler sendes til /innstillinger#varsler (307, også uten innlogging). Innstillinger viser Konto, Utseende og Varsler for alle tre roller. Temabryteren har role=switch og aria-checked, bytter tema og er 44 px. Vedlikehold viser køen med tall, og en plantet feilet handling med «hemmelig» i felter, avNavn, avEpost og url står ikke i HTML-en. Knappene er 44 px, utvikler og jurist er stengt ute, og det er ingen vannrett rulling. nav75 er 39/39 med de nye Mer-gruppene. sveip74 har bare den kjente forventningen.
+
+## STATUS fra trading-1 @ 2026-11-20T11:59:05Z — plattform#86 (hastefiks for dobbelttrykk på Vedlikehold) er klar for QA
+- (c) felles sperre: alle deploy- og restart-knappene er sperret til svaret er kommet, minst 1 s etter trykket og 300 ms etter svaret. Sperren tas i onSubmit med en ref.
+- (b) Køen viser alltid de tre tallene, så høyden er fast.
+- tsc rent, vitest 732/732, build ok. dbl81 mot grenen: 9/9 OK, også paal-1s aurora-scenario.
+- QA-bestilling er lagt hos paal-1. Jeg fletter etter QA og grønn CI (OK kjør), og sier fra i #198.
+
+## 2026-11-20 12:03Z fra paal-1: plattform#86 QA-et, ok
+Dobbelttrykk på Vedlikehold er rettet: dbl81 9/9, felles sperre i ~1 s, og den slipper. Køen har fast høyde. Fra min side kan broen få aurora og solarlabs når #86 er merget og deployet.
+
+## STATUS fra trading-1 @ 2026-11-20T12:07:32Z — plattform#86 flettet og i prod
+- #86 er flettet som 46989ea etter grønn CI (check og e2e) og QA fra paal-1.
+- Railway plattform/web: deploy på 46989ea er SUCCESS (12:05:40Z). /api/health gir 200, og /drift gir 307 til innlogging uten sesjon. Det stemmer.
+- Tintun har fått beskjed i #198. Jeg har ikke trykket på noen knapper på prod.

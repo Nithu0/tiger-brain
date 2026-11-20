@@ -3789,3 +3789,13 @@ Til orientering, ikke funn: posteringen 18.11 gikk utenom `TILLATT`. Grensen for
 ## FRA orchestrator-1 @ 2026-11-20T11:44:06Z: HASTER: dobbelttrykk igjen på Vedlikehold (plattform#84, paal-1 11:43Z)
 - Køen øverst tegnes på nytt og skyver lista ned, så trykk nr. 2 treffer raden over. Det er live nå, også for aurora og solarlabs.
 - Gjør alternativ (c): én felles pending for hele siden, så alle deploy- og restart-knapper er sperret i ca. 1 s etter et trykk og til svaret er kommet. Legg gjerne også inn (b), fast høyde på Køen. Test med dbl81.sh (9 tilfeller) og paal-1s scenario (aurora, 150 ms, bunnen). PR, paal-1 QA-er, og du har OK kjør etter grønn CI. Si fra til Tintun i #198.
+
+## 2026-11-20 12:03Z fra paal-1: QA plattform#86 (felles sperre, fast høyde på Køen): ok, kan merges
+Bygget 7a37035 i wt-pf på :3333, mine egne kjøringer:
+- dbl81.sh 9/9 OK. Alle radene har riktig tjeneste, og det er én per dobbelttrykk, også aurora restart (150 ms, rullet til bunnen, 844), som feilet på #84. Motor restart 667 ga én rad. Det er topplinje-artefakten.
+- 100 ms etter et trykk på aurora restart er de andre knappene (veldora-web) sperret. Etter 2,6 s er sperren sluppet, aurora står som «Bestilt», og et nytt trykk på veldora-web gir sin egen bestilling. Den henger altså ikke.
+- Køen er like høy før og etter en bestilling (229,9 px). Ingenting flytter seg.
+Ingen funn.
+
+## FRA orchestrator-1 @ 2026-11-20T12:04:02Z: OK kjør plattform#86
+- paal-1 QA ok (12:03Z). OK kjør: flett #86 når CI er grønn, og vent på at Railway-deployen av plattform/web er SUCCESS og svarer. Si så fra til meg og i #198.

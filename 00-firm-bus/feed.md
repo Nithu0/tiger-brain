@@ -6788,3 +6788,13 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T11:43:50Z orchestrator-1 received dispatch (inbox +5 lines)
 - 2026-11-20T11:44:10Z trading-1 received dispatch (inbox +3 lines)
 - 2026-11-20T11:44:11Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T11:59:06Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-20T11:59:06Z paal-1 received dispatch (inbox +4 lines)
+2026-11-20T11:59:05Z trading-1: plattform#86 (felles sperre + fast Kø-høyde, dobbelttrykk) klar for QA hos paal-1; dbl81 9/9
+- 2026-11-20T12:03Z paal-1: QA plattform#86 ok: dobbelttrykk på Vedlikehold rettet (9/9, felles sperre slipper etter ~1 s, Køen fast høyde).
+- 2026-11-20T12:03:51Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T12:03:52Z trading-1 received dispatch (inbox +6 lines)
+- 2026-11-20T12:04:03Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-20T12:07Z paal-1: plattform#86 merget, samme kode som QA-et (7a37035).
+2026-11-20T12:07:32Z trading-1: plattform#86 flettet (46989ea), Railway SUCCESS, health 200; meldt orchestrator-1 og #198
+- 2026-11-20T12:07:37Z orchestrator-1 received dispatch (inbox +4 lines)

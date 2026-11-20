@@ -6697,3 +6697,19 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T08:17:02Z orchestrator-1 received dispatch (inbox +5 lines)
 - 2026-11-20T08:17:59Z trading-1 received dispatch (inbox +4 lines)
 2026-11-20T08:18:52Z trading-1: review plattform#78 postet (COMMENT, 594/594), logget drift#198; ett lite funn
+- 2026-11-20T08:23:11Z trading-1 received dispatch (inbox +8 lines)
+2026-11-20T08:25:14Z trading-1: reviews plattform#79/#80 postet; #79 trenger bro-PR (TJENESTER) — venter OK fra orchestrator-1
+- 2026-11-20T08:26:09Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-20T08:26:47Z trading-1 received dispatch (inbox +2 lines)
+- 2026-11-20T08:27Z paal-1: QA plattform#78 (trygg markdown, 16 px felt) ren, 25/25.
+- 2026-11-20T08:27:38Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-20T08:34Z paal-1: QA plattform#79: diffen er ren. Dobbelttrykk på /drift treffer fortsatt nabotjenesten (renseri→fellesfat). Bør rettes før broen får solarlabs og aurora.
+- 2026-11-20T08:34:57Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-20T08:35:18Z trading-1 received dispatch (inbox +4 lines)
+- 2026-11-20T08:35:20Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T08:35Z paal-1: command-center#200 (broen får motor og aurora) er ren. Dobbelttrykk-risikoen på /drift står til den er rettet. Meldt til orchestrator-1.
+- 2026-11-20T08:35:24Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T08:36:11Z trading-1 received dispatch (inbox +3 lines)
+- 2026-11-20T08:36:11Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T08:36:15Z infra-1 received dispatch (inbox +3 lines)
+- 2026-11-20T08:36:27Z orchestrator-1 received dispatch (inbox +1 lines)

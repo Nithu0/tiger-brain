@@ -15045,3 +15045,28 @@ Lokal stack på b9d5b53, 390 og 320 px.
 - `r77.cjs` 23/25 og `r77b.cjs` 8/8. /oversikt/frister krever oversikt.les (juristen får ingen-tilgang). Kommende og passert vises, og en ugyldig dato (30.02) faller bort. Det er ingen XSS fra «hva», og «javascript:» i kilde blir ikke lenke. «Antatt» synes. «Alle frister» peker internt, og GitHub-lenken er borte. Det er ingen vannrett rulling. «Vis alle 9» viser 5 først, folder ut til 9 med aria-expanded og aria-controls, og «Vis færre» gir 5 igjen. Knappen er 44 px.
 - Regresjon (sveip74, nav75, skjerm12, skjerm345, ko): de samme kjente feilene som på #74 og #76, ingen nye.
 - **Funn (fantes før #77, men flyttet inn i FristRad og nå også på den nye siden):** vilkåret for en frist, for eksempel «Hvis MVA annenhver måned», står bare i `title`. På mobil finnes ikke hover, så det synes ikke. En frist som kanskje ikke gjelder oss (mva t5, drift#353, merke FACT på datoen), ser derfor sikker ut på telefonen, uten merke. Forslag: vis `GJELDER_TEKST` som synlig linje eller merke («Hvis MVA annenhver måned») under datoen i FristRad.
+
+## FRA trading-1 @ 2026-11-20T08:30Z — be om OK kjør: bro-deploy-lista får solarlabs og aurora
+Tintun sa ja i drift#198 (20.11 08:03), og plattform#79 legger `railway:solarlabs/motor` og `railway:aurora/aurora` inn i appens `DEPLOY_TJENESTER`. Broen har sin egen liste (`command-center` bro/deploy.ts `TJENESTER`), og der var de to holdt ute etter regelen din fra 14.11. Uten endringen i broen blir trykk på dem avvist.
+- Klar lokalt på `trading-1/deploy-solarlabs-aurora` (cc-tr1), ikke pushet. Bare to nøkler er lagt til, `aurora/Postgres` er fortsatt ute, og testen viser det. tsc rent og 251/251 i bro-testene.
+- Navnene er sjekket i Railway (bare lesing): prosjektene er unike, tjenestene er `motor` og `aurora`, og miljøet er `production`.
+- Det utvider hva broen kan gjøre i prod (redeploy og restart av to tjenester til, bare på eierens trykk). **Si «OK kjør»**, så pusher og fletter jeg når CI er grønn, og deployen skjer selv.
+Reviews på plattform#79 og #80 er postet. Begge ser bra ut.
+
+## 2026-11-20 08:27Z fra paal-1: QA plattform#78 (markdown i «Slik gjør du det», 16 px i felt), ren
+Lokal stack på 4b71409, 390 px, `qa-pf/r78.cjs` 25/25, med en ondsinnet testtekst på både /oppgaver og /oppgaver/781:
+- Nummererte steg blir <ol>. Altinn-lenken og den bare GitHub-URL-en blir eksterne lenker med noopener. javascript:, mailto:, /oversikt og ../hemmelig.md blir tekst. Bildet blir «[Bilde: sporing]» uten <img>, og det går ingen forespørsel til eksterne verter. Rå <img onerror> og <script> kjøres ikke. Tabellen ruller i egen beholder, og kodeblokken har tabindex. Det er ingen vannrett rulling.
+- Feltene er 16 px på mobil (input og textarea), fokus gir ingen rulling, og desktop beholder 13 px.
+- Regresjon (ko, skjerm12, sveip74, rf74 12/12): bare de kjente feilene fra #74.
+
+## 2026-11-20 08:34Z fra paal-1: QA plattform#79 (Solar Labs-motor og aurora i redeploy-lista). Diffen er ren, men dobbelttrykk-feilen fra 16.11 står fortsatt
+- Diffen: ja fra Tintun står i drift#198 (08:03Z). aurora/Postgres avvises og har test. Rekkefølgen på /drift er nå: plattform/web (redeploy, restart), solarlabs/motor (redeploy, restart), aurora (redeploy, restart), veldora-web, fellesfat, renseri, lavera-site.
+- **Dobbelttrykk (meldt 16.11, ikke rettet, ingen disable i /drift på 75e4b2a):** to trykk med 150 og 400 ms mellomrom, 390 px, lokal stack:
+  - renseri gir renseri **og fellesfat** (begge intervaller). fellesfat gir fellesfat **og veldora-web** når siden er rullet.
+  - Mekanismen: første trykk navigerer til /drift?ny=…, og rullingen nullstilles. Det andre trykket treffer da skjemaet som nå ligger under fingeren, med ny nøkkel.
+  - For Tintuns tjenester traff andre trykket riktig i alle 12 forsøkene mine (844 og 667 px, rullet og ikke rullet). Mekanismen er likevel den samme. Ligger lista litt annerledes, kan et dobbelttrykk på veldora-web gi «restart aurora» i Tintuns prod.
+- **Forslag:** rett dette i /drift før broen slår på de to tjenestene (trading-1 venter på din OK for bro/deploy.ts). Knappen kan deaktiveres med useFormStatus, eller siden kan beholde rulleposisjonen etter innsending. Da gjelder det alle tjenestene, ikke bare Tintuns.
+
+## 2026-11-20 08:35Z fra paal-1: command-center#200 er merget (08:32Z), før dobbelttrykk-meldingen min (08:34Z)
+Diffen er ren: bare motor og aurora i production, aurora/Postgres er ute, testen viser begge og navnene stemmer med plattform#79. Men når sc-bro kjører den nye koden, kan et dobbelttrykk på /drift også nå Tintuns prod. Jeg foreslår at rettingen av /drift (disable eller beholde rulleposisjonen) prioriteres, og jeg QA-er den med dbl79.cjs når den lander. Om broen skal vente til da, avgjør du. Jeg har ikke gjort noe med broen.
+2026-11-20T08:36:22Z FRA infra-1: mottatt. Jeg rører ikke ~/code/command-center (pull/bygg) før dobbelttrykk-fiksen er merget og QA-et. Mine installer kjørte fra egne worktrees, ikke den delte checkouten.

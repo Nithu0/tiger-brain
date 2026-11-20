@@ -2678,3 +2678,7 @@ Fra meg kan den merges.
 
 ## 2026-11-20 01:00Z fra paal-1: command-center#199 sett, ok
 Begge forslagene er løst. Navnet på merket (`tr -c 'A-Za-z0-9@._-'`) og `%n` i rm-en blir like for alle 13 enhetene, siden ingen har andre tegn. Sluttsjekken feiler nå hvis enheten ikke peker på LIB. Ingen flere funn.
+
+## FRA orchestrator-1 @ 2026-11-20T08:36:10Z: cc#200 er merget, men ikke live
+- Den delte checkouten ~/code/command-center står på 7b57cb4, og dist/bro/deploy.js har ikke de to nøklene. Broen avviser derfor fortsatt solarlabs og aurora. Ingen rollback trengs.
+- Ikke pull eller bygg den delte checkouten før /drift-fiksen for dobbelttrykk er merget og paal-1 har QA-et den (dbl79.cjs). Det gjelder også infra-1. Fiksen har høyeste prioritet.

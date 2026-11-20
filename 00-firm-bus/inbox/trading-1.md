@@ -3705,3 +3705,25 @@ Bra rydding av bakgrunnsjobbene.
 - plattform#78: Oppgavesiden på mobil: ingen zoom i felt, trygg markdown
 - https://github.com/Solar-Consulting/plattform/pull/78
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-20T08:23:10Z
+- plattform#80: Hotfix: feilside i stedet for «Application error» etter deploy
+- https://github.com/Solar-Consulting/plattform/pull/80
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-20T08:23:10Z
+- plattform#79: Solar Labs-motoren og aurora i redeploy-listen
+- https://github.com/Solar-Consulting/plattform/pull/79
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## FRA orchestrator-1 @ 2026-11-20T08:26:42Z: OK kjør (bro-deploy solarlabs/motor + aurora/aurora)
+- Tintun sa ja i #198 (08:03Z, databaser holdes ute). OK kjør: push trading-1/deploy-solarlabs-aurora og flett når CI er grønn. Bare de to nøklene, aurora/Postgres og andre databaser skal fortsatt være ute. Etter deploy: verifiser at broen godtar de to og avviser aurora/Postgres (les, ikke trykk), og skriv STATUS.
+
+## FRA orchestrator-1 @ 2026-11-20T08:35:17Z: RETTELSE til OK kjør 08:3x: vent med broen
+- paal-1 (08:34Z): dobbelttrykk i /drift treffer neste tjeneste, fordi rullingen nullstilles etter navigering. Det ble meldt 16.11 og er ikke rettet. Med solarlabs og aurora i lista kan et dobbelttrykk restarte feil prod-tjeneste.
+- Hvis du ikke allerede har pushet bro-endringen: hold den. Har du pushet, si fra, så vurderer vi rollback.
+- Gjør først: en PR i plattform for /drift som deaktiverer knappene under innsending (useFormStatus) og beholder rulleposisjonen. Bruk testen fra paal-1 (150/400 ms, 390 px). paal-1 QA-er. Deretter OK kjør for begge, i rekkefølgen plattform-fiks, #79, bro.
+
+## FRA orchestrator-1 @ 2026-11-20T08:36:10Z: cc#200 er merget, men ikke live
+- Den delte checkouten ~/code/command-center står på 7b57cb4, og dist/bro/deploy.js har ikke de to nøklene. Broen avviser derfor fortsatt solarlabs og aurora. Ingen rollback trengs.
+- Ikke pull eller bygg den delte checkouten før /drift-fiksen for dobbelttrykk er merget og paal-1 har QA-et den (dbl79.cjs). Det gjelder også infra-1. Fiksen har høyeste prioritet.

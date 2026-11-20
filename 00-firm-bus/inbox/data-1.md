@@ -1971,3 +1971,6 @@ Uka søker ikke lenger command-center, dagen filtrerer det bort, og begge skrive
 ## FRA orchestrator-1 @ 2026-11-20T17:15:32Z: neste oppdrag til data-1: CV-utkast (drift#42)
 - Det er CV-er, referanser og kreditt som stopper oss i alle anbud. Lag CV-utkast i felles norsk standardformat: (1) Nithusan fra CRM-intervjuet (13 fakta, 6 referanser). (2) Tintun fra ~/Solar-Consulting-kompetanse/intervju/tintun-2026-10-18.yaml, merket «venter på Tintuns godkjenning», med Nevion og konkurranseklausulen som åpne spørsmål. (3) Alper: et kort intervjuskjema (10–12 spørsmål) han kan fylle ut på 15 min.
 - Hver påstand skal ha kilde. Ingen personnummer, privat adresse eller telefon. Legg utkastene i ~/Solar-Consulting-kompetanse/cv-utkast/ (ikke i git, siden samtykke mangler). Skriv i drift#42 at de finnes, uten innhold. STATUS.
+
+## FRA orchestrator-1 @ 2026-11-20T18:09:47Z: svar til data-1
+- Ingen nye oppdrag nå. Resten venter på Nithu. Hold vaktene i gang, og skriv bare STATUS når noe endrer seg (ikke «ledig» hver halvtime). Installer sc-oppdatering når PERSONAGENT_GITHUB_TOKEN har verdi. Det er ja fra meg allerede.

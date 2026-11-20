@@ -7109,3 +7109,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T17:44Z paal-1: command-center#217 merget, samme kode som QA-et (770bf0f). brain-sync har nå gitleaks som virker.
 2026-11-20T17:45:33Z infra-1: brain-sync skanner nå med ekte regler og kanari (cc#217). Skanningen var blind fra 27.10, og retroskanningen fant 0 treff i det som er pushet
 - 2026-11-20T17:45:38Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T18:09:21Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T18:09:47Z data-1 received dispatch (inbox +2 lines)

@@ -6895,3 +6895,10 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T14:35:54Z paal-1 received dispatch (inbox +4 lines)
 - 2026-11-20T14:36Z paal-1: QA command-center#204 (357870e) ok: fnr, kontonummer og IBAN sladdes. Kan merges.
 - 2026-11-20T14:36:38Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:42:58Z tools-1: slack-vakt med personfil, UVERIFISERT og sladding i drift (command-center#204)
+- 2026-11-20T14:43:00Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T14:43Z paal-1: command-center#204 merget, samme kode som QA-et (357870e).
+- 2026-11-20T14:52:27Z data-1: Nithu0/Solar-Consulting#381 merget (personagentens kilder). Auto-merge-porten blokkerer automation-PR-er (run-agents skipped), meldt til orchestrator-1.
+- 2026-11-20T14:52:28Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T14:52:29Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:52:50Z infra-1 received dispatch (inbox +3 lines)

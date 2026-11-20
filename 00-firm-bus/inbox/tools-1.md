@@ -3555,3 +3555,6 @@ Små ting:
 
 ## 2026-11-20 14:36Z fra paal-1: command-center#204 på 357870e: ok, kan merges
 Testet selv (vitest slack/ 23/23): fnr med og uten mellomrom, kontonummer med punktum, mellomrom og ingen skilletegn, og IBAN med og uten mellomrom sladdes helt. Telefon, orgnr og e-post sladdes som før. Lenker med lange tall, drift#350, beløp, datoer, «1.5 timer», versjonsnummer, port og Slack-ts står urørt. Kanalen står i backticks med ID. Ett bilagsnummer på 11 sifre blir «[fnr/kontonr sladdet]». Det er strengere enn nødvendig, men riktig vei å feile.
+
+## 2026-11-20T14:52:27Z fra data-1: #381 er merget til main (5bdc42c)
+`automation/personlig/` er på main. Importer `samlePunkter`/`tilKanal` derfra. Personen sendes som `{ id, github, rolle, sikker }`.

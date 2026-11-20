@@ -6809,3 +6809,54 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T13:11:46Z data-1 received dispatch (inbox +2 lines)
 - 2026-11-20T13:14:04Z data-1: kravsjekk av topp 5 ferdig. Entur NEI (omsetning), de 4 andre UNKNOWN (krav i konk.grunnlag). Kreditt A (#190) er nøkkelen. Nasjonalbiblioteket nå nr. 1.
 - 2026-11-20T13:14:07Z orchestrator-1 received dispatch (inbox +11 lines)
+- 2026-11-20T13:47:56Z tools-1: sc-bro-koden er lagt i nytt privat repo Solar-Consulting/sc-bro (kopi, broen kjører fortsatt fra command-center; gitleaks rent; tintun2602 har tilgang)
+- 2026-11-20T13:49:30Z orchestrator-1: Slack personlige agenter startet (tools-1 lead, data-1 kilder, learning-1 DPA, paal-1 QA), spec i 00-claude-inbox/solar-consulting
+- 2026-11-20T13:49:30Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:49:30Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:49:34Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:49:34Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:50Z paal-1: Slack-agentene: vakten følger Nithu0/Solar-Consulting. Tre avklaringer til orchestrator-1 før første DM (2FA og passord, Baber uten rolle, beslutningstekst i DM).
+- 2026-11-20T13:50:40Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-20T13:51:05Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:51:06Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:51:06Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:51:59Z tools-1 received dispatch (inbox +29 lines)
+- 2026-11-20T13:52Z paal-1: nettsiden etter redesign: Microsoft riktig, ingen andre partnere. Norway Solar-sitatet står fortsatt uten samtykke, nå på tre sider. Til Tintun via orchestrator-1.
+- 2026-11-20T13:52:20Z orchestrator-1 received dispatch (inbox +5 lines)
+2026-11-20T13:54:04Z learning-1: drift#361 merget: Slack som databehandler (USA, SCC, DPA må signeres), utkast i #20/#19
+- 2026-11-20T13:54:04Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-20T13:54:36Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:54:36Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:54:36Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:55Z paal-1: QA drift#361 (Slack-DPA, A-11) ren. Slettefristen kan lukkes: innhold over ett år slettes på gratisplanen. Sendt til learning-1.
+- 2026-11-20T13:55:29Z learning-1 received dispatch (inbox +4 lines)
+- 2026-11-20T13:55:31Z tools-1 received dispatch (inbox +5 lines)
+- 2026-11-20T13:56Z paal-1: QA Solar-Consulting#380 (Slack-app «Solar») ren, med små scopes. Sperren for tofaktor og passord i spec-en kan ikke sjekkes med disse scopene. Forslag til orchestrator-1.
+- 2026-11-20T13:56:16Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-20T13:56:29Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:56:33Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:56:41Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:58:25Z data-1: Slack del 2: personagentens kilder i Nithu0/Solar-Consulting#381 (utkast), til QA hos paal-1
+- 2026-11-20T13:58:26Z paal-1 received dispatch (inbox +9 lines)
+- 2026-11-20T13:58:27Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-20T13:58:29Z tools-1 received dispatch (inbox +5 lines)
+- 2026-11-20T13:58:53Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:58:54Z tools-1: Slack-appen Solar opprettet og installert i solar-consulting-hq (A0CKK7VBXAS); venter på at Nithu legger inn tokens med nano
+- 2026-11-20T13:58:54Z orchestrator-1 received dispatch (inbox +12 lines)
+- 2026-11-20T13:58:58Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T13:59:11Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:00:37Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:00:39Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-20T14:00:58Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:01Z paal-1: QA Solar-Consulting#381 (personagentens kilder): reglene holder, men feedlinjer bærer økonomi og kundenavn forbi dem. Forslag til data-1.
+- 2026-11-20T14:01:10Z data-1 received dispatch (inbox +8 lines)
+- 2026-11-20T14:01:10Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:01:30Z data-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:01:35Z data-1 received dispatch (inbox +2 lines)
+2026-11-20T14:02:28Z learning-1: Solar-Consulting#382 bid-gate grønn igjen (rød siden #39 3.10); beslutning: referanser GREEN i matrisen stemmer ikke for IT
+- 2026-11-20T14:02:29Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-20T14:02:32Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T14:02:47Z learning-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:03:29Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-20T14:03:30Z paal-1 received dispatch (inbox +7 lines)
+- 2026-11-20T14:03:32Z orchestrator-1 received dispatch (inbox +3 lines)

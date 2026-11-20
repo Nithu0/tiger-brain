@@ -15272,3 +15272,62 @@ Dobbelttrykk på Vedlikehold er rettet: dbl81 9/9, felles sperre i ~1 s, og den 
 >>   - Valgdirektoratet, som referanse: ingen krav i kunngjøringen. Frist 23.11 kl. 09.
 >> Hvordan kravene pleier å se ut (horizon, 591 IT-kunngjøringer med krav): 58 % krever referanser, 55 % kredittvurdering, 31 % ISO og 10 % omsetning. Der omsetning kreves, er det typisk 2–3 ganger årlig kontraktsverdi, eller 40–50 mill. på store rammeavtaler.
 >> Konklusjon: Nasjonalbiblioteket er nå nr. 1. Det som avgjør for oss, er kredittvurderingen (#190) og konkurransegrunnlagene, som Nithu må laste ned.
+
+## 2026-11-20 13:50Z fra paal-1: Slack-agentene, mottatt. Tre ting å avklare før første DM
+Vakten følger nå også Nithu0/Solar-Consulting. Jeg QA-er PR-ene fra tools-1 og data-1 mot spec-en (rettigheter, kundedata, tokens). Før agentene sender noe annet enn lenker:
+1. **Kontosikkerhet i Slack (drift#351):** alle kontoene fikk samme startpassord, bare én har byttet, tofaktor er av, og alle adressene er aliaser til kontakt@. Personagentene sender beslutninger og (for eier) økonomi i DM. Forslag: passordbytte og tofaktor for alle før velkomst-DM-en, eller i det minste før temaene beslutninger og økonomi slås på.
+2. **Baber** er medlem i Slack, men har ingen rolle i plattform-brukerkartet, så vidt jeg vet (det står i prod-miljøet, så det er UNKNOWN for meg). «Rettighet følger plattformen» bør bety at uten rolle får man bare offentlige kanaler, ingen DM med tall. Det bør stå i spec-en.
+3. **Beslutninger i DM:** punktene i #126 kan inneholde navn og avtaler. Forslag: DM-en gir antall og lenke til /beslutninger, ikke teksten. Det samme gjelder anbud-topp5 (tittel og frist er greit, ikke vurderinger).
+
+## 2026-11-20 13:52Z fra paal-1: nettsiden etter redesignet 19.11 (Solar-Consulting#378): Norway Solar-sitatet står fortsatt uten samtykke (til Tintun)
+Vakten følger nå Nithu0/Solar-Consulting, så jeg sjekket det som var merget der etter 14.11. Live-sjekk i Chromium, 390 px, 8 sider:
+- Microsoft er behandlet riktig: ingen merke, og linjen i bunnteksten er tatt bort, fordi den bygde på en antakelse. Det står ingen andre partnere (Storebrand, Telenor, Loyalty og andre). Det er ingen vannrett rulling.
+- **«Norway Solar AS har benyttet Solarconsulting som samarbeidspartner …»** står fortsatt på /solenergi, og navnet står nå også på forsiden og /om-oss. drift#41 har skriftlig samtykke bare fra Sauda (18.10). For Norway Solar finner jeg ingenting. Det var punkt 4 i «Før vi selger» (Tintun, 20.12). Nå står det på flere sider. Forslag: legg samtykket i drift#41, ellers fjern navnet til det finnes.
+- «Før vi selger» er oppdatert: Vercel er Pro (FACT, #374, 14.11). Vercel-DPA gjenstår.
+
+## STATUS fra learning-1 @ 2026-11-20T13:54:04Z: Slack som databehandler (drift#361 merget, utkast i #20 og #19)
+- FACT fra slack.com 20.11: data lagres i **USA** på gratis og Pro. Dataregion krever Business+. Grunnlag: SCC. **DPA er ikke automatisk** og må signeres av en med fullmakt. Om den dekker gratisplanen er UNKNOWN. DPF for Salesforce er UNKNOWN.
+- hosting-og-underleverandorer.md (Slack-raden) og art-30 (ny A-11, overføring rettet i A-3 og A-7) er oppdatert. Ingenting er endret i Slack.
+- **Til Nithu:** signer Slacks DPA før personagentene sender (#20 pkt. 1). **Forslag:** varsler fra Horizon i kanaler får samme regel som DM (bare antall og lenker), og da holder Slack seg ute av Bilag 3 (#19).
+
+## 2026-11-20 13:56Z fra paal-1: QA Nithu0/Solar-Consulting#380 (Slack-appen «Solar»): ren, men tillegg 1 i spec-en kan ikke sjekkes med disse scopene
+- Manifestet har bare app_mentions:read, chat:write, commands, im:history, im:write og users:read. Det er ikke channels:history, ikke reaksjoner og ikke users:read.email, så boten ser ikke e-post. Socket Mode er på, og det er ingen Request URL og ingen token-rotasjon. Det er ingen tokens i README eller manifest. `~/.config/firm/slack-solar.env` har 600, og begge linjene er tomme (jeg leste bare om de har verdi). Det er riktig.
+- **Tillegg 1 (velkomst og beslutninger/økonomi først etter passordbytte og tofaktor):** med disse scopene kan agenten ikke sjekke noe av det. `has_2fa` i users.info kommer så vidt jeg vet bare med for admin-tokens, og team.accessLogs krever admin-scope. Passordbytte kan ikke leses i API-et i det hele tatt. Dette er UNKNOWN, og jeg har ikke prøvd mot Slack. Forslag: (a) Nithu slår på «Require two-factor authentication» for workspacet mens Pro-prøven gjelder (til 17.12; på gratisplanen kan det trolig ikke kreves), eller (b) Nithu bekrefter per person, og det lagres som et flagg i preferansefila. Uten et av dem kan sperren i tillegg 1 ikke håndheves i koden.
+
+## 2026-11-20T13:58:25Z — from data-1: STATUS Slack del 2 (kilder) klar for QA
+>> Nithu0/Solar-Consulting#381 er et utkast, så auto-merge ikke tar den før QA og OK kjør. Modulen `automation/personlig/` lager punkter per person fra fem kilder: GitHub (tildelt, klar-for, nevnt), frister.json, feed-enlinjere, OPERATOR-TODO (bare Nithu), anbud-topp5.json og antall beslutninger fra broen.
+>> Spec-reglene og tillegg 1, 2, 3 og 5 ligger i koden og er testet (17/17). Ingen Slack-kode.
+>> Røyktest mot ekte data: Nithu 60, Tintun 38, jurist 19, Baber 0. Ingen kilde feilet.
+>> Interfacet er sendt til tools-1. paal-1 er spurt om QA. Når paal-1 har gått god for den og du sier OK kjør, markerer jeg den klar, og da merger auto-merge den når sjekkene er grønne.
+>> Ny fil: anbud-topp5.json i 00-claude-inbox/solar-consulting. Den har bare tittel, oppdragsgiver, frist og lenke.
+
+## STATUS fra tools-1 @ 2026-11-20T13:58:54Z: Slack del 1, appen Solar er opprettet og installert
+- FACT: responderen kjørte ingen steder. Den fantes ikke lokalt, ikke i Railway, ikke i cron, og det finnes ingen SLACK_APP_TOKEN i repo-secrets. Agentene i Actions poster med SLACK_BOT_TOKEN (gammelt workspace, ASSUMPTION).
+- Manifestet er oppdatert og merget: Nithu0/Solar-Consulting#380. Navnet er Solar, og scopene er app_mentions:read, chat:write, commands, im:history, im:write og users:read. Socket Mode, DM-fanen, /meg og interaktivitet er på. Manifestet har ingen admin-scopes.
+- Laget med Slack CLI: `slack init` i ~/code/.wt/slack-solar-app (eget CLI-prosjekt, ikke i repoet), deretter `slack manifest validate` (Valid) og `slack app install --team T0CJG178AFR`. Appen heter Solar, har app-ID A0CKK7VBXAS og er installert. drift#363 oppdaterer tilganger/slack.md, punkt 1.
+- Tokens: CLI-en kan ikke levere dem uten å vise dem, og app-level-tokenet (xapp) lages bare i nettleseren. Dette må Nithu gjøre (ca. 2 min):
+  1. https://api.slack.com/apps/A0CKK7VBXAS/general → App-Level Tokens → Generate Token and Scopes → navn «socket», scope connections:write → Generate.
+  2. https://api.slack.com/apps/A0CKK7VBXAS/oauth → kopier Bot User OAuth Token (xoxb).
+  3. Én linje: `nano ~/.config/firm/slack-solar.env`. Fila finnes (600) med SLACK_APP_TOKEN= og SLACK_BOT_TOKEN=. Lim inn etter =, så Ctrl+O, Enter, Ctrl+X.
+  4. I Slack: `/invite @Solar` i #anbud, #nyheter, #drift og #dev.
+  Når fila er fylt, setter jeg SLACK_BOT_TOKEN fra fila via stdin: som secret i Nithu0/Solar-Consulting og på crm og worker i Railway anbud. Så tar jeg én testpost i #dev. Ingen DM før DPA-en er signert (#20).
+- Avvik du bør kjenne til: jeg merget #380 mens `test` (workflow agents) var rød. Repoet krever ikke grønne sjekker. Rødt skyldes ikke #380, som bare endrer JSON og README for responderen. `automation/lib/bid-gate.test.mjs` feiler lokalt både på 4da4171 (før) og på c9d83da (etter), blant annet med «QUALIFIED» der testen forventer «QUALIFIED_WITH_SUPPORTING_ENTITY». Jeg har ikke funnet årsaken, og det hører til eieren av anbudsporten.
+- Del 2 neste: data-1s #381 passer for meg. Jeg bygger preferansefil, /meg og utsending mot samlePunkter/tilKanal.
+
+## 2026-11-20T14:00:36Z — from data-1: STATUS #381 rangering og topp 5
+>> Lagt til: rang 1–4 i rekkefølgen du ga, stabil sortering (frist, så id), og topp 5, totalt og lenke til hele lista per person. Testet at rekkefølgen er stabil når kildene svarer i en annen rekkefølge, og med og uten tofaktor (21/21). Røyktest: Nithu får 62 punkter, og topp 5 er drift#1 forsikring 25.11, 2FA 30.11, mva 10.12 (to linjer), SkatteFUNN/lønn 11.12.
+>> paal-1 er bedt om å ta QA på nyeste commit. PR-en står som utkast til du gir OK kjør.
+
+## 2026-11-20 14:01Z fra paal-1: QA Solar-Consulting#381 (Slack del 2, kilder): reglene i koden holder, men feeden lekker økonomi og kundenavn forbi dem
+Detaljer hos data-1. Kort: en feedlinje om saldo i Fiken går til en utvikler uten tofaktor og til kanalen, og en feedlinje med et kundenavn går gjennom vaskingen. «Bare lenker» uten flagget sender fortsatt titlene. Forslag: feeden ut for alle unntatt eier, og bare «repo#nr»-lenker uten flagget og i kanalene. Den er et utkast, så ingenting er merget.
+
+## STATUS fra learning-1 @ 2026-11-20T14:02:28Z: bid-gate (rød test), PR Nithu0/Solar-Consulting#382 til QA hos paal-1
+- **Rotårsak:** testen har vært rød siden **8e0b19a (#39, 3.10)**, ikke siden 4da4171 eller c9d83da. #39 satte QUAL-REF-001 og -002 til our_status GREEN («Solarconsulting AS har referanser»).
+  - 3 scenariotester («null referanser», «krav vi ikke oppfyller», «støtteruten i Del II») sluttet å teste det de heter. De får nå en eksplisitt «uten referanser»-matrise.
+  - 2 tester fant en ekte tekstfeil: Del I-innsigelser siterte § 8-7 (3) fra en Del II-rad. Teksten sier nå at hjemmelen ikke gjelder. Ingen utfall er endret.
+  - 56/56 i bid-gate og 395/395 i automation/lib.
+- **Beslutning til deg eller Nithu (ikke gjort):** den levende matrisen gir QUALIFIED for referansekrav i Del II, også for IT-anbud som Entur. Det stemmer ikke med drift: én sol-referanse (Sauda, samtykke ikke fornyet) og ingen IT-referanser. **Forslag:** QUAL-REF-001 og -002 settes til YELLOW, så IT-konkurranser gir «støttende foretak». Det endrer budutfallet, og derfor har jeg ikke gjort det.
+
+## 2026-11-20T14:03:28Z — from data-1: STATUS #381 rettet etter paal-1 og din avgjørelse (38db270)
+>> Feeden går bare til eiere, og også til dem bare som «repo#nr»-lenke. Det er strengere enn (1), fordi Tintun og Alper også er eiere og kundenavn ikke kan vaskes bort automatisk. Uten `sikker`, og i alle kanaler, er det ingen titler, bare «repo#nr» eller «Frist DD.MM». Samme sak og samme frist fra to kilder blir ett punkt, så topp 5 er fem forskjellige. paal-1s saldo- og kundenavnlinjer er faste regresjonstester. 26/26.
+>> Feltet er nå `person.sikker` (sendt til tools-1). paal-1 er bedt om ny QA. PR-en står fortsatt som utkast.

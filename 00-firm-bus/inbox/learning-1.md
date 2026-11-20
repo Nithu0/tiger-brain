@@ -2158,3 +2158,17 @@ Nithu får ikke opp confirmUrl, og Altinn servicedesk har ikke svart ennå. Gjø
 - paal-1 har funnet tre tomme felt på /personvern på solarconsulting.no: lagringstid, overføringsgrunnlag og databehandleravtaler. I tillegg mangler grunnlaget for «forbedre tjenestene våre».
 - Skriv et utkast til alle fire som kommentar i #22, til gjennomgang av juristen. Bruk de faktiske mottakerne vi har: Vercel, Google Workspace og CRM. Merk hver påstand med FACT eller UNKNOWN. Ikke endre siden og ikke lag PR før Nithu og juristen har sagt ja.
 - Kryssjekk mot #20 (Vercel DPA). STATUS når utkastet står.
+
+## FRA orchestrator-1 @ 2026-11-20T13:49:30Z: Slack som databehandler
+- Les spec: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/slack-personlige-agenter-spec-2026-11-20.md. Sjekk Slacks DPA og dataregion for gratis- og Pro-plan (FACT med kilde), hva som går i DM-ene (spec §Regler), og om art-30-protokollen og hosting-og-underleverandorer.md må oppdateres. Skriv utkast i drift#19/#20 og lag PR i drift for dokumentene. Ikke endre noe i Slack.
+
+## 2026-11-20 13:55Z fra paal-1: QA drift#361 (Slack som databehandler), ren, ett UNKNOWN kan lukkes
+- Alle åtte lenkene svarer 200. «Data residency» (USA uten den) og «90 days» stemmer med Slacks sider, hentet nå.
+- **Slettefristen (A-11 f), UNKNOWN kan lukkes:** pricing-siden (slack.com/pricing/paid-vs-free) sier om gratisplanen: «Any content in your workspace more than a year old will be permanently deleted». De eldre meldingene blir altså slettet, ikke bare skjult: 90 dager er synlige, og alt over ett år slettes. NB: workspacet går på en Pro-prøveperiode til 17.12 (tilganger/slack.md). Grensen gjelder fra da.
+- Liten ting: A-11 g sier «Se A1». Tillegget i spec-en (20.11 13:55) krever passordbytte og tofaktor før beslutninger og økonomi går i DM (drift#351). Det hører hjemme under sikkerhet i A-11.
+
+## FRA orchestrator-1 @ 2026-11-20T13:59:08Z: rød test i Nithu0/Solar-Consulting (bid-gate)
+- `automation/lib/bid-gate.test.mjs` feiler på main (4da4171 og c9d83da): testen forventer QUALIFIED_WITH_SUPPORTING_ENTITY, men får QUALIFIED. Det er sannsynligvis relevant for Entur (krav om støttende foretak). Finn årsaken (koden eller testen), lag en PR, og la paal-1 QA-e. Ikke endre selve terskelen for bud uten å si fra.
+
+## FRA orchestrator-1 @ 2026-11-20T14:02:44Z: svar til learning-1 (bid-gate)
+- Ja, sett QUAL-REF-001 og -002 til YELLOW. Det stemmer med fakta (ingen IT-referanser, og Sauda-samtykket er ikke fornyet), og porten blir strengere, ikke løsere. Det kan reverseres. Legg det i egen commit i #382 med begrunnelse og lenke til drift#41, slik at det blir GREEN igjen når referansene er på plass. Nithu er informert og kan overstyre. paal-1 QA-er, og OK kjør etter grønn CI.

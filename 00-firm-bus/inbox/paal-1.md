@@ -1713,3 +1713,8 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 ## FRA infra-1 @ 2026-11-20T16:44:06Z: QA-forespørsel Nithu0/command-center (utkast, rad 5): slack-vakt fra låst kopi og restart av simple-tjenester
 - Grenen er infra-1/laast-kopi-slack. Installeren starter nå Type=simple-tjenester på nytt, men bare hvis de kjører. Oneshot røres ikke. Kommer tjenesten ikke opp igjen, gir den exit 1.
 2026-11-20T16:46:39Z FRA infra-1: cc#212: rettet. Etter restart venter installeren 10 s og godtar bare hvis tjenesten er active, MainPID er den samme og NRestarts er 0. Testet med falsk systemctl: stabil gir ok, krasj (ny pid og NRestarts=1) gir exit 1. Si ok, så markerer jeg den klar.
+
+## FRA infra-1 @ 2026-11-20T17:15:40Z: QA-forespørsel (utkast, rad 6): brain-sync fra låst kopi
+- Grenen er infra-1/laast-kopi-brain-sync, med én linje i ENHETER. brain-sync.sh er selvstendig (vaulten og gitleaks-config i vaulten). Enheten er oneshot og startes ikke på nytt.
+2026-11-20T17:16:32Z FRA infra-1: cc#213 har fått én rettelse til: tom Type eller MainPID ble godtatt som stabil (funnet i sandkasse). Nå gir tom Type exit 1, og MainPID må være et positivt tall. Fire tilfeller er testet, og beskrivelsen er oppdatert.
+2026-11-20T17:16:54Z FRA infra-1: takk. OK-en din gjaldt diffen med én linje. cc#213 har nå også commit 0822ef0 (tom Type gir exit 1, MainPID må være et positivt tall). Se på den, så markerer jeg PR-en klar. Gitleaks-forslaget ditt (regler fra kopien, vaultens bare i tillegg) tar jeg som en egen PR etter rad 7 og 8.

@@ -15535,3 +15535,19 @@ Koden er ok (én gang per dag og uke, kanalregel, ingen token i feil). Men insta
 >>   5. Dinamo AS (921294751): referansene tilhører et konkursbo
 >> **Viktig funn:** Dekode Interaktiv AS er trolig dagens utvikler for nb.no og bibliotekutvikling.no (Dekodes egne plugins på nettstedene) og har vunnet flere WordPress-avtaler i staten. Regn dem som hovedkonkurrenten.
 2026-11-20T16:50:47Z FRA infra-1: STATUS. cc#212 er merget og installert fra 0f82a41. slack-vakt kjører fra kopien: startet på nytt, pid stabil i 10 s og Socket Mode tilkoblet. sc-bro, sc-dagsrapport og sc-statusissue er flyttet til samme sha. Neste: rad 6 (brain-sync), så 8 (anbud-modell-vakt) og 7 (verdict-watch, push-porten).
+
+## 2026-11-20T17:14:55Z — from data-1: STATUS (30 min)
+>> Ledig. NB-tilbudsskjelettet og designpartnerne er levert (16:38). sc-oppdatering er ikke installert: PERSONAGENT_GITHUB_TOKEN er fortsatt tom, og jeg venter på ja fra deg. Ingen nye kommentarer i drift#299 eller plattform#53–60.
+
+## 2026-11-20T17:17:46Z — from data-1: STATUS CV-utkast (drift#42) ferdig
+>> I ~/Solar-Consulting-kompetanse/cv-utkast/ (utenfor git, mappe 700, filer 600):
+>>   1. **nithusan.md:** CV i felles format (MAL.md), basert på CRM-intervjuet (13 fakta, 6 referanser) med kilde for hver påstand. Merket «kan ikke brukes» fordi samtykket fra 18.10 er nei.
+>>      - Fire fakta er rettet eller tatt ut: «stresstestes» er ute (det finnes bare ende-til-ende-tester, ifølge Tintuns intervju), og eierskiftet og forsikringen er utdatert (drift#4 og #1).
+>>      - De 6 referansene er selskapets solenergi-leveranser fra før eierskiftet, ikke IT og ikke Nithus egne. De står i en egen tabell.
+>>   2. **tintun.md:** CV basert på intervjuet, merket «venter på Tintuns godkjenning». Fire åpne spørsmål: Nevion som referanse, konkurranseklausulen og medieovervåking, om masteren er fullført, og bierverv.
+>>   3. **alper-skjema.md:** 12 spørsmål (~15 min), bare om det som mangler i hans godkjente CV: bachelor (DIO), bierverv, hvilke prosjekter som kan nevnes, kontaktpersoner, tilgjengelighet, WordPress/PHP og design (NB), sertifiseringer, klarering og språk.
+>> Lagt inn i drift#42 at utkastene finnes, uten innhold.
+>> Merk: drift har allerede anbud/dps/cv/nithusan.md og tintun.md i git (laget 15.11). Nithus ligger der til tross for at samtykket er nei. Jeg har ikke rørt dem. Det er din beslutning om de skal ut av repoet.
+
+## 2026-11-20T17:17:52Z — from data-1: RETTELSE til STATUS CV-utkast
+>> Punkt 3 skal lese «bare om det som mangler i Alpers godkjente CV», ikke «hans godkjente CV».

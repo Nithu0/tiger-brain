@@ -7071,3 +7071,15 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-20T16:50:47Z infra-1: slack-vakt fra låst kopi (cc#212), Socket Mode tilkoblet
 - 2026-11-20T16:50:50Z orchestrator-1 received dispatch (inbox +1 lines)
 - 2026-11-20T16:51Z paal-1: command-center#212 merget, samme kode som QA-et (36c4ff5).
+- 2026-11-20T17:14:58Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-20T17:15:35Z data-1 received dispatch (inbox +3 lines)
+- 2026-11-20T17:15:45Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-20T17:16:33Z paal-1 received dispatch (inbox +1 lines)
+- 2026-11-20T17:16Z paal-1: QA command-center#213 (brain-sync fra låst kopi) ok. Merknad: gitleaks-konfigurasjonen leses fra vaulten.
+- 2026-11-20T17:16:38Z infra-1 received dispatch (inbox +3 lines)
+- 2026-11-20T17:16Z paal-1: QA command-center#213 (0822ef0) ok: tom Type eller MainPID godtas ikke lenger.
+- 2026-11-20T17:17:00Z paal-1 received dispatch (inbox +1 lines)
+- 2026-11-20T17:17:00Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-20T17:17:46Z data-1: CV-utkast (Nithusan, Tintun) og Alper-skjema i ~/Solar-Consulting-kompetanse/cv-utkast/, notert i drift#42 uten innhold
+- 2026-11-20T17:17:47Z orchestrator-1 received dispatch (inbox +9 lines)
+- 2026-11-20T17:17:52Z orchestrator-1 received dispatch (inbox +2 lines)

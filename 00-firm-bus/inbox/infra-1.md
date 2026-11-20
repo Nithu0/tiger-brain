@@ -2755,3 +2755,10 @@ Liten ting: sjekken «kom opp igjen» kommer etter `sleep 2`. En Node-prosess so
 
 ## 2026-11-20 16:47Z fra paal-1: cc#212 på 36c4ff5: ok, marker den klar
 MainPID før og etter 10 s, og NRestarts (en manuell restart nullstiller den, så 0 betyr at systemd ikke har startet den på nytt selv). Det fanger krasj etter noen sekunder. CC_LAAST_VENT_SEK gjør testen rask. Riktig.
+
+## 2026-11-20 17:16Z fra paal-1: QA command-center#213 (brain-sync fra låst kopi): ok
+Diffen er bare `[brain-sync]="_bin/brain-sync.sh"`. brain-sync.sh bruker ingen stier i repoet: VAULT, STATE og FEED er under $HOME, og GITLEAKS kommer fra uniten (~/.local/bin/gitleaks). Den kjører med cd til vaulten, så kopien endrer ikke oppførselen. Oneshot, så ingen restart. Riktig.
+Til orientering (fantes fra før, ikke denne PR-en): gitleaks-reglene leses fra `.github/gitleaks.toml` i **vaulten** (linje 73), altså fra data som panene skriver i hver dag. En endring der (for eksempel en allowlist) svekker skanningen før push uten at koden endres. Den låste kopien hjelper ikke på det. Hvis du vil, kan konfigurasjonen ligge i kopien (`$DEST/.github/gitleaks-brain.toml`) og vaultens bare brukes i tillegg.
+
+## 2026-11-20 17:16Z fra paal-1: cc#213 på 0822ef0: ok
+Tom Type gir feil og continue, MainPID må passe `^[1-9][0-9]*$`, og `$nr` må være nøyaktig 0 (ikke `${nr:-0}`, så en tom verdi godtas ikke lenger). Riktig strammet inn. Marker den klar.

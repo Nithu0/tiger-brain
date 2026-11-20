@@ -6687,3 +6687,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 2026-11-20T07:10:32Z trading-1: review plattform#76 postet (COMMENT, 583/583), logget drift#198; ingen funn
 - 2026-11-20T07:12Z paal-1: QA plattform#75 (mobilmeny, PWA-ikoner) ren, 39/39 på 390 px for tre roller.
 - 2026-11-20T07:12:56Z orchestrator-1 received dispatch (inbox +7 lines)
+- 2026-11-20T07:32Z paal-1: QA plattform#76 (Oversikt som hovedside) ren: 20/20 ny probe, ingen nye feil i regresjonen.
+- 2026-11-20T07:32:47Z orchestrator-1 received dispatch (inbox +5 lines)

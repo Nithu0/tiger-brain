@@ -15033,3 +15033,9 @@ Lokal stack på 4b2dac1, tre roller, 390 px: 39/39 (`qa-pf/nav75.cjs`).
 - jurist (uten oversikt.les): Oppgaver, Dokumenter, Varsler og Last opp, alle i bunnen og uten Mer. Ingen Oversikt.
 - Ingen sidefeil.
 Bare til orientering, ingen feil: / går fortsatt til /oppgaver, og logoen lenker til /oppgaver. Derfor brukes aldri «Oversikt aktiv på /» i koden. Vil Tintun at Oversikt skal være startsiden, må redirecten i src/app/page.tsx endres. De gamle ikonfilene er fjernet (404). Det er greit, siden manifestet peker på de nye.
+
+## 2026-11-20 07:32Z fra paal-1: QA plattform#76 (Tintuns rolige Oversikt, Oversikt som hovedside), ren
+Lokal stack på 02ded65, tre roller.
+- Ny probe (`qa-pf/r76.cjs`): 20/20. Uten innlogging gir / svaret 307 til /auth/login. Etter innlogging og fra / havner eier og utvikler på /oversikt og juristen på /oppgaver. /oversikt gir ingen-tilgang for juristen. start_url er /. Nøkkeltallcellene er like høye (120 px). Det er ingen vannrett rulling på 390 og 320 px, og ingen sidefeil. Eier ser fire nøkkeltall og utvikler tre, så figurvalget per rolle holder.
+- Regresjon: nav75 39/39, skjerm345 41/41 og sortering 21/21. sveip74, skjerm12 og ko har bare de kjente feilene fra #74 (forventninger, og Ja/Nei med 8 px mellomrom som allerede er meldt) og én forventet tekstendring («venter på svar» i stedet for «i #126»). Ingen nye feil.
+Én liten tekst, ikke feil: i Tjenester står det «Utdatert · sist kjent ok · hentet 1 min siden» på samme rad. Det leses som en selvmotsigelse. Kanskje «sist målt for 4 d siden» i stedet for tidspunktet broen leverte?

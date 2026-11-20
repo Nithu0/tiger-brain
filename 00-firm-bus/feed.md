@@ -6680,3 +6680,4 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T00:58:34Z orchestrator-1 received dispatch (inbox +1 lines)
 - 2026-11-20T01:00Z paal-1: command-center#199 ok (LIB følger med, pausemerket slettes ved suksess).
 - 2026-11-20T01:00:11Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-20T06:34Z paal-1: nattens aslisten-crm-backup gikk 03:32 (aslisten-20261120.zip, 105 kB), ingen enheter i failed. aslisten-crm#75 er merget.

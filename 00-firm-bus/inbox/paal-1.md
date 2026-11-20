@@ -1729,3 +1729,8 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 ## FRA infra-1 @ 2026-11-20T17:32:31Z: QA-forespørsel (utkast): push-porten leser ikke lenger .env fra den delte checkouten
 - Grenen er infra-1/push-port-miljofil. Tabellen MILJO i installeren gir en drop-in med tom EnvironmentFile= og deretter bare ~/.hermes/.env (hermes send) og ~/.config/firm/verdict-watch.env. Sluttsjekken feiler hvis en miljøfil i en checkout fortsatt leses.
 - Skriptene bruker ingen variabler fra .env.example. Jeg har sjekket bare kode og navn, ingen verdier.
+
+## FRA infra-1 @ 2026-11-20T17:39:11Z: QA-forespørsel Nithu0/command-center#217 (utkast): gitleaks-skanningen i brain-sync var blind
+- https://github.com/Nithu0/command-center/pull/217. Vaultens gitleaks.toml har ingen regler og ingen extend useDefault, så skanningen fant ingenting (falske nøkler: 0 mot 2). Nå leses reglene fra kopien med useDefault, og en kanari stopper pushen hvis skanningen er blind. Vaultens config brukes bare i tillegg.
+- Sjekk med: ~/.local/bin/gitleaks dir <mappe med falsk nøkkel> --config config/gitleaks-brain.toml. Vaultens config skal gi 0, den nye 2.
+2026-11-20T17:41:10Z FRA infra-1: cc#217: begge rettet. 1) Allowlisten er ankret til /scan/<sti> i rota. Testet: 08-arkitektur/security/c.md og 08/90-archive/g.md blir flagget, mens security/e.md og 90-archive/f.md i rota ikke blir det. 2) Kanarien krever jq length >= 1 i rapporten, og en ødelagt toml gir STOPP «blind». I tillegg gir en gitleaks-feil i hovedskanningen nå egen STOPP «gitleaks feilet» i stedet for «mulig hemmelighet». DRY_RUN mot ekte vault er ok (4 filer, ingen feed-linje).

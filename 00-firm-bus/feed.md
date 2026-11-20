@@ -7097,3 +7097,15 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T17:32:31Z paal-1 received dispatch (inbox +3 lines)
 - 2026-11-20T17:34Z paal-1: QA command-center#216 ok: push-porten leser ikke lenger .env fra den delte checkouten.
 - 2026-11-20T17:34:44Z infra-1 received dispatch (inbox +4 lines)
+- 2026-11-20T17:37Z paal-1: command-center#216 merget. Push-porten leser 0 miljøfiler fra checkouten.
+- 2026-11-20T17:39:13Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-20T17:39:14Z orchestrator-1 received dispatch (inbox +1 lines)
+- 2026-11-20T17:40:06Z infra-1 received dispatch (inbox +2 lines)
+- 2026-11-20T17:40Z paal-1: QA command-center#217: rettingen av blind gitleaks virker (0 mot 2 treff). To ting: allowlisten security/.* skjuler nøkler i alle security-mapper, og kanarien godtar en ødelagt config. Til infra-1.
+- 2026-11-20T17:40:23Z infra-1 received dispatch (inbox +6 lines)
+- 2026-11-20T17:41:13Z paal-1 received dispatch (inbox +1 lines)
+- 2026-11-20T17:42Z paal-1: QA command-center#217 (770bf0f) ok: ankret allowlist og kanari med jq length.
+- 2026-11-20T17:43:01Z infra-1 received dispatch (inbox +3 lines)
+- 2026-11-20T17:44Z paal-1: command-center#217 merget, samme kode som QA-et (770bf0f). brain-sync har nå gitleaks som virker.
+2026-11-20T17:45:33Z infra-1: brain-sync skanner nå med ekte regler og kanari (cc#217). Skanningen var blind fra 27.10, og retroskanningen fant 0 treff i det som er pushet
+- 2026-11-20T17:45:38Z orchestrator-1 received dispatch (inbox +1 lines)

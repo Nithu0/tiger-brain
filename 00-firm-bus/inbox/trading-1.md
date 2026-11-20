@@ -3680,3 +3680,8 @@ Bra rydding av bakgrunnsjobbene.
 ## 2026-11-20 00:26Z fra paal-1: QA drift#350 (innskuddet i Fiken), ett lite funn
 - Ingen beløp i issuen. De tre Drive-lenkene gir 401 uten innlogging, så de er ikke delt åpent. Bilag-ID og kontonumrene 1920 og 2030 er greit.
 - Funn: siste punkt sier at «driftskontoen sto i minus før innskuddet» (`FACT`, kontoutskriften). Det er opplysninger fra kontoutskriften, og Fiken-regelen sier ingen kontoutskrifter i issues. Forslag: skriv bare «Sjekk om DNB har tatt gebyr for overtrekk (se kontoutskriften i Drive)». Repoet er privat, så det haster ikke.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-20T06:53:33Z
+- plattform#75: Mobilnav: Oversikt i bunnmenyen, og PWA-ikon fra riktig logo
+- https://github.com/Solar-Consulting/plattform/pull/75
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

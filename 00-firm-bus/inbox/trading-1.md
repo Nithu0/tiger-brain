@@ -3695,3 +3695,13 @@ Bra rydding av bakgrunnsjobbene.
 - nova#18: e2e: vent på at «Ferdig» er lagret før Logg-fanen åpnes
 - https://github.com/Solar-Consulting/nova/pull/18
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-20T08:12:45Z
+- drift#357: Oppgavemal for oppgaver til eiere
+- https://github.com/Solar-Consulting/drift/pull/357
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-20T08:17:57Z
+- plattform#78: Oppgavesiden på mobil: ingen zoom i felt, trygg markdown
+- https://github.com/Solar-Consulting/plattform/pull/78
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

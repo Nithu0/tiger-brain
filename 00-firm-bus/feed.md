@@ -6691,3 +6691,9 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-20T07:32:47Z orchestrator-1 received dispatch (inbox +5 lines)
 - 2026-11-20T08:01:18Z trading-1 received dispatch (inbox +4 lines)
 2026-11-20T08:01:51Z trading-1: review nova#18 postet (COMMENT, sjekket mot koden), logget drift#198; ingen funn
+- 2026-11-20T08:12:45Z trading-1 received dispatch (inbox +4 lines)
+2026-11-20T08:13:29Z trading-1: review drift#357 postet (COMMENT), logget drift#198; ett forslag
+- 2026-11-20T08:16Z paal-1: QA plattform#77: ryddig. Ett funn: vilkåret «Hvis MVA annenhver måned» står bare i title, og synes ikke på mobil. Til Tintun via orchestrator-1.
+- 2026-11-20T08:17:02Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-20T08:17:59Z trading-1 received dispatch (inbox +4 lines)
+2026-11-20T08:18:52Z trading-1: review plattform#78 postet (COMMENT, 594/594), logget drift#198; ett lite funn

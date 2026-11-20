@@ -10,6 +10,7 @@ Vi kan ikke selge Solar Secure ennå. Ingen partneravtale er signert, og det st�
 
 - FACT: GitHub-org-en står på **team**, men kravet om 2FA er **av**. 1 av 4 medlemmer har ikke 2FA. Ingen eksterne samarbeidspartnere mangler 2FA.
 - UNKNOWN: Google Workspace. Agentene kan ikke lese adminkonsollen. trading-1 meldte 14.11 at den eneste brukeren er superadmin uten 2FA.
+- FACT (drift#351, 20.11): det nye Slack-workspacet (18.11) har ikke tofaktor. Kontoene ble opprettet med samme startpassord, og bare én har byttet. Alle adressene er aliaser til kontakt@. Slack må med i 2FA-runden.
 - Plan: Alper slår det på innen 30.11. Fristen blir en oppgave 23.11 (drift#303).
 - Rekkefølge: først skrur alle på 2FA selv, deretter settes kravet. Settes kravet først, blir medlemmer uten 2FA fjernet fra org-en.
 
@@ -22,7 +23,7 @@ Vi kan ikke selge Solar Secure ennå. Ingen partneravtale er signert, og det st�
 ## 3. Personvernerklæringen
 
 - FACT: https://solarconsulting.no/personvern er publisert, men med `noindex`. På siden står fortsatt «lagringstid fylles inn av juridisk ansvarlig» og «Overføringsgrunnlag og databehandleravtaler fylles inn av juridisk ansvarlig».
-- FACT: det finnes ikke noe kontaktskjema på nettsiden, bare mailto. Skjemaet er sperret til #22 og #20 er ferdige. Det er riktig.
+- **Rettet 20.11:** det står ikke at det ikke finnes noe kontaktskjema. Det stemmer ikke. Siden 15.11 sjekket jeg med curl, og skjemaet tegnes i nettleseren. FACT 20.11 (Chromium, 390 px): /kontakt og forsiden har et skjema med navn, e-post, telefon, virksomhet, tema og melding. Det leverer til kontakt@ (drift#355). Personvernerklæringen har fortsatt tre felt der det står «fylles inn av juridisk ansvarlig», og #22 er åpen. Skjemaet samler altså inn persondata før erklæringen er ferdig.
 - Siden sier at kundesystemet «driftes hos Railway i EU (Amsterdam)». Railways DPA sier at hovedbehandlingen skjer i USA, og vår DPA-status er UNKNOWN (#49). Vercel-planen er UNKNOWN. På Hobby kan vi ikke inngå DPA (#20).
 - Juristen har fristen 15.12 (#22). Før vi samler inn leads må erklæringen være ferdig, og samtykket til videresending (#286 og #302) må være på plass.
 
@@ -36,7 +37,7 @@ Ingen partneravtale er signert (FACT). Nettsiden har ingen partnerseksjon, ingen
 4. /solenergi siterer «Norway Solar AS har benyttet Solarconsulting som samarbeidspartner». Jeg fant ikke noe skriftlig samtykke i drift. UNKNOWN. Eier: Tintun (nettsiden, #282).
 5. Loyalty er bare en ASSUMPTION, også når det gjelder rollen (#284: «bekreft at det er Loyalty som leverer internett»).
 
-Dette er OK: ESPD sier ingen underleverandører og ikke sertifisert. Microsoft Partner er søkt, og godkjenningen venter (#71). Microsoft for Startups er søkt (#196). Telenor AI Factory, Anthropic og OpenAI er bare kartlegging (#281).
+Dette er OK: ESPD sier ingen underleverandører og ikke sertifisert. Microsoft AI Cloud Partner Program: verifisert medlem 19.11, uten designasjon og uten logo (drift#354). Skriv «medlem av Microsoft AI Cloud Partner Program», ikke «Microsoft Partner». Microsoft for Startups er søkt (#196). Telenor AI Factory, Anthropic og OpenAI er bare kartlegging (#281).
 
 ## Gjør dette før første salg
 

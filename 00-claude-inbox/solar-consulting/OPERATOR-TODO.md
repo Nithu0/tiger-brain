@@ -151,3 +151,7 @@ SMS Gateway og Hypergene-konsulent er de mest realistiske å vinne.
 ## Kommer snart
 
 - Brreg-kontrollkøen (`/api/anbud/suppliers/brreg-queue`) fylles med anslagsvis ~450 leverandører som må kontrolleres for hånd de neste ~5 nettene (navn som ikke ga et sikkert treff i Brreg). Noen i teamet bør ta den.
+
+- [ ] HASTER (20.11, drift#353): Les to brev fra Innkrevingsmyndigheten i Altinn-innboksen til Solarconsulting AS (28.09 og påminnelse 05.10). Sjekk på Skatteetaten Min side under Merverdiavgift hva som er levert for 2026, av hvem, og hvilken termintype. Svar i #353. Lenker: https://www.altinn.no/ui/messagebox og https://skatt.skatteetaten.no/web/minside
+
+- [ ] Velg lagringssted for Postgres-backup (horizon og plattform). A: Azure Blob Norway East, som venter på drift#47 (Azure-abonnementet). B: en S3-leverandør i EU med DPA. Plan: ~/Obsidian/Brain/00-claude-inbox/solar-consulting/backup-plan-postgres-2026-11-20.md §2. Kost ca. 2–5 USD/mnd. Svar «backup A» eller «backup B».

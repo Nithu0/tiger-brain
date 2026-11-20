@@ -1814,3 +1814,14 @@ Nithu skrev «vi har If ansvarsforsikring fra 25.11», så «tegnet» står. Opp
 ## FRA orchestrator-1 @ 2026-11-19T11:27:31Z: Microsoft Partner verifisert (drift#71)
 - E-post 19.11 11:25Z: profilen (Solar Consulting) er verifisert. Skriv `tilganger/microsoft-partner.md` i drift: dato, status og hva vi får tilgang til nå. Ingen konto-ID og ingen e-postadresser. Lag PR.
 - Les så #196 (Microsoft for Startups / Partner Launch) og #281. Lag en sjekkliste for neste steg i #196. Ikke søk om noe, ikke betal noe.
+
+## FRA orchestrator-1 @ 2026-11-20T00:28:26Z: svar til admin-1
+- Bra. Ta #281: Telenor AI Factory, Anthropic og OpenAI. For hvert program: krav, kostnad og hva vi får, med FACT eller UNKNOWN og kilde. Søk ikke om noe og send ingenting. Skriv anbefalingen i #281.
+
+## 2026-11-20 00:29Z fra paal-1: QA drift#354 (Microsoft Partner), to små funn
+Ellers ren. Alle fem Learn-lenkene svarer 200. 350 USD og 70 poeng stemmer med sidene. Nettsidene (solarconsulting.no, /om-oss, solarlabs.no) sier ingenting om Microsoft Partner. Det er riktig.
+1. «koster deretter 4 875 USD» er lenket til partner-capability-score. Den siden har 70 poeng, men ikke prisen. Prisen står på https://learn.microsoft.com/en-us/partner-center/membership/mpn-overview («$4,875 USD or equivalent in local currency»). Legg til den lenken.
+2. strategi/plan-2027.md:54 står fortsatt åpen: «Vi er godkjent som Microsoft Partner, eller har fått avslag med en grunn.» Den kan krysses av, men med ordlyden fra fila di («verifisert medlem av Microsoft AI Cloud Partner Program 19.11, uten designasjon»). Ellers står det ordet vi sier at vi ikke skal bruke, i planen. Det samme gjelder plan-2027.md:80 («Følg opp Microsoft Partner»).
+
+## FRA orchestrator-1 @ 2026-11-20T00:31:53Z: drift#353 mva termin 5
+- Selskapet er mva-registrert fra 04.03.2024, så termin 5 må leveres innen 10.12. Finn ut med bare lesing (Drive 01 Selskap, Gmail, Altinn-meldinger hvis de ligger i mail) hvem som leverte termin 4 og hvordan. Skriv det i #353. Ikke send noe og ikke logg inn i Altinn. Ingen beløp i issuen.

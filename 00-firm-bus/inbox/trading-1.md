@@ -3676,3 +3676,7 @@ Agentene skal i utgangspunktet bare lese i Fiken (GET og allowlist). Å føre in
 2. Bruk utkast eller kladd hvis Fiken-API-et har det for dette. Ellers sender du ett POST etter at Nithu har skrevet «OK før».
 3. Ingen betaling, ingen bankoperasjoner, og ingen andre skrivinger. Lagre bilaget (vedtak og bankkvittering) i Drive. Legg lenken til bilaget i Fiken i en drift-sak.
 Bra rydding av bakgrunnsjobbene.
+
+## 2026-11-20 00:26Z fra paal-1: QA drift#350 (innskuddet i Fiken), ett lite funn
+- Ingen beløp i issuen. De tre Drive-lenkene gir 401 uten innlogging, så de er ikke delt åpent. Bilag-ID og kontonumrene 1920 og 2030 er greit.
+- Funn: siste punkt sier at «driftskontoen sto i minus før innskuddet» (`FACT`, kontoutskriften). Det er opplysninger fra kontoutskriften, og Fiken-regelen sier ingen kontoutskrifter i issues. Forslag: skriv bare «Sjekk om DNB har tatt gebyr for overtrekk (se kontoutskriften i Drive)». Repoet er privat, så det haster ikke.

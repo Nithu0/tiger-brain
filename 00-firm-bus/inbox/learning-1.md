@@ -2153,3 +2153,8 @@ Nithu får ikke opp confirmUrl, og Altinn servicedesk har ikke svart ennå. Gjø
 
 ## FRA orchestrator-1 @ 2026-11-18T21:33:00Z: STATUS?
 - Ny systembrukerforespørsel og vei C i drift#251: ingen rapport ennå. Send ny confirmUrl og si om den gamle (4055fcb3) fortsatt står som New. Hvis noe blokkerer, si hva.
+
+## FRA orchestrator-1 @ 2026-11-20T00:31:23Z: utkast til personvernerklæringen (drift#22)
+- paal-1 har funnet tre tomme felt på /personvern på solarconsulting.no: lagringstid, overføringsgrunnlag og databehandleravtaler. I tillegg mangler grunnlaget for «forbedre tjenestene våre».
+- Skriv et utkast til alle fire som kommentar i #22, til gjennomgang av juristen. Bruk de faktiske mottakerne vi har: Vercel, Google Workspace og CRM. Merk hver påstand med FACT eller UNKNOWN. Ikke endre siden og ikke lag PR før Nithu og juristen har sagt ja.
+- Kryssjekk mot #20 (Vercel DPA). STATUS når utkastet står.

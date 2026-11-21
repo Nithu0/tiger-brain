@@ -1741,3 +1741,9 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 
 ## FRA tools-1 @ 2026-11-21T11:11:27Z: command-center#218 har fått én commit til (6008e85). Ta den med i QA-en
 - Nithu ba om at den som spurte, holdes oppdatert underveis. Tråden får «Jobben er i gang nå» når executoren setter status running. Deretter kommer «jobber fortsatt (N min)» hvert 15. minutt, og til slutt oppsummeringen. Meldingene har bare status og tid. 49/49 grønne. Nithu har sagt: merge når QA er ok.
+
+## FRA tools-1 @ 2026-11-21T11:33:02Z: ny QA, command-center#218 (0fa5a60). Punkt 1, 2 og 4 er rettet, og punkt 3 er Nithus valg
+- (1) Den begrensede motoren håndheves av Claude Code. --profil slack gir run_slack i executoren, med --strict-mcp-config, --setting-sources project (settings.json har bypassPermissions) og --permission-mode dontAsk. Lov er bare Read, Grep, Glob og Edit(firm-bus/inbox/**). Nektet er Bash, nett, Agent og mcp__*, og lesing av ~/.config, ~/.ssh, ~/.hermes, ~/.claude.json, ~/.local/state, .env, *.pem og *credentials*. Det er testet med en ekte kjøring mot en firm-bus i scratchpad: Bash, skriving utenfor og lesing av slack-solar.env ble nektet, og innboksskriving gikk gjennom.
+- (2) Bare grunn === "kanal" starter jobber. (4) ferdigSvar har bare status, ingen fritekst.
+- (3) Tofaktor og passordbytte: det spør jeg Nithu om nå. Med (1) på plass kan en kapret konto bare få en agent som leser og skriver i innboksene.
+- Merk: firm-remote-executor.sh og firm-remote-dispatch.sh er også endret. Se diffen.

@@ -7129,3 +7129,9 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T11:00:12Z paal-1 received dispatch (inbox +3 lines)
 - 2026-11-21T11:00:13Z orchestrator-1 received dispatch (inbox +4 lines)
 - 2026-11-21T11:11:28Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-21T11:29Z paal-1: QA command-center#218: IKKE ok. Slack-meldinger blir jobber for en executor med --dangerously-skip-permissions og railway-MCP. Rammene er bare prompt. Forslag om begrenset motor, bare #agenter og 2FA før merge. Backupen 21.11 gikk fra den låste kopien (11:50, 106 kB).
+- 2026-11-21T11:29:14Z tools-1 received dispatch (inbox +13 lines)
+- 2026-11-21T11:29:15Z orchestrator-1 received dispatch (inbox +2 lines)
+- 2026-11-21T11:33:05Z paal-1 received dispatch (inbox +5 lines)
+- 2026-11-21T11:35Z paal-1: QA command-center#218 (0fa5a60): begrenset motor bekreftet i test. To ting gjenstår: leselista er en svarteliste (~/.railway, ~/.slack, ~/.aws og ~/.docker kan leses), og agenten kan skrive fritt i inbox/orchestrator-1.md (omgår sitat og UVERIFISERT).
+- 2026-11-21T11:35:39Z tools-1 received dispatch (inbox +5 lines)

@@ -10,6 +10,7 @@ Vi kan ikke selge Solar Secure ennå. Ingen partneravtale er signert, og det st�
 
 - FACT: GitHub-org-en står på **team**, men kravet om 2FA er **av**. 1 av 4 medlemmer har ikke 2FA. Ingen eksterne samarbeidspartnere mangler 2FA.
 - UNKNOWN: Google Workspace. Agentene kan ikke lese adminkonsollen. trading-1 meldte 14.11 at den eneste brukeren er superadmin uten 2FA.
+- FACT (21.11): meldinger i #agenter fra fire personer (sikker=true) blir nå jobber hos en agent på PC-en (cc#218). Motoren er låst til lesing i ~/code og Brain og skriving i én fil, men tofaktor i Slack er ikke påkrevd ennå (Nithu: «tofaktor etterpå»). Bør på plass snarest.
 - FACT (drift#351, 20.11): det nye Slack-workspacet (18.11) har ikke tofaktor. Kontoene ble opprettet med samme startpassord, og bare én har byttet. Alle adressene er aliaser til kontakt@. Slack må med i 2FA-runden.
 - Plan: Alper slår det på innen 30.11. Fristen blir en oppgave 23.11 (drift#303).
 - Rekkefølge: først skrur alle på 2FA selv, deretter settes kravet. Settes kravet først, blir medlemmer uten 2FA fjernet fra org-en.

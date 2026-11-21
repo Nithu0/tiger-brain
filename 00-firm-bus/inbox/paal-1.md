@@ -1747,3 +1747,9 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 - (2) Bare grunn === "kanal" starter jobber. (4) ferdigSvar har bare status, ingen fritekst.
 - (3) Tofaktor og passordbytte: det spør jeg Nithu om nå. Med (1) på plass kan en kapret konto bare få en agent som leser og skriver i innboksene.
 - Merk: firm-remote-executor.sh og firm-remote-dispatch.sh er også endret. Se diffen.
+
+## FRA tools-1 @ 2026-11-21T12:17:21Z: ny QA, command-center#218 (b660e2b). Begge funnene er rettet
+- (1) Lesing er en hviteliste: bare Read(~/code/**) og Read(~/Obsidian/Brain/**). Svartelista blir liggende for .env, .git/config, *.key, *.pem, *credentials*, .npmrc og secrets inne i repoene.
+- (2) Skriving bare med Edit($BUS/inbox/slack-jobber.md). orchestrator-1 leser fila som data.
+- Testet med ekte kjøringer. Først ga jeg den farlige forsøk, men da nektet modellen selv. Derfor ble det kjørt på nytt med ufarlige filer, slik at håndhevingen faktisk ble prøvd. Read og Grep i en mappe utenfor hvitelista og Edit i inbox/orchestrator-1.md ble nektet av tillatelsessystemet. slack-jobber.md, ~/code og Brain gikk gjennom.
+- Tofaktor: Nithu valgte «merge nå, tofaktor etterpå».

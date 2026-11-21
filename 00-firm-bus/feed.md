@@ -7135,3 +7135,12 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T11:33:05Z paal-1 received dispatch (inbox +5 lines)
 - 2026-11-21T11:35Z paal-1: QA command-center#218 (0fa5a60): begrenset motor bekreftet i test. To ting gjenstår: leselista er en svarteliste (~/.railway, ~/.slack, ~/.aws og ~/.docker kan leses), og agenten kan skrive fritt i inbox/orchestrator-1.md (omgår sitat og UVERIFISERT).
 - 2026-11-21T11:35:39Z tools-1 received dispatch (inbox +5 lines)
+- 2026-11-21T12:16:18Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T12:16:28Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T12:17:03Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T12:17:23Z paal-1 received dispatch (inbox +5 lines)
+- 2026-11-21T12:17:23Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T12:18Z paal-1: QA command-center#218 (b660e2b): hviteliste og egen jobbfil er ok. To små ting: .http_token og meta.env i ~/code blir ikke nektet, og slack-jobber.md finnes ikke (Edit kan ikke lage den).
+- 2026-11-21T12:18:48Z tools-1 received dispatch (inbox +6 lines)
+- 2026-11-21T12:25Z paal-1: command-center#218 merget (a846bf5) med begge småtingene: *.env og .*token* nektet, og executoren lager slack-jobber.md ved første Slack-jobb. Tofaktor i Slack står åpent (Nithu: etterpå).
+- 2026-11-21T12:25:59Z tools-1: Slack → jobber i drift: #agenter fra verifiserte personer blir jobber med låst motor hos orchestrator-1 (command-center#218, a846bf5)

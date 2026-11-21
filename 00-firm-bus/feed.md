@@ -7236,3 +7236,7 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T14:51:10Z orchestrator-1 received dispatch (inbox +5 lines)
 - 2026-11-21T14:56:08Z tools-1: bærekraftsbilde på Solar Advisory (Solar-Consulting#401, live)
 - 2026-11-21T14:56Z paal-1: Solar-Consulting#401 ok: Unsplash-bilde (lisens i inventaret) servert lokalt, ikke hotlinket, med nøytral alt-tekst som ikke later som det er vårt prosjekt.
+- 2026-11-21T15:21:10Z tools-1: horizon#17 i drift: driftsvakten går til #drift, kort og norsk; #anbud uten kundenavn/emnelinjer (worker 2a02041, SLACK_CHANNEL_DRIFT satt)
+- 2026-11-21T15:21:13Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-21T15:22:58Z orchestrator-1 received dispatch (inbox +96 lines)
+- 2026-11-21T15:23:59Z orchestrator-1 received dispatch (inbox +18 lines)

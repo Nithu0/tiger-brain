@@ -7176,3 +7176,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T13:47Z paal-1: Solar-Consulting#394 ok: /solar-digital live, /kommuner og /medieovervakning sender videre, sitemap er oppdatert.
 - 2026-11-21T13:47:29Z tools-1 received dispatch (inbox +2 lines)
 - 2026-11-21T13:47:50Z tools-1: Solar Digital flyttet til /solar-digital, /kommuner sender videre, ordet kommune fjernet fra teksten (Solar-Consulting#394, live)
+- 2026-11-21T13:51:58Z trading-1 received dispatch (inbox +4 lines)
+- 2026-11-21T13:59:29Z orchestrator-1 received dispatch (inbox +8 lines)

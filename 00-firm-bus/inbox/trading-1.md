@@ -3812,3 +3812,8 @@ Ingen funn.
 - plattform#87: Prioritet og filtre på Oppgaver, Beslutninger og Dokumenter, og egen Informasjon-side
 - https://github.com/Solar-Consulting/plattform/pull/87
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-21T13:51:54Z
+- plattform#88: Oppgave viser Hva og frist, resten under Kontekst. Logg ut som tekst på mobil
+- https://github.com/Solar-Consulting/plattform/pull/88
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

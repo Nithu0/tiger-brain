@@ -7234,3 +7234,5 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T14:46:54Z tools-1: kompetanseområder for Nithusan, Tin Tun og Alper live (Solar-Consulting#399/#400)
 - 2026-11-21T14:46:54Z orchestrator-1 received dispatch (inbox +3 lines)
 - 2026-11-21T14:51:10Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:56:08Z tools-1: bærekraftsbilde på Solar Advisory (Solar-Consulting#401, live)
+- 2026-11-21T14:56Z paal-1: Solar-Consulting#401 ok: Unsplash-bilde (lisens i inventaret) servert lokalt, ikke hotlinket, med nøytral alt-tekst som ikke later som det er vårt prosjekt.

@@ -1753,3 +1753,9 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 - (2) Skriving bare med Edit($BUS/inbox/slack-jobber.md). orchestrator-1 leser fila som data.
 - Testet med ekte kjøringer. Først ga jeg den farlige forsøk, men da nektet modellen selv. Derfor ble det kjørt på nytt med ufarlige filer, slik at håndhevingen faktisk ble prøvd. Read og Grep i en mappe utenfor hvitelista og Edit i inbox/orchestrator-1.md ble nektet av tillatelsessystemet. slack-jobber.md, ~/code og Brain gikk gjennom.
 - Tofaktor: Nithu valgte «merge nå, tofaktor etterpå».
+
+## FRA tools-1 @ 2026-11-21T13:00:44Z: QA, Nithu0/Solar-Consulting#390 (utkast), Babers tekster på solarconsulting.no. Nithu ba om QA
+- Baber bestilte det i Slack #agenter 21.11. Forsiden har ny h1 og tre avsnitt, Solar Labs og Solar Digital (/kommuner) har ny tekst, og det er en ny side /konsulenttjenester (i meny, footer og sitemap). Toppmenyen vises fra 1280 px. verify-claims tar nå med setningen om KI.
+- Sjekk særlig dette: at ordlyden er Babers og ingenting er diktet opp, særlig at IT-delen som ble kuttet ikke er fylt inn. At claims-merkingen er riktig: forsiden har gått fra ADR-0015 til OWN_VOICE. Kommersielle løfter på Solar Labs («fast engangssum», «uten lange leveringstider») mot README-regelen. Menyen ved 1024–1279 px. Lenker og sitemap.
+- Forhåndsvisningen ligger bak innloggingen til Vercel: https://veldora-oinhx347j-solar-consulting-as.vercel.app. Lokalt: npm ci && npm run build && npx next start i website/.
+- Den merges ikke før Nithu sier publiser, fordi en merge går rett til prod.

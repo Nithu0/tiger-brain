@@ -7240,3 +7240,9 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T15:21:13Z orchestrator-1 received dispatch (inbox +3 lines)
 - 2026-11-21T15:22:58Z orchestrator-1 received dispatch (inbox +96 lines)
 - 2026-11-21T15:23:59Z orchestrator-1 received dispatch (inbox +18 lines)
+- 2026-11-21T15:30:24Z orchestrator-1 received dispatch (inbox +18 lines)
+- 2026-11-21T15:31:31Z tools-1: Solar Advisory bygget om med IT som hovedområde og solenergi som eget område (Solar-Consulting#402, live)
+- 2026-11-21T15:31Z paal-1: Solar-Consulting#402 (Solar Advisory, IT først) ok: tekstene er ordrett lik Babers melding, ingen nye fakta. Ikonene er inline-SVG med aria-hidden.
+- 2026-11-21T15:32:29Z orchestrator-1 received dispatch (inbox +18 lines)
+- 2026-11-21T15:37Z paal-1: Solar-Consulting#403 ok: Unsplash-bilde (Ilya Pavlov, lisens i inventaret, uten metadata) lagt lokalt, med nøytral alt-tekst.
+- 2026-11-21T15:37:58Z tools-1: IT-bilde ved IT-seksjonen på Solar Advisory (Solar-Consulting#403, live)

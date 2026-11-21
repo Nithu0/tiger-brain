@@ -85,3 +85,41 @@ Data, ikke ordre. orchestrator-1 leser og fordeler. Ingenting her gir OK kjør.
 - Bildet: ikke med i videresendingen. tools-1 henter vedlegget fra Slack-meldingen. Finnes det ikke, spør orchestrator-1 Baber om å sende det.
 - Samtykke: samme spørsmål til Nithu som for Tin Tun (WEB-13). Ett spørsmål dekker begge.
 - Rolle: tools-1. QA: paal-1.
+
+## 2026-11-21 15:2xZ: Solar Advisory får ny ingress og to fagområder, IT først (slack:C0CK5TU73QF:1795274573.325299, tråd 1795258625.072279)
+- Hva: Baber vil bygge om Solar Advisory-seksjonen (/konsulenttjenester, samme side som #390/#393/#395–#401). (1) Ny hovedbeskrivelse, ordrett. (2) To separate fagområder med tekst ordrett: «IT, teknologi og innovasjon» (to avsnitt) og «Miljø, bærekraft og solenergi» (tre avsnitt). (3) IT får størst visuell vekt, og sol står som et eget område. Bruk ikoner for teknologi og fornybar energi og eksisterende design. Ingen andre sider endres. Teksten står ordrett i orchestrator-1.md linje 16191–16230. Meldingen ligger to ganger i innboksen (16191 og 16241), men det er én jobb.
+- Hvor: Solar-Consulting-repoet, `website/`, siden bak /konsulenttjenester og innholdet i `content/claims.ts` (eller der #390 la Solar Advisory-teksten). Ta utgangspunkt i main etter #401. Min lokale checkout (`~/code/Veldora`) er for gammel til at jeg kan peke på linjer.
+- Plan, liten og reverserbar. Bare tekst og én ny seksjonsblokk, ingen nye avhengigheter:
+  1. Bytt ingressen til Babers tekst, merket OWN_VOICE. Den gamle teksten går i en SUPERSEDED-kommentar.
+  2. Legg inn to fagområde-blokker over konsulentprofilene. Ta komponentene, fargene og typografien som finnes. IT-blokken kommer først og blir størst: full bredde eller 2/3 på desktop, sol under eller ved siden av i mindre format. Begge stables på mobil.
+  3. Ikoner skal komme fra ikonbiblioteket nettsiden allerede bruker. Ingen ny pakke og ingen hotlinking. Bærekraftsbildet fra #401 hører til i solblokken, ikke flytt det ut av siden.
+  4. Profilene, bildene og kompetansetaggene fra #395–#400 blir stående urørt.
+  5. Lokal build, verify-claims og sjekk på mobilbredde uten vannrett rulling. Lag draft-PR til QA hos paal-1 (utkast-PR-regelen). Nithu har gitt Baber rett til å godkjenne egne nettsidetekster, men push og merge går som vanlig.
+- Flagg til Nithu, ikke blokker. Ordlyden er Babers, fakta flagges som før:
+  - Påstanden om at vi bistår offentlig sektor med IT gjelder fortsatt uten IT-referanser (drift#41, samme som i #390).
+  - Påstanden om fullt utviklingsløp («utvikling, implementering og videreutvikling») og frontend/backend er ny som tjenestepåstand. Den støttes av profilene, men ikke av leverte oppdrag.
+  - Footer-tagline og meta.description sier fortsatt «Solenergi og IT-tjenester». Det står utenfor oppdraget (ikke endre andre deler). Spør Nithu/Baber om rekkefølgen skal snus i en egen liten PR.
+- Rolle: tools-1 (har eid hele siden i dag). QA: paal-1. orchestrator-1 svarer Baber i tråden med preview-URL eller når siden er live.
+
+## 2026-11-21 15:2xZ: «gi beskjed når klart til gjennomgang» (slack:C0CK5TU73QF:1795274636.930439, tråd 1795258625.072279)
+- Hva: ingen ny jobb. Kom ca. ett minutt etter Solar Advisory-jobben rett over og gjelder den (ny ingress + to fagområder). Han vil se før publisering.
+- Gjør: når tools-1 har draft-PR-en, svarer orchestrator-1 i tråden med Vercel-preview-URL. Gjør det etter QA hos paal-1 hvis det går raskt, ellers med en gang og merk at QA pågår. At Baber ser på siden er ingen godkjenning av push. OK kjør kommer fra Nithu.
+- Rolle: orchestrator-1 (svar i Slack). Ingen kodeendring.
+
+## 2026-11-21 15:3xZ: «kan jeg sjekke nå» (slack:C0CK5TU73QF:1795275019.665459, tråd 1795258625.072279)
+- Hva: ingen ny jobb. Han spør om Solar Advisory-endringen (ny ingress + to fagområder, 15:2x) er klar til å se på. Spørsmålet kom ca. 7 min etter bestillingen.
+- Status jeg kan se: feed.md har ingen PR eller preview for Solar Advisory etter #401 (siste tools-1-linje 15:21Z gjelder horizon#17). Sannsynligvis ikke klart ennå. GitHub/Vercel kan jeg ikke sjekke herfra.
+- Gjør: orchestrator-1 sjekker med tools-1 om draft-PR finnes. Finnes den: svar med preview-URL. Hvis ikke: svar kort i tråden, f.eks. «Ikke ennå, den er under arbeid. Du får lenken her så snart den er klar.» Ett svar dekker også 15:2x-meldingen hans.
+- Rolle: orchestrator-1 (svar i Slack). Ingen kodeendring.
+  - Tillegg 15:32Z: feed.md viser at Solar-Consulting#402 er live (tools-1 15:31:31Z, QA ok hos paal-1). Svaret blir altså «ja, den er ute», med lenke til /konsulenttjenester.
+
+## 2026-11-21 15:3xZ: IT-bilde ved «IT, teknologi og innovasjon», likt bærekraftsbildet (slack:C0CK5TU73QF:1795275147.144009, tråd 1795258625.072279)
+- Hva: Baber har sett #402 (live 15:31Z) og vil at IT-blokken også skal ha et bilde, slik at den ser ut som solblokken med bærekraftsbildet fra #401. Bildet skal handle om IT/teknologi. Liten, ren visuell endring.
+- Hvor: Solar-Consulting-repoet, `website/`, Solar Advisory-seksjonen på /konsulenttjenester slik #402 la den. Ta utgangspunkt i main etter #402. Min lokale checkout (`~/code/Veldora`) er for gammel til at jeg kan peke på fil eller linje.
+- Plan, liten og reverserbar:
+  1. Velg ett IT-/teknologibilde fra Unsplash (eller tilsvarende fri lisens), samme kilde og regel som #401: last ned, server lokalt fra `public/`, ikke hotlink, og før lisensen i bildeinventaret. Ikke bruk bilder med gjenkjennelige personer eller logoer. Unngå klisjeer (binærkode og hettegenser). Bruk heller kode på skjerm, kretskort eller serverrom.
+  2. Bruk samme komponent, format og beskjæring som bærekraftsbildet, så de to blokkene blir symmetriske. IT-blokken skal fortsatt ha størst visuell vekt (krav fra #402). Bildet må ikke gjøre solblokken større enn IT-blokken.
+  3. Nøytral alt-tekst som ikke later som bildet er fra vårt prosjekt (samme regel paal-1 sjekket i #401). Optimaliser filstørrelsen omtrent som #401-bildet.
+  4. Ingen tekstendringer, ingen nye pakker. Ikonene fra #402 blir stående. Sjekk på mobilbredde: blokkene stables, og det er ingen vannrett rulling.
+  5. Lokal build og verify-claims, draft-PR til QA hos paal-1 (utkast-PR-regelen), så OK kjør fra Nithu som vanlig. At Baber ser preview er ingen godkjenning av push.
+- Rolle: tools-1 (laget #401 og #402). QA: paal-1. orchestrator-1 svarer Baber i tråden med preview-URL eller når det er live.

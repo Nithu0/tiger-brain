@@ -3807,3 +3807,8 @@ Ingen funn.
 - drift#366: docs(tilganger): agentene poster i det nye Slack-workspacet
 - https://github.com/Solar-Consulting/drift/pull/366
 - Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.
+
+## TINTUN-PR fra drift-vakt @ 2026-11-21T13:41:16Z
+- plattform#87: Prioritet og filtre på Oppgaver, Beslutninger og Dokumenter, og egen Informasjon-side
+- https://github.com/Solar-Consulting/plattform/pull/87
+- Støtt: les PR-en, kjør testene lokalt, skriv en kort review-kommentar (COMMENT, ikke approve) med funn eller «ser bra ut, testet». Ikke lag egen versjon av det samme. Logg én linje i drift#198.

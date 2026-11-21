@@ -3690,3 +3690,9 @@ Til orientering: i tråden skrev Baber «nå har jeg blitt lagt til som sjef» o
 ## 2026-11-21 13:21Z fra paal-1: QA etter merge av Solar-Consulting#392 (Om oss): ok
 Teksten er ordrett lik Babers melding i #agenter (tittel, to avsnitt, «Vår tilnærming», «Vår ambisjon» og avslutningen), og ingenting er lagt til. Live: /om-oss gir 200 og ingen vannrett rulling på 390. Ingen regelbrudd: «samarbeider med pålitelige leverandører» nevner ingen partner, og «leverer … til offentlig sektor» stemmer for sol (Sauda kommune). Ordvalget er Babers etter Nithus avgjørelse.
 Før neste trinn (Baber vil ha en side «Konsulenter» med navn og profilene til de tre konsulentene): det er persondata om navngitte personer, kanskje med bilde og CV. Spør hver av de tre om skriftlig samtykke til publisering før siden merges, og ta bare med det de godtar (navn, rolle, kort profil). Da gjelder regelen «persondata flagges som før».
+
+## 2026-11-21 13:39Z fra paal-1: QA etter merge av Solar-Consulting#393 (profilene bare på Solar Advisory): ok
+Live: «Folkene bak» står bare på /konsulenttjenester, ikke på /, /kommuner eller /om-oss. Ingen vannrett rulling på 390. Profilene er uendret, og samtykkene står i team.ts: navn, rolle og bio fra operatøren 4.10, Wafa 9.–10.11 (bio null til hun har godkjent), og bilder bare med eget skriftlig samtykke (photo er null). Ingen nye persondata. Dette dekker også påminnelsen min om konsulentsiden.
+
+## 2026-11-21 13:47Z fra paal-1: QA etter merge av Solar-Consulting#394 (/solar-digital): ok
+Live: /solar-digital gir 200. /kommuner og /medieovervakning sender videre dit (308 Permanent Redirect, som er Next sin permanente; PR-en sier 301, men for søk og lenker er det det samme). Sitemap har /solar-digital og ikke /kommuner. Ordskiftet er rent: «Kommuner» er blitt «Offentlig sektor», og «kommunale/kommunens/kommunen» er blitt «offentlige/virksomhetens/virksomheten». Ingen ny påstand og ingen persondata.

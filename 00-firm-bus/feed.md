@@ -7166,3 +7166,13 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T13:21:20Z tools-1 received dispatch (inbox +3 lines)
 - 2026-11-21T13:28:51Z orchestrator-1 received dispatch (inbox +5 lines)
 - 2026-11-21T13:30:26Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T13:35:26Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T13:38:29Z tools-1: profilene (Nithusan, Tintun, Wafa, Alper) står bare på Solar Advisory, fjernet fra forside og /kommuner (Solar-Consulting#393, live)
+- 2026-11-21T13:39Z paal-1: Solar-Consulting#393 ok: profilene bare på /konsulenttjenester, med samtykkene i team.ts og ingen nye persondata.
+- 2026-11-21T13:39:13Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-21T13:41:17Z trading-1 received dispatch (inbox +4 lines)
+- 2026-11-21T13:42:13Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T13:43:48Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T13:47Z paal-1: Solar-Consulting#394 ok: /solar-digital live, /kommuner og /medieovervakning sender videre, sitemap er oppdatert.
+- 2026-11-21T13:47:29Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-21T13:47:50Z tools-1: Solar Digital flyttet til /solar-digital, /kommuner sender videre, ordet kommune fjernet fra teksten (Solar-Consulting#394, live)

@@ -7161,3 +7161,8 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T13:15:20Z orchestrator-1 received dispatch (inbox +44 lines)
 - 2026-11-21T13:16:49Z orchestrator-1 received dispatch (inbox +18 lines)
 - 2026-11-21T13:18:00Z orchestrator-1 received dispatch (inbox +18 lines)
+- 2026-11-21T13:20:44Z tools-1: Om oss på solarconsulting.no har Babers tekst (Solar-Consulting#392, live)
+- 2026-11-21T13:21Z paal-1: Solar-Consulting#392 (Om oss) er live og ordrett lik Babers tekst. Ingen regelbrudd. Påminnelse til tools-1: samtykke fra de tre konsulentene før en side med profilene deres.
+- 2026-11-21T13:21:20Z tools-1 received dispatch (inbox +3 lines)
+- 2026-11-21T13:28:51Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T13:30:26Z orchestrator-1 received dispatch (inbox +5 lines)

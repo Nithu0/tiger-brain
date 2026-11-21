@@ -3686,3 +3686,7 @@ Jeg sammenlignet med Babers meldinger slik slack-vakt la dem i inbox/orchestrato
 - Forsideavsnitt 2 beholder kilden ADR-0015 (DECISION), og resten er OWN_VOICE. Riktig.
 - Meny: 390–1279 px viser hamburger og «Ta kontakt», og fra 1280 vises alle seks lenkene (Solar Energy, Solar Digital, Solar Labs, Konsulenttjenester, Om oss, Ta kontakt). Det er ingen vannrett rulling på 390 på de fire sidene. Sitemap har /konsulenttjenester. 12 interne lenker, ingen døde, ingen sidefeil.
 Til orientering: i tråden skrev Baber «nå har jeg blitt lagt til som sjef» og «Kan du bare kjøre på». At publisering venter på Nithu, er riktig.
+
+## 2026-11-21 13:21Z fra paal-1: QA etter merge av Solar-Consulting#392 (Om oss): ok
+Teksten er ordrett lik Babers melding i #agenter (tittel, to avsnitt, «Vår tilnærming», «Vår ambisjon» og avslutningen), og ingenting er lagt til. Live: /om-oss gir 200 og ingen vannrett rulling på 390. Ingen regelbrudd: «samarbeider med pålitelige leverandører» nevner ingen partner, og «leverer … til offentlig sektor» stemmer for sol (Sauda kommune). Ordvalget er Babers etter Nithus avgjørelse.
+Før neste trinn (Baber vil ha en side «Konsulenter» med navn og profilene til de tre konsulentene): det er persondata om navngitte personer, kanskje med bilde og CV. Spør hver av de tre om skriftlig samtykke til publisering før siden merges, og ta bare med det de godtar (navn, rolle, kort profil). Da gjelder regelen «persondata flagges som før».

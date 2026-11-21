@@ -1779,3 +1779,20 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 ## FRA tools-1 @ 2026-11-21T14:20:55Z: QA, Nithu0/Solar-Consulting#397 (utkast). Driftsagenten og de andre agentene i ny Slack-stil
 - Varslingslinja er norsk («⚠️ Drift: 5 ting trenger oppfølging», «Konkurs: 3 nye»). Det er høyst 5 korte punkter, og en rensefunksjon tar bort filstier, kode, nøkkelnavn og merker. ASSUMPTION står fortsatt i dataene (CONTRACT §5), men ikke i kanalteksten. Når funnene er uendret, poster agenten ingenting, og det samme kommer igjen tidligst etter et døgn. Runlog lagrer bare en hash. 628/628 grønne.
 - Sjekk særlig tre ting: at stillheten ikke skjuler en ny feil (den sammenligner probe-status, ikke ordlyd), at rensefunksjonen ikke fjerner meningsbærende tekst, og at sammendraget nå er på norsk.
+
+## FRA tools-1 @ 2026-11-21T14:23:17Z: horizon#17 (75fb337). Begge funnene i #anbud er rettet
+- overdueApprovalLines har ikke lenger kundenavn. ubesvarteHenvendelserLines viser type, alder og kategori, ikke tittelen. Testene er oppdatert, blant annet med en sjekk på at Demo AS og emnelinjene ikke kommer med. 23/23, og tsc er ren.
+- SLACK_CHANNEL_DRIFT i Railway: jeg ber om OK før jeg setter den.
+
+## FRA tools-1 @ 2026-11-21T14:25:00Z: Solar-Consulting#397 (9b06731). Rensefunksjonen er rettet
+- Bare ekte stier fjernes: filendelse, start med / ./ ~/, to eller flere skråstreker med et ordledd på mer enn 3 tegn, og kataloger med skråstrek til slutt. «Oslo/Viken», «og/eller», «24/7», «3/5», «21/11», «21/11/2026» og «TCP/IP» står igjen. Navn på miljøvariabler blir «en innstilling» eller «N innstillinger» i stedet for å slettes. Linjene dine er tester. 630/630.
+- Kjent og godtatt: «og/eller/ikke» blir fjernet etter regelen med to skråstreker og et ledd på mer enn 3 tegn.
+
+## FRA tools-1 @ 2026-11-21T14:25:32Z: horizon#17 (759c3ef). Titlene i godkjenningskøen er tatt bort
+- Det er det siste tilfellet: testdataene har titler som «Pakke A til Firma AS» og «Svar til Bergen». overdueApprovalLines viser nå bare type og alder. Testene sjekker at Bergen og Firma AS ikke kommer med. 23/23, og tsc er ren.
+
+## FRA tools-1 @ 2026-11-21T14:27:26Z: Solar-Consulting#397 (ce66b72). æ, ø og å er rettet
+- PATHLIKE bruker nå \p{L} og \p{N} med u-flagg. Tekst med flere skråstreker regnes bare som sti når alle leddene er små bokstaver, tall og - _ . *. «Øst/Vest/Nord-regionen», «Sør/Øst/Vestland» og «Ål/Gol/Hemsedal» står igjen. Ekte stier, også med ø (~/code/drift/økonomi), fjernes. Testene dine er lagt inn. 631/631.
+
+## FRA tools-1 @ 2026-11-21T14:34:28Z: Solar-Consulting#396, avgjørelse fra Nithu
+- Nithu svarte meg direkte 21.11 (spørsmål: «Skal jeg publisere de nye profilene deres nå, bare med ja fra Baber?», svar: «Ja, publiser nå»). Ja fra Baber er nok for profilene i teamet, og kommentaren i team.ts er oppdatert. PR-teksten var skrevet før avgjørelsen. Tin Tun og Alper er nevnt i tråden og kan rette opp hvis noe er feil. Påstanden om Alper og offentlige anskaffelser har jeg merket som noe Alper bør se på.

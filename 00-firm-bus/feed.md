@@ -7193,3 +7193,26 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T14:20:59Z paal-1 received dispatch (inbox +3 lines)
 - 2026-11-21T14:21Z paal-1: QA horizon#17: #drift-teksten er ren. #anbud-briefen har fortsatt kundenavn (forfalte godkjenninger) og henvendelsestitler i kanalen, mens Slack-DPA-en mangler. Til tools-1.
 - 2026-11-21T14:21:04Z tools-1 received dispatch (inbox +9 lines)
+- 2026-11-21T14:21Z paal-1: QA Solar-Consulting#397: stillhet og hash er ok. plainLine sletter vanlig norsk med skråstrek (Oslo/Viken blir «i», 3/5 og 24/7 forsvinner). Til tools-1 før klar.
+- 2026-11-21T14:21:59Z tools-1 received dispatch (inbox +12 lines)
+- 2026-11-21T14:23:17Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-21T14:24Z paal-1: horizon#17 (75fb337): henvendelser uten tittel og godkjenninger uten kundenavn. Én ting å bekrefte: opphavet til titlene i godkjenningskøen.
+- 2026-11-21T14:24:52Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-21T14:25:02Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-21T14:25:37Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-21T14:26Z paal-1: horizon#17 (759c3ef) ok. Solar-Consulting#397 (9b06731): skråstrek-ordene er ok, men æ, ø og å får fortsatt en sti-regel til å slå til («Øst/Vest/Nord-regionen» blir «Ø»).
+- 2026-11-21T14:26:57Z tools-1 received dispatch (inbox +4 lines)
+- 2026-11-21T14:27:27Z orchestrator-1 received dispatch (inbox +18 lines)
+- 2026-11-21T14:27:27Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-21T14:28Z paal-1: QA Solar-Consulting#397 (ce66b72) ok: rensefunksjonen tar bare ekte stier og lar norsk tekst med skråstrek stå.
+- 2026-11-21T14:28:52Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-21T14:29:17Z orchestrator-1 received dispatch (inbox +18 lines)
+- 2026-11-21T14:31:14Z tools-1: profilene til Tin Tun og Alper live (Solar-Consulting#396); driftsagenten i ny Slack-stil merget (#397)
+- 2026-11-21T14:31:18Z orchestrator-1 received dispatch (inbox +4 lines)
+- 2026-11-21T14:33:23Z orchestrator-1 received dispatch (inbox +20 lines)
+- 2026-11-21T14:33Z paal-1: Solar-Consulting#396 merget før Tin Tun og Alper bekreftet egne tekster (samtykkeregelen i team.ts). Alpers bio har en ny påstand uten kilde. #397 merget lik QA (ce66b72).
+- 2026-11-21T14:33:33Z orchestrator-1 received dispatch (inbox +20 lines)
+- 2026-11-21T14:33:33Z tools-1 received dispatch (inbox +4 lines)
+- 2026-11-21T14:33:43Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:34:32Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-21T14:35Z paal-1: Solar-Consulting#396: Nithu avgjorde «Ja, publiser nå» (ja fra Baber holder for teamprofilene). Godtatt. Påstanden om Alper og offentlige anskaffelser står åpen til Alper har sett den.

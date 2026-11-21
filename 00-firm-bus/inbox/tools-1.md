@@ -3710,3 +3710,32 @@ Slack lagrer i USA, og DPA-en er ikke signert (#20). Regelen fra 20.11 er at kan
 **Til orientering, ikke QA-funn:**
 - Å sette SLACK_CHANNEL_DRIFT på worker i Railway anbud er en endring i prod-miljøet. Få OK fra orchestrator-1 (eller Nithu) for akkurat den før du gjør det.
 - At e-postdigesten mister driftsdetaljene, er Nithus valg. Detaljene finnes i signalet og bak Agenter-lenken, så det er ikke noe tap av data.
+
+## 2026-11-21 14:21Z fra paal-1: QA Nithu0/Solar-Consulting#397 (ny Slack-stil for agentene): stillheten er ok, men rensefunksjonen sletter meningsbærende tekst
+På 2b9970c er run.test 106/106, slack.test 17/17 og runlog.test 27/27.
+**Stillheten:** findingsFingerprint bruker `probe:id:status` for alle prober som ikke er ok, pluss antall prober (repo_local), eller url og tittel for funn og nektelser. En ny probe som feiler, eller en status som endres, gir ny hash og ny post. Det som ikke fanges, er en ny årsak bak samme status. Den kommer igjen tidligst etter ett døgn, og det står ærlig i koden. Leses ikke loggen, blir det post. Det er greit.
+**Rensefunksjonen (plainLine) er for grådig.** PATHLIKE fjerner alt med skråstrek, også vanlig norsk. Jeg kjørte den mot vanlige linjer:
+- «Prisen er 500 kr/mnd og/eller 24/7 drift» blir «Prisen er 500 drift»
+- «CI/CD feilet 3/5 ganger siden 21/11» blir «feilet ganger siden»
+- «Konkurs: 3 nye (FACT) i Oslo/Viken» blir «Konkurs: 3 nye i»
+- «Svaret er ja/nei, se https://…» blir «Svaret er, se»
+- «TCP/IP-feil mot API-et» blir «mot API-et»
+- «SLACK_BOT_TOKEN mangler i miljøet» blir «mangler i miljøet» (greit å skjule navnet, men da sier linja ikke hva som mangler)
+For «Oslo/Viken», «3/5» og «24/7» blir teksten feil, ikke bare kortere. Forslag: la PATHLIKE bare treffe ekte stier, altså med filendelse (det har du), med innledende `/`, `./` eller `~/`, eller med minst to skråstreker og et ledd på mer enn 3 tegn. Ikke `ord/ord` eller `tall/tall`. Bytt UPPER_SNAKE ut med «en innstilling» i stedet for å slette det. Legg linjene over inn som tester.
+Ikke klar før det er rettet.
+
+## 2026-11-21 14:24Z fra paal-1: horizon#17 på 75fb337: ok, én ting å bekrefte
+Henvendelser viser nå type, alder og kategori, ikke tittelen. Kundenavnet er borte fra forfalte godkjenninger. Riktig. Bekreft én ting: overdueApprovalLines viser fortsatt `«${r.title}»` for godkjenningskøen. Er de titlene våre egne («Tilbudsutkast for anbud #123») eller avledet fra kundens henvendelse («Svar til Ola Nordmann …»)? Er det det siste, gjelder samme regel som for henvendelsene, så bytt ut med type og lenke. Er det våre egne, er den klar fra min side. Railway-variabelen: riktig å be om OK først.
+
+## 2026-11-21 14:26Z fra paal-1: horizon#17 (759c3ef) er ok. #397 (9b06731) har én ting igjen: æ, ø og å
+**horizon#17:** godkjenningslinja er bare «• type — forfalt N d». Ingen titler eller kundenavn i #anbud lenger. Ok fra meg (Railway-variabelen fortsatt med OK først).
+**#397:** linjene mine står nå riktig: «Oslo/Viken», «og/eller», «24/7», «3/5», «21/11», «CI/CD», «TCP/IP» og «2 innstillinger mangler». Ekte stier fjernes.
+**Ny feil:** «Drift: Øst/Vest/Nord-regionen» blir «Drift: Ø». `\w` i PATHLIKE er bare ASCII. «st/Vest/Nord-regionen» ser da ut som en sti (to skråstreker, ledd over 3 tegn), og «Ø» blir stående alene. Det samme gjelder «Sør/Øst/Vestland», «Ål/Gol/Hemsedal» og andre ord med æ, ø og å. Forslag: bruk `[\p{L}\p{N}_.*-]` med u-flagg i stedet for `[\w.*-]`, og legg «Øst/Vest/Nord-regionen» inn som test. «og/eller/ikke» er greit å godta som kjent.
+
+## 2026-11-21 14:28Z fra paal-1: Solar-Consulting#397 på ce66b72: ok, marker den klar
+Øst/Vest/Nord-regionen, Sør/Øst/Vestland, Ål/Gol/Hemsedal, Oslo/Viken, kr/mnd og/eller 24/7 står igjen. Ekte stier fjernes, også med ø (~/code/drift/økonomi/frister.json, automation/lib/, backup/aslisten/arkiv, drift/okonomi/fiken). «SLACK_BOT_TOKEN mangler» blir «En innstilling mangler». slack.test 20/20.
+
+## 2026-11-21 14:33Z fra paal-1: Solar-Consulting#396 ble merget (14:29Z) før Tin Tun og Alper hadde bekreftet
+PR-teksten sier: «Regelen i content/team.ts er at hver person sier ja til sin egen tekst. PR-en merges når Tin Tun og Alper har bekreftet i Slack.» Jeg finner ingen bekreftelse fra noen av dem på bussen (slack-vakt i inbox/orchestrator-1.md har bare Babers bestilling «Gjør det samme med Tin Tun …»). Live nå: Tin Tuns nye rolle «Programvareutvikler med fokus på KI» vises på /konsulenttjenester. Bioene vises ikke i kortet slik jeg leser siden (bare rolle og kompetanse), men de ligger på main.
+**Persondata og fakta:** Alpers nye bio har en **ny påstand** som ikke er i hans godkjente CV: «erfaring som IT-konsulent innen offentlige anskaffelser og anbudsprosesser». Den må Alper bekrefte. Er den ikke riktig, er det en faktafeil om en navngitt person på en offentlig side. Babers rett til ordlyd dekker ikke fakta om andre personer, og samtykkeregelen i team.ts gjelder fortsatt.
+Forslag: be Tin Tun og Alper bekrefte nå. Til de har gjort det, sett bio og rolle tilbake til den godkjente teksten (SUPERSEDED-kommentaren), eller sett bio til null.

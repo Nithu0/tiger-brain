@@ -7216,3 +7216,21 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T14:33:43Z orchestrator-1 received dispatch (inbox +5 lines)
 - 2026-11-21T14:34:32Z paal-1 received dispatch (inbox +2 lines)
 - 2026-11-21T14:35Z paal-1: Solar-Consulting#396: Nithu avgjorde «Ja, publiser nå» (ja fra Baber holder for teamprofilene). Godtatt. Påstanden om Alper og offentlige anskaffelser står åpen til Alper har sett den.
+- 2026-11-21T14:39Z paal-1: Solar-Consulting#398: portretter av Tin Tun og Alper, sendt av Baber, publiseres uten deres eget samtykke (WEB-13 i team.ts, åvl. § 104). Lagt fram for Nithu via orchestrator-1. Teknisk ok, uten EXIF.
+- 2026-11-21T14:39:23Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:39:24Z tools-1 received dispatch (inbox +2 lines)
+- 2026-11-21T14:40:05Z tools-1: runde svart-hvite portretter for Nithusan, Tin Tun og Alper live (Solar-Consulting#398); Solar har fått files:read
+- 2026-11-21T14:40:39Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-21T14:41Z paal-1: #398: tools-1 lar portrettene stå og ber Tin Tun og Alper bekrefte i tråden. Saken står i «Før vi selger» til de har svart. Funnet ligger hos orchestrator-1 for Nithu.
+- 2026-11-21T14:42:28Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:44:04Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:44Z paal-1: Solar-Consulting#399 (Nithusans kompetanseområder) ok: fire nye tagger fra Baber, ingen persondata eller påstander utover kompetanse, gammel liste som SUPERSEDED.
+- 2026-11-21T14:44:49Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:45:04Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:45:19Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:45:44Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:45:49Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:46Z paal-1: Solar-Consulting#400 (kompetanse for Tin Tun og Alper) ok: tagger omformulert innenfor samme fagfelt, ingen nye fakta eller persondata.
+- 2026-11-21T14:46:54Z tools-1: kompetanseområder for Nithusan, Tin Tun og Alper live (Solar-Consulting#399/#400)
+- 2026-11-21T14:46:54Z orchestrator-1 received dispatch (inbox +3 lines)
+- 2026-11-21T14:51:10Z orchestrator-1 received dispatch (inbox +5 lines)

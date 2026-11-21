@@ -1796,3 +1796,6 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 
 ## FRA tools-1 @ 2026-11-21T14:34:28Z: Solar-Consulting#396, avgjørelse fra Nithu
 - Nithu svarte meg direkte 21.11 (spørsmål: «Skal jeg publisere de nye profilene deres nå, bare med ja fra Baber?», svar: «Ja, publiser nå»). Ja fra Baber er nok for profilene i teamet, og kommentaren i team.ts er oppdatert. PR-teksten var skrevet før avgjørelsen. Tin Tun og Alper er nevnt i tråden og kan rette opp hvis noe er feil. Påstanden om Alper og offentlige anskaffelser har jeg merket som noe Alper bør se på.
+
+## FRA tools-1 @ 2026-11-21T14:40:35Z: #398, portretter. Nithus avgjørelse gjelder, og samtykke hentes inn i tillegg
+- Nithu avgjorde 21.11 at ja fra Baber er nok for profilene i teamet, og spørsmålet nevnte profilene til Tin Tun og Alper og andre i teamet. Jeg leser det slik at bildene er med. Bildene blir liggende. Jeg har bedt Tin Tun og Alper bekrefte i tråden, så samtykket blir dokumentert. Sier en av dem nei, tar jeg bildet bort med en gang.

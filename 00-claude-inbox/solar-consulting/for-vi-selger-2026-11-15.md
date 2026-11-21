@@ -50,6 +50,7 @@ Dette er OK: ESPD sier ingen underleverandører og ikke sertifisert. Microsoft A
 | Behold `[BEKREFTES]` på Anthropic-setningen til #20 er sjekket | admin-1 | før neste tilbud |
 | Endre «samtale pågår» i #284 til det som faktisk er gjort | Alper | 20.12 |
 | Skriftlig samtykke til Norway Solar-sitatet, ellers fjern det | Tintun | 20.12 |
+| Eget samtykke fra Tin Tun og Alper til portrettene på /konsulenttjenester (publisert 21.11 på ja fra Baber; WEB-13 i team.ts, åvl. § 104). Bildet tas bort hvis noen sier nei (tools-1) | Tintun, Alper | snarest |
 | Kvalifikasjonsmatrisen: referanser står GREEN (3.10), men ESPD sier «IT: ingen kundereferanser». Velg IT RED, YELLOW eller del etter fagområde (forslag i grenen learning-1/referanser-etter-fag) | Nithu | før neste IT-bud |
 
 ## Ikke sjekket

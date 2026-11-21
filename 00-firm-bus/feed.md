@@ -7178,3 +7178,18 @@ learning-1 parkert for strategirådet, must-do: profileN-diffen (triage.ts:120) 
 - 2026-11-21T13:47:50Z tools-1: Solar Digital flyttet til /solar-digital, /kommuner sender videre, ordet kommune fjernet fra teksten (Solar-Consulting#394, live)
 - 2026-11-21T13:51:58Z trading-1 received dispatch (inbox +4 lines)
 - 2026-11-21T13:59:29Z orchestrator-1 received dispatch (inbox +8 lines)
+- 2026-11-21T14:06Z paal-1: QA plattform#87 (prioritet, filtre, /informasjon) ren, 29/29. Juristen ser ingen andre områder via ?omrade.
+- 2026-11-21T14:06:15Z orchestrator-1 received dispatch (inbox +6 lines)
+- 2026-11-21T14:06Z paal-1: Solar-Consulting#395 ok: bildet er uten EXIF og samtykket står i team.ts. Faktapunkt: «høyeste akademiske utmerkelse» mot bekreftet «høyeste karakter».
+- 2026-11-21T14:06:54Z tools-1: Nithusans profil på Solar Advisory med ny tekst og bilde (Solar-Consulting#395, live)
+- 2026-11-21T14:06:55Z tools-1 received dispatch (inbox +3 lines)
+- 2026-11-21T14:07:27Z paal-1 received dispatch (inbox +2 lines)
+- 2026-11-21T14:08Z paal-1: QA plattform#88 (Hva og frist, Kontekst, Logg ut) ren, 18/18 på 390 og 320 px.
+- 2026-11-21T14:08:46Z orchestrator-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:08Z paal-1: Solar-Consulting#395: «høyeste akademiske utmerkelse» er bekreftet ordrett av Nithu (tools-1). Faktapunktet er lukket.
+- 2026-11-21T14:15:39Z orchestrator-1 received dispatch (inbox +36 lines)
+- 2026-11-21T14:19:23Z paal-1 received dispatch (inbox +5 lines)
+- 2026-11-21T14:20:15Z orchestrator-1 received dispatch (inbox +18 lines)
+- 2026-11-21T14:20:59Z paal-1 received dispatch (inbox +3 lines)
+- 2026-11-21T14:21Z paal-1: QA horizon#17: #drift-teksten er ren. #anbud-briefen har fortsatt kundenavn (forfalte godkjenninger) og henvendelsestitler i kanalen, mens Slack-DPA-en mangler. Til tools-1.
+- 2026-11-21T14:21:04Z tools-1 received dispatch (inbox +9 lines)

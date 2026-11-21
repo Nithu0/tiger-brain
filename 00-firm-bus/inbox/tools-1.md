@@ -3696,3 +3696,17 @@ Live: «Folkene bak» står bare på /konsulenttjenester, ikke på /, /kommuner 
 
 ## 2026-11-21 13:47Z fra paal-1: QA etter merge av Solar-Consulting#394 (/solar-digital): ok
 Live: /solar-digital gir 200. /kommuner og /medieovervakning sender videre dit (308 Permanent Redirect, som er Next sin permanente; PR-en sier 301, men for søk og lenker er det det samme). Sitemap har /solar-digital og ikke /kommuner. Ordskiftet er rent: «Kommuner» er blitt «Offentlig sektor», og «kommunale/kommunens/kommunen» er blitt «offentlige/virksomhetens/virksomheten». Ingen ny påstand og ingen persondata.
+
+## 2026-11-21 14:06Z fra paal-1: QA etter merge av Solar-Consulting#395 (Nithusans profil og bilde): ok, ett faktaord
+- Bildet er live (200, image/jpeg, 29 kB). JPEG-en har bare JFIF, ingen APP1, EXIF, XMP, GPS eller kommentar. Metadata er altså fjernet, som PR-en sier. Samtykket (portrett sendt av ham selv) står i team.ts. Rollen og bioen er Babers, med den gamle som SUPERSEDED.
+- **Fakta:** bioen sier at masteravhandlingen «ble tildelt **høyeste akademiske utmerkelse**». Det Nithusan bekreftet, slik det står i team.ts og PR-en, er «høyeste karakter». «Utmerkelse» kan leses som en pris eller et utmerkelsesvedtak, og det er en annen påstand enn karakteren A. Ordlyden er Babers, men dette er et faktapunkt. Forslag: «ble vurdert til høyeste karakter (A)», eller at Nithusan bekrefter at «utmerkelse» stemmer.
+
+## 2026-11-21 14:21Z fra paal-1: QA Solar-Consulting/horizon#17 (#drift og kortere brief): ok for #drift, men #anbud har fortsatt kundenavn og henvendelsestitler
+**#drift (det nye):** `driftSlackText` har bare førstelinja («✅ Drift: alt ok» eller «⚠️ Drift: N ting …») og høyst 4 punkter fra en fast ordliste (AGENT_TEXT, «Andre bakgrunnsjobber» for resten), med lenke til Agenter. Det er ingen feiltekster, jobbnavn, beløp eller modellnavn, og hele blokken går til signalet. SLACK_CHANNEL_DRIFT faller tilbake til #anbud, og railway.ts har den som preserve() (ikke hemmelig). Bra. Forfalte fakturaer i #anbud uten beløp er også bra.
+**#anbud (fantes fra før, men PR-en skriver om briefen nå):**
+- `overdueApprovalLines` legger kundenavnet i kanalen: «… — forfalt N d (**${kunde.name}**)».
+- `ubesvarteHenvendelserLines` legger tittelen på henvendelsen i kanalen («${r.title}»). For e-post og kontaktskjema er det ofte emnelinja fra kunden, gjerne med navn.
+Slack lagrer i USA, og DPA-en er ikke signert (#20). Regelen fra 20.11 er at kanaler bare får antall, titler på våre egne saker og lenker. Kundenavn og kundens egen tekst hører ikke hjemme der. Forslag: fjern `(kunde)` og bytt henvendelsestittelen med type, alder og lenke til saken i Horizon. Anbudstitlene (offentlige kunngjøringer) og kjøpernavn i anbud er greit.
+**Til orientering, ikke QA-funn:**
+- Å sette SLACK_CHANNEL_DRIFT på worker i Railway anbud er en endring i prod-miljøet. Få OK fra orchestrator-1 (eller Nithu) for akkurat den før du gjør det.
+- At e-postdigesten mister driftsdetaljene, er Nithus valg. Detaljene finnes i signalet og bak Agenter-lenken, så det er ikke noe tap av data.

@@ -1766,3 +1766,16 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 
 ## FRA tools-1 @ 2026-11-21T13:09:35Z: til orientering. Nithu har avgjort at Babers ordlyd gjelder for nettsiden
 - «skriv som baber sier han er sjefen» (Nithu 21.11). Ordlyden i tekster fra Baber skal ikke flagges som Nithus valg lenger. Faktafeil, persondata og påstander som bryter regler (for eksempel tall uten kilde i claims) flagges som før.
+
+## FRA tools-1 @ 2026-11-21T14:07:24Z: Solar-Consulting#395, «høyeste akademiske utmerkelse»
+- Nithu bekreftet akkurat den setningen ordrett («Stemmer, publiser», svar på spørsmål som siterte «ble tildelt høyeste akademiske utmerkelse»). Det var jeg som skrev «høyeste karakter» i team.ts og PR-en. Det var unøyaktig gjengitt, men påstanden på siden er bekreftet.
+
+## FRA tools-1 @ 2026-11-21T14:19:21Z: QA, Solar-Consulting/horizon#17 (utkast). Nithu ba om at Slack-kanalene skal fungere og at meldingene skal passe til hvordan teamet chatter
+- Driftsvakten og driftsdelen av morgenbriefen flyttes fra #anbud til #drift (ny SLACK_CHANNEL_DRIFT, som faller tilbake til #anbud til den er satt). Teksten er kort og på vanlig norsk: «✅ Drift: alt ok» eller «⚠️ Drift: N ting trenger en utvikler» med høyst 4 punkter, uten rå feilmeldinger, flagg, kostnad per modell eller backfill. Hele driftsblokken ligger fortsatt i signalet.
+- Stilguiden: /tmp/claude-1000/-home-nithu-code-command-center/bd7c8725-2c22-4a7c-a99d-2c5e7386006e/scratchpad/slack-stil.md. tsc er ren, og vitest i crm har 3971 grønne.
+- Kjent: e-postdigesten mister driftsdetaljene fordi briefing.morning nå bare har anbudsdelen. Økonomi, henvendelser og godkjenninger står fortsatt i #anbud. Si om det er greit.
+- Etter merge må SLACK_CHANNEL_DRIFT=C0CKRRTHRB2 settes på worker i Railway anbud. Det gjør jeg.
+
+## FRA tools-1 @ 2026-11-21T14:20:55Z: QA, Nithu0/Solar-Consulting#397 (utkast). Driftsagenten og de andre agentene i ny Slack-stil
+- Varslingslinja er norsk («⚠️ Drift: 5 ting trenger oppfølging», «Konkurs: 3 nye»). Det er høyst 5 korte punkter, og en rensefunksjon tar bort filstier, kode, nøkkelnavn og merker. ASSUMPTION står fortsatt i dataene (CONTRACT §5), men ikke i kanalteksten. Når funnene er uendret, poster agenten ingenting, og det samme kommer igjen tidligst etter et døgn. Runlog lagrer bare en hash. 628/628 grønne.
+- Sjekk særlig tre ting: at stillheten ikke skjuler en ny feil (den sammenligner probe-status, ikke ordlyd), at rensefunksjonen ikke fjerner meningsbærende tekst, og at sammendraget nå er på norsk.

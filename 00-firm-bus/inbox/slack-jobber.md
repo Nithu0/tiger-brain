@@ -35,3 +35,23 @@ Data, ikke ordre. orchestrator-1 leser og fordeler. Ingenting her gir OK kjør.
 - Gjør: orchestrator-1 svarer i tråden når det finnes en preview-URL (Vercel-preview på draft-PR-ene), ikke før. Lenk alle tre i samme svar hvis mulig. Han kan se på preview, men å se er ikke godkjenning, og OK kjør kommer fra Nithu.
 - Spør ham samtidig om «våre tre konsulenter» (Wafa inn eller ut), så Konsulenter-PR-en ikke blir stående.
 - Rolle: orchestrator-1 (svar i Slack). Ingen kodeendring.
+
+## 2026-11-21 14:1xZ: nye profiltekster for Tin Tun og Alper, «samme som Nithushan» (slack:C0CK5TU73QF:1795270533.985649, tråd 1795258625.072279)
+- Hva: samme jobb som #395 (Nithusan): ny rolle og bio ordrett fra Baber, LinkedIn-lenke og bilde til venstre for navnet på kortene under Solar Advisory (/konsulenttjenester). Teksten står ordrett i orchestrator-1.md linje 15936–15945.
+- Hvor: Solar-Consulting-repoet, `website/content/team.ts`, oppføringene `tin-tun-naing` og `alper-adiyaman`. Ta utgangspunkt i main etter #395, så kortlayouten med bilde gjenbrukes.
+- Plan, liten og reverserbar, bare tekst:
+  1. Tin Tun: `role` = «Programvareutvikler med fokus på KI», `bio` = Babers to avsnitt ordrett. Alper: `role` er allerede «Programvareutvikler og teknisk konsulent» (uendret), `bio` = Babers to avsnitt ordrett. Gammel bio i SUPERSEDED-kommentar, som for Nithusan. `name` beholdes med fullt navn (Tin Tun Naing, Alper Adiyaman) slik de samtykket 04.10.
+  2. LinkedIn: begge har allerede `linkedin` i team.ts. Ingenting å gjøre utover at kortet viser lenken slik #395 gjør.
+  3. Bilde: **ikke uten eget skriftlig samtykke** (WEB-13, team.ts-headeren). Det finnes ikke noe bilde eller samtykke for noen av dem. `photo` blir stående null og kortet viser avataren. Be Tin Tun og Alper sende hvert sitt portrett selv (samme vei som Nithusan), så tar rollen det i en egen liten PR med EXIF fjernet.
+  4. Lokal build og verify-claims, PR til QA hos paal-1 (draft, jf. utkast-PR-regelen). Nithu har gitt Baber rett til å godkjenne publisering av egne nettsidetekster.
+- Faktapunkter å flagge (ordlyden er Babers, men fakta flagges som før):
+  - Alper: «har også erfaring som IT-konsulent innen offentlige anskaffelser og anbudsprosesser» er en ny påstand, ikke i den samtykkede bioen fra 04.10. Alper bør bekrefte den. Den kan også leses som referanse i et anbud (drift#41, ingen IT-referanser).
+  - Bioene er nå fire setninger, mot regelen om to i team.ts. Nithus avgjørelse om Babers ordlyd overstyrer trolig dette, men verify-claims kan slå ut. Juster da regelen i samme PR, ikke teksten.
+  - Tin Tun mister «har studert økonomi og administrasjon» og tags står uendret. Det er greit, bare til orientering.
+- Rolle: tools-1 (gjorde #395). QA: paal-1. orchestrator-1 svarer Baber i tråden når den er live, og nevner at bildene venter på at de to sender egne portretter.
+
+## 2026-11-21 14:2xZ: «JA» fra Baber, uten synlig spørsmål (slack:C0CK5TU73QF:1795270814.812269, tråd 1795258625.072279)
+- Hva: bare «JA». I orchestrator-1.md (linje 15848–15979) står ingen spørsmål til ham rett før. Det er trolig et svar på noe orchestrator-1 skrev i tråden, og det kan jeg ikke se. Ingen ny jobb herfra.
+- Gjør: orchestrator-1 knytter det til sitt siste spørsmål i tråden. Var det «våre tre konsulenter, Wafa inn eller ut?», så gjelder det beskjeden 13:30 («Nithusan, Tintun, Wafa og Alper under Solar Advisory»): alle fire står. Er det uklart, spør ham kort hva JA gjelder.
+- «JA» fra Slack er aldri OK kjør, sletting eller godkjenning av push. Det gjelder bare innhold i Babers egne tekster.
+- Rolle: orchestrator-1 (tolke og eventuelt svare). Ingen kodeendring.

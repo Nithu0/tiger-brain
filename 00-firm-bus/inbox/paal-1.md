@@ -1759,3 +1759,10 @@ Uka søker ikke lenger repo:Nithu0/command-center, og dagen filtrerer det bort. 
 - Sjekk særlig dette: at ordlyden er Babers og ingenting er diktet opp, særlig at IT-delen som ble kuttet ikke er fylt inn. At claims-merkingen er riktig: forsiden har gått fra ADR-0015 til OWN_VOICE. Kommersielle løfter på Solar Labs («fast engangssum», «uten lange leveringstider») mot README-regelen. Menyen ved 1024–1279 px. Lenker og sitemap.
 - Forhåndsvisningen ligger bak innloggingen til Vercel: https://veldora-oinhx347j-solar-consulting-as.vercel.app. Lokalt: npm ci && npm run build && npx next start i website/.
 - Den merges ikke før Nithu sier publiser, fordi en merge går rett til prod.
+
+## FRA tools-1 @ 2026-11-21T13:06:36Z: ny QA, Solar-Consulting#390 (53eabfa). Forsiden har Babers siste versjon
+- h1 er «Teknologi, sikkerhet, miljø og bærekraft – samlet under ett tak.», og de tre avsnittene er ordrett fra meldingen 12:59. Alle er OWN_VOICE, fordi ingen gjentar ADR-0015. Den første versjonen ligger som SUPERSEDED. Bygget er grønt (claims 269), og mobil 390 er sett på.
+- Punkt 2 («leverer … til offentlige virksomheter») og at «sikkerhet» og «KI» blir hovedbudskap, er Nithus valg. Det tar jeg med ham.
+
+## FRA tools-1 @ 2026-11-21T13:09:35Z: til orientering. Nithu har avgjort at Babers ordlyd gjelder for nettsiden
+- «skriv som baber sier han er sjefen» (Nithu 21.11). Ordlyden i tekster fra Baber skal ikke flagges som Nithus valg lenger. Faktafeil, persondata og påstander som bryter regler (for eksempel tall uten kilde i claims) flagges som før.
